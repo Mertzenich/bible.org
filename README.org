@@ -1,0 +1,29 @@
+#+TITLE: Adam's Bible Repository
+
+This project contains translations of the Bible, provided by the CrossWire Bible Society's [[https://crosswire.org][SWORD Project]], in Emacs org-mode. This
+
+* How it's made
+
+This project was made possible by using a fork of [[https://github.com/alphapapa/sword-to-org][sword-to-org]] with some slight modifications.
+
+This project was made possible by utilizing alphapapa's [[https://github.com/alphapapa/sword-to-org][sword-to-org]] project with a few slight modifications to make streamline the process (fork linked below).
+
+https://github.com/Mertzenich/bible-to-org
+
+** How to make your own
+
+Here are the rough steps for adding translations to the project.
+
+1. In your emacs config set your sword translation (must have previously used esword to download translations). "(setq sword-to-org-default-module "DRC")"
+2. Create a directory.
+3. Create an org file for every book of the bible. Multiple ways to do this but I use the following command:
+    #+BEGIN_SRC bash
+touch "Genesis.org" "Exodus.org" "Leviticus.org" "Numbers.org" "Deuteronomy.org" "Joshua.org" "Judges.org" "Ruth.org" "1 Samuel.org" "2 Samuel.org" "1 Kings.org" "2 Kings.org" "1 Chronicles.org" "2 Chronicles.org" "Ezra.org" "Nehemiah.org" "Tobit.org" "Judith.org" "Esther.org" "1 Maccabees.org" "2 Maccabees.org" "Job.org" "Psalms.org" "Proverbs.org" "Ecclesiastes.org" "Song of Songs.org" "Wisdom.org" "Sirach.org" "Isaiah.org" "Jeremiah.org" "Lamentations.org" "Baruch.org" "Ezekiel.org" "Daniel.org" "Hosea.org" "Joel.org" "Amos.org" "Obadiah.org" "Jonah.org" "Micah.org" "Nahum.org" "Habakkuk.org" "Zephaniah.org" "Haggai.org" "Zechariah.org" "Malachi.org" "Matthew.org" "Mark.org" "Luke.org" "John.org" "Acts.org" "Romans.org" "1 Corinthians.org" "2 Corinthians.org" "Galatians.org" "Ephesians.org" "Philippians.org" "Colossians.org" "1 Thessalonians.org" "2 Thessalonians.org" "1 Timothy.org" "2 Timothy.org" "Titus.org" "Philemon.org" "Hebrews.org" "James.org" "1 Peter.org" "2 Peter.org" "1 John.org" "2 John.org" "3 John.org" "Jude.org" "Revelation.org"
+#+END_SRC
+4. Get my [[https://github.com/Mertzenich/bible-to-org][fork of sword-to-org]] which will automatically create an outline from the buffer name (buffer title is "Genesis.org" it will insert an outline for Genesis).
+5. Open every org file in emacs using the command "emacs *" when in the right directory.
+6. Load your modified sword-to-org (load-file)
+7. Run ibuffer and mark every book. Now you can run "ibuffer-do-eval" to run a command on every single buffer selected.
+8. In ibuffer-do-eval run the following:
+   =(lambda () (call-interactively 'sword-to-org-insert-outline) (replace-regexp "<.*?>" "") (save-buffer))=
+9. You should now have a collection of org books with junk cleaned using the replace-regexp.
