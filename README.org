@@ -10,7 +10,7 @@ This project was made possible by utilizing alphapapa's [[https://github.com/alp
 
 https://github.com/Mertzenich/bible-to-org
 
-** How to make your own
+** Add translations
 
 Here are the rough steps for adding translations to the project.
 
