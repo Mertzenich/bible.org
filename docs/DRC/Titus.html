@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb040200">Titus 1</a>
+<ul>
+<li><a href="#org6ae051b">Titus 1:1</a></li>
+<li><a href="#orgabc5c87">Titus 1:2</a></li>
+<li><a href="#orgab9bd6b">Titus 1:3</a></li>
+<li><a href="#org77861f6">Titus 1:4</a></li>
+<li><a href="#org65f2637">Titus 1:5</a></li>
+<li><a href="#org2992ed9">Titus 1:6</a></li>
+<li><a href="#org5f60b50">Titus 1:7</a></li>
+<li><a href="#orgd06cfed">Titus 1:8</a></li>
+<li><a href="#org741851c">Titus 1:9</a></li>
+<li><a href="#org3dcd306">Titus 1:10</a></li>
+<li><a href="#org6b2e932">Titus 1:11</a></li>
+<li><a href="#org9b500dd">Titus 1:12</a></li>
+<li><a href="#orgbbd4a40">Titus 1:13</a></li>
+<li><a href="#org02eb722">Titus 1:14</a></li>
+<li><a href="#orga7f3d03">Titus 1:15</a></li>
+<li><a href="#org8dfd405">Titus 1:16</a></li>
+</ul>
+</li>
+<li><a href="#org9a54720">Titus 2</a>
+<ul>
+<li><a href="#orgc8ecdf0">Titus 2:1</a></li>
+<li><a href="#org36d31df">Titus 2:2</a></li>
+<li><a href="#orgbcae28a">Titus 2:3</a></li>
+<li><a href="#org6b5fa06">Titus 2:4</a></li>
+<li><a href="#orgac96837">Titus 2:5</a></li>
+<li><a href="#org16a2cc8">Titus 2:6</a></li>
+<li><a href="#orgacd5f20">Titus 2:7</a></li>
+<li><a href="#org8600562">Titus 2:8</a></li>
+<li><a href="#org0d18a08">Titus 2:9</a></li>
+<li><a href="#orgcc6b7b9">Titus 2:10</a></li>
+<li><a href="#org024ebe2">Titus 2:11</a></li>
+<li><a href="#orgb07d9db">Titus 2:12</a></li>
+<li><a href="#org4be986a">Titus 2:13</a></li>
+<li><a href="#orgb072dd5">Titus 2:14</a></li>
+<li><a href="#org2b09d46">Titus 2:15</a></li>
+</ul>
+</li>
+<li><a href="#orge68d357">Titus 3</a>
+<ul>
+<li><a href="#org4d1ac6a">Titus 3:1</a></li>
+<li><a href="#orga1c9b7c">Titus 3:2</a></li>
+<li><a href="#org97e4587">Titus 3:3</a></li>
+<li><a href="#orgfcc3d4f">Titus 3:4</a></li>
+<li><a href="#org87bc439">Titus 3:5</a></li>
+<li><a href="#org9b9f906">Titus 3:6</a></li>
+<li><a href="#org470a751">Titus 3:7</a></li>
+<li><a href="#org77e80fa">Titus 3:8</a></li>
+<li><a href="#orgd7d1875">Titus 3:9</a></li>
+<li><a href="#orgf20adab">Titus 3:10</a></li>
+<li><a href="#org9637c24">Titus 3:11</a></li>
+<li><a href="#orgc817e58">Titus 3:12</a></li>
+<li><a href="#org530cfc7">Titus 3:13</a></li>
+<li><a href="#orgbef59b6">Titus 3:14</a></li>
+<li><a href="#orge9e8bf5">Titus 3:15</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb040200" class="outline-2">
+<h2 id="orgb040200">Titus 1</h2>
+<div class="outline-text-2" id="text-orgb040200">
+</div>
+<div id="outline-container-org6ae051b" class="outline-3">
+<h3 id="org6ae051b">Titus 1:1</h3>
+<div class="outline-text-3" id="text-org6ae051b">
+<p>
+Paul, a servant of God and an apostle of Jesus Christ, according to the faith of the elect of God and the acknowledging of the truth, which is according to godliness:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabc5c87" class="outline-3">
+<h3 id="orgabc5c87">Titus 1:2</h3>
+<div class="outline-text-3" id="text-orgabc5c87">
+<p>
+Unto the hope of life everlasting, which God, who lieth not, hath promised before the times of the world:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab9bd6b" class="outline-3">
+<h3 id="orgab9bd6b">Titus 1:3</h3>
+<div class="outline-text-3" id="text-orgab9bd6b">
+<p>
+But hath in due times manifested his word in preaching, which is committed to me according to the commandment of God our Saviour:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77861f6" class="outline-3">
+<h3 id="org77861f6">Titus 1:4</h3>
+<div class="outline-text-3" id="text-org77861f6">
+<p>
+To Titus, my beloved son according to the common faith, grace and peace, from God the Father and from Christ Jesus our Saviour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65f2637" class="outline-3">
+<h3 id="org65f2637">Titus 1:5</h3>
+<div class="outline-text-3" id="text-org65f2637">
+<p>
+For this cause I left thee in Crete: that thou shouldest set in order the things that are wanting and shouldest ordain priests in every city, as I also appointed thee:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2992ed9" class="outline-3">
+<h3 id="org2992ed9">Titus 1:6</h3>
+<div class="outline-text-3" id="text-org2992ed9">
+<p>
+If any be without crime, the husband of one wife. having faithful children, not accused of riot or unruly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f60b50" class="outline-3">
+<h3 id="org5f60b50">Titus 1:7</h3>
+<div class="outline-text-3" id="text-org5f60b50">
+<p>
+For a bishop must be without crime, as the steward of God: not proud, not subject to anger, nor given to wine, no striker, not greedy of filthy lucre:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd06cfed" class="outline-3">
+<h3 id="orgd06cfed">Titus 1:8</h3>
+<div class="outline-text-3" id="text-orgd06cfed">
+<p>
+But given to hospitality, gentle, sober, just, holy, continent:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org741851c" class="outline-3">
+<h3 id="org741851c">Titus 1:9</h3>
+<div class="outline-text-3" id="text-org741851c">
+<p>
+Embracing that faithful word which is according to doctrine, that he may be able to exhort in sound doctrine and to convince the gainsayers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dcd306" class="outline-3">
+<h3 id="org3dcd306">Titus 1:10</h3>
+<div class="outline-text-3" id="text-org3dcd306">
+<p>
+For there are also many disobedient, vain talkers and seducers: especially they who are of the circumcision.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b2e932" class="outline-3">
+<h3 id="org6b2e932">Titus 1:11</h3>
+<div class="outline-text-3" id="text-org6b2e932">
+<p>
+Who must be reproved, who subvert whole houses, teaching things which they ought not, for filthy lucre&rsquo;s sake.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b500dd" class="outline-3">
+<h3 id="org9b500dd">Titus 1:12</h3>
+<div class="outline-text-3" id="text-org9b500dd">
+<p>
+One of them a prophet of their own, said: The Cretans are always liars, evil beasts, slothful bellies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbd4a40" class="outline-3">
+<h3 id="orgbbd4a40">Titus 1:13</h3>
+<div class="outline-text-3" id="text-orgbbd4a40">
+<p>
+This testimony is true. Wherefore, rebuke them sharply, that they may be sound in the faith:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02eb722" class="outline-3">
+<h3 id="org02eb722">Titus 1:14</h3>
+<div class="outline-text-3" id="text-org02eb722">
+<p>
+Not giving heed to Jewish fables and commandments of men who turn themselves away from the truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7f3d03" class="outline-3">
+<h3 id="orga7f3d03">Titus 1:15</h3>
+<div class="outline-text-3" id="text-orga7f3d03">
+<p>
+All things are clean to the clean: but to them that are defiled and to unbelievers, nothing is clean: but both their mind and their conscience are defiled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8dfd405" class="outline-3">
+<h3 id="org8dfd405">Titus 1:16</h3>
+<div class="outline-text-3" id="text-org8dfd405">
+<p>
+They profess that they know God: but in their works they deny him: being abominable and incredulous and to every good work reprobate. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9a54720" class="outline-2">
+<h2 id="org9a54720">Titus 2</h2>
+<div class="outline-text-2" id="text-org9a54720">
+</div>
+<div id="outline-container-orgc8ecdf0" class="outline-3">
+<h3 id="orgc8ecdf0">Titus 2:1</h3>
+<div class="outline-text-3" id="text-orgc8ecdf0">
+<p>
+But speak thou the things that become sound doctrine:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36d31df" class="outline-3">
+<h3 id="org36d31df">Titus 2:2</h3>
+<div class="outline-text-3" id="text-org36d31df">
+<p>
+That the aged men be sober, chaste, prudent, sound in faith, in love, in patience.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcae28a" class="outline-3">
+<h3 id="orgbcae28a">Titus 2:3</h3>
+<div class="outline-text-3" id="text-orgbcae28a">
+<p>
+The aged women, in like manner, in holy attire, not false accusers, not given to much wine, teaching well:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b5fa06" class="outline-3">
+<h3 id="org6b5fa06">Titus 2:4</h3>
+<div class="outline-text-3" id="text-org6b5fa06">
+<p>
+That they may teach the young women to be wise, to love their husbands, to love their children.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac96837" class="outline-3">
+<h3 id="orgac96837">Titus 2:5</h3>
+<div class="outline-text-3" id="text-orgac96837">
+<p>
+To be discreet, chaste, sober, having a care of the house, gentle, obedient to their husbands: that the word of God be not blasphemed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16a2cc8" class="outline-3">
+<h3 id="org16a2cc8">Titus 2:6</h3>
+<div class="outline-text-3" id="text-org16a2cc8">
+<p>
+Young men, in like manner, exhort that they be sober.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacd5f20" class="outline-3">
+<h3 id="orgacd5f20">Titus 2:7</h3>
+<div class="outline-text-3" id="text-orgacd5f20">
+<p>
+In all things shew thyself an example of good works, in doctrine, in integrity, in gravity,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8600562" class="outline-3">
+<h3 id="org8600562">Titus 2:8</h3>
+<div class="outline-text-3" id="text-org8600562">
+<p>
+The sound word that can not be blamed: that he who is on the contrary part may be afraid, having no evil to say of us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d18a08" class="outline-3">
+<h3 id="org0d18a08">Titus 2:9</h3>
+<div class="outline-text-3" id="text-org0d18a08">
+<p>
+Exhort servants to be obedient to their masters: in all things pleasing, not gainsaying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc6b7b9" class="outline-3">
+<h3 id="orgcc6b7b9">Titus 2:10</h3>
+<div class="outline-text-3" id="text-orgcc6b7b9">
+<p>
+Not defrauding, but in all things shewing good fidelity, that they may adorn the doctrine of God our Saviour in all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org024ebe2" class="outline-3">
+<h3 id="org024ebe2">Titus 2:11</h3>
+<div class="outline-text-3" id="text-org024ebe2">
+<p>
+For the grace of God our Saviour hath appeared to all men:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb07d9db" class="outline-3">
+<h3 id="orgb07d9db">Titus 2:12</h3>
+<div class="outline-text-3" id="text-orgb07d9db">
+<p>
+Instructing us, that, denying ungodliness and worldly desires, we should live soberly and justly and godly in this world,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4be986a" class="outline-3">
+<h3 id="org4be986a">Titus 2:13</h3>
+<div class="outline-text-3" id="text-org4be986a">
+<p>
+Looking for the blessed hope and coming of the glory of the great God and our Saviour Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb072dd5" class="outline-3">
+<h3 id="orgb072dd5">Titus 2:14</h3>
+<div class="outline-text-3" id="text-orgb072dd5">
+<p>
+Who gave himself for us, that he might redeem us from all iniquity and might cleanse to himself a people acceptable, a pursuer of good works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b09d46" class="outline-3">
+<h3 id="org2b09d46">Titus 2:15</h3>
+<div class="outline-text-3" id="text-org2b09d46">
+<p>
+These things speak and exhort and rebuke with all authority. Let no man despise thee. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge68d357" class="outline-2">
+<h2 id="orge68d357">Titus 3</h2>
+<div class="outline-text-2" id="text-orge68d357">
+</div>
+<div id="outline-container-org4d1ac6a" class="outline-3">
+<h3 id="org4d1ac6a">Titus 3:1</h3>
+<div class="outline-text-3" id="text-org4d1ac6a">
+<p>
+Admonish them to be subject to princes and powers, to obey at a word, to be ready to every good work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1c9b7c" class="outline-3">
+<h3 id="orga1c9b7c">Titus 3:2</h3>
+<div class="outline-text-3" id="text-orga1c9b7c">
+<p>
+To speak evil of no man, not to be litigious but gentle: shewing all mildness towards all men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97e4587" class="outline-3">
+<h3 id="org97e4587">Titus 3:3</h3>
+<div class="outline-text-3" id="text-org97e4587">
+<p>
+For we ourselves also were some time unwise, incredulous, erring, slaves to divers desires and pleasures, living in malice and envy, hateful and hating one another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcc3d4f" class="outline-3">
+<h3 id="orgfcc3d4f">Titus 3:4</h3>
+<div class="outline-text-3" id="text-orgfcc3d4f">
+<p>
+But when the goodness and kindness of God our Saviour appeared:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87bc439" class="outline-3">
+<h3 id="org87bc439">Titus 3:5</h3>
+<div class="outline-text-3" id="text-org87bc439">
+<p>
+Not by the works of justice which we have done, but according to his mercy, he saved us, by the laver of regeneration and renovation of the Holy Ghost.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b9f906" class="outline-3">
+<h3 id="org9b9f906">Titus 3:6</h3>
+<div class="outline-text-3" id="text-org9b9f906">
+<p>
+Whom he hath poured forth upon us abundantly, through Jesus Christ our Saviour:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org470a751" class="outline-3">
+<h3 id="org470a751">Titus 3:7</h3>
+<div class="outline-text-3" id="text-org470a751">
+<p>
+That, being justified by his grace, we may be heirs according to hope of life everlasting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77e80fa" class="outline-3">
+<h3 id="org77e80fa">Titus 3:8</h3>
+<div class="outline-text-3" id="text-org77e80fa">
+<p>
+It is a faithful saying. And these things I will have thee affirm constantly, that they who believe in God may be careful to excel in good works. These things are good and profitable unto men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7d1875" class="outline-3">
+<h3 id="orgd7d1875">Titus 3:9</h3>
+<div class="outline-text-3" id="text-orgd7d1875">
+<p>
+But avoid foolish questions and genealogies and contentions and strivings about the law. For they are unprofitable and vain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf20adab" class="outline-3">
+<h3 id="orgf20adab">Titus 3:10</h3>
+<div class="outline-text-3" id="text-orgf20adab">
+<p>
+A man that is a heretic, after the first and second admonition, avoid:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9637c24" class="outline-3">
+<h3 id="org9637c24">Titus 3:11</h3>
+<div class="outline-text-3" id="text-org9637c24">
+<p>
+Knowing that he that is such an one is subverted and sinneth, being condemned by his own judgment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc817e58" class="outline-3">
+<h3 id="orgc817e58">Titus 3:12</h3>
+<div class="outline-text-3" id="text-orgc817e58">
+<p>
+When I shall send to thee Artemas or Tychicus, make haste to come unto me to Nicopolis. For there I have determined to winter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org530cfc7" class="outline-3">
+<h3 id="org530cfc7">Titus 3:13</h3>
+<div class="outline-text-3" id="text-org530cfc7">
+<p>
+Send forward Zenas the lawyer and Apollo, with care that nothing be wanting to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbef59b6" class="outline-3">
+<h3 id="orgbef59b6">Titus 3:14</h3>
+<div class="outline-text-3" id="text-orgbef59b6">
+<p>
+And let our men also learn to excel in good works for necessary uses: that they be not unfruitful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9e8bf5" class="outline-3">
+<h3 id="orge9e8bf5">Titus 3:15</h3>
+<div class="outline-text-3" id="text-orge9e8bf5">
+<p>
+All that are with me salute thee. Salute them that love us in the faith. The grace of God be with you all. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

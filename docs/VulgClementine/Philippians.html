@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5dbfe64">Philippians 1</a>
+<ul>
+<li><a href="#org595c1da">Philippians 1:1</a></li>
+<li><a href="#org90a96e3">Philippians 1:2</a></li>
+<li><a href="#org83f9cf3">Philippians 1:3</a></li>
+<li><a href="#orgfb23abf">Philippians 1:4</a></li>
+<li><a href="#org9fa1156">Philippians 1:5</a></li>
+<li><a href="#orgeb72643">Philippians 1:6</a></li>
+<li><a href="#orgc930f5d">Philippians 1:7</a></li>
+<li><a href="#org43f91dd">Philippians 1:8</a></li>
+<li><a href="#orgd682824">Philippians 1:9</a></li>
+<li><a href="#org709ff2b">Philippians 1:10</a></li>
+<li><a href="#orgcd3e056">Philippians 1:11</a></li>
+<li><a href="#org752fe23">Philippians 1:12</a></li>
+<li><a href="#orgaaa2aac">Philippians 1:13</a></li>
+<li><a href="#orge32031f">Philippians 1:14</a></li>
+<li><a href="#org07b2932">Philippians 1:15</a></li>
+<li><a href="#orgf02685a">Philippians 1:16</a></li>
+<li><a href="#org46fc2e7">Philippians 1:17</a></li>
+<li><a href="#orgfe0818d">Philippians 1:18</a></li>
+<li><a href="#org02386be">Philippians 1:19</a></li>
+<li><a href="#org2ee1025">Philippians 1:20</a></li>
+<li><a href="#orgd30d52b">Philippians 1:21</a></li>
+<li><a href="#org6e0ace5">Philippians 1:22</a></li>
+<li><a href="#org7c8c194">Philippians 1:23</a></li>
+<li><a href="#orgd296535">Philippians 1:24</a></li>
+<li><a href="#orge3f2920">Philippians 1:25</a></li>
+<li><a href="#org7435958">Philippians 1:26</a></li>
+<li><a href="#orgb7a2d7e">Philippians 1:27</a></li>
+<li><a href="#org59ae9c5">Philippians 1:28</a></li>
+<li><a href="#orga9f15bf">Philippians 1:29</a></li>
+<li><a href="#orga73940a">Philippians 1:30</a></li>
+</ul>
+</li>
+<li><a href="#orgb91bea8">Philippians 2</a>
+<ul>
+<li><a href="#org9fc8300">Philippians 2:1</a></li>
+<li><a href="#org94bd784">Philippians 2:2</a></li>
+<li><a href="#org67c5558">Philippians 2:3</a></li>
+<li><a href="#org9726884">Philippians 2:4</a></li>
+<li><a href="#org2e54c35">Philippians 2:5</a></li>
+<li><a href="#orgfdfbb57">Philippians 2:6</a></li>
+<li><a href="#org5e5d712">Philippians 2:7</a></li>
+<li><a href="#orgdd09492">Philippians 2:8</a></li>
+<li><a href="#orgce315fb">Philippians 2:9</a></li>
+<li><a href="#org7349d8e">Philippians 2:10</a></li>
+<li><a href="#orgf8a8689">Philippians 2:11</a></li>
+<li><a href="#org23d4407">Philippians 2:12</a></li>
+<li><a href="#org6fd8986">Philippians 2:13</a></li>
+<li><a href="#org087f61b">Philippians 2:14</a></li>
+<li><a href="#org1841a24">Philippians 2:15</a></li>
+<li><a href="#org105dbd7">Philippians 2:16</a></li>
+<li><a href="#orga9fb17e">Philippians 2:17</a></li>
+<li><a href="#org45c94a0">Philippians 2:18</a></li>
+<li><a href="#orgef1a0e1">Philippians 2:19</a></li>
+<li><a href="#orgc06c895">Philippians 2:20</a></li>
+<li><a href="#orgbc11041">Philippians 2:21</a></li>
+<li><a href="#org008f469">Philippians 2:22</a></li>
+<li><a href="#org5c897af">Philippians 2:23</a></li>
+<li><a href="#orgd370399">Philippians 2:24</a></li>
+<li><a href="#org3aaf467">Philippians 2:25</a></li>
+<li><a href="#org644d51c">Philippians 2:26</a></li>
+<li><a href="#orgc500d43">Philippians 2:27</a></li>
+<li><a href="#org44503ef">Philippians 2:28</a></li>
+<li><a href="#orgb9e48af">Philippians 2:29</a></li>
+<li><a href="#org6ce925d">Philippians 2:30</a></li>
+</ul>
+</li>
+<li><a href="#org705f9f7">Philippians 3</a>
+<ul>
+<li><a href="#org2077f62">Philippians 3:1</a></li>
+<li><a href="#org6f6b26c">Philippians 3:2</a></li>
+<li><a href="#org59ce5ac">Philippians 3:3</a></li>
+<li><a href="#org11ac2a5">Philippians 3:4</a></li>
+<li><a href="#orgc11fe7d">Philippians 3:5</a></li>
+<li><a href="#org750aac8">Philippians 3:6</a></li>
+<li><a href="#orgc3cdc29">Philippians 3:7</a></li>
+<li><a href="#org992cea4">Philippians 3:8</a></li>
+<li><a href="#orgec3da17">Philippians 3:9</a></li>
+<li><a href="#orgf7d649f">Philippians 3:10</a></li>
+<li><a href="#org93be0fc">Philippians 3:11</a></li>
+<li><a href="#orgc778029">Philippians 3:12</a></li>
+<li><a href="#org0db918e">Philippians 3:13</a></li>
+<li><a href="#org1687f08">Philippians 3:14</a></li>
+<li><a href="#org7bb0baf">Philippians 3:15</a></li>
+<li><a href="#orgec60b56">Philippians 3:16</a></li>
+<li><a href="#orgad4cb11">Philippians 3:17</a></li>
+<li><a href="#org483e1c9">Philippians 3:18</a></li>
+<li><a href="#orgfe4c24f">Philippians 3:19</a></li>
+<li><a href="#org7c1dede">Philippians 3:20</a></li>
+<li><a href="#orgbdeb252">Philippians 3:21</a></li>
+</ul>
+</li>
+<li><a href="#orgc393b5f">Philippians 4</a>
+<ul>
+<li><a href="#orgc669cf4">Philippians 4:1</a></li>
+<li><a href="#org9dffc8e">Philippians 4:2</a></li>
+<li><a href="#org88a1826">Philippians 4:3</a></li>
+<li><a href="#org52764b6">Philippians 4:4</a></li>
+<li><a href="#org6d30649">Philippians 4:5</a></li>
+<li><a href="#orgf3948d9">Philippians 4:6</a></li>
+<li><a href="#orgf1637b9">Philippians 4:7</a></li>
+<li><a href="#orgb346f27">Philippians 4:8</a></li>
+<li><a href="#orge79e0f7">Philippians 4:9</a></li>
+<li><a href="#org2792f0e">Philippians 4:10</a></li>
+<li><a href="#org81e31e6">Philippians 4:11</a></li>
+<li><a href="#orgb33578d">Philippians 4:12</a></li>
+<li><a href="#org8422846">Philippians 4:13</a></li>
+<li><a href="#org653151c">Philippians 4:14</a></li>
+<li><a href="#org5203f48">Philippians 4:15</a></li>
+<li><a href="#org1bdb812">Philippians 4:16</a></li>
+<li><a href="#orgac1b70c">Philippians 4:17</a></li>
+<li><a href="#orgbe99eee">Philippians 4:18</a></li>
+<li><a href="#org30033a2">Philippians 4:19</a></li>
+<li><a href="#org762dcf4">Philippians 4:20</a></li>
+<li><a href="#org2c4ff72">Philippians 4:21</a></li>
+<li><a href="#org84dd19e">Philippians 4:22</a></li>
+<li><a href="#org9988914">Philippians 4:23</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5dbfe64" class="outline-2">
+<h2 id="org5dbfe64">Philippians 1</h2>
+<div class="outline-text-2" id="text-org5dbfe64">
+</div>
+<div id="outline-container-org595c1da" class="outline-3">
+<h3 id="org595c1da">Philippians 1:1</h3>
+<div class="outline-text-3" id="text-org595c1da">
+<p>
+Paulus et Timotheus, servi Jesu Christi, omnibus sanctis in Christo Jesu, qui sunt Philippis, cum episcopis et diaconibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90a96e3" class="outline-3">
+<h3 id="org90a96e3">Philippians 1:2</h3>
+<div class="outline-text-3" id="text-org90a96e3">
+<p>
+Gratia vobis, et pax a Deo Patre nostro, et Domino Jesu Christo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83f9cf3" class="outline-3">
+<h3 id="org83f9cf3">Philippians 1:3</h3>
+<div class="outline-text-3" id="text-org83f9cf3">
+<p>
+Gratias ago Deo meo in omni memoria vestri,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb23abf" class="outline-3">
+<h3 id="orgfb23abf">Philippians 1:4</h3>
+<div class="outline-text-3" id="text-orgfb23abf">
+<p>
+semper in cunctis orationibus meis pro omnibus vobis, cum gaudio deprecationem faciens,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fa1156" class="outline-3">
+<h3 id="org9fa1156">Philippians 1:5</h3>
+<div class="outline-text-3" id="text-org9fa1156">
+<p>
+super communicatione vestra in Evangelio Christi a prima die usque nunc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb72643" class="outline-3">
+<h3 id="orgeb72643">Philippians 1:6</h3>
+<div class="outline-text-3" id="text-orgeb72643">
+<p>
+Confidens hoc ipsum, quia qui cœpit in vobis opus bonum, perficiet usque in diem Christi Jesu :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc930f5d" class="outline-3">
+<h3 id="orgc930f5d">Philippians 1:7</h3>
+<div class="outline-text-3" id="text-orgc930f5d">
+<p>
+sicut est mihi justum hoc sentire pro omnibus vobis : eo quod habeam vos in corde, et in vinculis meis, et in defensione, et confirmatione Evangelii, socios gaudii mei omnes vos esse.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43f91dd" class="outline-3">
+<h3 id="org43f91dd">Philippians 1:8</h3>
+<div class="outline-text-3" id="text-org43f91dd">
+<p>
+Testis enim mihi est Deus, quomodo cupiam omnes vos in visceribus Jesu Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd682824" class="outline-3">
+<h3 id="orgd682824">Philippians 1:9</h3>
+<div class="outline-text-3" id="text-orgd682824">
+<p>
+Et hoc oro, ut caritas vestra magis ac magis abundet in scientia, et in omni sensu :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org709ff2b" class="outline-3">
+<h3 id="org709ff2b">Philippians 1:10</h3>
+<div class="outline-text-3" id="text-org709ff2b">
+<p>
+ut probetis potiora, ut sitis sinceri, et sine offensa in diem Christi,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd3e056" class="outline-3">
+<h3 id="orgcd3e056">Philippians 1:11</h3>
+<div class="outline-text-3" id="text-orgcd3e056">
+<p>
+repleti fructu justitiæ per Jesum Christum, in gloriam et laudem Dei.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org752fe23" class="outline-3">
+<h3 id="org752fe23">Philippians 1:12</h3>
+<div class="outline-text-3" id="text-org752fe23">
+<p>
+Scire autem vos volo fratres, quia quæ circa me sunt, magis ad profectum venerunt Evangelii :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaaa2aac" class="outline-3">
+<h3 id="orgaaa2aac">Philippians 1:13</h3>
+<div class="outline-text-3" id="text-orgaaa2aac">
+<p>
+ita ut vincula mea manifesta fierent in Christo in omni prætorio, et in ceteris omnibus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge32031f" class="outline-3">
+<h3 id="orge32031f">Philippians 1:14</h3>
+<div class="outline-text-3" id="text-orge32031f">
+<p>
+et plures e fratribus in Domino confidentes vinculis meis, abundantius auderent sine timore verbum Dei loqui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07b2932" class="outline-3">
+<h3 id="org07b2932">Philippians 1:15</h3>
+<div class="outline-text-3" id="text-org07b2932">
+<p>
+Quidam quidem et propter invidiam et contentionem : quidam autem et propter bonam voluntatem Christum prædicant :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf02685a" class="outline-3">
+<h3 id="orgf02685a">Philippians 1:16</h3>
+<div class="outline-text-3" id="text-orgf02685a">
+<p>
+quidam ex caritate, scientes quoniam in defensionem Evangelii positus sum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46fc2e7" class="outline-3">
+<h3 id="org46fc2e7">Philippians 1:17</h3>
+<div class="outline-text-3" id="text-org46fc2e7">
+<p>
+Quidam autem ex contentione Christum annuntiant non sincere, existimantes pressuram se suscitare vinculis meis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe0818d" class="outline-3">
+<h3 id="orgfe0818d">Philippians 1:18</h3>
+<div class="outline-text-3" id="text-orgfe0818d">
+<p>
+Quid enim ? Dum omni modo sive per occasionem, sive per veritatem, Christus annuntietur : et in hoc gaudeo, sed et gaudebo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02386be" class="outline-3">
+<h3 id="org02386be">Philippians 1:19</h3>
+<div class="outline-text-3" id="text-org02386be">
+<p>
+Scio enim quia hoc mihi proveniet ad salutem, per vestram orationem, et subministrationem Spiritus Jesu Christi,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ee1025" class="outline-3">
+<h3 id="org2ee1025">Philippians 1:20</h3>
+<div class="outline-text-3" id="text-org2ee1025">
+<p>
+secundum exspectationem et spem meam, quia in nullo confundar : sed in omni fiducia sicut semper, et nunc magnificabitur Christus in corpore meo, sive per vitam, sive per mortem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd30d52b" class="outline-3">
+<h3 id="orgd30d52b">Philippians 1:21</h3>
+<div class="outline-text-3" id="text-orgd30d52b">
+<p>
+Mihi enim vivere Christus est, et mori lucrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e0ace5" class="outline-3">
+<h3 id="org6e0ace5">Philippians 1:22</h3>
+<div class="outline-text-3" id="text-org6e0ace5">
+<p>
+Quod si vivere in carne, hic mihi fructus operis est, et quid eligam ignoro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c8c194" class="outline-3">
+<h3 id="org7c8c194">Philippians 1:23</h3>
+<div class="outline-text-3" id="text-org7c8c194">
+<p>
+Coarctor autem e duobus : desiderium habens dissolvi, et esse cum Christo, multo magis melius :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd296535" class="outline-3">
+<h3 id="orgd296535">Philippians 1:24</h3>
+<div class="outline-text-3" id="text-orgd296535">
+<p>
+permanere autem in carne, necessarium propter vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3f2920" class="outline-3">
+<h3 id="orge3f2920">Philippians 1:25</h3>
+<div class="outline-text-3" id="text-orge3f2920">
+<p>
+Et hoc confidens scio quia manebo, et permanebo omnibus vobis ad profectum vestrum, et gaudium fidei :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7435958" class="outline-3">
+<h3 id="org7435958">Philippians 1:26</h3>
+<div class="outline-text-3" id="text-org7435958">
+<p>
+ut gratulatio vestra abundet in Christo Jesu in me, per meum adventum iterum ad vos.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7a2d7e" class="outline-3">
+<h3 id="orgb7a2d7e">Philippians 1:27</h3>
+<div class="outline-text-3" id="text-orgb7a2d7e">
+<p>
+Tantum digne Evangelio Christi conversamini : ut sive cum venero, et videro vos, sive absens audiam de vobis, quia statis in uno spiritu unanimes, collaborantes fidei Evangelii :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59ae9c5" class="outline-3">
+<h3 id="org59ae9c5">Philippians 1:28</h3>
+<div class="outline-text-3" id="text-org59ae9c5">
+<p>
+et in nullo terreamini ab adversariis : quæ illis est causa perditionis, vobis autem salutis, et hoc a Deo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9f15bf" class="outline-3">
+<h3 id="orga9f15bf">Philippians 1:29</h3>
+<div class="outline-text-3" id="text-orga9f15bf">
+<p>
+quia vobis donatum est pro Christo, non solum ut in eum credatis, sed ut etiam pro illo patiamini :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga73940a" class="outline-3">
+<h3 id="orga73940a">Philippians 1:30</h3>
+<div class="outline-text-3" id="text-orga73940a">
+<p>
+idem certamen habentes, quale et vidistis in me, et nunc audistis de me.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb91bea8" class="outline-2">
+<h2 id="orgb91bea8">Philippians 2</h2>
+<div class="outline-text-2" id="text-orgb91bea8">
+</div>
+<div id="outline-container-org9fc8300" class="outline-3">
+<h3 id="org9fc8300">Philippians 2:1</h3>
+<div class="outline-text-3" id="text-org9fc8300">
+<p>
+Si qua ergo consolatio in Christo, si quod solatium caritatis, si qua societas spiritus, si qua viscera miserationis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94bd784" class="outline-3">
+<h3 id="org94bd784">Philippians 2:2</h3>
+<div class="outline-text-3" id="text-org94bd784">
+<p>
+implete gaudium meum ut idem sapiatis, eamdem caritatem habentes, unanimes, idipsum sentientes,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67c5558" class="outline-3">
+<h3 id="org67c5558">Philippians 2:3</h3>
+<div class="outline-text-3" id="text-org67c5558">
+<p>
+nihil per contentionem, neque per inanem gloriam : sed in humilitate superiores sibi invicem arbitrantes,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9726884" class="outline-3">
+<h3 id="org9726884">Philippians 2:4</h3>
+<div class="outline-text-3" id="text-org9726884">
+<p>
+non quæ sua sunt singuli considerantes, sed ea quæ aliorum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e54c35" class="outline-3">
+<h3 id="org2e54c35">Philippians 2:5</h3>
+<div class="outline-text-3" id="text-org2e54c35">
+<p>
+Hoc enim sentite in vobis, quod et in Christo Jesu :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdfbb57" class="outline-3">
+<h3 id="orgfdfbb57">Philippians 2:6</h3>
+<div class="outline-text-3" id="text-orgfdfbb57">
+<p>
+qui cum in forma Dei esset, non rapinam arbitratus est esse se æqualem Deo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e5d712" class="outline-3">
+<h3 id="org5e5d712">Philippians 2:7</h3>
+<div class="outline-text-3" id="text-org5e5d712">
+<p>
+sed semetipsum exinanivit, formam servi accipiens, in similitudinem hominum factus, et habitu inventus ut homo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd09492" class="outline-3">
+<h3 id="orgdd09492">Philippians 2:8</h3>
+<div class="outline-text-3" id="text-orgdd09492">
+<p>
+Humiliavit semetipsum factus obediens usque ad mortem, mortem autem crucis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce315fb" class="outline-3">
+<h3 id="orgce315fb">Philippians 2:9</h3>
+<div class="outline-text-3" id="text-orgce315fb">
+<p>
+Propter quod et Deus exaltavit illum, et donavit illi nomen, quod est super omne nomen :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7349d8e" class="outline-3">
+<h3 id="org7349d8e">Philippians 2:10</h3>
+<div class="outline-text-3" id="text-org7349d8e">
+<p>
+ut in nomine Jesu omne genu flectatur cælestium, terrestrium et infernorum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8a8689" class="outline-3">
+<h3 id="orgf8a8689">Philippians 2:11</h3>
+<div class="outline-text-3" id="text-orgf8a8689">
+<p>
+et omnis lingua confiteatur, quia Dominus Jesus Christus in gloria est Dei Patris.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23d4407" class="outline-3">
+<h3 id="org23d4407">Philippians 2:12</h3>
+<div class="outline-text-3" id="text-org23d4407">
+<p>
+Itaque carissimi mei (sicut semper obedistis), non ut in præsentia mei tantum, sed multo magis nunc in absentia mea, cum metu et tremore vestram salutem operamini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fd8986" class="outline-3">
+<h3 id="org6fd8986">Philippians 2:13</h3>
+<div class="outline-text-3" id="text-org6fd8986">
+<p>
+Deus est enim, qui operatur in vobis et velle, et perficere pro bona voluntate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org087f61b" class="outline-3">
+<h3 id="org087f61b">Philippians 2:14</h3>
+<div class="outline-text-3" id="text-org087f61b">
+<p>
+Omnia autem facite sine murmurationibus et hæsitationibus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1841a24" class="outline-3">
+<h3 id="org1841a24">Philippians 2:15</h3>
+<div class="outline-text-3" id="text-org1841a24">
+<p>
+ut sitis sine querela, et simplices filii Dei, sine reprehensione in medio nationis pravæ et perversæ : inter quos lucetis sicut luminaria in mundo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org105dbd7" class="outline-3">
+<h3 id="org105dbd7">Philippians 2:16</h3>
+<div class="outline-text-3" id="text-org105dbd7">
+<p>
+verbum vitæ continentes ad gloriam meam in die Christi, quia non in vacuum cucurri, neque in vacuum laboravi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9fb17e" class="outline-3">
+<h3 id="orga9fb17e">Philippians 2:17</h3>
+<div class="outline-text-3" id="text-orga9fb17e">
+<p>
+Sed et si immolor supra sacrificium, et obsequium fidei vestræ, gaudeo, et congratulor omnibus vobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45c94a0" class="outline-3">
+<h3 id="org45c94a0">Philippians 2:18</h3>
+<div class="outline-text-3" id="text-org45c94a0">
+<p>
+Idipsum autem et vos gaudete, et congratulamini mihi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef1a0e1" class="outline-3">
+<h3 id="orgef1a0e1">Philippians 2:19</h3>
+<div class="outline-text-3" id="text-orgef1a0e1">
+<p>
+Spero autem in Domino Jesu, Timotheum me cito mittere ad vos : ut et ego bono animo sim, cognitis quæ circa vos sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc06c895" class="outline-3">
+<h3 id="orgc06c895">Philippians 2:20</h3>
+<div class="outline-text-3" id="text-orgc06c895">
+<p>
+Neminem enim habeo tam unanimem, qui sincera affectione pro vobis sollicitus sit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc11041" class="outline-3">
+<h3 id="orgbc11041">Philippians 2:21</h3>
+<div class="outline-text-3" id="text-orgbc11041">
+<p>
+Omnes enim quæ sua sunt quærunt, non quæ sunt Jesu Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org008f469" class="outline-3">
+<h3 id="org008f469">Philippians 2:22</h3>
+<div class="outline-text-3" id="text-org008f469">
+<p>
+Experimentum autem ejus cognoscite, quia sicut patri filius, mecum servivit in Evangelio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c897af" class="outline-3">
+<h3 id="org5c897af">Philippians 2:23</h3>
+<div class="outline-text-3" id="text-org5c897af">
+<p>
+Hunc igitur spero me mittere ad vos, mox ut videro quæ circa me sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd370399" class="outline-3">
+<h3 id="orgd370399">Philippians 2:24</h3>
+<div class="outline-text-3" id="text-orgd370399">
+<p>
+Confido autem in Domino quoniam et ipse veniam ad vos cito.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3aaf467" class="outline-3">
+<h3 id="org3aaf467">Philippians 2:25</h3>
+<div class="outline-text-3" id="text-org3aaf467">
+<p>
+Necessarium autem existimavi Epaphroditum fratrem, et cooperatorem, et commilitonem meum, vestrum autem apostolum, et ministrum necessitatis meæ, mittere ad vos :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org644d51c" class="outline-3">
+<h3 id="org644d51c">Philippians 2:26</h3>
+<div class="outline-text-3" id="text-org644d51c">
+<p>
+quoniam quidem omnes vos desiderabat : et mœstus erat, propterea quod audieratis illum infirmatum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc500d43" class="outline-3">
+<h3 id="orgc500d43">Philippians 2:27</h3>
+<div class="outline-text-3" id="text-orgc500d43">
+<p>
+Nam et infirmatus est usque ad mortem : sed Deus misertus est ejus : non solum autem ejus, verum etiam et mei, ne tristitiam super tristitiam haberem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44503ef" class="outline-3">
+<h3 id="org44503ef">Philippians 2:28</h3>
+<div class="outline-text-3" id="text-org44503ef">
+<p>
+Festinantius ergo misi illum, ut viso eo iterum gaudeatis, et ego sine tristitia sim.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9e48af" class="outline-3">
+<h3 id="orgb9e48af">Philippians 2:29</h3>
+<div class="outline-text-3" id="text-orgb9e48af">
+<p>
+Excipite itaque illum cum omni gaudio in Domino, et ejusmodi cum honore habetote ;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ce925d" class="outline-3">
+<h3 id="org6ce925d">Philippians 2:30</h3>
+<div class="outline-text-3" id="text-org6ce925d">
+<p>
+quoniam propter opus Christi usque ad mortem accessit, tradens animam suam ut impleret id quod ex vobis deerat erga meum obsequium.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org705f9f7" class="outline-2">
+<h2 id="org705f9f7">Philippians 3</h2>
+<div class="outline-text-2" id="text-org705f9f7">
+</div>
+<div id="outline-container-org2077f62" class="outline-3">
+<h3 id="org2077f62">Philippians 3:1</h3>
+<div class="outline-text-3" id="text-org2077f62">
+<p>
+De cetero, fratres mei, gaudete in Domino. Eadem vobis scribere, mihi quidem non pigrum, vobis autem necessarium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f6b26c" class="outline-3">
+<h3 id="org6f6b26c">Philippians 3:2</h3>
+<div class="outline-text-3" id="text-org6f6b26c">
+<p>
+Videte canes, videte malos operarios, videte concisionem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59ce5ac" class="outline-3">
+<h3 id="org59ce5ac">Philippians 3:3</h3>
+<div class="outline-text-3" id="text-org59ce5ac">
+<p>
+Nos enim sumus circumcisio, qui spiritu servimus Deo, et gloriamur in Christo Jesu, et non in carne fiduciam habentes,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11ac2a5" class="outline-3">
+<h3 id="org11ac2a5">Philippians 3:4</h3>
+<div class="outline-text-3" id="text-org11ac2a5">
+<p>
+quamquam ego habeam confidentiam et in carne. Si quis alius videtur confidere in carne, ego magis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc11fe7d" class="outline-3">
+<h3 id="orgc11fe7d">Philippians 3:5</h3>
+<div class="outline-text-3" id="text-orgc11fe7d">
+<p>
+circumcisus octavo die, ex genere Israël, de tribu Benjamin, Hebræus ex Hebræis, secundum legem pharisæus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org750aac8" class="outline-3">
+<h3 id="org750aac8">Philippians 3:6</h3>
+<div class="outline-text-3" id="text-org750aac8">
+<p>
+secundum æmulationem persequens Ecclesiam Dei, secundum justitiam, quæ in lege est, conversatus sine querela.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3cdc29" class="outline-3">
+<h3 id="orgc3cdc29">Philippians 3:7</h3>
+<div class="outline-text-3" id="text-orgc3cdc29">
+<p>
+Sed quæ mihi fuerunt lucra, hæc arbitratus sum propter Christum detrimenta.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org992cea4" class="outline-3">
+<h3 id="org992cea4">Philippians 3:8</h3>
+<div class="outline-text-3" id="text-org992cea4">
+<p>
+Verumtamen existimo omnia detrimentum esse propter eminentem scientiam Jesu Christi Domini mei : propter quem omnia detrimentum feci, et arbitror ut stercora, ut Christum lucrifaciam,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec3da17" class="outline-3">
+<h3 id="orgec3da17">Philippians 3:9</h3>
+<div class="outline-text-3" id="text-orgec3da17">
+<p>
+et inveniar in illo non habens meam justitiam, quæ ex lege est, sed illam, quæ ex fide est Christi Jesu : quæ ex Deo est justitia in fide,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7d649f" class="outline-3">
+<h3 id="orgf7d649f">Philippians 3:10</h3>
+<div class="outline-text-3" id="text-orgf7d649f">
+<p>
+ad cognoscendum illum, et virtutem resurrectionis ejus, et societatem passionum illius : configuratus morti ejus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93be0fc" class="outline-3">
+<h3 id="org93be0fc">Philippians 3:11</h3>
+<div class="outline-text-3" id="text-org93be0fc">
+<p>
+si quo modo occurram ad resurrectionem, quæ est ex mortuis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc778029" class="outline-3">
+<h3 id="orgc778029">Philippians 3:12</h3>
+<div class="outline-text-3" id="text-orgc778029">
+<p>
+non quod jam acceperim, aut jam perfectus sim : sequor autem, si quomodo comprehendam in quo et comprehensus sum a Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0db918e" class="outline-3">
+<h3 id="org0db918e">Philippians 3:13</h3>
+<div class="outline-text-3" id="text-org0db918e">
+<p>
+Fratres, ego me non arbitror comprehendisse. Unum autem, quæ quidem retro sunt obliviscens, ad ea vero quæ sunt priora, extendens meipsum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1687f08" class="outline-3">
+<h3 id="org1687f08">Philippians 3:14</h3>
+<div class="outline-text-3" id="text-org1687f08">
+<p>
+ad destinatum persequor, ad bravium supernæ vocationis Dei in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bb0baf" class="outline-3">
+<h3 id="org7bb0baf">Philippians 3:15</h3>
+<div class="outline-text-3" id="text-org7bb0baf">
+<p>
+Quicumque ergo perfecti sumus, hoc sentiamus : et si quid aliter sapitis, et hoc vobis Deus revelabit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec60b56" class="outline-3">
+<h3 id="orgec60b56">Philippians 3:16</h3>
+<div class="outline-text-3" id="text-orgec60b56">
+<p>
+Verumtamen ad quod pervenimus ut idem sapiamus, et in eadem permaneamus regula.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad4cb11" class="outline-3">
+<h3 id="orgad4cb11">Philippians 3:17</h3>
+<div class="outline-text-3" id="text-orgad4cb11">
+<p>
+Imitatores mei estote, fratres, et observate eos qui ita ambulant, sicut habetis formam nostram.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org483e1c9" class="outline-3">
+<h3 id="org483e1c9">Philippians 3:18</h3>
+<div class="outline-text-3" id="text-org483e1c9">
+<p>
+Multi enim ambulant, quos sæpe dicebam vobis (nunc autem et flens dico) inimicos crucis Christi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe4c24f" class="outline-3">
+<h3 id="orgfe4c24f">Philippians 3:19</h3>
+<div class="outline-text-3" id="text-orgfe4c24f">
+<p>
+quorum finis interitus : quorum Deus venter est : et gloria in confusione ipsorum, qui terrena sapiunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c1dede" class="outline-3">
+<h3 id="org7c1dede">Philippians 3:20</h3>
+<div class="outline-text-3" id="text-org7c1dede">
+<p>
+Nostra autem conversatio in cælis est : unde etiam Salvatorem exspectamus Dominum nostrum Jesum Christum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdeb252" class="outline-3">
+<h3 id="orgbdeb252">Philippians 3:21</h3>
+<div class="outline-text-3" id="text-orgbdeb252">
+<p>
+qui reformabit corpus humilitatis nostræ, configuratum corpori claritatis suæ, secundum operationem, qua etiam possit subjicere sibi omnia.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc393b5f" class="outline-2">
+<h2 id="orgc393b5f">Philippians 4</h2>
+<div class="outline-text-2" id="text-orgc393b5f">
+</div>
+<div id="outline-container-orgc669cf4" class="outline-3">
+<h3 id="orgc669cf4">Philippians 4:1</h3>
+<div class="outline-text-3" id="text-orgc669cf4">
+<p>
+Itaque fratres mei carissimi, et desideratissimi, gaudium meum, et corona mea : sic state in Domino, carissimi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9dffc8e" class="outline-3">
+<h3 id="org9dffc8e">Philippians 4:2</h3>
+<div class="outline-text-3" id="text-org9dffc8e">
+<p>
+Evodiam rogo, et Syntychen deprecor, idipsum sapere in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88a1826" class="outline-3">
+<h3 id="org88a1826">Philippians 4:3</h3>
+<div class="outline-text-3" id="text-org88a1826">
+<p>
+Etiam rogo et te, germane compar, adjuva illas, quæ mecum laboraverunt in Evangelio cum Clemente, et ceteris adjutoribus meis, quorum nomina sunt in libro vitæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org52764b6" class="outline-3">
+<h3 id="org52764b6">Philippians 4:4</h3>
+<div class="outline-text-3" id="text-org52764b6">
+<p>
+Gaudete in Domino semper : iterum dico gaudete.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d30649" class="outline-3">
+<h3 id="org6d30649">Philippians 4:5</h3>
+<div class="outline-text-3" id="text-org6d30649">
+<p>
+Modestia vestra nota sit omnibus hominibus : Dominus prope est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3948d9" class="outline-3">
+<h3 id="orgf3948d9">Philippians 4:6</h3>
+<div class="outline-text-3" id="text-orgf3948d9">
+<p>
+Nihil solliciti sitis : sed in omni oratione, et obsecratione, cum gratiarum actione petitiones vestræ innotescant apud Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1637b9" class="outline-3">
+<h3 id="orgf1637b9">Philippians 4:7</h3>
+<div class="outline-text-3" id="text-orgf1637b9">
+<p>
+Et pax Dei, quæ exuperat omnem sensum, custodiat corda vestra, et intelligentias vestras in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb346f27" class="outline-3">
+<h3 id="orgb346f27">Philippians 4:8</h3>
+<div class="outline-text-3" id="text-orgb346f27">
+<p>
+De cetero fratres, quæcumque sunt vera, quæcumque pudica, quæcumque justa, quæcumque sancta, quæcumque amabilia, quæcumque bonæ famæ, siqua virtus, siqua laus disciplinæ, hæc cogitate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge79e0f7" class="outline-3">
+<h3 id="orge79e0f7">Philippians 4:9</h3>
+<div class="outline-text-3" id="text-orge79e0f7">
+<p>
+Quæ et didicistis, et accepistis, et audistis, et vidistis in me, hæc agite : et Deus pacis erit vobiscum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2792f0e" class="outline-3">
+<h3 id="org2792f0e">Philippians 4:10</h3>
+<div class="outline-text-3" id="text-org2792f0e">
+<p>
+Gavisus sum autem in Domino vehementer, quoniam tandem aliquando refloruistis pro me sentire, sicut et sentiebatis : occupati autem eratis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81e31e6" class="outline-3">
+<h3 id="org81e31e6">Philippians 4:11</h3>
+<div class="outline-text-3" id="text-org81e31e6">
+<p>
+Non quasi propter penuriam dico : ego enim didici, in quibus sum, sufficiens esse.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb33578d" class="outline-3">
+<h3 id="orgb33578d">Philippians 4:12</h3>
+<div class="outline-text-3" id="text-orgb33578d">
+<p>
+Scio et humiliari, scio et abundare (ubique et in omnibus institutus sum) : et satiari, et esurire, et abundare, et penuriam pati.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8422846" class="outline-3">
+<h3 id="org8422846">Philippians 4:13</h3>
+<div class="outline-text-3" id="text-org8422846">
+<p>
+Omnia possum in eo qui me confortat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org653151c" class="outline-3">
+<h3 id="org653151c">Philippians 4:14</h3>
+<div class="outline-text-3" id="text-org653151c">
+<p>
+Verumtamen bene fecistis, communicantes tribulationi meæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5203f48" class="outline-3">
+<h3 id="org5203f48">Philippians 4:15</h3>
+<div class="outline-text-3" id="text-org5203f48">
+<p>
+Scitis autem et vos Philippenses, quod in principio Evangelii, quando profectus sum a Macedonia, nulla mihi ecclesia communicavit in ratione dati et accepti, nisi vos soli :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1bdb812" class="outline-3">
+<h3 id="org1bdb812">Philippians 4:16</h3>
+<div class="outline-text-3" id="text-org1bdb812">
+<p>
+quia et Thessalonicam semel et bis in usum mihi misistis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac1b70c" class="outline-3">
+<h3 id="orgac1b70c">Philippians 4:17</h3>
+<div class="outline-text-3" id="text-orgac1b70c">
+<p>
+Non quia quæro datum, sed requiro fructum abundantem in ratione vestra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe99eee" class="outline-3">
+<h3 id="orgbe99eee">Philippians 4:18</h3>
+<div class="outline-text-3" id="text-orgbe99eee">
+<p>
+Habeo autem omnia, et abundo : repletus sum, acceptis ab Epaphrodito quæ misistis odorem suavitatis, hostiam acceptam, placentem Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30033a2" class="outline-3">
+<h3 id="org30033a2">Philippians 4:19</h3>
+<div class="outline-text-3" id="text-org30033a2">
+<p>
+Deus autem meus impleat omne desiderium vestrum secundum divitias suas in gloria in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org762dcf4" class="outline-3">
+<h3 id="org762dcf4">Philippians 4:20</h3>
+<div class="outline-text-3" id="text-org762dcf4">
+<p>
+Deo autem et Patri nostro gloria in sæcula sæculorum. Amen.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c4ff72" class="outline-3">
+<h3 id="org2c4ff72">Philippians 4:21</h3>
+<div class="outline-text-3" id="text-org2c4ff72">
+<p>
+Salutate omnem sanctum in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84dd19e" class="outline-3">
+<h3 id="org84dd19e">Philippians 4:22</h3>
+<div class="outline-text-3" id="text-org84dd19e">
+<p>
+Salutant vos, qui mecum sunt, fratres. Salutant vos omnes sancti, maxime autem qui de Cæsaris domo sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9988914" class="outline-3">
+<h3 id="org9988914">Philippians 4:23</h3>
+<div class="outline-text-3" id="text-org9988914">
+<p>
+Gratia Domini nostri Jesu Christi cum spiritu vestro. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

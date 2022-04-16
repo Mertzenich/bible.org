@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5cd969c">I Timothy 1</a>
+<ul>
+<li><a href="#orgb487030">I Timothy 1:1</a></li>
+<li><a href="#org334a92b">I Timothy 1:2</a></li>
+<li><a href="#orgc4c879f">I Timothy 1:3</a></li>
+<li><a href="#org1fe72b5">I Timothy 1:4</a></li>
+<li><a href="#org7364597">I Timothy 1:5</a></li>
+<li><a href="#orgad1d4a3">I Timothy 1:6</a></li>
+<li><a href="#org00aacf7">I Timothy 1:7</a></li>
+<li><a href="#orgfb345b1">I Timothy 1:8</a></li>
+<li><a href="#org09ca881">I Timothy 1:9</a></li>
+<li><a href="#org5ef9707">I Timothy 1:10</a></li>
+<li><a href="#org01c912a">I Timothy 1:11</a></li>
+<li><a href="#org6ba2176">I Timothy 1:12</a></li>
+<li><a href="#org7c641e0">I Timothy 1:13</a></li>
+<li><a href="#org08b2259">I Timothy 1:14</a></li>
+<li><a href="#org5c99162">I Timothy 1:15</a></li>
+<li><a href="#org6123d6f">I Timothy 1:16</a></li>
+<li><a href="#orgd023c8f">I Timothy 1:17</a></li>
+<li><a href="#org5136d32">I Timothy 1:18</a></li>
+<li><a href="#org3fe0827">I Timothy 1:19</a></li>
+<li><a href="#org1344987">I Timothy 1:20</a></li>
+</ul>
+</li>
+<li><a href="#org03acdb3">I Timothy 2</a>
+<ul>
+<li><a href="#orgfaa6a46">I Timothy 2:1</a></li>
+<li><a href="#org422d297">I Timothy 2:2</a></li>
+<li><a href="#orgeaef1d3">I Timothy 2:3</a></li>
+<li><a href="#org6dbc68c">I Timothy 2:4</a></li>
+<li><a href="#orgdde5183">I Timothy 2:5</a></li>
+<li><a href="#org08113c1">I Timothy 2:6</a></li>
+<li><a href="#org916d45d">I Timothy 2:7</a></li>
+<li><a href="#org27c5a4a">I Timothy 2:8</a></li>
+<li><a href="#orge6b347f">I Timothy 2:9</a></li>
+<li><a href="#org6e22aa9">I Timothy 2:10</a></li>
+<li><a href="#orgda707d2">I Timothy 2:11</a></li>
+<li><a href="#org162a12c">I Timothy 2:12</a></li>
+<li><a href="#org9678428">I Timothy 2:13</a></li>
+<li><a href="#orgc796fa0">I Timothy 2:14</a></li>
+<li><a href="#org103b348">I Timothy 2:15</a></li>
+</ul>
+</li>
+<li><a href="#orgd2c9844">I Timothy 3</a>
+<ul>
+<li><a href="#orgc85eea9">I Timothy 3:1</a></li>
+<li><a href="#orgd45c5ff">I Timothy 3:2</a></li>
+<li><a href="#org83ddee6">I Timothy 3:3</a></li>
+<li><a href="#org6678bf7">I Timothy 3:4</a></li>
+<li><a href="#org02e7f02">I Timothy 3:5</a></li>
+<li><a href="#orgd3b445a">I Timothy 3:6</a></li>
+<li><a href="#org078f552">I Timothy 3:7</a></li>
+<li><a href="#org6c0c886">I Timothy 3:8</a></li>
+<li><a href="#orgca901d5">I Timothy 3:9</a></li>
+<li><a href="#orgb7830ec">I Timothy 3:10</a></li>
+<li><a href="#org80272ca">I Timothy 3:11</a></li>
+<li><a href="#orgafe64c4">I Timothy 3:12</a></li>
+<li><a href="#orgda109ad">I Timothy 3:13</a></li>
+<li><a href="#org8d7a02b">I Timothy 3:14</a></li>
+<li><a href="#org383b891">I Timothy 3:15</a></li>
+<li><a href="#org5ca0a57">I Timothy 3:16</a></li>
+</ul>
+</li>
+<li><a href="#org25ac25b">I Timothy 4</a>
+<ul>
+<li><a href="#org128ac11">I Timothy 4:1</a></li>
+<li><a href="#orgd9ac914">I Timothy 4:2</a></li>
+<li><a href="#orgb2d4393">I Timothy 4:3</a></li>
+<li><a href="#orgdd7f7b2">I Timothy 4:4</a></li>
+<li><a href="#orgc40f12d">I Timothy 4:5</a></li>
+<li><a href="#org1ba2057">I Timothy 4:6</a></li>
+<li><a href="#orgb590e06">I Timothy 4:7</a></li>
+<li><a href="#org666e9d0">I Timothy 4:8</a></li>
+<li><a href="#org319e225">I Timothy 4:9</a></li>
+<li><a href="#orgcf8c233">I Timothy 4:10</a></li>
+<li><a href="#orgdc8505c">I Timothy 4:11</a></li>
+<li><a href="#orgc56b64c">I Timothy 4:12</a></li>
+<li><a href="#org35aa22c">I Timothy 4:13</a></li>
+<li><a href="#orgcfdddb9">I Timothy 4:14</a></li>
+<li><a href="#org7d43f75">I Timothy 4:15</a></li>
+<li><a href="#org215349e">I Timothy 4:16</a></li>
+</ul>
+</li>
+<li><a href="#orgd7f7247">I Timothy 5</a>
+<ul>
+<li><a href="#orgec06246">I Timothy 5:1</a></li>
+<li><a href="#org9784cf7">I Timothy 5:2</a></li>
+<li><a href="#org6e20e89">I Timothy 5:3</a></li>
+<li><a href="#org60d08af">I Timothy 5:4</a></li>
+<li><a href="#org4683367">I Timothy 5:5</a></li>
+<li><a href="#org8d4c947">I Timothy 5:6</a></li>
+<li><a href="#org2bdec32">I Timothy 5:7</a></li>
+<li><a href="#org86791d8">I Timothy 5:8</a></li>
+<li><a href="#orgd20f054">I Timothy 5:9</a></li>
+<li><a href="#org095d96c">I Timothy 5:10</a></li>
+<li><a href="#orga609174">I Timothy 5:11</a></li>
+<li><a href="#org03d5c35">I Timothy 5:12</a></li>
+<li><a href="#orgbebff36">I Timothy 5:13</a></li>
+<li><a href="#org46c7246">I Timothy 5:14</a></li>
+<li><a href="#orgb8c4676">I Timothy 5:15</a></li>
+<li><a href="#orgd2cc7e9">I Timothy 5:16</a></li>
+<li><a href="#org84f9dc2">I Timothy 5:17</a></li>
+<li><a href="#org8eb194a">I Timothy 5:18</a></li>
+<li><a href="#orgd3c8729">I Timothy 5:19</a></li>
+<li><a href="#org2375b0c">I Timothy 5:20</a></li>
+<li><a href="#org62c161f">I Timothy 5:21</a></li>
+<li><a href="#org39e5d1f">I Timothy 5:22</a></li>
+<li><a href="#orga4784a1">I Timothy 5:23</a></li>
+<li><a href="#org24a24ba">I Timothy 5:24</a></li>
+<li><a href="#orge968972">I Timothy 5:25</a></li>
+</ul>
+</li>
+<li><a href="#org9a30ec0">I Timothy 6</a>
+<ul>
+<li><a href="#orgd843beb">I Timothy 6:1</a></li>
+<li><a href="#org5a676d0">I Timothy 6:2</a></li>
+<li><a href="#orgf8e9387">I Timothy 6:3</a></li>
+<li><a href="#org7c6487e">I Timothy 6:4</a></li>
+<li><a href="#org8f5739c">I Timothy 6:5</a></li>
+<li><a href="#org836dc78">I Timothy 6:6</a></li>
+<li><a href="#orgd4cb992">I Timothy 6:7</a></li>
+<li><a href="#orgcc42c97">I Timothy 6:8</a></li>
+<li><a href="#orgf80335e">I Timothy 6:9</a></li>
+<li><a href="#org2c584c0">I Timothy 6:10</a></li>
+<li><a href="#org937c7cb">I Timothy 6:11</a></li>
+<li><a href="#org11f7343">I Timothy 6:12</a></li>
+<li><a href="#org8ce8784">I Timothy 6:13</a></li>
+<li><a href="#orge973f36">I Timothy 6:14</a></li>
+<li><a href="#orgc730370">I Timothy 6:15</a></li>
+<li><a href="#orgc82e20a">I Timothy 6:16</a></li>
+<li><a href="#orgc2242f2">I Timothy 6:17</a></li>
+<li><a href="#org5d178ec">I Timothy 6:18</a></li>
+<li><a href="#org60977ef">I Timothy 6:19</a></li>
+<li><a href="#org3997d28">I Timothy 6:20</a></li>
+<li><a href="#org7ca55df">I Timothy 6:21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5cd969c" class="outline-2">
+<h2 id="org5cd969c">I Timothy 1</h2>
+<div class="outline-text-2" id="text-org5cd969c">
+</div>
+<div id="outline-container-orgb487030" class="outline-3">
+<h3 id="orgb487030">I Timothy 1:1</h3>
+<div class="outline-text-3" id="text-orgb487030">
+<p>
+Paul, an apostle of Jesus Christ, according to the commandment of God our Saviour and Christ Jesus our hope:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org334a92b" class="outline-3">
+<h3 id="org334a92b">I Timothy 1:2</h3>
+<div class="outline-text-3" id="text-org334a92b">
+<p>
+To Timothy, his beloved son in faith. Grace, mercy and peace, from God the Father and from Christ Jesus our Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4c879f" class="outline-3">
+<h3 id="orgc4c879f">I Timothy 1:3</h3>
+<div class="outline-text-3" id="text-orgc4c879f">
+<p>
+As I desired thee to remain at Ephesus when I went into Macedonia, that thou mightest charge some not to teach otherwise:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fe72b5" class="outline-3">
+<h3 id="org1fe72b5">I Timothy 1:4</h3>
+<div class="outline-text-3" id="text-org1fe72b5">
+<p>
+Not to give heed to fables and endless genealogies, which furnish questions rather than the edification of God which is in faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7364597" class="outline-3">
+<h3 id="org7364597">I Timothy 1:5</h3>
+<div class="outline-text-3" id="text-org7364597">
+<p>
+Now the end of the commandment is charity from a pure heart, and a good conscience, and an unfeigned faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad1d4a3" class="outline-3">
+<h3 id="orgad1d4a3">I Timothy 1:6</h3>
+<div class="outline-text-3" id="text-orgad1d4a3">
+<p>
+From which things some, going astray, are turned aside unto vain babbling:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00aacf7" class="outline-3">
+<h3 id="org00aacf7">I Timothy 1:7</h3>
+<div class="outline-text-3" id="text-org00aacf7">
+<p>
+Desiring to be teachers of the law: understanding neither the things they say, nor whereof they affirm.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb345b1" class="outline-3">
+<h3 id="orgfb345b1">I Timothy 1:8</h3>
+<div class="outline-text-3" id="text-orgfb345b1">
+<p>
+But we know that the law is good, if a man use it lawfully.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09ca881" class="outline-3">
+<h3 id="org09ca881">I Timothy 1:9</h3>
+<div class="outline-text-3" id="text-org09ca881">
+<p>
+Knowing this: That the law is not made for the just man but for the unjust and disobedient, for the ungodly and for sinners, for the wicked and defiled, for murderers of fathers and murderers of mothers, for manslayers,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ef9707" class="outline-3">
+<h3 id="org5ef9707">I Timothy 1:10</h3>
+<div class="outline-text-3" id="text-org5ef9707">
+<p>
+For fornicators, for them who defile themselves with mankind, for menstealers, for liars, for perjured persons, and whatever other thing is contrary to sound doctrine:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01c912a" class="outline-3">
+<h3 id="org01c912a">I Timothy 1:11</h3>
+<div class="outline-text-3" id="text-org01c912a">
+<p>
+Which is according to the gospel of the glory of the blessed God which hath been committed to my trust.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ba2176" class="outline-3">
+<h3 id="org6ba2176">I Timothy 1:12</h3>
+<div class="outline-text-3" id="text-org6ba2176">
+<p>
+I give him thanks who hath strengthened me, even to Christ Jesus our Lord, for that he hath counted me faithful, putting me in the ministry:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c641e0" class="outline-3">
+<h3 id="org7c641e0">I Timothy 1:13</h3>
+<div class="outline-text-3" id="text-org7c641e0">
+<p>
+Who before was a blasphemer and a persecutor and contumelious. But I obtained the mercy of God, because I did it ignorantly in unbelief.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08b2259" class="outline-3">
+<h3 id="org08b2259">I Timothy 1:14</h3>
+<div class="outline-text-3" id="text-org08b2259">
+<p>
+Now the grace of our Lord hath abounded exceedingly with faith and love, which is in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c99162" class="outline-3">
+<h3 id="org5c99162">I Timothy 1:15</h3>
+<div class="outline-text-3" id="text-org5c99162">
+<p>
+A faithful saying, and worthy of all acceptation, that Christ Jesus came into the world to save sinners, of whom I am the chief.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6123d6f" class="outline-3">
+<h3 id="org6123d6f">I Timothy 1:16</h3>
+<div class="outline-text-3" id="text-org6123d6f">
+<p>
+But for this cause have I obtained mercy: that in me first Christ Jesus might shew forth all patience, for the information of them that shall believe in him unto life everlasting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd023c8f" class="outline-3">
+<h3 id="orgd023c8f">I Timothy 1:17</h3>
+<div class="outline-text-3" id="text-orgd023c8f">
+<p>
+Now to the king of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5136d32" class="outline-3">
+<h3 id="org5136d32">I Timothy 1:18</h3>
+<div class="outline-text-3" id="text-org5136d32">
+<p>
+This precept, I commend to thee, O son Timothy: according to the prophecies going before on thee, that thou war in them a good warfare,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fe0827" class="outline-3">
+<h3 id="org3fe0827">I Timothy 1:19</h3>
+<div class="outline-text-3" id="text-org3fe0827">
+<p>
+Having faith and a good conscience, which some rejecting have made shipwreck concerning the faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1344987" class="outline-3">
+<h3 id="org1344987">I Timothy 1:20</h3>
+<div class="outline-text-3" id="text-org1344987">
+<p>
+Of whom is Hymeneus and Alexander, whom I have delivered up to Satan, that they may learn not to blaspheme. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org03acdb3" class="outline-2">
+<h2 id="org03acdb3">I Timothy 2</h2>
+<div class="outline-text-2" id="text-org03acdb3">
+</div>
+<div id="outline-container-orgfaa6a46" class="outline-3">
+<h3 id="orgfaa6a46">I Timothy 2:1</h3>
+<div class="outline-text-3" id="text-orgfaa6a46">
+<p>
+I desire therefore, first of all, that supplications, prayers, intercessions and thanksgivings be made for all men:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org422d297" class="outline-3">
+<h3 id="org422d297">I Timothy 2:2</h3>
+<div class="outline-text-3" id="text-org422d297">
+<p>
+For kings and for all that are in high station: that we may lead a quiet and a peaceable life in all piety and chastity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeaef1d3" class="outline-3">
+<h3 id="orgeaef1d3">I Timothy 2:3</h3>
+<div class="outline-text-3" id="text-orgeaef1d3">
+<p>
+For this is good and acceptable in the sight of God our Saviour,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6dbc68c" class="outline-3">
+<h3 id="org6dbc68c">I Timothy 2:4</h3>
+<div class="outline-text-3" id="text-org6dbc68c">
+<p>
+Who will have all men to be saved and to come to the knowledge of the truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdde5183" class="outline-3">
+<h3 id="orgdde5183">I Timothy 2:5</h3>
+<div class="outline-text-3" id="text-orgdde5183">
+<p>
+For there is one God: and one mediator of God and men, the man Christ Jesus:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08113c1" class="outline-3">
+<h3 id="org08113c1">I Timothy 2:6</h3>
+<div class="outline-text-3" id="text-org08113c1">
+<p>
+Who gave himself a redemption for all, a testimony in due times.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org916d45d" class="outline-3">
+<h3 id="org916d45d">I Timothy 2:7</h3>
+<div class="outline-text-3" id="text-org916d45d">
+<p>
+Whereunto I am appointed a preacher and an apostle (I say the truth, I lie not), a doctor of the Gentiles in faith and truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27c5a4a" class="outline-3">
+<h3 id="org27c5a4a">I Timothy 2:8</h3>
+<div class="outline-text-3" id="text-org27c5a4a">
+<p>
+I will therefore that men pray in every place, lifting up pure hands, without anger and contention.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6b347f" class="outline-3">
+<h3 id="orge6b347f">I Timothy 2:9</h3>
+<div class="outline-text-3" id="text-orge6b347f">
+<p>
+In like manner, women also in decent apparel: adorning themselves with modesty and sobriety, not with plaited hair, or gold, or pearls, or costly attire:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e22aa9" class="outline-3">
+<h3 id="org6e22aa9">I Timothy 2:10</h3>
+<div class="outline-text-3" id="text-org6e22aa9">
+<p>
+But, as it becometh women professing godliness, with good works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda707d2" class="outline-3">
+<h3 id="orgda707d2">I Timothy 2:11</h3>
+<div class="outline-text-3" id="text-orgda707d2">
+<p>
+Let the woman learn in silence with all subjection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org162a12c" class="outline-3">
+<h3 id="org162a12c">I Timothy 2:12</h3>
+<div class="outline-text-3" id="text-org162a12c">
+<p>
+But I suffer not a woman to teach, nor to use authority over the man: but to be in silence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9678428" class="outline-3">
+<h3 id="org9678428">I Timothy 2:13</h3>
+<div class="outline-text-3" id="text-org9678428">
+<p>
+For Adam was first formed; then Eve.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc796fa0" class="outline-3">
+<h3 id="orgc796fa0">I Timothy 2:14</h3>
+<div class="outline-text-3" id="text-orgc796fa0">
+<p>
+And Adam was not seduced; but the woman, being seduced, was in the transgression.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org103b348" class="outline-3">
+<h3 id="org103b348">I Timothy 2:15</h3>
+<div class="outline-text-3" id="text-org103b348">
+<p>
+Yet she shall be saved through child bearing; if she continue in faith and love and sanctification with sobriety. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd2c9844" class="outline-2">
+<h2 id="orgd2c9844">I Timothy 3</h2>
+<div class="outline-text-2" id="text-orgd2c9844">
+</div>
+<div id="outline-container-orgc85eea9" class="outline-3">
+<h3 id="orgc85eea9">I Timothy 3:1</h3>
+<div class="outline-text-3" id="text-orgc85eea9">
+<p>
+A faithful saying: If a man desire the office of a bishop, he desireth good work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd45c5ff" class="outline-3">
+<h3 id="orgd45c5ff">I Timothy 3:2</h3>
+<div class="outline-text-3" id="text-orgd45c5ff">
+<p>
+It behoveth therefore a bishop to be blameless, the husband of one wife, sober, prudent, of good behaviour, chaste, given to hospitality, a teacher,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83ddee6" class="outline-3">
+<h3 id="org83ddee6">I Timothy 3:3</h3>
+<div class="outline-text-3" id="text-org83ddee6">
+<p>
+Not given to wine, no striker, but modest, not quarrelsome, not covetous, but
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6678bf7" class="outline-3">
+<h3 id="org6678bf7">I Timothy 3:4</h3>
+<div class="outline-text-3" id="text-org6678bf7">
+<p>
+One that ruleth well his own house, having his children in subjection with all chastity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02e7f02" class="outline-3">
+<h3 id="org02e7f02">I Timothy 3:5</h3>
+<div class="outline-text-3" id="text-org02e7f02">
+<p>
+But if a man know not how to rule his own house, how shall he take care of the church of God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3b445a" class="outline-3">
+<h3 id="orgd3b445a">I Timothy 3:6</h3>
+<div class="outline-text-3" id="text-orgd3b445a">
+<p>
+Not a neophyte: lest, being puffed up with pride, he fall into the judgment of the devil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org078f552" class="outline-3">
+<h3 id="org078f552">I Timothy 3:7</h3>
+<div class="outline-text-3" id="text-org078f552">
+<p>
+Moreover, he must have a good testimony of them who are without: lest he fall into reproach and the snare of the devil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c0c886" class="outline-3">
+<h3 id="org6c0c886">I Timothy 3:8</h3>
+<div class="outline-text-3" id="text-org6c0c886">
+<p>
+Deacons in like manner: chaste, not double tongued, not given to much wine, not greedy of filthy lucre:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca901d5" class="outline-3">
+<h3 id="orgca901d5">I Timothy 3:9</h3>
+<div class="outline-text-3" id="text-orgca901d5">
+<p>
+Holding the mystery of faith in a pure conscience.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7830ec" class="outline-3">
+<h3 id="orgb7830ec">I Timothy 3:10</h3>
+<div class="outline-text-3" id="text-orgb7830ec">
+<p>
+And let these also first be proved: and so let them minister, having no crime.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80272ca" class="outline-3">
+<h3 id="org80272ca">I Timothy 3:11</h3>
+<div class="outline-text-3" id="text-org80272ca">
+<p>
+The women in like manner: chaste, not slanderers, but sober, faithful in all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafe64c4" class="outline-3">
+<h3 id="orgafe64c4">I Timothy 3:12</h3>
+<div class="outline-text-3" id="text-orgafe64c4">
+<p>
+Let deacons be the husbands of one wife: who rule well their children and their own houses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda109ad" class="outline-3">
+<h3 id="orgda109ad">I Timothy 3:13</h3>
+<div class="outline-text-3" id="text-orgda109ad">
+<p>
+For they that have ministered well shall purchase to themselves a good degree and much confidence in the faith which is in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d7a02b" class="outline-3">
+<h3 id="org8d7a02b">I Timothy 3:14</h3>
+<div class="outline-text-3" id="text-org8d7a02b">
+<p>
+These things I write to thee, hoping that I shall come to thee shortly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org383b891" class="outline-3">
+<h3 id="org383b891">I Timothy 3:15</h3>
+<div class="outline-text-3" id="text-org383b891">
+<p>
+But if I tarry long, that thou mayest know how thou oughtest to behave thyself in the house of God, which is the church of the living God, the pillar and ground of the truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ca0a57" class="outline-3">
+<h3 id="org5ca0a57">I Timothy 3:16</h3>
+<div class="outline-text-3" id="text-org5ca0a57">
+<p>
+And evidently great is the mystery of godliness, which was manifested in the flesh, was justified in the spirit, appeared unto angels, hath been preached unto the Gentiles, is believed in the world, is taken up in glory. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org25ac25b" class="outline-2">
+<h2 id="org25ac25b">I Timothy 4</h2>
+<div class="outline-text-2" id="text-org25ac25b">
+</div>
+<div id="outline-container-org128ac11" class="outline-3">
+<h3 id="org128ac11">I Timothy 4:1</h3>
+<div class="outline-text-3" id="text-org128ac11">
+<p>
+Now the Spirit manifestly saith that in the last times some shall depart from the faith, giving heed to spirits of error and doctrines of devils,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9ac914" class="outline-3">
+<h3 id="orgd9ac914">I Timothy 4:2</h3>
+<div class="outline-text-3" id="text-orgd9ac914">
+<p>
+Speaking lies in hypocrisy and having their conscience seared,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2d4393" class="outline-3">
+<h3 id="orgb2d4393">I Timothy 4:3</h3>
+<div class="outline-text-3" id="text-orgb2d4393">
+<p>
+Forbidding to marry, to abstain from meats, which God hath created to be received with thanksgiving by the faithful and by them that have known the truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd7f7b2" class="outline-3">
+<h3 id="orgdd7f7b2">I Timothy 4:4</h3>
+<div class="outline-text-3" id="text-orgdd7f7b2">
+<p>
+For every creature of God is good, and nothing to be rejected that is received with thanksgiving:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc40f12d" class="outline-3">
+<h3 id="orgc40f12d">I Timothy 4:5</h3>
+<div class="outline-text-3" id="text-orgc40f12d">
+<p>
+For it is sanctified by the word of God and prayer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ba2057" class="outline-3">
+<h3 id="org1ba2057">I Timothy 4:6</h3>
+<div class="outline-text-3" id="text-org1ba2057">
+<p>
+These things proposing to the brethren, thou shalt be a good minister of Christ Jesus, nourished up in the words of faith and of the good doctrine which thou hast attained unto.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb590e06" class="outline-3">
+<h3 id="orgb590e06">I Timothy 4:7</h3>
+<div class="outline-text-3" id="text-orgb590e06">
+<p>
+But avoid foolish and old wives fables: and exercise thyself unto godliness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org666e9d0" class="outline-3">
+<h3 id="org666e9d0">I Timothy 4:8</h3>
+<div class="outline-text-3" id="text-org666e9d0">
+<p>
+For bodily exercise is profitable to little: but godliness is profitable to all things, having promise of the life that now is and of that which is to come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org319e225" class="outline-3">
+<h3 id="org319e225">I Timothy 4:9</h3>
+<div class="outline-text-3" id="text-org319e225">
+<p>
+A faithful saying and worthy of all acceptation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf8c233" class="outline-3">
+<h3 id="orgcf8c233">I Timothy 4:10</h3>
+<div class="outline-text-3" id="text-orgcf8c233">
+<p>
+For therefore we labour and are reviled, because we hope in the living God, who is the Saviour of all men, especially of the faithful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc8505c" class="outline-3">
+<h3 id="orgdc8505c">I Timothy 4:11</h3>
+<div class="outline-text-3" id="text-orgdc8505c">
+<p>
+These things command and teach:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc56b64c" class="outline-3">
+<h3 id="orgc56b64c">I Timothy 4:12</h3>
+<div class="outline-text-3" id="text-orgc56b64c">
+<p>
+Let no man despise thy youth: but be thou an example of the faithful, in word, in conversation, in charity, in faith, in chastity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35aa22c" class="outline-3">
+<h3 id="org35aa22c">I Timothy 4:13</h3>
+<div class="outline-text-3" id="text-org35aa22c">
+<p>
+Till I come, attend unto reading, to exhortation and to doctrine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcfdddb9" class="outline-3">
+<h3 id="orgcfdddb9">I Timothy 4:14</h3>
+<div class="outline-text-3" id="text-orgcfdddb9">
+<p>
+Neglect not the grace that is in thee, which was given thee by prophecy, with imposition of the hands of the priesthood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d43f75" class="outline-3">
+<h3 id="org7d43f75">I Timothy 4:15</h3>
+<div class="outline-text-3" id="text-org7d43f75">
+<p>
+Meditate upon these things, be wholly in these things: that thy profiting may be manifest to all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org215349e" class="outline-3">
+<h3 id="org215349e">I Timothy 4:16</h3>
+<div class="outline-text-3" id="text-org215349e">
+<p>
+Take heed to thyself and to doctrine: be earnest in them. For in doing this thou shalt both save thyself and them that hear thee. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd7f7247" class="outline-2">
+<h2 id="orgd7f7247">I Timothy 5</h2>
+<div class="outline-text-2" id="text-orgd7f7247">
+</div>
+<div id="outline-container-orgec06246" class="outline-3">
+<h3 id="orgec06246">I Timothy 5:1</h3>
+<div class="outline-text-3" id="text-orgec06246">
+<p>
+An ancient man rebuke not, but entreat him as a father: young men, as brethren:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9784cf7" class="outline-3">
+<h3 id="org9784cf7">I Timothy 5:2</h3>
+<div class="outline-text-3" id="text-org9784cf7">
+<p>
+Old women, as mothers: young women, as sisters, in all chastity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e20e89" class="outline-3">
+<h3 id="org6e20e89">I Timothy 5:3</h3>
+<div class="outline-text-3" id="text-org6e20e89">
+<p>
+Honour widows that are widows indeed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60d08af" class="outline-3">
+<h3 id="org60d08af">I Timothy 5:4</h3>
+<div class="outline-text-3" id="text-org60d08af">
+<p>
+But if any widow have children or grandchildren, let her learn first to govern her own house and to make a return of duty to her parents; for this is acceptable before God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4683367" class="outline-3">
+<h3 id="org4683367">I Timothy 5:5</h3>
+<div class="outline-text-3" id="text-org4683367">
+<p>
+But she that is a widow indeed, and desolate, let her trust in God and continue in supplications and prayers night and day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d4c947" class="outline-3">
+<h3 id="org8d4c947">I Timothy 5:6</h3>
+<div class="outline-text-3" id="text-org8d4c947">
+<p>
+For she that liveth in pleasures is dead while she is living.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bdec32" class="outline-3">
+<h3 id="org2bdec32">I Timothy 5:7</h3>
+<div class="outline-text-3" id="text-org2bdec32">
+<p>
+And this give in charge, that they may be blameless.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86791d8" class="outline-3">
+<h3 id="org86791d8">I Timothy 5:8</h3>
+<div class="outline-text-3" id="text-org86791d8">
+<p>
+But if any man have not care of his own and especially of those of his house, he hath denied the faith and is worse than an infidel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd20f054" class="outline-3">
+<h3 id="orgd20f054">I Timothy 5:9</h3>
+<div class="outline-text-3" id="text-orgd20f054">
+<p>
+Let a widow be chosen of no less than threescore years of age, who hath been the wife of one husband.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org095d96c" class="outline-3">
+<h3 id="org095d96c">I Timothy 5:10</h3>
+<div class="outline-text-3" id="text-org095d96c">
+<p>
+Having testimony for her good works, if she have brought up children, if she have received to harbour, if she have washed the saints&rsquo; feet, if she have ministered to them that suffer tribulation, if she have diligently followed every good work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga609174" class="outline-3">
+<h3 id="orga609174">I Timothy 5:11</h3>
+<div class="outline-text-3" id="text-orga609174">
+<p>
+But the younger widows avoid. For when they have grown wanton in Christ, they will marry:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03d5c35" class="outline-3">
+<h3 id="org03d5c35">I Timothy 5:12</h3>
+<div class="outline-text-3" id="text-org03d5c35">
+<p>
+Having damnation, because they have made void their first faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbebff36" class="outline-3">
+<h3 id="orgbebff36">I Timothy 5:13</h3>
+<div class="outline-text-3" id="text-orgbebff36">
+<p>
+And withal being idle they learn to go about from house to house: and are not only idle, but tattlers also and busy bodies, speaking things which they ought not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46c7246" class="outline-3">
+<h3 id="org46c7246">I Timothy 5:14</h3>
+<div class="outline-text-3" id="text-org46c7246">
+<p>
+I will, therefore, that the younger should marry, bear children, be mistresses of families, give no occasion to the adversary to speak evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8c4676" class="outline-3">
+<h3 id="orgb8c4676">I Timothy 5:15</h3>
+<div class="outline-text-3" id="text-orgb8c4676">
+<p>
+For some are already turned aside after Satan.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2cc7e9" class="outline-3">
+<h3 id="orgd2cc7e9">I Timothy 5:16</h3>
+<div class="outline-text-3" id="text-orgd2cc7e9">
+<p>
+If any of the faithful have widows, let him minister to them, and let not the church be charged: that there may be sufficient for them that are widows indeed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84f9dc2" class="outline-3">
+<h3 id="org84f9dc2">I Timothy 5:17</h3>
+<div class="outline-text-3" id="text-org84f9dc2">
+<p>
+Let the priests that rule well be esteemed worthy of double honour: especially they who labour in the word and doctrine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8eb194a" class="outline-3">
+<h3 id="org8eb194a">I Timothy 5:18</h3>
+<div class="outline-text-3" id="text-org8eb194a">
+<p>
+For the scripture saith: Thou shalt not muzzle the ox that treadeth out the corn: and, The labourer is worthy of his reward.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3c8729" class="outline-3">
+<h3 id="orgd3c8729">I Timothy 5:19</h3>
+<div class="outline-text-3" id="text-orgd3c8729">
+<p>
+Against a priest receive not an accusation, but under two or three witnesses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2375b0c" class="outline-3">
+<h3 id="org2375b0c">I Timothy 5:20</h3>
+<div class="outline-text-3" id="text-org2375b0c">
+<p>
+Them that sin reprove before all that the rest also may have fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62c161f" class="outline-3">
+<h3 id="org62c161f">I Timothy 5:21</h3>
+<div class="outline-text-3" id="text-org62c161f">
+<p>
+I charge thee, before God and Christ Jesus and the elect angels, that thou observe these things without prejudice, doing nothing by declining to either side.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39e5d1f" class="outline-3">
+<h3 id="org39e5d1f">I Timothy 5:22</h3>
+<div class="outline-text-3" id="text-org39e5d1f">
+<p>
+Impose not hands lightly upon any man, neither be partaker of other men&rsquo;s sins. Keep thyself chaste.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4784a1" class="outline-3">
+<h3 id="orga4784a1">I Timothy 5:23</h3>
+<div class="outline-text-3" id="text-orga4784a1">
+<p>
+Do not still drink water, but use a little wine for thy stomach&rsquo;s sake and thy frequent infirmities.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24a24ba" class="outline-3">
+<h3 id="org24a24ba">I Timothy 5:24</h3>
+<div class="outline-text-3" id="text-org24a24ba">
+<p>
+Some men&rsquo;s sins are manifest, going before to judgment: and some men they follow after.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge968972" class="outline-3">
+<h3 id="orge968972">I Timothy 5:25</h3>
+<div class="outline-text-3" id="text-orge968972">
+<p>
+In like manner also good deeds are manifest: and they that are otherwise cannot be hid. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9a30ec0" class="outline-2">
+<h2 id="org9a30ec0">I Timothy 6</h2>
+<div class="outline-text-2" id="text-org9a30ec0">
+</div>
+<div id="outline-container-orgd843beb" class="outline-3">
+<h3 id="orgd843beb">I Timothy 6:1</h3>
+<div class="outline-text-3" id="text-orgd843beb">
+<p>
+Whosoever are servants under the yoke, let them count their masters worthy of all honour; lest the name of the Lord and his doctrine be blasphemed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a676d0" class="outline-3">
+<h3 id="org5a676d0">I Timothy 6:2</h3>
+<div class="outline-text-3" id="text-org5a676d0">
+<p>
+But they that have believing masters, let them not despise them, because they are brethren; but serve them the rather, because they are faithful and beloved, who are partakers of the benefit. These things teach and exhort.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8e9387" class="outline-3">
+<h3 id="orgf8e9387">I Timothy 6:3</h3>
+<div class="outline-text-3" id="text-orgf8e9387">
+<p>
+If any man teach otherwise and consent not to the sound words of our Lord Jesus Christ and to that doctrine which is according to godliness,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c6487e" class="outline-3">
+<h3 id="org7c6487e">I Timothy 6:4</h3>
+<div class="outline-text-3" id="text-org7c6487e">
+<p>
+He is proud, knowing nothing, but sick about questions and strifes of words; from which arise envies, contentions, blasphemies, evil suspicions,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f5739c" class="outline-3">
+<h3 id="org8f5739c">I Timothy 6:5</h3>
+<div class="outline-text-3" id="text-org8f5739c">
+<p>
+Conflicts of men corrupted in mind and who are destitute of the truth, supposing gain to be godliness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org836dc78" class="outline-3">
+<h3 id="org836dc78">I Timothy 6:6</h3>
+<div class="outline-text-3" id="text-org836dc78">
+<p>
+But godliness with contentment is great gain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4cb992" class="outline-3">
+<h3 id="orgd4cb992">I Timothy 6:7</h3>
+<div class="outline-text-3" id="text-orgd4cb992">
+<p>
+For we brought nothing into this world: and certainly we can carry nothing out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc42c97" class="outline-3">
+<h3 id="orgcc42c97">I Timothy 6:8</h3>
+<div class="outline-text-3" id="text-orgcc42c97">
+<p>
+But having food and wherewith to be covered, with these we are content.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf80335e" class="outline-3">
+<h3 id="orgf80335e">I Timothy 6:9</h3>
+<div class="outline-text-3" id="text-orgf80335e">
+<p>
+For they that will become rich fall into temptation and into the snare of the devil and into many unprofitable and hurtful desires, which drown men into destruction and perdition.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c584c0" class="outline-3">
+<h3 id="org2c584c0">I Timothy 6:10</h3>
+<div class="outline-text-3" id="text-org2c584c0">
+<p>
+For the desire of money is the root of all evils; which some coveting have erred from the faith and have entangled themselves in many sorrows.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org937c7cb" class="outline-3">
+<h3 id="org937c7cb">I Timothy 6:11</h3>
+<div class="outline-text-3" id="text-org937c7cb">
+<p>
+But thou, O man of God, fly these things: and pursue justice, godliness, faith, charity, patience, mildness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11f7343" class="outline-3">
+<h3 id="org11f7343">I Timothy 6:12</h3>
+<div class="outline-text-3" id="text-org11f7343">
+<p>
+Fight the good fight of faith. Lay hold on eternal life, whereunto thou art called and be it confessed a good confession before many witnesses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ce8784" class="outline-3">
+<h3 id="org8ce8784">I Timothy 6:13</h3>
+<div class="outline-text-3" id="text-org8ce8784">
+<p>
+I charge thee before God who quickeneth all things, and before Christ Jesus who gave testimony under Pontius Pilate, a good confession:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge973f36" class="outline-3">
+<h3 id="orge973f36">I Timothy 6:14</h3>
+<div class="outline-text-3" id="text-orge973f36">
+<p>
+That thou keep the commandment without spot, blameless, unto the coming of our Lord Jesus Christ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc730370" class="outline-3">
+<h3 id="orgc730370">I Timothy 6:15</h3>
+<div class="outline-text-3" id="text-orgc730370">
+<p>
+Which in his times he shall shew, who is the Blessed and only Mighty, the King of kings and Lord of lords:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc82e20a" class="outline-3">
+<h3 id="orgc82e20a">I Timothy 6:16</h3>
+<div class="outline-text-3" id="text-orgc82e20a">
+<p>
+Who only hath immortality and inhabiteth light inaccessible: whom no man hath seen, nor can see: to whom be honour and empire everlasting. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2242f2" class="outline-3">
+<h3 id="orgc2242f2">I Timothy 6:17</h3>
+<div class="outline-text-3" id="text-orgc2242f2">
+<p>
+Charge the rich of this world not to be highminded nor to trust in the uncertainty of riches, but in the living God (who giveth us abundantly all things to enjoy)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d178ec" class="outline-3">
+<h3 id="org5d178ec">I Timothy 6:18</h3>
+<div class="outline-text-3" id="text-org5d178ec">
+<p>
+To do good, to be rich in good work, to give easily, to communicate to others,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60977ef" class="outline-3">
+<h3 id="org60977ef">I Timothy 6:19</h3>
+<div class="outline-text-3" id="text-org60977ef">
+<p>
+To lay up in store for themselves a good foundation against the time to come, that they may lay hold on the true life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3997d28" class="outline-3">
+<h3 id="org3997d28">I Timothy 6:20</h3>
+<div class="outline-text-3" id="text-org3997d28">
+<p>
+O Timothy, keep that which is committed to thy trust, avoiding the profane novelties of words and oppositions of knowledge falsely so called.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ca55df" class="outline-3">
+<h3 id="org7ca55df">I Timothy 6:21</h3>
+<div class="outline-text-3" id="text-org7ca55df">
+<p>
+Which some promising, have erred concerning the faith. Grace be with thee. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

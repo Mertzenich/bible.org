@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6c26695">Colossians 1</a>
+<ul>
+<li><a href="#org7219077">Colossians 1:1</a></li>
+<li><a href="#org5219f1a">Colossians 1:2</a></li>
+<li><a href="#org2775b16">Colossians 1:3</a></li>
+<li><a href="#org853faf8">Colossians 1:4</a></li>
+<li><a href="#org0f646b9">Colossians 1:5</a></li>
+<li><a href="#orgbab7ae8">Colossians 1:6</a></li>
+<li><a href="#org984f9e5">Colossians 1:7</a></li>
+<li><a href="#orgd0018f7">Colossians 1:8</a></li>
+<li><a href="#org2b02e65">Colossians 1:9</a></li>
+<li><a href="#orga72e985">Colossians 1:10</a></li>
+<li><a href="#org9f59d42">Colossians 1:11</a></li>
+<li><a href="#org6d9d3ea">Colossians 1:12</a></li>
+<li><a href="#org78d3264">Colossians 1:13</a></li>
+<li><a href="#org0d5c138">Colossians 1:14</a></li>
+<li><a href="#org8e3c344">Colossians 1:15</a></li>
+<li><a href="#org8b8517a">Colossians 1:16</a></li>
+<li><a href="#orgbd4eb90">Colossians 1:17</a></li>
+<li><a href="#orgbc57640">Colossians 1:18</a></li>
+<li><a href="#org21efd62">Colossians 1:19</a></li>
+<li><a href="#org8266e25">Colossians 1:20</a></li>
+<li><a href="#orge395663">Colossians 1:21</a></li>
+<li><a href="#org16cd68f">Colossians 1:22</a></li>
+<li><a href="#org8cbfcae">Colossians 1:23</a></li>
+<li><a href="#org297e62c">Colossians 1:24</a></li>
+<li><a href="#orgd90a957">Colossians 1:25</a></li>
+<li><a href="#orga40e78f">Colossians 1:26</a></li>
+<li><a href="#org8d3c683">Colossians 1:27</a></li>
+<li><a href="#orgdd7b6db">Colossians 1:28</a></li>
+<li><a href="#orgefd56fc">Colossians 1:29</a></li>
+</ul>
+</li>
+<li><a href="#org73467e5">Colossians 2</a>
+<ul>
+<li><a href="#orgdfdc53c">Colossians 2:1</a></li>
+<li><a href="#org3527b38">Colossians 2:2</a></li>
+<li><a href="#org7d1d119">Colossians 2:3</a></li>
+<li><a href="#orgd36211f">Colossians 2:4</a></li>
+<li><a href="#org3858732">Colossians 2:5</a></li>
+<li><a href="#org25f1331">Colossians 2:6</a></li>
+<li><a href="#org07132fa">Colossians 2:7</a></li>
+<li><a href="#org67eb8ff">Colossians 2:8</a></li>
+<li><a href="#org63a66d7">Colossians 2:9</a></li>
+<li><a href="#org0f5cd02">Colossians 2:10</a></li>
+<li><a href="#org6d39d26">Colossians 2:11</a></li>
+<li><a href="#orge6538b1">Colossians 2:12</a></li>
+<li><a href="#org6add736">Colossians 2:13</a></li>
+<li><a href="#orgd8a1643">Colossians 2:14</a></li>
+<li><a href="#org7f27438">Colossians 2:15</a></li>
+<li><a href="#orga2f0caf">Colossians 2:16</a></li>
+<li><a href="#org8be0cea">Colossians 2:17</a></li>
+<li><a href="#org7d8be81">Colossians 2:18</a></li>
+<li><a href="#orgec52cec">Colossians 2:19</a></li>
+<li><a href="#org903f316">Colossians 2:20</a></li>
+<li><a href="#org412929d">Colossians 2:21</a></li>
+<li><a href="#org02f24eb">Colossians 2:22</a></li>
+<li><a href="#org6de0260">Colossians 2:23</a></li>
+</ul>
+</li>
+<li><a href="#org4c6984b">Colossians 3</a>
+<ul>
+<li><a href="#org51166be">Colossians 3:1</a></li>
+<li><a href="#org4fbd413">Colossians 3:2</a></li>
+<li><a href="#org67585e2">Colossians 3:3</a></li>
+<li><a href="#orgbe5f34c">Colossians 3:4</a></li>
+<li><a href="#org7c7d97a">Colossians 3:5</a></li>
+<li><a href="#org0c77393">Colossians 3:6</a></li>
+<li><a href="#org936926f">Colossians 3:7</a></li>
+<li><a href="#org5fd1c37">Colossians 3:8</a></li>
+<li><a href="#org3da9f32">Colossians 3:9</a></li>
+<li><a href="#orga11d64a">Colossians 3:10</a></li>
+<li><a href="#org7f67838">Colossians 3:11</a></li>
+<li><a href="#org16621d9">Colossians 3:12</a></li>
+<li><a href="#orga254a8d">Colossians 3:13</a></li>
+<li><a href="#org50a6ac8">Colossians 3:14</a></li>
+<li><a href="#org7467708">Colossians 3:15</a></li>
+<li><a href="#org2d11004">Colossians 3:16</a></li>
+<li><a href="#orgad76d3d">Colossians 3:17</a></li>
+<li><a href="#org7af2745">Colossians 3:18</a></li>
+<li><a href="#orgf4ae1d3">Colossians 3:19</a></li>
+<li><a href="#org9163e99">Colossians 3:20</a></li>
+<li><a href="#org9a4368b">Colossians 3:21</a></li>
+<li><a href="#org76c0b94">Colossians 3:22</a></li>
+<li><a href="#orge7696f9">Colossians 3:23</a></li>
+<li><a href="#orgeab4a66">Colossians 3:24</a></li>
+<li><a href="#org27da02d">Colossians 3:25</a></li>
+</ul>
+</li>
+<li><a href="#orgbc76661">Colossians 4</a>
+<ul>
+<li><a href="#org08b0143">Colossians 4:1</a></li>
+<li><a href="#orgcab62de">Colossians 4:2</a></li>
+<li><a href="#org51686a9">Colossians 4:3</a></li>
+<li><a href="#org9a39054">Colossians 4:4</a></li>
+<li><a href="#org3b5d0ac">Colossians 4:5</a></li>
+<li><a href="#orge95ff4c">Colossians 4:6</a></li>
+<li><a href="#orga4de442">Colossians 4:7</a></li>
+<li><a href="#orged86224">Colossians 4:8</a></li>
+<li><a href="#orgae18517">Colossians 4:9</a></li>
+<li><a href="#orgafe478b">Colossians 4:10</a></li>
+<li><a href="#orgc1b6fed">Colossians 4:11</a></li>
+<li><a href="#org09c4a6e">Colossians 4:12</a></li>
+<li><a href="#org3252c96">Colossians 4:13</a></li>
+<li><a href="#org32a1d04">Colossians 4:14</a></li>
+<li><a href="#org3d83945">Colossians 4:15</a></li>
+<li><a href="#org28047bd">Colossians 4:16</a></li>
+<li><a href="#orgb5d7424">Colossians 4:17</a></li>
+<li><a href="#org84db0c5">Colossians 4:18</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c26695" class="outline-2">
+<h2 id="org6c26695">Colossians 1</h2>
+<div class="outline-text-2" id="text-org6c26695">
+</div>
+<div id="outline-container-org7219077" class="outline-3">
+<h3 id="org7219077">Colossians 1:1</h3>
+<div class="outline-text-3" id="text-org7219077">
+<p>
+Paulus Apostolus Jesu Christi per voluntatem Dei, et Timotheus frater :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5219f1a" class="outline-3">
+<h3 id="org5219f1a">Colossians 1:2</h3>
+<div class="outline-text-3" id="text-org5219f1a">
+<p>
+eis, qui sunt Colossis, sanctis, et fidelibus fratribus in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2775b16" class="outline-3">
+<h3 id="org2775b16">Colossians 1:3</h3>
+<div class="outline-text-3" id="text-org2775b16">
+<p>
+Gratia vobis, et pax a Deo Patre nostro, et Domino Jesu Christo.   Gratias agimus Deo, et Patri Domini nostri Jesu Christi semper pro vobis orantes :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org853faf8" class="outline-3">
+<h3 id="org853faf8">Colossians 1:4</h3>
+<div class="outline-text-3" id="text-org853faf8">
+<p>
+audientes fidem vestram in Christo Jesu, et dilectionem quam habetis in sanctos omnes
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f646b9" class="outline-3">
+<h3 id="org0f646b9">Colossians 1:5</h3>
+<div class="outline-text-3" id="text-org0f646b9">
+<p>
+propter spem, quæ reposita est vobis in cælis : quam audistis in verbo veritatis Evangelii :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbab7ae8" class="outline-3">
+<h3 id="orgbab7ae8">Colossians 1:6</h3>
+<div class="outline-text-3" id="text-orgbab7ae8">
+<p>
+quod pervenit ad vos, sicut et in universo mundo est, et fructificat, et crescit sicut in vobis, ex ea die, qua audistis, et cognovistis gratiam Dei in veritate,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org984f9e5" class="outline-3">
+<h3 id="org984f9e5">Colossians 1:7</h3>
+<div class="outline-text-3" id="text-org984f9e5">
+<p>
+sicut didicistis ab Epaphra carissimo conservo nostro, qui est fidelis pro vobis minister Christi Jesu,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0018f7" class="outline-3">
+<h3 id="orgd0018f7">Colossians 1:8</h3>
+<div class="outline-text-3" id="text-orgd0018f7">
+<p>
+qui etiam manifestavit nobis dilectionem vestram in spiritu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b02e65" class="outline-3">
+<h3 id="org2b02e65">Colossians 1:9</h3>
+<div class="outline-text-3" id="text-org2b02e65">
+<p>
+Ideo et nos ex qua die audivimus, non cessamus pro vobis orantes, et postulantes ut impleamini agnitione voluntatis ejus, in omni sapientia et intellectu spiritali :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga72e985" class="outline-3">
+<h3 id="orga72e985">Colossians 1:10</h3>
+<div class="outline-text-3" id="text-orga72e985">
+<p>
+ut ambuletis digne Deo per omnia placentes : in omni opere bono fructificantes, et crescentes in scientia Dei :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f59d42" class="outline-3">
+<h3 id="org9f59d42">Colossians 1:11</h3>
+<div class="outline-text-3" id="text-org9f59d42">
+<p>
+in omni virtute confortati secundum potentiam claritatis ejus, in omni patientia et longanimitate cum gaudio,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d9d3ea" class="outline-3">
+<h3 id="org6d9d3ea">Colossians 1:12</h3>
+<div class="outline-text-3" id="text-org6d9d3ea">
+<p>
+gratias agentes Deo Patri, qui dignos nos fecit in partem sortis sanctorum in lumine :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78d3264" class="outline-3">
+<h3 id="org78d3264">Colossians 1:13</h3>
+<div class="outline-text-3" id="text-org78d3264">
+<p>
+qui eripuit nos de potestate tenebrarum, et transtulit in regnum filii dilectionis suæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d5c138" class="outline-3">
+<h3 id="org0d5c138">Colossians 1:14</h3>
+<div class="outline-text-3" id="text-org0d5c138">
+<p>
+in quo habemus redemptionem per sanguinem ejus, remissionem peccatorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e3c344" class="outline-3">
+<h3 id="org8e3c344">Colossians 1:15</h3>
+<div class="outline-text-3" id="text-org8e3c344">
+<p>
+qui est imago Dei invisibilis, primogenitus omnis creaturæ :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b8517a" class="outline-3">
+<h3 id="org8b8517a">Colossians 1:16</h3>
+<div class="outline-text-3" id="text-org8b8517a">
+<p>
+quoniam in ipso condita sunt universa in cælis, et in terra, visibilia, et invisibilia, sive throni, sive dominationes, sive principatus, sive potestates : omnia per ipsum et in ipso creata sunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd4eb90" class="outline-3">
+<h3 id="orgbd4eb90">Colossians 1:17</h3>
+<div class="outline-text-3" id="text-orgbd4eb90">
+<p>
+et ipse est ante omnes, et omnia in ipso constant.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc57640" class="outline-3">
+<h3 id="orgbc57640">Colossians 1:18</h3>
+<div class="outline-text-3" id="text-orgbc57640">
+<p>
+Et ipse est caput corporis Ecclesiæ, qui est principium, primogenitus ex mortuis : ut sit in omnibus ipse primatum tenens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21efd62" class="outline-3">
+<h3 id="org21efd62">Colossians 1:19</h3>
+<div class="outline-text-3" id="text-org21efd62">
+<p>
+quia in ipso complacuit, omnem plenitudinem inhabitare :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8266e25" class="outline-3">
+<h3 id="org8266e25">Colossians 1:20</h3>
+<div class="outline-text-3" id="text-org8266e25">
+<p>
+et per eum reconciliare omnia in ipsum, pacificans per sanguinem crucis ejus, sive quæ in terris, sive quæ in cælis sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge395663" class="outline-3">
+<h3 id="orge395663">Colossians 1:21</h3>
+<div class="outline-text-3" id="text-orge395663">
+<p>
+Et vos cum essetis aliquando alienati, et inimici sensu in operibus malis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16cd68f" class="outline-3">
+<h3 id="org16cd68f">Colossians 1:22</h3>
+<div class="outline-text-3" id="text-org16cd68f">
+<p>
+nunc autem reconciliavit in corpore carnis ejus per mortem, exhibere vos sanctos, et immaculatos, et irreprehensibiles coram ipso :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cbfcae" class="outline-3">
+<h3 id="org8cbfcae">Colossians 1:23</h3>
+<div class="outline-text-3" id="text-org8cbfcae">
+<p>
+si tamen permanetis in fide fundati, et stabiles, et immobiles a spe Evangelii, quod audistis, quod prædicatum est in universa creatura, quæ sub cælo est, cujus factus sum ego Paulus minister.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org297e62c" class="outline-3">
+<h3 id="org297e62c">Colossians 1:24</h3>
+<div class="outline-text-3" id="text-org297e62c">
+<p>
+Qui nunc gaudeo in passionibus pro vobis, et adimpleo ea quæ desunt passionum Christi, in carne mea pro corpore ejus, quod est Ecclesia :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd90a957" class="outline-3">
+<h3 id="orgd90a957">Colossians 1:25</h3>
+<div class="outline-text-3" id="text-orgd90a957">
+<p>
+cujus factus sum ego minister secundum dispensationem Dei, quæ data est mihi in vos, ut impleam verbum Dei :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga40e78f" class="outline-3">
+<h3 id="orga40e78f">Colossians 1:26</h3>
+<div class="outline-text-3" id="text-orga40e78f">
+<p>
+mysterium, quod absconditum fuit a sæculis, et generationibus, nunc autem manifestatum est sanctis ejus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d3c683" class="outline-3">
+<h3 id="org8d3c683">Colossians 1:27</h3>
+<div class="outline-text-3" id="text-org8d3c683">
+<p>
+quibus voluit Deus notas facere divitias gloriæ sacramenti hujus in gentibus, quod est Christus, in vobis spes gloriæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd7b6db" class="outline-3">
+<h3 id="orgdd7b6db">Colossians 1:28</h3>
+<div class="outline-text-3" id="text-orgdd7b6db">
+<p>
+quem nos annuntiamus, corripientes omnem hominem, et docentes omnem hominem, in omni sapientia, ut exhibeamus omnem hominem perfectum in Christo Jesu :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefd56fc" class="outline-3">
+<h3 id="orgefd56fc">Colossians 1:29</h3>
+<div class="outline-text-3" id="text-orgefd56fc">
+<p>
+in quo et laboro, certando secundum operationem ejus, quam operatur in me in virtute.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org73467e5" class="outline-2">
+<h2 id="org73467e5">Colossians 2</h2>
+<div class="outline-text-2" id="text-org73467e5">
+</div>
+<div id="outline-container-orgdfdc53c" class="outline-3">
+<h3 id="orgdfdc53c">Colossians 2:1</h3>
+<div class="outline-text-3" id="text-orgdfdc53c">
+<p>
+Volo enim vos scire qualem sollicitudinem habeam pro vobis, et pro iis qui sunt Laodiciæ, et quicumque non viderunt faciem meam in carne :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3527b38" class="outline-3">
+<h3 id="org3527b38">Colossians 2:2</h3>
+<div class="outline-text-3" id="text-org3527b38">
+<p>
+ut consolentur corda ipsorum, instructi in caritate, et in omnes divitias plenitudinis intellectus, in agnitionem mysterii Dei Patris et Christi Jesu :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d1d119" class="outline-3">
+<h3 id="org7d1d119">Colossians 2:3</h3>
+<div class="outline-text-3" id="text-org7d1d119">
+<p>
+in quo sunt omnes thesauri sapientiæ et scientiæ absconditi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd36211f" class="outline-3">
+<h3 id="orgd36211f">Colossians 2:4</h3>
+<div class="outline-text-3" id="text-orgd36211f">
+<p>
+Hoc autem dico, ut nemo vos decipiat in sublimitate sermonum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3858732" class="outline-3">
+<h3 id="org3858732">Colossians 2:5</h3>
+<div class="outline-text-3" id="text-org3858732">
+<p>
+Nam etsi corpore absens sum, sed spiritu vobiscum sum : gaudens, et videns ordinem vestrum, et firmamentum ejus, quæ in Christo est, fidei vestræ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25f1331" class="outline-3">
+<h3 id="org25f1331">Colossians 2:6</h3>
+<div class="outline-text-3" id="text-org25f1331">
+<p>
+Sicut ergo accepistis Jesum Christum Dominum, in ipso ambulate,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07132fa" class="outline-3">
+<h3 id="org07132fa">Colossians 2:7</h3>
+<div class="outline-text-3" id="text-org07132fa">
+<p>
+radicati, et superædificati in ipso, et confirmati fide, sicut et didicistis, abundantes in illo in gratiarum actione.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67eb8ff" class="outline-3">
+<h3 id="org67eb8ff">Colossians 2:8</h3>
+<div class="outline-text-3" id="text-org67eb8ff">
+<p>
+Videte ne quis vos decipiat per philosophiam, et inanem fallaciam secundum traditionem hominum, secundum elementa mundi, et non secundum Christum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63a66d7" class="outline-3">
+<h3 id="org63a66d7">Colossians 2:9</h3>
+<div class="outline-text-3" id="text-org63a66d7">
+<p>
+quia in ipso inhabitat omnis plenitudo divinitatis corporaliter :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f5cd02" class="outline-3">
+<h3 id="org0f5cd02">Colossians 2:10</h3>
+<div class="outline-text-3" id="text-org0f5cd02">
+<p>
+et estis in illo repleti, qui est caput omnis principatus et potestatis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d39d26" class="outline-3">
+<h3 id="org6d39d26">Colossians 2:11</h3>
+<div class="outline-text-3" id="text-org6d39d26">
+<p>
+in quo et circumcisi estis circumcisione non manu facta in expoliatione corporis carnis, sed in circumcisione Christi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6538b1" class="outline-3">
+<h3 id="orge6538b1">Colossians 2:12</h3>
+<div class="outline-text-3" id="text-orge6538b1">
+<p>
+consepulti ei in baptismo, in quo et resurrexistis per fidem operationis Dei, qui suscitavit illum a mortuis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6add736" class="outline-3">
+<h3 id="org6add736">Colossians 2:13</h3>
+<div class="outline-text-3" id="text-org6add736">
+<p>
+Et vos cum mortui essetis in delictis, et præputio carnis vestræ, convivificavit cum illo, donans vobis omnia delicta :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8a1643" class="outline-3">
+<h3 id="orgd8a1643">Colossians 2:14</h3>
+<div class="outline-text-3" id="text-orgd8a1643">
+<p>
+delens quod adversus nos erat chirographum decreti, quod erat contrarium nobis, et ipsum tulit de medio, affigens illud cruci :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f27438" class="outline-3">
+<h3 id="org7f27438">Colossians 2:15</h3>
+<div class="outline-text-3" id="text-org7f27438">
+<p>
+et expolians principatus, et potestates traduxit confidenter, palam triumphans illos in semetipso.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2f0caf" class="outline-3">
+<h3 id="orga2f0caf">Colossians 2:16</h3>
+<div class="outline-text-3" id="text-orga2f0caf">
+<p>
+Nemo ergo vos judicet in cibo, aut in potu, aut in parte diei festi, aut neomeniæ, aut sabbatorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8be0cea" class="outline-3">
+<h3 id="org8be0cea">Colossians 2:17</h3>
+<div class="outline-text-3" id="text-org8be0cea">
+<p>
+quæ sunt umbra futurorum : corpus autem Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d8be81" class="outline-3">
+<h3 id="org7d8be81">Colossians 2:18</h3>
+<div class="outline-text-3" id="text-org7d8be81">
+<p>
+Nemo vos seducat, volens in humilitate, et religione angelorum, quæ non vidit ambulans, frustra inflatus sensu carnis suæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec52cec" class="outline-3">
+<h3 id="orgec52cec">Colossians 2:19</h3>
+<div class="outline-text-3" id="text-orgec52cec">
+<p>
+et non tenens caput, ex quo totum corpus per nexus, et conjunctiones subministratum, et constructum crescit in augmentum Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org903f316" class="outline-3">
+<h3 id="org903f316">Colossians 2:20</h3>
+<div class="outline-text-3" id="text-org903f316">
+<p>
+Si ergo mortui estis cum Christo ab elementis hujus mundi : quid adhuc tamquam viventes in mundo decernitis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org412929d" class="outline-3">
+<h3 id="org412929d">Colossians 2:21</h3>
+<div class="outline-text-3" id="text-org412929d">
+<p>
+Ne tetigeritis, neque gustaveritis, neque contrectaveritis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02f24eb" class="outline-3">
+<h3 id="org02f24eb">Colossians 2:22</h3>
+<div class="outline-text-3" id="text-org02f24eb">
+<p>
+quæ sunt omnia in interitum ipso usu, secundum præcepta et doctrinas hominum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6de0260" class="outline-3">
+<h3 id="org6de0260">Colossians 2:23</h3>
+<div class="outline-text-3" id="text-org6de0260">
+<p>
+quæ sunt rationem quidem habentia sapientiæ in superstitione, et humilitate, et non ad parcendum corpori, non in honore aliquo ad saturitatem carnis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4c6984b" class="outline-2">
+<h2 id="org4c6984b">Colossians 3</h2>
+<div class="outline-text-2" id="text-org4c6984b">
+</div>
+<div id="outline-container-org51166be" class="outline-3">
+<h3 id="org51166be">Colossians 3:1</h3>
+<div class="outline-text-3" id="text-org51166be">
+<p>
+Igitur, si consurrexistis cum Christo : quæ sursum sunt quærite, ubi Christus est in dextera Dei sedens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fbd413" class="outline-3">
+<h3 id="org4fbd413">Colossians 3:2</h3>
+<div class="outline-text-3" id="text-org4fbd413">
+<p>
+quæ sursum sunt sapite, non quæ super terram.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67585e2" class="outline-3">
+<h3 id="org67585e2">Colossians 3:3</h3>
+<div class="outline-text-3" id="text-org67585e2">
+<p>
+Mortui enim estis, et vita vestra est abscondita cum Christo in Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe5f34c" class="outline-3">
+<h3 id="orgbe5f34c">Colossians 3:4</h3>
+<div class="outline-text-3" id="text-orgbe5f34c">
+<p>
+Cum Christus apparuerit, vita vestra : tunc et vos apparebitis cum ipso in gloria.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c7d97a" class="outline-3">
+<h3 id="org7c7d97a">Colossians 3:5</h3>
+<div class="outline-text-3" id="text-org7c7d97a">
+<p>
+Mortificate ergo membra vestra, quæ sunt super terram : fornicationem, immunditiam, libidinem, concupiscentiam malam, et avaritiam, quæ est simulacrorum servitus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c77393" class="outline-3">
+<h3 id="org0c77393">Colossians 3:6</h3>
+<div class="outline-text-3" id="text-org0c77393">
+<p>
+propter quæ venit ira Dei super filios incredulitatis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org936926f" class="outline-3">
+<h3 id="org936926f">Colossians 3:7</h3>
+<div class="outline-text-3" id="text-org936926f">
+<p>
+in quibus et vos ambulastis aliquando, cum viveretis in illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5fd1c37" class="outline-3">
+<h3 id="org5fd1c37">Colossians 3:8</h3>
+<div class="outline-text-3" id="text-org5fd1c37">
+<p>
+Nunc autem deponite et vos omnia : iram, indignationem, malitiam, blasphemiam, turpem sermonem de ore vestro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3da9f32" class="outline-3">
+<h3 id="org3da9f32">Colossians 3:9</h3>
+<div class="outline-text-3" id="text-org3da9f32">
+<p>
+Nolite mentiri invicem, expoliantes vos veterem hominem cum actibus suis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga11d64a" class="outline-3">
+<h3 id="orga11d64a">Colossians 3:10</h3>
+<div class="outline-text-3" id="text-orga11d64a">
+<p>
+et induentes novum eum, qui renovatur in agnitionem secundum imaginem ejus qui creavit illum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f67838" class="outline-3">
+<h3 id="org7f67838">Colossians 3:11</h3>
+<div class="outline-text-3" id="text-org7f67838">
+<p>
+ubi non est gentilis et Judæus, circumcisio et præputium, Barbarus et Scytha, servus et liber : sed omnia, et in omnibus Christus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16621d9" class="outline-3">
+<h3 id="org16621d9">Colossians 3:12</h3>
+<div class="outline-text-3" id="text-org16621d9">
+<p>
+Induite vos ergo, sicut electi Dei, sancti, et dilecti, viscera misericordiæ, benignitatem, humilitatem, modestiam, patientiam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga254a8d" class="outline-3">
+<h3 id="orga254a8d">Colossians 3:13</h3>
+<div class="outline-text-3" id="text-orga254a8d">
+<p>
+supportantes invicem, et donantes vobismetipsis si quis adversus aliquem habet querelam : sicut et Dominus donavit vobis, ita et vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50a6ac8" class="outline-3">
+<h3 id="org50a6ac8">Colossians 3:14</h3>
+<div class="outline-text-3" id="text-org50a6ac8">
+<p>
+Super omnia autem hæc, caritatem habete, quod est vinculum perfectionis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7467708" class="outline-3">
+<h3 id="org7467708">Colossians 3:15</h3>
+<div class="outline-text-3" id="text-org7467708">
+<p>
+et pax Christi exsultet in cordibus vestris, in qua et vocati estis in uno corpore : et grati estote.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d11004" class="outline-3">
+<h3 id="org2d11004">Colossians 3:16</h3>
+<div class="outline-text-3" id="text-org2d11004">
+<p>
+Verbum Christi habitet in vobis abundanter, in omni sapientia, docentes, et commonentes vosmetipsos, psalmis, hymnis, et canticis spiritualibus, in gratia cantantes in cordibus vestris Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad76d3d" class="outline-3">
+<h3 id="orgad76d3d">Colossians 3:17</h3>
+<div class="outline-text-3" id="text-orgad76d3d">
+<p>
+Omne, quodcumque facitis in verbo aut in opere, omnia in nomine Domini Jesu Christi, gratias agentes Deo et Patri per ipsum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7af2745" class="outline-3">
+<h3 id="org7af2745">Colossians 3:18</h3>
+<div class="outline-text-3" id="text-org7af2745">
+<p>
+Mulieres, subditæ estote viris, sicut oportet, in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4ae1d3" class="outline-3">
+<h3 id="orgf4ae1d3">Colossians 3:19</h3>
+<div class="outline-text-3" id="text-orgf4ae1d3">
+<p>
+Viri, diligite uxores vestras, et nolite amari esse ad illas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9163e99" class="outline-3">
+<h3 id="org9163e99">Colossians 3:20</h3>
+<div class="outline-text-3" id="text-org9163e99">
+<p>
+Filii, obedite parentibus per omnia : hoc enim placitum est in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a4368b" class="outline-3">
+<h3 id="org9a4368b">Colossians 3:21</h3>
+<div class="outline-text-3" id="text-org9a4368b">
+<p>
+Patres, nolite ad indignationem provocare filios vestros, ut non pusillo animo fiant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76c0b94" class="outline-3">
+<h3 id="org76c0b94">Colossians 3:22</h3>
+<div class="outline-text-3" id="text-org76c0b94">
+<p>
+Servi, obedite per omnia dominis carnalibus, non ad oculum servientes, quasi hominibus placentes, sed in simplicitate cordis, timentes Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7696f9" class="outline-3">
+<h3 id="orge7696f9">Colossians 3:23</h3>
+<div class="outline-text-3" id="text-orge7696f9">
+<p>
+Quodcumque facitis, ex animo operamini sicut Domino, et non hominibus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeab4a66" class="outline-3">
+<h3 id="orgeab4a66">Colossians 3:24</h3>
+<div class="outline-text-3" id="text-orgeab4a66">
+<p>
+scientes quod a Domino accipietis retributionem hæreditatis. Domino Christo servite.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27da02d" class="outline-3">
+<h3 id="org27da02d">Colossians 3:25</h3>
+<div class="outline-text-3" id="text-org27da02d">
+<p>
+Qui enim injuriam facit, recipiet id quod inique gessit : et non est personarum acceptio apud Deum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc76661" class="outline-2">
+<h2 id="orgbc76661">Colossians 4</h2>
+<div class="outline-text-2" id="text-orgbc76661">
+</div>
+<div id="outline-container-org08b0143" class="outline-3">
+<h3 id="org08b0143">Colossians 4:1</h3>
+<div class="outline-text-3" id="text-org08b0143">
+<p>
+Domini, quod justum est et æquum, servis præstate : scientes quod et vos Dominum habetis in cælo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcab62de" class="outline-3">
+<h3 id="orgcab62de">Colossians 4:2</h3>
+<div class="outline-text-3" id="text-orgcab62de">
+<p>
+Orationi instate, vigilantes in ea in gratiarum actione :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51686a9" class="outline-3">
+<h3 id="org51686a9">Colossians 4:3</h3>
+<div class="outline-text-3" id="text-org51686a9">
+<p>
+orantes simul et pro nobis, ut Deus aperiat nobis ostium sermonis ad loquendum mysterium Christi (propter quod etiam vinctus sum),
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a39054" class="outline-3">
+<h3 id="org9a39054">Colossians 4:4</h3>
+<div class="outline-text-3" id="text-org9a39054">
+<p>
+ut manifestem illud ita ut oportet me loqui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b5d0ac" class="outline-3">
+<h3 id="org3b5d0ac">Colossians 4:5</h3>
+<div class="outline-text-3" id="text-org3b5d0ac">
+<p>
+In sapientia ambulate ad eos, qui foris sunt : tempus redimentes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge95ff4c" class="outline-3">
+<h3 id="orge95ff4c">Colossians 4:6</h3>
+<div class="outline-text-3" id="text-orge95ff4c">
+<p>
+Sermo vester semper in gratia sale sit conditus, ut sciatis quomodo oporteat vos unicuique respondere.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4de442" class="outline-3">
+<h3 id="orga4de442">Colossians 4:7</h3>
+<div class="outline-text-3" id="text-orga4de442">
+<p>
+Quæ circa me sunt, omnia vobis nota faciet Tychicus, carissimus frater, et fidelis minister, et conservus in Domino :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged86224" class="outline-3">
+<h3 id="orged86224">Colossians 4:8</h3>
+<div class="outline-text-3" id="text-orged86224">
+<p>
+quem misi ad vos ad hoc ipsum, ut cognoscat quæ circa vos sunt, et consoletur corda vestra,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae18517" class="outline-3">
+<h3 id="orgae18517">Colossians 4:9</h3>
+<div class="outline-text-3" id="text-orgae18517">
+<p>
+cum Onesimo carissimo, et fideli fratre, qui ex vobis est. Omnia, quæ hic aguntur, nota facient vobis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafe478b" class="outline-3">
+<h3 id="orgafe478b">Colossians 4:10</h3>
+<div class="outline-text-3" id="text-orgafe478b">
+<p>
+Salutat vos Aristarchus concaptivus meus, et Marcus consobrinus Barnabæ, de quo accepistis mandata : si venerit ad vos, excipite illum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1b6fed" class="outline-3">
+<h3 id="orgc1b6fed">Colossians 4:11</h3>
+<div class="outline-text-3" id="text-orgc1b6fed">
+<p>
+et Jesus, qui dicitur Justus : qui sunt ex circumcisione : hi soli sunt adjutores mei in regno Dei, qui mihi fuerunt solatio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09c4a6e" class="outline-3">
+<h3 id="org09c4a6e">Colossians 4:12</h3>
+<div class="outline-text-3" id="text-org09c4a6e">
+<p>
+Salutat vos Epaphras, qui ex vobis est, servus Christi Jesu, semper sollicitus pro vobis in orationibus, ut stetis perfecti, et pleni in omni voluntate Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3252c96" class="outline-3">
+<h3 id="org3252c96">Colossians 4:13</h3>
+<div class="outline-text-3" id="text-org3252c96">
+<p>
+Testimonium enim illi perhibeo quod habet multum laborem pro vobis, et pro iis qui sunt Laodiciæ, et qui Hierapoli.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32a1d04" class="outline-3">
+<h3 id="org32a1d04">Colossians 4:14</h3>
+<div class="outline-text-3" id="text-org32a1d04">
+<p>
+Salutat vos Lucas, medicus carissimus, et Demas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d83945" class="outline-3">
+<h3 id="org3d83945">Colossians 4:15</h3>
+<div class="outline-text-3" id="text-org3d83945">
+<p>
+Salutate fratres, qui sunt Laodiciæ, et Nympham, et quæ in domo ejus est, ecclesiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28047bd" class="outline-3">
+<h3 id="org28047bd">Colossians 4:16</h3>
+<div class="outline-text-3" id="text-org28047bd">
+<p>
+Et cum lecta fuerit apud vos epistola hæc, facite ut et in Laodicensium ecclesia legatur : et eam, quæ Laodicensium est, vos legatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5d7424" class="outline-3">
+<h3 id="orgb5d7424">Colossians 4:17</h3>
+<div class="outline-text-3" id="text-orgb5d7424">
+<p>
+Et dicite Archippo : Vide ministerium, quod accepisti in Domino, ut illud impleas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84db0c5" class="outline-3">
+<h3 id="org84db0c5">Colossians 4:18</h3>
+<div class="outline-text-3" id="text-org84db0c5">
+<p>
+Salutatio, mea manu Pauli. Memores estote vinculorum meorum. Gratia vobiscum. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

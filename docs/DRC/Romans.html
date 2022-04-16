@@ -1,0 +1,4689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0f87f7a">Romans 1</a>
+<ul>
+<li><a href="#org654658a">Romans 1:1</a></li>
+<li><a href="#org9469c98">Romans 1:2</a></li>
+<li><a href="#org91390a8">Romans 1:3</a></li>
+<li><a href="#orgacf2256">Romans 1:4</a></li>
+<li><a href="#org02e9e7d">Romans 1:5</a></li>
+<li><a href="#org75e0053">Romans 1:6</a></li>
+<li><a href="#org2b015a7">Romans 1:7</a></li>
+<li><a href="#org9bbc46c">Romans 1:8</a></li>
+<li><a href="#orgd495365">Romans 1:9</a></li>
+<li><a href="#orgc093781">Romans 1:10</a></li>
+<li><a href="#org16fcd87">Romans 1:11</a></li>
+<li><a href="#orge1fd4ee">Romans 1:12</a></li>
+<li><a href="#org04c4dc8">Romans 1:13</a></li>
+<li><a href="#orgdfa20e7">Romans 1:14</a></li>
+<li><a href="#org40e47de">Romans 1:15</a></li>
+<li><a href="#org0074892">Romans 1:16</a></li>
+<li><a href="#orgab1784a">Romans 1:17</a></li>
+<li><a href="#orgeb5224e">Romans 1:18</a></li>
+<li><a href="#orgb20b700">Romans 1:19</a></li>
+<li><a href="#org80388fd">Romans 1:20</a></li>
+<li><a href="#orgf470332">Romans 1:21</a></li>
+<li><a href="#orgb04ab03">Romans 1:22</a></li>
+<li><a href="#org9cdfaef">Romans 1:23</a></li>
+<li><a href="#org6bf0dfe">Romans 1:24</a></li>
+<li><a href="#orgae3290a">Romans 1:25</a></li>
+<li><a href="#org45beed5">Romans 1:26</a></li>
+<li><a href="#org09d63a8">Romans 1:27</a></li>
+<li><a href="#org49b07ea">Romans 1:28</a></li>
+<li><a href="#org5f57786">Romans 1:29</a></li>
+<li><a href="#orgb0fb2fd">Romans 1:30</a></li>
+<li><a href="#org4e5863c">Romans 1:31</a></li>
+<li><a href="#org3a4edb4">Romans 1:32</a></li>
+</ul>
+</li>
+<li><a href="#orgd6a5787">Romans 2</a>
+<ul>
+<li><a href="#org85a6602">Romans 2:1</a></li>
+<li><a href="#org99cc992">Romans 2:2</a></li>
+<li><a href="#org2f4d1f0">Romans 2:3</a></li>
+<li><a href="#org9ab33a7">Romans 2:4</a></li>
+<li><a href="#org2c1b8d5">Romans 2:5</a></li>
+<li><a href="#orgc03390e">Romans 2:6</a></li>
+<li><a href="#org91c95d1">Romans 2:7</a></li>
+<li><a href="#orge758751">Romans 2:8</a></li>
+<li><a href="#orge7bb288">Romans 2:9</a></li>
+<li><a href="#org5b70c36">Romans 2:10</a></li>
+<li><a href="#org6830dfe">Romans 2:11</a></li>
+<li><a href="#org83d5c3d">Romans 2:12</a></li>
+<li><a href="#org88e2598">Romans 2:13</a></li>
+<li><a href="#orgb8b70f3">Romans 2:14</a></li>
+<li><a href="#org9a5684b">Romans 2:15</a></li>
+<li><a href="#orged571ba">Romans 2:16</a></li>
+<li><a href="#org11808ff">Romans 2:17</a></li>
+<li><a href="#org7d7e414">Romans 2:18</a></li>
+<li><a href="#org42d2e60">Romans 2:19</a></li>
+<li><a href="#orgff53c38">Romans 2:20</a></li>
+<li><a href="#org6d8958a">Romans 2:21</a></li>
+<li><a href="#org941a5b4">Romans 2:22</a></li>
+<li><a href="#orgcf2ed1d">Romans 2:23</a></li>
+<li><a href="#org8390ba5">Romans 2:24</a></li>
+<li><a href="#org30738aa">Romans 2:25</a></li>
+<li><a href="#org46d852b">Romans 2:26</a></li>
+<li><a href="#orgadfd109">Romans 2:27</a></li>
+<li><a href="#orgb1fde50">Romans 2:28</a></li>
+<li><a href="#org0909ae8">Romans 2:29</a></li>
+</ul>
+</li>
+<li><a href="#org73dc21a">Romans 3</a>
+<ul>
+<li><a href="#orge6c82e1">Romans 3:1</a></li>
+<li><a href="#orgeb4b821">Romans 3:2</a></li>
+<li><a href="#org9b8220e">Romans 3:3</a></li>
+<li><a href="#orgf48e085">Romans 3:4</a></li>
+<li><a href="#orgb254ee3">Romans 3:5</a></li>
+<li><a href="#org29fcb84">Romans 3:6</a></li>
+<li><a href="#org33d5384">Romans 3:7</a></li>
+<li><a href="#orgaa3abe0">Romans 3:8</a></li>
+<li><a href="#orgf011696">Romans 3:9</a></li>
+<li><a href="#org4605406">Romans 3:10</a></li>
+<li><a href="#org91ff598">Romans 3:11</a></li>
+<li><a href="#org2ba2a0d">Romans 3:12</a></li>
+<li><a href="#orgf7a02b9">Romans 3:13</a></li>
+<li><a href="#org4717811">Romans 3:14</a></li>
+<li><a href="#org4658a38">Romans 3:15</a></li>
+<li><a href="#org7e82f72">Romans 3:16</a></li>
+<li><a href="#orgd13a784">Romans 3:17</a></li>
+<li><a href="#org3f2b77e">Romans 3:18</a></li>
+<li><a href="#org2824d23">Romans 3:19</a></li>
+<li><a href="#org01ec01b">Romans 3:20</a></li>
+<li><a href="#org872a471">Romans 3:21</a></li>
+<li><a href="#orge9545b4">Romans 3:22</a></li>
+<li><a href="#org435528f">Romans 3:23</a></li>
+<li><a href="#org9faf6b4">Romans 3:24</a></li>
+<li><a href="#org8c73e0f">Romans 3:25</a></li>
+<li><a href="#org3147601">Romans 3:26</a></li>
+<li><a href="#orgc272943">Romans 3:27</a></li>
+<li><a href="#org3164e36">Romans 3:28</a></li>
+<li><a href="#org33e55c6">Romans 3:29</a></li>
+<li><a href="#org9abe757">Romans 3:30</a></li>
+<li><a href="#orge5acbdc">Romans 3:31</a></li>
+</ul>
+</li>
+<li><a href="#org3769ad1">Romans 4</a>
+<ul>
+<li><a href="#orga1a5acf">Romans 4:1</a></li>
+<li><a href="#org880ada6">Romans 4:2</a></li>
+<li><a href="#org0065c03">Romans 4:3</a></li>
+<li><a href="#orgc371166">Romans 4:4</a></li>
+<li><a href="#org6226ef0">Romans 4:5</a></li>
+<li><a href="#orgf197f59">Romans 4:6</a></li>
+<li><a href="#org8d131ef">Romans 4:7</a></li>
+<li><a href="#org70b2ccb">Romans 4:8</a></li>
+<li><a href="#orgf06c25f">Romans 4:9</a></li>
+<li><a href="#org1f5bf93">Romans 4:10</a></li>
+<li><a href="#orgff63376">Romans 4:11</a></li>
+<li><a href="#org4f2921a">Romans 4:12</a></li>
+<li><a href="#org966deea">Romans 4:13</a></li>
+<li><a href="#org0efc0d7">Romans 4:14</a></li>
+<li><a href="#org26dab36">Romans 4:15</a></li>
+<li><a href="#orge78cc87">Romans 4:16</a></li>
+<li><a href="#org44ced9e">Romans 4:17</a></li>
+<li><a href="#org8dea3af">Romans 4:18</a></li>
+<li><a href="#org964c649">Romans 4:19</a></li>
+<li><a href="#org4ce4acd">Romans 4:20</a></li>
+<li><a href="#org68580d4">Romans 4:21</a></li>
+<li><a href="#orgbde49a9">Romans 4:22</a></li>
+<li><a href="#orgd2e6a9b">Romans 4:23</a></li>
+<li><a href="#org9e0f004">Romans 4:24</a></li>
+<li><a href="#org8ec4c1b">Romans 4:25</a></li>
+</ul>
+</li>
+<li><a href="#orgeb13b14">Romans 5</a>
+<ul>
+<li><a href="#org90f290d">Romans 5:1</a></li>
+<li><a href="#org43e2f61">Romans 5:2</a></li>
+<li><a href="#org3260a96">Romans 5:3</a></li>
+<li><a href="#org09d7617">Romans 5:4</a></li>
+<li><a href="#orgf9fe0a1">Romans 5:5</a></li>
+<li><a href="#org75117d3">Romans 5:6</a></li>
+<li><a href="#orgc4cf19e">Romans 5:7</a></li>
+<li><a href="#org6345281">Romans 5:8</a></li>
+<li><a href="#orgd53bf52">Romans 5:9</a></li>
+<li><a href="#orgfadfdef">Romans 5:10</a></li>
+<li><a href="#org8afb3f2">Romans 5:11</a></li>
+<li><a href="#orgb899ba1">Romans 5:12</a></li>
+<li><a href="#orgee11737">Romans 5:13</a></li>
+<li><a href="#orgbc6aae7">Romans 5:14</a></li>
+<li><a href="#org91a517d">Romans 5:15</a></li>
+<li><a href="#org12efef6">Romans 5:16</a></li>
+<li><a href="#org3e75e97">Romans 5:17</a></li>
+<li><a href="#org2af31cb">Romans 5:18</a></li>
+<li><a href="#orga62a0a5">Romans 5:19</a></li>
+<li><a href="#org68177f9">Romans 5:20</a></li>
+<li><a href="#org5ec5023">Romans 5:21</a></li>
+</ul>
+</li>
+<li><a href="#orga984fdf">Romans 6</a>
+<ul>
+<li><a href="#org0adfca6">Romans 6:1</a></li>
+<li><a href="#org5789723">Romans 6:2</a></li>
+<li><a href="#org674d4f0">Romans 6:3</a></li>
+<li><a href="#org9c09977">Romans 6:4</a></li>
+<li><a href="#orgcca1855">Romans 6:5</a></li>
+<li><a href="#org3d8b1a2">Romans 6:6</a></li>
+<li><a href="#org09288be">Romans 6:7</a></li>
+<li><a href="#org054a20a">Romans 6:8</a></li>
+<li><a href="#orgec37e64">Romans 6:9</a></li>
+<li><a href="#org8a9068c">Romans 6:10</a></li>
+<li><a href="#orga0acdc6">Romans 6:11</a></li>
+<li><a href="#orgd62f919">Romans 6:12</a></li>
+<li><a href="#orgd465312">Romans 6:13</a></li>
+<li><a href="#org0cc9d29">Romans 6:14</a></li>
+<li><a href="#org8be512e">Romans 6:15</a></li>
+<li><a href="#org0d202d4">Romans 6:16</a></li>
+<li><a href="#orge766cd2">Romans 6:17</a></li>
+<li><a href="#orgdf67573">Romans 6:18</a></li>
+<li><a href="#org58b7e63">Romans 6:19</a></li>
+<li><a href="#org7b5d684">Romans 6:20</a></li>
+<li><a href="#org2a13ae2">Romans 6:21</a></li>
+<li><a href="#org768a9d1">Romans 6:22</a></li>
+<li><a href="#org36a1eab">Romans 6:23</a></li>
+</ul>
+</li>
+<li><a href="#org926b3d2">Romans 7</a>
+<ul>
+<li><a href="#orgab2f27a">Romans 7:1</a></li>
+<li><a href="#org9d63cdd">Romans 7:2</a></li>
+<li><a href="#org8d9d483">Romans 7:3</a></li>
+<li><a href="#org4219870">Romans 7:4</a></li>
+<li><a href="#orge862dd2">Romans 7:5</a></li>
+<li><a href="#orga536680">Romans 7:6</a></li>
+<li><a href="#orge08dff1">Romans 7:7</a></li>
+<li><a href="#orgc432e41">Romans 7:8</a></li>
+<li><a href="#orgfceb7fa">Romans 7:9</a></li>
+<li><a href="#org4982aa4">Romans 7:10</a></li>
+<li><a href="#org259618b">Romans 7:11</a></li>
+<li><a href="#orgcb318e3">Romans 7:12</a></li>
+<li><a href="#org96e3c39">Romans 7:13</a></li>
+<li><a href="#orgd686cb7">Romans 7:14</a></li>
+<li><a href="#org3145b9b">Romans 7:15</a></li>
+<li><a href="#orgb7cfd64">Romans 7:16</a></li>
+<li><a href="#org0f0459b">Romans 7:17</a></li>
+<li><a href="#org2e3aae6">Romans 7:18</a></li>
+<li><a href="#orgd597c9e">Romans 7:19</a></li>
+<li><a href="#orgfc4eca4">Romans 7:20</a></li>
+<li><a href="#orge6674bc">Romans 7:21</a></li>
+<li><a href="#org9b3d508">Romans 7:22</a></li>
+<li><a href="#org24ca829">Romans 7:23</a></li>
+<li><a href="#org86b27f3">Romans 7:24</a></li>
+<li><a href="#orgc83adbb">Romans 7:25</a></li>
+</ul>
+</li>
+<li><a href="#orgef06973">Romans 8</a>
+<ul>
+<li><a href="#org0583bcb">Romans 8:1</a></li>
+<li><a href="#org7b2dee3">Romans 8:2</a></li>
+<li><a href="#orgbe42bb9">Romans 8:3</a></li>
+<li><a href="#org0aa1fa9">Romans 8:4</a></li>
+<li><a href="#org7aa5653">Romans 8:5</a></li>
+<li><a href="#orgd8f57ef">Romans 8:6</a></li>
+<li><a href="#orgf75d98f">Romans 8:7</a></li>
+<li><a href="#org6a51ca7">Romans 8:8</a></li>
+<li><a href="#org7b99b71">Romans 8:9</a></li>
+<li><a href="#org622e5cf">Romans 8:10</a></li>
+<li><a href="#org0048924">Romans 8:11</a></li>
+<li><a href="#org7770d08">Romans 8:12</a></li>
+<li><a href="#org900299e">Romans 8:13</a></li>
+<li><a href="#org22b0c24">Romans 8:14</a></li>
+<li><a href="#org6796849">Romans 8:15</a></li>
+<li><a href="#org6ee0607">Romans 8:16</a></li>
+<li><a href="#orgd4126ba">Romans 8:17</a></li>
+<li><a href="#org955a0d5">Romans 8:18</a></li>
+<li><a href="#orga2d09d7">Romans 8:19</a></li>
+<li><a href="#org2052d82">Romans 8:20</a></li>
+<li><a href="#org37eecfd">Romans 8:21</a></li>
+<li><a href="#orgfdb673c">Romans 8:22</a></li>
+<li><a href="#orgb37b2ad">Romans 8:23</a></li>
+<li><a href="#org1298332">Romans 8:24</a></li>
+<li><a href="#orgd5fb540">Romans 8:25</a></li>
+<li><a href="#orgda8882a">Romans 8:26</a></li>
+<li><a href="#org4d718ad">Romans 8:27</a></li>
+<li><a href="#org90175a3">Romans 8:28</a></li>
+<li><a href="#org3cfa088">Romans 8:29</a></li>
+<li><a href="#org64ce04c">Romans 8:30</a></li>
+<li><a href="#org4770a6b">Romans 8:31</a></li>
+<li><a href="#org2d5bf60">Romans 8:32</a></li>
+<li><a href="#org9f0d358">Romans 8:33</a></li>
+<li><a href="#org51b6bdc">Romans 8:34</a></li>
+<li><a href="#orge860992">Romans 8:35</a></li>
+<li><a href="#org03d300d">Romans 8:36</a></li>
+<li><a href="#orgc9e3709">Romans 8:37</a></li>
+<li><a href="#org90b094c">Romans 8:38</a></li>
+<li><a href="#orgc361e3f">Romans 8:39</a></li>
+</ul>
+</li>
+<li><a href="#org0e4a3f5">Romans 9</a>
+<ul>
+<li><a href="#org33d68e5">Romans 9:1</a></li>
+<li><a href="#orge5352cf">Romans 9:2</a></li>
+<li><a href="#orgadcd59c">Romans 9:3</a></li>
+<li><a href="#org0e35e1c">Romans 9:4</a></li>
+<li><a href="#orge7a83b9">Romans 9:5</a></li>
+<li><a href="#org9b8d664">Romans 9:6</a></li>
+<li><a href="#orgaa2346e">Romans 9:7</a></li>
+<li><a href="#orgbd5f70e">Romans 9:8</a></li>
+<li><a href="#org631eef8">Romans 9:9</a></li>
+<li><a href="#org398427b">Romans 9:10</a></li>
+<li><a href="#org55b0c5b">Romans 9:11</a></li>
+<li><a href="#org606413e">Romans 9:12</a></li>
+<li><a href="#orgefd016b">Romans 9:13</a></li>
+<li><a href="#orgf28ef81">Romans 9:14</a></li>
+<li><a href="#org719dfdd">Romans 9:15</a></li>
+<li><a href="#org0ce8854">Romans 9:16</a></li>
+<li><a href="#orgf525658">Romans 9:17</a></li>
+<li><a href="#org8fadda5">Romans 9:18</a></li>
+<li><a href="#orge639b7e">Romans 9:19</a></li>
+<li><a href="#org6944469">Romans 9:20</a></li>
+<li><a href="#orge8913b8">Romans 9:21</a></li>
+<li><a href="#org382b147">Romans 9:22</a></li>
+<li><a href="#orgceeee93">Romans 9:23</a></li>
+<li><a href="#org754a836">Romans 9:24</a></li>
+<li><a href="#org212c12a">Romans 9:25</a></li>
+<li><a href="#orgf5574f0">Romans 9:26</a></li>
+<li><a href="#org6932c60">Romans 9:27</a></li>
+<li><a href="#org33522a8">Romans 9:28</a></li>
+<li><a href="#org64ca2e2">Romans 9:29</a></li>
+<li><a href="#orgf110174">Romans 9:30</a></li>
+<li><a href="#orgcec802a">Romans 9:31</a></li>
+<li><a href="#org1e91f1b">Romans 9:32</a></li>
+<li><a href="#orgc4fe1c3">Romans 9:33</a></li>
+</ul>
+</li>
+<li><a href="#org2d04714">Romans 10</a>
+<ul>
+<li><a href="#org2d7762d">Romans 10:1</a></li>
+<li><a href="#org528d426">Romans 10:2</a></li>
+<li><a href="#org7e4a249">Romans 10:3</a></li>
+<li><a href="#orgaab0841">Romans 10:4</a></li>
+<li><a href="#org14943a3">Romans 10:5</a></li>
+<li><a href="#orgc037485">Romans 10:6</a></li>
+<li><a href="#orgfa6ae4c">Romans 10:7</a></li>
+<li><a href="#org7b15f04">Romans 10:8</a></li>
+<li><a href="#org8adecc2">Romans 10:9</a></li>
+<li><a href="#orgc69427e">Romans 10:10</a></li>
+<li><a href="#org976a0d7">Romans 10:11</a></li>
+<li><a href="#org82eab4a">Romans 10:12</a></li>
+<li><a href="#org20dc832">Romans 10:13</a></li>
+<li><a href="#orgfe9fa4b">Romans 10:14</a></li>
+<li><a href="#org5f52ddc">Romans 10:15</a></li>
+<li><a href="#org521846b">Romans 10:16</a></li>
+<li><a href="#orge27310f">Romans 10:17</a></li>
+<li><a href="#orgc4a0625">Romans 10:18</a></li>
+<li><a href="#orgb508faf">Romans 10:19</a></li>
+<li><a href="#orgf8e0034">Romans 10:20</a></li>
+<li><a href="#orge4482f0">Romans 10:21</a></li>
+</ul>
+</li>
+<li><a href="#orgea72dbd">Romans 11</a>
+<ul>
+<li><a href="#orgc7f77af">Romans 11:1</a></li>
+<li><a href="#org701c70a">Romans 11:2</a></li>
+<li><a href="#org04377b3">Romans 11:3</a></li>
+<li><a href="#orgb545581">Romans 11:4</a></li>
+<li><a href="#org0e3cf82">Romans 11:5</a></li>
+<li><a href="#orgd913406">Romans 11:6</a></li>
+<li><a href="#org85a1d19">Romans 11:7</a></li>
+<li><a href="#orgbe7b7e6">Romans 11:8</a></li>
+<li><a href="#org42a09ca">Romans 11:9</a></li>
+<li><a href="#org16d3abf">Romans 11:10</a></li>
+<li><a href="#orgb8631c2">Romans 11:11</a></li>
+<li><a href="#orge759c25">Romans 11:12</a></li>
+<li><a href="#orgf761bf5">Romans 11:13</a></li>
+<li><a href="#org12bce2a">Romans 11:14</a></li>
+<li><a href="#org91a9002">Romans 11:15</a></li>
+<li><a href="#orge0d850e">Romans 11:16</a></li>
+<li><a href="#org70cb304">Romans 11:17</a></li>
+<li><a href="#orgf297c8f">Romans 11:18</a></li>
+<li><a href="#org5db49dc">Romans 11:19</a></li>
+<li><a href="#org83c5e2c">Romans 11:20</a></li>
+<li><a href="#org4ae784c">Romans 11:21</a></li>
+<li><a href="#org0b5865f">Romans 11:22</a></li>
+<li><a href="#orgaf7cc57">Romans 11:23</a></li>
+<li><a href="#org1f1697b">Romans 11:24</a></li>
+<li><a href="#org23bd527">Romans 11:25</a></li>
+<li><a href="#org463d7ae">Romans 11:26</a></li>
+<li><a href="#org961ed89">Romans 11:27</a></li>
+<li><a href="#org2a5b042">Romans 11:28</a></li>
+<li><a href="#org989dcec">Romans 11:29</a></li>
+<li><a href="#org530d285">Romans 11:30</a></li>
+<li><a href="#org24e24f8">Romans 11:31</a></li>
+<li><a href="#org09823fb">Romans 11:32</a></li>
+<li><a href="#org0e8a882">Romans 11:33</a></li>
+<li><a href="#org028357e">Romans 11:34</a></li>
+<li><a href="#org7058fc5">Romans 11:35</a></li>
+<li><a href="#orgfbf7a95">Romans 11:36</a></li>
+</ul>
+</li>
+<li><a href="#org0fc018d">Romans 12</a>
+<ul>
+<li><a href="#org6604df6">Romans 12:1</a></li>
+<li><a href="#org194ce6a">Romans 12:2</a></li>
+<li><a href="#orge2cdcde">Romans 12:3</a></li>
+<li><a href="#org3fff5c9">Romans 12:4</a></li>
+<li><a href="#org4cb4062">Romans 12:5</a></li>
+<li><a href="#orgdceee47">Romans 12:6</a></li>
+<li><a href="#org7453e69">Romans 12:7</a></li>
+<li><a href="#org17c6d0a">Romans 12:8</a></li>
+<li><a href="#org06f3625">Romans 12:9</a></li>
+<li><a href="#orgd6528d1">Romans 12:10</a></li>
+<li><a href="#org56c83cb">Romans 12:11</a></li>
+<li><a href="#org9f4d853">Romans 12:12</a></li>
+<li><a href="#org842900a">Romans 12:13</a></li>
+<li><a href="#orgd78601b">Romans 12:14</a></li>
+<li><a href="#org604c51a">Romans 12:15</a></li>
+<li><a href="#orgeca297f">Romans 12:16</a></li>
+<li><a href="#orgfd92ee0">Romans 12:17</a></li>
+<li><a href="#org81d97a1">Romans 12:18</a></li>
+<li><a href="#org7db5088">Romans 12:19</a></li>
+<li><a href="#org5e0bcd8">Romans 12:20</a></li>
+<li><a href="#org647d8dc">Romans 12:21</a></li>
+</ul>
+</li>
+<li><a href="#org2205fd2">Romans 13</a>
+<ul>
+<li><a href="#orgbdcbd15">Romans 13:1</a></li>
+<li><a href="#orgb14be81">Romans 13:2</a></li>
+<li><a href="#org5758a20">Romans 13:3</a></li>
+<li><a href="#orgb96a010">Romans 13:4</a></li>
+<li><a href="#org2db6fa6">Romans 13:5</a></li>
+<li><a href="#orge64d82f">Romans 13:6</a></li>
+<li><a href="#org760cad7">Romans 13:7</a></li>
+<li><a href="#orged7a02a">Romans 13:8</a></li>
+<li><a href="#orga1b5532">Romans 13:9</a></li>
+<li><a href="#org0488c26">Romans 13:10</a></li>
+<li><a href="#org05687be">Romans 13:11</a></li>
+<li><a href="#org3add442">Romans 13:12</a></li>
+<li><a href="#org33b6991">Romans 13:13</a></li>
+<li><a href="#orge3dfdc8">Romans 13:14</a></li>
+</ul>
+</li>
+<li><a href="#org1c928d3">Romans 14</a>
+<ul>
+<li><a href="#org0a95993">Romans 14:1</a></li>
+<li><a href="#orgab3df56">Romans 14:2</a></li>
+<li><a href="#orgffc0d7f">Romans 14:3</a></li>
+<li><a href="#org2f5076a">Romans 14:4</a></li>
+<li><a href="#org09bc7b0">Romans 14:5</a></li>
+<li><a href="#org525f356">Romans 14:6</a></li>
+<li><a href="#org4eb482c">Romans 14:7</a></li>
+<li><a href="#org189b4a3">Romans 14:8</a></li>
+<li><a href="#org238d882">Romans 14:9</a></li>
+<li><a href="#orgb6e6106">Romans 14:10</a></li>
+<li><a href="#org9efaeee">Romans 14:11</a></li>
+<li><a href="#orgb4c5d77">Romans 14:12</a></li>
+<li><a href="#orgfe80bfa">Romans 14:13</a></li>
+<li><a href="#org0b7da8e">Romans 14:14</a></li>
+<li><a href="#orge5d608a">Romans 14:15</a></li>
+<li><a href="#orgb6545db">Romans 14:16</a></li>
+<li><a href="#org6bd177d">Romans 14:17</a></li>
+<li><a href="#orgf9a0460">Romans 14:18</a></li>
+<li><a href="#orge93dcc2">Romans 14:19</a></li>
+<li><a href="#orgd2edd46">Romans 14:20</a></li>
+<li><a href="#org6df78b6">Romans 14:21</a></li>
+<li><a href="#org1c9a58b">Romans 14:22</a></li>
+<li><a href="#orgf7bba62">Romans 14:23</a></li>
+</ul>
+</li>
+<li><a href="#org3b1e012">Romans 15</a>
+<ul>
+<li><a href="#orgb719996">Romans 15:1</a></li>
+<li><a href="#orga65a30d">Romans 15:2</a></li>
+<li><a href="#org7436e0e">Romans 15:3</a></li>
+<li><a href="#org494a93c">Romans 15:4</a></li>
+<li><a href="#orgfd306d5">Romans 15:5</a></li>
+<li><a href="#org4090150">Romans 15:6</a></li>
+<li><a href="#org4899369">Romans 15:7</a></li>
+<li><a href="#orgbe28dd5">Romans 15:8</a></li>
+<li><a href="#org75741bf">Romans 15:9</a></li>
+<li><a href="#orgae68ee9">Romans 15:10</a></li>
+<li><a href="#orgee39baa">Romans 15:11</a></li>
+<li><a href="#org0c506e8">Romans 15:12</a></li>
+<li><a href="#org3529c73">Romans 15:13</a></li>
+<li><a href="#org7b7c06d">Romans 15:14</a></li>
+<li><a href="#org1599834">Romans 15:15</a></li>
+<li><a href="#org594f8d3">Romans 15:16</a></li>
+<li><a href="#org48a75b2">Romans 15:17</a></li>
+<li><a href="#org45d2fee">Romans 15:18</a></li>
+<li><a href="#orga2ffdec">Romans 15:19</a></li>
+<li><a href="#org5e90a63">Romans 15:20</a></li>
+<li><a href="#orgec096f0">Romans 15:21</a></li>
+<li><a href="#org70a33db">Romans 15:22</a></li>
+<li><a href="#org71242b8">Romans 15:23</a></li>
+<li><a href="#org135e6aa">Romans 15:24</a></li>
+<li><a href="#org0351c06">Romans 15:25</a></li>
+<li><a href="#org70708e3">Romans 15:26</a></li>
+<li><a href="#org207723f">Romans 15:27</a></li>
+<li><a href="#org652cd44">Romans 15:28</a></li>
+<li><a href="#orgf488e8e">Romans 15:29</a></li>
+<li><a href="#org32970e3">Romans 15:30</a></li>
+<li><a href="#orgdfd7cf6">Romans 15:31</a></li>
+<li><a href="#orgfe9751c">Romans 15:32</a></li>
+<li><a href="#org265209e">Romans 15:33</a></li>
+</ul>
+</li>
+<li><a href="#org780d57e">Romans 16</a>
+<ul>
+<li><a href="#orgd666b44">Romans 16:1</a></li>
+<li><a href="#org0b5862a">Romans 16:2</a></li>
+<li><a href="#org6ea2de5">Romans 16:3</a></li>
+<li><a href="#org3e470dc">Romans 16:4</a></li>
+<li><a href="#orgcc03bcd">Romans 16:5</a></li>
+<li><a href="#org207528a">Romans 16:6</a></li>
+<li><a href="#orgd993ea9">Romans 16:7</a></li>
+<li><a href="#orgb0958f7">Romans 16:8</a></li>
+<li><a href="#orgd42c590">Romans 16:9</a></li>
+<li><a href="#org4461a5e">Romans 16:10</a></li>
+<li><a href="#orga7fe704">Romans 16:11</a></li>
+<li><a href="#orgd79eb90">Romans 16:12</a></li>
+<li><a href="#org7fbc34b">Romans 16:13</a></li>
+<li><a href="#org7fa4b34">Romans 16:14</a></li>
+<li><a href="#orge349939">Romans 16:15</a></li>
+<li><a href="#org49e4c9b">Romans 16:16</a></li>
+<li><a href="#org4638090">Romans 16:17</a></li>
+<li><a href="#orgbcf93d1">Romans 16:18</a></li>
+<li><a href="#orgad770ae">Romans 16:19</a></li>
+<li><a href="#orga43a850">Romans 16:20</a></li>
+<li><a href="#org2ced3a2">Romans 16:21</a></li>
+<li><a href="#orgf1ccde8">Romans 16:22</a></li>
+<li><a href="#org1480ce3">Romans 16:23</a></li>
+<li><a href="#org2fa28c8">Romans 16:24</a></li>
+<li><a href="#org928b147">Romans 16:25</a></li>
+<li><a href="#org4850f54">Romans 16:26</a></li>
+<li><a href="#org8130c80">Romans 16:27</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0f87f7a" class="outline-2">
+<h2 id="org0f87f7a">Romans 1</h2>
+<div class="outline-text-2" id="text-org0f87f7a">
+</div>
+<div id="outline-container-org654658a" class="outline-3">
+<h3 id="org654658a">Romans 1:1</h3>
+<div class="outline-text-3" id="text-org654658a">
+<p>
+Paul, a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9469c98" class="outline-3">
+<h3 id="org9469c98">Romans 1:2</h3>
+<div class="outline-text-3" id="text-org9469c98">
+<p>
+Which he had promised before, by his prophets, in the holy scriptures,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91390a8" class="outline-3">
+<h3 id="org91390a8">Romans 1:3</h3>
+<div class="outline-text-3" id="text-org91390a8">
+<p>
+Concerning his Son, who was made to him of the seed of David, according to the flesh,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacf2256" class="outline-3">
+<h3 id="orgacf2256">Romans 1:4</h3>
+<div class="outline-text-3" id="text-orgacf2256">
+<p>
+Who was predestinated the Son of God in power, according to the spirit of sanctification, by the resurrection of our Lord Jesus Christ from the dead:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02e9e7d" class="outline-3">
+<h3 id="org02e9e7d">Romans 1:5</h3>
+<div class="outline-text-3" id="text-org02e9e7d">
+<p>
+By whom we have received grace and apostleship for obedience to the faith, in all nations, for his name:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75e0053" class="outline-3">
+<h3 id="org75e0053">Romans 1:6</h3>
+<div class="outline-text-3" id="text-org75e0053">
+<p>
+Among whom are you also the called of Jesus Christ:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b015a7" class="outline-3">
+<h3 id="org2b015a7">Romans 1:7</h3>
+<div class="outline-text-3" id="text-org2b015a7">
+<p>
+To all that are at Rome, the beloved of God, called to be saints. Grace to you and peace, from God our Father and from the Lord Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bbc46c" class="outline-3">
+<h3 id="org9bbc46c">Romans 1:8</h3>
+<div class="outline-text-3" id="text-org9bbc46c">
+<p>
+First, I give thanks to my God, through Jesus Christ, for you all: because your faith is spoken of in the whole world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd495365" class="outline-3">
+<h3 id="orgd495365">Romans 1:9</h3>
+<div class="outline-text-3" id="text-orgd495365">
+<p>
+For God is my witness, whom I serve in my spirit in the gospel of his Son, that without ceasing I make a commemoration of you:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc093781" class="outline-3">
+<h3 id="orgc093781">Romans 1:10</h3>
+<div class="outline-text-3" id="text-orgc093781">
+<p>
+Always in my prayers making request, if by any means now at length I may have a prosperous journey, by the will of God, to come unto you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16fcd87" class="outline-3">
+<h3 id="org16fcd87">Romans 1:11</h3>
+<div class="outline-text-3" id="text-org16fcd87">
+<p>
+For I long to see you that I may impart unto you some spiritual grace, to strengthen you:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1fd4ee" class="outline-3">
+<h3 id="orge1fd4ee">Romans 1:12</h3>
+<div class="outline-text-3" id="text-orge1fd4ee">
+<p>
+That is to say, that I may be comforted together in you by that which is common to us both, your faith and mine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04c4dc8" class="outline-3">
+<h3 id="org04c4dc8">Romans 1:13</h3>
+<div class="outline-text-3" id="text-org04c4dc8">
+<p>
+And I would not have you ignorant, brethren, that I have often purposed to come unto you (and have been hindered hitherto) that I might have some fruit among you also, even as among other Gentiles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfa20e7" class="outline-3">
+<h3 id="orgdfa20e7">Romans 1:14</h3>
+<div class="outline-text-3" id="text-orgdfa20e7">
+<p>
+To the Greeks and to the barbarians, to the wise and to the unwise, I am a debtor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40e47de" class="outline-3">
+<h3 id="org40e47de">Romans 1:15</h3>
+<div class="outline-text-3" id="text-org40e47de">
+<p>
+So (as much as is in me) I am ready to preach the gospel to you also that are at Rome.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0074892" class="outline-3">
+<h3 id="org0074892">Romans 1:16</h3>
+<div class="outline-text-3" id="text-org0074892">
+<p>
+For I am not ashamed of the gospel. For it is the power of God unto salvation to every one that believeth: to the Jew first and to the Greek.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab1784a" class="outline-3">
+<h3 id="orgab1784a">Romans 1:17</h3>
+<div class="outline-text-3" id="text-orgab1784a">
+<p>
+For the justice of God is revealed therein, from faith unto faith, as it is written: The just man liveth by faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb5224e" class="outline-3">
+<h3 id="orgeb5224e">Romans 1:18</h3>
+<div class="outline-text-3" id="text-orgeb5224e">
+<p>
+For the wrath of God is revealed from heaven against all ungodliness and injustice of those men that detain the truth of God in injustice:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb20b700" class="outline-3">
+<h3 id="orgb20b700">Romans 1:19</h3>
+<div class="outline-text-3" id="text-orgb20b700">
+<p>
+Because that which is known of God is manifest in them. For God hath manifested it unto them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80388fd" class="outline-3">
+<h3 id="org80388fd">Romans 1:20</h3>
+<div class="outline-text-3" id="text-org80388fd">
+<p>
+For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made. His eternal power also and divinity: so that they are inexcusable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf470332" class="outline-3">
+<h3 id="orgf470332">Romans 1:21</h3>
+<div class="outline-text-3" id="text-orgf470332">
+<p>
+Because that, when they knew God, they have not glorified him as God or given thanks: but became vain in their thoughts. And their foolish heart was darkened.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb04ab03" class="outline-3">
+<h3 id="orgb04ab03">Romans 1:22</h3>
+<div class="outline-text-3" id="text-orgb04ab03">
+<p>
+For, professing themselves to be wise, they became fools.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cdfaef" class="outline-3">
+<h3 id="org9cdfaef">Romans 1:23</h3>
+<div class="outline-text-3" id="text-org9cdfaef">
+<p>
+And they changed the glory of the incorruptible God into the likeness of the image of a corruptible man and of birds, and of fourfooted beasts and of creeping things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bf0dfe" class="outline-3">
+<h3 id="org6bf0dfe">Romans 1:24</h3>
+<div class="outline-text-3" id="text-org6bf0dfe">
+<p>
+Wherefore, God gave them up to the desires of their heart, unto uncleanness: to dishonour their own bodies among themselves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae3290a" class="outline-3">
+<h3 id="orgae3290a">Romans 1:25</h3>
+<div class="outline-text-3" id="text-orgae3290a">
+<p>
+Who changed the truth of God into a lie and worshipped and served the creature rather than the Creator, who is blessed for ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45beed5" class="outline-3">
+<h3 id="org45beed5">Romans 1:26</h3>
+<div class="outline-text-3" id="text-org45beed5">
+<p>
+For this cause, God delivered them up to shameful affections. For their women have changed the natural use into that use which is against nature.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09d63a8" class="outline-3">
+<h3 id="org09d63a8">Romans 1:27</h3>
+<div class="outline-text-3" id="text-org09d63a8">
+<p>
+And, in like manner, the men also, leaving the natural use of the women, have burned in their lusts, one towards another: men with men, working that which is filthy and receiving in themselves the recompense which was due to their error.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49b07ea" class="outline-3">
+<h3 id="org49b07ea">Romans 1:28</h3>
+<div class="outline-text-3" id="text-org49b07ea">
+<p>
+And as they liked not to have God in their knowledge, God delivered them up to a reprobate sense, to do those things which are not convenient.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f57786" class="outline-3">
+<h3 id="org5f57786">Romans 1:29</h3>
+<div class="outline-text-3" id="text-org5f57786">
+<p>
+Being filled with all iniquity, malice, fornication, avarice, wickedness: full of envy, murder, contention, deceit, malignity: whisperers,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0fb2fd" class="outline-3">
+<h3 id="orgb0fb2fd">Romans 1:30</h3>
+<div class="outline-text-3" id="text-orgb0fb2fd">
+<p>
+Detractors, hateful to God, contumelious, proud, haughty, inventors of evil things, disobedient to parents,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e5863c" class="outline-3">
+<h3 id="org4e5863c">Romans 1:31</h3>
+<div class="outline-text-3" id="text-org4e5863c">
+<p>
+Foolish, dissolute: without affection, without fidelity, without mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a4edb4" class="outline-3">
+<h3 id="org3a4edb4">Romans 1:32</h3>
+<div class="outline-text-3" id="text-org3a4edb4">
+<p>
+Who, having known the justice of God, did not understand that they who do such things, are worthy of death: and not only they that do them, but they also that consent to them that do them. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd6a5787" class="outline-2">
+<h2 id="orgd6a5787">Romans 2</h2>
+<div class="outline-text-2" id="text-orgd6a5787">
+</div>
+<div id="outline-container-org85a6602" class="outline-3">
+<h3 id="org85a6602">Romans 2:1</h3>
+<div class="outline-text-3" id="text-org85a6602">
+<p>
+Wherefore thou art inexcusable, O man, whosoever thou art that judgest. For wherein thou judgest another, thou condemnest thyself. For thou dost the same things which thou judgest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99cc992" class="outline-3">
+<h3 id="org99cc992">Romans 2:2</h3>
+<div class="outline-text-3" id="text-org99cc992">
+<p>
+For we know that the judgment of God is, according to truth, against them that do such things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f4d1f0" class="outline-3">
+<h3 id="org2f4d1f0">Romans 2:3</h3>
+<div class="outline-text-3" id="text-org2f4d1f0">
+<p>
+And thinkest thou this, O man, that judgest them who do such things and dost the same, that thou shalt escape the judgment of God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ab33a7" class="outline-3">
+<h3 id="org9ab33a7">Romans 2:4</h3>
+<div class="outline-text-3" id="text-org9ab33a7">
+<p>
+Or despisest thou the riches of his goodness and patience and longsuffering? Knowest thou not that the benignity of God leadeth thee to penance?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c1b8d5" class="outline-3">
+<h3 id="org2c1b8d5">Romans 2:5</h3>
+<div class="outline-text-3" id="text-org2c1b8d5">
+<p>
+But according to thy hardness and impenitent heart, thou treasurest up to thyself wrath, against the day of wrath and revelation of the just judgment of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc03390e" class="outline-3">
+<h3 id="orgc03390e">Romans 2:6</h3>
+<div class="outline-text-3" id="text-orgc03390e">
+<p>
+Who will render to every man according to his works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91c95d1" class="outline-3">
+<h3 id="org91c95d1">Romans 2:7</h3>
+<div class="outline-text-3" id="text-org91c95d1">
+<p>
+To them indeed who, according to patience in good work, seek glory and honour and incorruption, eternal life:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge758751" class="outline-3">
+<h3 id="orge758751">Romans 2:8</h3>
+<div class="outline-text-3" id="text-orge758751">
+<p>
+But to them that are contentious and who obey not the truth but give credit to iniquity, wrath and indignation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7bb288" class="outline-3">
+<h3 id="orge7bb288">Romans 2:9</h3>
+<div class="outline-text-3" id="text-orge7bb288">
+<p>
+Tribulation and anguish upon every soul of man that worketh evil: of the Jew first, and also of the Greek.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b70c36" class="outline-3">
+<h3 id="org5b70c36">Romans 2:10</h3>
+<div class="outline-text-3" id="text-org5b70c36">
+<p>
+But glory and honour and peace to every one that worketh good: to the Jew first, and also to the Greek.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6830dfe" class="outline-3">
+<h3 id="org6830dfe">Romans 2:11</h3>
+<div class="outline-text-3" id="text-org6830dfe">
+<p>
+For there is no respect of persons with God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83d5c3d" class="outline-3">
+<h3 id="org83d5c3d">Romans 2:12</h3>
+<div class="outline-text-3" id="text-org83d5c3d">
+<p>
+For whosoever have sinned without the law shall perish without the law: and whosoever have sinned in the law shall be judged by the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88e2598" class="outline-3">
+<h3 id="org88e2598">Romans 2:13</h3>
+<div class="outline-text-3" id="text-org88e2598">
+<p>
+For not the hearers of the law are just before God: but the doers of the law shall be justified.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8b70f3" class="outline-3">
+<h3 id="orgb8b70f3">Romans 2:14</h3>
+<div class="outline-text-3" id="text-orgb8b70f3">
+<p>
+For when the Gentiles, who have not the law, do by nature those things that are of the law; these, having not the law, are a law to themselves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a5684b" class="outline-3">
+<h3 id="org9a5684b">Romans 2:15</h3>
+<div class="outline-text-3" id="text-org9a5684b">
+<p>
+Who shew the work of the law written in their hearts, their conscience bearing witness to them: and their thoughts between themselves accusing or also defending one another,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged571ba" class="outline-3">
+<h3 id="orged571ba">Romans 2:16</h3>
+<div class="outline-text-3" id="text-orged571ba">
+<p>
+In the day when God shall judge the secrets of men by Jesus Christ, according to my gospel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11808ff" class="outline-3">
+<h3 id="org11808ff">Romans 2:17</h3>
+<div class="outline-text-3" id="text-org11808ff">
+<p>
+But if thou art called a Jew and restest in the law and makest thy boast of God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d7e414" class="outline-3">
+<h3 id="org7d7e414">Romans 2:18</h3>
+<div class="outline-text-3" id="text-org7d7e414">
+<p>
+And knowest his will and approvest the more profitable things, being instructed by the law:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42d2e60" class="outline-3">
+<h3 id="org42d2e60">Romans 2:19</h3>
+<div class="outline-text-3" id="text-org42d2e60">
+<p>
+Art confident that thou thyself art a guide of the blind, a light of them that are in darkness,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff53c38" class="outline-3">
+<h3 id="orgff53c38">Romans 2:20</h3>
+<div class="outline-text-3" id="text-orgff53c38">
+<p>
+An instructor of the foolish, a teacher of infants, having the form of knowledge and of truth in the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d8958a" class="outline-3">
+<h3 id="org6d8958a">Romans 2:21</h3>
+<div class="outline-text-3" id="text-org6d8958a">
+<p>
+Thou therefore, that teachest another, teachest not thyself: thou, that preachest that men should not steal, stealest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org941a5b4" class="outline-3">
+<h3 id="org941a5b4">Romans 2:22</h3>
+<div class="outline-text-3" id="text-org941a5b4">
+<p>
+Thou, that sayest men should not commit adultery, committest adultery: thou, that abhorrest idols, committest sacrilege:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf2ed1d" class="outline-3">
+<h3 id="orgcf2ed1d">Romans 2:23</h3>
+<div class="outline-text-3" id="text-orgcf2ed1d">
+<p>
+Thou, that makest thy boast of the law, by transgression of the law dishonourest God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8390ba5" class="outline-3">
+<h3 id="org8390ba5">Romans 2:24</h3>
+<div class="outline-text-3" id="text-org8390ba5">
+<p>
+(For the name of God through you is blasphemed among the Gentiles, as it is written.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30738aa" class="outline-3">
+<h3 id="org30738aa">Romans 2:25</h3>
+<div class="outline-text-3" id="text-org30738aa">
+<p>
+Circumcision profiteth indeed, if thou keep the law: but if thou be a transgressor of the law, thy circumcision is made uncircumcision.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46d852b" class="outline-3">
+<h3 id="org46d852b">Romans 2:26</h3>
+<div class="outline-text-3" id="text-org46d852b">
+<p>
+If then, the uncircumcised keep the justices of the law, shall not this uncircumcision be counted for circumcision?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadfd109" class="outline-3">
+<h3 id="orgadfd109">Romans 2:27</h3>
+<div class="outline-text-3" id="text-orgadfd109">
+<p>
+And shall not that which by nature is uncircumcision, if it fulfil the law, judge thee, who by the letter and circumcision art a transgressor of the law?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1fde50" class="outline-3">
+<h3 id="orgb1fde50">Romans 2:28</h3>
+<div class="outline-text-3" id="text-orgb1fde50">
+<p>
+For it is not he is a Jew, who is so outwardly: nor is that circumcision which is outwardly in the flesh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0909ae8" class="outline-3">
+<h3 id="org0909ae8">Romans 2:29</h3>
+<div class="outline-text-3" id="text-org0909ae8">
+<p>
+But he is a Jew that is one inwardly and the circumcision is that of the heart, in the spirit not in the letter: whose praise is not of men, but of God. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org73dc21a" class="outline-2">
+<h2 id="org73dc21a">Romans 3</h2>
+<div class="outline-text-2" id="text-org73dc21a">
+</div>
+<div id="outline-container-orge6c82e1" class="outline-3">
+<h3 id="orge6c82e1">Romans 3:1</h3>
+<div class="outline-text-3" id="text-orge6c82e1">
+<p>
+What advantage then hath the Jew: or what is the profit of circumcision?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb4b821" class="outline-3">
+<h3 id="orgeb4b821">Romans 3:2</h3>
+<div class="outline-text-3" id="text-orgeb4b821">
+<p>
+Much every way. First indeed, because the words of God were committed to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b8220e" class="outline-3">
+<h3 id="org9b8220e">Romans 3:3</h3>
+<div class="outline-text-3" id="text-org9b8220e">
+<p>
+For what if some of them have not believed? Shall their unbelief make the faith of God without effect? God forbid!
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf48e085" class="outline-3">
+<h3 id="orgf48e085">Romans 3:4</h3>
+<div class="outline-text-3" id="text-orgf48e085">
+<p>
+But God is true and every man a liar, as it is written: That thou mayest be justified in thy words and mayest overcome when thou art judged.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb254ee3" class="outline-3">
+<h3 id="orgb254ee3">Romans 3:5</h3>
+<div class="outline-text-3" id="text-orgb254ee3">
+<p>
+But if our injustice commend the justice of God, what shall we say? Is God unjust, who executeth wrath?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29fcb84" class="outline-3">
+<h3 id="org29fcb84">Romans 3:6</h3>
+<div class="outline-text-3" id="text-org29fcb84">
+<p>
+(I speak according to man.) God forbid! Otherwise how shall God judge this world?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33d5384" class="outline-3">
+<h3 id="org33d5384">Romans 3:7</h3>
+<div class="outline-text-3" id="text-org33d5384">
+<p>
+For if the truth of God hath more abounded through my lie, unto his glory, why am I also yet judged as a sinner?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa3abe0" class="outline-3">
+<h3 id="orgaa3abe0">Romans 3:8</h3>
+<div class="outline-text-3" id="text-orgaa3abe0">
+<p>
+And not rather (as we are slandered and as some affirm that we say) let us do evil that there may come good? Whose damnation is just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf011696" class="outline-3">
+<h3 id="orgf011696">Romans 3:9</h3>
+<div class="outline-text-3" id="text-orgf011696">
+<p>
+What then? Do we excel them? No, not so. For we have charged both Jews and Greeks, that they are all under sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4605406" class="outline-3">
+<h3 id="org4605406">Romans 3:10</h3>
+<div class="outline-text-3" id="text-org4605406">
+<p>
+As it is written: There is not any man just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91ff598" class="outline-3">
+<h3 id="org91ff598">Romans 3:11</h3>
+<div class="outline-text-3" id="text-org91ff598">
+<p>
+There is none that understandeth: there is none that seeketh after God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ba2a0d" class="outline-3">
+<h3 id="org2ba2a0d">Romans 3:12</h3>
+<div class="outline-text-3" id="text-org2ba2a0d">
+<p>
+All have turned out of the way: they are become unprofitable together: there is none that doth good, there is not so much as one.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7a02b9" class="outline-3">
+<h3 id="orgf7a02b9">Romans 3:13</h3>
+<div class="outline-text-3" id="text-orgf7a02b9">
+<p>
+Their throat is an open sepulchre: with their tongues they have dealt deceitfully. The venom of asps is under their lips.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4717811" class="outline-3">
+<h3 id="org4717811">Romans 3:14</h3>
+<div class="outline-text-3" id="text-org4717811">
+<p>
+Whose mouth is full of cursing and bitterness:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4658a38" class="outline-3">
+<h3 id="org4658a38">Romans 3:15</h3>
+<div class="outline-text-3" id="text-org4658a38">
+<p>
+Their feet swift to shed blood:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e82f72" class="outline-3">
+<h3 id="org7e82f72">Romans 3:16</h3>
+<div class="outline-text-3" id="text-org7e82f72">
+<p>
+Destruction and misery in their ways:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd13a784" class="outline-3">
+<h3 id="orgd13a784">Romans 3:17</h3>
+<div class="outline-text-3" id="text-orgd13a784">
+<p>
+And the way of peace they have not known.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f2b77e" class="outline-3">
+<h3 id="org3f2b77e">Romans 3:18</h3>
+<div class="outline-text-3" id="text-org3f2b77e">
+<p>
+There is no fear of God before their eyes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2824d23" class="outline-3">
+<h3 id="org2824d23">Romans 3:19</h3>
+<div class="outline-text-3" id="text-org2824d23">
+<p>
+Now we know that what things soever the law speaketh, it speaketh to them that are in the law: that every mouth may be stopped and all the world may be made subject to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01ec01b" class="outline-3">
+<h3 id="org01ec01b">Romans 3:20</h3>
+<div class="outline-text-3" id="text-org01ec01b">
+<p>
+Because by the works of the law no flesh shall be justified before him. For by the law is the knowledge of sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org872a471" class="outline-3">
+<h3 id="org872a471">Romans 3:21</h3>
+<div class="outline-text-3" id="text-org872a471">
+<p>
+But now, without the law, the justice of God is made manifest, being witnessed by the law and the prophets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9545b4" class="outline-3">
+<h3 id="orge9545b4">Romans 3:22</h3>
+<div class="outline-text-3" id="text-orge9545b4">
+<p>
+Even the justice of God, by faith of Jesus Christ, unto all, and upon all them that believe in him: for there is no distinction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org435528f" class="outline-3">
+<h3 id="org435528f">Romans 3:23</h3>
+<div class="outline-text-3" id="text-org435528f">
+<p>
+For all have sinned and do need the glory of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9faf6b4" class="outline-3">
+<h3 id="org9faf6b4">Romans 3:24</h3>
+<div class="outline-text-3" id="text-org9faf6b4">
+<p>
+Being justified freely by his grace, through the redemption that is in Christ Jesus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c73e0f" class="outline-3">
+<h3 id="org8c73e0f">Romans 3:25</h3>
+<div class="outline-text-3" id="text-org8c73e0f">
+<p>
+Whom God hath proposed to be a propitiation, through faith in his blood, to the shewing of his justice, for the remission of former sins,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3147601" class="outline-3">
+<h3 id="org3147601">Romans 3:26</h3>
+<div class="outline-text-3" id="text-org3147601">
+<p>
+Through the forbearance of God, for the shewing of his justice in this time: that he himself may be just and the justifier of him who is of the faith of Jesus Christ
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc272943" class="outline-3">
+<h3 id="orgc272943">Romans 3:27</h3>
+<div class="outline-text-3" id="text-orgc272943">
+<p>
+Where is then thy boasting? It is excluded. By what law? Of works? No, but by the law of faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3164e36" class="outline-3">
+<h3 id="org3164e36">Romans 3:28</h3>
+<div class="outline-text-3" id="text-org3164e36">
+<p>
+For we account a man to be justified by faith, without the works of the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33e55c6" class="outline-3">
+<h3 id="org33e55c6">Romans 3:29</h3>
+<div class="outline-text-3" id="text-org33e55c6">
+<p>
+Is he the God of the Jews only? Is he not also of the Gentiles? yes, of the Gentiles also.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9abe757" class="outline-3">
+<h3 id="org9abe757">Romans 3:30</h3>
+<div class="outline-text-3" id="text-org9abe757">
+<p>
+For it is one God that justifieth circumcision by faith and uncircumcision through faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5acbdc" class="outline-3">
+<h3 id="orge5acbdc">Romans 3:31</h3>
+<div class="outline-text-3" id="text-orge5acbdc">
+<p>
+Do we then, destroy the law through faith? God forbid! But we establish the law. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3769ad1" class="outline-2">
+<h2 id="org3769ad1">Romans 4</h2>
+<div class="outline-text-2" id="text-org3769ad1">
+</div>
+<div id="outline-container-orga1a5acf" class="outline-3">
+<h3 id="orga1a5acf">Romans 4:1</h3>
+<div class="outline-text-3" id="text-orga1a5acf">
+<p>
+What shall we say then that Abraham hath found, who is our father according to the flesh?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org880ada6" class="outline-3">
+<h3 id="org880ada6">Romans 4:2</h3>
+<div class="outline-text-3" id="text-org880ada6">
+<p>
+For if Abraham were justified by works, he hath whereof to glory, but not before God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0065c03" class="outline-3">
+<h3 id="org0065c03">Romans 4:3</h3>
+<div class="outline-text-3" id="text-org0065c03">
+<p>
+For what saith the scripture? Abraham believed God: and it was reputed to him unto justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc371166" class="outline-3">
+<h3 id="orgc371166">Romans 4:4</h3>
+<div class="outline-text-3" id="text-orgc371166">
+<p>
+Now to him that worketh, the reward is not reckoned according to grace but according to debt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6226ef0" class="outline-3">
+<h3 id="org6226ef0">Romans 4:5</h3>
+<div class="outline-text-3" id="text-org6226ef0">
+<p>
+But to him that worketh not, yet believeth in him that justifieth the ungodly, his faith is reputed to justice, according to the purpose of the grace of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf197f59" class="outline-3">
+<h3 id="orgf197f59">Romans 4:6</h3>
+<div class="outline-text-3" id="text-orgf197f59">
+<p>
+As David also termeth the blessedness of a man to whom God reputeth justice without works:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d131ef" class="outline-3">
+<h3 id="org8d131ef">Romans 4:7</h3>
+<div class="outline-text-3" id="text-org8d131ef">
+<p>
+Blessed are they whose iniquities are forgiven: and whose sins are covered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70b2ccb" class="outline-3">
+<h3 id="org70b2ccb">Romans 4:8</h3>
+<div class="outline-text-3" id="text-org70b2ccb">
+<p>
+Blessed is the man to whom the Lord hath not imputed sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf06c25f" class="outline-3">
+<h3 id="orgf06c25f">Romans 4:9</h3>
+<div class="outline-text-3" id="text-orgf06c25f">
+<p>
+This blessedness then, doth it remain in the circumcision only or in the uncircumcision also? For we say that unto Abraham faith was reputed to justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f5bf93" class="outline-3">
+<h3 id="org1f5bf93">Romans 4:10</h3>
+<div class="outline-text-3" id="text-org1f5bf93">
+<p>
+How then was it reputed? When he was in circumcision or in uncircumcision? Not in circumcision, but in uncircumcision.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff63376" class="outline-3">
+<h3 id="orgff63376">Romans 4:11</h3>
+<div class="outline-text-3" id="text-orgff63376">
+<p>
+And he received the sign of circumcision, a seal of the justice of the faith which he had, being uncircumcised: that he might be the father of all them that believe, being uncircumcised: that unto them also it may be reputed to justice:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f2921a" class="outline-3">
+<h3 id="org4f2921a">Romans 4:12</h3>
+<div class="outline-text-3" id="text-org4f2921a">
+<p>
+And he might be the father of circumcision; not to them only that are of the circumcision, but to them also that follow the steps of the faith that is in the uncircumcision of our father Abraham.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org966deea" class="outline-3">
+<h3 id="org966deea">Romans 4:13</h3>
+<div class="outline-text-3" id="text-org966deea">
+<p>
+For not through the law was the promise to Abraham or to his seed, that he should be heir of the world: but through the justice of faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0efc0d7" class="outline-3">
+<h3 id="org0efc0d7">Romans 4:14</h3>
+<div class="outline-text-3" id="text-org0efc0d7">
+<p>
+For if they who are of the law be heirs, faith is made void: the promise is made of no effect.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26dab36" class="outline-3">
+<h3 id="org26dab36">Romans 4:15</h3>
+<div class="outline-text-3" id="text-org26dab36">
+<p>
+For the law worketh wrath. For where there is no law, neither is there transgression.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge78cc87" class="outline-3">
+<h3 id="orge78cc87">Romans 4:16</h3>
+<div class="outline-text-3" id="text-orge78cc87">
+<p>
+Therefore is it of faith, that according to grace the promise might be firm to all the seed: not to that only which is of the law, but to that also which is of the faith of Abraham, who is the father of us all,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44ced9e" class="outline-3">
+<h3 id="org44ced9e">Romans 4:17</h3>
+<div class="outline-text-3" id="text-org44ced9e">
+<p>
+(As it is written: I have made thee a father of many nations), before God, whom he believed: who quickeneth the dead and calleth those things that are not, as those that are.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8dea3af" class="outline-3">
+<h3 id="org8dea3af">Romans 4:18</h3>
+<div class="outline-text-3" id="text-org8dea3af">
+<p>
+Who against hope believed in hope; that he might be made the father of many nations, according to that which was said to him: So shall thy seed be.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org964c649" class="outline-3">
+<h3 id="org964c649">Romans 4:19</h3>
+<div class="outline-text-3" id="text-org964c649">
+<p>
+And he was not weak in faith. Neither did he consider his own body, now dead (whereas he was almost an hundred years old), nor the dead womb of Sara.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ce4acd" class="outline-3">
+<h3 id="org4ce4acd">Romans 4:20</h3>
+<div class="outline-text-3" id="text-org4ce4acd">
+<p>
+In the promise also of God he staggered not by distrust: but was strengthened in faith, giving glory to God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68580d4" class="outline-3">
+<h3 id="org68580d4">Romans 4:21</h3>
+<div class="outline-text-3" id="text-org68580d4">
+<p>
+Most fully knowing that whatsoever he has promised, he is able also to perform.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbde49a9" class="outline-3">
+<h3 id="orgbde49a9">Romans 4:22</h3>
+<div class="outline-text-3" id="text-orgbde49a9">
+<p>
+And therefore it was reputed to him unto justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2e6a9b" class="outline-3">
+<h3 id="orgd2e6a9b">Romans 4:23</h3>
+<div class="outline-text-3" id="text-orgd2e6a9b">
+<p>
+Now it is not written only for him. that it was reputed to him unto justice,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e0f004" class="outline-3">
+<h3 id="org9e0f004">Romans 4:24</h3>
+<div class="outline-text-3" id="text-org9e0f004">
+<p>
+But also for us, to whom it shall be reputed, if we believe in him that raised up Jesus Christ, our Lord, from the dead,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ec4c1b" class="outline-3">
+<h3 id="org8ec4c1b">Romans 4:25</h3>
+<div class="outline-text-3" id="text-org8ec4c1b">
+<p>
+Who was delivered up for our sins and rose again for our justification. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb13b14" class="outline-2">
+<h2 id="orgeb13b14">Romans 5</h2>
+<div class="outline-text-2" id="text-orgeb13b14">
+</div>
+<div id="outline-container-org90f290d" class="outline-3">
+<h3 id="org90f290d">Romans 5:1</h3>
+<div class="outline-text-3" id="text-org90f290d">
+<p>
+Being justified therefore by faith, let us have peace with God, through our Lord Jesus Christ:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43e2f61" class="outline-3">
+<h3 id="org43e2f61">Romans 5:2</h3>
+<div class="outline-text-3" id="text-org43e2f61">
+<p>
+By whom also we have access through faith into this grace wherein we stand: and glory in the hope of the glory of the sons of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3260a96" class="outline-3">
+<h3 id="org3260a96">Romans 5:3</h3>
+<div class="outline-text-3" id="text-org3260a96">
+<p>
+And not only so: but we glory also in tribulation, knowing that tribulation worketh patience;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09d7617" class="outline-3">
+<h3 id="org09d7617">Romans 5:4</h3>
+<div class="outline-text-3" id="text-org09d7617">
+<p>
+And patience trial; and trial hope;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9fe0a1" class="outline-3">
+<h3 id="orgf9fe0a1">Romans 5:5</h3>
+<div class="outline-text-3" id="text-orgf9fe0a1">
+<p>
+And hope confoundeth not: because the charity of God is poured forth in our hearts, by the Holy Ghost who is given to us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75117d3" class="outline-3">
+<h3 id="org75117d3">Romans 5:6</h3>
+<div class="outline-text-3" id="text-org75117d3">
+<p>
+For why did Christ, when as yet we were weak, according to the time, die for the ungodly?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4cf19e" class="outline-3">
+<h3 id="orgc4cf19e">Romans 5:7</h3>
+<div class="outline-text-3" id="text-orgc4cf19e">
+<p>
+For scarce for a just man will one die: yet perhaps for a good man some one would dare to die.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6345281" class="outline-3">
+<h3 id="org6345281">Romans 5:8</h3>
+<div class="outline-text-3" id="text-org6345281">
+<p>
+But God commendeth his charity towards us: because when as yet we were sinners according to the time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd53bf52" class="outline-3">
+<h3 id="orgd53bf52">Romans 5:9</h3>
+<div class="outline-text-3" id="text-orgd53bf52">
+<p>
+Christ died for us. Much more therefore, being now justified by his blood, shall we be saved from wrath through him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfadfdef" class="outline-3">
+<h3 id="orgfadfdef">Romans 5:10</h3>
+<div class="outline-text-3" id="text-orgfadfdef">
+<p>
+For if, when we were enemies, we were reconciled to God by the death of his Son: much more, being reconciled, shall we be saved by his life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8afb3f2" class="outline-3">
+<h3 id="org8afb3f2">Romans 5:11</h3>
+<div class="outline-text-3" id="text-org8afb3f2">
+<p>
+And not only so: but also we glory in God, through our Lord Jesus Christ, by whom we have now received reconciliation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb899ba1" class="outline-3">
+<h3 id="orgb899ba1">Romans 5:12</h3>
+<div class="outline-text-3" id="text-orgb899ba1">
+<p>
+Wherefore as by one man sin entered into this world and by sin death: and so death passed upon all men, in whom all have sinned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee11737" class="outline-3">
+<h3 id="orgee11737">Romans 5:13</h3>
+<div class="outline-text-3" id="text-orgee11737">
+<p>
+For until the law sin was in the world: but sin was not imputed, when the law was not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc6aae7" class="outline-3">
+<h3 id="orgbc6aae7">Romans 5:14</h3>
+<div class="outline-text-3" id="text-orgbc6aae7">
+<p>
+But death reigned from Adam unto Moses, even over them also who have not sinned, after the similitude of the transgression of Adam, who is a figure of him who was to come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91a517d" class="outline-3">
+<h3 id="org91a517d">Romans 5:15</h3>
+<div class="outline-text-3" id="text-org91a517d">
+<p>
+But not as the offence, so also the gift. For if by the offence of one, many died: much more the grace of God and the gift, by the grace of one man, Jesus Christ, hath abounded unto many.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12efef6" class="outline-3">
+<h3 id="org12efef6">Romans 5:16</h3>
+<div class="outline-text-3" id="text-org12efef6">
+<p>
+And not as it was by one sin, so also is the gift. For judgment indeed was by one unto condemnation: but grace is of many offences unto justification.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e75e97" class="outline-3">
+<h3 id="org3e75e97">Romans 5:17</h3>
+<div class="outline-text-3" id="text-org3e75e97">
+<p>
+For if by one man&rsquo;s offence death reigned through one; much more they who receive abundance of grace and of the gift and of justice shall reign in life through one, Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2af31cb" class="outline-3">
+<h3 id="org2af31cb">Romans 5:18</h3>
+<div class="outline-text-3" id="text-org2af31cb">
+<p>
+Therefore, as by the offence of one, unto all men to condemnation: so also by the justice of one, unto all men to justification of life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga62a0a5" class="outline-3">
+<h3 id="orga62a0a5">Romans 5:19</h3>
+<div class="outline-text-3" id="text-orga62a0a5">
+<p>
+For as by the disobedience of one man, many were made sinners: so also by the obedience of one, many shall be made just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68177f9" class="outline-3">
+<h3 id="org68177f9">Romans 5:20</h3>
+<div class="outline-text-3" id="text-org68177f9">
+<p>
+Now the law entered in that sin might abound. And where sin abounded, grace did more abound.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ec5023" class="outline-3">
+<h3 id="org5ec5023">Romans 5:21</h3>
+<div class="outline-text-3" id="text-org5ec5023">
+<p>
+That as sin hath reigned to death: so also grace might reign by justice unto life everlasting, through Jesus Christ our Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga984fdf" class="outline-2">
+<h2 id="orga984fdf">Romans 6</h2>
+<div class="outline-text-2" id="text-orga984fdf">
+</div>
+<div id="outline-container-org0adfca6" class="outline-3">
+<h3 id="org0adfca6">Romans 6:1</h3>
+<div class="outline-text-3" id="text-org0adfca6">
+<p>
+What shall we say, then? Shall we continue in sin, that grace may abound?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5789723" class="outline-3">
+<h3 id="org5789723">Romans 6:2</h3>
+<div class="outline-text-3" id="text-org5789723">
+<p>
+God forbid! For we that are dead to sin, how shall we live any longer therein?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org674d4f0" class="outline-3">
+<h3 id="org674d4f0">Romans 6:3</h3>
+<div class="outline-text-3" id="text-org674d4f0">
+<p>
+Know you not that all we who are baptized in Christ Jesus are baptized in his death?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c09977" class="outline-3">
+<h3 id="org9c09977">Romans 6:4</h3>
+<div class="outline-text-3" id="text-org9c09977">
+<p>
+For we are buried together with him by baptism into death: that, as Christ is risen from the dead by the glory of the Father, so we also may walk in newness of life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcca1855" class="outline-3">
+<h3 id="orgcca1855">Romans 6:5</h3>
+<div class="outline-text-3" id="text-orgcca1855">
+<p>
+For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d8b1a2" class="outline-3">
+<h3 id="org3d8b1a2">Romans 6:6</h3>
+<div class="outline-text-3" id="text-org3d8b1a2">
+<p>
+Knowing this, that our old man is crucified with him, that the body of sin may be destroyed, to the end that we may serve sin no longer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09288be" class="outline-3">
+<h3 id="org09288be">Romans 6:7</h3>
+<div class="outline-text-3" id="text-org09288be">
+<p>
+For he that is dead is justified from sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org054a20a" class="outline-3">
+<h3 id="org054a20a">Romans 6:8</h3>
+<div class="outline-text-3" id="text-org054a20a">
+<p>
+Now, if we be dead with Christ, we believe that we shall live also together with Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec37e64" class="outline-3">
+<h3 id="orgec37e64">Romans 6:9</h3>
+<div class="outline-text-3" id="text-orgec37e64">
+<p>
+Knowing that Christ, rising again from the dead, dieth now no more. Death shall no more have dominion over him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a9068c" class="outline-3">
+<h3 id="org8a9068c">Romans 6:10</h3>
+<div class="outline-text-3" id="text-org8a9068c">
+<p>
+For in that he died to sin, he died once: but in that he liveth, he liveth unto God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0acdc6" class="outline-3">
+<h3 id="orga0acdc6">Romans 6:11</h3>
+<div class="outline-text-3" id="text-orga0acdc6">
+<p>
+So do you also reckon that you are dead to sin, but alive unto God, in Christ Jesus our Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd62f919" class="outline-3">
+<h3 id="orgd62f919">Romans 6:12</h3>
+<div class="outline-text-3" id="text-orgd62f919">
+<p>
+Let not sin therefore reign in your mortal body, so as to obey the lusts thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd465312" class="outline-3">
+<h3 id="orgd465312">Romans 6:13</h3>
+<div class="outline-text-3" id="text-orgd465312">
+<p>
+Neither yield ye your members as instruments of iniquity unto sin: but present yourselves to God, as those that are alive from the dead; and your members as instruments of justice unto God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0cc9d29" class="outline-3">
+<h3 id="org0cc9d29">Romans 6:14</h3>
+<div class="outline-text-3" id="text-org0cc9d29">
+<p>
+For sin shall not have dominion over you: for you are not under the law, but under grace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8be512e" class="outline-3">
+<h3 id="org8be512e">Romans 6:15</h3>
+<div class="outline-text-3" id="text-org8be512e">
+<p>
+What then? Shall we sin, because we are not under the law, but under grace? God forbid!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d202d4" class="outline-3">
+<h3 id="org0d202d4">Romans 6:16</h3>
+<div class="outline-text-3" id="text-org0d202d4">
+<p>
+Know you not that to whom you yield yourselves servants to obey, his servants you are whom you obey, whether it be of sin unto death or of obedience unto justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge766cd2" class="outline-3">
+<h3 id="orge766cd2">Romans 6:17</h3>
+<div class="outline-text-3" id="text-orge766cd2">
+<p>
+But thanks be to God, that you were the servants of sin but have obeyed from the heart unto that form of doctrine into which you have been delivered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf67573" class="outline-3">
+<h3 id="orgdf67573">Romans 6:18</h3>
+<div class="outline-text-3" id="text-orgdf67573">
+<p>
+Being then freed from sin, we have been made servants of justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58b7e63" class="outline-3">
+<h3 id="org58b7e63">Romans 6:19</h3>
+<div class="outline-text-3" id="text-org58b7e63">
+<p>
+I speak an human thing, because of the infirmity of your flesh. For as you have yielded your members to serve uncleanness and iniquity, unto iniquity: so now yield your members to serve justice, unto sanctification.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b5d684" class="outline-3">
+<h3 id="org7b5d684">Romans 6:20</h3>
+<div class="outline-text-3" id="text-org7b5d684">
+<p>
+For when you were the servants of sin, you were free men to justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a13ae2" class="outline-3">
+<h3 id="org2a13ae2">Romans 6:21</h3>
+<div class="outline-text-3" id="text-org2a13ae2">
+<p>
+What fruit therefore had you then in those things of which you are now ashamed? For the end of them is death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org768a9d1" class="outline-3">
+<h3 id="org768a9d1">Romans 6:22</h3>
+<div class="outline-text-3" id="text-org768a9d1">
+<p>
+But now being made free from sin and become servants to God, you have your fruit unto sanctification, and the end life everlasting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36a1eab" class="outline-3">
+<h3 id="org36a1eab">Romans 6:23</h3>
+<div class="outline-text-3" id="text-org36a1eab">
+<p>
+For the wages of sin is death. But the grace of God, life everlasting in Christ Jesus our Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org926b3d2" class="outline-2">
+<h2 id="org926b3d2">Romans 7</h2>
+<div class="outline-text-2" id="text-org926b3d2">
+</div>
+<div id="outline-container-orgab2f27a" class="outline-3">
+<h3 id="orgab2f27a">Romans 7:1</h3>
+<div class="outline-text-3" id="text-orgab2f27a">
+<p>
+Know you not, brethren (for I speak to them that know the law) that the law hath dominion over a man as long as it liveth?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d63cdd" class="outline-3">
+<h3 id="org9d63cdd">Romans 7:2</h3>
+<div class="outline-text-3" id="text-org9d63cdd">
+<p>
+For the woman that hath an husband, whilst her husband liveth is bound to the law. But if her husband be dead, she is loosed from the law of her husband.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d9d483" class="outline-3">
+<h3 id="org8d9d483">Romans 7:3</h3>
+<div class="outline-text-3" id="text-org8d9d483">
+<p>
+Therefore, whilst her husband liveth, she shall be called an adulteress, if she be with another man: but if her husband be dead, she is delivered from the law of her husband: so that she is not an adulteress, if she be with another man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4219870" class="outline-3">
+<h3 id="org4219870">Romans 7:4</h3>
+<div class="outline-text-3" id="text-org4219870">
+<p>
+Therefore, my brethren, you also are become dead to the law, by the body of Christ: that you may belong to another, who is risen again from the dead that we may bring forth fruit to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge862dd2" class="outline-3">
+<h3 id="orge862dd2">Romans 7:5</h3>
+<div class="outline-text-3" id="text-orge862dd2">
+<p>
+For when we were in the flesh, the passions of sins, which were by the law, did work in our members, to bring forth fruit unto death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga536680" class="outline-3">
+<h3 id="orga536680">Romans 7:6</h3>
+<div class="outline-text-3" id="text-orga536680">
+<p>
+But now we are loosed from the law of death wherein we were detained; so that we should serve in newness of spirit, and not in the oldness of the letter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge08dff1" class="outline-3">
+<h3 id="orge08dff1">Romans 7:7</h3>
+<div class="outline-text-3" id="text-orge08dff1">
+<p>
+What shall we say, then? Is the law sin? God forbid! But I do not know sin, but by the law. For I had not known concupiscence, if the law did not say: Thou shalt not covet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc432e41" class="outline-3">
+<h3 id="orgc432e41">Romans 7:8</h3>
+<div class="outline-text-3" id="text-orgc432e41">
+<p>
+But sin, taking occasion by the commandment, wrought in me all manner of concupiscence. For without the law sin was dead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfceb7fa" class="outline-3">
+<h3 id="orgfceb7fa">Romans 7:9</h3>
+<div class="outline-text-3" id="text-orgfceb7fa">
+<p>
+And I lived some time without the law. But when the commandment came, sin revived,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4982aa4" class="outline-3">
+<h3 id="org4982aa4">Romans 7:10</h3>
+<div class="outline-text-3" id="text-org4982aa4">
+<p>
+And I died. And the commandment that was ordained to life, the same was found to be unto death to me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org259618b" class="outline-3">
+<h3 id="org259618b">Romans 7:11</h3>
+<div class="outline-text-3" id="text-org259618b">
+<p>
+For sin, taking occasion by the commandment, seduced me: and by it killed me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb318e3" class="outline-3">
+<h3 id="orgcb318e3">Romans 7:12</h3>
+<div class="outline-text-3" id="text-orgcb318e3">
+<p>
+Wherefore the law indeed is holy: and the commandment holy and just and good.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96e3c39" class="outline-3">
+<h3 id="org96e3c39">Romans 7:13</h3>
+<div class="outline-text-3" id="text-org96e3c39">
+<p>
+Was that then which is good made death unto me? God forbid! But sin, that it may appear sin, by that which is good, wrought death in me: that sin, by the commandment, might become sinful above measure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd686cb7" class="outline-3">
+<h3 id="orgd686cb7">Romans 7:14</h3>
+<div class="outline-text-3" id="text-orgd686cb7">
+<p>
+For we know that the law is spiritual. But I am carnal, sold under sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3145b9b" class="outline-3">
+<h3 id="org3145b9b">Romans 7:15</h3>
+<div class="outline-text-3" id="text-org3145b9b">
+<p>
+For that which I work, I understand not. For I do not that good which I will: but the evil which I hate, that I do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7cfd64" class="outline-3">
+<h3 id="orgb7cfd64">Romans 7:16</h3>
+<div class="outline-text-3" id="text-orgb7cfd64">
+<p>
+If then I do that which I will not, I consent to the law, that it is good.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f0459b" class="outline-3">
+<h3 id="org0f0459b">Romans 7:17</h3>
+<div class="outline-text-3" id="text-org0f0459b">
+<p>
+Now then it is no more I that do it: but sin that dwelleth in me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e3aae6" class="outline-3">
+<h3 id="org2e3aae6">Romans 7:18</h3>
+<div class="outline-text-3" id="text-org2e3aae6">
+<p>
+For I know that there dwelleth not in me, that is to say, in my flesh, that which is good. For to will is present with me: but to accomplish that which is good, I find not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd597c9e" class="outline-3">
+<h3 id="orgd597c9e">Romans 7:19</h3>
+<div class="outline-text-3" id="text-orgd597c9e">
+<p>
+For the good which I will, I do not: but the evil which I will not, that I do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc4eca4" class="outline-3">
+<h3 id="orgfc4eca4">Romans 7:20</h3>
+<div class="outline-text-3" id="text-orgfc4eca4">
+<p>
+Now if I do that which I will not, it is no more I that do it: but sin that dwelleth in me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6674bc" class="outline-3">
+<h3 id="orge6674bc">Romans 7:21</h3>
+<div class="outline-text-3" id="text-orge6674bc">
+<p>
+I find then a law, that when I have a will to do good, evil is present with me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b3d508" class="outline-3">
+<h3 id="org9b3d508">Romans 7:22</h3>
+<div class="outline-text-3" id="text-org9b3d508">
+<p>
+For I am delighted with the law of God, according to the inward man:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24ca829" class="outline-3">
+<h3 id="org24ca829">Romans 7:23</h3>
+<div class="outline-text-3" id="text-org24ca829">
+<p>
+But I see another law in my members, fighting against the law of my mind and captivating me in the law of sin that is in my members.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86b27f3" class="outline-3">
+<h3 id="org86b27f3">Romans 7:24</h3>
+<div class="outline-text-3" id="text-org86b27f3">
+<p>
+Unhappy man that I am, who shall deliver me from the body of this death?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc83adbb" class="outline-3">
+<h3 id="orgc83adbb">Romans 7:25</h3>
+<div class="outline-text-3" id="text-orgc83adbb">
+<p>
+The grace of God, by Jesus Christ our Lord. Therefore, I myself, with the mind serve the law of God: but with the flesh, the law of sin. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgef06973" class="outline-2">
+<h2 id="orgef06973">Romans 8</h2>
+<div class="outline-text-2" id="text-orgef06973">
+</div>
+<div id="outline-container-org0583bcb" class="outline-3">
+<h3 id="org0583bcb">Romans 8:1</h3>
+<div class="outline-text-3" id="text-org0583bcb">
+<p>
+There is now therefore no condemnation to them that are in Christ Jesus, who walk not according to the flesh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b2dee3" class="outline-3">
+<h3 id="org7b2dee3">Romans 8:2</h3>
+<div class="outline-text-3" id="text-org7b2dee3">
+<p>
+For the law of the spirit of life, in Christ Jesus, hath delivered me from the law of sin and of death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe42bb9" class="outline-3">
+<h3 id="orgbe42bb9">Romans 8:3</h3>
+<div class="outline-text-3" id="text-orgbe42bb9">
+<p>
+For what the law could not do, in that it was weak through the flesh, God, sending his own Son in the likeness of sinful flesh and of sin, hath condemned sin in the flesh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0aa1fa9" class="outline-3">
+<h3 id="org0aa1fa9">Romans 8:4</h3>
+<div class="outline-text-3" id="text-org0aa1fa9">
+<p>
+That the justification of the law might be fulfilled in us who walk not according to the flesh, but according to the spirit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7aa5653" class="outline-3">
+<h3 id="org7aa5653">Romans 8:5</h3>
+<div class="outline-text-3" id="text-org7aa5653">
+<p>
+For they that are according to the flesh mind the things that are of the flesh: but they that are according to the spirit mind the things that are of the spirit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8f57ef" class="outline-3">
+<h3 id="orgd8f57ef">Romans 8:6</h3>
+<div class="outline-text-3" id="text-orgd8f57ef">
+<p>
+For the wisdom of the flesh is death: but the wisdom of the spirit is life and peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf75d98f" class="outline-3">
+<h3 id="orgf75d98f">Romans 8:7</h3>
+<div class="outline-text-3" id="text-orgf75d98f">
+<p>
+Because the wisdom of the flesh is an enemy to God. For it is not subject to the law of God: neither can it be.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a51ca7" class="outline-3">
+<h3 id="org6a51ca7">Romans 8:8</h3>
+<div class="outline-text-3" id="text-org6a51ca7">
+<p>
+And they who are in the flesh cannot please God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b99b71" class="outline-3">
+<h3 id="org7b99b71">Romans 8:9</h3>
+<div class="outline-text-3" id="text-org7b99b71">
+<p>
+But you are not in the flesh, but the spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org622e5cf" class="outline-3">
+<h3 id="org622e5cf">Romans 8:10</h3>
+<div class="outline-text-3" id="text-org622e5cf">
+<p>
+And if Christ be in you, the body indeed is dead, because of sin: but the spirit liveth, because of justification.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0048924" class="outline-3">
+<h3 id="org0048924">Romans 8:11</h3>
+<div class="outline-text-3" id="text-org0048924">
+<p>
+And if the Spirit of him that raised up Jesus from the dead dwell in you; he that raised up Jesus Christ, from the dead shall quicken also your mortal bodies, because of his Spirit that dwelleth in you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7770d08" class="outline-3">
+<h3 id="org7770d08">Romans 8:12</h3>
+<div class="outline-text-3" id="text-org7770d08">
+<p>
+Therefore, brethren, we are debtors, not to the flesh to live according to the flesh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org900299e" class="outline-3">
+<h3 id="org900299e">Romans 8:13</h3>
+<div class="outline-text-3" id="text-org900299e">
+<p>
+For if you live according to the flesh, you shall die: but if by the Spirit you mortify the deeds of the flesh, you shall live.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22b0c24" class="outline-3">
+<h3 id="org22b0c24">Romans 8:14</h3>
+<div class="outline-text-3" id="text-org22b0c24">
+<p>
+For whosoever are led by the Spirit of God, they are the sons of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6796849" class="outline-3">
+<h3 id="org6796849">Romans 8:15</h3>
+<div class="outline-text-3" id="text-org6796849">
+<p>
+For you have not received the spirit of bondage again in fear: but you have received the spirit of adoption of sons, whereby we cry: Abba (Father).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ee0607" class="outline-3">
+<h3 id="org6ee0607">Romans 8:16</h3>
+<div class="outline-text-3" id="text-org6ee0607">
+<p>
+For the Spirit himself giveth testimony to our spirit that we are the sons of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4126ba" class="outline-3">
+<h3 id="orgd4126ba">Romans 8:17</h3>
+<div class="outline-text-3" id="text-orgd4126ba">
+<p>
+And if sons, heirs also; heirs indeed of God and joint heirs with Christ: yet so, if we suffer with him, that we may be also glorified with him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org955a0d5" class="outline-3">
+<h3 id="org955a0d5">Romans 8:18</h3>
+<div class="outline-text-3" id="text-org955a0d5">
+<p>
+For I reckon that the sufferings of this time are not worthy to be compared with the glory to come that shall be revealed in us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2d09d7" class="outline-3">
+<h3 id="orga2d09d7">Romans 8:19</h3>
+<div class="outline-text-3" id="text-orga2d09d7">
+<p>
+For the expectation of the creature waiteth for the revelation of the sons of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2052d82" class="outline-3">
+<h3 id="org2052d82">Romans 8:20</h3>
+<div class="outline-text-3" id="text-org2052d82">
+<p>
+For the creature was made subject to vanity: not willingly, but by reason of him that made it subject, in hope.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37eecfd" class="outline-3">
+<h3 id="org37eecfd">Romans 8:21</h3>
+<div class="outline-text-3" id="text-org37eecfd">
+<p>
+Because the creature also itself shall be delivered from the servitude of corruption, into the liberty of the glory of the children of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdb673c" class="outline-3">
+<h3 id="orgfdb673c">Romans 8:22</h3>
+<div class="outline-text-3" id="text-orgfdb673c">
+<p>
+For we know that every creature groaneth and travaileth in pain, even till now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb37b2ad" class="outline-3">
+<h3 id="orgb37b2ad">Romans 8:23</h3>
+<div class="outline-text-3" id="text-orgb37b2ad">
+<p>
+And not only it, but ourselves also, who have the firstfruits of the Spirit: even we ourselves groan within ourselves, waiting for the adoption of the sons of God, the redemption of our body.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1298332" class="outline-3">
+<h3 id="org1298332">Romans 8:24</h3>
+<div class="outline-text-3" id="text-org1298332">
+<p>
+For we are saved by hope. But hope that is seen is not hope. For what a man seeth, why doth he hope for?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5fb540" class="outline-3">
+<h3 id="orgd5fb540">Romans 8:25</h3>
+<div class="outline-text-3" id="text-orgd5fb540">
+<p>
+But if we hope for that which we see not, we wait for it with patience.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda8882a" class="outline-3">
+<h3 id="orgda8882a">Romans 8:26</h3>
+<div class="outline-text-3" id="text-orgda8882a">
+<p>
+Likewise, the Spirit also helpeth our infirmity. For, we know not what we should pray for as we ought: but the Spirit himself asketh for us with unspeakable groanings,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d718ad" class="outline-3">
+<h3 id="org4d718ad">Romans 8:27</h3>
+<div class="outline-text-3" id="text-org4d718ad">
+<p>
+And he that searcheth the hearts knoweth what the Spirit desireth: because he asketh for the saints according to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90175a3" class="outline-3">
+<h3 id="org90175a3">Romans 8:28</h3>
+<div class="outline-text-3" id="text-org90175a3">
+<p>
+And we know that to them that love God all things work together unto good: to such as, according to his purpose, are called to be saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3cfa088" class="outline-3">
+<h3 id="org3cfa088">Romans 8:29</h3>
+<div class="outline-text-3" id="text-org3cfa088">
+<p>
+For whom he foreknew, he also predestinated to be made conformable to the image of his Son: that he might be the Firstborn amongst many brethren.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64ce04c" class="outline-3">
+<h3 id="org64ce04c">Romans 8:30</h3>
+<div class="outline-text-3" id="text-org64ce04c">
+<p>
+And whom he predestinated, them he also called. And whom he called, them he also justified. And whom he justified, them he also glorified.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4770a6b" class="outline-3">
+<h3 id="org4770a6b">Romans 8:31</h3>
+<div class="outline-text-3" id="text-org4770a6b">
+<p>
+What shall we then say to these things? If God be for us, who is against us?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d5bf60" class="outline-3">
+<h3 id="org2d5bf60">Romans 8:32</h3>
+<div class="outline-text-3" id="text-org2d5bf60">
+<p>
+He that spared not even his own Son, but delivered him up for us all, how hath he not also, with him, given us all things?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f0d358" class="outline-3">
+<h3 id="org9f0d358">Romans 8:33</h3>
+<div class="outline-text-3" id="text-org9f0d358">
+<p>
+Who shall accuse against the elect of God? God is he that justifieth:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51b6bdc" class="outline-3">
+<h3 id="org51b6bdc">Romans 8:34</h3>
+<div class="outline-text-3" id="text-org51b6bdc">
+<p>
+Who is he that shall condemn? Christ Jesus that died: yea that is risen also again, who is at the right hand of God, who also maketh intercession for us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge860992" class="outline-3">
+<h3 id="orge860992">Romans 8:35</h3>
+<div class="outline-text-3" id="text-orge860992">
+<p>
+Who then shall separate us from the love of Christ? Shall tribulation? Or distress? Or famine? Or nakedness? Or danger? Or persecution? Or the sword?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03d300d" class="outline-3">
+<h3 id="org03d300d">Romans 8:36</h3>
+<div class="outline-text-3" id="text-org03d300d">
+<p>
+(As it is written: For thy sake, we are put to death all the day long. We are accounted as sheep for the slaughter.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9e3709" class="outline-3">
+<h3 id="orgc9e3709">Romans 8:37</h3>
+<div class="outline-text-3" id="text-orgc9e3709">
+<p>
+But in all these things we overcome, because of him that hath loved us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90b094c" class="outline-3">
+<h3 id="org90b094c">Romans 8:38</h3>
+<div class="outline-text-3" id="text-org90b094c">
+<p>
+For I am sure that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, nor might,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc361e3f" class="outline-3">
+<h3 id="orgc361e3f">Romans 8:39</h3>
+<div class="outline-text-3" id="text-orgc361e3f">
+<p>
+Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God which is in Christ Jesus our Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e4a3f5" class="outline-2">
+<h2 id="org0e4a3f5">Romans 9</h2>
+<div class="outline-text-2" id="text-org0e4a3f5">
+</div>
+<div id="outline-container-org33d68e5" class="outline-3">
+<h3 id="org33d68e5">Romans 9:1</h3>
+<div class="outline-text-3" id="text-org33d68e5">
+<p>
+I speak the truth in Christ: I lie not, my conscience bearing me witness in the Holy Ghost:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5352cf" class="outline-3">
+<h3 id="orge5352cf">Romans 9:2</h3>
+<div class="outline-text-3" id="text-orge5352cf">
+<p>
+That I have great sadness and continual sorrow in my heart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadcd59c" class="outline-3">
+<h3 id="orgadcd59c">Romans 9:3</h3>
+<div class="outline-text-3" id="text-orgadcd59c">
+<p>
+For I wished myself to be an anathema from Christ, for my brethren: who are my kinsmen according to the flesh:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e35e1c" class="outline-3">
+<h3 id="org0e35e1c">Romans 9:4</h3>
+<div class="outline-text-3" id="text-org0e35e1c">
+<p>
+Who are Israelites: to whom belongeth the adoption as of children and the glory and the testament and the giving of the law and the service of God and the promises:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7a83b9" class="outline-3">
+<h3 id="orge7a83b9">Romans 9:5</h3>
+<div class="outline-text-3" id="text-orge7a83b9">
+<p>
+Whose are the fathers and of whom is Christ, according to the flesh, who is over all things, God blessed for ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b8d664" class="outline-3">
+<h3 id="org9b8d664">Romans 9:6</h3>
+<div class="outline-text-3" id="text-org9b8d664">
+<p>
+Not as though the word of God hath miscarried. For all are not Israelites that are of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa2346e" class="outline-3">
+<h3 id="orgaa2346e">Romans 9:7</h3>
+<div class="outline-text-3" id="text-orgaa2346e">
+<p>
+Neither are all they that are the seed of Abraham, children: but in Isaac shall thy seed be called.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd5f70e" class="outline-3">
+<h3 id="orgbd5f70e">Romans 9:8</h3>
+<div class="outline-text-3" id="text-orgbd5f70e">
+<p>
+That is to say, not they that are the children of the flesh are the children of God: but they that are the children of the promise are accounted for the seed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org631eef8" class="outline-3">
+<h3 id="org631eef8">Romans 9:9</h3>
+<div class="outline-text-3" id="text-org631eef8">
+<p>
+For this is the word of promise: According to this time will I come. And Sara shall have a son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org398427b" class="outline-3">
+<h3 id="org398427b">Romans 9:10</h3>
+<div class="outline-text-3" id="text-org398427b">
+<p>
+And not only she. But when Rebecca also had conceived at once of Isaac our father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55b0c5b" class="outline-3">
+<h3 id="org55b0c5b">Romans 9:11</h3>
+<div class="outline-text-3" id="text-org55b0c5b">
+<p>
+For when the children were not yet born, nor had done any good or evil (that the purpose of God according to election might stand):
+</p>
+</div>
+</div>
+
+<div id="outline-container-org606413e" class="outline-3">
+<h3 id="org606413e">Romans 9:12</h3>
+<div class="outline-text-3" id="text-org606413e">
+<p>
+Not of works, but of him that calleth, it was said to her: The elder shall serve the younger.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefd016b" class="outline-3">
+<h3 id="orgefd016b">Romans 9:13</h3>
+<div class="outline-text-3" id="text-orgefd016b">
+<p>
+As it is written: Jacob I have loved: but Esau I have hated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf28ef81" class="outline-3">
+<h3 id="orgf28ef81">Romans 9:14</h3>
+<div class="outline-text-3" id="text-orgf28ef81">
+<p>
+What shall we say then? Is there injustice with God? God forbid!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org719dfdd" class="outline-3">
+<h3 id="org719dfdd">Romans 9:15</h3>
+<div class="outline-text-3" id="text-org719dfdd">
+<p>
+For he saith to Moses: I will have mercy on whom I will have mercy. And I will shew mercy to whom I will shew mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ce8854" class="outline-3">
+<h3 id="org0ce8854">Romans 9:16</h3>
+<div class="outline-text-3" id="text-org0ce8854">
+<p>
+So then it is not of him that willeth, nor of him that runneth, but of God that sheweth mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf525658" class="outline-3">
+<h3 id="orgf525658">Romans 9:17</h3>
+<div class="outline-text-3" id="text-orgf525658">
+<p>
+For the scripture saith to Pharao: To this purpose have I raised thee, that I may shew my power in thee and that my name may be declared throughout all the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8fadda5" class="outline-3">
+<h3 id="org8fadda5">Romans 9:18</h3>
+<div class="outline-text-3" id="text-org8fadda5">
+<p>
+Therefore he hath mercy on whom he will. And whom he will, he hardeneth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge639b7e" class="outline-3">
+<h3 id="orge639b7e">Romans 9:19</h3>
+<div class="outline-text-3" id="text-orge639b7e">
+<p>
+Thou wilt say therefore to me: Why doth he then find fault? For who resisteth his will?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6944469" class="outline-3">
+<h3 id="org6944469">Romans 9:20</h3>
+<div class="outline-text-3" id="text-org6944469">
+<p>
+O man, who art thou that repliest against God? Shall the thing formed say to him that formed it: Why hast thou made me thus?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8913b8" class="outline-3">
+<h3 id="orge8913b8">Romans 9:21</h3>
+<div class="outline-text-3" id="text-orge8913b8">
+<p>
+Or hath not the potter power over the clay, of the same lump, to make one vessel unto honour and another unto dishonour?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org382b147" class="outline-3">
+<h3 id="org382b147">Romans 9:22</h3>
+<div class="outline-text-3" id="text-org382b147">
+<p>
+What if God, willing to shew his wrath and to make his power known, endured with much patience vessels of wrath, fitted for destruction,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgceeee93" class="outline-3">
+<h3 id="orgceeee93">Romans 9:23</h3>
+<div class="outline-text-3" id="text-orgceeee93">
+<p>
+That he might shew the riches of his glory on the vessels of mercy which he hath prepared unto glory?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org754a836" class="outline-3">
+<h3 id="org754a836">Romans 9:24</h3>
+<div class="outline-text-3" id="text-org754a836">
+<p>
+Even us, whom also he hath called, not only of the Jews but also of the Gentiles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org212c12a" class="outline-3">
+<h3 id="org212c12a">Romans 9:25</h3>
+<div class="outline-text-3" id="text-org212c12a">
+<p>
+As in Osee he saith: I will call that which was not my people, my people; and her that was not beloved, beloved; and her that had not obtained mercy; one that hath obtained mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5574f0" class="outline-3">
+<h3 id="orgf5574f0">Romans 9:26</h3>
+<div class="outline-text-3" id="text-orgf5574f0">
+<p>
+And it shalt be in the place where it was said unto them: you are not my people; there they shall be called the sons of the living God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6932c60" class="outline-3">
+<h3 id="org6932c60">Romans 9:27</h3>
+<div class="outline-text-3" id="text-org6932c60">
+<p>
+And Isaias cried out concerning Israel: If the number of the children of Israel be as the sand of the sea, a remnant shall be saved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33522a8" class="outline-3">
+<h3 id="org33522a8">Romans 9:28</h3>
+<div class="outline-text-3" id="text-org33522a8">
+<p>
+For he shall finish his word and cut it short in justice: because a short word shall the Lord make upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64ca2e2" class="outline-3">
+<h3 id="org64ca2e2">Romans 9:29</h3>
+<div class="outline-text-3" id="text-org64ca2e2">
+<p>
+And Isaias foretold: Unless the Lord of Sabbath had left us a seed, we had been made as Sodom and we had been like unto Gomorrha.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf110174" class="outline-3">
+<h3 id="orgf110174">Romans 9:30</h3>
+<div class="outline-text-3" id="text-orgf110174">
+<p>
+What then shall we say? That the Gentiles who followed not after justice have attained to justice, even the justice that is of faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcec802a" class="outline-3">
+<h3 id="orgcec802a">Romans 9:31</h3>
+<div class="outline-text-3" id="text-orgcec802a">
+<p>
+But Israel, by following after the law of justice, is not come unto the law of justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e91f1b" class="outline-3">
+<h3 id="org1e91f1b">Romans 9:32</h3>
+<div class="outline-text-3" id="text-org1e91f1b">
+<p>
+Why so? Because they sought it not by faith, but as it were of works. For they stumbled at the stumblingstone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4fe1c3" class="outline-3">
+<h3 id="orgc4fe1c3">Romans 9:33</h3>
+<div class="outline-text-3" id="text-orgc4fe1c3">
+<p>
+As it is written: Behold I lay in Sion a stumbling-stone and a rock of scandal. And whosoever believeth in him shall not be confounded. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d04714" class="outline-2">
+<h2 id="org2d04714">Romans 10</h2>
+<div class="outline-text-2" id="text-org2d04714">
+</div>
+<div id="outline-container-org2d7762d" class="outline-3">
+<h3 id="org2d7762d">Romans 10:1</h3>
+<div class="outline-text-3" id="text-org2d7762d">
+<p>
+Brethren, the will of my heart, indeed and my prayer to God is for them unto salvation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org528d426" class="outline-3">
+<h3 id="org528d426">Romans 10:2</h3>
+<div class="outline-text-3" id="text-org528d426">
+<p>
+For I bear them witness that they have a zeal of God, but not according to knowledge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e4a249" class="outline-3">
+<h3 id="org7e4a249">Romans 10:3</h3>
+<div class="outline-text-3" id="text-org7e4a249">
+<p>
+For they, not knowing the justice of God and seeking to establish their own, have not submitted themselves to the justice of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaab0841" class="outline-3">
+<h3 id="orgaab0841">Romans 10:4</h3>
+<div class="outline-text-3" id="text-orgaab0841">
+<p>
+For the end of the law is Christ: unto justice to everyone that believeth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14943a3" class="outline-3">
+<h3 id="org14943a3">Romans 10:5</h3>
+<div class="outline-text-3" id="text-org14943a3">
+<p>
+For Moses wrote that the justice which is of the law: The man that shall do it shall live by it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc037485" class="outline-3">
+<h3 id="orgc037485">Romans 10:6</h3>
+<div class="outline-text-3" id="text-orgc037485">
+<p>
+But the justice which is of faith, speaketh thus: Say not in thy heart: Who shall ascend into heaven? That is to bring Christ down;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa6ae4c" class="outline-3">
+<h3 id="orgfa6ae4c">Romans 10:7</h3>
+<div class="outline-text-3" id="text-orgfa6ae4c">
+<p>
+Or who shall descend into the deep? That is, to bring up Christ again from the dead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b15f04" class="outline-3">
+<h3 id="org7b15f04">Romans 10:8</h3>
+<div class="outline-text-3" id="text-org7b15f04">
+<p>
+But what saith the scripture? The word is nigh thee; even in thy mouth and in thy heart. This is the word of faith, which we preach.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8adecc2" class="outline-3">
+<h3 id="org8adecc2">Romans 10:9</h3>
+<div class="outline-text-3" id="text-org8adecc2">
+<p>
+For if thou confess with thy mouth the Lord Jesus and believe in thy heart that God hath raised him up from the dead, thou shalt be saved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc69427e" class="outline-3">
+<h3 id="orgc69427e">Romans 10:10</h3>
+<div class="outline-text-3" id="text-orgc69427e">
+<p>
+For, with the heart, we believe unto justice: but, with the mouth, confession is made unto salvation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org976a0d7" class="outline-3">
+<h3 id="org976a0d7">Romans 10:11</h3>
+<div class="outline-text-3" id="text-org976a0d7">
+<p>
+For the scripture saith: Whosoever believeth in him shall not be confounded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82eab4a" class="outline-3">
+<h3 id="org82eab4a">Romans 10:12</h3>
+<div class="outline-text-3" id="text-org82eab4a">
+<p>
+For there is no distinction of the Jew and the Greek: for the same is Lord over all, rich unto all that call upon him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20dc832" class="outline-3">
+<h3 id="org20dc832">Romans 10:13</h3>
+<div class="outline-text-3" id="text-org20dc832">
+<p>
+For whosoever shall call upon the name of the Lord shall be saved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe9fa4b" class="outline-3">
+<h3 id="orgfe9fa4b">Romans 10:14</h3>
+<div class="outline-text-3" id="text-orgfe9fa4b">
+<p>
+How then shall they call on him in whom they have not believed? Or how shall they believe him of whom they have not heard? And how shall they hear without a preacher?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f52ddc" class="outline-3">
+<h3 id="org5f52ddc">Romans 10:15</h3>
+<div class="outline-text-3" id="text-org5f52ddc">
+<p>
+And how shall they preach unless they be sent, as it is written: How beautiful are the feet of them that preach the gospel of peace, of them that bring glad tidings of good things?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org521846b" class="outline-3">
+<h3 id="org521846b">Romans 10:16</h3>
+<div class="outline-text-3" id="text-org521846b">
+<p>
+But all do not obey the gospel. For Isaias saith: Lord, who hath believed our report?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge27310f" class="outline-3">
+<h3 id="orge27310f">Romans 10:17</h3>
+<div class="outline-text-3" id="text-orge27310f">
+<p>
+Faith then cometh by hearing; and hearing by the word of Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4a0625" class="outline-3">
+<h3 id="orgc4a0625">Romans 10:18</h3>
+<div class="outline-text-3" id="text-orgc4a0625">
+<p>
+But I say: Have they not heard? Yes, verily: Their sound hath gone forth into all the earth: and their words unto the ends of the whole world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb508faf" class="outline-3">
+<h3 id="orgb508faf">Romans 10:19</h3>
+<div class="outline-text-3" id="text-orgb508faf">
+<p>
+But I say: Hath not Israel known? First, Moses saith: I will provoke you to jealousy by that which is not a nation: by a foolish nation I will anger you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8e0034" class="outline-3">
+<h3 id="orgf8e0034">Romans 10:20</h3>
+<div class="outline-text-3" id="text-orgf8e0034">
+<p>
+But Isaias is bold, and saith: I was found by them that did not seek me. I appeared openly to them that asked not after me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4482f0" class="outline-3">
+<h3 id="orge4482f0">Romans 10:21</h3>
+<div class="outline-text-3" id="text-orge4482f0">
+<p>
+But to Israel he saith: All the day long have I spread my hands to a people that believeth not and contradicteth me. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgea72dbd" class="outline-2">
+<h2 id="orgea72dbd">Romans 11</h2>
+<div class="outline-text-2" id="text-orgea72dbd">
+</div>
+<div id="outline-container-orgc7f77af" class="outline-3">
+<h3 id="orgc7f77af">Romans 11:1</h3>
+<div class="outline-text-3" id="text-orgc7f77af">
+<p>
+I say then: Hath God cast away his people? God forbid! For I also am an Israelite of the seed of Abraham, of the tribe of Benjamin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org701c70a" class="outline-3">
+<h3 id="org701c70a">Romans 11:2</h3>
+<div class="outline-text-3" id="text-org701c70a">
+<p>
+God hath not cast away his people which he foreknew. Know you not what the scripture saith of Elias, how he calleth on God against Israel?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04377b3" class="outline-3">
+<h3 id="org04377b3">Romans 11:3</h3>
+<div class="outline-text-3" id="text-org04377b3">
+<p>
+Lord, they have slain thy prophets, they have dug down thy altars. And I am left alone: and they seek my life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb545581" class="outline-3">
+<h3 id="orgb545581">Romans 11:4</h3>
+<div class="outline-text-3" id="text-orgb545581">
+<p>
+But what saith the divine answer to him? I have left me seven thousand men that have not bowed their knees to Baal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e3cf82" class="outline-3">
+<h3 id="org0e3cf82">Romans 11:5</h3>
+<div class="outline-text-3" id="text-org0e3cf82">
+<p>
+Even so then, at this present time also, there is a remnant saved according to the election of grace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd913406" class="outline-3">
+<h3 id="orgd913406">Romans 11:6</h3>
+<div class="outline-text-3" id="text-orgd913406">
+<p>
+And if by grace, it is not now by works: otherwise grace is no more grace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85a1d19" class="outline-3">
+<h3 id="org85a1d19">Romans 11:7</h3>
+<div class="outline-text-3" id="text-org85a1d19">
+<p>
+What then? That which Israel sought, he hath not obtained: but the election hath obtained it. And the rest have been blinded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe7b7e6" class="outline-3">
+<h3 id="orgbe7b7e6">Romans 11:8</h3>
+<div class="outline-text-3" id="text-orgbe7b7e6">
+<p>
+As it is written: God hath given them the spirit of insensibility; eyes that they should not see and ears that they should not hear, until this present day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42a09ca" class="outline-3">
+<h3 id="org42a09ca">Romans 11:9</h3>
+<div class="outline-text-3" id="text-org42a09ca">
+<p>
+And David saith: Let their table be made a snare and a trap and a stumbling block and a recompense unto them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16d3abf" class="outline-3">
+<h3 id="org16d3abf">Romans 11:10</h3>
+<div class="outline-text-3" id="text-org16d3abf">
+<p>
+Let their eyes be darkened, that they may not see: and bow down their back always.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8631c2" class="outline-3">
+<h3 id="orgb8631c2">Romans 11:11</h3>
+<div class="outline-text-3" id="text-orgb8631c2">
+<p>
+I say then: Have they so stumbled, that they should fall? God forbid! But by their offence salvation is come to the Gentiles, that they may be emulous of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge759c25" class="outline-3">
+<h3 id="orge759c25">Romans 11:12</h3>
+<div class="outline-text-3" id="text-orge759c25">
+<p>
+Now if the offence of them be the riches of the world and the diminution of them the riches of the Gentiles: how much more the fulness of them?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf761bf5" class="outline-3">
+<h3 id="orgf761bf5">Romans 11:13</h3>
+<div class="outline-text-3" id="text-orgf761bf5">
+<p>
+For I say to you, Gentiles: As long indeed as I am the apostle of the Gentiles, I will honour my ministry,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12bce2a" class="outline-3">
+<h3 id="org12bce2a">Romans 11:14</h3>
+<div class="outline-text-3" id="text-org12bce2a">
+<p>
+If, by any means, I may provoke to emulation them who are my flesh and may save some of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91a9002" class="outline-3">
+<h3 id="org91a9002">Romans 11:15</h3>
+<div class="outline-text-3" id="text-org91a9002">
+<p>
+For if the loss of them be the reconciliation of the world, what shall the receiving of them be, but life from the dead?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0d850e" class="outline-3">
+<h3 id="orge0d850e">Romans 11:16</h3>
+<div class="outline-text-3" id="text-orge0d850e">
+<p>
+For if the firstfruit be holy, so is the lump also: and if the root be holy, so are the branches.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70cb304" class="outline-3">
+<h3 id="org70cb304">Romans 11:17</h3>
+<div class="outline-text-3" id="text-org70cb304">
+<p>
+And if some of the branches be broken and thou, being a wild olive, art ingrafted in them and art made partaker of the root and of the fatness of the olive tree:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf297c8f" class="outline-3">
+<h3 id="orgf297c8f">Romans 11:18</h3>
+<div class="outline-text-3" id="text-orgf297c8f">
+<p>
+Boast not against the branches. But if thou boast, thou bearest not the root: but the root thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5db49dc" class="outline-3">
+<h3 id="org5db49dc">Romans 11:19</h3>
+<div class="outline-text-3" id="text-org5db49dc">
+<p>
+Thou wilt say then: The branches were broken off that I might be grafted in.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83c5e2c" class="outline-3">
+<h3 id="org83c5e2c">Romans 11:20</h3>
+<div class="outline-text-3" id="text-org83c5e2c">
+<p>
+Well: because of unbelief they were broken off. But thou standest by faith. Be not highminded, but fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ae784c" class="outline-3">
+<h3 id="org4ae784c">Romans 11:21</h3>
+<div class="outline-text-3" id="text-org4ae784c">
+<p>
+For if God hath not spared the natural branches, fear lest perhaps also he spare not thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b5865f" class="outline-3">
+<h3 id="org0b5865f">Romans 11:22</h3>
+<div class="outline-text-3" id="text-org0b5865f">
+<p>
+See then the goodness and the severity of God: towards them indeed that are fallen, the severity; but towards thee, the goodness of God, if thou abide in goodness. Otherwise thou also shalt be cut off.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf7cc57" class="outline-3">
+<h3 id="orgaf7cc57">Romans 11:23</h3>
+<div class="outline-text-3" id="text-orgaf7cc57">
+<p>
+And they also, if they abide not still in unbelief, shall be grafted in: for God is able to graft them in again.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f1697b" class="outline-3">
+<h3 id="org1f1697b">Romans 11:24</h3>
+<div class="outline-text-3" id="text-org1f1697b">
+<p>
+For if thou were cut out of the wild olive tree, which is natural to thee; and, contrary to nature, wert grafted into the good olive tree: how much more shall they that are the natural branches be grafted into their own olive tree?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23bd527" class="outline-3">
+<h3 id="org23bd527">Romans 11:25</h3>
+<div class="outline-text-3" id="text-org23bd527">
+<p>
+For I would not have you ignorant, brethren, of this mystery (lest you should be wise in your own conceits) that blindness in part has happened in Israel, until the fulness of the Gentiles should come in.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org463d7ae" class="outline-3">
+<h3 id="org463d7ae">Romans 11:26</h3>
+<div class="outline-text-3" id="text-org463d7ae">
+<p>
+And so all Israel should be saved, as it is written: There shall come out of Sion, he that shall deliver and shall turn away ungodliness from Jacob.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org961ed89" class="outline-3">
+<h3 id="org961ed89">Romans 11:27</h3>
+<div class="outline-text-3" id="text-org961ed89">
+<p>
+And this is to them my covenant: when I shall take away their sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a5b042" class="outline-3">
+<h3 id="org2a5b042">Romans 11:28</h3>
+<div class="outline-text-3" id="text-org2a5b042">
+<p>
+As concerning the gospel, indeed, they are enemies for your sake: but as touching the election, they are most dear for the sake of the fathers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org989dcec" class="outline-3">
+<h3 id="org989dcec">Romans 11:29</h3>
+<div class="outline-text-3" id="text-org989dcec">
+<p>
+For the gifts and the calling of God are without repentance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org530d285" class="outline-3">
+<h3 id="org530d285">Romans 11:30</h3>
+<div class="outline-text-3" id="text-org530d285">
+<p>
+For as you also in times past did not believe God, but now have obtained mercy, through their unbelief:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24e24f8" class="outline-3">
+<h3 id="org24e24f8">Romans 11:31</h3>
+<div class="outline-text-3" id="text-org24e24f8">
+<p>
+So these also now have not believed, for your mercy, that they also may obtain mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09823fb" class="outline-3">
+<h3 id="org09823fb">Romans 11:32</h3>
+<div class="outline-text-3" id="text-org09823fb">
+<p>
+For God hath concluded all in unbelief, that he may have mercy on all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e8a882" class="outline-3">
+<h3 id="org0e8a882">Romans 11:33</h3>
+<div class="outline-text-3" id="text-org0e8a882">
+<p>
+O the depth of the riches of the wisdom and of the knowledge of God! How incomprehensible are his judgments, and how unsearchable his ways!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org028357e" class="outline-3">
+<h3 id="org028357e">Romans 11:34</h3>
+<div class="outline-text-3" id="text-org028357e">
+<p>
+For who hath known the mind of the Lord? Or who hath been his counsellor?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7058fc5" class="outline-3">
+<h3 id="org7058fc5">Romans 11:35</h3>
+<div class="outline-text-3" id="text-org7058fc5">
+<p>
+Or who hath first given to him, and recompense shall be made him?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbf7a95" class="outline-3">
+<h3 id="orgfbf7a95">Romans 11:36</h3>
+<div class="outline-text-3" id="text-orgfbf7a95">
+<p>
+For of him, and by him, and in him, are all things: to him be glory for ever. Amen. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0fc018d" class="outline-2">
+<h2 id="org0fc018d">Romans 12</h2>
+<div class="outline-text-2" id="text-org0fc018d">
+</div>
+<div id="outline-container-org6604df6" class="outline-3">
+<h3 id="org6604df6">Romans 12:1</h3>
+<div class="outline-text-3" id="text-org6604df6">
+<p>
+I beseech you therefore, brethren, by the mercy of God, that you present your bodies a living sacrifice, holy, pleasing unto God, your reasonable service.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org194ce6a" class="outline-3">
+<h3 id="org194ce6a">Romans 12:2</h3>
+<div class="outline-text-3" id="text-org194ce6a">
+<p>
+And be not conformed to this world: but be reformed in the newness of your mind, that you may prove what is the good and the acceptable and the perfect will of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2cdcde" class="outline-3">
+<h3 id="orge2cdcde">Romans 12:3</h3>
+<div class="outline-text-3" id="text-orge2cdcde">
+<p>
+For I say, by the grace that is given me, to all that are among you, not to be more wise than it behoveth to be wise, but to be wise unto sobriety and according as God hath divided to every one the measure of faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fff5c9" class="outline-3">
+<h3 id="org3fff5c9">Romans 12:4</h3>
+<div class="outline-text-3" id="text-org3fff5c9">
+<p>
+For as in one body we have many members, but all the members have not the same office:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4cb4062" class="outline-3">
+<h3 id="org4cb4062">Romans 12:5</h3>
+<div class="outline-text-3" id="text-org4cb4062">
+<p>
+So we, being many, are one body in Christ; and every one members one of another:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdceee47" class="outline-3">
+<h3 id="orgdceee47">Romans 12:6</h3>
+<div class="outline-text-3" id="text-orgdceee47">
+<p>
+And having different gifts, according to the grace that is given us, either prophecy, to be used according to the rule of faith;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7453e69" class="outline-3">
+<h3 id="org7453e69">Romans 12:7</h3>
+<div class="outline-text-3" id="text-org7453e69">
+<p>
+Or ministry, in ministering; or he that teacheth, in doctrine;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17c6d0a" class="outline-3">
+<h3 id="org17c6d0a">Romans 12:8</h3>
+<div class="outline-text-3" id="text-org17c6d0a">
+<p>
+He that exhorteth, in exhorting; he that giveth, with simplicity; he that ruleth, with carefulness; he that sheweth mercy, with cheerfulness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06f3625" class="outline-3">
+<h3 id="org06f3625">Romans 12:9</h3>
+<div class="outline-text-3" id="text-org06f3625">
+<p>
+Let love be without dissimulation. Hating that which is evil, cleaving to that which is good,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6528d1" class="outline-3">
+<h3 id="orgd6528d1">Romans 12:10</h3>
+<div class="outline-text-3" id="text-orgd6528d1">
+<p>
+Loving one another with the charity of brotherhood: with honour preventing one another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56c83cb" class="outline-3">
+<h3 id="org56c83cb">Romans 12:11</h3>
+<div class="outline-text-3" id="text-org56c83cb">
+<p>
+In carefulness not slothful. In spirit fervent. Serving the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f4d853" class="outline-3">
+<h3 id="org9f4d853">Romans 12:12</h3>
+<div class="outline-text-3" id="text-org9f4d853">
+<p>
+Rejoicing in hope. Patient in tribulation. Instant in prayer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org842900a" class="outline-3">
+<h3 id="org842900a">Romans 12:13</h3>
+<div class="outline-text-3" id="text-org842900a">
+<p>
+Communicating to the necessities of the saints. Pursuing hospitality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd78601b" class="outline-3">
+<h3 id="orgd78601b">Romans 12:14</h3>
+<div class="outline-text-3" id="text-orgd78601b">
+<p>
+Bless them that persecute you: bless, and curse not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org604c51a" class="outline-3">
+<h3 id="org604c51a">Romans 12:15</h3>
+<div class="outline-text-3" id="text-org604c51a">
+<p>
+Rejoice with them that rejoice: weep with them that weep.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeca297f" class="outline-3">
+<h3 id="orgeca297f">Romans 12:16</h3>
+<div class="outline-text-3" id="text-orgeca297f">
+<p>
+Being of one mind one towards another. Not minding high things, but consenting to the humble. Be not wise in your own conceits.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd92ee0" class="outline-3">
+<h3 id="orgfd92ee0">Romans 12:17</h3>
+<div class="outline-text-3" id="text-orgfd92ee0">
+<p>
+To no man rendering evil for evil. Providing good things, not only in the sight of God but also in the sight of all men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81d97a1" class="outline-3">
+<h3 id="org81d97a1">Romans 12:18</h3>
+<div class="outline-text-3" id="text-org81d97a1">
+<p>
+If it be possible, as much as is in you, have peace with all men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7db5088" class="outline-3">
+<h3 id="org7db5088">Romans 12:19</h3>
+<div class="outline-text-3" id="text-org7db5088">
+<p>
+Revenge not yourselves, my dearly beloved; but give place unto wrath, for it is written: Revenge is mine, I will repay, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e0bcd8" class="outline-3">
+<h3 id="org5e0bcd8">Romans 12:20</h3>
+<div class="outline-text-3" id="text-org5e0bcd8">
+<p>
+But if the enemy be hungry, give him to eat; if he thirst, give him to drink. For, doing this, thou shalt heap coals of fire upon his head.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org647d8dc" class="outline-3">
+<h3 id="org647d8dc">Romans 12:21</h3>
+<div class="outline-text-3" id="text-org647d8dc">
+<p>
+Be not overcome by evil: but overcome evil by good. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2205fd2" class="outline-2">
+<h2 id="org2205fd2">Romans 13</h2>
+<div class="outline-text-2" id="text-org2205fd2">
+</div>
+<div id="outline-container-orgbdcbd15" class="outline-3">
+<h3 id="orgbdcbd15">Romans 13:1</h3>
+<div class="outline-text-3" id="text-orgbdcbd15">
+<p>
+Let every soul be subject to higher powers. For there is no power but from God: and those that are ordained of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb14be81" class="outline-3">
+<h3 id="orgb14be81">Romans 13:2</h3>
+<div class="outline-text-3" id="text-orgb14be81">
+<p>
+Therefore, he that resisteth the power resisteth the ordinance of God. And they that resist purchase to themselves damnation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5758a20" class="outline-3">
+<h3 id="org5758a20">Romans 13:3</h3>
+<div class="outline-text-3" id="text-org5758a20">
+<p>
+For princes are not a terror to the good work, but to the evil. Wilt thou then not be afraid of the power? Do that which is good: and thou shalt have praise from the same.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb96a010" class="outline-3">
+<h3 id="orgb96a010">Romans 13:4</h3>
+<div class="outline-text-3" id="text-orgb96a010">
+<p>
+For he is God&rsquo;s minister to thee, for good. But if thou do that which is evil, fear: for he beareth not the sword in vain. For he is God&rsquo;s minister: an avenger to execute wrath upon him that doth evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2db6fa6" class="outline-3">
+<h3 id="org2db6fa6">Romans 13:5</h3>
+<div class="outline-text-3" id="text-org2db6fa6">
+<p>
+Wherefore be subject of necessity: not only for wrath, but also for conscience&rsquo; sake.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge64d82f" class="outline-3">
+<h3 id="orge64d82f">Romans 13:6</h3>
+<div class="outline-text-3" id="text-orge64d82f">
+<p>
+For therefore also you pay tribute. For they are the ministers of God, serving unto this purpose.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org760cad7" class="outline-3">
+<h3 id="org760cad7">Romans 13:7</h3>
+<div class="outline-text-3" id="text-org760cad7">
+<p>
+Render therefore to all men their dues. Tribute, to whom tribute is due: custom, to whom custom: fear, to whom fear: honour, to whom honour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged7a02a" class="outline-3">
+<h3 id="orged7a02a">Romans 13:8</h3>
+<div class="outline-text-3" id="text-orged7a02a">
+<p>
+Owe no man any thing, but to love one another. For he that loveth his neighbour hath fulfilled the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1b5532" class="outline-3">
+<h3 id="orga1b5532">Romans 13:9</h3>
+<div class="outline-text-3" id="text-orga1b5532">
+<p>
+For: Thou shalt not commit adultery: Thou shalt not kill: Thou shalt not steal: Thou shalt not bear false witness: Thou shalt not covet. And if there be any other commandment, it is comprised in this word: Thou shalt love thy neighbour as thyself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0488c26" class="outline-3">
+<h3 id="org0488c26">Romans 13:10</h3>
+<div class="outline-text-3" id="text-org0488c26">
+<p>
+The love of our neighbour worketh no evil. Love therefore is the fulfilling of the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05687be" class="outline-3">
+<h3 id="org05687be">Romans 13:11</h3>
+<div class="outline-text-3" id="text-org05687be">
+<p>
+And that, knowing the season, that it is now the hour for us to rise from sleep. For now our salvation is nearer than when we believed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3add442" class="outline-3">
+<h3 id="org3add442">Romans 13:12</h3>
+<div class="outline-text-3" id="text-org3add442">
+<p>
+The night is passed And the day is at hand. Let us, therefore cast off the works of darkness and put on the armour of light.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33b6991" class="outline-3">
+<h3 id="org33b6991">Romans 13:13</h3>
+<div class="outline-text-3" id="text-org33b6991">
+<p>
+Let us walk honestly, as in the day: not in rioting and drunkenness, not in chambering and impurities, not in contention and envy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3dfdc8" class="outline-3">
+<h3 id="orge3dfdc8">Romans 13:14</h3>
+<div class="outline-text-3" id="text-orge3dfdc8">
+<p>
+But put ye on the Lord Jesus Christ: and make not provision for the flesh in its concupiscences. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c928d3" class="outline-2">
+<h2 id="org1c928d3">Romans 14</h2>
+<div class="outline-text-2" id="text-org1c928d3">
+</div>
+<div id="outline-container-org0a95993" class="outline-3">
+<h3 id="org0a95993">Romans 14:1</h3>
+<div class="outline-text-3" id="text-org0a95993">
+<p>
+Now him that is weak in faith, take unto you: not in disputes about thoughts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab3df56" class="outline-3">
+<h3 id="orgab3df56">Romans 14:2</h3>
+<div class="outline-text-3" id="text-orgab3df56">
+<p>
+For one believeth that he may eat all things: but he that is weak, let him eat herbs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffc0d7f" class="outline-3">
+<h3 id="orgffc0d7f">Romans 14:3</h3>
+<div class="outline-text-3" id="text-orgffc0d7f">
+<p>
+Let not him that eateth despise him that eateth not: and he that eateth not, let him not judge him that eateth. For God hath taken him to him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f5076a" class="outline-3">
+<h3 id="org2f5076a">Romans 14:4</h3>
+<div class="outline-text-3" id="text-org2f5076a">
+<p>
+Who art thou that judgest another man&rsquo;s servant? To his own lord he standeth or falleth. And he shall stand: for God is able to make him stand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09bc7b0" class="outline-3">
+<h3 id="org09bc7b0">Romans 14:5</h3>
+<div class="outline-text-3" id="text-org09bc7b0">
+<p>
+For one judgeth between day and day: and another judgeth every day. Let every man abound in his own sense.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org525f356" class="outline-3">
+<h3 id="org525f356">Romans 14:6</h3>
+<div class="outline-text-3" id="text-org525f356">
+<p>
+He that regardeth the day regardeth it unto the Lord. And he that eateth eateth to the Lord: for he giveth thanks to God. And he that eateth not, to the Lord he eateth not and giveth thanks to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4eb482c" class="outline-3">
+<h3 id="org4eb482c">Romans 14:7</h3>
+<div class="outline-text-3" id="text-org4eb482c">
+<p>
+For none of us liveth to himself: and no man dieth to himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org189b4a3" class="outline-3">
+<h3 id="org189b4a3">Romans 14:8</h3>
+<div class="outline-text-3" id="text-org189b4a3">
+<p>
+For whether we live, we live unto the Lord: or whether we die, we die unto the Lord. Therefore, whether we live or whether we die, we are the Lord&rsquo;s.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org238d882" class="outline-3">
+<h3 id="org238d882">Romans 14:9</h3>
+<div class="outline-text-3" id="text-org238d882">
+<p>
+For to this end Christ died and rose again: that he might be Lord both of the dead and of the living.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6e6106" class="outline-3">
+<h3 id="orgb6e6106">Romans 14:10</h3>
+<div class="outline-text-3" id="text-orgb6e6106">
+<p>
+But thou, why judgest thou thy brother? Or thou, why dost thou despise thy brother? For we shall all stand before the judgment seat of Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9efaeee" class="outline-3">
+<h3 id="org9efaeee">Romans 14:11</h3>
+<div class="outline-text-3" id="text-org9efaeee">
+<p>
+For it is written: As I live, saith the Lord, every knee shall bow to me and every tongue shall confess to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4c5d77" class="outline-3">
+<h3 id="orgb4c5d77">Romans 14:12</h3>
+<div class="outline-text-3" id="text-orgb4c5d77">
+<p>
+Therefore every one of us shall render account to God for himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe80bfa" class="outline-3">
+<h3 id="orgfe80bfa">Romans 14:13</h3>
+<div class="outline-text-3" id="text-orgfe80bfa">
+<p>
+Let us not therefore judge one another any more. But judge this rather, that you put not a stumblingblock or a scandal in your brother&rsquo;s way.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b7da8e" class="outline-3">
+<h3 id="org0b7da8e">Romans 14:14</h3>
+<div class="outline-text-3" id="text-org0b7da8e">
+<p>
+I know, and am confident in the Lord Jesus, that nothing is unclean of itself: but to him that esteemeth any thing to be unclean, to him it is unclean.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5d608a" class="outline-3">
+<h3 id="orge5d608a">Romans 14:15</h3>
+<div class="outline-text-3" id="text-orge5d608a">
+<p>
+For if, because of thy meat, thy brother be grieved, thou walkest not now according to charity. Destroy not him with thy meat, for whom Christ died.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6545db" class="outline-3">
+<h3 id="orgb6545db">Romans 14:16</h3>
+<div class="outline-text-3" id="text-orgb6545db">
+<p>
+Let not then our good be evil spoken of.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bd177d" class="outline-3">
+<h3 id="org6bd177d">Romans 14:17</h3>
+<div class="outline-text-3" id="text-org6bd177d">
+<p>
+For the kingdom of God is not meat and drink: but justice and peace and joy in the Holy Ghost.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9a0460" class="outline-3">
+<h3 id="orgf9a0460">Romans 14:18</h3>
+<div class="outline-text-3" id="text-orgf9a0460">
+<p>
+For he that in this serveth Christ pleaseth God and is approved of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge93dcc2" class="outline-3">
+<h3 id="orge93dcc2">Romans 14:19</h3>
+<div class="outline-text-3" id="text-orge93dcc2">
+<p>
+Therefore, let us follow after the things that are of peace and keep the things that are of edification, one towards another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2edd46" class="outline-3">
+<h3 id="orgd2edd46">Romans 14:20</h3>
+<div class="outline-text-3" id="text-orgd2edd46">
+<p>
+Destroy not the work of God for meat. All things indeed are clean: but it is evil for that man who eateth with offence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6df78b6" class="outline-3">
+<h3 id="org6df78b6">Romans 14:21</h3>
+<div class="outline-text-3" id="text-org6df78b6">
+<p>
+It is good not to eat flesh and not to drink wine: nor any thing whereby thy brother is offended or scandalized or made weak.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c9a58b" class="outline-3">
+<h3 id="org1c9a58b">Romans 14:22</h3>
+<div class="outline-text-3" id="text-org1c9a58b">
+<p>
+Hast thou faith? Have it to thyself before God. Blessed is he that condemneth not himself in that which he alloweth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7bba62" class="outline-3">
+<h3 id="orgf7bba62">Romans 14:23</h3>
+<div class="outline-text-3" id="text-orgf7bba62">
+<p>
+But he that discerneth, if he eat, is condemned; because not of faith. For all that is not of faith is sin. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3b1e012" class="outline-2">
+<h2 id="org3b1e012">Romans 15</h2>
+<div class="outline-text-2" id="text-org3b1e012">
+</div>
+<div id="outline-container-orgb719996" class="outline-3">
+<h3 id="orgb719996">Romans 15:1</h3>
+<div class="outline-text-3" id="text-orgb719996">
+<p>
+Now, we that are stronger ought to bear the infirmities of the weak and not to please ourselves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga65a30d" class="outline-3">
+<h3 id="orga65a30d">Romans 15:2</h3>
+<div class="outline-text-3" id="text-orga65a30d">
+<p>
+Let every one of you Please his neighbour unto good, to edification.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7436e0e" class="outline-3">
+<h3 id="org7436e0e">Romans 15:3</h3>
+<div class="outline-text-3" id="text-org7436e0e">
+<p>
+For Christ did not please himself: but, as it is written: The reproaches of them that reproached thee fell upon me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org494a93c" class="outline-3">
+<h3 id="org494a93c">Romans 15:4</h3>
+<div class="outline-text-3" id="text-org494a93c">
+<p>
+For what things soever were written were written for our learning: that, through patience and the comfort of the scriptures, we might have hope.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd306d5" class="outline-3">
+<h3 id="orgfd306d5">Romans 15:5</h3>
+<div class="outline-text-3" id="text-orgfd306d5">
+<p>
+Now the God of patience and of comfort grant you to be of one mind, one towards another, according to Jesus Christ:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4090150" class="outline-3">
+<h3 id="org4090150">Romans 15:6</h3>
+<div class="outline-text-3" id="text-org4090150">
+<p>
+That with one mind and with one mouth you may glorify God and the Father of our Lord Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4899369" class="outline-3">
+<h3 id="org4899369">Romans 15:7</h3>
+<div class="outline-text-3" id="text-org4899369">
+<p>
+Wherefore, receive one another, as Christ also hath received you, unto the honour of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe28dd5" class="outline-3">
+<h3 id="orgbe28dd5">Romans 15:8</h3>
+<div class="outline-text-3" id="text-orgbe28dd5">
+<p>
+For I say that Christ Jesus was minister of the circumcision for the truth of God, to confirm the promises made unto the fathers:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75741bf" class="outline-3">
+<h3 id="org75741bf">Romans 15:9</h3>
+<div class="outline-text-3" id="text-org75741bf">
+<p>
+But that the Gentiles are to glorify God for his mercy, as it is written: Therefore will I confess to thee, O Lord, among the Gentiles and will sing to thy name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae68ee9" class="outline-3">
+<h3 id="orgae68ee9">Romans 15:10</h3>
+<div class="outline-text-3" id="text-orgae68ee9">
+<p>
+And again he saith: rejoice ye Gentiles, with his people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee39baa" class="outline-3">
+<h3 id="orgee39baa">Romans 15:11</h3>
+<div class="outline-text-3" id="text-orgee39baa">
+<p>
+And again: praise the Lord, all ye Gentiles: and magnify him, all ye people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c506e8" class="outline-3">
+<h3 id="org0c506e8">Romans 15:12</h3>
+<div class="outline-text-3" id="text-org0c506e8">
+<p>
+And again, Isaias saith: There shall be a root of Jesse; and he that shall rise up to rule the Gentiles, in him the Gentiles shall hope.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3529c73" class="outline-3">
+<h3 id="org3529c73">Romans 15:13</h3>
+<div class="outline-text-3" id="text-org3529c73">
+<p>
+Now the God of hope fill you with all joy and peace in believing: that you may abound in hope and in the power of the Holy Ghost.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b7c06d" class="outline-3">
+<h3 id="org7b7c06d">Romans 15:14</h3>
+<div class="outline-text-3" id="text-org7b7c06d">
+<p>
+And I myself also, my brethren, am assured of you that you also are full of love, replenished with all knowledge, so that you are able to admonish one another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1599834" class="outline-3">
+<h3 id="org1599834">Romans 15:15</h3>
+<div class="outline-text-3" id="text-org1599834">
+<p>
+But I have written to you, brethren, more boldly in some sort, as it were putting you in mind, because of the grace which is given me from God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org594f8d3" class="outline-3">
+<h3 id="org594f8d3">Romans 15:16</h3>
+<div class="outline-text-3" id="text-org594f8d3">
+<p>
+That I should be the minister of Christ Jesus among the Gentiles: sanctifying the gospel of God, that the oblation of the Gentiles may be made acceptable and sanctified in the Holy Ghost.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48a75b2" class="outline-3">
+<h3 id="org48a75b2">Romans 15:17</h3>
+<div class="outline-text-3" id="text-org48a75b2">
+<p>
+I have therefore glory in Christ Jesus towards God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45d2fee" class="outline-3">
+<h3 id="org45d2fee">Romans 15:18</h3>
+<div class="outline-text-3" id="text-org45d2fee">
+<p>
+For I dare not to speak of any of those things which Christ worketh not by me, for the obedience of the Gentiles, by word and deed,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2ffdec" class="outline-3">
+<h3 id="orga2ffdec">Romans 15:19</h3>
+<div class="outline-text-3" id="text-orga2ffdec">
+<p>
+By the virtue of signs and wonders, in the power of the Holy Ghost, so that from Jerusalem round about, as far as unto Illyricum, I have replenished the gospel of Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e90a63" class="outline-3">
+<h3 id="org5e90a63">Romans 15:20</h3>
+<div class="outline-text-3" id="text-org5e90a63">
+<p>
+And I have so preached this gospel, not where Christ was named, lest I should build upon another man a foundation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec096f0" class="outline-3">
+<h3 id="orgec096f0">Romans 15:21</h3>
+<div class="outline-text-3" id="text-orgec096f0">
+<p>
+But as it is written: They to whom he was not spoken of shall see: and they that have not heard shall understand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70a33db" class="outline-3">
+<h3 id="org70a33db">Romans 15:22</h3>
+<div class="outline-text-3" id="text-org70a33db">
+<p>
+For which cause also, I was hindered very much from coming to you and have been kept away till now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71242b8" class="outline-3">
+<h3 id="org71242b8">Romans 15:23</h3>
+<div class="outline-text-3" id="text-org71242b8">
+<p>
+But now, having no more place in these countries and having a great desire these many years past to come unto you,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org135e6aa" class="outline-3">
+<h3 id="org135e6aa">Romans 15:24</h3>
+<div class="outline-text-3" id="text-org135e6aa">
+<p>
+When I shall begin to take my journey into Spain, I hope that, as I pass, I shall see you and be brought on my way thither by you: if first, in part, I shall have enjoyed you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0351c06" class="outline-3">
+<h3 id="org0351c06">Romans 15:25</h3>
+<div class="outline-text-3" id="text-org0351c06">
+<p>
+But now I shall go to Jerusalem, to minister unto the saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70708e3" class="outline-3">
+<h3 id="org70708e3">Romans 15:26</h3>
+<div class="outline-text-3" id="text-org70708e3">
+<p>
+For it hath pleased them of Macedonia and Achaia to make a contribution for the poor of the saints that are in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org207723f" class="outline-3">
+<h3 id="org207723f">Romans 15:27</h3>
+<div class="outline-text-3" id="text-org207723f">
+<p>
+For it hath pleased them: and they are their debtors. For, if the Gentiles have been made partakers of their spiritual things, they ought also in carnal things to minister to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org652cd44" class="outline-3">
+<h3 id="org652cd44">Romans 15:28</h3>
+<div class="outline-text-3" id="text-org652cd44">
+<p>
+When therefore I shall have accomplished this and consigned to them this fruit, I will come by you into Spain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf488e8e" class="outline-3">
+<h3 id="orgf488e8e">Romans 15:29</h3>
+<div class="outline-text-3" id="text-orgf488e8e">
+<p>
+And I know that when I come to you I shall come in the abundance of the blessing of the gospel of Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32970e3" class="outline-3">
+<h3 id="org32970e3">Romans 15:30</h3>
+<div class="outline-text-3" id="text-org32970e3">
+<p>
+I beseech you therefore, brethren, through our Lord Jesus Christ and by the charity of the Holy Ghost, that you help me in your prayers for me to God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfd7cf6" class="outline-3">
+<h3 id="orgdfd7cf6">Romans 15:31</h3>
+<div class="outline-text-3" id="text-orgdfd7cf6">
+<p>
+That I may be delivered from the unbelievers that are in Judea and that the oblation of my service may be acceptable in Jerusalem to the saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe9751c" class="outline-3">
+<h3 id="orgfe9751c">Romans 15:32</h3>
+<div class="outline-text-3" id="text-orgfe9751c">
+<p>
+That I may come to you with joy, by the will of God, and may be refreshed with you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org265209e" class="outline-3">
+<h3 id="org265209e">Romans 15:33</h3>
+<div class="outline-text-3" id="text-org265209e">
+<p>
+Now the God of peace be with, you all. Amen. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org780d57e" class="outline-2">
+<h2 id="org780d57e">Romans 16</h2>
+<div class="outline-text-2" id="text-org780d57e">
+</div>
+<div id="outline-container-orgd666b44" class="outline-3">
+<h3 id="orgd666b44">Romans 16:1</h3>
+<div class="outline-text-3" id="text-orgd666b44">
+<p>
+And I commend to you Phebe, our sister, who is in the ministry of the church, that is in Cenchrae:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b5862a" class="outline-3">
+<h3 id="org0b5862a">Romans 16:2</h3>
+<div class="outline-text-3" id="text-org0b5862a">
+<p>
+That you receive her in the Lord as becometh saints and that you assist her in whatsoever business she shall have need of you. For she also hath assisted many, and myself also.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ea2de5" class="outline-3">
+<h3 id="org6ea2de5">Romans 16:3</h3>
+<div class="outline-text-3" id="text-org6ea2de5">
+<p>
+Salute Prisca and Aquila, my helpers, in Christ Jesus
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e470dc" class="outline-3">
+<h3 id="org3e470dc">Romans 16:4</h3>
+<div class="outline-text-3" id="text-org3e470dc">
+<p>
+(Who have for my life laid down their own necks: to whom not I only give thanks, but also all the churches of the Gentiles),
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc03bcd" class="outline-3">
+<h3 id="orgcc03bcd">Romans 16:5</h3>
+<div class="outline-text-3" id="text-orgcc03bcd">
+<p>
+And the church which is in their house. Salute Epenetus, my beloved: who is the firstfruits of Asia in Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org207528a" class="outline-3">
+<h3 id="org207528a">Romans 16:6</h3>
+<div class="outline-text-3" id="text-org207528a">
+<p>
+Salute Mary, who hath laboured much among you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd993ea9" class="outline-3">
+<h3 id="orgd993ea9">Romans 16:7</h3>
+<div class="outline-text-3" id="text-orgd993ea9">
+<p>
+Salute Andronicus and Junias, my kinsmen and fellow prisoners: who are of note among the apostles, who also were in Christ before me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0958f7" class="outline-3">
+<h3 id="orgb0958f7">Romans 16:8</h3>
+<div class="outline-text-3" id="text-orgb0958f7">
+<p>
+Salute Ampliatus, most beloved to me in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd42c590" class="outline-3">
+<h3 id="orgd42c590">Romans 16:9</h3>
+<div class="outline-text-3" id="text-orgd42c590">
+<p>
+Salute Urbanus, our helper in Christ Jesus and Stachys, my beloved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4461a5e" class="outline-3">
+<h3 id="org4461a5e">Romans 16:10</h3>
+<div class="outline-text-3" id="text-org4461a5e">
+<p>
+Salute Apellas, approved in Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7fe704" class="outline-3">
+<h3 id="orga7fe704">Romans 16:11</h3>
+<div class="outline-text-3" id="text-orga7fe704">
+<p>
+Salute them that are of Aristobulus&rsquo; household. Salute Herodian, my kinsman. Salute them that are of Narcissus&rsquo; household, who are in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd79eb90" class="outline-3">
+<h3 id="orgd79eb90">Romans 16:12</h3>
+<div class="outline-text-3" id="text-orgd79eb90">
+<p>
+Salute Tryphaena and Tryphosa, who labour in the Lord. Salute Persis, the dearly beloved, who hath much laboured in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7fbc34b" class="outline-3">
+<h3 id="org7fbc34b">Romans 16:13</h3>
+<div class="outline-text-3" id="text-org7fbc34b">
+<p>
+Salute Rufus, elect in the Lord, and his mother and mine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7fa4b34" class="outline-3">
+<h3 id="org7fa4b34">Romans 16:14</h3>
+<div class="outline-text-3" id="text-org7fa4b34">
+<p>
+Salute Asyncritus, Phlegon, Hermas, Patrobas, Hermes: and the brethren that are with them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge349939" class="outline-3">
+<h3 id="orge349939">Romans 16:15</h3>
+<div class="outline-text-3" id="text-orge349939">
+<p>
+Salute Philologus and Julia, Nereus and his sister, and Olympias: and all the saints that are with them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49e4c9b" class="outline-3">
+<h3 id="org49e4c9b">Romans 16:16</h3>
+<div class="outline-text-3" id="text-org49e4c9b">
+<p>
+Salute one another with an holy kiss. All the churches of Christ salute you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4638090" class="outline-3">
+<h3 id="org4638090">Romans 16:17</h3>
+<div class="outline-text-3" id="text-org4638090">
+<p>
+Now I beseech you, brethren, to mark them who make dissensions and offences contrary to the doctrine which you have learned and avoid them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcf93d1" class="outline-3">
+<h3 id="orgbcf93d1">Romans 16:18</h3>
+<div class="outline-text-3" id="text-orgbcf93d1">
+<p>
+For they that are such serve not Christ our Lord but their own belly: and by pleasing speeches and good words seduce the hearts of the innocent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad770ae" class="outline-3">
+<h3 id="orgad770ae">Romans 16:19</h3>
+<div class="outline-text-3" id="text-orgad770ae">
+<p>
+For your obedience is published in every place. I rejoice therefore in you. But I would have you to be wise in good and simple in evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga43a850" class="outline-3">
+<h3 id="orga43a850">Romans 16:20</h3>
+<div class="outline-text-3" id="text-orga43a850">
+<p>
+And the God of peace crush Satan under your feet speedily. The grace of our Lord Jesus Christ be with you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ced3a2" class="outline-3">
+<h3 id="org2ced3a2">Romans 16:21</h3>
+<div class="outline-text-3" id="text-org2ced3a2">
+<p>
+Timothy, my fellow labourer, saluteth you: and Lucius and Jason and Sosipater, my kinsmen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1ccde8" class="outline-3">
+<h3 id="orgf1ccde8">Romans 16:22</h3>
+<div class="outline-text-3" id="text-orgf1ccde8">
+<p>
+I, Tertius, who wrote this epistle, salute you in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1480ce3" class="outline-3">
+<h3 id="org1480ce3">Romans 16:23</h3>
+<div class="outline-text-3" id="text-org1480ce3">
+<p>
+Caius, my host, and the whole church saluteth you. Erastus, the treasurer of the city, saluteth you: and Quartus, a brother.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fa28c8" class="outline-3">
+<h3 id="org2fa28c8">Romans 16:24</h3>
+<div class="outline-text-3" id="text-org2fa28c8">
+<p>
+The grace of our Lord Jesus Christ be with you all. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org928b147" class="outline-3">
+<h3 id="org928b147">Romans 16:25</h3>
+<div class="outline-text-3" id="text-org928b147">
+<p>
+Now to him that is able to establish you, according to my gospel and the preaching of Jesus Christ, according to the revelation of the mystery which was kept secret from eternity;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4850f54" class="outline-3">
+<h3 id="org4850f54">Romans 16:26</h3>
+<div class="outline-text-3" id="text-org4850f54">
+<p>
+(Which now is made manifest by the scriptures of the prophets, according to the precept of the eternal God, for the obedience of faith) known among all nations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8130c80" class="outline-3">
+<h3 id="org8130c80">Romans 16:27</h3>
+<div class="outline-text-3" id="text-org8130c80">
+<p>
+To God, the only wise, through Jesus Christ, to whom be honour and glory for ever and ever. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,3819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc17b7a9">Judith 1</a>
+<ul>
+<li><a href="#org83dbde4">Judith 1:1</a></li>
+<li><a href="#orgc532205">Judith 1:2</a></li>
+<li><a href="#org3452839">Judith 1:3</a></li>
+<li><a href="#orgf8988b3">Judith 1:4</a></li>
+<li><a href="#orgba22eee">Judith 1:5</a></li>
+<li><a href="#org848124c">Judith 1:6</a></li>
+<li><a href="#orgb7e668b">Judith 1:7</a></li>
+<li><a href="#orgd14b648">Judith 1:8</a></li>
+<li><a href="#org4b2bed6">Judith 1:9</a></li>
+<li><a href="#org4ee8efc">Judith 1:10</a></li>
+<li><a href="#org766b594">Judith 1:11</a></li>
+<li><a href="#org2fcdb17">Judith 1:12</a></li>
+</ul>
+</li>
+<li><a href="#org6ca0236">Judith 2</a>
+<ul>
+<li><a href="#orga68ce07">Judith 2:1</a></li>
+<li><a href="#org76f9105">Judith 2:2</a></li>
+<li><a href="#org705d596">Judith 2:3</a></li>
+<li><a href="#org8abad7f">Judith 2:4</a></li>
+<li><a href="#org4ba12d9">Judith 2:5</a></li>
+<li><a href="#org78e0ff5">Judith 2:6</a></li>
+<li><a href="#org20ec325">Judith 2:7</a></li>
+<li><a href="#org344f28e">Judith 2:8</a></li>
+<li><a href="#org982d1d8">Judith 2:9</a></li>
+<li><a href="#orga8c9413">Judith 2:10</a></li>
+<li><a href="#org9d392d2">Judith 2:11</a></li>
+<li><a href="#orgd3ab0c1">Judith 2:12</a></li>
+<li><a href="#org98dbf11">Judith 2:13</a></li>
+<li><a href="#org4e7b309">Judith 2:14</a></li>
+<li><a href="#orgc4d5bd3">Judith 2:15</a></li>
+<li><a href="#orgded9dd9">Judith 2:16</a></li>
+<li><a href="#orgcd6e1f0">Judith 2:17</a></li>
+<li><a href="#org0bf8275">Judith 2:18</a></li>
+</ul>
+</li>
+<li><a href="#org183978c">Judith 3</a>
+<ul>
+<li><a href="#orgb6ea231">Judith 3:1</a></li>
+<li><a href="#org322aca6">Judith 3:2</a></li>
+<li><a href="#org2e5be3f">Judith 3:3</a></li>
+<li><a href="#org8dc8b3f">Judith 3:4</a></li>
+<li><a href="#orgce138a0">Judith 3:5</a></li>
+<li><a href="#org9e82994">Judith 3:6</a></li>
+<li><a href="#org7636e3f">Judith 3:7</a></li>
+<li><a href="#orgb19d535">Judith 3:8</a></li>
+<li><a href="#orgea3da3b">Judith 3:9</a></li>
+<li><a href="#orga70ba0f">Judith 3:10</a></li>
+<li><a href="#org88488cb">Judith 3:11</a></li>
+<li><a href="#org23c71b6">Judith 3:12</a></li>
+<li><a href="#org8010961">Judith 3:13</a></li>
+<li><a href="#orgc33e1b9">Judith 3:14</a></li>
+<li><a href="#org98720a7">Judith 3:15</a></li>
+</ul>
+</li>
+<li><a href="#orge970a17">Judith 4</a>
+<ul>
+<li><a href="#org51f11a6">Judith 4:1</a></li>
+<li><a href="#orgbfa61d5">Judith 4:2</a></li>
+<li><a href="#org0df8de6">Judith 4:3</a></li>
+<li><a href="#org9081706">Judith 4:4</a></li>
+<li><a href="#org370266c">Judith 4:5</a></li>
+<li><a href="#org01fa1f1">Judith 4:6</a></li>
+<li><a href="#org03bd699">Judith 4:7</a></li>
+<li><a href="#org4e3e749">Judith 4:8</a></li>
+<li><a href="#orgedd6cfa">Judith 4:9</a></li>
+<li><a href="#org0dbd4ef">Judith 4:10</a></li>
+<li><a href="#orgfd7cd90">Judith 4:11</a></li>
+<li><a href="#org5b940cf">Judith 4:12</a></li>
+<li><a href="#org2bd331b">Judith 4:13</a></li>
+<li><a href="#org336512a">Judith 4:14</a></li>
+<li><a href="#orgf00812b">Judith 4:15</a></li>
+<li><a href="#org6bc9e31">Judith 4:16</a></li>
+<li><a href="#org33f2e81">Judith 4:17</a></li>
+</ul>
+</li>
+<li><a href="#orgacd9260">Judith 5</a>
+<ul>
+<li><a href="#org794fdc5">Judith 5:1</a></li>
+<li><a href="#org4c924a5">Judith 5:2</a></li>
+<li><a href="#org26f0482">Judith 5:3</a></li>
+<li><a href="#org6d1df87">Judith 5:4</a></li>
+<li><a href="#orgf4ef1f5">Judith 5:5</a></li>
+<li><a href="#orgc60167a">Judith 5:6</a></li>
+<li><a href="#org5658a14">Judith 5:7</a></li>
+<li><a href="#orga2e7ef5">Judith 5:8</a></li>
+<li><a href="#org5f92193">Judith 5:9</a></li>
+<li><a href="#org27f1fcc">Judith 5:10</a></li>
+<li><a href="#org7c03140">Judith 5:11</a></li>
+<li><a href="#orgef86e20">Judith 5:12</a></li>
+<li><a href="#orgf261b0e">Judith 5:13</a></li>
+<li><a href="#orge580138">Judith 5:14</a></li>
+<li><a href="#org77b3f57">Judith 5:15</a></li>
+<li><a href="#org986b0a1">Judith 5:16</a></li>
+<li><a href="#orga7e1ac5">Judith 5:17</a></li>
+<li><a href="#org3256063">Judith 5:18</a></li>
+<li><a href="#org0727bed">Judith 5:19</a></li>
+<li><a href="#org317f537">Judith 5:20</a></li>
+<li><a href="#orgdea99ed">Judith 5:21</a></li>
+<li><a href="#org767e0cd">Judith 5:22</a></li>
+<li><a href="#orge08ed2f">Judith 5:23</a></li>
+<li><a href="#org4a1e835">Judith 5:24</a></li>
+<li><a href="#org2d587b3">Judith 5:25</a></li>
+<li><a href="#org1f3953b">Judith 5:26</a></li>
+<li><a href="#org6fcf625">Judith 5:27</a></li>
+<li><a href="#orgd556b1d">Judith 5:28</a></li>
+<li><a href="#org134af8a">Judith 5:29</a></li>
+</ul>
+</li>
+<li><a href="#org7c01a09">Judith 6</a>
+<ul>
+<li><a href="#org754efbf">Judith 6:1</a></li>
+<li><a href="#org0568ffe">Judith 6:2</a></li>
+<li><a href="#orga155b5c">Judith 6:3</a></li>
+<li><a href="#orgfc1be8e">Judith 6:4</a></li>
+<li><a href="#org85f1af1">Judith 6:5</a></li>
+<li><a href="#org57296ad">Judith 6:6</a></li>
+<li><a href="#org482ee5b">Judith 6:7</a></li>
+<li><a href="#org0efa345">Judith 6:8</a></li>
+<li><a href="#org5ac0078">Judith 6:9</a></li>
+<li><a href="#orgc09dfe9">Judith 6:10</a></li>
+<li><a href="#orgd1bdba8">Judith 6:11</a></li>
+<li><a href="#orgbf12a32">Judith 6:12</a></li>
+<li><a href="#org111193f">Judith 6:13</a></li>
+<li><a href="#orgbed88e5">Judith 6:14</a></li>
+<li><a href="#orgac1a525">Judith 6:15</a></li>
+<li><a href="#org2d73b54">Judith 6:16</a></li>
+<li><a href="#org24366c5">Judith 6:17</a></li>
+<li><a href="#orgeea55cd">Judith 6:18</a></li>
+<li><a href="#orgcc3d09b">Judith 6:19</a></li>
+<li><a href="#org29925e0">Judith 6:20</a></li>
+<li><a href="#org1ad3616">Judith 6:21</a></li>
+</ul>
+</li>
+<li><a href="#org6f774fc">Judith 7</a>
+<ul>
+<li><a href="#orgfe8a7a7">Judith 7:1</a></li>
+<li><a href="#org7e02af8">Judith 7:2</a></li>
+<li><a href="#orgc2a81df">Judith 7:3</a></li>
+<li><a href="#orgea32ecf">Judith 7:4</a></li>
+<li><a href="#orgdc000e2">Judith 7:5</a></li>
+<li><a href="#orgd75c0bf">Judith 7:6</a></li>
+<li><a href="#org8c8cdb7">Judith 7:7</a></li>
+<li><a href="#org58e4eda">Judith 7:8</a></li>
+<li><a href="#orgcd52301">Judith 7:9</a></li>
+<li><a href="#org59d37ea">Judith 7:10</a></li>
+<li><a href="#org027e066">Judith 7:11</a></li>
+<li><a href="#orgf349dcf">Judith 7:12</a></li>
+<li><a href="#org3a022f3">Judith 7:13</a></li>
+<li><a href="#org3fec840">Judith 7:14</a></li>
+<li><a href="#org0f77b6d">Judith 7:15</a></li>
+<li><a href="#orgecc3c2b">Judith 7:16</a></li>
+<li><a href="#org46fc717">Judith 7:17</a></li>
+<li><a href="#org499ea37">Judith 7:18</a></li>
+<li><a href="#org4844d93">Judith 7:19</a></li>
+<li><a href="#org3c9107a">Judith 7:20</a></li>
+<li><a href="#org9e186d0">Judith 7:21</a></li>
+<li><a href="#orgf17bd63">Judith 7:22</a></li>
+<li><a href="#org0c63897">Judith 7:23</a></li>
+<li><a href="#org212a170">Judith 7:24</a></li>
+<li><a href="#org130297f">Judith 7:25</a></li>
+</ul>
+</li>
+<li><a href="#org920470b">Judith 8</a>
+<ul>
+<li><a href="#orgec1822b">Judith 8:1</a></li>
+<li><a href="#org5b36862">Judith 8:2</a></li>
+<li><a href="#org9b90807">Judith 8:3</a></li>
+<li><a href="#org17a7474">Judith 8:4</a></li>
+<li><a href="#org175e3aa">Judith 8:5</a></li>
+<li><a href="#org7193b22">Judith 8:6</a></li>
+<li><a href="#org7d2e7e0">Judith 8:7</a></li>
+<li><a href="#orgc2a7850">Judith 8:8</a></li>
+<li><a href="#org089b8de">Judith 8:9</a></li>
+<li><a href="#org32eac23">Judith 8:10</a></li>
+<li><a href="#org11d380c">Judith 8:11</a></li>
+<li><a href="#org937a24f">Judith 8:12</a></li>
+<li><a href="#org68d249f">Judith 8:13</a></li>
+<li><a href="#org756e81a">Judith 8:14</a></li>
+<li><a href="#org88f88b3">Judith 8:15</a></li>
+<li><a href="#org3d57a27">Judith 8:16</a></li>
+<li><a href="#org9fc9c2d">Judith 8:17</a></li>
+<li><a href="#org5b5da97">Judith 8:18</a></li>
+<li><a href="#orgb43d1ae">Judith 8:19</a></li>
+<li><a href="#orgd71f30c">Judith 8:20</a></li>
+<li><a href="#org66d3fd1">Judith 8:21</a></li>
+<li><a href="#org0cfd1cb">Judith 8:22</a></li>
+<li><a href="#org22aa7e0">Judith 8:23</a></li>
+<li><a href="#org2c7e102">Judith 8:24</a></li>
+<li><a href="#org8c1973e">Judith 8:25</a></li>
+<li><a href="#orgad8aaa4">Judith 8:26</a></li>
+<li><a href="#org3fcc47f">Judith 8:27</a></li>
+<li><a href="#org71a997f">Judith 8:28</a></li>
+<li><a href="#orgaa54c9e">Judith 8:29</a></li>
+<li><a href="#orgf873ebe">Judith 8:30</a></li>
+<li><a href="#orgdca4534">Judith 8:31</a></li>
+<li><a href="#orged75e8d">Judith 8:32</a></li>
+<li><a href="#orgd9f4a02">Judith 8:33</a></li>
+<li><a href="#orgf8a6503">Judith 8:34</a></li>
+</ul>
+</li>
+<li><a href="#orgfa6699b">Judith 9</a>
+<ul>
+<li><a href="#orgdf90a33">Judith 9:1</a></li>
+<li><a href="#org25e2a1b">Judith 9:2</a></li>
+<li><a href="#org7481fdf">Judith 9:3</a></li>
+<li><a href="#org3cab0bc">Judith 9:4</a></li>
+<li><a href="#orgabc19b1">Judith 9:5</a></li>
+<li><a href="#org1d8f3a1">Judith 9:6</a></li>
+<li><a href="#org7d64754">Judith 9:7</a></li>
+<li><a href="#org132e880">Judith 9:8</a></li>
+<li><a href="#org8ae0739">Judith 9:9</a></li>
+<li><a href="#orgff104ef">Judith 9:10</a></li>
+<li><a href="#orgf975b7e">Judith 9:11</a></li>
+<li><a href="#orgb4900c0">Judith 9:12</a></li>
+<li><a href="#orgdf01a28">Judith 9:13</a></li>
+<li><a href="#org48003c2">Judith 9:14</a></li>
+<li><a href="#org1df4339">Judith 9:15</a></li>
+<li><a href="#org41cdb63">Judith 9:16</a></li>
+<li><a href="#org87db20e">Judith 9:17</a></li>
+<li><a href="#org8c81dc6">Judith 9:18</a></li>
+<li><a href="#org6328a1e">Judith 9:19</a></li>
+</ul>
+</li>
+<li><a href="#orgb75bec1">Judith 10</a>
+<ul>
+<li><a href="#org79e1555">Judith 10:1</a></li>
+<li><a href="#org152e3f0">Judith 10:2</a></li>
+<li><a href="#orgfde12a7">Judith 10:3</a></li>
+<li><a href="#orgfec072b">Judith 10:4</a></li>
+<li><a href="#orgc2d080c">Judith 10:5</a></li>
+<li><a href="#org0e94d13">Judith 10:6</a></li>
+<li><a href="#org1cdc043">Judith 10:7</a></li>
+<li><a href="#orge87607f">Judith 10:8</a></li>
+<li><a href="#org48ab1b1">Judith 10:9</a></li>
+<li><a href="#org122f373">Judith 10:10</a></li>
+<li><a href="#orgca1e03b">Judith 10:11</a></li>
+<li><a href="#org8473715">Judith 10:12</a></li>
+<li><a href="#org978d93d">Judith 10:13</a></li>
+<li><a href="#orgee29979">Judith 10:14</a></li>
+<li><a href="#orgb91bb05">Judith 10:15</a></li>
+<li><a href="#orgcdf4eb7">Judith 10:16</a></li>
+<li><a href="#org876d595">Judith 10:17</a></li>
+<li><a href="#orgc54b7af">Judith 10:18</a></li>
+<li><a href="#orgaeba056">Judith 10:19</a></li>
+<li><a href="#orgee1f183">Judith 10:20</a></li>
+</ul>
+</li>
+<li><a href="#org49d239f">Judith 11</a>
+<ul>
+<li><a href="#orgd205930">Judith 11:1</a></li>
+<li><a href="#orgfa8ebbf">Judith 11:2</a></li>
+<li><a href="#org97d10ee">Judith 11:3</a></li>
+<li><a href="#org4af1614">Judith 11:4</a></li>
+<li><a href="#org1598bef">Judith 11:5</a></li>
+<li><a href="#org6a7ef30">Judith 11:6</a></li>
+<li><a href="#orgdc024d9">Judith 11:7</a></li>
+<li><a href="#org9ff639c">Judith 11:8</a></li>
+<li><a href="#orgfe4210b">Judith 11:9</a></li>
+<li><a href="#orgbe6a7bc">Judith 11:10</a></li>
+<li><a href="#org1f3a5c4">Judith 11:11</a></li>
+<li><a href="#org7678a74">Judith 11:12</a></li>
+<li><a href="#org2e93932">Judith 11:13</a></li>
+<li><a href="#orgab5b16c">Judith 11:14</a></li>
+<li><a href="#org909d625">Judith 11:15</a></li>
+<li><a href="#orgfc37d1d">Judith 11:16</a></li>
+<li><a href="#org50ccb2d">Judith 11:17</a></li>
+<li><a href="#org3d623fa">Judith 11:18</a></li>
+<li><a href="#org7295c41">Judith 11:19</a></li>
+<li><a href="#orged1bcd5">Judith 11:20</a></li>
+<li><a href="#orgc9737dd">Judith 11:21</a></li>
+</ul>
+</li>
+<li><a href="#org37ebe1d">Judith 12</a>
+<ul>
+<li><a href="#org702f888">Judith 12:1</a></li>
+<li><a href="#org550efdd">Judith 12:2</a></li>
+<li><a href="#orgf358f89">Judith 12:3</a></li>
+<li><a href="#org483fb3d">Judith 12:4</a></li>
+<li><a href="#orga2aaa49">Judith 12:5</a></li>
+<li><a href="#org0462395">Judith 12:6</a></li>
+<li><a href="#org13f5baf">Judith 12:7</a></li>
+<li><a href="#orga0b2b7d">Judith 12:8</a></li>
+<li><a href="#org97a7f9d">Judith 12:9</a></li>
+<li><a href="#org8646e01">Judith 12:10</a></li>
+<li><a href="#org5653bf7">Judith 12:11</a></li>
+<li><a href="#orga1fb4b7">Judith 12:12</a></li>
+<li><a href="#orgde76262">Judith 12:13</a></li>
+<li><a href="#org4392892">Judith 12:14</a></li>
+<li><a href="#org33bd258">Judith 12:15</a></li>
+<li><a href="#org90329f1">Judith 12:16</a></li>
+<li><a href="#orgc788451">Judith 12:17</a></li>
+<li><a href="#orgc910243">Judith 12:18</a></li>
+<li><a href="#orgf0251f2">Judith 12:19</a></li>
+<li><a href="#org8f6f58a">Judith 12:20</a></li>
+</ul>
+</li>
+<li><a href="#orgf1cca05">Judith 13</a>
+<ul>
+<li><a href="#org26c1f55">Judith 13:1</a></li>
+<li><a href="#org6ccdfb6">Judith 13:2</a></li>
+<li><a href="#orga09ded0">Judith 13:3</a></li>
+<li><a href="#orgf5931fd">Judith 13:4</a></li>
+<li><a href="#orgf64d29f">Judith 13:5</a></li>
+<li><a href="#orgb2aca64">Judith 13:6</a></li>
+<li><a href="#org9cc1984">Judith 13:7</a></li>
+<li><a href="#org6c8d5f8">Judith 13:8</a></li>
+<li><a href="#org8c0de2d">Judith 13:9</a></li>
+<li><a href="#orgcf707ec">Judith 13:10</a></li>
+<li><a href="#org457e8b0">Judith 13:11</a></li>
+<li><a href="#orge164506">Judith 13:12</a></li>
+<li><a href="#org6b29019">Judith 13:13</a></li>
+<li><a href="#orgaff4722">Judith 13:14</a></li>
+<li><a href="#orga350be9">Judith 13:15</a></li>
+<li><a href="#orgd0d38a8">Judith 13:16</a></li>
+<li><a href="#orgbbed2c1">Judith 13:17</a></li>
+<li><a href="#org8321ee4">Judith 13:18</a></li>
+<li><a href="#org84af7f8">Judith 13:19</a></li>
+<li><a href="#orgcd7a3e1">Judith 13:20</a></li>
+<li><a href="#orgb43571e">Judith 13:21</a></li>
+<li><a href="#orgc9c9781">Judith 13:22</a></li>
+<li><a href="#org0a5085c">Judith 13:23</a></li>
+<li><a href="#org20064f9">Judith 13:24</a></li>
+<li><a href="#org9009a19">Judith 13:25</a></li>
+<li><a href="#org83c84c4">Judith 13:26</a></li>
+<li><a href="#orga2e9126">Judith 13:27</a></li>
+<li><a href="#orgc3f58cd">Judith 13:28</a></li>
+<li><a href="#org112387b">Judith 13:29</a></li>
+<li><a href="#org53fc2e9">Judith 13:30</a></li>
+<li><a href="#orgabf1593">Judith 13:31</a></li>
+</ul>
+</li>
+<li><a href="#org8a566e0">Judith 14</a>
+<ul>
+<li><a href="#org78889fe">Judith 14:1</a></li>
+<li><a href="#org7ce1c65">Judith 14:2</a></li>
+<li><a href="#orge216626">Judith 14:3</a></li>
+<li><a href="#org3b0ac89">Judith 14:4</a></li>
+<li><a href="#orge030fcd">Judith 14:5</a></li>
+<li><a href="#orgbb15e4d">Judith 14:6</a></li>
+<li><a href="#org3564b73">Judith 14:7</a></li>
+<li><a href="#org204def3">Judith 14:8</a></li>
+<li><a href="#org962a27f">Judith 14:9</a></li>
+<li><a href="#orgf01148e">Judith 14:10</a></li>
+<li><a href="#org8c510e9">Judith 14:11</a></li>
+<li><a href="#org18b1197">Judith 14:12</a></li>
+<li><a href="#orgb7ce2ed">Judith 14:13</a></li>
+<li><a href="#org59fca23">Judith 14:14</a></li>
+<li><a href="#org15eac4c">Judith 14:15</a></li>
+<li><a href="#org0409b0b">Judith 14:16</a></li>
+<li><a href="#orgf957dcf">Judith 14:17</a></li>
+<li><a href="#org0055e59">Judith 14:18</a></li>
+</ul>
+</li>
+<li><a href="#orgcafe901">Judith 15</a>
+<ul>
+<li><a href="#org9bac102">Judith 15:1</a></li>
+<li><a href="#org39895fe">Judith 15:2</a></li>
+<li><a href="#org406215f">Judith 15:3</a></li>
+<li><a href="#orgb37df16">Judith 15:4</a></li>
+<li><a href="#orgb5490bb">Judith 15:5</a></li>
+<li><a href="#org8ed31cd">Judith 15:6</a></li>
+<li><a href="#org36b3cae">Judith 15:7</a></li>
+<li><a href="#orgd59f060">Judith 15:8</a></li>
+<li><a href="#org8432a80">Judith 15:9</a></li>
+<li><a href="#orgd45316c">Judith 15:10</a></li>
+<li><a href="#org9042043">Judith 15:11</a></li>
+<li><a href="#orga562042">Judith 15:12</a></li>
+<li><a href="#org661864f">Judith 15:13</a></li>
+<li><a href="#org9c95e36">Judith 15:14</a></li>
+<li><a href="#org4f2aac9">Judith 15:15</a></li>
+</ul>
+</li>
+<li><a href="#orgc4f6222">Judith 16</a>
+<ul>
+<li><a href="#org017ffe9">Judith 16:1</a></li>
+<li><a href="#orgc337982">Judith 16:2</a></li>
+<li><a href="#org4a9c8cb">Judith 16:3</a></li>
+<li><a href="#orge326124">Judith 16:4</a></li>
+<li><a href="#orgecd23d4">Judith 16:5</a></li>
+<li><a href="#org8f1a733">Judith 16:6</a></li>
+<li><a href="#org7bbb020">Judith 16:7</a></li>
+<li><a href="#org9823f1e">Judith 16:8</a></li>
+<li><a href="#org93b691f">Judith 16:9</a></li>
+<li><a href="#org69619c3">Judith 16:10</a></li>
+<li><a href="#org23b1112">Judith 16:11</a></li>
+<li><a href="#org922119d">Judith 16:12</a></li>
+<li><a href="#orgdb7ef17">Judith 16:13</a></li>
+<li><a href="#orge9d7c88">Judith 16:14</a></li>
+<li><a href="#org675ae0b">Judith 16:15</a></li>
+<li><a href="#orgded7880">Judith 16:16</a></li>
+<li><a href="#org301bb24">Judith 16:17</a></li>
+<li><a href="#orgefe6e24">Judith 16:18</a></li>
+<li><a href="#org8beac8c">Judith 16:19</a></li>
+<li><a href="#org5029567">Judith 16:20</a></li>
+<li><a href="#orge6c6c3a">Judith 16:21</a></li>
+<li><a href="#org1f4b7b6">Judith 16:22</a></li>
+<li><a href="#org84c3f6a">Judith 16:23</a></li>
+<li><a href="#org2d42e7b">Judith 16:24</a></li>
+<li><a href="#org4ed586d">Judith 16:25</a></li>
+<li><a href="#org1859d10">Judith 16:26</a></li>
+<li><a href="#org69e500d">Judith 16:27</a></li>
+<li><a href="#orgadf9890">Judith 16:28</a></li>
+<li><a href="#org813ecdd">Judith 16:29</a></li>
+<li><a href="#orgfd911c4">Judith 16:30</a></li>
+<li><a href="#orgad4fa81">Judith 16:31</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc17b7a9" class="outline-2">
+<h2 id="orgc17b7a9">Judith 1</h2>
+<div class="outline-text-2" id="text-orgc17b7a9">
+</div>
+<div id="outline-container-org83dbde4" class="outline-3">
+<h3 id="org83dbde4">Judith 1:1</h3>
+<div class="outline-text-3" id="text-org83dbde4">
+<p>
+Arphaxad itaque, rex Medorum, subjugaverat multas gentes imperio suo, et ipse ædificavit civitatem potentissimam, quam appellavit Ecbatanis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc532205" class="outline-3">
+<h3 id="orgc532205">Judith 1:2</h3>
+<div class="outline-text-3" id="text-orgc532205">
+<p>
+ex lapidibus quadratis et sectis : fecit muros ejus in altitudinem cubitorum septuaginta, et in latitudinem cubitorum triginta : turres vero ejus posuit in altitudinem cubitorum centum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3452839" class="outline-3">
+<h3 id="org3452839">Judith 1:3</h3>
+<div class="outline-text-3" id="text-org3452839">
+<p>
+Per quadrum vero earum latus utrumque vicenorum pedum spatio tendebatur, posuitque portas ejus in altitudinem turrium :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8988b3" class="outline-3">
+<h3 id="orgf8988b3">Judith 1:4</h3>
+<div class="outline-text-3" id="text-orgf8988b3">
+<p>
+et gloriabatur quasi potens in potentia exercitus sui, et in gloria quadrigarum suarum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba22eee" class="outline-3">
+<h3 id="orgba22eee">Judith 1:5</h3>
+<div class="outline-text-3" id="text-orgba22eee">
+<p>
+Anno igitur duodecimo regni sui, Nabuchodonosor rex Assyriorum, qui regnabat in Ninive civitate magna, pugnavit contra Arphaxad, et obtinuit eum
+</p>
+</div>
+</div>
+
+<div id="outline-container-org848124c" class="outline-3">
+<h3 id="org848124c">Judith 1:6</h3>
+<div class="outline-text-3" id="text-org848124c">
+<p>
+in campo magno qui appellatur Ragau, circa Euphraten, et Tigrin, et Jadason, in campo Erioch regis Elicorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7e668b" class="outline-3">
+<h3 id="orgb7e668b">Judith 1:7</h3>
+<div class="outline-text-3" id="text-orgb7e668b">
+<p>
+Tunc exaltatum est regnum Nabuchodonosor, et cor ejus elevatum est : et misit ad omnes qui habitabant in Cilicia, et Damasco, et Libano,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd14b648" class="outline-3">
+<h3 id="orgd14b648">Judith 1:8</h3>
+<div class="outline-text-3" id="text-orgd14b648">
+<p>
+et ad gentes quæ sunt in Carmelo et Cedar, et inhabitantes Galilæam in campo magno Esdrelon,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b2bed6" class="outline-3">
+<h3 id="org4b2bed6">Judith 1:9</h3>
+<div class="outline-text-3" id="text-org4b2bed6">
+<p>
+et ad omnes qui erant in Samaria, et trans flumen Jordanem usque ad Jerusalem, et omnem terram Jesse quousque perveniatur ad terminos Æthiopiæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ee8efc" class="outline-3">
+<h3 id="org4ee8efc">Judith 1:10</h3>
+<div class="outline-text-3" id="text-org4ee8efc">
+<p>
+Ad hos omnes misit nuntios Nabuchodonosor rex Assyriorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org766b594" class="outline-3">
+<h3 id="org766b594">Judith 1:11</h3>
+<div class="outline-text-3" id="text-org766b594">
+<p>
+qui omnes uno animo contradixerunt, et remiserunt eos vacuos, et sine honore abjecerunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fcdb17" class="outline-3">
+<h3 id="org2fcdb17">Judith 1:12</h3>
+<div class="outline-text-3" id="text-org2fcdb17">
+<p>
+Tunc indignatus Nabuchodonosor rex adversus omnem terram illam, juravit per thronum et regnum suum quod defenderet se de omnibus regionibus his.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6ca0236" class="outline-2">
+<h2 id="org6ca0236">Judith 2</h2>
+<div class="outline-text-2" id="text-org6ca0236">
+</div>
+<div id="outline-container-orga68ce07" class="outline-3">
+<h3 id="orga68ce07">Judith 2:1</h3>
+<div class="outline-text-3" id="text-orga68ce07">
+<p>
+Anno tertiodecimo Nabuchodonosor regis, vigesima et secunda die mensis primi, factum est verbum in domo Nabuchodonosor regis Assyriorum ut defenderet se.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76f9105" class="outline-3">
+<h3 id="org76f9105">Judith 2:2</h3>
+<div class="outline-text-3" id="text-org76f9105">
+<p>
+Vocavitque omnes majores natu, omnesque duces et bellatores suos, et habuit cum eis mysterium consilii sui :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org705d596" class="outline-3">
+<h3 id="org705d596">Judith 2:3</h3>
+<div class="outline-text-3" id="text-org705d596">
+<p>
+dixitque cogitationem suam in eo esse, ut omnem terram suo subjugaret imperio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8abad7f" class="outline-3">
+<h3 id="org8abad7f">Judith 2:4</h3>
+<div class="outline-text-3" id="text-org8abad7f">
+<p>
+Quod dictum cum placuisset omnibus, vocavit Nabuchodonosor rex Holofernem principem militiæ suæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ba12d9" class="outline-3">
+<h3 id="org4ba12d9">Judith 2:5</h3>
+<div class="outline-text-3" id="text-org4ba12d9">
+<p>
+et dixit ei : Egredere adversus omne regnum occidentis, et contra eos præcipue, qui contempserunt imperium meum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78e0ff5" class="outline-3">
+<h3 id="org78e0ff5">Judith 2:6</h3>
+<div class="outline-text-3" id="text-org78e0ff5">
+<p>
+Non parcet oculus tuus ulli regno, omnemque urbem munitam subjugabis mihi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20ec325" class="outline-3">
+<h3 id="org20ec325">Judith 2:7</h3>
+<div class="outline-text-3" id="text-org20ec325">
+<p>
+Tunc Holofernes vocavit duces et magistratus virtutis Assyriorum, et dinumeravit viros in expeditionem sicut præcepit ei rex, centum viginti millia peditum pugnatorum, et equitum sagittariorum duodecim millia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org344f28e" class="outline-3">
+<h3 id="org344f28e">Judith 2:8</h3>
+<div class="outline-text-3" id="text-org344f28e">
+<p>
+Omnemque expeditionem suam fecit præire in multitudine innumerabilium camelorum, cum his quæ exercitibus sufficerent copiose, boum quoque armenta, gregesque ovium, quorum non erat numerus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org982d1d8" class="outline-3">
+<h3 id="org982d1d8">Judith 2:9</h3>
+<div class="outline-text-3" id="text-org982d1d8">
+<p>
+Frumentum ex omni Syria in transitu suo parari constituit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8c9413" class="outline-3">
+<h3 id="orga8c9413">Judith 2:10</h3>
+<div class="outline-text-3" id="text-orga8c9413">
+<p>
+Aurum vero et argentum de domo regis assumpsit multum nimis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d392d2" class="outline-3">
+<h3 id="org9d392d2">Judith 2:11</h3>
+<div class="outline-text-3" id="text-org9d392d2">
+<p>
+Et profectus est ipse, et omnis exercitus cum quadrigis, et equitibus, et sagittariis : qui cooperuerunt faciem terræ sicut locustæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3ab0c1" class="outline-3">
+<h3 id="orgd3ab0c1">Judith 2:12</h3>
+<div class="outline-text-3" id="text-orgd3ab0c1">
+<p>
+Cumque pertransisset fines Assyriorum, venit ad magnos montes Ange, qui sunt a sinistro Ciliciæ : ascenditque omnia castella eorum, et obtinuit omnem munitionem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98dbf11" class="outline-3">
+<h3 id="org98dbf11">Judith 2:13</h3>
+<div class="outline-text-3" id="text-org98dbf11">
+<p>
+Effregit autem civitatem opinatissimam Melothi, prædavitque omnes filios Tharsis et filios Ismaël qui erant contra faciem deserti, et ad austrum terræ Cellon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e7b309" class="outline-3">
+<h3 id="org4e7b309">Judith 2:14</h3>
+<div class="outline-text-3" id="text-org4e7b309">
+<p>
+Et transivit Euphraten, et venit in Mesopotamiam : et fregit omnes civitates excelsas quæ erant ibi, a torrente Mambre usquequo perveniatur ad mare :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4d5bd3" class="outline-3">
+<h3 id="orgc4d5bd3">Judith 2:15</h3>
+<div class="outline-text-3" id="text-orgc4d5bd3">
+<p>
+et occupavit terminos ejus, a Cilicia usque ad fines Japheth qui sunt ad austrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgded9dd9" class="outline-3">
+<h3 id="orgded9dd9">Judith 2:16</h3>
+<div class="outline-text-3" id="text-orgded9dd9">
+<p>
+Abduxitque omnes filios Madian, et prædavit omnem locupletationem eorum, omnesque resistentes sibi occidit in ore gladii.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd6e1f0" class="outline-3">
+<h3 id="orgcd6e1f0">Judith 2:17</h3>
+<div class="outline-text-3" id="text-orgcd6e1f0">
+<p>
+Et post hæc descendit in campos Damasci in diebus messis, et succendit omnia sata, omnesque arbores, et vineas fecit incidi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bf8275" class="outline-3">
+<h3 id="org0bf8275">Judith 2:18</h3>
+<div class="outline-text-3" id="text-org0bf8275">
+<p>
+et cecidit timor illius super omnes inhabitantes terram.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org183978c" class="outline-2">
+<h2 id="org183978c">Judith 3</h2>
+<div class="outline-text-2" id="text-org183978c">
+</div>
+<div id="outline-container-orgb6ea231" class="outline-3">
+<h3 id="orgb6ea231">Judith 3:1</h3>
+<div class="outline-text-3" id="text-orgb6ea231">
+<p>
+Tunc miserunt legatos suos universarum urbium ac provinciarum reges ac principes, Syriæ scilicet Mesopotamiæ, et Syriæ Sobal, et Libyæ, atque Ciliciæ : qui venientes ad Holofernem, dixerunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org322aca6" class="outline-3">
+<h3 id="org322aca6">Judith 3:2</h3>
+<div class="outline-text-3" id="text-org322aca6">
+<p>
+Desinat indignatio tua circa nos : melius est enim ut viventes serviamus Nabuchodonosor regi magno, et subditi simus tibi, quam morientes cum interitu nostro ipsi servitutis nostræ damna patiamur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e5be3f" class="outline-3">
+<h3 id="org2e5be3f">Judith 3:3</h3>
+<div class="outline-text-3" id="text-org2e5be3f">
+<p>
+Omnis civitas nostra, omnisque possessio, omnes montes, et colles, et campi, et armenta boum, gregesque ovium, et caprarum, equorumque et camelorum, et universæ facultates nostræ atque familiæ, in conspectu tuo sunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8dc8b3f" class="outline-3">
+<h3 id="org8dc8b3f">Judith 3:4</h3>
+<div class="outline-text-3" id="text-org8dc8b3f">
+<p>
+sint omnia nostra sub lege tua.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce138a0" class="outline-3">
+<h3 id="orgce138a0">Judith 3:5</h3>
+<div class="outline-text-3" id="text-orgce138a0">
+<p>
+Nos, et filii nostri, servi tui sumus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e82994" class="outline-3">
+<h3 id="org9e82994">Judith 3:6</h3>
+<div class="outline-text-3" id="text-org9e82994">
+<p>
+Veni nobis pacificus dominus, et utere servitio nostro, sicut placuerit tibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7636e3f" class="outline-3">
+<h3 id="org7636e3f">Judith 3:7</h3>
+<div class="outline-text-3" id="text-org7636e3f">
+<p>
+Tunc descendit de montibus cum equitibus in virtute magna, et obtinuit omnem civitatem, et omnem inhabitantem terram.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb19d535" class="outline-3">
+<h3 id="orgb19d535">Judith 3:8</h3>
+<div class="outline-text-3" id="text-orgb19d535">
+<p>
+De universis autem urbibus assumpsit sibi auxiliarios viros fortes, et electos ad bellum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea3da3b" class="outline-3">
+<h3 id="orgea3da3b">Judith 3:9</h3>
+<div class="outline-text-3" id="text-orgea3da3b">
+<p>
+Tantusque metus provinciis illis incubuit, ut universarum urbium habitatores principes et honorati simul cum populis exirent obviam venienti,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga70ba0f" class="outline-3">
+<h3 id="orga70ba0f">Judith 3:10</h3>
+<div class="outline-text-3" id="text-orga70ba0f">
+<p>
+excipientes eum cum coronis et lampadibus, ducentes choros in tympanis et tibiis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88488cb" class="outline-3">
+<h3 id="org88488cb">Judith 3:11</h3>
+<div class="outline-text-3" id="text-org88488cb">
+<p>
+Nec ista tamen facientes, ferocitatem ejus pectoris mitigare potuerunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23c71b6" class="outline-3">
+<h3 id="org23c71b6">Judith 3:12</h3>
+<div class="outline-text-3" id="text-org23c71b6">
+<p>
+nam et civitates eorum destruxit, et lucos eorum excidit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8010961" class="outline-3">
+<h3 id="org8010961">Judith 3:13</h3>
+<div class="outline-text-3" id="text-org8010961">
+<p>
+Præceperat enim illi Nabuchodonosor rex, ut omnes deos terræ exterminaret, videlicet ut ipse solus diceretur deus ab his nationibus quæ potuissent Holofernis potentia subjugari.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc33e1b9" class="outline-3">
+<h3 id="orgc33e1b9">Judith 3:14</h3>
+<div class="outline-text-3" id="text-orgc33e1b9">
+<p>
+Pertransiens autem Syriam Sobal, et omnem Apameam, omnemque Mesopotamiam, venit ad Idumæos in terram Gabaa,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98720a7" class="outline-3">
+<h3 id="org98720a7">Judith 3:15</h3>
+<div class="outline-text-3" id="text-org98720a7">
+<p>
+accepitque civitates eorum, et sedit ibi per triginta dies, in quibus diebus adunari præcepit universum exercitum virtutis suæ.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge970a17" class="outline-2">
+<h2 id="orge970a17">Judith 4</h2>
+<div class="outline-text-2" id="text-orge970a17">
+</div>
+<div id="outline-container-org51f11a6" class="outline-3">
+<h3 id="org51f11a6">Judith 4:1</h3>
+<div class="outline-text-3" id="text-org51f11a6">
+<p>
+Tunc audientes hæc filii Israël qui habitabant in terra Juda, timuerunt valde a facie ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfa61d5" class="outline-3">
+<h3 id="orgbfa61d5">Judith 4:2</h3>
+<div class="outline-text-3" id="text-orgbfa61d5">
+<p>
+Tremor et horror invasit sensus eorum, ne hoc faceret Jerusalem et templo Domini, quod fecerat ceteris civitatibus et templis earum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0df8de6" class="outline-3">
+<h3 id="org0df8de6">Judith 4:3</h3>
+<div class="outline-text-3" id="text-org0df8de6">
+<p>
+Et miserunt in omnem Samariam per circuitum usque Jericho, et præoccupaverunt omnes vertices montium :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9081706" class="outline-3">
+<h3 id="org9081706">Judith 4:4</h3>
+<div class="outline-text-3" id="text-org9081706">
+<p>
+et muris circumdederunt vicos suos, et congregaverunt frumenta in præparationem pugnæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org370266c" class="outline-3">
+<h3 id="org370266c">Judith 4:5</h3>
+<div class="outline-text-3" id="text-org370266c">
+<p>
+Sacerdos etiam Eliachim scripsit ad universos qui erant contra Esdrelon, quæ est contra faciem campi magni juxta Dothain, et universos per quos viæ transitus esse poterat,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01fa1f1" class="outline-3">
+<h3 id="org01fa1f1">Judith 4:6</h3>
+<div class="outline-text-3" id="text-org01fa1f1">
+<p>
+ut obtinerent ascensus montium, per quos via esse poterat ad Jerusalem, et illic custodirent ubi angustum iter esse poterat inter montes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03bd699" class="outline-3">
+<h3 id="org03bd699">Judith 4:7</h3>
+<div class="outline-text-3" id="text-org03bd699">
+<p>
+Et fecerunt filii Israël secundum quod constituerat eis sacerdos Domini Eliachim.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e3e749" class="outline-3">
+<h3 id="org4e3e749">Judith 4:8</h3>
+<div class="outline-text-3" id="text-org4e3e749">
+<p>
+Et clamavit omnis populus ad Dominum instantia magna, et humiliaverunt animas suas in jejuniis et orationibus, ipsi et mulieres eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedd6cfa" class="outline-3">
+<h3 id="orgedd6cfa">Judith 4:9</h3>
+<div class="outline-text-3" id="text-orgedd6cfa">
+<p>
+Et induerunt se sacerdotes ciliciis, et infantes prostraverunt contra faciem templi Domini, et altare Domini operuerunt cilicio :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0dbd4ef" class="outline-3">
+<h3 id="org0dbd4ef">Judith 4:10</h3>
+<div class="outline-text-3" id="text-org0dbd4ef">
+<p>
+et clamaverunt ad Dominum Deum Israël unanimiter ne darentur in prædam infantes eorum, et uxores eorum in divisionem, et civitates eorum in exterminium, et sancta eorum in pollutionem, et fierent opprobrium gentibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd7cd90" class="outline-3">
+<h3 id="orgfd7cd90">Judith 4:11</h3>
+<div class="outline-text-3" id="text-orgfd7cd90">
+<p>
+Tunc Eliachim sacerdos Domini magnus circuivit omnem Israël, allocutusque est eos,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b940cf" class="outline-3">
+<h3 id="org5b940cf">Judith 4:12</h3>
+<div class="outline-text-3" id="text-org5b940cf">
+<p>
+dicens : Scitote quoniam exaudiet Dominus preces vestras, si manentes permanseritis in jejuniis et orationibus in conspectu Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bd331b" class="outline-3">
+<h3 id="org2bd331b">Judith 4:13</h3>
+<div class="outline-text-3" id="text-org2bd331b">
+<p>
+Memores estote Moysi servi Domini, qui Amalec confidentem in virtute sua, et in potentia sua, et in exercitu suo, et in clypeis suis, et in curribus suis, et in equitibus suis, non ferro pugnando, sed precibus sanctis orando dejecit :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org336512a" class="outline-3">
+<h3 id="org336512a">Judith 4:14</h3>
+<div class="outline-text-3" id="text-org336512a">
+<p>
+sic erunt universi hostes Israël, si perseveraveritis in hoc opere quod cœpistis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf00812b" class="outline-3">
+<h3 id="orgf00812b">Judith 4:15</h3>
+<div class="outline-text-3" id="text-orgf00812b">
+<p>
+Ad hanc igitur exhortationem ejus deprecantes Dominum, permanebant in conspectu Domini,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bc9e31" class="outline-3">
+<h3 id="org6bc9e31">Judith 4:16</h3>
+<div class="outline-text-3" id="text-org6bc9e31">
+<p>
+ita ut etiam hi qui offerebant Domino holocausta, præcincti ciliciis offerrent sacrificia Domino, et erat cinis super capita eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33f2e81" class="outline-3">
+<h3 id="org33f2e81">Judith 4:17</h3>
+<div class="outline-text-3" id="text-org33f2e81">
+<p>
+Et ex toto corde suo omnes orabant Deum, ut visitaret populum suum Israël.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgacd9260" class="outline-2">
+<h2 id="orgacd9260">Judith 5</h2>
+<div class="outline-text-2" id="text-orgacd9260">
+</div>
+<div id="outline-container-org794fdc5" class="outline-3">
+<h3 id="org794fdc5">Judith 5:1</h3>
+<div class="outline-text-3" id="text-org794fdc5">
+<p>
+Nuntiatumque est Holoferni principi militiæ Assyriorum, quod filii Israël præpararent se ad resistendum, ac montium itinera conclusissent :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c924a5" class="outline-3">
+<h3 id="org4c924a5">Judith 5:2</h3>
+<div class="outline-text-3" id="text-org4c924a5">
+<p>
+et furore nimio exarsit in iracundia magna, vocavitque omnes principes Moab et duces Ammon,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26f0482" class="outline-3">
+<h3 id="org26f0482">Judith 5:3</h3>
+<div class="outline-text-3" id="text-org26f0482">
+<p>
+et dixit eis : Dicite mihi quis sit populus iste, qui montana obsidet : aut quæ, et quales, et quantæ sint civitates eorum : quæ etiam sit virtus eorum, aut quæ sit multitudo eorum, vel quis rex militiæ illorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d1df87" class="outline-3">
+<h3 id="org6d1df87">Judith 5:4</h3>
+<div class="outline-text-3" id="text-org6d1df87">
+<p>
+et quare præ omnibus qui habitant in oriente, isti contempserunt nos, et non exierunt obviam nobis ut susciperent nos cum pace ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4ef1f5" class="outline-3">
+<h3 id="orgf4ef1f5">Judith 5:5</h3>
+<div class="outline-text-3" id="text-orgf4ef1f5">
+<p>
+Tunc Achior dux omnium filiorum Ammon respondens, ait : Si digneris audire, domine mi, dicam veritatem in conspectu tuo de populo isto qui in montanis habitat, et non egredietur verbum falsum ex ore meo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc60167a" class="outline-3">
+<h3 id="orgc60167a">Judith 5:6</h3>
+<div class="outline-text-3" id="text-orgc60167a">
+<p>
+Populus iste ex progenie Chaldæorum est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5658a14" class="outline-3">
+<h3 id="org5658a14">Judith 5:7</h3>
+<div class="outline-text-3" id="text-org5658a14">
+<p>
+Hic primum in Mesopotamia habitavit, quoniam noluerunt sequi deos patrum suorum, qui erant in terra Chaldæorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2e7ef5" class="outline-3">
+<h3 id="orga2e7ef5">Judith 5:8</h3>
+<div class="outline-text-3" id="text-orga2e7ef5">
+<p>
+Deserentes itaque cæremonias patrum suorum, quæ in multitudine deorum erant,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f92193" class="outline-3">
+<h3 id="org5f92193">Judith 5:9</h3>
+<div class="outline-text-3" id="text-org5f92193">
+<p>
+unum Deum cæli coluerunt, qui et præcepit eis ut exirent inde et habitarent in Charan. Cumque operuisset omnem terram fames, descenderunt in Ægyptum, illicque per quadringentos annos sic multiplicati sunt, ut dinumerari eorum non posset exercitus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27f1fcc" class="outline-3">
+<h3 id="org27f1fcc">Judith 5:10</h3>
+<div class="outline-text-3" id="text-org27f1fcc">
+<p>
+Cumque gravaret eos rex Ægypti, atque in ædificationibus urbium suarum in luto et latere subjugasset eos, clamaverunt ad Dominum suum, et percussit totam terram Ægypti plagis variis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c03140" class="outline-3">
+<h3 id="org7c03140">Judith 5:11</h3>
+<div class="outline-text-3" id="text-org7c03140">
+<p>
+Cumque ejecissent eos Ægyptii a se, et cessasset plaga ab eis, et iterum eos vellent capere, et ad suum servitium revocare,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef86e20" class="outline-3">
+<h3 id="orgef86e20">Judith 5:12</h3>
+<div class="outline-text-3" id="text-orgef86e20">
+<p>
+fugientibus his, Deus cæli mare aperuit, ita ut hinc inde aquæ quasi murus solidarentur, et isti pede sicco fundum maris perambulando transirent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf261b0e" class="outline-3">
+<h3 id="orgf261b0e">Judith 5:13</h3>
+<div class="outline-text-3" id="text-orgf261b0e">
+<p>
+In quo loco dum innumerabilis exercitus Ægyptiorum eos persequeretur, ita aquis coopertus est, ut non remaneret vel unus, qui factum posteris nuntiaret.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge580138" class="outline-3">
+<h3 id="orge580138">Judith 5:14</h3>
+<div class="outline-text-3" id="text-orge580138">
+<p>
+Egressi vero mare Rubrum, deserta Sina montis occupaverunt, in quibus numquam homo habitare potuit, vel filius hominis requievit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77b3f57" class="outline-3">
+<h3 id="org77b3f57">Judith 5:15</h3>
+<div class="outline-text-3" id="text-org77b3f57">
+<p>
+Illic fontes amari obdulcati sunt eis ad bibendum, et per annos quadraginta annonam de cælo consecuti sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org986b0a1" class="outline-3">
+<h3 id="org986b0a1">Judith 5:16</h3>
+<div class="outline-text-3" id="text-org986b0a1">
+<p>
+Ubicumque ingressi sunt sine arcu et sagitta, et absque scuto et gladio, Deus eorum pugnavit pro eis, et vicit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7e1ac5" class="outline-3">
+<h3 id="orga7e1ac5">Judith 5:17</h3>
+<div class="outline-text-3" id="text-orga7e1ac5">
+<p>
+Et non fuit qui insultaret populo isti, nisi quando recessit a cultu Domini Dei sui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3256063" class="outline-3">
+<h3 id="org3256063">Judith 5:18</h3>
+<div class="outline-text-3" id="text-org3256063">
+<p>
+Quotiescumque autem præter ipsum Deum suum, alterum coluerunt, dati sunt in prædam, et in gladium, et in opprobrium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0727bed" class="outline-3">
+<h3 id="org0727bed">Judith 5:19</h3>
+<div class="outline-text-3" id="text-org0727bed">
+<p>
+Quotiescumque autem pœnituerunt se recessisse a cultura Dei sui, dedit eis Deus cæli virtutem resistendi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org317f537" class="outline-3">
+<h3 id="org317f537">Judith 5:20</h3>
+<div class="outline-text-3" id="text-org317f537">
+<p>
+Denique Chananæum regem, et Jebusæum, et Pherezæum, et Hethæum, et Hevæum, et Amorrhæum, et omnes potentes in Hesebon prostraverunt, et terras eorum et civitates eorum ipsi possederunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdea99ed" class="outline-3">
+<h3 id="orgdea99ed">Judith 5:21</h3>
+<div class="outline-text-3" id="text-orgdea99ed">
+<p>
+et usque dum non peccarent in conspectu Dei sui, erant cum illis bona : Deus enim illorum odit iniquitatem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org767e0cd" class="outline-3">
+<h3 id="org767e0cd">Judith 5:22</h3>
+<div class="outline-text-3" id="text-org767e0cd">
+<p>
+Nam et ante hos annos cum recessissent a via quam dederat illis Deus ut ambularent in ea, exterminati sunt præliis a multis nationibus, et plurimi eorum captivi abducti sunt in terram non suam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge08ed2f" class="outline-3">
+<h3 id="orge08ed2f">Judith 5:23</h3>
+<div class="outline-text-3" id="text-orge08ed2f">
+<p>
+Nuper autem reversi ad Dominum Deum suum, ex dispersione qua dispersi fuerant, adunati sunt, et ascenderunt montana hæc omnia, et iterum possident Jerusalem, ubi sunt sancta eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a1e835" class="outline-3">
+<h3 id="org4a1e835">Judith 5:24</h3>
+<div class="outline-text-3" id="text-org4a1e835">
+<p>
+Nunc ergo mi domine, perquire si est aliqua iniquitas eorum in conspectu Dei eorum : ascendamus ad illos, quoniam tradens tradet illos Deus eorum tibi, et subjugati erunt sub jugo potentiæ tuæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d587b3" class="outline-3">
+<h3 id="org2d587b3">Judith 5:25</h3>
+<div class="outline-text-3" id="text-org2d587b3">
+<p>
+Si vero non est offensio populi hujus coram Deo suo, non poterimus resistere illis, quoniam Deus eorum defendet illos : et erimus in opprobrium universæ terræ.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f3953b" class="outline-3">
+<h3 id="org1f3953b">Judith 5:26</h3>
+<div class="outline-text-3" id="text-org1f3953b">
+<p>
+Et factum est, cum cessasset loqui Achior verba hæc, irati sunt omnes magnates Holofernis, et cogitabant interficere eum, dicentes ad alterutrum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fcf625" class="outline-3">
+<h3 id="org6fcf625">Judith 5:27</h3>
+<div class="outline-text-3" id="text-org6fcf625">
+<p>
+Quis est iste, qui filios Israël posse dicat resistere regi Nabuchodonosor et exercitibus ejus, homines inermes, et sine virtute, et sine peritia artis pugnæ ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd556b1d" class="outline-3">
+<h3 id="orgd556b1d">Judith 5:28</h3>
+<div class="outline-text-3" id="text-orgd556b1d">
+<p>
+Ut ergo agnoscat Achior quoniam fallit nos, ascendamus in montana : et cum capti fuerint potentes eorum, tunc cum eisdem gladio transverberabitur :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org134af8a" class="outline-3">
+<h3 id="org134af8a">Judith 5:29</h3>
+<div class="outline-text-3" id="text-org134af8a">
+<p>
+ut sciat omnis gens quoniam Nabuchodonosor deus terræ est, et præter ipsum alius non est.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7c01a09" class="outline-2">
+<h2 id="org7c01a09">Judith 6</h2>
+<div class="outline-text-2" id="text-org7c01a09">
+</div>
+<div id="outline-container-org754efbf" class="outline-3">
+<h3 id="org754efbf">Judith 6:1</h3>
+<div class="outline-text-3" id="text-org754efbf">
+<p>
+Factum est autem cum cessassent loqui, indignatus Holofernes vehementer, dixit ad Achior :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0568ffe" class="outline-3">
+<h3 id="org0568ffe">Judith 6:2</h3>
+<div class="outline-text-3" id="text-org0568ffe">
+<p>
+Quoniam prophetasti nobis, dicens quod gens Israël defendatur a Deo suo, ut ostendam tibi quoniam non est deus nisi Nabuchodonosor,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga155b5c" class="outline-3">
+<h3 id="orga155b5c">Judith 6:3</h3>
+<div class="outline-text-3" id="text-orga155b5c">
+<p>
+cum percusserimus eos omnes, sicut hominem unum, tunc et ipse cum illis Assyriorum gladio interibis, et omnis Israël tecum perditione disperiet :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc1be8e" class="outline-3">
+<h3 id="orgfc1be8e">Judith 6:4</h3>
+<div class="outline-text-3" id="text-orgfc1be8e">
+<p>
+et probabis quoniam Nabuchodonosor dominus sit universæ terræ : tuncque gladius militiæ meæ transiet per latera tua, et confixus cades inter vulneratos Israël, et non respirabis ultra, donec extermineris cum illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85f1af1" class="outline-3">
+<h3 id="org85f1af1">Judith 6:5</h3>
+<div class="outline-text-3" id="text-org85f1af1">
+<p>
+Porro autem si prophetiam tuam veram existimas, non concidat vultus tuus : et pallor qui faciem tuam obtinet abscedat a te, si verba mea hæc putas impleri non posse.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57296ad" class="outline-3">
+<h3 id="org57296ad">Judith 6:6</h3>
+<div class="outline-text-3" id="text-org57296ad">
+<p>
+Ut autem noveris quia simul cum illis hæc experieris, ecce ex hac hora illorum populo sociaberis, ut, dum dignas mei gladii pœnas exceperint, ipse simul ultioni subjaceas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org482ee5b" class="outline-3">
+<h3 id="org482ee5b">Judith 6:7</h3>
+<div class="outline-text-3" id="text-org482ee5b">
+<p>
+Tunc Holofernes præcepit servis suis ut comprehenderent Achior, et perducerent eum in Bethuliam, et traderent eum in manus filiorum Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0efa345" class="outline-3">
+<h3 id="org0efa345">Judith 6:8</h3>
+<div class="outline-text-3" id="text-org0efa345">
+<p>
+Et accipientes eum servi Holofernis, profecti sunt per campestria : sed cum appropinquassent ad montana, exierunt contra eos fundibularii.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ac0078" class="outline-3">
+<h3 id="org5ac0078">Judith 6:9</h3>
+<div class="outline-text-3" id="text-org5ac0078">
+<p>
+Illi autem divertentes a latere montis, ligaverunt Achior ad arborem manibus et pedibus, et sic vinctum restibus dimiserunt eum, et reversi sunt ad dominum suum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc09dfe9" class="outline-3">
+<h3 id="orgc09dfe9">Judith 6:10</h3>
+<div class="outline-text-3" id="text-orgc09dfe9">
+<p>
+Porro filii Israël descendentes de Bethulia, venerunt ad eum : quem solventes, duxerunt ad Bethuliam, atque in medium populi illum statuentes, percunctati sunt quid rerum esset quod illum vinctum Assyrii reliquissent.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1bdba8" class="outline-3">
+<h3 id="orgd1bdba8">Judith 6:11</h3>
+<div class="outline-text-3" id="text-orgd1bdba8">
+<p>
+In diebus illis erant illic principes Ozias filius Micha de tribu Simeon, et Charmi, qui et Gothoniel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf12a32" class="outline-3">
+<h3 id="orgbf12a32">Judith 6:12</h3>
+<div class="outline-text-3" id="text-orgbf12a32">
+<p>
+In medio itaque seniorum, et in conspectu omnium, Achior dixit omnia quæ locutus ipse fuerat ab Holoferne interrogatus : et qualiter populus Holofernis voluisset propter hoc verbum interficere eum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org111193f" class="outline-3">
+<h3 id="org111193f">Judith 6:13</h3>
+<div class="outline-text-3" id="text-org111193f">
+<p>
+et quemadmodum ipse Holofernes iratus jusserit eum Israëlitis hac de causa tradi, ut dum vicerit filios Israël, tunc et ipsum Achior diversis jubeat interire suppliciis, propter hoc quod dixisset : Deus cæli defensor eorum est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbed88e5" class="outline-3">
+<h3 id="orgbed88e5">Judith 6:14</h3>
+<div class="outline-text-3" id="text-orgbed88e5">
+<p>
+Cumque Achior universa hæc exposuisset, omnis populus cecidit in faciem, adorantes Dominum, et communi lamentatione et fletu unanimes preces suas Domino effuderunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac1a525" class="outline-3">
+<h3 id="orgac1a525">Judith 6:15</h3>
+<div class="outline-text-3" id="text-orgac1a525">
+<p>
+dicentes : Domine Deus cæli et terræ, intuere superbiam eorum, et respice ad nostram humilitatem, et faciem sanctorum tuorum attende, et ostende quoniam non derelinquis præsumentes de te : et præsumentes de se, et de sua virtute gloriantes, humilias.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d73b54" class="outline-3">
+<h3 id="org2d73b54">Judith 6:16</h3>
+<div class="outline-text-3" id="text-org2d73b54">
+<p>
+Finito itaque fletu, et per totam diem oratione populorum completa, consolati sunt Achior,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24366c5" class="outline-3">
+<h3 id="org24366c5">Judith 6:17</h3>
+<div class="outline-text-3" id="text-org24366c5">
+<p>
+dicentes : Deus patrum nostrorum, cujus tu virtutem prædicasti, ipse tibi hanc dabit vicissitudinem, ut eorum magis tu interitum videas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeea55cd" class="outline-3">
+<h3 id="orgeea55cd">Judith 6:18</h3>
+<div class="outline-text-3" id="text-orgeea55cd">
+<p>
+Cum vero Dominus Deus noster dederit hanc libertatem servis suis, sit et tecum Deus in medio nostri : ut sicut placuerit tibi, ita cum tuis omnibus converseris nobiscum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc3d09b" class="outline-3">
+<h3 id="orgcc3d09b">Judith 6:19</h3>
+<div class="outline-text-3" id="text-orgcc3d09b">
+<p>
+Tunc Ozias, finito consilio, suscepit eum in domum suam, et fecit ei cœnam magnam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29925e0" class="outline-3">
+<h3 id="org29925e0">Judith 6:20</h3>
+<div class="outline-text-3" id="text-org29925e0">
+<p>
+Et vocatis omnibus presbyteris, simul expleto jejunio refecerunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ad3616" class="outline-3">
+<h3 id="org1ad3616">Judith 6:21</h3>
+<div class="outline-text-3" id="text-org1ad3616">
+<p>
+Postea vero convocatus est omnis populus, et per totam noctem intra ecclesiam oraverunt, petentes auxilium a Deo Israël.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6f774fc" class="outline-2">
+<h2 id="org6f774fc">Judith 7</h2>
+<div class="outline-text-2" id="text-org6f774fc">
+</div>
+<div id="outline-container-orgfe8a7a7" class="outline-3">
+<h3 id="orgfe8a7a7">Judith 7:1</h3>
+<div class="outline-text-3" id="text-orgfe8a7a7">
+<p>
+Holofernes autem altera die præcepit exercitibus suis ut ascenderent contra Bethuliam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e02af8" class="outline-3">
+<h3 id="org7e02af8">Judith 7:2</h3>
+<div class="outline-text-3" id="text-org7e02af8">
+<p>
+Erant autem pedites bellatorum centum viginti millia, et equites viginti duo millia, præter præparationes virorum illorum quos occupaverat captivitas, et abducti fuerant de provinciis et urbibus universæ juventutis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2a81df" class="outline-3">
+<h3 id="orgc2a81df">Judith 7:3</h3>
+<div class="outline-text-3" id="text-orgc2a81df">
+<p>
+Omnes paraverunt se pariter ad pugnam contra filios Israël, et venerunt per crepidinem montis usque ad apicem, qui respicit super Dothain, a loco qui dicitur Belma usque ad Chelmon, qui est contra Esdrelon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea32ecf" class="outline-3">
+<h3 id="orgea32ecf">Judith 7:4</h3>
+<div class="outline-text-3" id="text-orgea32ecf">
+<p>
+Filii autem Israël, ut viderunt multitudinem illorum, prostraverunt se super terram, mittentes cinerem super capita sua, unanimes orantes ut Deus Israël misericordiam suam ostenderet super populum suum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc000e2" class="outline-3">
+<h3 id="orgdc000e2">Judith 7:5</h3>
+<div class="outline-text-3" id="text-orgdc000e2">
+<p>
+Et assumentes arma sua bellica, sederunt per loca quæ ad angusti itineris tramitem dirigunt inter montosa, et erant custodientes ea tota die et nocte.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd75c0bf" class="outline-3">
+<h3 id="orgd75c0bf">Judith 7:6</h3>
+<div class="outline-text-3" id="text-orgd75c0bf">
+<p>
+Porro Holofernes, dum circuit per gyrum, reperit quod fons qui influebat, aquæductum illorum a parte australi extra civitatem dirigeret : et incidi præcepit aquæductum illorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c8cdb7" class="outline-3">
+<h3 id="org8c8cdb7">Judith 7:7</h3>
+<div class="outline-text-3" id="text-org8c8cdb7">
+<p>
+Erant tamen non longe a muris fontes, ex quibus furtim videbantur haurire aquam ad refocillandum potius quam ad potandum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58e4eda" class="outline-3">
+<h3 id="org58e4eda">Judith 7:8</h3>
+<div class="outline-text-3" id="text-org58e4eda">
+<p>
+Sed filii Ammon et Moab accesserunt ad Holofernem, dicentes : Filii Israël non in lancea nec in sagitta confidunt, sed montes defendunt illos, et muniunt illos colles in præcipitio constituti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd52301" class="outline-3">
+<h3 id="orgcd52301">Judith 7:9</h3>
+<div class="outline-text-3" id="text-orgcd52301">
+<p>
+Ut ergo sine congressione pugnæ possis superare eos, pone custodes fontium, ut non hauriant aquam ex eis, et sine gladio interficies eos, vel certe fatigati tradent civitatem suam, quam putant in montibus positam superari non posse.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59d37ea" class="outline-3">
+<h3 id="org59d37ea">Judith 7:10</h3>
+<div class="outline-text-3" id="text-org59d37ea">
+<p>
+Et placuerunt verba hæc coram Holoferne et coram satellitibus ejus, et constituit per gyrum centenarios per singulos fontes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org027e066" class="outline-3">
+<h3 id="org027e066">Judith 7:11</h3>
+<div class="outline-text-3" id="text-org027e066">
+<p>
+Cumque ista custodia per dies viginti fuisset expleta, defecerunt cisternæ et collectiones aquarum omnibus habitantibus Bethuliam, ita ut non esset intra civitatem unde satiarentur vel una die, quoniam ad mensuram dabatur populis aqua quotidie.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf349dcf" class="outline-3">
+<h3 id="orgf349dcf">Judith 7:12</h3>
+<div class="outline-text-3" id="text-orgf349dcf">
+<p>
+Tunc ad Oziam congregati omnes viri feminæque, juvenes et parvuli, omnes simul una voce
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a022f3" class="outline-3">
+<h3 id="org3a022f3">Judith 7:13</h3>
+<div class="outline-text-3" id="text-org3a022f3">
+<p>
+dixerunt : Judicet Deus inter nos et te, quoniam fecisti in nos mala, nolens loqui pacifice cum Assyriis, et propter hoc vendidit nos Deus in manibus eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fec840" class="outline-3">
+<h3 id="org3fec840">Judith 7:14</h3>
+<div class="outline-text-3" id="text-org3fec840">
+<p>
+Et ideo non est qui adjuvet, cum prosternamur ante oculos eorum in siti, et perditione magna.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f77b6d" class="outline-3">
+<h3 id="org0f77b6d">Judith 7:15</h3>
+<div class="outline-text-3" id="text-org0f77b6d">
+<p>
+Et nunc congregate universos qui in civitate sunt, ut sponte tradamus nos omnes populo Holofernis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecc3c2b" class="outline-3">
+<h3 id="orgecc3c2b">Judith 7:16</h3>
+<div class="outline-text-3" id="text-orgecc3c2b">
+<p>
+Melius est enim ut captivi benedicamus Dominum viventes, quam moriamur, et simus opprobrium omni carni, cum viderimus uxores nostras et infantes nostros mori ante oculos nostros.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46fc717" class="outline-3">
+<h3 id="org46fc717">Judith 7:17</h3>
+<div class="outline-text-3" id="text-org46fc717">
+<p>
+Contestamur hodie cælum et terram, et Deum patrum nostrorum, qui ulciscitur nos secundum peccata nostra, ut jam tradatis civitatem in manu militiæ Holofernis, et sit finis noster brevis in ore gladii, qui longior efficitur in ariditate sitis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org499ea37" class="outline-3">
+<h3 id="org499ea37">Judith 7:18</h3>
+<div class="outline-text-3" id="text-org499ea37">
+<p>
+Et cum hæc dixissent, factus est fletus et ululatus magnus in ecclesia ab omnibus, et per multas horas una voce clamaverunt ad Deum, dicentes :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4844d93" class="outline-3">
+<h3 id="org4844d93">Judith 7:19</h3>
+<div class="outline-text-3" id="text-org4844d93">
+<p>
+Peccavimus cum patribus nostris : injuste egimus, iniquitatem fecimus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c9107a" class="outline-3">
+<h3 id="org3c9107a">Judith 7:20</h3>
+<div class="outline-text-3" id="text-org3c9107a">
+<p>
+Tu, quia pius es, miserere nostri, aut in tuo flagello vindica iniquitates nostras, et noli tradere confitentes te populo qui ignorat te,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e186d0" class="outline-3">
+<h3 id="org9e186d0">Judith 7:21</h3>
+<div class="outline-text-3" id="text-org9e186d0">
+<p>
+ut non dicant inter gentes : Ubi est Deus eorum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf17bd63" class="outline-3">
+<h3 id="orgf17bd63">Judith 7:22</h3>
+<div class="outline-text-3" id="text-orgf17bd63">
+<p>
+Et cum fatigati ex his clamoribus et his fletibus lassati siluissent,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c63897" class="outline-3">
+<h3 id="org0c63897">Judith 7:23</h3>
+<div class="outline-text-3" id="text-org0c63897">
+<p>
+exsurgens Ozias infusus lacrimis, dixit : Æquo animo estote, fratres, et hos quinque dies expectemus a Domino misericordiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org212a170" class="outline-3">
+<h3 id="org212a170">Judith 7:24</h3>
+<div class="outline-text-3" id="text-org212a170">
+<p>
+Forsitan enim indignationem suam abscindet, et dabit gloriam nomini suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org130297f" class="outline-3">
+<h3 id="org130297f">Judith 7:25</h3>
+<div class="outline-text-3" id="text-org130297f">
+<p>
+Si autem transactis quinque diebus non venerit adjutorium, faciemus hæc verba quæ locuti estis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org920470b" class="outline-2">
+<h2 id="org920470b">Judith 8</h2>
+<div class="outline-text-2" id="text-org920470b">
+</div>
+<div id="outline-container-orgec1822b" class="outline-3">
+<h3 id="orgec1822b">Judith 8:1</h3>
+<div class="outline-text-3" id="text-orgec1822b">
+<p>
+Et factum est cum audisset hæc verba Judith vidua, quæ erat filia Merari filii Idox filii Joseph filii Oziæ filii Elai filii Jamnor filii Gedeon filii Raphaim filii Achitob filii Melchiæ filii Enan filii Nathaniæ filii Salathiel filii Simeon filii Ruben,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b36862" class="outline-3">
+<h3 id="org5b36862">Judith 8:2</h3>
+<div class="outline-text-3" id="text-org5b36862">
+<p>
+et vir ejus fuit Manasses, qui mortuus est in diebus messis hordeaceæ :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b90807" class="outline-3">
+<h3 id="org9b90807">Judith 8:3</h3>
+<div class="outline-text-3" id="text-org9b90807">
+<p>
+instabat enim super alligantes manipulos in campo, et venit æstus super caput ejus, et mortuus est in Bethulia civitate sua, et sepultus est illic cum patribus suis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17a7474" class="outline-3">
+<h3 id="org17a7474">Judith 8:4</h3>
+<div class="outline-text-3" id="text-org17a7474">
+<p>
+Erat autem Judith relicta ejus vidua jam annis tribus et mensibus sex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org175e3aa" class="outline-3">
+<h3 id="org175e3aa">Judith 8:5</h3>
+<div class="outline-text-3" id="text-org175e3aa">
+<p>
+Et in superioribus domus suæ fecit sibi secretum cubiculum, in quo cum puellis suis clausa morabatur,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7193b22" class="outline-3">
+<h3 id="org7193b22">Judith 8:6</h3>
+<div class="outline-text-3" id="text-org7193b22">
+<p>
+et habens super lumbos suos cilicium, jejunabat omnibus diebus vitæ suæ, præter sabbata et neomenias et festa domus Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d2e7e0" class="outline-3">
+<h3 id="org7d2e7e0">Judith 8:7</h3>
+<div class="outline-text-3" id="text-org7d2e7e0">
+<p>
+Erat autem eleganti aspectu nimis, cui vir suus reliquerat divitias multas, et familiam copiosam, ac possessiones armentis boum, et gregibus ovium plenas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2a7850" class="outline-3">
+<h3 id="orgc2a7850">Judith 8:8</h3>
+<div class="outline-text-3" id="text-orgc2a7850">
+<p>
+Et erat hæc in omnibus famosissima, quoniam timebat Dominum valde, nec erat qui loqueretur de illa verbum malum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org089b8de" class="outline-3">
+<h3 id="org089b8de">Judith 8:9</h3>
+<div class="outline-text-3" id="text-org089b8de">
+<p>
+Hæc itaque cum audisset quoniam Ozias promisisset quod transacto quinto die traderet civitatem, misit ad presbyteros Chabri et Charmi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32eac23" class="outline-3">
+<h3 id="org32eac23">Judith 8:10</h3>
+<div class="outline-text-3" id="text-org32eac23">
+<p>
+Et venerunt ad illam, et dixit illis : Quod est hoc verbum, in quo consensit Ozias, ut tradat civitatem Assyriis si intra quinque dies non venerit vobis adjutorium ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11d380c" class="outline-3">
+<h3 id="org11d380c">Judith 8:11</h3>
+<div class="outline-text-3" id="text-org11d380c">
+<p>
+et qui estis vos, qui tentatis Dominum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org937a24f" class="outline-3">
+<h3 id="org937a24f">Judith 8:12</h3>
+<div class="outline-text-3" id="text-org937a24f">
+<p>
+non est iste sermo qui misericordiam provocet, sed potius qui iram excitet, et furorem accendat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68d249f" class="outline-3">
+<h3 id="org68d249f">Judith 8:13</h3>
+<div class="outline-text-3" id="text-org68d249f">
+<p>
+Posuistis vos tempus miserationis Domini, et in arbitrium vestrum, diem constituistis ei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org756e81a" class="outline-3">
+<h3 id="org756e81a">Judith 8:14</h3>
+<div class="outline-text-3" id="text-org756e81a">
+<p>
+Sed quia patiens Dominus est, in hoc ipso pœniteamus, et indulgentiam ejus fusis lacrimis postulemus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88f88b3" class="outline-3">
+<h3 id="org88f88b3">Judith 8:15</h3>
+<div class="outline-text-3" id="text-org88f88b3">
+<p>
+non enim quasi homo sic Deus comminabitur, neque sicut filius hominis ad iracundiam inflammabitur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d57a27" class="outline-3">
+<h3 id="org3d57a27">Judith 8:16</h3>
+<div class="outline-text-3" id="text-org3d57a27">
+<p>
+Et ideo humiliemus illi animas nostras, et in spiritu constituti humiliato, servientes illi
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fc9c2d" class="outline-3">
+<h3 id="org9fc9c2d">Judith 8:17</h3>
+<div class="outline-text-3" id="text-org9fc9c2d">
+<p>
+dicamus flentes Domino, ut secundum voluntatem suam sic faciat nobiscum misericordiam suam : ut sicut conturbatum est cor nostrum in superbia eorum, ita etiam de nostra humilitate gloriemur :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b5da97" class="outline-3">
+<h3 id="org5b5da97">Judith 8:18</h3>
+<div class="outline-text-3" id="text-org5b5da97">
+<p>
+quoniam non sumus secuti peccata patrum nostrorum, qui dereliquerunt Deum suum, et adoraverunt deos alienos,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb43d1ae" class="outline-3">
+<h3 id="orgb43d1ae">Judith 8:19</h3>
+<div class="outline-text-3" id="text-orgb43d1ae">
+<p>
+pro quo scelere dati sunt in gladium, et in rapinam, et in confusionem inimicis suis : nos autem alterum deum nescimus præter ipsum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd71f30c" class="outline-3">
+<h3 id="orgd71f30c">Judith 8:20</h3>
+<div class="outline-text-3" id="text-orgd71f30c">
+<p>
+Expectemus humiles consolationem ejus, et exquiret sanguinem nostrum de afflictionibus inimicorum nostrorum, et humiliabit omnes gentes, quæcumque insurgunt contra nos, et faciet illas sine honore Dominus Deus noster.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66d3fd1" class="outline-3">
+<h3 id="org66d3fd1">Judith 8:21</h3>
+<div class="outline-text-3" id="text-org66d3fd1">
+<p>
+Et nunc fratres, quoniam vos estis presbyteri in populo Dei, et ex vobis pendet anima illorum, ad eloquium vestrum corda eorum erigite, ut memores sint quia tentati sunt patres nostri, ut probarentur si vere colerent Deum suum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0cfd1cb" class="outline-3">
+<h3 id="org0cfd1cb">Judith 8:22</h3>
+<div class="outline-text-3" id="text-org0cfd1cb">
+<p>
+Memores esse debent quomodo pater noster Abraham tentatus est, et per multas tribulationes probatus, Dei amicus effectus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22aa7e0" class="outline-3">
+<h3 id="org22aa7e0">Judith 8:23</h3>
+<div class="outline-text-3" id="text-org22aa7e0">
+<p>
+Sic Isaac, sic Jacob, sic Moyses, et omnes qui placuerunt Deo, per multas tribulationes transierunt fideles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c7e102" class="outline-3">
+<h3 id="org2c7e102">Judith 8:24</h3>
+<div class="outline-text-3" id="text-org2c7e102">
+<p>
+Illi autem qui tentationes non susceperunt cum timore Domini, et impatientiam suam et improperium murmurationis suæ contra Dominum protulerunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c1973e" class="outline-3">
+<h3 id="org8c1973e">Judith 8:25</h3>
+<div class="outline-text-3" id="text-org8c1973e">
+<p>
+exterminati sunt ab exterminatore, et a serpentibus perierunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad8aaa4" class="outline-3">
+<h3 id="orgad8aaa4">Judith 8:26</h3>
+<div class="outline-text-3" id="text-orgad8aaa4">
+<p>
+Et nos ergo non ulciscamur nos pro his quæ patimur,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fcc47f" class="outline-3">
+<h3 id="org3fcc47f">Judith 8:27</h3>
+<div class="outline-text-3" id="text-org3fcc47f">
+<p>
+sed reputantes peccatis nostris hæc ipsa supplicia minora esse flagella Domini, quibus quasi servi corripimur ad emendationem, et non ad perditionem nostram evenisse credamus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71a997f" class="outline-3">
+<h3 id="org71a997f">Judith 8:28</h3>
+<div class="outline-text-3" id="text-org71a997f">
+<p>
+Et dixerunt illi Ozias et presbyteri : Omnia quæ locuta es, vera sunt, et non est in sermonibus tuis ulla reprehensio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa54c9e" class="outline-3">
+<h3 id="orgaa54c9e">Judith 8:29</h3>
+<div class="outline-text-3" id="text-orgaa54c9e">
+<p>
+Nunc ergo ora pro nobis, quoniam mulier sancta es, et timens Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf873ebe" class="outline-3">
+<h3 id="orgf873ebe">Judith 8:30</h3>
+<div class="outline-text-3" id="text-orgf873ebe">
+<p>
+Et dixit illis Judith : Sicut quod potui loqui, Dei esse cognoscitis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdca4534" class="outline-3">
+<h3 id="orgdca4534">Judith 8:31</h3>
+<div class="outline-text-3" id="text-orgdca4534">
+<p>
+ita quod facere disposui, probate si ex Deo est, et orate ut firmum faciat Deus consilium meum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged75e8d" class="outline-3">
+<h3 id="orged75e8d">Judith 8:32</h3>
+<div class="outline-text-3" id="text-orged75e8d">
+<p>
+Stabitis vos ad portam nocte ista, et ego exeam cum abra mea : et orate, ut sicut dixistis, in diebus quinque respiciat Dominus populum suum Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9f4a02" class="outline-3">
+<h3 id="orgd9f4a02">Judith 8:33</h3>
+<div class="outline-text-3" id="text-orgd9f4a02">
+<p>
+Vos autem nolo ut scrutemini actum meum, et usque dum renuntiem vobis, nihil aliud fiat, nisi oratio pro me ad Dominum Deum nostrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8a6503" class="outline-3">
+<h3 id="orgf8a6503">Judith 8:34</h3>
+<div class="outline-text-3" id="text-orgf8a6503">
+<p>
+Et dixit ad eam Ozias princeps Juda : Vade in pace, et Dominus sit tecum in ultionem inimicorum nostrorum. Et revertentes abierunt.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa6699b" class="outline-2">
+<h2 id="orgfa6699b">Judith 9</h2>
+<div class="outline-text-2" id="text-orgfa6699b">
+</div>
+<div id="outline-container-orgdf90a33" class="outline-3">
+<h3 id="orgdf90a33">Judith 9:1</h3>
+<div class="outline-text-3" id="text-orgdf90a33">
+<p>
+Quibus ascendentibus, Judith ingressa est oratorium suum : et induens se cilicio, posuit cinerem super caput suum : et prosternens se Domino, clamabat ad Dominum, dicens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25e2a1b" class="outline-3">
+<h3 id="org25e2a1b">Judith 9:2</h3>
+<div class="outline-text-3" id="text-org25e2a1b">
+<p>
+Domine Deus patris mei Simeon, qui dedisti illi gladium in defensionem alienigenarum, qui violatores extiterunt in coinquinatione sua, et denudaverunt femur virginis in confusionem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7481fdf" class="outline-3">
+<h3 id="org7481fdf">Judith 9:3</h3>
+<div class="outline-text-3" id="text-org7481fdf">
+<p>
+et dedisti mulieres illorum in prædam, et filias illorum in captivitatem : et omnem prædam in divisionem servis tuis, qui zelaverunt zelum tuum : subveni, quæso te, Domine Deus meus, mihi viduæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3cab0bc" class="outline-3">
+<h3 id="org3cab0bc">Judith 9:4</h3>
+<div class="outline-text-3" id="text-org3cab0bc">
+<p>
+Tu enim fecisti priora, et illa post illa cogitasti : et hoc factum est quod ipse voluisti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabc19b1" class="outline-3">
+<h3 id="orgabc19b1">Judith 9:5</h3>
+<div class="outline-text-3" id="text-orgabc19b1">
+<p>
+Omnes enim viæ tuæ paratæ sunt, et tua judicia in tua providentia posuisti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d8f3a1" class="outline-3">
+<h3 id="org1d8f3a1">Judith 9:6</h3>
+<div class="outline-text-3" id="text-org1d8f3a1">
+<p>
+Respice castra Assyriorum nunc, sicut tunc castra Ægyptiorum videre dignatus es, quando post servos tuos armati currebant, confidentes in quadrigis, et in equitatu suo, et in multitudine bellatorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d64754" class="outline-3">
+<h3 id="org7d64754">Judith 9:7</h3>
+<div class="outline-text-3" id="text-org7d64754">
+<p>
+Sed aspexisti super castra eorum, et tenebræ fatigaverunt eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org132e880" class="outline-3">
+<h3 id="org132e880">Judith 9:8</h3>
+<div class="outline-text-3" id="text-org132e880">
+<p>
+Tenuit pedes eorum abyssus, et aquæ operuerunt eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ae0739" class="outline-3">
+<h3 id="org8ae0739">Judith 9:9</h3>
+<div class="outline-text-3" id="text-org8ae0739">
+<p>
+Sic fiant et isti, Domine, qui confidunt in multitudine sua, et in curribus suis, et in contis, et in scutis, et in sagittis suis, et in lanceis gloriantur,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff104ef" class="outline-3">
+<h3 id="orgff104ef">Judith 9:10</h3>
+<div class="outline-text-3" id="text-orgff104ef">
+<p>
+et nesciunt quia tu ipse es Deus noster, qui conteris bella ab initio, et Dominus nomen est tibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf975b7e" class="outline-3">
+<h3 id="orgf975b7e">Judith 9:11</h3>
+<div class="outline-text-3" id="text-orgf975b7e">
+<p>
+Erige brachium tuum sicut ab initio, et allide virtutem illorum in virtute tua : cadat virtus eorum in iracundia tua, qui promittunt se violare sancta tua, et polluere tabernaculum nominis tui, et dejicere gladio suo cornu altaris tui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4900c0" class="outline-3">
+<h3 id="orgb4900c0">Judith 9:12</h3>
+<div class="outline-text-3" id="text-orgb4900c0">
+<p>
+Fac, Domine, ut gladio proprio ejus superbia amputetur :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf01a28" class="outline-3">
+<h3 id="orgdf01a28">Judith 9:13</h3>
+<div class="outline-text-3" id="text-orgdf01a28">
+<p>
+capiatur laqueo oculorum suorum in me, et percuties eum ex labiis caritatis meæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48003c2" class="outline-3">
+<h3 id="org48003c2">Judith 9:14</h3>
+<div class="outline-text-3" id="text-org48003c2">
+<p>
+Da mihi in animo constantiam ut contemnam illum, et virtutem, ut evertam illum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1df4339" class="outline-3">
+<h3 id="org1df4339">Judith 9:15</h3>
+<div class="outline-text-3" id="text-org1df4339">
+<p>
+Erit enim hoc memoriale nominis tui, cum manus feminæ dejecerit eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org41cdb63" class="outline-3">
+<h3 id="org41cdb63">Judith 9:16</h3>
+<div class="outline-text-3" id="text-org41cdb63">
+<p>
+Non enim in multitudine est virtus tua, Domine, neque in equorum viribus voluntas tua est, nec superbi ab initio placuerunt tibi : sed humilium et mansuetorum semper tibi placuit deprecatio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87db20e" class="outline-3">
+<h3 id="org87db20e">Judith 9:17</h3>
+<div class="outline-text-3" id="text-org87db20e">
+<p>
+Deus cælorum, creator aquarum, et Dominus totius creaturæ, exaudi me miseram deprecantem, et de tua misericordia præsumentem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c81dc6" class="outline-3">
+<h3 id="org8c81dc6">Judith 9:18</h3>
+<div class="outline-text-3" id="text-org8c81dc6">
+<p>
+Memento, Domine, testamenti tui, et da verbum in ore meo, et in corde meo consilium corrobora, ut domus tua in sanctificatione tua permaneat :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6328a1e" class="outline-3">
+<h3 id="org6328a1e">Judith 9:19</h3>
+<div class="outline-text-3" id="text-org6328a1e">
+<p>
+et omnes gentes agnoscant quia tu es Deus, et non est alius præter te.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb75bec1" class="outline-2">
+<h2 id="orgb75bec1">Judith 10</h2>
+<div class="outline-text-2" id="text-orgb75bec1">
+</div>
+<div id="outline-container-org79e1555" class="outline-3">
+<h3 id="org79e1555">Judith 10:1</h3>
+<div class="outline-text-3" id="text-org79e1555">
+<p>
+Factum est autem, cum cessasset clamare ad Dominum, surrexit de loco in quo jacuerat prostrata ad Dominum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org152e3f0" class="outline-3">
+<h3 id="org152e3f0">Judith 10:2</h3>
+<div class="outline-text-3" id="text-org152e3f0">
+<p>
+Vocavitque abram suam, et descendens in domum suam, abstulit a se cilicium, et exuit se vestimentis viduitatis suæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfde12a7" class="outline-3">
+<h3 id="orgfde12a7">Judith 10:3</h3>
+<div class="outline-text-3" id="text-orgfde12a7">
+<p>
+et lavit corpus suum, et unxit se myro optimo, et discriminavit crinem capitis sui, et imposuit mitram super caput suum, et induit se vestimentis jucunditatis suæ, induitque sandalia pedibus suis, assumpsitque dextraliola, et lilia, et inaures, et annulos, et omnibus ornamentis suis ornavit se.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfec072b" class="outline-3">
+<h3 id="orgfec072b">Judith 10:4</h3>
+<div class="outline-text-3" id="text-orgfec072b">
+<p>
+Cui etiam Dominus contulit splendorem : quoniam omnis ista compositio non ex libidine, sed ex virtute pendebat : et ideo Dominus hanc in illam pulchritudinem ampliavit, ut incomparabili decore omnium oculis appareret.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2d080c" class="outline-3">
+<h3 id="orgc2d080c">Judith 10:5</h3>
+<div class="outline-text-3" id="text-orgc2d080c">
+<p>
+Imposuit itaque abræ suæ ascoperam vini, et vas olei, et polentam, et palathas, et panes, et caseum, et profecta est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e94d13" class="outline-3">
+<h3 id="org0e94d13">Judith 10:6</h3>
+<div class="outline-text-3" id="text-org0e94d13">
+<p>
+Cumque venissent ad portam civitatis, invenerunt expectantem Oziam et presbyteros civitatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1cdc043" class="outline-3">
+<h3 id="org1cdc043">Judith 10:7</h3>
+<div class="outline-text-3" id="text-org1cdc043">
+<p>
+Qui cum vidissent eam, stupentes mirati sunt nimis pulchritudinem ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge87607f" class="outline-3">
+<h3 id="orge87607f">Judith 10:8</h3>
+<div class="outline-text-3" id="text-orge87607f">
+<p>
+Nihil tamen interrogantes eam, dimiserunt transire, dicentes : Deus patrum nostrorum det tibi gratiam, et omne consilium tui cordis sua virtute corroboret, ut glorietur super te Jerusalem, et sit nomen tuum in numero sanctorum et justorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48ab1b1" class="outline-3">
+<h3 id="org48ab1b1">Judith 10:9</h3>
+<div class="outline-text-3" id="text-org48ab1b1">
+<p>
+Et dixerunt hi qui illic erant omnes una voce : Fiat, fiat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org122f373" class="outline-3">
+<h3 id="org122f373">Judith 10:10</h3>
+<div class="outline-text-3" id="text-org122f373">
+<p>
+Judith vero orans Dominum, transivit per portas, ipsa et abra ejus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca1e03b" class="outline-3">
+<h3 id="orgca1e03b">Judith 10:11</h3>
+<div class="outline-text-3" id="text-orgca1e03b">
+<p>
+Factum est autem cum descenderet montem, circa ortum diei, occurrerunt ei exploratores Assyriorum, et tenuerunt eam, dicentes : Unde venis ? aut quo vadis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8473715" class="outline-3">
+<h3 id="org8473715">Judith 10:12</h3>
+<div class="outline-text-3" id="text-org8473715">
+<p>
+Quæ respondit : Filia sum Hebræorum, ideo ego fugi a facie eorum, quoniam futurum agnovi quod dentur vobis in deprædationem, pro eo quod contemnentes vos, noluerunt ultro tradere seipsos ut invenirent misericordiam in conspectu vestro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org978d93d" class="outline-3">
+<h3 id="org978d93d">Judith 10:13</h3>
+<div class="outline-text-3" id="text-org978d93d">
+<p>
+Hac de causa cogitavi mecum, dicens : Vadam ad faciem principis Holofernis, ut indicem illi secreta illorum, et ostendam illi quo aditu possit obtinere eos, ita ut non cadat vir unus de exercitu ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee29979" class="outline-3">
+<h3 id="orgee29979">Judith 10:14</h3>
+<div class="outline-text-3" id="text-orgee29979">
+<p>
+Et cum audissent viri illi verba ejus, considerabant faciem ejus, et erat in oculis eorum stupor, quoniam pulchritudinem ejus mirabantur nimis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb91bb05" class="outline-3">
+<h3 id="orgb91bb05">Judith 10:15</h3>
+<div class="outline-text-3" id="text-orgb91bb05">
+<p>
+Et dixerunt ad eam : Conservasti animam tuam, eo quod tale reperisti consilium, ut descenderes ad dominum nostrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdf4eb7" class="outline-3">
+<h3 id="orgcdf4eb7">Judith 10:16</h3>
+<div class="outline-text-3" id="text-orgcdf4eb7">
+<p>
+Hoc autem scias, quoniam cum steteris in conspectu ejus, bene tibi faciet, et eris gratissima in corde ejus. Duxeruntque illam ad tabernaculum Holofernis, annuntiantes eam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org876d595" class="outline-3">
+<h3 id="org876d595">Judith 10:17</h3>
+<div class="outline-text-3" id="text-org876d595">
+<p>
+Cumque intrasset ante faciem ejus, statim captus est in suis oculis Holofernes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc54b7af" class="outline-3">
+<h3 id="orgc54b7af">Judith 10:18</h3>
+<div class="outline-text-3" id="text-orgc54b7af">
+<p>
+Dixeruntque ad eum satellites ejus : Quis contemnat populum Hebræorum, qui tam decoras mulieres habent, ut non pro his merito pugnare contra eos debeamus ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaeba056" class="outline-3">
+<h3 id="orgaeba056">Judith 10:19</h3>
+<div class="outline-text-3" id="text-orgaeba056">
+<p>
+Videns itaque Judith Holofernem sedentem in conopeo, quod erat ex purpura, et auro, et smaragdo, et lapidibus pretiosis intextum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee1f183" class="outline-3">
+<h3 id="orgee1f183">Judith 10:20</h3>
+<div class="outline-text-3" id="text-orgee1f183">
+<p>
+et cum in faciem ejus intendisset, adoravit eum, prosternens se super terram. Et elevaverunt eam servi Holofernis, jubente domino suo.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org49d239f" class="outline-2">
+<h2 id="org49d239f">Judith 11</h2>
+<div class="outline-text-2" id="text-org49d239f">
+</div>
+<div id="outline-container-orgd205930" class="outline-3">
+<h3 id="orgd205930">Judith 11:1</h3>
+<div class="outline-text-3" id="text-orgd205930">
+<p>
+Tunc Holofernes dixit ei : Æquo animo esto, et noli pavere in corde tuo : quoniam ego numquam nocui viro qui voluit servire Nabuchodonosor regi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa8ebbf" class="outline-3">
+<h3 id="orgfa8ebbf">Judith 11:2</h3>
+<div class="outline-text-3" id="text-orgfa8ebbf">
+<p>
+populus autem tuus, si non contempsisset me, non levassem lanceam meam super eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97d10ee" class="outline-3">
+<h3 id="org97d10ee">Judith 11:3</h3>
+<div class="outline-text-3" id="text-org97d10ee">
+<p>
+Nunc autem dic mihi, qua ex causa recessisti ab illis, et placuit tibi ut venires ad nos ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4af1614" class="outline-3">
+<h3 id="org4af1614">Judith 11:4</h3>
+<div class="outline-text-3" id="text-org4af1614">
+<p>
+Et dixit illi Judith : Sume verba ancillæ tuæ, quoniam si secutus fueris verba ancillæ tuæ, perfectam rem faciet Dominus tecum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1598bef" class="outline-3">
+<h3 id="org1598bef">Judith 11:5</h3>
+<div class="outline-text-3" id="text-org1598bef">
+<p>
+Vivit enim Nabuchodonosor rex terræ, et vivit virtus ejus, quæ est in te ad correptionem omnium animarum errantium : quoniam non solum homines serviunt illi per te, sed et bestiæ agri obtemperant illi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a7ef30" class="outline-3">
+<h3 id="org6a7ef30">Judith 11:6</h3>
+<div class="outline-text-3" id="text-org6a7ef30">
+<p>
+Nuntiatur enim animi tui industria universis gentibus, et indicatum est omni sæculo quoniam tu solus bonus et potens es in omni regno ejus : et disciplina tua omnibus provinciis prædicatur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc024d9" class="outline-3">
+<h3 id="orgdc024d9">Judith 11:7</h3>
+<div class="outline-text-3" id="text-orgdc024d9">
+<p>
+Nec hoc latet, quod locutus est Achior, nec illud ignoratur, quod ei jusseris evenire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ff639c" class="outline-3">
+<h3 id="org9ff639c">Judith 11:8</h3>
+<div class="outline-text-3" id="text-org9ff639c">
+<p>
+Constat enim Deum nostrum sic peccatis offensum, ut mandaverit per prophetas suos ad populum quod tradat eum pro peccatis suis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe4210b" class="outline-3">
+<h3 id="orgfe4210b">Judith 11:9</h3>
+<div class="outline-text-3" id="text-orgfe4210b">
+<p>
+Et quoniam sciunt se offendisse Deum suum filii Israël, tremor tuus super ipsos est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe6a7bc" class="outline-3">
+<h3 id="orgbe6a7bc">Judith 11:10</h3>
+<div class="outline-text-3" id="text-orgbe6a7bc">
+<p>
+Insuper etiam fames invasit eos, et ab ariditate aquæ jam inter mortuos computantur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f3a5c4" class="outline-3">
+<h3 id="org1f3a5c4">Judith 11:11</h3>
+<div class="outline-text-3" id="text-org1f3a5c4">
+<p>
+Denique hoc ordinant, ut interficient pecora sua, et bibant sanguinem eorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7678a74" class="outline-3">
+<h3 id="org7678a74">Judith 11:12</h3>
+<div class="outline-text-3" id="text-org7678a74">
+<p>
+et sancta Domini Dei sui, quæ præcepit Deus non contingi, in frumento, vino, et oleo, hæc cogitaverunt impendere, et volunt consumere quæ nec manibus deberent contingere : ergo quoniam hæc faciunt, certum est quod in perditionem dabuntur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e93932" class="outline-3">
+<h3 id="org2e93932">Judith 11:13</h3>
+<div class="outline-text-3" id="text-org2e93932">
+<p>
+Quod ego ancilla tua cognoscens, fugi ab illis, et misit me Dominus hæc ipsa nuntiare tibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab5b16c" class="outline-3">
+<h3 id="orgab5b16c">Judith 11:14</h3>
+<div class="outline-text-3" id="text-orgab5b16c">
+<p>
+Ego enim ancilla tua Deum colo, etiam nunc apud te : et exiet ancilla tua, et orabo Deum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org909d625" class="outline-3">
+<h3 id="org909d625">Judith 11:15</h3>
+<div class="outline-text-3" id="text-org909d625">
+<p>
+et dicet mihi quando eis reddat peccatum suum, et veniens nuntiabo tibi, ita ut ego adducam te per mediam Jerusalem, et habebis omnem populum Israël, sicut oves quibus non est pastor, et non latrabit vel unus canis contra te :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc37d1d" class="outline-3">
+<h3 id="orgfc37d1d">Judith 11:16</h3>
+<div class="outline-text-3" id="text-orgfc37d1d">
+<p>
+quoniam hæc mihi dicta sunt per providentiam Dei,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50ccb2d" class="outline-3">
+<h3 id="org50ccb2d">Judith 11:17</h3>
+<div class="outline-text-3" id="text-org50ccb2d">
+<p>
+et quoniam iratus est illis Deus, hæc ipsa missa sum nuntiare tibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d623fa" class="outline-3">
+<h3 id="org3d623fa">Judith 11:18</h3>
+<div class="outline-text-3" id="text-org3d623fa">
+<p>
+Placuerunt autem omnia verba hæc coram Holoferne, et coram pueris ejus, et mirabantur sapientiam ejus, et dicebant alter ad alterum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7295c41" class="outline-3">
+<h3 id="org7295c41">Judith 11:19</h3>
+<div class="outline-text-3" id="text-org7295c41">
+<p>
+Non est talis mulier super terram in aspectu, in pulchritudine, et in sensu verborum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged1bcd5" class="outline-3">
+<h3 id="orged1bcd5">Judith 11:20</h3>
+<div class="outline-text-3" id="text-orged1bcd5">
+<p>
+Et dixit ad illam Holofernes : Benefecit Deus, qui misit te ante populum, ut des illum tu in manibus nostris :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9737dd" class="outline-3">
+<h3 id="orgc9737dd">Judith 11:21</h3>
+<div class="outline-text-3" id="text-orgc9737dd">
+<p>
+et quoniam bona est promissio tua, si fecerit mihi hoc Deus tuus, erit et Deus meus, et tu in domo Nabuchodonosor magna eris, et nomen tuum nominabitur in universa terra.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37ebe1d" class="outline-2">
+<h2 id="org37ebe1d">Judith 12</h2>
+<div class="outline-text-2" id="text-org37ebe1d">
+</div>
+<div id="outline-container-org702f888" class="outline-3">
+<h3 id="org702f888">Judith 12:1</h3>
+<div class="outline-text-3" id="text-org702f888">
+<p>
+Tunc jussit eam introire ubi repositi erant thesauri ejus, et jussit illic manere eam, et constituit quid daretur illi de convivio suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org550efdd" class="outline-3">
+<h3 id="org550efdd">Judith 12:2</h3>
+<div class="outline-text-3" id="text-org550efdd">
+<p>
+Cui respondit Judith, et dixit : Nunc non potero manducare ex his quæ mihi præcipis tribui, ne veniat super me offensio : ex his autem quæ mihi detuli, manducabo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf358f89" class="outline-3">
+<h3 id="orgf358f89">Judith 12:3</h3>
+<div class="outline-text-3" id="text-orgf358f89">
+<p>
+Cui Holofernes ait : Si defecerint tibi ista, quæ tecum detulisti, quid faciemus tibi ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org483fb3d" class="outline-3">
+<h3 id="org483fb3d">Judith 12:4</h3>
+<div class="outline-text-3" id="text-org483fb3d">
+<p>
+Et dixit Judith : Vivit anima tua, domine meus, quoniam non expendet omnia hæc ancilla tua, donec faciat Deus in manu mea hæc quæ cogitavi. Et induxerunt illam servi ejus in tabernaculum quod præceperat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2aaa49" class="outline-3">
+<h3 id="orga2aaa49">Judith 12:5</h3>
+<div class="outline-text-3" id="text-orga2aaa49">
+<p>
+Et petiit dum introiret, ut daretur ei copia nocte et ante lucem egrediendi foras ad orationem, et deprecandi Dominum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0462395" class="outline-3">
+<h3 id="org0462395">Judith 12:6</h3>
+<div class="outline-text-3" id="text-org0462395">
+<p>
+Et præcepit cubiculariis suis ut sicut placeret illi, exiret et introiret ad adorandum Deum suum per triduum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13f5baf" class="outline-3">
+<h3 id="org13f5baf">Judith 12:7</h3>
+<div class="outline-text-3" id="text-org13f5baf">
+<p>
+et exibat noctibus in vallem Bethuliæ, et baptizabat se in fonte aquæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0b2b7d" class="outline-3">
+<h3 id="orga0b2b7d">Judith 12:8</h3>
+<div class="outline-text-3" id="text-orga0b2b7d">
+<p>
+Et ut ascendebat, orabat Dominum Deum Israël ut dirigeret viam ejus ad liberationem populi sui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97a7f9d" class="outline-3">
+<h3 id="org97a7f9d">Judith 12:9</h3>
+<div class="outline-text-3" id="text-org97a7f9d">
+<p>
+Et introiens, munda manebat in tabernaculo usque dum acciperet escam suam in vespere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8646e01" class="outline-3">
+<h3 id="org8646e01">Judith 12:10</h3>
+<div class="outline-text-3" id="text-org8646e01">
+<p>
+Et factum est, in quarto die Holofernes fecit cœnam servis suis, et dixit ad Vagao eunuchum suum : Vade, et suade Hebræam illam ut sponte consentiat habitare mecum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5653bf7" class="outline-3">
+<h3 id="org5653bf7">Judith 12:11</h3>
+<div class="outline-text-3" id="text-org5653bf7">
+<p>
+Fœdum est enim apud Assyrios, si femina irrideat virum agendo ut immunis ab eo transeat.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1fb4b7" class="outline-3">
+<h3 id="orga1fb4b7">Judith 12:12</h3>
+<div class="outline-text-3" id="text-orga1fb4b7">
+<p>
+Tunc introivit Vagao ad Judith, et dixit : Non vereatur bona puella introire ad dominum meum, ut honorificetur ante faciem ejus, ut manducet cum eo, et bibat vinum in jucunditate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde76262" class="outline-3">
+<h3 id="orgde76262">Judith 12:13</h3>
+<div class="outline-text-3" id="text-orgde76262">
+<p>
+Cui Judith respondit : Quæ ego sum, ut contradicam domino meo ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4392892" class="outline-3">
+<h3 id="org4392892">Judith 12:14</h3>
+<div class="outline-text-3" id="text-org4392892">
+<p>
+omne quod erit ante oculos ejus bonum et optimum, faciam. Quidquid autem illi placuerit, hoc mihi erit optimum omnibus diebus vitæ meæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33bd258" class="outline-3">
+<h3 id="org33bd258">Judith 12:15</h3>
+<div class="outline-text-3" id="text-org33bd258">
+<p>
+Et surrexit, et ornavit se vestimento suo, et ingressa stetit ante faciem ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90329f1" class="outline-3">
+<h3 id="org90329f1">Judith 12:16</h3>
+<div class="outline-text-3" id="text-org90329f1">
+<p>
+Cor autem Holofernes concussum est : erat enim ardens in concupiscentia ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc788451" class="outline-3">
+<h3 id="orgc788451">Judith 12:17</h3>
+<div class="outline-text-3" id="text-orgc788451">
+<p>
+Et dixit ad eam Holofernes : Bibe nunc, et accumbe in jucunditate, quoniam invenisti gratiam coram me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc910243" class="outline-3">
+<h3 id="orgc910243">Judith 12:18</h3>
+<div class="outline-text-3" id="text-orgc910243">
+<p>
+Et dixit Judith : Bibam, domine, quoniam magnificata est anima mea hodie præ omnibus diebus meis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0251f2" class="outline-3">
+<h3 id="orgf0251f2">Judith 12:19</h3>
+<div class="outline-text-3" id="text-orgf0251f2">
+<p>
+Et accepit, et manducavit et bibit coram ipso ea quæ paraverat illi ancilla ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f6f58a" class="outline-3">
+<h3 id="org8f6f58a">Judith 12:20</h3>
+<div class="outline-text-3" id="text-org8f6f58a">
+<p>
+Et jucundus factus est Holofernes ad eam, bibitque vinum multum nimis, quantum numquam biberat in vita sua.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf1cca05" class="outline-2">
+<h2 id="orgf1cca05">Judith 13</h2>
+<div class="outline-text-2" id="text-orgf1cca05">
+</div>
+<div id="outline-container-org26c1f55" class="outline-3">
+<h3 id="org26c1f55">Judith 13:1</h3>
+<div class="outline-text-3" id="text-org26c1f55">
+<p>
+Ut autem sero factum est, festinaverunt servi illius ad hospitia sua, et conclusit Vagao ostia cubiculi, et abiit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ccdfb6" class="outline-3">
+<h3 id="org6ccdfb6">Judith 13:2</h3>
+<div class="outline-text-3" id="text-org6ccdfb6">
+<p>
+Erant autem omnes fatigati a vino,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga09ded0" class="outline-3">
+<h3 id="orga09ded0">Judith 13:3</h3>
+<div class="outline-text-3" id="text-orga09ded0">
+<p>
+eratque Judith sola in cubiculo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5931fd" class="outline-3">
+<h3 id="orgf5931fd">Judith 13:4</h3>
+<div class="outline-text-3" id="text-orgf5931fd">
+<p>
+Porro Holofernes jacebat in lecto, nimia ebrietate sopitus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf64d29f" class="outline-3">
+<h3 id="orgf64d29f">Judith 13:5</h3>
+<div class="outline-text-3" id="text-orgf64d29f">
+<p>
+Dixitque Judith puellæ suæ ut staret foris ante cubiculum, et observaret.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2aca64" class="outline-3">
+<h3 id="orgb2aca64">Judith 13:6</h3>
+<div class="outline-text-3" id="text-orgb2aca64">
+<p>
+Stetitque Judith ante lectum, orans cum lacrimis, et labiorum motu in silentio,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cc1984" class="outline-3">
+<h3 id="org9cc1984">Judith 13:7</h3>
+<div class="outline-text-3" id="text-org9cc1984">
+<p>
+dicens : Confirma me, Domine Deus Israël, et respice in hac hora ad opera manuum mearum, ut, sicut promisisti, Jerusalem civitatem tuam erigas : et hoc quod credens per te posse fieri cogitavi, perficiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c8d5f8" class="outline-3">
+<h3 id="org6c8d5f8">Judith 13:8</h3>
+<div class="outline-text-3" id="text-org6c8d5f8">
+<p>
+Et cum hæc dixisset, accessit ad columnam quæ erat ad caput lectuli ejus, et pugionem ejus, qui in ea ligatus pendebat, exsolvit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c0de2d" class="outline-3">
+<h3 id="org8c0de2d">Judith 13:9</h3>
+<div class="outline-text-3" id="text-org8c0de2d">
+<p>
+Cumque evaginasset illum, apprehendit comam capitis ejus, et ait : Confirma me, Domine Deus, in hac hora.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf707ec" class="outline-3">
+<h3 id="orgcf707ec">Judith 13:10</h3>
+<div class="outline-text-3" id="text-orgcf707ec">
+<p>
+Et percussit bis in cervicem ejus, et abscidit caput ejus, et abstulit conopeum ejus a columnis, et evolvit corpus ejus truncum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org457e8b0" class="outline-3">
+<h3 id="org457e8b0">Judith 13:11</h3>
+<div class="outline-text-3" id="text-org457e8b0">
+<p>
+Et post pusillum exivit, et tradidit caput Holofernis ancillæ suæ, et jussit ut mitteret illud in peram suam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge164506" class="outline-3">
+<h3 id="orge164506">Judith 13:12</h3>
+<div class="outline-text-3" id="text-orge164506">
+<p>
+Et exierunt duæ, secundum consuetudinem suam, quasi ad orationem, et transierunt castra, et gyrantes vallem, venerunt ad portam civitatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b29019" class="outline-3">
+<h3 id="org6b29019">Judith 13:13</h3>
+<div class="outline-text-3" id="text-org6b29019">
+<p>
+Et dixit Judith a longe custodibus murorum : Aperite portas, quoniam nobiscum est Deus, qui fecit virtutem in Israël.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaff4722" class="outline-3">
+<h3 id="orgaff4722">Judith 13:14</h3>
+<div class="outline-text-3" id="text-orgaff4722">
+<p>
+Et factum est cum audissent viri vocem ejus, vocaverunt presbyteros civitatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga350be9" class="outline-3">
+<h3 id="orga350be9">Judith 13:15</h3>
+<div class="outline-text-3" id="text-orga350be9">
+<p>
+Et concurrerunt ad eam omnes, a minimo usque ad maximum : quoniam sperabant eam jam non esse venturam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0d38a8" class="outline-3">
+<h3 id="orgd0d38a8">Judith 13:16</h3>
+<div class="outline-text-3" id="text-orgd0d38a8">
+<p>
+Et accendentes luminaria, congyraverunt circa eam universi : illa autem ascendens in eminentiorem locum, jussit fieri silentium. Cumque omnes tacuissent,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbed2c1" class="outline-3">
+<h3 id="orgbbed2c1">Judith 13:17</h3>
+<div class="outline-text-3" id="text-orgbbed2c1">
+<p>
+dixit Judith : Laudate Dominum Deum nostrum, qui non deseruit sperantes in se,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8321ee4" class="outline-3">
+<h3 id="org8321ee4">Judith 13:18</h3>
+<div class="outline-text-3" id="text-org8321ee4">
+<p>
+et in me ancilla sua adimplevit misericordiam suam, quam promisit domui Israël : et interfecit in manu mea hostem populi sui hac nocte.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84af7f8" class="outline-3">
+<h3 id="org84af7f8">Judith 13:19</h3>
+<div class="outline-text-3" id="text-org84af7f8">
+<p>
+Et proferens de pera caput Holofernis, ostendit illis, dicens : Ecce caput Holofernis principis militiæ Assyriorum, et ecce conopeum illius, in quo recumbebat in ebrietate sua, ubi per manum feminæ percussit illum Dominus Deus noster.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd7a3e1" class="outline-3">
+<h3 id="orgcd7a3e1">Judith 13:20</h3>
+<div class="outline-text-3" id="text-orgcd7a3e1">
+<p>
+Vivit autem ipse Dominus, quoniam custodivit me angelus ejus et hinc euntem, et ibi commorantem, et inde huc revertentem, et non permisit me Dominus ancillam suam coinquinari, sed sine pollutione peccati revocavit me vobis gaudentem in victoria sua, in evasione mea, et in liberatione vestra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb43571e" class="outline-3">
+<h3 id="orgb43571e">Judith 13:21</h3>
+<div class="outline-text-3" id="text-orgb43571e">
+<p>
+Confitemini illi omnes, quoniam bonus, quoniam in sæculum misericordia ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9c9781" class="outline-3">
+<h3 id="orgc9c9781">Judith 13:22</h3>
+<div class="outline-text-3" id="text-orgc9c9781">
+<p>
+Universi autem adorantes Dominum, dixerunt ad eam : Benedixit te Dominus in virtute sua, quia per te ad nihilum redegit inimicos nostros.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a5085c" class="outline-3">
+<h3 id="org0a5085c">Judith 13:23</h3>
+<div class="outline-text-3" id="text-org0a5085c">
+<p>
+Porro Ozias princeps populi Israël dixit ad eam : Benedicta es tu, filia, a Domino Deo excelso præ omnibus mulieribus super terram.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20064f9" class="outline-3">
+<h3 id="org20064f9">Judith 13:24</h3>
+<div class="outline-text-3" id="text-org20064f9">
+<p>
+Benedictus Dominus, qui creavit cælum et terram, qui te direxit in vulnera capitis principis inimicorum nostrorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9009a19" class="outline-3">
+<h3 id="org9009a19">Judith 13:25</h3>
+<div class="outline-text-3" id="text-org9009a19">
+<p>
+quia hodie nomen tuum ita magnificavit, ut non recedat laus tua de ore hominum qui memores fuerint virtutis Domini in æternum, pro quibus non pepercisti animæ tuæ propter angustias et tribulationem generis tui, sed subvenisti ruinæ ante conspectum Dei nostri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83c84c4" class="outline-3">
+<h3 id="org83c84c4">Judith 13:26</h3>
+<div class="outline-text-3" id="text-org83c84c4">
+<p>
+Et dixit omnis populus : Fiat, fiat.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2e9126" class="outline-3">
+<h3 id="orga2e9126">Judith 13:27</h3>
+<div class="outline-text-3" id="text-orga2e9126">
+<p>
+Porro Achior vocatus venit, et dixit ei Judith : Deus Israël, cui tu testimonium dedisti quod ulciscatur se de inimicis suis, ipse caput omnium incredulorum incidit hac nocte in manu mea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3f58cd" class="outline-3">
+<h3 id="orgc3f58cd">Judith 13:28</h3>
+<div class="outline-text-3" id="text-orgc3f58cd">
+<p>
+Et ut probes quia ita est, ecce caput Holofernis, qui in contemptu superbiæ suæ Deum Israël contempsit, et tibi interitum minabatur, dicens : Cum captus fuerit populus Israël, gladio perforari præcipiam latera tua.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org112387b" class="outline-3">
+<h3 id="org112387b">Judith 13:29</h3>
+<div class="outline-text-3" id="text-org112387b">
+<p>
+Videns autem Achior caput Holofernis, angustiatus præ pavore cecidit in faciem suam super terram, et æstuavit anima ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53fc2e9" class="outline-3">
+<h3 id="org53fc2e9">Judith 13:30</h3>
+<div class="outline-text-3" id="text-org53fc2e9">
+<p>
+Postea vero quam resumpto spiritu recreatus est, procidit ad pedes ejus, et adoravit eam, et dixit :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabf1593" class="outline-3">
+<h3 id="orgabf1593">Judith 13:31</h3>
+<div class="outline-text-3" id="text-orgabf1593">
+<p>
+Benedicta tu a Deo tuo in omni tabernaculo Jacob, quoniam in omni gente quæ audierit nomen tuum, magnificabitur super te Deus Israël.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8a566e0" class="outline-2">
+<h2 id="org8a566e0">Judith 14</h2>
+<div class="outline-text-2" id="text-org8a566e0">
+</div>
+<div id="outline-container-org78889fe" class="outline-3">
+<h3 id="org78889fe">Judith 14:1</h3>
+<div class="outline-text-3" id="text-org78889fe">
+<p>
+Dixit autem Judith ad omnem populum : Audite me, fratres : suspendite caput hoc super muros nostros :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ce1c65" class="outline-3">
+<h3 id="org7ce1c65">Judith 14:2</h3>
+<div class="outline-text-3" id="text-org7ce1c65">
+<p>
+et erit, cum exierit sol, accipiat unusquisque arma sua, et exite cum impetu, non ut descendatis deorsum, sed quasi impetum facientes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge216626" class="outline-3">
+<h3 id="orge216626">Judith 14:3</h3>
+<div class="outline-text-3" id="text-orge216626">
+<p>
+Tunc exploratores necesse erit ut fugiant ad principem suum excitandum ad pugnam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b0ac89" class="outline-3">
+<h3 id="org3b0ac89">Judith 14:4</h3>
+<div class="outline-text-3" id="text-org3b0ac89">
+<p>
+Cumque duces eorum cucurrerint ad tabernaculum Holofernis, et invenerint eum truncum in suo sanguine volutatum, decidet super eos timor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge030fcd" class="outline-3">
+<h3 id="orge030fcd">Judith 14:5</h3>
+<div class="outline-text-3" id="text-orge030fcd">
+<p>
+Cumque cognoveritis fugere eos, ite post illos securi, quoniam Dominus conteret eos sub pedibus vestris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb15e4d" class="outline-3">
+<h3 id="orgbb15e4d">Judith 14:6</h3>
+<div class="outline-text-3" id="text-orgbb15e4d">
+<p>
+Tunc Achior, videns virtutem quam fecit Deus Israël, relicto gentilitatis ritu, credidit Deo, et circumcidit carnem præputii sui, et appositus est ad populum Israël, et omnis successio generis ejus usque in hodiernum diem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3564b73" class="outline-3">
+<h3 id="org3564b73">Judith 14:7</h3>
+<div class="outline-text-3" id="text-org3564b73">
+<p>
+Mox autem ut ortus est dies, suspenderunt super muros caput Holofernis, accepitque unusquisque vir arma sua, et egressi sunt cum grandi strepitu et ululatu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org204def3" class="outline-3">
+<h3 id="org204def3">Judith 14:8</h3>
+<div class="outline-text-3" id="text-org204def3">
+<p>
+Quod videntes exploratores, ad tabernaculum Holofernis cucurrerunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org962a27f" class="outline-3">
+<h3 id="org962a27f">Judith 14:9</h3>
+<div class="outline-text-3" id="text-org962a27f">
+<p>
+Porro hi qui in tabernaculo erant, venientes, et ante ingressum cubiculi perstrepentes, excitandi gratia, inquietudinem arte moliebantur, ut non ab excitantibus, sed a sonantibus Holofernes evigilaret.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf01148e" class="outline-3">
+<h3 id="orgf01148e">Judith 14:10</h3>
+<div class="outline-text-3" id="text-orgf01148e">
+<p>
+Nullus enim audebat cubiculum virtutis Assyriorum pulsando aut intrando aperire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c510e9" class="outline-3">
+<h3 id="org8c510e9">Judith 14:11</h3>
+<div class="outline-text-3" id="text-org8c510e9">
+<p>
+Sed cum venissent ejus duces ac tribuni, et universi majores exercitus regis Assyriorum, dixerunt cubiculariis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18b1197" class="outline-3">
+<h3 id="org18b1197">Judith 14:12</h3>
+<div class="outline-text-3" id="text-org18b1197">
+<p>
+Intrate, et excitate illum, quoniam egressi mures de cavernis suis, ausi sunt provocare nos ad prælium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7ce2ed" class="outline-3">
+<h3 id="orgb7ce2ed">Judith 14:13</h3>
+<div class="outline-text-3" id="text-orgb7ce2ed">
+<p>
+Tunc ingressus Vagao cubiculum ejus, stetit ante cortinam, et plausum fecit manibus suis : suspicabatur enim illum cum Judith dormire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59fca23" class="outline-3">
+<h3 id="org59fca23">Judith 14:14</h3>
+<div class="outline-text-3" id="text-org59fca23">
+<p>
+Sed cum nullum motum jacentis sensu aurium caperet, accessit proximans ad cortinam, et elevans eam, vidensque cadaver absque capite Holofernis in suo sanguine tabefactum jacere super terram, exclamavit voce magna cum fletu, et scidit vestimenta sua.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15eac4c" class="outline-3">
+<h3 id="org15eac4c">Judith 14:15</h3>
+<div class="outline-text-3" id="text-org15eac4c">
+<p>
+Et ingressus tabernaculum Judith, non invenit eam, et exiliit foras ad populum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0409b0b" class="outline-3">
+<h3 id="org0409b0b">Judith 14:16</h3>
+<div class="outline-text-3" id="text-org0409b0b">
+<p>
+et dixit : Una mulier hebræa fecit confusionem in domo regis Nabuchodonosor : ecce enim Holofernes jacet in terra, et caput ejus non est in illo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf957dcf" class="outline-3">
+<h3 id="orgf957dcf">Judith 14:17</h3>
+<div class="outline-text-3" id="text-orgf957dcf">
+<p>
+Quod cum audissent principes virtutis Assyriorum, sciderunt omnes vestimenta sua, et intolerabilis timor et tremor cecidit super eos, et turbati sunt animi eorum valde.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0055e59" class="outline-3">
+<h3 id="org0055e59">Judith 14:18</h3>
+<div class="outline-text-3" id="text-org0055e59">
+<p>
+Et factus est clamor incomparabilis in medio castrorum eorum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcafe901" class="outline-2">
+<h2 id="orgcafe901">Judith 15</h2>
+<div class="outline-text-2" id="text-orgcafe901">
+</div>
+<div id="outline-container-org9bac102" class="outline-3">
+<h3 id="org9bac102">Judith 15:1</h3>
+<div class="outline-text-3" id="text-org9bac102">
+<p>
+Cumque omnis exercitus decollatum Holofernem audisset, fugit mens et consilium ab eis, et solo tremore et metu agitati, fugæ præsidium sumunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39895fe" class="outline-3">
+<h3 id="org39895fe">Judith 15:2</h3>
+<div class="outline-text-3" id="text-org39895fe">
+<p>
+ita ut nullus loqueretur cum proximo suo, sed inclinato capite, relictis omnibus, evadere festinabant Hebræos, quos armatos super se venire audiebant, fugientes per vias camporum et semitas collium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org406215f" class="outline-3">
+<h3 id="org406215f">Judith 15:3</h3>
+<div class="outline-text-3" id="text-org406215f">
+<p>
+Videntes itaque filii Israël fugientes, secuti sunt illos. Descenderuntque clangentes tubis, et ululantes post ipsos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb37df16" class="outline-3">
+<h3 id="orgb37df16">Judith 15:4</h3>
+<div class="outline-text-3" id="text-orgb37df16">
+<p>
+Et quoniam Assyrii non adunati, in fugam ibant præcipites : filii autem Israël uno agmine persequentes debilitabant omnes quos invenire potuissent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5490bb" class="outline-3">
+<h3 id="orgb5490bb">Judith 15:5</h3>
+<div class="outline-text-3" id="text-orgb5490bb">
+<p>
+Misit itaque Ozias nuntios per omnes civitates et regiones Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ed31cd" class="outline-3">
+<h3 id="org8ed31cd">Judith 15:6</h3>
+<div class="outline-text-3" id="text-org8ed31cd">
+<p>
+Omnis itaque regio, omnisque urbs electam juventutem armatam misit post eos, et persecuti sunt eos in ore gladii, quousque pervenirent ad extremitatem finium suorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36b3cae" class="outline-3">
+<h3 id="org36b3cae">Judith 15:7</h3>
+<div class="outline-text-3" id="text-org36b3cae">
+<p>
+Reliqui autem qui erant in Bethulia, ingressi sunt castra Assyriorum, et prædam quam fugientes Assyrii reliquerant, abstulerunt, et onustati sunt valde.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd59f060" class="outline-3">
+<h3 id="orgd59f060">Judith 15:8</h3>
+<div class="outline-text-3" id="text-orgd59f060">
+<p>
+Hi vero qui victores reversi sunt ad Bethuliam, omnia quæ erant illorum attulerunt secum, ita ut non esset numerus in pecoribus et jumentis et universis mobilibus eorum, ut a minimo usque ad maximum omnes divites fierent de prædationibus eorum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8432a80" class="outline-3">
+<h3 id="org8432a80">Judith 15:9</h3>
+<div class="outline-text-3" id="text-org8432a80">
+<p>
+Joacim autem summus pontifex de Jerusalem venit in Bethuliam cum universis presbyteris suis ut videret Judith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd45316c" class="outline-3">
+<h3 id="orgd45316c">Judith 15:10</h3>
+<div class="outline-text-3" id="text-orgd45316c">
+<p>
+Quæ cum exisset ad illum, benedixerunt eam omnes una voce, dicentes : Tu gloria Jerusalem ; tu lætitia Israël ; tu honorificentia populi nostri :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9042043" class="outline-3">
+<h3 id="org9042043">Judith 15:11</h3>
+<div class="outline-text-3" id="text-org9042043">
+<p>
+quia fecisti viriliter, et confortatum est cor tuum, eo quod castitatem amaveris, et post virum tuum, alterum nescieris : ideo et manus Domini confortavit te, et ideo eris benedicta in æternum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga562042" class="outline-3">
+<h3 id="orga562042">Judith 15:12</h3>
+<div class="outline-text-3" id="text-orga562042">
+<p>
+Et dixit omnis populus : Fiat, fiat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org661864f" class="outline-3">
+<h3 id="org661864f">Judith 15:13</h3>
+<div class="outline-text-3" id="text-org661864f">
+<p>
+Per dies autem triginta, vix collecta sunt spolia Assyriorum a populo Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c95e36" class="outline-3">
+<h3 id="org9c95e36">Judith 15:14</h3>
+<div class="outline-text-3" id="text-org9c95e36">
+<p>
+Porro autem universa quæ Holofernis peculiaria fuisse probata sunt, dederunt Judith in auro, et argento, et vestibus, et gemmis, et omni supellectili : et tradita sunt omnia illi a populo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f2aac9" class="outline-3">
+<h3 id="org4f2aac9">Judith 15:15</h3>
+<div class="outline-text-3" id="text-org4f2aac9">
+<p>
+Et omnes populi gaudebant cum mulieribus, et virginibus, et juvenibus, in organis et citharis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc4f6222" class="outline-2">
+<h2 id="orgc4f6222">Judith 16</h2>
+<div class="outline-text-2" id="text-orgc4f6222">
+</div>
+<div id="outline-container-org017ffe9" class="outline-3">
+<h3 id="org017ffe9">Judith 16:1</h3>
+<div class="outline-text-3" id="text-org017ffe9">
+<p>
+Tunc cantavit canticum hoc Domino Judith, dicens :  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc337982" class="outline-3">
+<h3 id="orgc337982">Judith 16:2</h3>
+<div class="outline-text-3" id="text-orgc337982">
+<p>
+Incipite Domino in tympanis ;  cantate Domino in cymbalis ;  modulamini illi psalmum novum :  exaltate, et invocate nomen ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a9c8cb" class="outline-3">
+<h3 id="org4a9c8cb">Judith 16:3</h3>
+<div class="outline-text-3" id="text-org4a9c8cb">
+<p>
+Dominus conterens bella,  Dominus nomen est illi. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge326124" class="outline-3">
+<h3 id="orge326124">Judith 16:4</h3>
+<div class="outline-text-3" id="text-orge326124">
+<p>
+Qui posuit castra sua in medio populi sui,  ut eriperet nos de manu omnium inimicorum nostrorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecd23d4" class="outline-3">
+<h3 id="orgecd23d4">Judith 16:5</h3>
+<div class="outline-text-3" id="text-orgecd23d4">
+<p>
+Venit Assur ex montibus ab aquilone  in multitudine fortitudinis suæ :  cujus multitudo obturavit torrentes,  et equi eorum cooperuerunt valles. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f1a733" class="outline-3">
+<h3 id="org8f1a733">Judith 16:6</h3>
+<div class="outline-text-3" id="text-org8f1a733">
+<p>
+Dixit se incensurum fines meos,  et juvenes meos occisurum gladio ;  infantes meos dare in prædam,  et virgines in captivitatem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bbb020" class="outline-3">
+<h3 id="org7bbb020">Judith 16:7</h3>
+<div class="outline-text-3" id="text-org7bbb020">
+<p>
+Dominus autem omnipotens nocuit eum,  et tradidit eum in manus feminæ, et confodit eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9823f1e" class="outline-3">
+<h3 id="org9823f1e">Judith 16:8</h3>
+<div class="outline-text-3" id="text-org9823f1e">
+<p>
+Non enim cecidit potens eorum a juvenibus,  nec filii Titan percusserunt eum,  nec excelsi gigantes opposuerunt se illi :  sed Judith filia Merari in specie faciei suæ dissolvit eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93b691f" class="outline-3">
+<h3 id="org93b691f">Judith 16:9</h3>
+<div class="outline-text-3" id="text-org93b691f">
+<p>
+Exuit enim se vestimento viduitatis,  et induit se vestimento lætitiæ  in exultatione filiorum Israël. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69619c3" class="outline-3">
+<h3 id="org69619c3">Judith 16:10</h3>
+<div class="outline-text-3" id="text-org69619c3">
+<p>
+Unxit faciem suam unguento,  et colligavit cincinnos suos mitra ;  accepit stolam novam ad decipiendum illum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23b1112" class="outline-3">
+<h3 id="org23b1112">Judith 16:11</h3>
+<div class="outline-text-3" id="text-org23b1112">
+<p>
+Sandalia ejus rapuerunt oculos ejus ;  pulchritudo ejus captivam fecit animam ejus :  amputavit pugione cervicem ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org922119d" class="outline-3">
+<h3 id="org922119d">Judith 16:12</h3>
+<div class="outline-text-3" id="text-org922119d">
+<p>
+Horruerunt Persæ constantiam ejus,  et Medi audaciam ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb7ef17" class="outline-3">
+<h3 id="orgdb7ef17">Judith 16:13</h3>
+<div class="outline-text-3" id="text-orgdb7ef17">
+<p>
+Tunc ululaverunt castra Assyriorum,  quando apparuerunt humiles mei, arescentes in siti. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9d7c88" class="outline-3">
+<h3 id="orge9d7c88">Judith 16:14</h3>
+<div class="outline-text-3" id="text-orge9d7c88">
+<p>
+Filii puellarum compunxerunt eos,  et sicut pueros fugientes occiderunt eos :  perierunt in prælio a facie Domini Dei mei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org675ae0b" class="outline-3">
+<h3 id="org675ae0b">Judith 16:15</h3>
+<div class="outline-text-3" id="text-org675ae0b">
+<p>
+Hymnum cantemus Domino ;  hymnum novum cantemus Deo nostro. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgded7880" class="outline-3">
+<h3 id="orgded7880">Judith 16:16</h3>
+<div class="outline-text-3" id="text-orgded7880">
+<p>
+Adonai Domine, magnus es tu,  et præclarus in virtute tua :  et quem superare nemo potest. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org301bb24" class="outline-3">
+<h3 id="org301bb24">Judith 16:17</h3>
+<div class="outline-text-3" id="text-org301bb24">
+<p>
+Tibi serviat omnis creatura tua,  quia dixisti, et facta sunt ;  misisti spiritum tuum, et creata sunt :  et non est qui resistat voci tuæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefe6e24" class="outline-3">
+<h3 id="orgefe6e24">Judith 16:18</h3>
+<div class="outline-text-3" id="text-orgefe6e24">
+<p>
+Montes a fundamentis movebuntur cum aquis ;  petræ, sicut cera, liquescent ante faciem tuam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8beac8c" class="outline-3">
+<h3 id="org8beac8c">Judith 16:19</h3>
+<div class="outline-text-3" id="text-org8beac8c">
+<p>
+Qui autem timent te,  magni erunt apud te per omnia. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5029567" class="outline-3">
+<h3 id="org5029567">Judith 16:20</h3>
+<div class="outline-text-3" id="text-org5029567">
+<p>
+Væ genti insurgenti super genus meum :  Dominus enim omnipotens vindicabit in eis ;  in die judicii visitabit illos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6c6c3a" class="outline-3">
+<h3 id="orge6c6c3a">Judith 16:21</h3>
+<div class="outline-text-3" id="text-orge6c6c3a">
+<p>
+Dabit enim ignem et vermes in carnes eorum,  ut urantur et sentiant usque in sempiternum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f4b7b6" class="outline-3">
+<h3 id="org1f4b7b6">Judith 16:22</h3>
+<div class="outline-text-3" id="text-org1f4b7b6">
+<p>
+Et factum est post hæc, omnis populus post victoriam venit in Jerusalem adorare Dominum : et mox ut purificati sunt, obtulerunt omnes holocausta, et vota, et repromissiones suas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84c3f6a" class="outline-3">
+<h3 id="org84c3f6a">Judith 16:23</h3>
+<div class="outline-text-3" id="text-org84c3f6a">
+<p>
+Porro Judith universa vasa bellica Holofernis, quæ dedit illi populus, et conopeum quod ipsa sustulerat de cubili ipsius, obtulit in anathema oblivionis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d42e7b" class="outline-3">
+<h3 id="org2d42e7b">Judith 16:24</h3>
+<div class="outline-text-3" id="text-org2d42e7b">
+<p>
+Erat autem populus jucundus secundum faciem sanctorum : et per tres menses gaudium hujus victoriæ celebratum est cum Judith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ed586d" class="outline-3">
+<h3 id="org4ed586d">Judith 16:25</h3>
+<div class="outline-text-3" id="text-org4ed586d">
+<p>
+Post dies autem illos, unusquisque rediit in domum suam : et Judith magna facta est in Bethulia, et præclarior erat universæ terræ Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1859d10" class="outline-3">
+<h3 id="org1859d10">Judith 16:26</h3>
+<div class="outline-text-3" id="text-org1859d10">
+<p>
+Erat enim virtuti castitas adjuncta, ita ut non cognosceret virum omnibus diebus vitæ suæ, ex quo defunctus est Manasses vir ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69e500d" class="outline-3">
+<h3 id="org69e500d">Judith 16:27</h3>
+<div class="outline-text-3" id="text-org69e500d">
+<p>
+Erat autem, diebus festis, procedens cum magna gloria.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadf9890" class="outline-3">
+<h3 id="orgadf9890">Judith 16:28</h3>
+<div class="outline-text-3" id="text-orgadf9890">
+<p>
+Mansit autem in domo viri sui annos centum quinque, et dimisit abram suam liberam : et defuncta est ac sepulta cum viro suo in Bethulia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org813ecdd" class="outline-3">
+<h3 id="org813ecdd">Judith 16:29</h3>
+<div class="outline-text-3" id="text-org813ecdd">
+<p>
+Luxitque illam omnis populus diebus septem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd911c4" class="outline-3">
+<h3 id="orgfd911c4">Judith 16:30</h3>
+<div class="outline-text-3" id="text-orgfd911c4">
+<p>
+In omni autem spatio vitæ ejus non fuit qui perturbaret Israël, et post mortem ejus annis multis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad4fa81" class="outline-3">
+<h3 id="orgad4fa81">Judith 16:31</h3>
+<div class="outline-text-3" id="text-orgad4fa81">
+<p>
+Dies autem victoriæ hujus festivitatis ab Hebræis in numero sanctorum dierum accipitur, et colitur a Judæis ex illo tempore usque in præsentem diem.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org58b5ba8">Malachi 1</a>
+<ul>
+<li><a href="#orged8ad43">Malachi 1:1</a></li>
+<li><a href="#org50fe083">Malachi 1:2</a></li>
+<li><a href="#org3c4c0de">Malachi 1:3</a></li>
+<li><a href="#org2950401">Malachi 1:4</a></li>
+<li><a href="#org24b6436">Malachi 1:5</a></li>
+<li><a href="#org26b481b">Malachi 1:6</a></li>
+<li><a href="#orgdf6206b">Malachi 1:7</a></li>
+<li><a href="#orgf43457f">Malachi 1:8</a></li>
+<li><a href="#org5f50965">Malachi 1:9</a></li>
+<li><a href="#orgec70374">Malachi 1:10</a></li>
+<li><a href="#org40d1127">Malachi 1:11</a></li>
+<li><a href="#orgdb6b2a1">Malachi 1:12</a></li>
+<li><a href="#orgfc07656">Malachi 1:13</a></li>
+<li><a href="#org7fa09c0">Malachi 1:14</a></li>
+</ul>
+</li>
+<li><a href="#org57a6564">Malachi 2</a>
+<ul>
+<li><a href="#org208620c">Malachi 2:1</a></li>
+<li><a href="#org6ab75fe">Malachi 2:2</a></li>
+<li><a href="#org2f77dad">Malachi 2:3</a></li>
+<li><a href="#org806f3a9">Malachi 2:4</a></li>
+<li><a href="#org87c598b">Malachi 2:5</a></li>
+<li><a href="#org60a75d8">Malachi 2:6</a></li>
+<li><a href="#org4a91d55">Malachi 2:7</a></li>
+<li><a href="#org815a4c3">Malachi 2:8</a></li>
+<li><a href="#org05bf56b">Malachi 2:9</a></li>
+<li><a href="#org2a560f9">Malachi 2:10</a></li>
+<li><a href="#orgcc2f588">Malachi 2:11</a></li>
+<li><a href="#org1f3880b">Malachi 2:12</a></li>
+<li><a href="#org2d060a7">Malachi 2:13</a></li>
+<li><a href="#orgf21d700">Malachi 2:14</a></li>
+<li><a href="#orga1049c8">Malachi 2:15</a></li>
+<li><a href="#org51374cd">Malachi 2:16</a></li>
+<li><a href="#orgafa4091">Malachi 2:17</a></li>
+</ul>
+</li>
+<li><a href="#orgd28826e">Malachi 3</a>
+<ul>
+<li><a href="#org92d5ff4">Malachi 3:1</a></li>
+<li><a href="#org21f325d">Malachi 3:2</a></li>
+<li><a href="#org7e4e488">Malachi 3:3</a></li>
+<li><a href="#org85bddb2">Malachi 3:4</a></li>
+<li><a href="#org7909b32">Malachi 3:5</a></li>
+<li><a href="#org0b08d38">Malachi 3:6</a></li>
+<li><a href="#orgb44ee51">Malachi 3:7</a></li>
+<li><a href="#org7ae201e">Malachi 3:8</a></li>
+<li><a href="#org0bd46ed">Malachi 3:9</a></li>
+<li><a href="#orgc17bd85">Malachi 3:10</a></li>
+<li><a href="#org24bdec3">Malachi 3:11</a></li>
+<li><a href="#orgcf10e38">Malachi 3:12</a></li>
+<li><a href="#orgcf86c2d">Malachi 3:13</a></li>
+<li><a href="#orgca072ed">Malachi 3:14</a></li>
+<li><a href="#orgc37095c">Malachi 3:15</a></li>
+<li><a href="#orgbc848a5">Malachi 3:16</a></li>
+<li><a href="#org59ebb6f">Malachi 3:17</a></li>
+<li><a href="#orgaeab424">Malachi 3:18</a></li>
+</ul>
+</li>
+<li><a href="#org9eed36a">Malachi 4</a>
+<ul>
+<li><a href="#org97f29fe">Malachi 4:1</a></li>
+<li><a href="#orge2120cf">Malachi 4:2</a></li>
+<li><a href="#org8004160">Malachi 4:3</a></li>
+<li><a href="#orgd50ee4c">Malachi 4:4</a></li>
+<li><a href="#org1b9de18">Malachi 4:5</a></li>
+<li><a href="#org7d91924">Malachi 4:6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org58b5ba8" class="outline-2">
+<h2 id="org58b5ba8">Malachi 1</h2>
+<div class="outline-text-2" id="text-org58b5ba8">
+</div>
+<div id="outline-container-orged8ad43" class="outline-3">
+<h3 id="orged8ad43">Malachi 1:1</h3>
+<div class="outline-text-3" id="text-orged8ad43">
+<p>
+Onus verbi Domini ad Israël in manu Malachiæ.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50fe083" class="outline-3">
+<h3 id="org50fe083">Malachi 1:2</h3>
+<div class="outline-text-3" id="text-org50fe083">
+<p>
+Dilexi vos, dicit Dominus, et dixistis : In quo dilexisti nos ? Nonne frater erat Esau Jacob ? dicit Dominus : et dilexi Jacob,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c4c0de" class="outline-3">
+<h3 id="org3c4c0de">Malachi 1:3</h3>
+<div class="outline-text-3" id="text-org3c4c0de">
+<p>
+Esau autem odio habui, et posui montes ejus in solitudinem, et hæreditatem ejus in dracones deserti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2950401" class="outline-3">
+<h3 id="org2950401">Malachi 1:4</h3>
+<div class="outline-text-3" id="text-org2950401">
+<p>
+Quod si dixerit Idumæa : Destructi sumus, sed revertentes ædificabimus quæ destructa sunt : hæc dicit Dominus exercituum : Isti ædificabunt, et ego destruam : et vocabuntur termini impietatis, et populus cui iratus est Dominus usque in æternum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24b6436" class="outline-3">
+<h3 id="org24b6436">Malachi 1:5</h3>
+<div class="outline-text-3" id="text-org24b6436">
+<p>
+Et oculi vestri videbunt, et vos dicetis : Magnificetur Dominus super terminum Israël.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26b481b" class="outline-3">
+<h3 id="org26b481b">Malachi 1:6</h3>
+<div class="outline-text-3" id="text-org26b481b">
+<p>
+Filius honorat patrem, et servus dominum suum. Si ergo pater ego sum, ubi est honor meus ? et si Dominus ego sum, ubi est timor meus ? dicit Dominus exercituum. Ad vos, o sacerdotes, qui despicitis nomen meum, et dixistis : In quo despeximus nomen tuum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf6206b" class="outline-3">
+<h3 id="orgdf6206b">Malachi 1:7</h3>
+<div class="outline-text-3" id="text-orgdf6206b">
+<p>
+Offertis super altare meum panem pollutum, et dicitis : In quo polluimus te ? in eo quod dicitis : Mensa Domini despecta est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf43457f" class="outline-3">
+<h3 id="orgf43457f">Malachi 1:8</h3>
+<div class="outline-text-3" id="text-orgf43457f">
+<p>
+Si offeratis cæcum ad immolandum, nonne malum est ? et si offeratis claudum et languidum, nonne malum est ? offer illud duci tuo, si placuerit ei, aut si susceperit faciem tuam, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f50965" class="outline-3">
+<h3 id="org5f50965">Malachi 1:9</h3>
+<div class="outline-text-3" id="text-org5f50965">
+<p>
+Et nunc deprecamini vultum Dei ut misereatur vestri (de manu enim vestra factum est hoc), si quomodo suscipiat facies vestras, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec70374" class="outline-3">
+<h3 id="orgec70374">Malachi 1:10</h3>
+<div class="outline-text-3" id="text-orgec70374">
+<p>
+Quis est in vobis qui claudat ostia, et incendat altare meum gratuito ? non est mihi voluntas in vobis, dicit Dominus exercituum, et munus non suscipiam de manu vestra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40d1127" class="outline-3">
+<h3 id="org40d1127">Malachi 1:11</h3>
+<div class="outline-text-3" id="text-org40d1127">
+<p>
+Ab ortu enim solis usque ad occasum, magnum est nomen meum in gentibus, et in omni loco sacrificatur : et offertur nomini meo oblatio munda, quia magnum est nomen meum in gentibus, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb6b2a1" class="outline-3">
+<h3 id="orgdb6b2a1">Malachi 1:12</h3>
+<div class="outline-text-3" id="text-orgdb6b2a1">
+<p>
+Et vos polluistis illud in eo quod dicitis : Mensa Domini contaminata est, et quod superponitur contemptibilis est, cum igne qui illud devorat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc07656" class="outline-3">
+<h3 id="orgfc07656">Malachi 1:13</h3>
+<div class="outline-text-3" id="text-orgfc07656">
+<p>
+Et dixistis : Ecce de labore, et exsufflastis illud, dicit Dominus exercituum : et intulistis de rapinis claudum et languidum, et intulistis munus : numquid suscipiam illud de manu vestra ? dicit Dominus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7fa09c0" class="outline-3">
+<h3 id="org7fa09c0">Malachi 1:14</h3>
+<div class="outline-text-3" id="text-org7fa09c0">
+<p>
+Maledictus dolosus qui habet in grege suo masculum, et votum faciens immolat debile Domino : quia rex magnus ego, dicit Dominus exercituum, et nomen meum horribile in gentibus.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org57a6564" class="outline-2">
+<h2 id="org57a6564">Malachi 2</h2>
+<div class="outline-text-2" id="text-org57a6564">
+</div>
+<div id="outline-container-org208620c" class="outline-3">
+<h3 id="org208620c">Malachi 2:1</h3>
+<div class="outline-text-3" id="text-org208620c">
+<p>
+Et nunc ad vos mandatum hoc, o sacerdotes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ab75fe" class="outline-3">
+<h3 id="org6ab75fe">Malachi 2:2</h3>
+<div class="outline-text-3" id="text-org6ab75fe">
+<p>
+Si nolueritis audire, et si nolueritis ponere super cor, ut detis gloriam nomini meo, ait Dominus exercituum, mittam in vos egestatem, et maledicam benedictionibus vestris, et maledicam illis, quoniam non posuistis super cor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f77dad" class="outline-3">
+<h3 id="org2f77dad">Malachi 2:3</h3>
+<div class="outline-text-3" id="text-org2f77dad">
+<p>
+Ecce ego projiciam vobis brachium, et dispergam super vultum vestrum stercus solemnitatum vestrarum, et assumet vos secum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org806f3a9" class="outline-3">
+<h3 id="org806f3a9">Malachi 2:4</h3>
+<div class="outline-text-3" id="text-org806f3a9">
+<p>
+Et scietis quia misi ad vos mandatum istud, ut esset pactum meum cum Levi, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87c598b" class="outline-3">
+<h3 id="org87c598b">Malachi 2:5</h3>
+<div class="outline-text-3" id="text-org87c598b">
+<p>
+Pactum meum fuit cum eo vitæ et pacis : et dedi ei timorem, et timuit me, et a facie nominis mei pavebat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60a75d8" class="outline-3">
+<h3 id="org60a75d8">Malachi 2:6</h3>
+<div class="outline-text-3" id="text-org60a75d8">
+<p>
+Lex veritatis fuit in ore ejus, et iniquitas non est inventa in labiis ejus : in pace et in æquitate ambulavit mecum, et multos avertit ab iniquitate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a91d55" class="outline-3">
+<h3 id="org4a91d55">Malachi 2:7</h3>
+<div class="outline-text-3" id="text-org4a91d55">
+<p>
+Labia enim sacerdotis custodient scientiam, et legem requirent ex ore ejus, quia angelus Domini exercituum est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org815a4c3" class="outline-3">
+<h3 id="org815a4c3">Malachi 2:8</h3>
+<div class="outline-text-3" id="text-org815a4c3">
+<p>
+Vos autem recessistis de via, et scandalizastis plurimos in lege : irritum fecistis pactum Levi, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05bf56b" class="outline-3">
+<h3 id="org05bf56b">Malachi 2:9</h3>
+<div class="outline-text-3" id="text-org05bf56b">
+<p>
+Propter quod et ego dedi vos contemptibiles, et humiles omnibus populis, sicut non servastis vias meas, et accepistis faciem in lege.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a560f9" class="outline-3">
+<h3 id="org2a560f9">Malachi 2:10</h3>
+<div class="outline-text-3" id="text-org2a560f9">
+<p>
+Numquid non pater unus omnium nostrum ? numquid non Deus unus creavit nos ? quare ergo despicit unusquisque nostrum fratrem suum, violans pactum patrum nostrorum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc2f588" class="outline-3">
+<h3 id="orgcc2f588">Malachi 2:11</h3>
+<div class="outline-text-3" id="text-orgcc2f588">
+<p>
+Transgressus est Juda, et abominatio facta est in Israël et in Jerusalem, quia contaminavit Juda sanctificationem Domini, quam dilexit, et habuit filiam dei alieni.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f3880b" class="outline-3">
+<h3 id="org1f3880b">Malachi 2:12</h3>
+<div class="outline-text-3" id="text-org1f3880b">
+<p>
+Disperdet Dominus virum qui fecerit hoc, magistrum et discipulum, de tabernaculis Jacob, et offerentem munus Domino exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d060a7" class="outline-3">
+<h3 id="org2d060a7">Malachi 2:13</h3>
+<div class="outline-text-3" id="text-org2d060a7">
+<p>
+Et hoc rursum fecistis : operiebatis lacrimis altare Domini, fletu et mugitu, ita ut non respiciam ultra ad sacrificium, nec accipiam placabile quid de manu vestra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf21d700" class="outline-3">
+<h3 id="orgf21d700">Malachi 2:14</h3>
+<div class="outline-text-3" id="text-orgf21d700">
+<p>
+Et dixistis : Quam ob causam ? Quia Dominus testificatus est inter te et uxorem pubertatis tuæ, quam tu despexisti : et hæc particeps tua, et uxor fœderis tui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1049c8" class="outline-3">
+<h3 id="orga1049c8">Malachi 2:15</h3>
+<div class="outline-text-3" id="text-orga1049c8">
+<p>
+Nonne unus fecit, et residuum spiritus ejus est ? et quid unus quærit, nisi semen Dei ? custodite ergo spiritum vestrum, et uxorem adolescentiæ tuæ noli despicere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51374cd" class="outline-3">
+<h3 id="org51374cd">Malachi 2:16</h3>
+<div class="outline-text-3" id="text-org51374cd">
+<p>
+Cum odio habueris, dimitte, dicit Dominus Deus Israël : operiet autem iniquitas vestimentum ejus, dicit Dominus exercituum. Custodite spiritum vestrum, et nolite despicere.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafa4091" class="outline-3">
+<h3 id="orgafa4091">Malachi 2:17</h3>
+<div class="outline-text-3" id="text-orgafa4091">
+<p>
+Laborare fecistis Dominum in sermonibus vestris, et dixistis : In quo eum fecimus laborare ? In eo quod dicitis : Omnis qui facit malum bonus est in conspectu Domini, et tales ei placent : aut certe ubi est Deus judicii ?   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd28826e" class="outline-2">
+<h2 id="orgd28826e">Malachi 3</h2>
+<div class="outline-text-2" id="text-orgd28826e">
+</div>
+<div id="outline-container-org92d5ff4" class="outline-3">
+<h3 id="org92d5ff4">Malachi 3:1</h3>
+<div class="outline-text-3" id="text-org92d5ff4">
+<p>
+Ecce ego mitto angelum meum, et præparabit viam ante faciem meam : et statim veniet ad templum suum Dominator quem vos quæritis, et angelus testamenti quem vos vultis. Ecce venit, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21f325d" class="outline-3">
+<h3 id="org21f325d">Malachi 3:2</h3>
+<div class="outline-text-3" id="text-org21f325d">
+<p>
+Et quis poterit cogitare diem adventus ejus, et quis stabit ad videndum eum ? ipse enim quasi ignis conflans, et quasi herba fullonum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e4e488" class="outline-3">
+<h3 id="org7e4e488">Malachi 3:3</h3>
+<div class="outline-text-3" id="text-org7e4e488">
+<p>
+et sedebit conflans, et emundans argentum : et purgabit filios Levi, et colabit eos quasi aurum et quasi argentum, et erunt Domino offerentes sacrificia in justitia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85bddb2" class="outline-3">
+<h3 id="org85bddb2">Malachi 3:4</h3>
+<div class="outline-text-3" id="text-org85bddb2">
+<p>
+Et placebit Domino sacrificium Juda et Jerusalem, sicut dies sæculi, et sicut anni antiqui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7909b32" class="outline-3">
+<h3 id="org7909b32">Malachi 3:5</h3>
+<div class="outline-text-3" id="text-org7909b32">
+<p>
+Et accedam ad vos in judicio, et ero testis velox maleficis, et adulteris, et perjuris, et qui calumniantur mercedem mercenarii, viduas et pupillos, et opprimunt peregrinum, nec timuerunt me, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b08d38" class="outline-3">
+<h3 id="org0b08d38">Malachi 3:6</h3>
+<div class="outline-text-3" id="text-org0b08d38">
+<p>
+Ego enim Dominus, et non mutor : et vos filii Jacob, non estis consumpti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb44ee51" class="outline-3">
+<h3 id="orgb44ee51">Malachi 3:7</h3>
+<div class="outline-text-3" id="text-orgb44ee51">
+<p>
+A diebus enim patrum vestrorum recessistis a legitimis meis, et non custodistis : revertimini ad me, et revertar ad vos, dicit Dominus exercituum. Et dixistis : In quo revertemur ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ae201e" class="outline-3">
+<h3 id="org7ae201e">Malachi 3:8</h3>
+<div class="outline-text-3" id="text-org7ae201e">
+<p>
+Si affliget homo Deum, quia vos configitis me ? Et dixistis : In quo configimus te ? In decimis et in primitiis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bd46ed" class="outline-3">
+<h3 id="org0bd46ed">Malachi 3:9</h3>
+<div class="outline-text-3" id="text-org0bd46ed">
+<p>
+Et in penuria vos maledicti estis, et me vos configitis gens tota.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc17bd85" class="outline-3">
+<h3 id="orgc17bd85">Malachi 3:10</h3>
+<div class="outline-text-3" id="text-orgc17bd85">
+<p>
+Inferte omnem decimam in horreum, et sit cibus in domo mea : et probate me super hoc, dicit Dominus : si non aperuero vobis cataractas cæli, et effudero vobis benedictionem usque ad abundantiam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24bdec3" class="outline-3">
+<h3 id="org24bdec3">Malachi 3:11</h3>
+<div class="outline-text-3" id="text-org24bdec3">
+<p>
+et increpabo pro vobis devorantem, et non corrumpet fructum terræ vestræ, nec erit sterilis vinea in agro, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf10e38" class="outline-3">
+<h3 id="orgcf10e38">Malachi 3:12</h3>
+<div class="outline-text-3" id="text-orgcf10e38">
+<p>
+Et beatos vos dicent omnes gentes : eritis enim vos terra desiderabilis, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf86c2d" class="outline-3">
+<h3 id="orgcf86c2d">Malachi 3:13</h3>
+<div class="outline-text-3" id="text-orgcf86c2d">
+<p>
+Invaluerunt super me verba vestra, dicit Dominus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca072ed" class="outline-3">
+<h3 id="orgca072ed">Malachi 3:14</h3>
+<div class="outline-text-3" id="text-orgca072ed">
+<p>
+Et dixistis : Quid locuti sumus contra te ? Dixistis : Vanus est qui servit Deo : et quod emolumentum quia custodivimus præcepta ejus, et quia ambulavimus tristes coram Domino exercituum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc37095c" class="outline-3">
+<h3 id="orgc37095c">Malachi 3:15</h3>
+<div class="outline-text-3" id="text-orgc37095c">
+<p>
+Ergo nunc beatos dicimus arrogantes : siquidem ædificati sunt facientes impietatem, et tentaverunt Deum, et salvi facti sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc848a5" class="outline-3">
+<h3 id="orgbc848a5">Malachi 3:16</h3>
+<div class="outline-text-3" id="text-orgbc848a5">
+<p>
+Tunc locuti sunt timentes Dominum, unusquisque cum proximo suo : et attendit Dominus, et audivit, et scriptus est liber monumenti coram eo timentibus Dominum, et cogitantibus nomen ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59ebb6f" class="outline-3">
+<h3 id="org59ebb6f">Malachi 3:17</h3>
+<div class="outline-text-3" id="text-org59ebb6f">
+<p>
+Et erunt mihi, ait Dominus exercituum, in die qua ego facio, in peculium : et parcam eis, sicut parcit vir filio suo servienti sibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaeab424" class="outline-3">
+<h3 id="orgaeab424">Malachi 3:18</h3>
+<div class="outline-text-3" id="text-orgaeab424">
+<p>
+Et convertemini, et videbitis quid sit inter justum et impium, et inter servientem Deo et non servientem ei.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9eed36a" class="outline-2">
+<h2 id="org9eed36a">Malachi 4</h2>
+<div class="outline-text-2" id="text-org9eed36a">
+</div>
+<div id="outline-container-org97f29fe" class="outline-3">
+<h3 id="org97f29fe">Malachi 4:1</h3>
+<div class="outline-text-3" id="text-org97f29fe">
+<p>
+Ecce enim dies veniet succensa quasi caminus : et erunt omnes superbi et omnes facientes impietatem stipula : et inflammabit eos dies veniens, dicit Dominus exercituum, quæ non derelinquet eis radicem et germen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2120cf" class="outline-3">
+<h3 id="orge2120cf">Malachi 4:2</h3>
+<div class="outline-text-3" id="text-orge2120cf">
+<p>
+Et orietur vobis timentibus nomen meum sol justitiæ, et sanitas in pennis ejus : et egrediemini, et salietis sicut vituli de armento.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8004160" class="outline-3">
+<h3 id="org8004160">Malachi 4:3</h3>
+<div class="outline-text-3" id="text-org8004160">
+<p>
+Et calcabitis impios, cum fuerint cinis sub planta pedum vestrorum, in die qua ego facio, dicit Dominus exercituum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd50ee4c" class="outline-3">
+<h3 id="orgd50ee4c">Malachi 4:4</h3>
+<div class="outline-text-3" id="text-orgd50ee4c">
+<p>
+Mementote legis Moysi servi mei, quam mandavi ei in Horeb ad omnem Israël, præcepta et judicia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b9de18" class="outline-3">
+<h3 id="org1b9de18">Malachi 4:5</h3>
+<div class="outline-text-3" id="text-org1b9de18">
+<p>
+Ecce ego mittam vobis Eliam prophetam, antequam veniat dies Domini magnus et horribilis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d91924" class="outline-3">
+<h3 id="org7d91924">Malachi 4:6</h3>
+<div class="outline-text-3" id="text-org7d91924">
+<p>
+Et convertet cor patrum ad filios, et cor filiorum ad patres eorum : ne forte veniam, et percutiam terram anathemate.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

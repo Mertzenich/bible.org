@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb675719">Joel 1</a>
+<ul>
+<li><a href="#org7a829db">Joel 1:1</a></li>
+<li><a href="#org2504272">Joel 1:2</a></li>
+<li><a href="#org4fd8f23">Joel 1:3</a></li>
+<li><a href="#orgec2e516">Joel 1:4</a></li>
+<li><a href="#orgcaf4a71">Joel 1:5</a></li>
+<li><a href="#org4d1ba30">Joel 1:6</a></li>
+<li><a href="#orgcf269e1">Joel 1:7</a></li>
+<li><a href="#org4c25585">Joel 1:8</a></li>
+<li><a href="#org3ac6ac7">Joel 1:9</a></li>
+<li><a href="#orged18e92">Joel 1:10</a></li>
+<li><a href="#org07abfb8">Joel 1:11</a></li>
+<li><a href="#org7d6e088">Joel 1:12</a></li>
+<li><a href="#org678a811">Joel 1:13</a></li>
+<li><a href="#orgc95f85a">Joel 1:14</a></li>
+<li><a href="#org8c55569">Joel 1:15</a></li>
+<li><a href="#org1fde111">Joel 1:16</a></li>
+<li><a href="#orgd08faaa">Joel 1:17</a></li>
+<li><a href="#org227651b">Joel 1:18</a></li>
+<li><a href="#org32fe204">Joel 1:19</a></li>
+<li><a href="#orgfa1dbe2">Joel 1:20</a></li>
+</ul>
+</li>
+<li><a href="#org47cec76">Joel 2</a>
+<ul>
+<li><a href="#org3f1e1f7">Joel 2:1</a></li>
+<li><a href="#org697b621">Joel 2:2</a></li>
+<li><a href="#org0e0cb18">Joel 2:3</a></li>
+<li><a href="#orgbaa462f">Joel 2:4</a></li>
+<li><a href="#org8b954c5">Joel 2:5</a></li>
+<li><a href="#org0cbb0f6">Joel 2:6</a></li>
+<li><a href="#org9b2d199">Joel 2:7</a></li>
+<li><a href="#org776e107">Joel 2:8</a></li>
+<li><a href="#org0e15283">Joel 2:9</a></li>
+<li><a href="#orgbd03f2f">Joel 2:10</a></li>
+<li><a href="#org6e4341e">Joel 2:11</a></li>
+<li><a href="#org60b3392">Joel 2:12</a></li>
+<li><a href="#org6e75108">Joel 2:13</a></li>
+<li><a href="#orgca7d16e">Joel 2:14</a></li>
+<li><a href="#orgc525826">Joel 2:15</a></li>
+<li><a href="#orgd7416f7">Joel 2:16</a></li>
+<li><a href="#org6306070">Joel 2:17</a></li>
+<li><a href="#orgc324843">Joel 2:18</a></li>
+<li><a href="#orgbcbbf72">Joel 2:19</a></li>
+<li><a href="#orgfa064b1">Joel 2:20</a></li>
+<li><a href="#org1ece8f4">Joel 2:21</a></li>
+<li><a href="#org8472e11">Joel 2:22</a></li>
+<li><a href="#orgf555c1c">Joel 2:23</a></li>
+<li><a href="#org1dc824b">Joel 2:24</a></li>
+<li><a href="#orge3e094b">Joel 2:25</a></li>
+<li><a href="#org23c9211">Joel 2:26</a></li>
+<li><a href="#org6b5aebe">Joel 2:27</a></li>
+<li><a href="#orgd110e6a">Joel 2:28</a></li>
+<li><a href="#orgd0a1d31">Joel 2:29</a></li>
+<li><a href="#org8f67748">Joel 2:30</a></li>
+<li><a href="#orgf395bea">Joel 2:31</a></li>
+<li><a href="#orgd2b8458">Joel 2:32</a></li>
+</ul>
+</li>
+<li><a href="#orgbabfa18">Joel 3</a>
+<ul>
+<li><a href="#org348e54e">Joel 3:1</a></li>
+<li><a href="#org3e6fe4f">Joel 3:2</a></li>
+<li><a href="#orge50e348">Joel 3:3</a></li>
+<li><a href="#org6d52c14">Joel 3:4</a></li>
+<li><a href="#org98ff163">Joel 3:5</a></li>
+<li><a href="#orgb3c5e3b">Joel 3:6</a></li>
+<li><a href="#org0b3a39e">Joel 3:7</a></li>
+<li><a href="#org5d60c13">Joel 3:8</a></li>
+<li><a href="#org0c49872">Joel 3:9</a></li>
+<li><a href="#org2916bfe">Joel 3:10</a></li>
+<li><a href="#org054b06d">Joel 3:11</a></li>
+<li><a href="#orgd42c424">Joel 3:12</a></li>
+<li><a href="#org4f37bbb">Joel 3:13</a></li>
+<li><a href="#org4bca557">Joel 3:14</a></li>
+<li><a href="#orgbcfd983">Joel 3:15</a></li>
+<li><a href="#org7f00e87">Joel 3:16</a></li>
+<li><a href="#orge319e84">Joel 3:17</a></li>
+<li><a href="#orgad32dbb">Joel 3:18</a></li>
+<li><a href="#orgdef1a9e">Joel 3:19</a></li>
+<li><a href="#org23a3605">Joel 3:20</a></li>
+<li><a href="#org280c8e7">Joel 3:21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb675719" class="outline-2">
+<h2 id="orgb675719">Joel 1</h2>
+<div class="outline-text-2" id="text-orgb675719">
+</div>
+<div id="outline-container-org7a829db" class="outline-3">
+<h3 id="org7a829db">Joel 1:1</h3>
+<div class="outline-text-3" id="text-org7a829db">
+<p>
+The word of the Lord, that came to Joel, the son of Phatuel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2504272" class="outline-3">
+<h3 id="org2504272">Joel 1:2</h3>
+<div class="outline-text-3" id="text-org2504272">
+<p>
+Hear this, ye old men, and give ear, all ye inhabitants of the land: did this ever happen in your days, or in the days of your fathers?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fd8f23" class="outline-3">
+<h3 id="org4fd8f23">Joel 1:3</h3>
+<div class="outline-text-3" id="text-org4fd8f23">
+<p>
+Tell ye of this to your children, and let your children tell their children, and their children to another generation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec2e516" class="outline-3">
+<h3 id="orgec2e516">Joel 1:4</h3>
+<div class="outline-text-3" id="text-orgec2e516">
+<p>
+That which the palmerworm hath left, the locust hath eaten: and that which the locust hath left, the bruchus hath eaten: and that which the bruchus hath left, the mildew hath destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcaf4a71" class="outline-3">
+<h3 id="orgcaf4a71">Joel 1:5</h3>
+<div class="outline-text-3" id="text-orgcaf4a71">
+<p>
+Awake, ye that are drunk, and weep, and mourn all ye that take delight in drinking sweet wine: for it is cut off from your mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d1ba30" class="outline-3">
+<h3 id="org4d1ba30">Joel 1:6</h3>
+<div class="outline-text-3" id="text-org4d1ba30">
+<p>
+For a nation come up upon my land, strong, and without number: his teeth are like the teeth of a lion: and his cheek teeth as of a lion&rsquo;s whelp.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf269e1" class="outline-3">
+<h3 id="orgcf269e1">Joel 1:7</h3>
+<div class="outline-text-3" id="text-orgcf269e1">
+<p>
+He hath laid my vineyard waste, and hath pilled off the bark of my fig tree: he hath stripped it bare, and cast it away; the branches thereof are made white.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c25585" class="outline-3">
+<h3 id="org4c25585">Joel 1:8</h3>
+<div class="outline-text-3" id="text-org4c25585">
+<p>
+Lament like a virgin girded with sackcloth for the husband of her youth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ac6ac7" class="outline-3">
+<h3 id="org3ac6ac7">Joel 1:9</h3>
+<div class="outline-text-3" id="text-org3ac6ac7">
+<p>
+Sacrifice and libation is cut off from the house of the Lord: the priests, the Lord&rsquo;s ministers, have mourned:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged18e92" class="outline-3">
+<h3 id="orged18e92">Joel 1:10</h3>
+<div class="outline-text-3" id="text-orged18e92">
+<p>
+The country is destroyed, the ground hath mourned: for the corn is wasted, the wine is confounded, the oil hath languished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07abfb8" class="outline-3">
+<h3 id="org07abfb8">Joel 1:11</h3>
+<div class="outline-text-3" id="text-org07abfb8">
+<p>
+The husbandmen are ashamed, the vinedressers have howled for the wheat, and for the barley, because the harvest of the field is perished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d6e088" class="outline-3">
+<h3 id="org7d6e088">Joel 1:12</h3>
+<div class="outline-text-3" id="text-org7d6e088">
+<p>
+The vineyard is confounded, and the fig tree hath languished: the pomegranate tree, and the palm tree, and the apple tree, and all the trees of the field are withered: because joy is withdrawn from the children of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org678a811" class="outline-3">
+<h3 id="org678a811">Joel 1:13</h3>
+<div class="outline-text-3" id="text-org678a811">
+<p>
+Gird yourselves, and lament, O ye priests, howl, ye ministers of the altars: go in, lie in sackcloth, ye ministers of my God: because sacrifice and libation is cut off from the house of your God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc95f85a" class="outline-3">
+<h3 id="orgc95f85a">Joel 1:14</h3>
+<div class="outline-text-3" id="text-orgc95f85a">
+<p>
+Sanctify ye a fast, call an assembly, gather together the ancients, all the inhabitants of the land into the house of your God: and cry ye to the Lord:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c55569" class="outline-3">
+<h3 id="org8c55569">Joel 1:15</h3>
+<div class="outline-text-3" id="text-org8c55569">
+<p>
+Ah, ah, ah, for the day: because the day of the Lord is at hand, and it shall come like destruction from the mighty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fde111" class="outline-3">
+<h3 id="org1fde111">Joel 1:16</h3>
+<div class="outline-text-3" id="text-org1fde111">
+<p>
+Is not your food cut off before your eyes, joy and gladness from the house of our God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd08faaa" class="outline-3">
+<h3 id="orgd08faaa">Joel 1:17</h3>
+<div class="outline-text-3" id="text-orgd08faaa">
+<p>
+The beasts have rotted in their dung, the barns are destroyed, the storehouses are broken down: because the corn is confounded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org227651b" class="outline-3">
+<h3 id="org227651b">Joel 1:18</h3>
+<div class="outline-text-3" id="text-org227651b">
+<p>
+Why did the beasts groan, why did the herds of cattle low? because there is no pasture for them: yea, and the flocks of sheep are perished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32fe204" class="outline-3">
+<h3 id="org32fe204">Joel 1:19</h3>
+<div class="outline-text-3" id="text-org32fe204">
+<p>
+To thee, O Lord, will I cry: because fire hath devoured the beautiful places of the wilderness: and the flame hath burnt all the trees of the country.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa1dbe2" class="outline-3">
+<h3 id="orgfa1dbe2">Joel 1:20</h3>
+<div class="outline-text-3" id="text-orgfa1dbe2">
+<p>
+Yea, and the beasts of the field have looked up to thee, as a garden bed that thirsteth after rain, for the springs of waters are dried up, and fire hath devoured the beautiful places of the wilderness. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org47cec76" class="outline-2">
+<h2 id="org47cec76">Joel 2</h2>
+<div class="outline-text-2" id="text-org47cec76">
+</div>
+<div id="outline-container-org3f1e1f7" class="outline-3">
+<h3 id="org3f1e1f7">Joel 2:1</h3>
+<div class="outline-text-3" id="text-org3f1e1f7">
+<p>
+Blow ye the trumpet in Sion, sound an alarm in my holy mountain, let all the inhabitants of the land tremble: because the day of the Lord cometh, because it is nigh at hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org697b621" class="outline-3">
+<h3 id="org697b621">Joel 2:2</h3>
+<div class="outline-text-3" id="text-org697b621">
+<p>
+A day of darkness, and of gloominess, a day of clouds and whirlwinds: a numerous and strong people as the morning spread upon the mountains: the like to it hath not been from the beginning, nor shall be after it, even to the years of generation and generation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e0cb18" class="outline-3">
+<h3 id="org0e0cb18">Joel 2:3</h3>
+<div class="outline-text-3" id="text-org0e0cb18">
+<p>
+Before the face thereof a devouring fire, and behind it a burning flame: the land is like a garden of pleasure before it, and behind it a desolate wilderness, neither is there any one that can escape it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbaa462f" class="outline-3">
+<h3 id="orgbaa462f">Joel 2:4</h3>
+<div class="outline-text-3" id="text-orgbaa462f">
+<p>
+The appearance of them is as the appearance of horses, and they shall run like horsemen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b954c5" class="outline-3">
+<h3 id="org8b954c5">Joel 2:5</h3>
+<div class="outline-text-3" id="text-org8b954c5">
+<p>
+They shall leap like the noise of chariots upon the tops of mountains, like the noise of a flame of fire devouring the stubble, as a strong people prepared to battle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0cbb0f6" class="outline-3">
+<h3 id="org0cbb0f6">Joel 2:6</h3>
+<div class="outline-text-3" id="text-org0cbb0f6">
+<p>
+At their presence the people shall be in grievous pains: all faces shall be made like a kettle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b2d199" class="outline-3">
+<h3 id="org9b2d199">Joel 2:7</h3>
+<div class="outline-text-3" id="text-org9b2d199">
+<p>
+They shall run like valiant men: like men of war they shall scale the wall: the men shall march every one on his way, and they shall not turn aside from their ranks.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org776e107" class="outline-3">
+<h3 id="org776e107">Joel 2:8</h3>
+<div class="outline-text-3" id="text-org776e107">
+<p>
+No one shall press upon his brother: they shall walk every one in his path: yea, and they shall fall through the windows, and shall take no harm.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e15283" class="outline-3">
+<h3 id="org0e15283">Joel 2:9</h3>
+<div class="outline-text-3" id="text-org0e15283">
+<p>
+They shall enter into the city: they shall run upon the wall, they shall climb up the houses, they shall come in at the windows, as a thief.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd03f2f" class="outline-3">
+<h3 id="orgbd03f2f">Joel 2:10</h3>
+<div class="outline-text-3" id="text-orgbd03f2f">
+<p>
+At their presence the earth hath trembled, the heavens are moved: the sun and moon are darkened, and the stars have withdrawn their shining.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e4341e" class="outline-3">
+<h3 id="org6e4341e">Joel 2:11</h3>
+<div class="outline-text-3" id="text-org6e4341e">
+<p>
+And the Lord hath uttered his voice before the face of his army: for his armies are exceedingly great, for they are strong, and execute his word: for the day of the Lord is great and very terrible: and who can stand it?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60b3392" class="outline-3">
+<h3 id="org60b3392">Joel 2:12</h3>
+<div class="outline-text-3" id="text-org60b3392">
+<p>
+Now, therefore, saith the Lord. Be converted to me with all your heart, in fasting, and in weeping, and mourning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e75108" class="outline-3">
+<h3 id="org6e75108">Joel 2:13</h3>
+<div class="outline-text-3" id="text-org6e75108">
+<p>
+And rend your hearts, and not your garments and turn to the Lord your God: for he is gracious and merciful, patient and rich in mercy, and ready to repent of the evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca7d16e" class="outline-3">
+<h3 id="orgca7d16e">Joel 2:14</h3>
+<div class="outline-text-3" id="text-orgca7d16e">
+<p>
+Who knoweth but he will return, and forgive, and leave a blessing behind him, sacrifice and libation to the Lord your God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc525826" class="outline-3">
+<h3 id="orgc525826">Joel 2:15</h3>
+<div class="outline-text-3" id="text-orgc525826">
+<p>
+Blow the trumpet in Sion, sanctify a fast, call a solemn assembly,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7416f7" class="outline-3">
+<h3 id="orgd7416f7">Joel 2:16</h3>
+<div class="outline-text-3" id="text-orgd7416f7">
+<p>
+Gather together the people, sanctify the church, assemble the ancients, gather together the little ones, and them that suck at the breasts: let the bridegroom go forth from his bed, and the bride out of her bridal chamber.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6306070" class="outline-3">
+<h3 id="org6306070">Joel 2:17</h3>
+<div class="outline-text-3" id="text-org6306070">
+<p>
+Between the porch and the altar the priests, the Lord&rsquo;s ministers, shall weep, and shall say: Spare, O Lord, spare thy people: and give not thy inheritance to reproach, that the heathens should rule over them. Why should they say among the nations: Where is their God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc324843" class="outline-3">
+<h3 id="orgc324843">Joel 2:18</h3>
+<div class="outline-text-3" id="text-orgc324843">
+<p>
+The Lord hath been zealous for his land, and hath spared his people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcbbf72" class="outline-3">
+<h3 id="orgbcbbf72">Joel 2:19</h3>
+<div class="outline-text-3" id="text-orgbcbbf72">
+<p>
+And the Lord answered, and said to his people: Behold I will send you corn, and wine, and oil, and you shall be filled with them: and I will no more make you a reproach among the nations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa064b1" class="outline-3">
+<h3 id="orgfa064b1">Joel 2:20</h3>
+<div class="outline-text-3" id="text-orgfa064b1">
+<p>
+And I will remove far off from you the northern enemy: and I will drive him into a land unpassable, and desert, with his face towards the east sea, and his hinder part towards the utmost sea: and his stench shall ascend, and his rottenness shall go up, because he hath done proudly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ece8f4" class="outline-3">
+<h3 id="org1ece8f4">Joel 2:21</h3>
+<div class="outline-text-3" id="text-org1ece8f4">
+<p>
+Fear not, O land, be glad, and rejoice: for the Lord hath done great things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8472e11" class="outline-3">
+<h3 id="org8472e11">Joel 2:22</h3>
+<div class="outline-text-3" id="text-org8472e11">
+<p>
+Fear not, ye beasts of the fields: for the beautiful places of the wilderness are sprung, for the tree hath brought forth its fruit, the fig tree, and the vine have yielded their strength.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf555c1c" class="outline-3">
+<h3 id="orgf555c1c">Joel 2:23</h3>
+<div class="outline-text-3" id="text-orgf555c1c">
+<p>
+And you, O children of Sion, rejoice, and be joyful in the Lord your God: because he hath given you a teacher of justice, and he will make the early and the latter rain to come down to you as in the beginning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1dc824b" class="outline-3">
+<h3 id="org1dc824b">Joel 2:24</h3>
+<div class="outline-text-3" id="text-org1dc824b">
+<p>
+And the floors shall be filled with wheat, and the presses shall overflow with wine, and oil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3e094b" class="outline-3">
+<h3 id="orge3e094b">Joel 2:25</h3>
+<div class="outline-text-3" id="text-orge3e094b">
+<p>
+And I will restore to you the years which the locust, and the bruchus, and the mildew, and the palmerworm hath eaten; my great host which I sent upon you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23c9211" class="outline-3">
+<h3 id="org23c9211">Joel 2:26</h3>
+<div class="outline-text-3" id="text-org23c9211">
+<p>
+And you shall eat in plenty, and shall be filled and you shall praise the name of the Lord your God; who hath done wonders with you, and my people shall not be confounded for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b5aebe" class="outline-3">
+<h3 id="org6b5aebe">Joel 2:27</h3>
+<div class="outline-text-3" id="text-org6b5aebe">
+<p>
+And you shall know that I am in the midst of Israel: and I am the Lord your God, and there is none besides: and my people shall not be confounded forever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd110e6a" class="outline-3">
+<h3 id="orgd110e6a">Joel 2:28</h3>
+<div class="outline-text-3" id="text-orgd110e6a">
+<p>
+And it shall come to pass after this, that I will pour out my spirit upon all flesh: and your sons and your daughters shall prophesy: your old men shall dream dreams, and your young men shall see visions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0a1d31" class="outline-3">
+<h3 id="orgd0a1d31">Joel 2:29</h3>
+<div class="outline-text-3" id="text-orgd0a1d31">
+<p>
+Moreover, upon my servants and handmaids in those days I will pour forth my spirit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f67748" class="outline-3">
+<h3 id="org8f67748">Joel 2:30</h3>
+<div class="outline-text-3" id="text-org8f67748">
+<p>
+And I will shew wonders in heaven; and in earth, blood, and fire, and vapour of smoke.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf395bea" class="outline-3">
+<h3 id="orgf395bea">Joel 2:31</h3>
+<div class="outline-text-3" id="text-orgf395bea">
+<p>
+The sun shall be turned into darkness, and the moon into blood: before the great and dreadful day of the Lord doth come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2b8458" class="outline-3">
+<h3 id="orgd2b8458">Joel 2:32</h3>
+<div class="outline-text-3" id="text-orgd2b8458">
+<p>
+And it shall come to pass, that every one that shall call upon the name of the Lord, shall be saved: for in Mount Sion, and in Jerusalem shall be salvation, as the Lord hath said, and in the residue whom the Lord shall call. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbabfa18" class="outline-2">
+<h2 id="orgbabfa18">Joel 3</h2>
+<div class="outline-text-2" id="text-orgbabfa18">
+</div>
+<div id="outline-container-org348e54e" class="outline-3">
+<h3 id="org348e54e">Joel 3:1</h3>
+<div class="outline-text-3" id="text-org348e54e">
+<p>
+For behold in those days, and in that time when I shall bring back the captivity of Juda, and Jerusalem:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e6fe4f" class="outline-3">
+<h3 id="org3e6fe4f">Joel 3:2</h3>
+<div class="outline-text-3" id="text-org3e6fe4f">
+<p>
+I will gather together all nations and will bring them down into the valley of Josaphat: and I will plead with them there for my people, and for my inheritance, Israel, whom they have scattered among the nations, and have parted my land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge50e348" class="outline-3">
+<h3 id="orge50e348">Joel 3:3</h3>
+<div class="outline-text-3" id="text-orge50e348">
+<p>
+And they have cast lots upon my people: and the boy they have put in the stews, and the girl they have sold for wine, that they might drink.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d52c14" class="outline-3">
+<h3 id="org6d52c14">Joel 3:4</h3>
+<div class="outline-text-3" id="text-org6d52c14">
+<p>
+But what have you to do with me, O Tyre, and Sidon, and all the coast of the Philistines? will you revenge yourselves on me? and if you revenge yourselves on me, I will very soon return you a recompense upon your own head.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98ff163" class="outline-3">
+<h3 id="org98ff163">Joel 3:5</h3>
+<div class="outline-text-3" id="text-org98ff163">
+<p>
+For you have taken away my silver, and my gold: and my desirable, and most beautiful things you have carried into your temples.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3c5e3b" class="outline-3">
+<h3 id="orgb3c5e3b">Joel 3:6</h3>
+<div class="outline-text-3" id="text-orgb3c5e3b">
+<p>
+And the children of Juda, and the children of Jerusalem, you have sold to the children of the Greeks, that you might remove them far off from their own country.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b3a39e" class="outline-3">
+<h3 id="org0b3a39e">Joel 3:7</h3>
+<div class="outline-text-3" id="text-org0b3a39e">
+<p>
+Behold, I will raise them up out of the place wherein you have sold them: and I will return your recompense upon your own heads.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d60c13" class="outline-3">
+<h3 id="org5d60c13">Joel 3:8</h3>
+<div class="outline-text-3" id="text-org5d60c13">
+<p>
+And I will sell your sons, and your daughters, by the hands of the children of Juda, and they shall sell them to the Sabeans, a nation far off, for the Lord hath spoken it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c49872" class="outline-3">
+<h3 id="org0c49872">Joel 3:9</h3>
+<div class="outline-text-3" id="text-org0c49872">
+<p>
+Proclaim ye this among the nations: Prepare war, raise up the strong: let them come, let all the men of war come up.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2916bfe" class="outline-3">
+<h3 id="org2916bfe">Joel 3:10</h3>
+<div class="outline-text-3" id="text-org2916bfe">
+<p>
+Cut your ploughshares into swords, and your spades into spears. Let the weak say: I am strong.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org054b06d" class="outline-3">
+<h3 id="org054b06d">Joel 3:11</h3>
+<div class="outline-text-3" id="text-org054b06d">
+<p>
+Break forth, and come, all ye nations from round about, and gather yourselves together: there will the Lord cause all thy strong ones to fall down.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd42c424" class="outline-3">
+<h3 id="orgd42c424">Joel 3:12</h3>
+<div class="outline-text-3" id="text-orgd42c424">
+<p>
+Let them arise, and let the nations come up into the valley of Josaphat: for there I will sit to judge all nations round about.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f37bbb" class="outline-3">
+<h3 id="org4f37bbb">Joel 3:13</h3>
+<div class="outline-text-3" id="text-org4f37bbb">
+<p>
+Put ye in the sickles, for the harvest is ripe: come and go down, for the press is full, the fats run over: for their wickedness is multiplied.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bca557" class="outline-3">
+<h3 id="org4bca557">Joel 3:14</h3>
+<div class="outline-text-3" id="text-org4bca557">
+<p>
+Nations, nations in the valley of destruction: for the day of the Lord is near in the valley of destruction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcfd983" class="outline-3">
+<h3 id="orgbcfd983">Joel 3:15</h3>
+<div class="outline-text-3" id="text-orgbcfd983">
+<p>
+The sun and the moon are darkened, and the stars have withdrawn their shining.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f00e87" class="outline-3">
+<h3 id="org7f00e87">Joel 3:16</h3>
+<div class="outline-text-3" id="text-org7f00e87">
+<p>
+And the Lord shall roar out of Sion, and utter his voice from Jerusalem: and the heavens and the earth shall be moved, and the Lord shall be the hope of his people, and the strength of the children of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge319e84" class="outline-3">
+<h3 id="orge319e84">Joel 3:17</h3>
+<div class="outline-text-3" id="text-orge319e84">
+<p>
+And you shall know that I am the Lord your God, dwelling in Sion, my holy mountain: and Jerusalem shall be holy, and strangers shall pass through it no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad32dbb" class="outline-3">
+<h3 id="orgad32dbb">Joel 3:18</h3>
+<div class="outline-text-3" id="text-orgad32dbb">
+<p>
+And it shall come to pass in that day, that the mountains shall drop down sweetness, and the hills shall flow with milk: and waters shall flow through all the rivers of Juda: and a fountain shall come forth of the house of the Lord, and shall water the torrent of thorns.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdef1a9e" class="outline-3">
+<h3 id="orgdef1a9e">Joel 3:19</h3>
+<div class="outline-text-3" id="text-orgdef1a9e">
+<p>
+Egypt shall be a desolation, and Edom a wilderness destroyed: because they have done unjustly against the children of Juda, and have shed innocent blood in their land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23a3605" class="outline-3">
+<h3 id="org23a3605">Joel 3:20</h3>
+<div class="outline-text-3" id="text-org23a3605">
+<p>
+And Judea shall be inhabited for ever, and Jerusalem to generation and generation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org280c8e7" class="outline-3">
+<h3 id="org280c8e7">Joel 3:21</h3>
+<div class="outline-text-3" id="text-org280c8e7">
+<p>
+And I will cleanse their blood, which I had not cleansed: and the Lord will dwell in Sion.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

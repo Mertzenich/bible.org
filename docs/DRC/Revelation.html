@@ -1,0 +1,4463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org30240c3">Revelation of John 1</a>
+<ul>
+<li><a href="#orgf257556">Revelation of John 1:1</a></li>
+<li><a href="#org4f84280">Revelation of John 1:2</a></li>
+<li><a href="#org64c7ea9">Revelation of John 1:3</a></li>
+<li><a href="#org8c04115">Revelation of John 1:4</a></li>
+<li><a href="#org2f97692">Revelation of John 1:5</a></li>
+<li><a href="#org8615e10">Revelation of John 1:6</a></li>
+<li><a href="#org3ce58af">Revelation of John 1:7</a></li>
+<li><a href="#org42022bc">Revelation of John 1:8</a></li>
+<li><a href="#orgc410ec8">Revelation of John 1:9</a></li>
+<li><a href="#orgb91b027">Revelation of John 1:10</a></li>
+<li><a href="#org40e7254">Revelation of John 1:11</a></li>
+<li><a href="#org75df4cb">Revelation of John 1:12</a></li>
+<li><a href="#org37a05bb">Revelation of John 1:13</a></li>
+<li><a href="#org842bb91">Revelation of John 1:14</a></li>
+<li><a href="#org84fb09f">Revelation of John 1:15</a></li>
+<li><a href="#orga69a548">Revelation of John 1:16</a></li>
+<li><a href="#org9443262">Revelation of John 1:17</a></li>
+<li><a href="#org2f72f85">Revelation of John 1:18</a></li>
+<li><a href="#org032fac8">Revelation of John 1:19</a></li>
+<li><a href="#org4d97acb">Revelation of John 1:20</a></li>
+</ul>
+</li>
+<li><a href="#org0d4378b">Revelation of John 2</a>
+<ul>
+<li><a href="#org228fafb">Revelation of John 2:1</a></li>
+<li><a href="#orgc63b821">Revelation of John 2:2</a></li>
+<li><a href="#orgd28f0b9">Revelation of John 2:3</a></li>
+<li><a href="#orga8fc448">Revelation of John 2:4</a></li>
+<li><a href="#org40830b4">Revelation of John 2:5</a></li>
+<li><a href="#org19b39d4">Revelation of John 2:6</a></li>
+<li><a href="#orgfeff29e">Revelation of John 2:7</a></li>
+<li><a href="#org009e4fc">Revelation of John 2:8</a></li>
+<li><a href="#org005d256">Revelation of John 2:9</a></li>
+<li><a href="#org6aab3a0">Revelation of John 2:10</a></li>
+<li><a href="#orgaa8f643">Revelation of John 2:11</a></li>
+<li><a href="#org9cbda3f">Revelation of John 2:12</a></li>
+<li><a href="#org26e1e87">Revelation of John 2:13</a></li>
+<li><a href="#orgdf78cb7">Revelation of John 2:14</a></li>
+<li><a href="#orga26133e">Revelation of John 2:15</a></li>
+<li><a href="#org3a9c43b">Revelation of John 2:16</a></li>
+<li><a href="#org00dcafc">Revelation of John 2:17</a></li>
+<li><a href="#org2316bc8">Revelation of John 2:18</a></li>
+<li><a href="#org2f6fb03">Revelation of John 2:19</a></li>
+<li><a href="#orgdcd3ba8">Revelation of John 2:20</a></li>
+<li><a href="#org100561d">Revelation of John 2:21</a></li>
+<li><a href="#orgc7364f1">Revelation of John 2:22</a></li>
+<li><a href="#org6df2164">Revelation of John 2:23</a></li>
+<li><a href="#org69820e3">Revelation of John 2:24</a></li>
+<li><a href="#orgc08bf74">Revelation of John 2:25</a></li>
+<li><a href="#org4bd2700">Revelation of John 2:26</a></li>
+<li><a href="#org82bf5c1">Revelation of John 2:27</a></li>
+<li><a href="#orgb9d7d2a">Revelation of John 2:28</a></li>
+<li><a href="#org4778286">Revelation of John 2:29</a></li>
+</ul>
+</li>
+<li><a href="#org14eae1f">Revelation of John 3</a>
+<ul>
+<li><a href="#org0141c87">Revelation of John 3:1</a></li>
+<li><a href="#org62f53fb">Revelation of John 3:2</a></li>
+<li><a href="#org3cf674b">Revelation of John 3:3</a></li>
+<li><a href="#org71b0193">Revelation of John 3:4</a></li>
+<li><a href="#orgccd6873">Revelation of John 3:5</a></li>
+<li><a href="#org22a4310">Revelation of John 3:6</a></li>
+<li><a href="#org5e82238">Revelation of John 3:7</a></li>
+<li><a href="#org5e8b6c7">Revelation of John 3:8</a></li>
+<li><a href="#orgad0a1ba">Revelation of John 3:9</a></li>
+<li><a href="#org7cad72d">Revelation of John 3:10</a></li>
+<li><a href="#orgc512f64">Revelation of John 3:11</a></li>
+<li><a href="#orgdea3d15">Revelation of John 3:12</a></li>
+<li><a href="#org3ec450d">Revelation of John 3:13</a></li>
+<li><a href="#orge6dc52e">Revelation of John 3:14</a></li>
+<li><a href="#org752f884">Revelation of John 3:15</a></li>
+<li><a href="#orgca33545">Revelation of John 3:16</a></li>
+<li><a href="#org06dac01">Revelation of John 3:17</a></li>
+<li><a href="#org31109d3">Revelation of John 3:18</a></li>
+<li><a href="#orge3cf159">Revelation of John 3:19</a></li>
+<li><a href="#org046599b">Revelation of John 3:20</a></li>
+<li><a href="#org5d20500">Revelation of John 3:21</a></li>
+<li><a href="#orga4b7642">Revelation of John 3:22</a></li>
+</ul>
+</li>
+<li><a href="#org5f09d85">Revelation of John 4</a>
+<ul>
+<li><a href="#orga27a1cc">Revelation of John 4:1</a></li>
+<li><a href="#orga87d4e5">Revelation of John 4:2</a></li>
+<li><a href="#orga6dfc30">Revelation of John 4:3</a></li>
+<li><a href="#orge542f77">Revelation of John 4:4</a></li>
+<li><a href="#orgb4dbff7">Revelation of John 4:5</a></li>
+<li><a href="#orgc3c0b51">Revelation of John 4:6</a></li>
+<li><a href="#orgda83cd7">Revelation of John 4:7</a></li>
+<li><a href="#orgc472b5e">Revelation of John 4:8</a></li>
+<li><a href="#orga849fb7">Revelation of John 4:9</a></li>
+<li><a href="#org1df03f7">Revelation of John 4:10</a></li>
+<li><a href="#org4bb0785">Revelation of John 4:11</a></li>
+</ul>
+</li>
+<li><a href="#orge108c50">Revelation of John 5</a>
+<ul>
+<li><a href="#org16d493c">Revelation of John 5:1</a></li>
+<li><a href="#org658b082">Revelation of John 5:2</a></li>
+<li><a href="#orgc556f84">Revelation of John 5:3</a></li>
+<li><a href="#org8184ed3">Revelation of John 5:4</a></li>
+<li><a href="#orgea3842a">Revelation of John 5:5</a></li>
+<li><a href="#orgad62a19">Revelation of John 5:6</a></li>
+<li><a href="#org9f483a4">Revelation of John 5:7</a></li>
+<li><a href="#orgc31999f">Revelation of John 5:8</a></li>
+<li><a href="#org06e6552">Revelation of John 5:9</a></li>
+<li><a href="#orgf191166">Revelation of John 5:10</a></li>
+<li><a href="#org3d8b4cd">Revelation of John 5:11</a></li>
+<li><a href="#orgf450057">Revelation of John 5:12</a></li>
+<li><a href="#org112d8dd">Revelation of John 5:13</a></li>
+<li><a href="#orgc77bfb4">Revelation of John 5:14</a></li>
+</ul>
+</li>
+<li><a href="#org0aa9190">Revelation of John 6</a>
+<ul>
+<li><a href="#org99d24e8">Revelation of John 6:1</a></li>
+<li><a href="#org682a6ec">Revelation of John 6:2</a></li>
+<li><a href="#org9a3c80e">Revelation of John 6:3</a></li>
+<li><a href="#orge68eb56">Revelation of John 6:4</a></li>
+<li><a href="#org55a7ee3">Revelation of John 6:5</a></li>
+<li><a href="#org05f7f4e">Revelation of John 6:6</a></li>
+<li><a href="#org5b756ae">Revelation of John 6:7</a></li>
+<li><a href="#orge02a4b9">Revelation of John 6:8</a></li>
+<li><a href="#org91a9422">Revelation of John 6:9</a></li>
+<li><a href="#org07002a1">Revelation of John 6:10</a></li>
+<li><a href="#orgc368ace">Revelation of John 6:11</a></li>
+<li><a href="#orgb7ecd2c">Revelation of John 6:12</a></li>
+<li><a href="#org7c5f722">Revelation of John 6:13</a></li>
+<li><a href="#org9d28418">Revelation of John 6:14</a></li>
+<li><a href="#orgdf478c6">Revelation of John 6:15</a></li>
+<li><a href="#org4da1a17">Revelation of John 6:16</a></li>
+<li><a href="#org4996684">Revelation of John 6:17</a></li>
+</ul>
+</li>
+<li><a href="#org5b00911">Revelation of John 7</a>
+<ul>
+<li><a href="#org49e7bdc">Revelation of John 7:1</a></li>
+<li><a href="#org16ed82a">Revelation of John 7:2</a></li>
+<li><a href="#org5d4c611">Revelation of John 7:3</a></li>
+<li><a href="#org0f3ae82">Revelation of John 7:4</a></li>
+<li><a href="#org83d0d13">Revelation of John 7:5</a></li>
+<li><a href="#orge41f36b">Revelation of John 7:6</a></li>
+<li><a href="#org58c8504">Revelation of John 7:7</a></li>
+<li><a href="#orgf1f2c5d">Revelation of John 7:8</a></li>
+<li><a href="#orgcc93b54">Revelation of John 7:9</a></li>
+<li><a href="#org79dba4f">Revelation of John 7:10</a></li>
+<li><a href="#org27fd2db">Revelation of John 7:11</a></li>
+<li><a href="#org6b0cad5">Revelation of John 7:12</a></li>
+<li><a href="#org22366e9">Revelation of John 7:13</a></li>
+<li><a href="#orgf0aa21f">Revelation of John 7:14</a></li>
+<li><a href="#org9de284b">Revelation of John 7:15</a></li>
+<li><a href="#org4346dcb">Revelation of John 7:16</a></li>
+<li><a href="#org0676641">Revelation of John 7:17</a></li>
+</ul>
+</li>
+<li><a href="#orgc4b2cbb">Revelation of John 8</a>
+<ul>
+<li><a href="#orge3422d8">Revelation of John 8:1</a></li>
+<li><a href="#org90e3c13">Revelation of John 8:2</a></li>
+<li><a href="#orgaf0bff6">Revelation of John 8:3</a></li>
+<li><a href="#orgd15d881">Revelation of John 8:4</a></li>
+<li><a href="#orgcab5523">Revelation of John 8:5</a></li>
+<li><a href="#org12f3ec4">Revelation of John 8:6</a></li>
+<li><a href="#org824b43e">Revelation of John 8:7</a></li>
+<li><a href="#org57d2a5f">Revelation of John 8:8</a></li>
+<li><a href="#org23793aa">Revelation of John 8:9</a></li>
+<li><a href="#org1c909ef">Revelation of John 8:10</a></li>
+<li><a href="#org2c3afee">Revelation of John 8:11</a></li>
+<li><a href="#org62a93cd">Revelation of John 8:12</a></li>
+<li><a href="#orgda5bc5f">Revelation of John 8:13</a></li>
+</ul>
+</li>
+<li><a href="#orge786a4c">Revelation of John 9</a>
+<ul>
+<li><a href="#org1ac97fa">Revelation of John 9:1</a></li>
+<li><a href="#org69c57dd">Revelation of John 9:2</a></li>
+<li><a href="#orgcda483a">Revelation of John 9:3</a></li>
+<li><a href="#org3d1cb54">Revelation of John 9:4</a></li>
+<li><a href="#org5c18966">Revelation of John 9:5</a></li>
+<li><a href="#orgc99a856">Revelation of John 9:6</a></li>
+<li><a href="#orgf4637e0">Revelation of John 9:7</a></li>
+<li><a href="#org1bb186d">Revelation of John 9:8</a></li>
+<li><a href="#org7da6b70">Revelation of John 9:9</a></li>
+<li><a href="#org846180c">Revelation of John 9:10</a></li>
+<li><a href="#orgdf30e86">Revelation of John 9:11</a></li>
+<li><a href="#org319da0b">Revelation of John 9:12</a></li>
+<li><a href="#orgb7e8b6c">Revelation of John 9:13</a></li>
+<li><a href="#orgd3bdc3b">Revelation of John 9:14</a></li>
+<li><a href="#orgf72bad6">Revelation of John 9:15</a></li>
+<li><a href="#orgb729599">Revelation of John 9:16</a></li>
+<li><a href="#orgf102c59">Revelation of John 9:17</a></li>
+<li><a href="#org24297ee">Revelation of John 9:18</a></li>
+<li><a href="#org7505777">Revelation of John 9:19</a></li>
+<li><a href="#org9ad6e2f">Revelation of John 9:20</a></li>
+<li><a href="#orgcd26a12">Revelation of John 9:21</a></li>
+</ul>
+</li>
+<li><a href="#orgf26728e">Revelation of John 10</a>
+<ul>
+<li><a href="#org5dd89bd">Revelation of John 10:1</a></li>
+<li><a href="#orga7b5344">Revelation of John 10:2</a></li>
+<li><a href="#orgf7e85e1">Revelation of John 10:3</a></li>
+<li><a href="#orgd44790d">Revelation of John 10:4</a></li>
+<li><a href="#org67a2fe2">Revelation of John 10:5</a></li>
+<li><a href="#org64c6b8a">Revelation of John 10:6</a></li>
+<li><a href="#orgbab33c0">Revelation of John 10:7</a></li>
+<li><a href="#orgd3ccb40">Revelation of John 10:8</a></li>
+<li><a href="#org075d716">Revelation of John 10:9</a></li>
+<li><a href="#orgda66942">Revelation of John 10:10</a></li>
+<li><a href="#orge1b2609">Revelation of John 10:11</a></li>
+</ul>
+</li>
+<li><a href="#org00ff410">Revelation of John 11</a>
+<ul>
+<li><a href="#orgea969f8">Revelation of John 11:1</a></li>
+<li><a href="#org94d0b1f">Revelation of John 11:2</a></li>
+<li><a href="#org5b3fb85">Revelation of John 11:3</a></li>
+<li><a href="#org678a1d4">Revelation of John 11:4</a></li>
+<li><a href="#orge9340ab">Revelation of John 11:5</a></li>
+<li><a href="#org5d2739a">Revelation of John 11:6</a></li>
+<li><a href="#org6e579f3">Revelation of John 11:7</a></li>
+<li><a href="#orgd1bfa58">Revelation of John 11:8</a></li>
+<li><a href="#orgd565a97">Revelation of John 11:9</a></li>
+<li><a href="#org19a9963">Revelation of John 11:10</a></li>
+<li><a href="#orgcfcfb72">Revelation of John 11:11</a></li>
+<li><a href="#org57f07bf">Revelation of John 11:12</a></li>
+<li><a href="#org153a926">Revelation of John 11:13</a></li>
+<li><a href="#org6f5e0ff">Revelation of John 11:14</a></li>
+<li><a href="#org23cc275">Revelation of John 11:15</a></li>
+<li><a href="#orgaed7243">Revelation of John 11:16</a></li>
+<li><a href="#org4e461e2">Revelation of John 11:17</a></li>
+<li><a href="#org2345616">Revelation of John 11:18</a></li>
+<li><a href="#orgf258e60">Revelation of John 11:19</a></li>
+</ul>
+</li>
+<li><a href="#orgb82ddb6">Revelation of John 12</a>
+<ul>
+<li><a href="#orgbbe6fb0">Revelation of John 12:1</a></li>
+<li><a href="#org2e08692">Revelation of John 12:2</a></li>
+<li><a href="#orgeed181b">Revelation of John 12:3</a></li>
+<li><a href="#orga766bd4">Revelation of John 12:4</a></li>
+<li><a href="#org13afdea">Revelation of John 12:5</a></li>
+<li><a href="#org9ef9929">Revelation of John 12:6</a></li>
+<li><a href="#org6fac27a">Revelation of John 12:7</a></li>
+<li><a href="#org9c0c997">Revelation of John 12:8</a></li>
+<li><a href="#orgc3a79e8">Revelation of John 12:9</a></li>
+<li><a href="#org7807616">Revelation of John 12:10</a></li>
+<li><a href="#orgb5c9865">Revelation of John 12:11</a></li>
+<li><a href="#orgb96bd1b">Revelation of John 12:12</a></li>
+<li><a href="#org717c080">Revelation of John 12:13</a></li>
+<li><a href="#org0ad8225">Revelation of John 12:14</a></li>
+<li><a href="#org71ab07d">Revelation of John 12:15</a></li>
+<li><a href="#org3573438">Revelation of John 12:16</a></li>
+<li><a href="#org5657593">Revelation of John 12:17</a></li>
+<li><a href="#org040d6de">Revelation of John 12:18</a></li>
+</ul>
+</li>
+<li><a href="#org1c196c7">Revelation of John 13</a>
+<ul>
+<li><a href="#orgeed3331">Revelation of John 13:1</a></li>
+<li><a href="#org5070751">Revelation of John 13:2</a></li>
+<li><a href="#org81f85fc">Revelation of John 13:3</a></li>
+<li><a href="#org8717eba">Revelation of John 13:4</a></li>
+<li><a href="#orgae57bbb">Revelation of John 13:5</a></li>
+<li><a href="#orgfeb54d1">Revelation of John 13:6</a></li>
+<li><a href="#org239157b">Revelation of John 13:7</a></li>
+<li><a href="#org597db88">Revelation of John 13:8</a></li>
+<li><a href="#org008dc36">Revelation of John 13:9</a></li>
+<li><a href="#org720479b">Revelation of John 13:10</a></li>
+<li><a href="#org48e7baa">Revelation of John 13:11</a></li>
+<li><a href="#org144940c">Revelation of John 13:12</a></li>
+<li><a href="#org43f0177">Revelation of John 13:13</a></li>
+<li><a href="#org495a389">Revelation of John 13:14</a></li>
+<li><a href="#org73add30">Revelation of John 13:15</a></li>
+<li><a href="#orgf88c271">Revelation of John 13:16</a></li>
+<li><a href="#orga8058d0">Revelation of John 13:17</a></li>
+<li><a href="#org0a582bd">Revelation of John 13:18</a></li>
+</ul>
+</li>
+<li><a href="#org81b0cc8">Revelation of John 14</a>
+<ul>
+<li><a href="#org356e6ef">Revelation of John 14:1</a></li>
+<li><a href="#org47c4c9d">Revelation of John 14:2</a></li>
+<li><a href="#orgb9f4a27">Revelation of John 14:3</a></li>
+<li><a href="#orgfc80a29">Revelation of John 14:4</a></li>
+<li><a href="#orgecdeaf0">Revelation of John 14:5</a></li>
+<li><a href="#org07764bb">Revelation of John 14:6</a></li>
+<li><a href="#orga1310db">Revelation of John 14:7</a></li>
+<li><a href="#org69eb5b0">Revelation of John 14:8</a></li>
+<li><a href="#orgc286bd4">Revelation of John 14:9</a></li>
+<li><a href="#org77f7ced">Revelation of John 14:10</a></li>
+<li><a href="#orged8dfde">Revelation of John 14:11</a></li>
+<li><a href="#orge801477">Revelation of John 14:12</a></li>
+<li><a href="#org5dbe71a">Revelation of John 14:13</a></li>
+<li><a href="#org6594f00">Revelation of John 14:14</a></li>
+<li><a href="#org99f3db8">Revelation of John 14:15</a></li>
+<li><a href="#orgd3dce5a">Revelation of John 14:16</a></li>
+<li><a href="#orge64c121">Revelation of John 14:17</a></li>
+<li><a href="#org78364a0">Revelation of John 14:18</a></li>
+<li><a href="#org1febe5d">Revelation of John 14:19</a></li>
+<li><a href="#orgcd9b83c">Revelation of John 14:20</a></li>
+</ul>
+</li>
+<li><a href="#org3ce7733">Revelation of John 15</a>
+<ul>
+<li><a href="#orge0f5e0d">Revelation of John 15:1</a></li>
+<li><a href="#orgaf87cf5">Revelation of John 15:2</a></li>
+<li><a href="#orgffa8f47">Revelation of John 15:3</a></li>
+<li><a href="#org52d0828">Revelation of John 15:4</a></li>
+<li><a href="#orgd3b04d3">Revelation of John 15:5</a></li>
+<li><a href="#org7b96bbb">Revelation of John 15:6</a></li>
+<li><a href="#org33dc375">Revelation of John 15:7</a></li>
+<li><a href="#orgabb4b3f">Revelation of John 15:8</a></li>
+</ul>
+</li>
+<li><a href="#org5377274">Revelation of John 16</a>
+<ul>
+<li><a href="#orgaeaf216">Revelation of John 16:1</a></li>
+<li><a href="#orgdd3ed27">Revelation of John 16:2</a></li>
+<li><a href="#orgc29d540">Revelation of John 16:3</a></li>
+<li><a href="#org9fffaaa">Revelation of John 16:4</a></li>
+<li><a href="#org29c8a4d">Revelation of John 16:5</a></li>
+<li><a href="#orgf1e665e">Revelation of John 16:6</a></li>
+<li><a href="#org08a22ca">Revelation of John 16:7</a></li>
+<li><a href="#org8739497">Revelation of John 16:8</a></li>
+<li><a href="#org19e9303">Revelation of John 16:9</a></li>
+<li><a href="#org1a2874a">Revelation of John 16:10</a></li>
+<li><a href="#org0f6f6f6">Revelation of John 16:11</a></li>
+<li><a href="#org0644885">Revelation of John 16:12</a></li>
+<li><a href="#org938909a">Revelation of John 16:13</a></li>
+<li><a href="#org711266a">Revelation of John 16:14</a></li>
+<li><a href="#orgc471a26">Revelation of John 16:15</a></li>
+<li><a href="#orge9e149f">Revelation of John 16:16</a></li>
+<li><a href="#orge8b467e">Revelation of John 16:17</a></li>
+<li><a href="#org3f65fbc">Revelation of John 16:18</a></li>
+<li><a href="#org2ab0bc5">Revelation of John 16:19</a></li>
+<li><a href="#orgedcdf0b">Revelation of John 16:20</a></li>
+<li><a href="#orgcd59804">Revelation of John 16:21</a></li>
+</ul>
+</li>
+<li><a href="#orgde4afa9">Revelation of John 17</a>
+<ul>
+<li><a href="#orgf8d419f">Revelation of John 17:1</a></li>
+<li><a href="#org9b8e025">Revelation of John 17:2</a></li>
+<li><a href="#org1b4e21f">Revelation of John 17:3</a></li>
+<li><a href="#orgdb2eaa2">Revelation of John 17:4</a></li>
+<li><a href="#org6baea78">Revelation of John 17:5</a></li>
+<li><a href="#orgf7b6bac">Revelation of John 17:6</a></li>
+<li><a href="#org4b337b3">Revelation of John 17:7</a></li>
+<li><a href="#org67046fd">Revelation of John 17:8</a></li>
+<li><a href="#orgb4f1eba">Revelation of John 17:9</a></li>
+<li><a href="#orge6e9102">Revelation of John 17:10</a></li>
+<li><a href="#org36d1c41">Revelation of John 17:11</a></li>
+<li><a href="#orga2ce257">Revelation of John 17:12</a></li>
+<li><a href="#org160547c">Revelation of John 17:13</a></li>
+<li><a href="#org626b98c">Revelation of John 17:14</a></li>
+<li><a href="#org6ae6e28">Revelation of John 17:15</a></li>
+<li><a href="#org8bee628">Revelation of John 17:16</a></li>
+<li><a href="#org5bb3940">Revelation of John 17:17</a></li>
+<li><a href="#org02adee7">Revelation of John 17:18</a></li>
+</ul>
+</li>
+<li><a href="#org9d39dda">Revelation of John 18</a>
+<ul>
+<li><a href="#org7cb018b">Revelation of John 18:1</a></li>
+<li><a href="#orgae0fd2b">Revelation of John 18:2</a></li>
+<li><a href="#org1382183">Revelation of John 18:3</a></li>
+<li><a href="#orgfaa5705">Revelation of John 18:4</a></li>
+<li><a href="#orgac1f6fa">Revelation of John 18:5</a></li>
+<li><a href="#org9b6d08c">Revelation of John 18:6</a></li>
+<li><a href="#org8a70e0f">Revelation of John 18:7</a></li>
+<li><a href="#orgfbbbc12">Revelation of John 18:8</a></li>
+<li><a href="#orgd36c1d8">Revelation of John 18:9</a></li>
+<li><a href="#orgbdab9b1">Revelation of John 18:10</a></li>
+<li><a href="#org2a5b438">Revelation of John 18:11</a></li>
+<li><a href="#orgee0c0bd">Revelation of John 18:12</a></li>
+<li><a href="#orgef30eab">Revelation of John 18:13</a></li>
+<li><a href="#org6115826">Revelation of John 18:14</a></li>
+<li><a href="#org45a5165">Revelation of John 18:15</a></li>
+<li><a href="#orgf1239d6">Revelation of John 18:16</a></li>
+<li><a href="#orgb71cdf0">Revelation of John 18:17</a></li>
+<li><a href="#org3b76966">Revelation of John 18:18</a></li>
+<li><a href="#org200f3ac">Revelation of John 18:19</a></li>
+<li><a href="#org771c8ab">Revelation of John 18:20</a></li>
+<li><a href="#orgf8ec116">Revelation of John 18:21</a></li>
+<li><a href="#org3a40f43">Revelation of John 18:22</a></li>
+<li><a href="#org05a2ea3">Revelation of John 18:23</a></li>
+<li><a href="#org0afa11c">Revelation of John 18:24</a></li>
+</ul>
+</li>
+<li><a href="#orgec8a0bf">Revelation of John 19</a>
+<ul>
+<li><a href="#orgd91e780">Revelation of John 19:1</a></li>
+<li><a href="#org2e948ae">Revelation of John 19:2</a></li>
+<li><a href="#orgc1c1172">Revelation of John 19:3</a></li>
+<li><a href="#orgdce846e">Revelation of John 19:4</a></li>
+<li><a href="#orgaa708de">Revelation of John 19:5</a></li>
+<li><a href="#org512278f">Revelation of John 19:6</a></li>
+<li><a href="#orgd282a1a">Revelation of John 19:7</a></li>
+<li><a href="#orge61355c">Revelation of John 19:8</a></li>
+<li><a href="#orgfbfb1ae">Revelation of John 19:9</a></li>
+<li><a href="#orgaed5eb1">Revelation of John 19:10</a></li>
+<li><a href="#org065a52c">Revelation of John 19:11</a></li>
+<li><a href="#org8eaf0d7">Revelation of John 19:12</a></li>
+<li><a href="#orgcc6c653">Revelation of John 19:13</a></li>
+<li><a href="#orgd821cb8">Revelation of John 19:14</a></li>
+<li><a href="#orgcc68da5">Revelation of John 19:15</a></li>
+<li><a href="#orgffd02b6">Revelation of John 19:16</a></li>
+<li><a href="#org07bd634">Revelation of John 19:17</a></li>
+<li><a href="#org9c39ff6">Revelation of John 19:18</a></li>
+<li><a href="#org6308a80">Revelation of John 19:19</a></li>
+<li><a href="#org21f1822">Revelation of John 19:20</a></li>
+<li><a href="#orgd0b6716">Revelation of John 19:21</a></li>
+</ul>
+</li>
+<li><a href="#orgcbe195f">Revelation of John 20</a>
+<ul>
+<li><a href="#org5bf9a3d">Revelation of John 20:1</a></li>
+<li><a href="#orgbbc58b3">Revelation of John 20:2</a></li>
+<li><a href="#org33be889">Revelation of John 20:3</a></li>
+<li><a href="#org8393ee2">Revelation of John 20:4</a></li>
+<li><a href="#orgd581ec7">Revelation of John 20:5</a></li>
+<li><a href="#org394ad33">Revelation of John 20:6</a></li>
+<li><a href="#org895d463">Revelation of John 20:7</a></li>
+<li><a href="#org2d1414f">Revelation of John 20:8</a></li>
+<li><a href="#org15a2994">Revelation of John 20:9</a></li>
+<li><a href="#orgc889e6e">Revelation of John 20:10</a></li>
+<li><a href="#orgfe194b0">Revelation of John 20:11</a></li>
+<li><a href="#orgc6e8dca">Revelation of John 20:12</a></li>
+<li><a href="#org9493bf5">Revelation of John 20:13</a></li>
+<li><a href="#orgc24b765">Revelation of John 20:14</a></li>
+<li><a href="#orgd43cf99">Revelation of John 20:15</a></li>
+</ul>
+</li>
+<li><a href="#org683bc45">Revelation of John 21</a>
+<ul>
+<li><a href="#org3742ca7">Revelation of John 21:1</a></li>
+<li><a href="#orgefbbdcb">Revelation of John 21:2</a></li>
+<li><a href="#orgb06a695">Revelation of John 21:3</a></li>
+<li><a href="#orgd7d5b81">Revelation of John 21:4</a></li>
+<li><a href="#org661b0d8">Revelation of John 21:5</a></li>
+<li><a href="#orgba84931">Revelation of John 21:6</a></li>
+<li><a href="#org77dd63c">Revelation of John 21:7</a></li>
+<li><a href="#orgb9b8c06">Revelation of John 21:8</a></li>
+<li><a href="#org1f7deb3">Revelation of John 21:9</a></li>
+<li><a href="#org5b3f558">Revelation of John 21:10</a></li>
+<li><a href="#orga593498">Revelation of John 21:11</a></li>
+<li><a href="#orgd2fb857">Revelation of John 21:12</a></li>
+<li><a href="#orgec67322">Revelation of John 21:13</a></li>
+<li><a href="#org6afc035">Revelation of John 21:14</a></li>
+<li><a href="#org53e2b9a">Revelation of John 21:15</a></li>
+<li><a href="#org37db9d3">Revelation of John 21:16</a></li>
+<li><a href="#org70d7ad6">Revelation of John 21:17</a></li>
+<li><a href="#org4ec4652">Revelation of John 21:18</a></li>
+<li><a href="#org7c070e4">Revelation of John 21:19</a></li>
+<li><a href="#org2582789">Revelation of John 21:20</a></li>
+<li><a href="#org37642c2">Revelation of John 21:21</a></li>
+<li><a href="#orgb91ae33">Revelation of John 21:22</a></li>
+<li><a href="#org7dacd92">Revelation of John 21:23</a></li>
+<li><a href="#org3c145ab">Revelation of John 21:24</a></li>
+<li><a href="#org70e1400">Revelation of John 21:25</a></li>
+<li><a href="#orgc1e7b2a">Revelation of John 21:26</a></li>
+<li><a href="#orgbf012fc">Revelation of John 21:27</a></li>
+</ul>
+</li>
+<li><a href="#org6b17853">Revelation of John 22</a>
+<ul>
+<li><a href="#org205bfbc">Revelation of John 22:1</a></li>
+<li><a href="#org05f0b69">Revelation of John 22:2</a></li>
+<li><a href="#org27337b1">Revelation of John 22:3</a></li>
+<li><a href="#orgdfd6757">Revelation of John 22:4</a></li>
+<li><a href="#org71ed105">Revelation of John 22:5</a></li>
+<li><a href="#orgf067ac4">Revelation of John 22:6</a></li>
+<li><a href="#orga58b12c">Revelation of John 22:7</a></li>
+<li><a href="#orgc7d003f">Revelation of John 22:8</a></li>
+<li><a href="#org015d8ea">Revelation of John 22:9</a></li>
+<li><a href="#org6eb7c8d">Revelation of John 22:10</a></li>
+<li><a href="#orga71d0ae">Revelation of John 22:11</a></li>
+<li><a href="#orga2a1973">Revelation of John 22:12</a></li>
+<li><a href="#orga753e82">Revelation of John 22:13</a></li>
+<li><a href="#org2cd3d77">Revelation of John 22:14</a></li>
+<li><a href="#org52616cc">Revelation of John 22:15</a></li>
+<li><a href="#org88b80f8">Revelation of John 22:16</a></li>
+<li><a href="#org4a0b375">Revelation of John 22:17</a></li>
+<li><a href="#orga133b1a">Revelation of John 22:18</a></li>
+<li><a href="#orge0b560a">Revelation of John 22:19</a></li>
+<li><a href="#org89d26e8">Revelation of John 22:20</a></li>
+<li><a href="#org37db3e6">Revelation of John 22:21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30240c3" class="outline-2">
+<h2 id="org30240c3">Revelation of John 1</h2>
+<div class="outline-text-2" id="text-org30240c3">
+</div>
+<div id="outline-container-orgf257556" class="outline-3">
+<h3 id="orgf257556">Revelation of John 1:1</h3>
+<div class="outline-text-3" id="text-orgf257556">
+<p>
+The Revelation of Jesus Christ, which God gave unto him, to make known to his servants the things which must shortly come to pass: and signified, sending by his angel to his servant John,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f84280" class="outline-3">
+<h3 id="org4f84280">Revelation of John 1:2</h3>
+<div class="outline-text-3" id="text-org4f84280">
+<p>
+Who hath given testimony to the word of God and the testimony of Jesus Christ, what things soever he hath seen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64c7ea9" class="outline-3">
+<h3 id="org64c7ea9">Revelation of John 1:3</h3>
+<div class="outline-text-3" id="text-org64c7ea9">
+<p>
+Blessed is he that readeth and heareth the words of this prophecy: and keepeth those things which are written in it. For the time is at hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c04115" class="outline-3">
+<h3 id="org8c04115">Revelation of John 1:4</h3>
+<div class="outline-text-3" id="text-org8c04115">
+<p>
+John to the seven churches which are in Asia. Grace be unto you and peace, from him that is and that was and that is to come: and from the seven spirits which are before his throne:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f97692" class="outline-3">
+<h3 id="org2f97692">Revelation of John 1:5</h3>
+<div class="outline-text-3" id="text-org2f97692">
+<p>
+And from Jesus Christ, who is the faithful witness, the first begotten of the dead and the prince of the kings of the earth, who hath loved us and washed us from our sins in his own blood
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8615e10" class="outline-3">
+<h3 id="org8615e10">Revelation of John 1:6</h3>
+<div class="outline-text-3" id="text-org8615e10">
+<p>
+And hath made us a kingdom, and priests to God and his Father. To him be glory and empire for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ce58af" class="outline-3">
+<h3 id="org3ce58af">Revelation of John 1:7</h3>
+<div class="outline-text-3" id="text-org3ce58af">
+<p>
+Behold, he cometh with the clouds, and every eye shall see him: and they also that pierced him. And all the tribes of the earth shall bewail themselves because of him. Even so. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42022bc" class="outline-3">
+<h3 id="org42022bc">Revelation of John 1:8</h3>
+<div class="outline-text-3" id="text-org42022bc">
+<p>
+I am Alpha and Omega, the beginning and the end, saith the Lord God, who is and who was and who is to come, the Almighty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc410ec8" class="outline-3">
+<h3 id="orgc410ec8">Revelation of John 1:9</h3>
+<div class="outline-text-3" id="text-orgc410ec8">
+<p>
+I, John, your brother and your partner in tribulation and in the kingdom and patience in Christ Jesus, was in the island which is called Patmos, for the word of God and for the testimony of Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb91b027" class="outline-3">
+<h3 id="orgb91b027">Revelation of John 1:10</h3>
+<div class="outline-text-3" id="text-orgb91b027">
+<p>
+I was in the spirit on the Lord&rsquo;s day and heard behind me a great voice, as of a trumpet,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40e7254" class="outline-3">
+<h3 id="org40e7254">Revelation of John 1:11</h3>
+<div class="outline-text-3" id="text-org40e7254">
+<p>
+Saying: What thou seest, write in a book and send to the seven churches which are in Asia: to Ephesus and to Smyrna and to Pergamus and to Thyatira and to Sardis and to Philadelphia and to Laodicea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75df4cb" class="outline-3">
+<h3 id="org75df4cb">Revelation of John 1:12</h3>
+<div class="outline-text-3" id="text-org75df4cb">
+<p>
+And I turned to see the voice that spoke with me. And being turned, I saw seven golden candlesticks:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37a05bb" class="outline-3">
+<h3 id="org37a05bb">Revelation of John 1:13</h3>
+<div class="outline-text-3" id="text-org37a05bb">
+<p>
+And in the midst of the seven golden candlesticks, one like to the Son of man, clothed with a garment down to the feet, and girt about the paps with a golden girdle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org842bb91" class="outline-3">
+<h3 id="org842bb91">Revelation of John 1:14</h3>
+<div class="outline-text-3" id="text-org842bb91">
+<p>
+And his head and his hairs were white as white wool and as snow. And his eyes were as a flame of fire:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84fb09f" class="outline-3">
+<h3 id="org84fb09f">Revelation of John 1:15</h3>
+<div class="outline-text-3" id="text-org84fb09f">
+<p>
+And his feet like unto fine brass, as in a burning furnace. And his voice as the sound of many waters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga69a548" class="outline-3">
+<h3 id="orga69a548">Revelation of John 1:16</h3>
+<div class="outline-text-3" id="text-orga69a548">
+<p>
+And he had in his right hand seven stars. And from his mouth came out a sharp two-edged sword. And his face was as the sun shineth in his power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9443262" class="outline-3">
+<h3 id="org9443262">Revelation of John 1:17</h3>
+<div class="outline-text-3" id="text-org9443262">
+<p>
+And when I had seen him, I fell at his feet as dead. And he laid his right hand upon me, saying: Fear not. I am the First and the Last,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f72f85" class="outline-3">
+<h3 id="org2f72f85">Revelation of John 1:18</h3>
+<div class="outline-text-3" id="text-org2f72f85">
+<p>
+And alive, and was dead. And behold I am living for ever and ever and have the keys of death and of hell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org032fac8" class="outline-3">
+<h3 id="org032fac8">Revelation of John 1:19</h3>
+<div class="outline-text-3" id="text-org032fac8">
+<p>
+Write therefore the things which thou hast seen: and which are: and which must be done hereafter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d97acb" class="outline-3">
+<h3 id="org4d97acb">Revelation of John 1:20</h3>
+<div class="outline-text-3" id="text-org4d97acb">
+<p>
+The mystery of the seven stars, which thou sawest in my right hand and the seven golden candlesticks. The seven stars are the angels of the seven churches. And the seven candlesticks are the seven churches. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d4378b" class="outline-2">
+<h2 id="org0d4378b">Revelation of John 2</h2>
+<div class="outline-text-2" id="text-org0d4378b">
+</div>
+<div id="outline-container-org228fafb" class="outline-3">
+<h3 id="org228fafb">Revelation of John 2:1</h3>
+<div class="outline-text-3" id="text-org228fafb">
+<p>
+Unto the angel of the church of Ephesus write: These things saith he who holdeth the seven stars in his right hand, who walketh in the midst of the seven golden candlesticks:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc63b821" class="outline-3">
+<h3 id="orgc63b821">Revelation of John 2:2</h3>
+<div class="outline-text-3" id="text-orgc63b821">
+<p>
+I know thy works and thy labour and thy patience and how thou canst not bear them that are evil. And thou hast tried them who say they are apostles and are not: and hast found them liars:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd28f0b9" class="outline-3">
+<h3 id="orgd28f0b9">Revelation of John 2:3</h3>
+<div class="outline-text-3" id="text-orgd28f0b9">
+<p>
+And thou hast patience and hast endured for my name and hast not fainted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8fc448" class="outline-3">
+<h3 id="orga8fc448">Revelation of John 2:4</h3>
+<div class="outline-text-3" id="text-orga8fc448">
+<p>
+But I have somewhat against thee, because thou hast left thy first charity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40830b4" class="outline-3">
+<h3 id="org40830b4">Revelation of John 2:5</h3>
+<div class="outline-text-3" id="text-org40830b4">
+<p>
+Be mindful therefore from whence thou art fallen: and do penance and do the first works. Or else I come to thee and will move thy candlestick out of its place, except thou do penance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19b39d4" class="outline-3">
+<h3 id="org19b39d4">Revelation of John 2:6</h3>
+<div class="outline-text-3" id="text-org19b39d4">
+<p>
+But this thou hast, that thou hatest the deeds of the Nicolaites, which I also hate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfeff29e" class="outline-3">
+<h3 id="orgfeff29e">Revelation of John 2:7</h3>
+<div class="outline-text-3" id="text-orgfeff29e">
+<p>
+He that hath an ear let him hear what the Spirit saith to the churches: To him that overcometh I will give to eat of the tree of life which is in the paradise of my God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org009e4fc" class="outline-3">
+<h3 id="org009e4fc">Revelation of John 2:8</h3>
+<div class="outline-text-3" id="text-org009e4fc">
+<p>
+And to the angel of the church of Smyrna write: These things saith the First and the Last, who was dead and is alive:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org005d256" class="outline-3">
+<h3 id="org005d256">Revelation of John 2:9</h3>
+<div class="outline-text-3" id="text-org005d256">
+<p>
+I know thy tribulation and thy poverty: but thou art rich. And thou art blasphemed by them that say they are Jews and are not, but are the synagogue of Satan.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6aab3a0" class="outline-3">
+<h3 id="org6aab3a0">Revelation of John 2:10</h3>
+<div class="outline-text-3" id="text-org6aab3a0">
+<p>
+Fear none of those things which thou shalt suffer. Behold, the devil will cast some of you into prison, that you may be tried: and you shall have tribulation ten days. Be thou faithful unto death: and I will give thee the crown of life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa8f643" class="outline-3">
+<h3 id="orgaa8f643">Revelation of John 2:11</h3>
+<div class="outline-text-3" id="text-orgaa8f643">
+<p>
+He that hath an ear, let him hear what the Spirit saith to the churches: He that shall overcome shall not be hurt by the second death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cbda3f" class="outline-3">
+<h3 id="org9cbda3f">Revelation of John 2:12</h3>
+<div class="outline-text-3" id="text-org9cbda3f">
+<p>
+And to the angel of the church of Pergamus write: These things saith he that hath the sharp two-edged sword:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26e1e87" class="outline-3">
+<h3 id="org26e1e87">Revelation of John 2:13</h3>
+<div class="outline-text-3" id="text-org26e1e87">
+<p>
+I know where thou dwellest, where the seat of Satan is. And thou holdest fast my name and hast not denied my faith. Even in those days when Antipas was my faithful witness, who was slain among you, where Satan dwelleth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf78cb7" class="outline-3">
+<h3 id="orgdf78cb7">Revelation of John 2:14</h3>
+<div class="outline-text-3" id="text-orgdf78cb7">
+<p>
+But I have against thee a few things: because thou hast there them that hold the doctrine of Balaam who taught Balac to cast a stumblingblock before the children of Israel, to eat and to commit fornication.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga26133e" class="outline-3">
+<h3 id="orga26133e">Revelation of John 2:15</h3>
+<div class="outline-text-3" id="text-orga26133e">
+<p>
+So hast thou also them that hold the doctrine of the Nicolaites.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a9c43b" class="outline-3">
+<h3 id="org3a9c43b">Revelation of John 2:16</h3>
+<div class="outline-text-3" id="text-org3a9c43b">
+<p>
+In like manner do penance. If not, I will come to thee quickly and will fight against them with the sword of my mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00dcafc" class="outline-3">
+<h3 id="org00dcafc">Revelation of John 2:17</h3>
+<div class="outline-text-3" id="text-org00dcafc">
+<p>
+He that hath an ear, let him hear what the Spirit saith to the churches: To him that overcometh I will give the hidden manna and will give him a white counter: and in the counter, a new name written, which no man knoweth but he that receiveth it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2316bc8" class="outline-3">
+<h3 id="org2316bc8">Revelation of John 2:18</h3>
+<div class="outline-text-3" id="text-org2316bc8">
+<p>
+And to the angel of the church of Thyatira write: These things saith the Son of God, who hath his eyes like to a flame of fire and his feet like to fine brass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f6fb03" class="outline-3">
+<h3 id="org2f6fb03">Revelation of John 2:19</h3>
+<div class="outline-text-3" id="text-org2f6fb03">
+<p>
+I know thy works and thy faith and thy charity and thy ministry and thy patience and thy last works, which are more than the former.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdcd3ba8" class="outline-3">
+<h3 id="orgdcd3ba8">Revelation of John 2:20</h3>
+<div class="outline-text-3" id="text-orgdcd3ba8">
+<p>
+But I have against thee a few things: because thou sufferest the woman Jezabel, who calleth herself a prophetess, to teach and to seduce my servants, to commit fornication and to eat of things sacrificed to idols.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org100561d" class="outline-3">
+<h3 id="org100561d">Revelation of John 2:21</h3>
+<div class="outline-text-3" id="text-org100561d">
+<p>
+And I gave her a time that she might do penance: and she will not repent of her fornication.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7364f1" class="outline-3">
+<h3 id="orgc7364f1">Revelation of John 2:22</h3>
+<div class="outline-text-3" id="text-orgc7364f1">
+<p>
+Behold, I will cast her into a bed: and they that commit adultery with her shall be in very great tribulation, except they do penance from their deeds,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6df2164" class="outline-3">
+<h3 id="org6df2164">Revelation of John 2:23</h3>
+<div class="outline-text-3" id="text-org6df2164">
+<p>
+And I will kill her children with death: and all the churches shall know that I am he that searcheth the reins and hearts. And I will give to every one of you according to your works. But to you I say
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69820e3" class="outline-3">
+<h3 id="org69820e3">Revelation of John 2:24</h3>
+<div class="outline-text-3" id="text-org69820e3">
+<p>
+And to the rest who are at Thyatira: Whosoever have not this doctrine and who have not known the depths of Satan, as they say: I will not put upon you any other burthen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc08bf74" class="outline-3">
+<h3 id="orgc08bf74">Revelation of John 2:25</h3>
+<div class="outline-text-3" id="text-orgc08bf74">
+<p>
+Yet that which you have, hold fast till I come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bd2700" class="outline-3">
+<h3 id="org4bd2700">Revelation of John 2:26</h3>
+<div class="outline-text-3" id="text-org4bd2700">
+<p>
+And he that shall overcome and keep my works unto the end, I will give him power over the nations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82bf5c1" class="outline-3">
+<h3 id="org82bf5c1">Revelation of John 2:27</h3>
+<div class="outline-text-3" id="text-org82bf5c1">
+<p>
+And he shall rule them with a rod of iron: and as the vessel of a potter they shall be broken:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9d7d2a" class="outline-3">
+<h3 id="orgb9d7d2a">Revelation of John 2:28</h3>
+<div class="outline-text-3" id="text-orgb9d7d2a">
+<p>
+As I also have received of my Father. And I will give him the morning star.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4778286" class="outline-3">
+<h3 id="org4778286">Revelation of John 2:29</h3>
+<div class="outline-text-3" id="text-org4778286">
+<p>
+He that hath an ear, let him hear what the Spirit saith to the churches. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org14eae1f" class="outline-2">
+<h2 id="org14eae1f">Revelation of John 3</h2>
+<div class="outline-text-2" id="text-org14eae1f">
+</div>
+<div id="outline-container-org0141c87" class="outline-3">
+<h3 id="org0141c87">Revelation of John 3:1</h3>
+<div class="outline-text-3" id="text-org0141c87">
+<p>
+And to the angel of the church of Sardis write: These things saith he that hath the seven spirits of God and the seven stars: I know thy works, and that thou hast the name of being alive. And thou art dead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62f53fb" class="outline-3">
+<h3 id="org62f53fb">Revelation of John 3:2</h3>
+<div class="outline-text-3" id="text-org62f53fb">
+<p>
+Be watchful and strengthen the things that remain, which are ready to die. For I find not thy works full before my God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3cf674b" class="outline-3">
+<h3 id="org3cf674b">Revelation of John 3:3</h3>
+<div class="outline-text-3" id="text-org3cf674b">
+<p>
+Have in mind therefore in what manner thou hast received and heard: and observe and do penance: If then thou shalt not watch, I will come to thee as a thief: and thou shalt not know at what hour I will come to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71b0193" class="outline-3">
+<h3 id="org71b0193">Revelation of John 3:4</h3>
+<div class="outline-text-3" id="text-org71b0193">
+<p>
+But thou hast a few names in Sardis which have not defiled their garments: and they shall walk with me in white, because they are worthy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccd6873" class="outline-3">
+<h3 id="orgccd6873">Revelation of John 3:5</h3>
+<div class="outline-text-3" id="text-orgccd6873">
+<p>
+He that shall overcome shall thus be clothed in white garments: and I will not blot out his name out of the book of life. And I will confess his name before my Father and before his angels.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22a4310" class="outline-3">
+<h3 id="org22a4310">Revelation of John 3:6</h3>
+<div class="outline-text-3" id="text-org22a4310">
+<p>
+He that hath an ear, let him hear what the Spirit saith to the churches.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e82238" class="outline-3">
+<h3 id="org5e82238">Revelation of John 3:7</h3>
+<div class="outline-text-3" id="text-org5e82238">
+<p>
+And to the angel of the church of Philadelphia write: These things saith the Holy One and the true one, he that hath the key of David, he that openeth and no man shutteth, shutteth and no man openeth:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e8b6c7" class="outline-3">
+<h3 id="org5e8b6c7">Revelation of John 3:8</h3>
+<div class="outline-text-3" id="text-org5e8b6c7">
+<p>
+I know thy works. Behold, I have given before thee a door opened, which no man can shut: because thou hast a little strength and hast kept my word and hast not denied my name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad0a1ba" class="outline-3">
+<h3 id="orgad0a1ba">Revelation of John 3:9</h3>
+<div class="outline-text-3" id="text-orgad0a1ba">
+<p>
+Behold, I will bring of the synagogue of Satan, who say they are Jews and are not, but do lie. Behold, I will make them to come and adore before thy feet. And they shall know that I have loved thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7cad72d" class="outline-3">
+<h3 id="org7cad72d">Revelation of John 3:10</h3>
+<div class="outline-text-3" id="text-org7cad72d">
+<p>
+Because thou hast kept the word of my patience, I will also keep thee from the hour of temptation, which shall come upon the whole world to try them that dwell upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc512f64" class="outline-3">
+<h3 id="orgc512f64">Revelation of John 3:11</h3>
+<div class="outline-text-3" id="text-orgc512f64">
+<p>
+Behold, I come quickly: hold fast that which thou hast, that no man take thy crown.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdea3d15" class="outline-3">
+<h3 id="orgdea3d15">Revelation of John 3:12</h3>
+<div class="outline-text-3" id="text-orgdea3d15">
+<p>
+He that shall overcome, I will make him a pillar in the temple of my God: and he shall go out no more. And I will write upon him the name of my God and the name of the city of my God, the new Jerusalem, which cometh down out of heaven from my God, and my new name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ec450d" class="outline-3">
+<h3 id="org3ec450d">Revelation of John 3:13</h3>
+<div class="outline-text-3" id="text-org3ec450d">
+<p>
+He that hath an ear, let him hear what the Spirit saith to the churches.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6dc52e" class="outline-3">
+<h3 id="orge6dc52e">Revelation of John 3:14</h3>
+<div class="outline-text-3" id="text-orge6dc52e">
+<p>
+And to the angel of the church of Laodicea write: These things saith the Amen, the faithful and true witness, who is the beginning of the creation of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org752f884" class="outline-3">
+<h3 id="org752f884">Revelation of John 3:15</h3>
+<div class="outline-text-3" id="text-org752f884">
+<p>
+I know thy works, that thou art neither cold nor hot. I would thou wert cold or hot.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca33545" class="outline-3">
+<h3 id="orgca33545">Revelation of John 3:16</h3>
+<div class="outline-text-3" id="text-orgca33545">
+<p>
+But because thou art lukewarm and neither cold nor hot, I will begin to vomit thee out of my mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06dac01" class="outline-3">
+<h3 id="org06dac01">Revelation of John 3:17</h3>
+<div class="outline-text-3" id="text-org06dac01">
+<p>
+Because thou sayest: I am rich and made wealthy and have need of nothing: and knowest not that thou art wretched and miserable and poor and blind and naked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31109d3" class="outline-3">
+<h3 id="org31109d3">Revelation of John 3:18</h3>
+<div class="outline-text-3" id="text-org31109d3">
+<p>
+I counsel thee to buy of me gold, fire tried, that thou mayest be made rich and mayest be clothed in white garments: and that the shame of thy nakedness may not appear. And anoint thy eyes with eyesalve, that thou mayest see.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3cf159" class="outline-3">
+<h3 id="orge3cf159">Revelation of John 3:19</h3>
+<div class="outline-text-3" id="text-orge3cf159">
+<p>
+Such as I love, I rebuke and chastise. Be zealous therefore and do penance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org046599b" class="outline-3">
+<h3 id="org046599b">Revelation of John 3:20</h3>
+<div class="outline-text-3" id="text-org046599b">
+<p>
+Behold, I stand at the gate and knock. If any man shall hear my voice and open to me the door, I will come in to him and will sup with him: and he with me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d20500" class="outline-3">
+<h3 id="org5d20500">Revelation of John 3:21</h3>
+<div class="outline-text-3" id="text-org5d20500">
+<p>
+To him that shall overcome, I will give to sit with me in my throne: as I also have overcome and am set down with my Father in his throne.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4b7642" class="outline-3">
+<h3 id="orga4b7642">Revelation of John 3:22</h3>
+<div class="outline-text-3" id="text-orga4b7642">
+<p>
+He that hath an ear, let him hear what the Spirit saith to the churches. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5f09d85" class="outline-2">
+<h2 id="org5f09d85">Revelation of John 4</h2>
+<div class="outline-text-2" id="text-org5f09d85">
+</div>
+<div id="outline-container-orga27a1cc" class="outline-3">
+<h3 id="orga27a1cc">Revelation of John 4:1</h3>
+<div class="outline-text-3" id="text-orga27a1cc">
+<p>
+After these things I looked, and behold a door was opened in heaven, and the first voice which I heard, as it were, of a trumpet speaking with me, said: Come up hither, and I will shew thee the things which must be done hereafter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga87d4e5" class="outline-3">
+<h3 id="orga87d4e5">Revelation of John 4:2</h3>
+<div class="outline-text-3" id="text-orga87d4e5">
+<p>
+And immediately I was in the spirit. And behold, there was a throne set in heaven, and upon the throne one sitting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6dfc30" class="outline-3">
+<h3 id="orga6dfc30">Revelation of John 4:3</h3>
+<div class="outline-text-3" id="text-orga6dfc30">
+<p>
+And he that sat was to the sight like the jasper and the sardine stone. And there was a rainbow round about the throne, in sight like unto an emerald.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge542f77" class="outline-3">
+<h3 id="orge542f77">Revelation of John 4:4</h3>
+<div class="outline-text-3" id="text-orge542f77">
+<p>
+And round about the throne were four and twenty seats: and upon the seats, four and twenty ancients sitting, clothed in white garments. And on their heads were crowns of gold.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4dbff7" class="outline-3">
+<h3 id="orgb4dbff7">Revelation of John 4:5</h3>
+<div class="outline-text-3" id="text-orgb4dbff7">
+<p>
+And from the throne proceeded lightnings and voices and thunders. And there were seven lamps burning before the throne, which are the seven Spirits of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3c0b51" class="outline-3">
+<h3 id="orgc3c0b51">Revelation of John 4:6</h3>
+<div class="outline-text-3" id="text-orgc3c0b51">
+<p>
+And in the sight of the throne was, as it were, a sea of glass like to crystal: and in the midst of the throne, and round about the throne, were four living creatures, full of eyes before and behind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda83cd7" class="outline-3">
+<h3 id="orgda83cd7">Revelation of John 4:7</h3>
+<div class="outline-text-3" id="text-orgda83cd7">
+<p>
+And the first living creature was like a lion: and the second living creature like a calf: and the third living creature, having the face, as it were, of a man: and the fourth living creature was like an eagle flying.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc472b5e" class="outline-3">
+<h3 id="orgc472b5e">Revelation of John 4:8</h3>
+<div class="outline-text-3" id="text-orgc472b5e">
+<p>
+And the four living creatures had each of them six wings: and round about and within they are full of eyes. And they rested not day and night, saying: Holy, Holy, Holy, Lord God Almighty, who was and who is and who is to come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga849fb7" class="outline-3">
+<h3 id="orga849fb7">Revelation of John 4:9</h3>
+<div class="outline-text-3" id="text-orga849fb7">
+<p>
+And when those living creatures gave glory and honour and benediction to him that sitteth on the throne, who liveth for ever and ever:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1df03f7" class="outline-3">
+<h3 id="org1df03f7">Revelation of John 4:10</h3>
+<div class="outline-text-3" id="text-org1df03f7">
+<p>
+The four and twenty ancients fell down before him that sitteth on the throne and adored him that liveth for ever and ever and cast their crowns before the throne, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bb0785" class="outline-3">
+<h3 id="org4bb0785">Revelation of John 4:11</h3>
+<div class="outline-text-3" id="text-org4bb0785">
+<p>
+Thou art worthy, O Lord our God, to receive glory and honour and power. Because thou hast created all things: and for thy will they were and have been created. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge108c50" class="outline-2">
+<h2 id="orge108c50">Revelation of John 5</h2>
+<div class="outline-text-2" id="text-orge108c50">
+</div>
+<div id="outline-container-org16d493c" class="outline-3">
+<h3 id="org16d493c">Revelation of John 5:1</h3>
+<div class="outline-text-3" id="text-org16d493c">
+<p>
+And I saw, in the right hand of him that sat on the throne, a book, written within and without, sealed with seven seals.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org658b082" class="outline-3">
+<h3 id="org658b082">Revelation of John 5:2</h3>
+<div class="outline-text-3" id="text-org658b082">
+<p>
+And I saw a strong angel, proclaiming with a loud voice: Who is worthy to open the book and to loose the seals thereof?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc556f84" class="outline-3">
+<h3 id="orgc556f84">Revelation of John 5:3</h3>
+<div class="outline-text-3" id="text-orgc556f84">
+<p>
+And no man was able, neither in heaven nor on earth nor under the earth, to open the book, nor to look on it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8184ed3" class="outline-3">
+<h3 id="org8184ed3">Revelation of John 5:4</h3>
+<div class="outline-text-3" id="text-org8184ed3">
+<p>
+And I wept much, because no man was found worthy to open the book, nor to see it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea3842a" class="outline-3">
+<h3 id="orgea3842a">Revelation of John 5:5</h3>
+<div class="outline-text-3" id="text-orgea3842a">
+<p>
+And one of the ancients said to me: Weep not: behold the lion of the tribe of Juda, the root of David, hath prevailed to open the book and to loose the seven seals thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad62a19" class="outline-3">
+<h3 id="orgad62a19">Revelation of John 5:6</h3>
+<div class="outline-text-3" id="text-orgad62a19">
+<p>
+And I saw: and behold in the midst of the throne and of the four living creatures and in the midst of the ancients, a Lamb standing, as it were slain, having seven horns and seven eyes: which are the seven Spirits of God, sent forth into all the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f483a4" class="outline-3">
+<h3 id="org9f483a4">Revelation of John 5:7</h3>
+<div class="outline-text-3" id="text-org9f483a4">
+<p>
+And he came and took the book out of the right hand of him that sat on the throne.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc31999f" class="outline-3">
+<h3 id="orgc31999f">Revelation of John 5:8</h3>
+<div class="outline-text-3" id="text-orgc31999f">
+<p>
+And when he had opened the book, the four living creatures and the four and twenty ancients fell down before the Lamb, having every one of them harps and golden vials full of odours, which are the prayers of saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06e6552" class="outline-3">
+<h3 id="org06e6552">Revelation of John 5:9</h3>
+<div class="outline-text-3" id="text-org06e6552">
+<p>
+And they sung a new canticle, saying: Thou art worthy, O Lord, to take the book and to open the seals thereof: because thou wast slain and hast redeemed us to God, in thy blood, out of every tribe and tongue and people and nation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf191166" class="outline-3">
+<h3 id="orgf191166">Revelation of John 5:10</h3>
+<div class="outline-text-3" id="text-orgf191166">
+<p>
+And hast made us to our God a kingdom and priests, and we shall reign on the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d8b4cd" class="outline-3">
+<h3 id="org3d8b4cd">Revelation of John 5:11</h3>
+<div class="outline-text-3" id="text-org3d8b4cd">
+<p>
+And I beheld, and I heard the voice of many angels round about the throne and the living creatures and the ancients (and the number of them was thousands of thousands),
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf450057" class="outline-3">
+<h3 id="orgf450057">Revelation of John 5:12</h3>
+<div class="outline-text-3" id="text-orgf450057">
+<p>
+Saying with a loud voice: The Lamb that was slain is worthy to receive power and divinity and wisdom and strength and honour and glory and benediction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org112d8dd" class="outline-3">
+<h3 id="org112d8dd">Revelation of John 5:13</h3>
+<div class="outline-text-3" id="text-org112d8dd">
+<p>
+And every creature which is in heaven and on the earth and under the earth, and such as are in the sea, and all that are in them, I heard all saying: To him that sitteth on the throne and to the Lamb, benediction and honour and glory and power, for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc77bfb4" class="outline-3">
+<h3 id="orgc77bfb4">Revelation of John 5:14</h3>
+<div class="outline-text-3" id="text-orgc77bfb4">
+<p>
+And the four living creatures said: Amen. And the four and twenty ancients fell down on their faces and adored him that liveth for ever and ever. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0aa9190" class="outline-2">
+<h2 id="org0aa9190">Revelation of John 6</h2>
+<div class="outline-text-2" id="text-org0aa9190">
+</div>
+<div id="outline-container-org99d24e8" class="outline-3">
+<h3 id="org99d24e8">Revelation of John 6:1</h3>
+<div class="outline-text-3" id="text-org99d24e8">
+<p>
+And I saw that the Lamb had opened one of the seven seals: and I heard one of the four living creatures, as it were the voice of thunder, saying: Come and see.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org682a6ec" class="outline-3">
+<h3 id="org682a6ec">Revelation of John 6:2</h3>
+<div class="outline-text-3" id="text-org682a6ec">
+<p>
+And I saw: and behold a white horse, and he that sat on him had a bow, and there was a crown given him, and he went forth conquering that he might conquer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a3c80e" class="outline-3">
+<h3 id="org9a3c80e">Revelation of John 6:3</h3>
+<div class="outline-text-3" id="text-org9a3c80e">
+<p>
+And when he had opened the second seal, I heard the second living creature saying: Come and see.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge68eb56" class="outline-3">
+<h3 id="orge68eb56">Revelation of John 6:4</h3>
+<div class="outline-text-3" id="text-orge68eb56">
+<p>
+And there went out another horse that was red. And to him that sat thereon, it was given that he should take peace from the earth: and that they should kill one another. And a great sword was given to him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55a7ee3" class="outline-3">
+<h3 id="org55a7ee3">Revelation of John 6:5</h3>
+<div class="outline-text-3" id="text-org55a7ee3">
+<p>
+And when he had opened the third seal, I heard the third living creature saying: Come and see. And behold a black horse. And he that sat on him had a pair of scales in his hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05f7f4e" class="outline-3">
+<h3 id="org05f7f4e">Revelation of John 6:6</h3>
+<div class="outline-text-3" id="text-org05f7f4e">
+<p>
+And I heard, as it were a voice in the midst of the four living creatures, saying: Two pounds of wheat for a penny, and thrice two pounds of barley for a penny: and see thou hurt not the wine and the oil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b756ae" class="outline-3">
+<h3 id="org5b756ae">Revelation of John 6:7</h3>
+<div class="outline-text-3" id="text-org5b756ae">
+<p>
+And when he had opened the fourth seal, I heard the voice of the fourth living creature saying: Come and see.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge02a4b9" class="outline-3">
+<h3 id="orge02a4b9">Revelation of John 6:8</h3>
+<div class="outline-text-3" id="text-orge02a4b9">
+<p>
+And behold a pale horse: and he that sat upon him, his name was Death. And hell followed him. And power was given to him over the four parts of the earth, to kill with sword, with famine and with death and with the beasts of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91a9422" class="outline-3">
+<h3 id="org91a9422">Revelation of John 6:9</h3>
+<div class="outline-text-3" id="text-org91a9422">
+<p>
+And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God and for the testimony which they held.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07002a1" class="outline-3">
+<h3 id="org07002a1">Revelation of John 6:10</h3>
+<div class="outline-text-3" id="text-org07002a1">
+<p>
+And they cried with a loud voice, saying: How long, O Lord (Holy and True), dost thou not judge and revenge our blood on them that dwell on the earth?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc368ace" class="outline-3">
+<h3 id="orgc368ace">Revelation of John 6:11</h3>
+<div class="outline-text-3" id="text-orgc368ace">
+<p>
+And white robes were given to every one of them one; And it was said to them that they should rest for a little time till their fellow servants and their brethren, who are to be slain even as they, should be filled up.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7ecd2c" class="outline-3">
+<h3 id="orgb7ecd2c">Revelation of John 6:12</h3>
+<div class="outline-text-3" id="text-orgb7ecd2c">
+<p>
+And I saw, when he had opened the sixth seal: and behold there was a great earthquake. And the sun became black as sackcloth of hair: and the whole moon became as blood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c5f722" class="outline-3">
+<h3 id="org7c5f722">Revelation of John 6:13</h3>
+<div class="outline-text-3" id="text-org7c5f722">
+<p>
+And the stars from heaven fell upon the earth, as the fig tree casteth its green figs when it is shaken by a great wind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d28418" class="outline-3">
+<h3 id="org9d28418">Revelation of John 6:14</h3>
+<div class="outline-text-3" id="text-org9d28418">
+<p>
+And the heaven departed as a book folded up. And every mountain, and the islands, were moved out of their places.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf478c6" class="outline-3">
+<h3 id="orgdf478c6">Revelation of John 6:15</h3>
+<div class="outline-text-3" id="text-orgdf478c6">
+<p>
+And the kings of the earth and the princes and tribunes and the rich and the strong and every bondman and every freeman hid themselves in the dens and in the rocks of mountains:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4da1a17" class="outline-3">
+<h3 id="org4da1a17">Revelation of John 6:16</h3>
+<div class="outline-text-3" id="text-org4da1a17">
+<p>
+And they say to the mountains and the rocks: Fall upon us and hide us from the face of him that sitteth upon the throne and from the wrath of the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4996684" class="outline-3">
+<h3 id="org4996684">Revelation of John 6:17</h3>
+<div class="outline-text-3" id="text-org4996684">
+<p>
+For the great day of their wrath is come. And who shall be able to stand? 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b00911" class="outline-2">
+<h2 id="org5b00911">Revelation of John 7</h2>
+<div class="outline-text-2" id="text-org5b00911">
+</div>
+<div id="outline-container-org49e7bdc" class="outline-3">
+<h3 id="org49e7bdc">Revelation of John 7:1</h3>
+<div class="outline-text-3" id="text-org49e7bdc">
+<p>
+After these things, I saw four angels standing on the four corners of the earth, holding the four winds of the earth, that they should not blow upon the earth nor upon the sea nor on any tree.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16ed82a" class="outline-3">
+<h3 id="org16ed82a">Revelation of John 7:2</h3>
+<div class="outline-text-3" id="text-org16ed82a">
+<p>
+And I saw another angel ascending from the rising of the sun, having the sign of the living God. And he cried with a loud voice to the four angels to whom it was given to hurt the earth and the sea,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d4c611" class="outline-3">
+<h3 id="org5d4c611">Revelation of John 7:3</h3>
+<div class="outline-text-3" id="text-org5d4c611">
+<p>
+Saying: Hurt not the earth nor the sea nor the trees, till we sign the servants of our God in their foreheads.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f3ae82" class="outline-3">
+<h3 id="org0f3ae82">Revelation of John 7:4</h3>
+<div class="outline-text-3" id="text-org0f3ae82">
+<p>
+And I heard the number of them that were signed. An hundred forty-four thousand were signed, of every tribe of the children of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83d0d13" class="outline-3">
+<h3 id="org83d0d13">Revelation of John 7:5</h3>
+<div class="outline-text-3" id="text-org83d0d13">
+<p>
+Of the tribe of Juda, twelve thousand signed: Of the tribe of Ruben, twelve thousand signed: Of the tribe of Gad, twelve thousand signed:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge41f36b" class="outline-3">
+<h3 id="orge41f36b">Revelation of John 7:6</h3>
+<div class="outline-text-3" id="text-orge41f36b">
+<p>
+Of the tribe of Aser, twelve thousand signed: Of the tribe of Nephthali, twelve thousand signed: Of the tribe of Manasses, twelve thousand signed:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58c8504" class="outline-3">
+<h3 id="org58c8504">Revelation of John 7:7</h3>
+<div class="outline-text-3" id="text-org58c8504">
+<p>
+Of the tribe of Simeon, twelve thousand signed: Of the tribe of Levi, twelve thousand signed: Of the tribe of Issachar, twelve thousand signed:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1f2c5d" class="outline-3">
+<h3 id="orgf1f2c5d">Revelation of John 7:8</h3>
+<div class="outline-text-3" id="text-orgf1f2c5d">
+<p>
+Of the tribe of Zabulon, twelve thousand signed: Of the tribe of Joseph, twelve thousand signed: Of the tribe of Benjamin, twelve thousand signed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc93b54" class="outline-3">
+<h3 id="orgcc93b54">Revelation of John 7:9</h3>
+<div class="outline-text-3" id="text-orgcc93b54">
+<p>
+After this, I saw a great multitude, which no man could number, of all nations and tribes and peoples and tongues, standing before the throne and in sight of the Lamb, clothed with white robes, and palms in their hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79dba4f" class="outline-3">
+<h3 id="org79dba4f">Revelation of John 7:10</h3>
+<div class="outline-text-3" id="text-org79dba4f">
+<p>
+And they cried with a loud voice, saying: Salvation to our God, who sitteth upon the throne and to the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27fd2db" class="outline-3">
+<h3 id="org27fd2db">Revelation of John 7:11</h3>
+<div class="outline-text-3" id="text-org27fd2db">
+<p>
+And all the angels stood round about the throne and the ancients and the four living creatures. And they fell down before the throne upon their faces and adored God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b0cad5" class="outline-3">
+<h3 id="org6b0cad5">Revelation of John 7:12</h3>
+<div class="outline-text-3" id="text-org6b0cad5">
+<p>
+Saying: Amen. Benediction and glory and wisdom and thanksgiving, honour and power and strength, to our God, for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22366e9" class="outline-3">
+<h3 id="org22366e9">Revelation of John 7:13</h3>
+<div class="outline-text-3" id="text-org22366e9">
+<p>
+And one of the ancients answered and said to me: These that are clothed in white robes, who are they? And whence came they?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0aa21f" class="outline-3">
+<h3 id="orgf0aa21f">Revelation of John 7:14</h3>
+<div class="outline-text-3" id="text-orgf0aa21f">
+<p>
+And I said to him: My Lord, thou knowest. And he said to me: These are they who are come out of great tribulation and have washed their robes and have made them white in the blood of the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9de284b" class="outline-3">
+<h3 id="org9de284b">Revelation of John 7:15</h3>
+<div class="outline-text-3" id="text-org9de284b">
+<p>
+Therefore, they are before the throne of God: and they serve him day and night in his temple. And he that sitteth on the throne shall dwell over them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4346dcb" class="outline-3">
+<h3 id="org4346dcb">Revelation of John 7:16</h3>
+<div class="outline-text-3" id="text-org4346dcb">
+<p>
+They shall no more hunger nor thirst: neither shall the sun fall on them, nor any heat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0676641" class="outline-3">
+<h3 id="org0676641">Revelation of John 7:17</h3>
+<div class="outline-text-3" id="text-org0676641">
+<p>
+For the Lamb, which is in the midst of the throne, shall rule them and shall lead them to the fountains of the waters of life: and God shall wipe away all tears from their eyes. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc4b2cbb" class="outline-2">
+<h2 id="orgc4b2cbb">Revelation of John 8</h2>
+<div class="outline-text-2" id="text-orgc4b2cbb">
+</div>
+<div id="outline-container-orge3422d8" class="outline-3">
+<h3 id="orge3422d8">Revelation of John 8:1</h3>
+<div class="outline-text-3" id="text-orge3422d8">
+<p>
+And when he had opened the seventh seal, there was silence in heaven, as it were for half an hour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90e3c13" class="outline-3">
+<h3 id="org90e3c13">Revelation of John 8:2</h3>
+<div class="outline-text-3" id="text-org90e3c13">
+<p>
+And I saw seven angels standing in the presence of God: and there were given to them seven trumpets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf0bff6" class="outline-3">
+<h3 id="orgaf0bff6">Revelation of John 8:3</h3>
+<div class="outline-text-3" id="text-orgaf0bff6">
+<p>
+And another angel came and stood before the altar, having a golden censer: and there was given to him much incense, that he should offer of the prayers of all saints, upon the golden altar which is before the throne of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd15d881" class="outline-3">
+<h3 id="orgd15d881">Revelation of John 8:4</h3>
+<div class="outline-text-3" id="text-orgd15d881">
+<p>
+And the smoke of the incense of the prayers of the saints ascended up before God from the hand of the angel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcab5523" class="outline-3">
+<h3 id="orgcab5523">Revelation of John 8:5</h3>
+<div class="outline-text-3" id="text-orgcab5523">
+<p>
+And the angel took the censer and filled it with the fire of the altar and cast it on the earth: and there were thunders and voices and lightnings and a great earthquake.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12f3ec4" class="outline-3">
+<h3 id="org12f3ec4">Revelation of John 8:6</h3>
+<div class="outline-text-3" id="text-org12f3ec4">
+<p>
+And the seven angels who had the seven trumpets prepared themselves to sound the trumpet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org824b43e" class="outline-3">
+<h3 id="org824b43e">Revelation of John 8:7</h3>
+<div class="outline-text-3" id="text-org824b43e">
+<p>
+And the first angel sounded the trumpet: and there followed hail and fire, mingled with blood: and it was cast on the earth. And the third part of the earth was burnt up: and the third part of the trees was burnt up: and all green grass was burnt up.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57d2a5f" class="outline-3">
+<h3 id="org57d2a5f">Revelation of John 8:8</h3>
+<div class="outline-text-3" id="text-org57d2a5f">
+<p>
+And the second angel sounded the trumpet: and, as it were, a great mountain, burning with fire, was cast into the sea. And the third part of the sea became blood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23793aa" class="outline-3">
+<h3 id="org23793aa">Revelation of John 8:9</h3>
+<div class="outline-text-3" id="text-org23793aa">
+<p>
+And the third part of those creatures died which had life in the sea: and the third part of the ships was destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c909ef" class="outline-3">
+<h3 id="org1c909ef">Revelation of John 8:10</h3>
+<div class="outline-text-3" id="text-org1c909ef">
+<p>
+And the third angel sounded the trumpet: and a great star fell from heaven, burning as it were a torch. And it fell on the third part of the rivers and upon the fountains of waters:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c3afee" class="outline-3">
+<h3 id="org2c3afee">Revelation of John 8:11</h3>
+<div class="outline-text-3" id="text-org2c3afee">
+<p>
+And the name of the star is called Wormwood. And the third part of the waters became wormwood. And many men died of the waters, because they were made bitter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62a93cd" class="outline-3">
+<h3 id="org62a93cd">Revelation of John 8:12</h3>
+<div class="outline-text-3" id="text-org62a93cd">
+<p>
+And the fourth angel sounded the trumpet: and the third part of the sun was smitten, and the third part of the moon, and the third part of the stars, so that the third part of them was darkened. And the day did not shine for a third part of it: and the night in like manner.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda5bc5f" class="outline-3">
+<h3 id="orgda5bc5f">Revelation of John 8:13</h3>
+<div class="outline-text-3" id="text-orgda5bc5f">
+<p>
+And I beheld: and heard the voice of one eagle flying through the midst of heaven, saying with a loud voice: Woe, Woe, Woe to the inhabitants of the earth, by reason of the rest of the voices of the three angels, who are yet to sound the trumpet! 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge786a4c" class="outline-2">
+<h2 id="orge786a4c">Revelation of John 9</h2>
+<div class="outline-text-2" id="text-orge786a4c">
+</div>
+<div id="outline-container-org1ac97fa" class="outline-3">
+<h3 id="org1ac97fa">Revelation of John 9:1</h3>
+<div class="outline-text-3" id="text-org1ac97fa">
+<p>
+And the fifth angel sounded the trumpet: and I saw a star fall from heaven upon the earth. And there was given to him the key of the bottomless pit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69c57dd" class="outline-3">
+<h3 id="org69c57dd">Revelation of John 9:2</h3>
+<div class="outline-text-3" id="text-org69c57dd">
+<p>
+And he opened the bottomless pit: and the smoke of the pit arose, as the smoke of a great furnace. And the sun and the air were darkened with the smoke of the pit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcda483a" class="outline-3">
+<h3 id="orgcda483a">Revelation of John 9:3</h3>
+<div class="outline-text-3" id="text-orgcda483a">
+<p>
+And from the smoke of the pit there came out locusts upon the earth. And power was given to them, as the scorpions of the earth have power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d1cb54" class="outline-3">
+<h3 id="org3d1cb54">Revelation of John 9:4</h3>
+<div class="outline-text-3" id="text-org3d1cb54">
+<p>
+And it was commanded them that they should not hurt the grass of the earth nor any green thing nor any tree: but only the men who have not the sign of God on their foreheads.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c18966" class="outline-3">
+<h3 id="org5c18966">Revelation of John 9:5</h3>
+<div class="outline-text-3" id="text-org5c18966">
+<p>
+And it was given unto them that they should not kill them: but that they should torment them five months. And their torment was as the torment of a scorpion when he striketh a man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc99a856" class="outline-3">
+<h3 id="orgc99a856">Revelation of John 9:6</h3>
+<div class="outline-text-3" id="text-orgc99a856">
+<p>
+And in those days, men shall seek death and shall not find it. And they shall desire to die: and death shall fly from them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4637e0" class="outline-3">
+<h3 id="orgf4637e0">Revelation of John 9:7</h3>
+<div class="outline-text-3" id="text-orgf4637e0">
+<p>
+And the shapes of the locusts were like unto horses prepared unto battle. And on their heads were, as it were, crowns like gold: and their faces were as the faces of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1bb186d" class="outline-3">
+<h3 id="org1bb186d">Revelation of John 9:8</h3>
+<div class="outline-text-3" id="text-org1bb186d">
+<p>
+And they had hair as the hair of women: and their teeth were as lions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7da6b70" class="outline-3">
+<h3 id="org7da6b70">Revelation of John 9:9</h3>
+<div class="outline-text-3" id="text-org7da6b70">
+<p>
+And they had breastplates as breastplates of iron: and the noise of their wings was as the noise of chariots and many horses running to battle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org846180c" class="outline-3">
+<h3 id="org846180c">Revelation of John 9:10</h3>
+<div class="outline-text-3" id="text-org846180c">
+<p>
+And they had tails like to scorpions: and there were stings in their tails. And their power was to hurt men, five months. And they had over them
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf30e86" class="outline-3">
+<h3 id="orgdf30e86">Revelation of John 9:11</h3>
+<div class="outline-text-3" id="text-orgdf30e86">
+<p>
+A king, the angel of the bottomless pit (whose name in Hebrew is Abaddon and in Greek Apollyon, in Latin Exterminans).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org319da0b" class="outline-3">
+<h3 id="org319da0b">Revelation of John 9:12</h3>
+<div class="outline-text-3" id="text-org319da0b">
+<p>
+One woe is past: and behold there come yet two woes more hereafter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7e8b6c" class="outline-3">
+<h3 id="orgb7e8b6c">Revelation of John 9:13</h3>
+<div class="outline-text-3" id="text-orgb7e8b6c">
+<p>
+And the sixth angel sounded the trumpet: and I heard a voice from the four horns of the golden altar which is before the eyes of God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3bdc3b" class="outline-3">
+<h3 id="orgd3bdc3b">Revelation of John 9:14</h3>
+<div class="outline-text-3" id="text-orgd3bdc3b">
+<p>
+Saying to the sixth angel who had the trumpet: Loose the four angels who are bound in the great river Euphrates.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf72bad6" class="outline-3">
+<h3 id="orgf72bad6">Revelation of John 9:15</h3>
+<div class="outline-text-3" id="text-orgf72bad6">
+<p>
+And the four angels were loosed, who were prepared for an hour, and a day, and a month, and a year: for to kill the third part of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb729599" class="outline-3">
+<h3 id="orgb729599">Revelation of John 9:16</h3>
+<div class="outline-text-3" id="text-orgb729599">
+<p>
+And the number of the army of horsemen was twenty thousand times ten thousand. And I heard the number of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf102c59" class="outline-3">
+<h3 id="orgf102c59">Revelation of John 9:17</h3>
+<div class="outline-text-3" id="text-orgf102c59">
+<p>
+And thus I saw the horses in the vision. And they that sat on them had breastplates of fire and of hyacinth and of brimstone. And the heads of the horses were as the heads of lions: and from their mouths proceeded fire and smoke and brimstone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24297ee" class="outline-3">
+<h3 id="org24297ee">Revelation of John 9:18</h3>
+<div class="outline-text-3" id="text-org24297ee">
+<p>
+And by these three plagues was slain the third part of men, by the fire and by the smoke and by the brimstone which issued out of their mouths.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7505777" class="outline-3">
+<h3 id="org7505777">Revelation of John 9:19</h3>
+<div class="outline-text-3" id="text-org7505777">
+<p>
+For the power of the horses is in their mouths and in their tails. For, their tails are like to serpents and have heads: and with them they hurt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ad6e2f" class="outline-3">
+<h3 id="org9ad6e2f">Revelation of John 9:20</h3>
+<div class="outline-text-3" id="text-org9ad6e2f">
+<p>
+And the rest of the men, who were not slain by these plagues, did not do penance from the works of their hands, that they should not adore devils and idols of gold and silver and brass and stone and wood, which neither can see nor hear nor walk:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd26a12" class="outline-3">
+<h3 id="orgcd26a12">Revelation of John 9:21</h3>
+<div class="outline-text-3" id="text-orgcd26a12">
+<p>
+Neither did they penance from their murders nor from their sorceries nor from their fornication nor from their thefts. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf26728e" class="outline-2">
+<h2 id="orgf26728e">Revelation of John 10</h2>
+<div class="outline-text-2" id="text-orgf26728e">
+</div>
+<div id="outline-container-org5dd89bd" class="outline-3">
+<h3 id="org5dd89bd">Revelation of John 10:1</h3>
+<div class="outline-text-3" id="text-org5dd89bd">
+<p>
+And I saw another mighty angel come down from heaven, clothed with a cloud. And a rainbow was on his head: and his face, as the sun, and his feet as pillars of fire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7b5344" class="outline-3">
+<h3 id="orga7b5344">Revelation of John 10:2</h3>
+<div class="outline-text-3" id="text-orga7b5344">
+<p>
+And he had in his hand a little book, open. And he set his right foot upon the sea, and his left foot upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7e85e1" class="outline-3">
+<h3 id="orgf7e85e1">Revelation of John 10:3</h3>
+<div class="outline-text-3" id="text-orgf7e85e1">
+<p>
+And he cried with a loud voice as when a lion roareth. And when he had cried, seven thunders uttered their voices.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd44790d" class="outline-3">
+<h3 id="orgd44790d">Revelation of John 10:4</h3>
+<div class="outline-text-3" id="text-orgd44790d">
+<p>
+And when the seven thunders had uttered their voices, I was about to write. And I heard a voice from heaven saying to me: Seal up the things which the seven thunders have spoken. And write them not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67a2fe2" class="outline-3">
+<h3 id="org67a2fe2">Revelation of John 10:5</h3>
+<div class="outline-text-3" id="text-org67a2fe2">
+<p>
+And the angel whom I saw standing upon the sea and upon the earth lifted up his hand to heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64c6b8a" class="outline-3">
+<h3 id="org64c6b8a">Revelation of John 10:6</h3>
+<div class="outline-text-3" id="text-org64c6b8a">
+<p>
+And he swore by him that liveth for ever and ever, who created heaven and the things which are therein, and the earth and the things which are in it, and the sea and the things which are therein: That time shall be no longer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbab33c0" class="outline-3">
+<h3 id="orgbab33c0">Revelation of John 10:7</h3>
+<div class="outline-text-3" id="text-orgbab33c0">
+<p>
+But in the days of the voice of the seventh angel, when he shall begin to sound the trumpet, the mystery of God shall be finished, as he hath declared by his servants the prophets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3ccb40" class="outline-3">
+<h3 id="orgd3ccb40">Revelation of John 10:8</h3>
+<div class="outline-text-3" id="text-orgd3ccb40">
+<p>
+And I heard a voice from heaven, again speaking to me and saying: Go and take the book that is open, from the hand of the angel who standeth upon the sea and upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org075d716" class="outline-3">
+<h3 id="org075d716">Revelation of John 10:9</h3>
+<div class="outline-text-3" id="text-org075d716">
+<p>
+And I went to the angel, saying unto him that he should give me the book. And he said to me: Take the book and eat it up. And it shall make thy belly bitter: but in thy mouth it shall be sweet as honey.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda66942" class="outline-3">
+<h3 id="orgda66942">Revelation of John 10:10</h3>
+<div class="outline-text-3" id="text-orgda66942">
+<p>
+And I took the book from the hand of the angel and ate it up: and it was in my mouth, sweet as honey. And when I had eaten it, my belly was bitter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1b2609" class="outline-3">
+<h3 id="orge1b2609">Revelation of John 10:11</h3>
+<div class="outline-text-3" id="text-orge1b2609">
+<p>
+And he said to me: Thou must prophesy again to many nations and peoples and tongues and kings. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org00ff410" class="outline-2">
+<h2 id="org00ff410">Revelation of John 11</h2>
+<div class="outline-text-2" id="text-org00ff410">
+</div>
+<div id="outline-container-orgea969f8" class="outline-3">
+<h3 id="orgea969f8">Revelation of John 11:1</h3>
+<div class="outline-text-3" id="text-orgea969f8">
+<p>
+And there was given me a reed, like unto a rod. And it was said to me: Arise, and measure the temple of God and the altar and them that adore therein.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94d0b1f" class="outline-3">
+<h3 id="org94d0b1f">Revelation of John 11:2</h3>
+<div class="outline-text-3" id="text-org94d0b1f">
+<p>
+But the court which is without the temple, cast out and measure it not: because it is given unto the Gentiles. And the holy city they shall tread under foot, two and forty months:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b3fb85" class="outline-3">
+<h3 id="org5b3fb85">Revelation of John 11:3</h3>
+<div class="outline-text-3" id="text-org5b3fb85">
+<p>
+And I will give unto my two witnesses: and they shall prophesy, a thousand two hundred sixty days, clothed in sackcloth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org678a1d4" class="outline-3">
+<h3 id="org678a1d4">Revelation of John 11:4</h3>
+<div class="outline-text-3" id="text-org678a1d4">
+<p>
+These are the two olive trees and the two candlesticks that stand before the Lord of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9340ab" class="outline-3">
+<h3 id="orge9340ab">Revelation of John 11:5</h3>
+<div class="outline-text-3" id="text-orge9340ab">
+<p>
+And if any man will hurt them, fire shall come out of their mouths and shall devour their enemies. And if any man will hurt them, in this manner must he be slain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d2739a" class="outline-3">
+<h3 id="org5d2739a">Revelation of John 11:6</h3>
+<div class="outline-text-3" id="text-org5d2739a">
+<p>
+These have power to shut heaven, that it rain not in the days of their prophecy: And they have power over waters, to turn them into blood and to strike the earth with all plagues, as often as they will.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e579f3" class="outline-3">
+<h3 id="org6e579f3">Revelation of John 11:7</h3>
+<div class="outline-text-3" id="text-org6e579f3">
+<p>
+And when they shall have finished their testimony, the beast that ascendeth out of the abyss shall make war against them and shall overcome them and kill them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1bfa58" class="outline-3">
+<h3 id="orgd1bfa58">Revelation of John 11:8</h3>
+<div class="outline-text-3" id="text-orgd1bfa58">
+<p>
+And their bodies shall lie in the streets of the great city which is called spiritually, Sodom and Egypt: where their Lord also was crucified.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd565a97" class="outline-3">
+<h3 id="orgd565a97">Revelation of John 11:9</h3>
+<div class="outline-text-3" id="text-orgd565a97">
+<p>
+And they of the tribes and peoples and tongues and nations shall see their bodies for three days and a half: and they shall not suffer their bodies to be laid in sepulchres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19a9963" class="outline-3">
+<h3 id="org19a9963">Revelation of John 11:10</h3>
+<div class="outline-text-3" id="text-org19a9963">
+<p>
+And they that dwell upon the earth shall rejoice over them and make merry: and shall send gifts one to another, because these two prophets tormented them that dwelt upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcfcfb72" class="outline-3">
+<h3 id="orgcfcfb72">Revelation of John 11:11</h3>
+<div class="outline-text-3" id="text-orgcfcfb72">
+<p>
+And after three days and a half, the spirit of life from God entered into them. And they stood upon their feet: and great fear fell upon them that saw them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57f07bf" class="outline-3">
+<h3 id="org57f07bf">Revelation of John 11:12</h3>
+<div class="outline-text-3" id="text-org57f07bf">
+<p>
+And they heard a great voice from heaven, saying to them: Come up hither. And they went up to heaven in a cloud: and their enemies saw them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org153a926" class="outline-3">
+<h3 id="org153a926">Revelation of John 11:13</h3>
+<div class="outline-text-3" id="text-org153a926">
+<p>
+And at that hour there was made a great earthquake: and the tenth part of the city fell. And there were slain in the earthquake, names of men, seven thousand: and the rest were cast into a fear and gave glory to the God of heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f5e0ff" class="outline-3">
+<h3 id="org6f5e0ff">Revelation of John 11:14</h3>
+<div class="outline-text-3" id="text-org6f5e0ff">
+<p>
+The second woe is past: and behold the third woe will come quickly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23cc275" class="outline-3">
+<h3 id="org23cc275">Revelation of John 11:15</h3>
+<div class="outline-text-3" id="text-org23cc275">
+<p>
+And the seventh angel sounded the trumpet: and there were great voices in heaven, saying: The kingdom of this world is become our Lord&rsquo;s and his Christ&rsquo;s, and he shall reign for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaed7243" class="outline-3">
+<h3 id="orgaed7243">Revelation of John 11:16</h3>
+<div class="outline-text-3" id="text-orgaed7243">
+<p>
+And the four and twenty ancients who sit on their seats in the sight of God, fell on their faces and adored God, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e461e2" class="outline-3">
+<h3 id="org4e461e2">Revelation of John 11:17</h3>
+<div class="outline-text-3" id="text-org4e461e2">
+<p>
+We give thee thanks, O Lord God Almighty, who art and who wast and who art to come: because thou hast taken to thee thy great power, and thou hast reigned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2345616" class="outline-3">
+<h3 id="org2345616">Revelation of John 11:18</h3>
+<div class="outline-text-3" id="text-org2345616">
+<p>
+And the nations were angry: and thy wrath is come. And the time of the dead, that they should be judged and that thou shouldest render reward to thy servants the prophets and the saints, and to them that fear thy name, little and great: and shouldest destroy them who have corrupted the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf258e60" class="outline-3">
+<h3 id="orgf258e60">Revelation of John 11:19</h3>
+<div class="outline-text-3" id="text-orgf258e60">
+<p>
+And the temple of God was opened in heaven: and the ark of his testament was seen in his temple. And there were lightnings and voices and an earthquake and great hail. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb82ddb6" class="outline-2">
+<h2 id="orgb82ddb6">Revelation of John 12</h2>
+<div class="outline-text-2" id="text-orgb82ddb6">
+</div>
+<div id="outline-container-orgbbe6fb0" class="outline-3">
+<h3 id="orgbbe6fb0">Revelation of John 12:1</h3>
+<div class="outline-text-3" id="text-orgbbe6fb0">
+<p>
+And a great sign appeared in heaven: A woman clothed with the sun, and the moon under her feet, and on her head a crown of twelve stars.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e08692" class="outline-3">
+<h3 id="org2e08692">Revelation of John 12:2</h3>
+<div class="outline-text-3" id="text-org2e08692">
+<p>
+And being with child, she cried travailing in birth: and was in pain to be delivered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeed181b" class="outline-3">
+<h3 id="orgeed181b">Revelation of John 12:3</h3>
+<div class="outline-text-3" id="text-orgeed181b">
+<p>
+And there was seen another sign in heaven. And behold a great red dragon, having seven heads and ten horns and on his heads seven diadems.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga766bd4" class="outline-3">
+<h3 id="orga766bd4">Revelation of John 12:4</h3>
+<div class="outline-text-3" id="text-orga766bd4">
+<p>
+And his tail drew the third part of the stars of heaven and cast them to the earth. And the dragon stood before the woman who was ready to be delivered: that, when she should be delivered, he might devour her son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13afdea" class="outline-3">
+<h3 id="org13afdea">Revelation of John 12:5</h3>
+<div class="outline-text-3" id="text-org13afdea">
+<p>
+And she brought forth a man child, who was to rule all nations with an iron rod. And her son was taken up to God and to his throne.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ef9929" class="outline-3">
+<h3 id="org9ef9929">Revelation of John 12:6</h3>
+<div class="outline-text-3" id="text-org9ef9929">
+<p>
+And the woman fled into the wilderness, where she had a place prepared by God, that there they should feed her, a thousand two hundred sixty days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fac27a" class="outline-3">
+<h3 id="org6fac27a">Revelation of John 12:7</h3>
+<div class="outline-text-3" id="text-org6fac27a">
+<p>
+And there was a great battle in heaven: Michael and his angels fought with the dragon, and the dragon fought, and his angels.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c0c997" class="outline-3">
+<h3 id="org9c0c997">Revelation of John 12:8</h3>
+<div class="outline-text-3" id="text-org9c0c997">
+<p>
+And they prevailed not: neither was their place found any more in heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3a79e8" class="outline-3">
+<h3 id="orgc3a79e8">Revelation of John 12:9</h3>
+<div class="outline-text-3" id="text-orgc3a79e8">
+<p>
+And that great dragon was cast out, that old serpent, who is called the devil and Satan, who seduceth the whole world. And he was cast unto the earth: and his angels were thrown down with him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7807616" class="outline-3">
+<h3 id="org7807616">Revelation of John 12:10</h3>
+<div class="outline-text-3" id="text-org7807616">
+<p>
+And I heard a loud voice in heaven, saying: Now is come salvation and strength and the kingdom of our God and the power of his Christ: because the accuser of our brethren is cast forth, who accused them before our God day and night.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5c9865" class="outline-3">
+<h3 id="orgb5c9865">Revelation of John 12:11</h3>
+<div class="outline-text-3" id="text-orgb5c9865">
+<p>
+And they overcame him by the blood of the Lamb and by the word of the testimony: and they loved not their lives unto death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb96bd1b" class="outline-3">
+<h3 id="orgb96bd1b">Revelation of John 12:12</h3>
+<div class="outline-text-3" id="text-orgb96bd1b">
+<p>
+Therefore, rejoice, O heavens, and you that dwell therein. Woe to the earth and to the sea, because the devil is come down unto you, having great wrath, knowing that he hath but a short time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org717c080" class="outline-3">
+<h3 id="org717c080">Revelation of John 12:13</h3>
+<div class="outline-text-3" id="text-org717c080">
+<p>
+And when the dragon saw that he was cast unto the earth, he persecuted the woman who brought forth the man child.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ad8225" class="outline-3">
+<h3 id="org0ad8225">Revelation of John 12:14</h3>
+<div class="outline-text-3" id="text-org0ad8225">
+<p>
+And there were given to the woman two wings of a great eagle, that she might fly into the desert, unto her place, where she is nourished for a time and times, and half a time, from the face of the serpent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71ab07d" class="outline-3">
+<h3 id="org71ab07d">Revelation of John 12:15</h3>
+<div class="outline-text-3" id="text-org71ab07d">
+<p>
+And the serpent cast out of his mouth, after the woman, water, as it were a river: that he might cause her to be carried away by the river.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3573438" class="outline-3">
+<h3 id="org3573438">Revelation of John 12:16</h3>
+<div class="outline-text-3" id="text-org3573438">
+<p>
+And the earth helped the woman: and the earth opened her mouth and swallowed up the river which the dragon cast out of his mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5657593" class="outline-3">
+<h3 id="org5657593">Revelation of John 12:17</h3>
+<div class="outline-text-3" id="text-org5657593">
+<p>
+And the dragon was angry against the woman: and went to make war with the rest of her seed, who keep the commandments of God and have the testimony of Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org040d6de" class="outline-3">
+<h3 id="org040d6de">Revelation of John 12:18</h3>
+<div class="outline-text-3" id="text-org040d6de">
+<p>
+And he stood upon the sand of the sea. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c196c7" class="outline-2">
+<h2 id="org1c196c7">Revelation of John 13</h2>
+<div class="outline-text-2" id="text-org1c196c7">
+</div>
+<div id="outline-container-orgeed3331" class="outline-3">
+<h3 id="orgeed3331">Revelation of John 13:1</h3>
+<div class="outline-text-3" id="text-orgeed3331">
+<p>
+And I saw a beast coming up out the sea, having seven heads and ten horns: and upon his horns, ten diadems: and upon his heads, names of blasphemy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5070751" class="outline-3">
+<h3 id="org5070751">Revelation of John 13:2</h3>
+<div class="outline-text-3" id="text-org5070751">
+<p>
+And the beast which I saw was like to a leopard: and his feet were as the feet of a bear, and his mouth as the mouth of a lion. And the dragon gave him his own strength and great power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81f85fc" class="outline-3">
+<h3 id="org81f85fc">Revelation of John 13:3</h3>
+<div class="outline-text-3" id="text-org81f85fc">
+<p>
+And I saw one of his heads as it were slain to death: and his death&rsquo;s wound was healed. And all the earth was in admiration after the beast.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8717eba" class="outline-3">
+<h3 id="org8717eba">Revelation of John 13:4</h3>
+<div class="outline-text-3" id="text-org8717eba">
+<p>
+And they adored the dragon which gave power to the beast. And they adored the beast, saying: Who is like to the beast? And who shall be able to fight with him?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae57bbb" class="outline-3">
+<h3 id="orgae57bbb">Revelation of John 13:5</h3>
+<div class="outline-text-3" id="text-orgae57bbb">
+<p>
+And there was given to him a mouth speaking great things and blasphemies: and power was given to him to do, two and forty months.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfeb54d1" class="outline-3">
+<h3 id="orgfeb54d1">Revelation of John 13:6</h3>
+<div class="outline-text-3" id="text-orgfeb54d1">
+<p>
+And he opened his mouth unto blasphemies against God, to blaspheme his name and his tabernacle and them that dwell in heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org239157b" class="outline-3">
+<h3 id="org239157b">Revelation of John 13:7</h3>
+<div class="outline-text-3" id="text-org239157b">
+<p>
+And it was given unto him to make war with the saints and to overcome them. And power was given him over every tribe and people and tongue and nation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org597db88" class="outline-3">
+<h3 id="org597db88">Revelation of John 13:8</h3>
+<div class="outline-text-3" id="text-org597db88">
+<p>
+And all that dwell upon the earth adored him, whose names are not written in the book of life of the Lamb which was slain from the beginning of the world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org008dc36" class="outline-3">
+<h3 id="org008dc36">Revelation of John 13:9</h3>
+<div class="outline-text-3" id="text-org008dc36">
+<p>
+If any man have an ear, let him hear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org720479b" class="outline-3">
+<h3 id="org720479b">Revelation of John 13:10</h3>
+<div class="outline-text-3" id="text-org720479b">
+<p>
+He that shall lead into captivity shall go into captivity: he that shall kill by the sword must be killed by the sword. Here is the patience and the faith of the saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48e7baa" class="outline-3">
+<h3 id="org48e7baa">Revelation of John 13:11</h3>
+<div class="outline-text-3" id="text-org48e7baa">
+<p>
+And I saw another beast coming up out of the earth: and he had two horns, like a lamb: and he spoke as a dragon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org144940c" class="outline-3">
+<h3 id="org144940c">Revelation of John 13:12</h3>
+<div class="outline-text-3" id="text-org144940c">
+<p>
+And he executed all the power of the former beast in his sight. And he caused the earth and them that dwell therein to adore the first beast, whose wound to death was healed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43f0177" class="outline-3">
+<h3 id="org43f0177">Revelation of John 13:13</h3>
+<div class="outline-text-3" id="text-org43f0177">
+<p>
+And he did great signs, so that he made also fire to come down from heaven unto the earth, in the sight of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org495a389" class="outline-3">
+<h3 id="org495a389">Revelation of John 13:14</h3>
+<div class="outline-text-3" id="text-org495a389">
+<p>
+And he seduced them that dwell on the earth, for the signs which were given him to do in the sight of the beast: saying to them that dwell on the earth that they should make the image of the beast which had the wound by the sword and lived.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73add30" class="outline-3">
+<h3 id="org73add30">Revelation of John 13:15</h3>
+<div class="outline-text-3" id="text-org73add30">
+<p>
+And it was given him to give life to the image of the beast: and that the image of the beast should speak: and should cause that whosoever will not adore the image of the beast should be slain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf88c271" class="outline-3">
+<h3 id="orgf88c271">Revelation of John 13:16</h3>
+<div class="outline-text-3" id="text-orgf88c271">
+<p>
+And he shall make all, both little and great, rich and poor, freemen and bondmen, to have a character in their right hand or on their foreheads:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8058d0" class="outline-3">
+<h3 id="orga8058d0">Revelation of John 13:17</h3>
+<div class="outline-text-3" id="text-orga8058d0">
+<p>
+And that no man might buy or sell, but he that hath the character, or the name of the beast, or the number of his name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a582bd" class="outline-3">
+<h3 id="org0a582bd">Revelation of John 13:18</h3>
+<div class="outline-text-3" id="text-org0a582bd">
+<p>
+Here is wisdom. He that hath understanding, let him count the number of the beast. For it is the number of a man: and the number of him is six hundred sixty-six. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org81b0cc8" class="outline-2">
+<h2 id="org81b0cc8">Revelation of John 14</h2>
+<div class="outline-text-2" id="text-org81b0cc8">
+</div>
+<div id="outline-container-org356e6ef" class="outline-3">
+<h3 id="org356e6ef">Revelation of John 14:1</h3>
+<div class="outline-text-3" id="text-org356e6ef">
+<p>
+And I beheld: and lo a Lamb stood upon mount Sion, and with him an hundred forty-four thousand, having his name and the name of his Father written on their foreheads.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47c4c9d" class="outline-3">
+<h3 id="org47c4c9d">Revelation of John 14:2</h3>
+<div class="outline-text-3" id="text-org47c4c9d">
+<p>
+And I heard a voice from heaven, as the noise of many waters and as the voice of great thunder. And the voice which I heard was as the voice of harpers, harping on their harps.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9f4a27" class="outline-3">
+<h3 id="orgb9f4a27">Revelation of John 14:3</h3>
+<div class="outline-text-3" id="text-orgb9f4a27">
+<p>
+And they sung as it were a new canticle, before the throne and before the four living creatures and the ancients: and no man could say the canticle, but those hundred forty-four thousand who were purchased from the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc80a29" class="outline-3">
+<h3 id="orgfc80a29">Revelation of John 14:4</h3>
+<div class="outline-text-3" id="text-orgfc80a29">
+<p>
+These are they who were not defiled with women: for they are virgins. These follow the Lamb whithersoever he goeth. These were purchased from among men, the firstfruits to God and to the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecdeaf0" class="outline-3">
+<h3 id="orgecdeaf0">Revelation of John 14:5</h3>
+<div class="outline-text-3" id="text-orgecdeaf0">
+<p>
+And in their mouth there was found no lie: for they are without spot before the throne of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07764bb" class="outline-3">
+<h3 id="org07764bb">Revelation of John 14:6</h3>
+<div class="outline-text-3" id="text-org07764bb">
+<p>
+And I saw another angel flying through the midst of heaven, having the eternal gospel, to preach unto them that sit upon the earth and over every nation and tribe and tongue and people:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1310db" class="outline-3">
+<h3 id="orga1310db">Revelation of John 14:7</h3>
+<div class="outline-text-3" id="text-orga1310db">
+<p>
+Saying with a loud voice: Fear the Lord and give him honour, because the hour of his judgment is come. And adore ye him that made heaven and earth, the sea and the fountains of waters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69eb5b0" class="outline-3">
+<h3 id="org69eb5b0">Revelation of John 14:8</h3>
+<div class="outline-text-3" id="text-org69eb5b0">
+<p>
+And another angel followed, saying: That great Babylon is fallen, is fallen; which made all nations to drink of the wine of the wrath of her fornication.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc286bd4" class="outline-3">
+<h3 id="orgc286bd4">Revelation of John 14:9</h3>
+<div class="outline-text-3" id="text-orgc286bd4">
+<p>
+And the third angel followed them, saying with a loud voice: If any man shall adore the beast and his image and receive his character in his forehead or in his hand,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77f7ced" class="outline-3">
+<h3 id="org77f7ced">Revelation of John 14:10</h3>
+<div class="outline-text-3" id="text-org77f7ced">
+<p>
+He also shall drink of the wine of the wrath of God, which is mingled with pure wine in the cup of his wrath: and shall be tormented with fire and brimstone in the sight of the holy angels and in the sight of the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged8dfde" class="outline-3">
+<h3 id="orged8dfde">Revelation of John 14:11</h3>
+<div class="outline-text-3" id="text-orged8dfde">
+<p>
+And the smoke of their torments, shall ascend up for ever and ever: neither have they rest day nor night, who have adored the beast and his image and whoever receiveth the character of his name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge801477" class="outline-3">
+<h3 id="orge801477">Revelation of John 14:12</h3>
+<div class="outline-text-3" id="text-orge801477">
+<p>
+Here is the patience of the saints, who keep the commandments of God and the faith of Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5dbe71a" class="outline-3">
+<h3 id="org5dbe71a">Revelation of John 14:13</h3>
+<div class="outline-text-3" id="text-org5dbe71a">
+<p>
+And I heard a voice from heaven, saying to me: Write: Blessed are the dead who die in the Lord. From henceforth now, saith the Spirit, that they may rest from their labours. For their works follow them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6594f00" class="outline-3">
+<h3 id="org6594f00">Revelation of John 14:14</h3>
+<div class="outline-text-3" id="text-org6594f00">
+<p>
+And I saw: and behold a white cloud and upon the cloud one sitting like to the Son of man, having on his head a crown of gold and in his hand a sharp sickle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99f3db8" class="outline-3">
+<h3 id="org99f3db8">Revelation of John 14:15</h3>
+<div class="outline-text-3" id="text-org99f3db8">
+<p>
+And another angel came out from the temple, crying with a loud voice to him that sat upon the cloud: Thrust in thy sickle and reap, because the hour is come to reap. For the harvest of the earth is ripe.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3dce5a" class="outline-3">
+<h3 id="orgd3dce5a">Revelation of John 14:16</h3>
+<div class="outline-text-3" id="text-orgd3dce5a">
+<p>
+And he that sat on the cloud thrust his sickle into the earth: and the earth was reaped.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge64c121" class="outline-3">
+<h3 id="orge64c121">Revelation of John 14:17</h3>
+<div class="outline-text-3" id="text-orge64c121">
+<p>
+And another angel came out of the temple which is in heaven, he also having a sharp sickle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78364a0" class="outline-3">
+<h3 id="org78364a0">Revelation of John 14:18</h3>
+<div class="outline-text-3" id="text-org78364a0">
+<p>
+And another angel came out from the altar, who had power over fire. And he cried with a loud voice to him that had the sharp sickle, saying: Thrust in thy sharp sickle and gather the clusters of the vineyard of the earth, because the grapes thereof are ripe.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1febe5d" class="outline-3">
+<h3 id="org1febe5d">Revelation of John 14:19</h3>
+<div class="outline-text-3" id="text-org1febe5d">
+<p>
+And the angel thrust in his sharp sickle into the earth and gathered the vineyard of the earth and cast it into the great press of the wrath of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd9b83c" class="outline-3">
+<h3 id="orgcd9b83c">Revelation of John 14:20</h3>
+<div class="outline-text-3" id="text-orgcd9b83c">
+<p>
+And the press was trodden without the city, and blood came out of the press, up to the horses&rsquo; bridles, for a thousand and six hundred furlongs. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3ce7733" class="outline-2">
+<h2 id="org3ce7733">Revelation of John 15</h2>
+<div class="outline-text-2" id="text-org3ce7733">
+</div>
+<div id="outline-container-orge0f5e0d" class="outline-3">
+<h3 id="orge0f5e0d">Revelation of John 15:1</h3>
+<div class="outline-text-3" id="text-orge0f5e0d">
+<p>
+And I saw another sign in heaven, great and wonderful: seven angels having the seven last plagues. For in them is filled up the wrath of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf87cf5" class="outline-3">
+<h3 id="orgaf87cf5">Revelation of John 15:2</h3>
+<div class="outline-text-3" id="text-orgaf87cf5">
+<p>
+And I saw as it were a sea of glass mingled with fire: and them that had overcome the beast and his image and the number of his name, standing on the sea of glass, having the harps of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffa8f47" class="outline-3">
+<h3 id="orgffa8f47">Revelation of John 15:3</h3>
+<div class="outline-text-3" id="text-orgffa8f47">
+<p>
+And singing the canticle of Moses, the servant of God, and the canticle of the Lamb, saying: Great and wonderful are thy works, O Lord God Almighty. Just and true are thy ways, O King of ages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org52d0828" class="outline-3">
+<h3 id="org52d0828">Revelation of John 15:4</h3>
+<div class="outline-text-3" id="text-org52d0828">
+<p>
+Who shall not fear thee, O Lord, and magnify thy name? For thou only art holy. For all nations shall come and shall adore in thy sight, because thy judgments are manifest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3b04d3" class="outline-3">
+<h3 id="orgd3b04d3">Revelation of John 15:5</h3>
+<div class="outline-text-3" id="text-orgd3b04d3">
+<p>
+And after these things, I looked: and behold, the temple of the tabernacle of the testimony in heaven was opened.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b96bbb" class="outline-3">
+<h3 id="org7b96bbb">Revelation of John 15:6</h3>
+<div class="outline-text-3" id="text-org7b96bbb">
+<p>
+And the seven angels came out of the temple, having the seven plagues, clothed with clean and white linen and girt about the breasts with golden girdles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33dc375" class="outline-3">
+<h3 id="org33dc375">Revelation of John 15:7</h3>
+<div class="outline-text-3" id="text-org33dc375">
+<p>
+And one of the four living creatures gave to the seven angels seven golden vials, full of the wrath of God, who liveth for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabb4b3f" class="outline-3">
+<h3 id="orgabb4b3f">Revelation of John 15:8</h3>
+<div class="outline-text-3" id="text-orgabb4b3f">
+<p>
+And the temple was filled with smoke from the majesty of God and from his power. And no man was able to enter into the temple, till the seven plagues of the seven angels were fulfilled. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5377274" class="outline-2">
+<h2 id="org5377274">Revelation of John 16</h2>
+<div class="outline-text-2" id="text-org5377274">
+</div>
+<div id="outline-container-orgaeaf216" class="outline-3">
+<h3 id="orgaeaf216">Revelation of John 16:1</h3>
+<div class="outline-text-3" id="text-orgaeaf216">
+<p>
+And I heard a great voice out of the temple, saying to the seven angels: Go and pour out the seven vials of the wrath of God upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd3ed27" class="outline-3">
+<h3 id="orgdd3ed27">Revelation of John 16:2</h3>
+<div class="outline-text-3" id="text-orgdd3ed27">
+<p>
+And the first went and poured out his vial upon the earth. And there fell a sore and grievous wound upon men who had the character of the beast: and upon them that adored the image thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc29d540" class="outline-3">
+<h3 id="orgc29d540">Revelation of John 16:3</h3>
+<div class="outline-text-3" id="text-orgc29d540">
+<p>
+And the second angel poured out his vial upon the sea. And there came blood as it were of a dead man: and every living soul died in the sea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fffaaa" class="outline-3">
+<h3 id="org9fffaaa">Revelation of John 16:4</h3>
+<div class="outline-text-3" id="text-org9fffaaa">
+<p>
+And the third poured out his vial upon the rivers and the fountains of waters. And there was made blood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29c8a4d" class="outline-3">
+<h3 id="org29c8a4d">Revelation of John 16:5</h3>
+<div class="outline-text-3" id="text-org29c8a4d">
+<p>
+And I heard the angel of the waters saying: Thou art just, O Lord, who art and who wast, the Holy One, because thou hast judged these things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1e665e" class="outline-3">
+<h3 id="orgf1e665e">Revelation of John 16:6</h3>
+<div class="outline-text-3" id="text-orgf1e665e">
+<p>
+For they have shed the blood of saints and prophets: and thou hast given them blood to drink. For they are worthy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08a22ca" class="outline-3">
+<h3 id="org08a22ca">Revelation of John 16:7</h3>
+<div class="outline-text-3" id="text-org08a22ca">
+<p>
+And I heard another, from the altar, saying: Yea, O Lord God Almighty, true and just are thy judgments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8739497" class="outline-3">
+<h3 id="org8739497">Revelation of John 16:8</h3>
+<div class="outline-text-3" id="text-org8739497">
+<p>
+And the fourth angel poured out his vial upon the sun. And it was given unto him to afflict men with heat and fire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19e9303" class="outline-3">
+<h3 id="org19e9303">Revelation of John 16:9</h3>
+<div class="outline-text-3" id="text-org19e9303">
+<p>
+And men were scorched with great heat: and they blasphemed the name of God, who hath power over these plagues. Neither did they penance to give him glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a2874a" class="outline-3">
+<h3 id="org1a2874a">Revelation of John 16:10</h3>
+<div class="outline-text-3" id="text-org1a2874a">
+<p>
+And the fifth angel poured out his vial upon the seat of the beast. And his kingdom became dark: and they gnawed their tongues for pain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f6f6f6" class="outline-3">
+<h3 id="org0f6f6f6">Revelation of John 16:11</h3>
+<div class="outline-text-3" id="text-org0f6f6f6">
+<p>
+And they blasphemed the God of heaven, because of their pains and wounds: and did not penance for their works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0644885" class="outline-3">
+<h3 id="org0644885">Revelation of John 16:12</h3>
+<div class="outline-text-3" id="text-org0644885">
+<p>
+And the sixth angel poured out his vial upon that great river Euphrates and dried up the water thereof, that a way might be prepared for the kings from the rising of the sun.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org938909a" class="outline-3">
+<h3 id="org938909a">Revelation of John 16:13</h3>
+<div class="outline-text-3" id="text-org938909a">
+<p>
+And I saw from the mouth of the dragon and from the mouth of the beast and from the mouth of the false prophet, three unclean spirits like frogs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org711266a" class="outline-3">
+<h3 id="org711266a">Revelation of John 16:14</h3>
+<div class="outline-text-3" id="text-org711266a">
+<p>
+For they are the spirits of devils, working signs: and they go forth unto the kings of the whole earth, to gather them to battle against the great day of the Almighty God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc471a26" class="outline-3">
+<h3 id="orgc471a26">Revelation of John 16:15</h3>
+<div class="outline-text-3" id="text-orgc471a26">
+<p>
+Behold, I come as a thief. Blessed is he that watcheth and keepeth his garments, lest he walk naked, and they see his shame.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9e149f" class="outline-3">
+<h3 id="orge9e149f">Revelation of John 16:16</h3>
+<div class="outline-text-3" id="text-orge9e149f">
+<p>
+And he shall gather them together into a place which in Hebrew is called Armagedon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8b467e" class="outline-3">
+<h3 id="orge8b467e">Revelation of John 16:17</h3>
+<div class="outline-text-3" id="text-orge8b467e">
+<p>
+And the seventh angel poured out his vial upon the air. And there came a great voice out of the temple from the throne, saying: It is done.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f65fbc" class="outline-3">
+<h3 id="org3f65fbc">Revelation of John 16:18</h3>
+<div class="outline-text-3" id="text-org3f65fbc">
+<p>
+And there were lightnings and voices and thunders: and there was a great earthquake, such an one as never had been since men were upon the earth, such an earthquake, so great.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ab0bc5" class="outline-3">
+<h3 id="org2ab0bc5">Revelation of John 16:19</h3>
+<div class="outline-text-3" id="text-org2ab0bc5">
+<p>
+And the great city was divided into three parts: and the cities of the Gentiles fell. And great Babylon came in remembrance before God, to give her the cup of the wine of the indignation of his wrath.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedcdf0b" class="outline-3">
+<h3 id="orgedcdf0b">Revelation of John 16:20</h3>
+<div class="outline-text-3" id="text-orgedcdf0b">
+<p>
+And every island fled away: and the mountains were not found.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd59804" class="outline-3">
+<h3 id="orgcd59804">Revelation of John 16:21</h3>
+<div class="outline-text-3" id="text-orgcd59804">
+<p>
+And great hail, like a talent, came down from heaven upon men: and men blasphemed God, for the plague of the hail: because it was exceeding great. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde4afa9" class="outline-2">
+<h2 id="orgde4afa9">Revelation of John 17</h2>
+<div class="outline-text-2" id="text-orgde4afa9">
+</div>
+<div id="outline-container-orgf8d419f" class="outline-3">
+<h3 id="orgf8d419f">Revelation of John 17:1</h3>
+<div class="outline-text-3" id="text-orgf8d419f">
+<p>
+And there came one of the seven angels who had the seven vials and spoke with me, saying: Come, I will shew thee the condemnation of the great harlot, who sitteth upon many waters:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b8e025" class="outline-3">
+<h3 id="org9b8e025">Revelation of John 17:2</h3>
+<div class="outline-text-3" id="text-org9b8e025">
+<p>
+With whom the kings of the earth have committed fornication. And they who inhabit the earth have been made drunk with the wine of her whoredom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b4e21f" class="outline-3">
+<h3 id="org1b4e21f">Revelation of John 17:3</h3>
+<div class="outline-text-3" id="text-org1b4e21f">
+<p>
+And he took me away in spirit into the desert. And I saw a woman sitting upon a scarlet coloured beast, full of names of blasphemy, having seven heads and ten horns.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb2eaa2" class="outline-3">
+<h3 id="orgdb2eaa2">Revelation of John 17:4</h3>
+<div class="outline-text-3" id="text-orgdb2eaa2">
+<p>
+And the woman was clothed round about with purple and scarlet, and gilt with gold and precious stones and pearls, having a golden cup in her hand, full of the abomination and filthiness of her fornication.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6baea78" class="outline-3">
+<h3 id="org6baea78">Revelation of John 17:5</h3>
+<div class="outline-text-3" id="text-org6baea78">
+<p>
+And on her forehead a name was written: A mystery: Babylon the great, the mother of the fornications and the abominations of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7b6bac" class="outline-3">
+<h3 id="orgf7b6bac">Revelation of John 17:6</h3>
+<div class="outline-text-3" id="text-orgf7b6bac">
+<p>
+And I saw the woman drunk with the blood of the saints and with the blood of the martyrs of Jesus. And I wondered, when I had seen her, with great admiration.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b337b3" class="outline-3">
+<h3 id="org4b337b3">Revelation of John 17:7</h3>
+<div class="outline-text-3" id="text-org4b337b3">
+<p>
+And the angel said to me: Why dost thou wonder? I will tell thee the mystery of the woman and of the beast which carrieth her, which hath the seven heads and ten horns.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67046fd" class="outline-3">
+<h3 id="org67046fd">Revelation of John 17:8</h3>
+<div class="outline-text-3" id="text-org67046fd">
+<p>
+The beast which thou sawest, was, and is not, and shall come up out of the bottomless pit and go into destruction. And the inhabitants on the earth (whose names are not written in the book of life from the foundation of the world) shall wonder, seeing the beast that was and is not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4f1eba" class="outline-3">
+<h3 id="orgb4f1eba">Revelation of John 17:9</h3>
+<div class="outline-text-3" id="text-orgb4f1eba">
+<p>
+And here is the understanding that hath wisdom. The seven heads are seven mountains, upon which the woman sitteth: and they are seven kings.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6e9102" class="outline-3">
+<h3 id="orge6e9102">Revelation of John 17:10</h3>
+<div class="outline-text-3" id="text-orge6e9102">
+<p>
+Five are fallen, one is, and the other is not yet come: and when he is come, he must remain a short time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36d1c41" class="outline-3">
+<h3 id="org36d1c41">Revelation of John 17:11</h3>
+<div class="outline-text-3" id="text-org36d1c41">
+<p>
+And the beast which was and is not: the same also is the eighth, and is of the seven, and goeth into destruction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2ce257" class="outline-3">
+<h3 id="orga2ce257">Revelation of John 17:12</h3>
+<div class="outline-text-3" id="text-orga2ce257">
+<p>
+And the ten horns which thou sawest are ten kings, who have not yet received a kingdom: but shall receive power as kings, one hour after the beast.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org160547c" class="outline-3">
+<h3 id="org160547c">Revelation of John 17:13</h3>
+<div class="outline-text-3" id="text-org160547c">
+<p>
+These have one design: and their strength and power they shall deliver to the beast.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org626b98c" class="outline-3">
+<h3 id="org626b98c">Revelation of John 17:14</h3>
+<div class="outline-text-3" id="text-org626b98c">
+<p>
+These shall fight with the Lamb. And the Lamb shall overcome them because he is Lord of lords and King of kings: and they that are with him are called and elect and faithful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ae6e28" class="outline-3">
+<h3 id="org6ae6e28">Revelation of John 17:15</h3>
+<div class="outline-text-3" id="text-org6ae6e28">
+<p>
+And he said to me: The waters which thou sawest, where the harlot sitteth, are peoples and nations and tongues.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bee628" class="outline-3">
+<h3 id="org8bee628">Revelation of John 17:16</h3>
+<div class="outline-text-3" id="text-org8bee628">
+<p>
+And the ten horns which thou sawest in the beast: These shall hate the harlot and shall make her desolate and naked and shall eat her flesh and shall burn her with fire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5bb3940" class="outline-3">
+<h3 id="org5bb3940">Revelation of John 17:17</h3>
+<div class="outline-text-3" id="text-org5bb3940">
+<p>
+For God hath given into their hearts to do that which pleaseth him: that they give their kingdom to the beast, till the words of God be fulfilled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02adee7" class="outline-3">
+<h3 id="org02adee7">Revelation of John 17:18</h3>
+<div class="outline-text-3" id="text-org02adee7">
+<p>
+And the woman which thou sawest is the great city which hath kingdom over the kings of the earth. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d39dda" class="outline-2">
+<h2 id="org9d39dda">Revelation of John 18</h2>
+<div class="outline-text-2" id="text-org9d39dda">
+</div>
+<div id="outline-container-org7cb018b" class="outline-3">
+<h3 id="org7cb018b">Revelation of John 18:1</h3>
+<div class="outline-text-3" id="text-org7cb018b">
+<p>
+And after these things, I saw another angel come down from heaven, having great power: and the earth was enlightened with his glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae0fd2b" class="outline-3">
+<h3 id="orgae0fd2b">Revelation of John 18:2</h3>
+<div class="outline-text-3" id="text-orgae0fd2b">
+<p>
+And he cried out with a strong voice, saying: Babylon the great is fallen, is fallen: and is become the habitation of devils and the hold of every unclean spirit and the hold of every unclean and hateful bird:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1382183" class="outline-3">
+<h3 id="org1382183">Revelation of John 18:3</h3>
+<div class="outline-text-3" id="text-org1382183">
+<p>
+Because all nations have drunk of the wine of the wrath of her fornication: and the kings of the earth have committed fornication with her; And the merchants of the earth have been made rich by the power of her delicacies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaa5705" class="outline-3">
+<h3 id="orgfaa5705">Revelation of John 18:4</h3>
+<div class="outline-text-3" id="text-orgfaa5705">
+<p>
+And I heard another voice from heaven, saying: Go out from her, my people; that you be not partakers of her sins and that you receive not of her plagues.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac1f6fa" class="outline-3">
+<h3 id="orgac1f6fa">Revelation of John 18:5</h3>
+<div class="outline-text-3" id="text-orgac1f6fa">
+<p>
+For her sins have reached unto heaven: and the Lord hath remembered her iniquities.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b6d08c" class="outline-3">
+<h3 id="org9b6d08c">Revelation of John 18:6</h3>
+<div class="outline-text-3" id="text-org9b6d08c">
+<p>
+Render to her as she also hath rendered to you: and double unto her double, according to her works. In the cup wherein she hath mingled, mingle ye double unto her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a70e0f" class="outline-3">
+<h3 id="org8a70e0f">Revelation of John 18:7</h3>
+<div class="outline-text-3" id="text-org8a70e0f">
+<p>
+As much as she hath glorified herself and lived in delicacies, so much torment and sorrow give ye to her. Because she saith in her heart: I sit a queen and am no widow: and sorrow I shall not see.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbbbc12" class="outline-3">
+<h3 id="orgfbbbc12">Revelation of John 18:8</h3>
+<div class="outline-text-3" id="text-orgfbbbc12">
+<p>
+Therefore, shall her plagues come in one day, death and mourning and famine. And she shall be burnt with the fire: because God is strong, who shall judge her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd36c1d8" class="outline-3">
+<h3 id="orgd36c1d8">Revelation of John 18:9</h3>
+<div class="outline-text-3" id="text-orgd36c1d8">
+<p>
+And the kings of the earth, who have committed fornication and lived in delicacies with her, shall weep and bewail themselves over her, when they shall see the smoke of her burning:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdab9b1" class="outline-3">
+<h3 id="orgbdab9b1">Revelation of John 18:10</h3>
+<div class="outline-text-3" id="text-orgbdab9b1">
+<p>
+Standing afar off for fear of her torments, saying: Alas! alas! that great city, Babylon, that mighty city: for in one hour is thy judgment come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a5b438" class="outline-3">
+<h3 id="org2a5b438">Revelation of John 18:11</h3>
+<div class="outline-text-3" id="text-org2a5b438">
+<p>
+And the merchants of the earth shall weep and mourn over her: for no man shall buy their merchandise any more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee0c0bd" class="outline-3">
+<h3 id="orgee0c0bd">Revelation of John 18:12</h3>
+<div class="outline-text-3" id="text-orgee0c0bd">
+<p>
+Merchandise of gold and silver and precious stones: and of pearls and fine linen and purple and silk and scarlet: and all thyine wood: and all manner of vessels of ivory: and all manner of vessels of precious stone and of brass and of iron and of marble:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef30eab" class="outline-3">
+<h3 id="orgef30eab">Revelation of John 18:13</h3>
+<div class="outline-text-3" id="text-orgef30eab">
+<p>
+And cinnamon and odours and ointment and frankincense and wine and oil and fine flour and wheat and beasts and sheep and horses and chariots: and slaves and souls of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6115826" class="outline-3">
+<h3 id="org6115826">Revelation of John 18:14</h3>
+<div class="outline-text-3" id="text-org6115826">
+<p>
+And the fruits of the desire of thy soul are departed from thee: and all fat and goodly things are perished from thee. And they shall find them no more at all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45a5165" class="outline-3">
+<h3 id="org45a5165">Revelation of John 18:15</h3>
+<div class="outline-text-3" id="text-org45a5165">
+<p>
+The merchants of these things, who were made rich, shall stand afar off from her, for fear of her torments, weeping and mourning,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1239d6" class="outline-3">
+<h3 id="orgf1239d6">Revelation of John 18:16</h3>
+<div class="outline-text-3" id="text-orgf1239d6">
+<p>
+And saying: Alas! alas! that great city, which was clothed with fine linen and purple and scarlet and was gilt with gold and precious stones and pearls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb71cdf0" class="outline-3">
+<h3 id="orgb71cdf0">Revelation of John 18:17</h3>
+<div class="outline-text-3" id="text-orgb71cdf0">
+<p>
+For in one hour are so great riches come to nought. And every shipmaster and all that sail into the lake, and mariners, and as many as work in the sea, stood afar off,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b76966" class="outline-3">
+<h3 id="org3b76966">Revelation of John 18:18</h3>
+<div class="outline-text-3" id="text-org3b76966">
+<p>
+And cried, seeing the place of her burning, saying: What city is like to this great city?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org200f3ac" class="outline-3">
+<h3 id="org200f3ac">Revelation of John 18:19</h3>
+<div class="outline-text-3" id="text-org200f3ac">
+<p>
+And they cast dust upon their heads and cried, weeping and mourning, saying: Alas! alas! that great city, wherein all were made rich, that had ships at sea, by reason of her prices. For, in one hour she is made desolate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org771c8ab" class="outline-3">
+<h3 id="org771c8ab">Revelation of John 18:20</h3>
+<div class="outline-text-3" id="text-org771c8ab">
+<p>
+Rejoice over her, thou heaven and ye holy apostles and prophets. For God hath judged your judgment on her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8ec116" class="outline-3">
+<h3 id="orgf8ec116">Revelation of John 18:21</h3>
+<div class="outline-text-3" id="text-orgf8ec116">
+<p>
+And a mighty angel took up a stone, as it were a great millstone, and cast it into the sea, saying: With such violence as this, shall Babylon, that great city, be thrown down and shall be found no more at all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a40f43" class="outline-3">
+<h3 id="org3a40f43">Revelation of John 18:22</h3>
+<div class="outline-text-3" id="text-org3a40f43">
+<p>
+And the voice of harpers and of musicians and of them that play on the pipe and on the trumpet shall no more be heard at all in thee: and no craftsman of any art whatsoever shall be found any more at all in thee: and the sound of the mill shall be heard no more at all in thee:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05a2ea3" class="outline-3">
+<h3 id="org05a2ea3">Revelation of John 18:23</h3>
+<div class="outline-text-3" id="text-org05a2ea3">
+<p>
+And the light of the lamp shall shine no more at all in thee: and the voice of the bridegroom and the bride shall be heard no more at all in thee. For thy merchants were the great men of the earth: for all nations have been deceived by thy enchantments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0afa11c" class="outline-3">
+<h3 id="org0afa11c">Revelation of John 18:24</h3>
+<div class="outline-text-3" id="text-org0afa11c">
+<p>
+And in her was found the blood of prophets and of saints and of all that were slain upon the earth. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgec8a0bf" class="outline-2">
+<h2 id="orgec8a0bf">Revelation of John 19</h2>
+<div class="outline-text-2" id="text-orgec8a0bf">
+</div>
+<div id="outline-container-orgd91e780" class="outline-3">
+<h3 id="orgd91e780">Revelation of John 19:1</h3>
+<div class="outline-text-3" id="text-orgd91e780">
+<p>
+After these things, I heard as it were the voice of much people in heaven, saying: Alleluia. Salvation and glory and power is to our God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e948ae" class="outline-3">
+<h3 id="org2e948ae">Revelation of John 19:2</h3>
+<div class="outline-text-3" id="text-org2e948ae">
+<p>
+For true and just are his judgments, who hath judged the great harlot which corrupted the earth with her fornication and hath revenged the blood of his servants, at her hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1c1172" class="outline-3">
+<h3 id="orgc1c1172">Revelation of John 19:3</h3>
+<div class="outline-text-3" id="text-orgc1c1172">
+<p>
+And again they said: Alleluia. And her smoke ascendeth for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdce846e" class="outline-3">
+<h3 id="orgdce846e">Revelation of John 19:4</h3>
+<div class="outline-text-3" id="text-orgdce846e">
+<p>
+And the four and twenty ancients and the four living creatures fell down and adored God that sitteth upon the throne, saying: Amen. Alleluia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa708de" class="outline-3">
+<h3 id="orgaa708de">Revelation of John 19:5</h3>
+<div class="outline-text-3" id="text-orgaa708de">
+<p>
+And a voice came out from the throne, saying: Give praise to our God, all ye his servants: and you that fear him, little and great.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org512278f" class="outline-3">
+<h3 id="org512278f">Revelation of John 19:6</h3>
+<div class="outline-text-3" id="text-org512278f">
+<p>
+And I heard as it were the voice of a great multitude, and as the voice of many waters, and as the voice of great thunders, saying: Alleluia: for the Lord our God, the Almighty, hath reigned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd282a1a" class="outline-3">
+<h3 id="orgd282a1a">Revelation of John 19:7</h3>
+<div class="outline-text-3" id="text-orgd282a1a">
+<p>
+Let us be glad and rejoice and give glory to him. For the marriage of the Lamb is come: and his wife hath prepared herself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge61355c" class="outline-3">
+<h3 id="orge61355c">Revelation of John 19:8</h3>
+<div class="outline-text-3" id="text-orge61355c">
+<p>
+And it is granted to her that she should clothe herself with fine linen, glittering and white. For the fine linen are the justifications of saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbfb1ae" class="outline-3">
+<h3 id="orgfbfb1ae">Revelation of John 19:9</h3>
+<div class="outline-text-3" id="text-orgfbfb1ae">
+<p>
+And he said to me: Write: Blessed are they that are called to the marriage supper of the Lamb. And he saith to me: These words of God are true.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaed5eb1" class="outline-3">
+<h3 id="orgaed5eb1">Revelation of John 19:10</h3>
+<div class="outline-text-3" id="text-orgaed5eb1">
+<p>
+And I fell down before his feet, to adore him. And he saith to me: See thou do it not. I am thy fellow servant and of thy brethren who have the testimony of Jesus. Adore God. For the testimony of Jesus is the spirit of prophecy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org065a52c" class="outline-3">
+<h3 id="org065a52c">Revelation of John 19:11</h3>
+<div class="outline-text-3" id="text-org065a52c">
+<p>
+And I saw heaven opened: and behold a white horse. And he that sat upon him was called faithful and true: and with justice doth he judge and fight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8eaf0d7" class="outline-3">
+<h3 id="org8eaf0d7">Revelation of John 19:12</h3>
+<div class="outline-text-3" id="text-org8eaf0d7">
+<p>
+And his eyes were as a flame of fire: and on his head were many diadems. And he had a name written, which no man knoweth but himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc6c653" class="outline-3">
+<h3 id="orgcc6c653">Revelation of John 19:13</h3>
+<div class="outline-text-3" id="text-orgcc6c653">
+<p>
+And he was clothed with a garment sprinkled with blood. And his name is called: THE WORD OF GOD.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd821cb8" class="outline-3">
+<h3 id="orgd821cb8">Revelation of John 19:14</h3>
+<div class="outline-text-3" id="text-orgd821cb8">
+<p>
+And the armies that are in heaven followed him on white horses, clothed in fine linen, white and clean.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc68da5" class="outline-3">
+<h3 id="orgcc68da5">Revelation of John 19:15</h3>
+<div class="outline-text-3" id="text-orgcc68da5">
+<p>
+And out of his mouth proceedeth a sharp two-edged sword, that with it he may strike the nations. And he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness of the wrath of God the Almighty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffd02b6" class="outline-3">
+<h3 id="orgffd02b6">Revelation of John 19:16</h3>
+<div class="outline-text-3" id="text-orgffd02b6">
+<p>
+And he hath on his garment and on his thigh written: KING OF KINGS AND LORD OF LORDS.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07bd634" class="outline-3">
+<h3 id="org07bd634">Revelation of John 19:17</h3>
+<div class="outline-text-3" id="text-org07bd634">
+<p>
+And I saw an angel standing in the sun: and he cried with a loud voice, saying to all the birds that did fly through the midst of heaven: Come, gather yourselves together to the great supper of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c39ff6" class="outline-3">
+<h3 id="org9c39ff6">Revelation of John 19:18</h3>
+<div class="outline-text-3" id="text-org9c39ff6">
+<p>
+That you may eat the flesh of kings and the flesh of tribunes and the flesh of mighty men and the flesh of horses and of them that sit on them: and the flesh of all freemen and bondmen and of little and of great.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6308a80" class="outline-3">
+<h3 id="org6308a80">Revelation of John 19:19</h3>
+<div class="outline-text-3" id="text-org6308a80">
+<p>
+And I saw the beast and the kings of the earth and their armies, gathered together to make war with him that sat upon the horse and with his army.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21f1822" class="outline-3">
+<h3 id="org21f1822">Revelation of John 19:20</h3>
+<div class="outline-text-3" id="text-org21f1822">
+<p>
+And the beast was taken, and with him the false prophet who wrought signs before him, wherewith he seduced them who received the character of the beast and who adored his image. These two were cast alive into the pool of fire burning with brimstone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0b6716" class="outline-3">
+<h3 id="orgd0b6716">Revelation of John 19:21</h3>
+<div class="outline-text-3" id="text-orgd0b6716">
+<p>
+And the rest were slain by the sword of him that sitteth upon the horse, which proceedeth out of his mouth: and all the birds were filled with their flesh. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcbe195f" class="outline-2">
+<h2 id="orgcbe195f">Revelation of John 20</h2>
+<div class="outline-text-2" id="text-orgcbe195f">
+</div>
+<div id="outline-container-org5bf9a3d" class="outline-3">
+<h3 id="org5bf9a3d">Revelation of John 20:1</h3>
+<div class="outline-text-3" id="text-org5bf9a3d">
+<p>
+And I saw an angel coming down from heaven, having the key of the bottomless pit and a great chain in his hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbc58b3" class="outline-3">
+<h3 id="orgbbc58b3">Revelation of John 20:2</h3>
+<div class="outline-text-3" id="text-orgbbc58b3">
+<p>
+And he laid hold on the dragon, the old serpent, which is the devil and Satan, and bound him for a thousand years.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33be889" class="outline-3">
+<h3 id="org33be889">Revelation of John 20:3</h3>
+<div class="outline-text-3" id="text-org33be889">
+<p>
+And he cast him into the bottomless pit and shut him up and set a seal upon him, that he should no more seduce the nations till the thousand years be finished. And after that, he must be loosed a little time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8393ee2" class="outline-3">
+<h3 id="org8393ee2">Revelation of John 20:4</h3>
+<div class="outline-text-3" id="text-org8393ee2">
+<p>
+And I saw seats. And they sat upon them: and judgment was given unto them. And the souls of them that were beheaded for the testimony of Jesus and for the word of God and who had not adored the beast nor his image nor received his character on their foreheads or in their hands. And they lived and reigned with Christ a thousand years.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd581ec7" class="outline-3">
+<h3 id="orgd581ec7">Revelation of John 20:5</h3>
+<div class="outline-text-3" id="text-orgd581ec7">
+<p>
+The rest of the dead lived not, till the thousand years were finished. This is the first resurrection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org394ad33" class="outline-3">
+<h3 id="org394ad33">Revelation of John 20:6</h3>
+<div class="outline-text-3" id="text-org394ad33">
+<p>
+Blessed and holy is he that hath part in the first resurrection. In these the second death hath no power. But they shall be priests of God and of Christ: and shall reign with him a thousand years.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org895d463" class="outline-3">
+<h3 id="org895d463">Revelation of John 20:7</h3>
+<div class="outline-text-3" id="text-org895d463">
+<p>
+And when the thousand years shall be finished, Satan shall be loosed out of his prison and shall go forth and seduce the nations which are over the four quarters of the earth, Gog and Magog: and shall gather them together to battle, the number of whom is as the sand of the sea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d1414f" class="outline-3">
+<h3 id="org2d1414f">Revelation of John 20:8</h3>
+<div class="outline-text-3" id="text-org2d1414f">
+<p>
+And they came upon the breadth of the earth and encompassed the camp of the saints and the beloved city.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15a2994" class="outline-3">
+<h3 id="org15a2994">Revelation of John 20:9</h3>
+<div class="outline-text-3" id="text-org15a2994">
+<p>
+And there came down fire from God out of heaven and devoured them: and the devil, who seduced them, was cast into the pool of fire and brimstone, where both the beast
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc889e6e" class="outline-3">
+<h3 id="orgc889e6e">Revelation of John 20:10</h3>
+<div class="outline-text-3" id="text-orgc889e6e">
+<p>
+And the false prophet shall be tormented day and night for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe194b0" class="outline-3">
+<h3 id="orgfe194b0">Revelation of John 20:11</h3>
+<div class="outline-text-3" id="text-orgfe194b0">
+<p>
+And I saw a great white throne and one sitting upon it, from whose face the earth and heaven fled away: and there was no place found for them
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6e8dca" class="outline-3">
+<h3 id="orgc6e8dca">Revelation of John 20:12</h3>
+<div class="outline-text-3" id="text-orgc6e8dca">
+<p>
+And I saw the dead, great and small, standing in the presence of the throne. And the books were opened: and another book was opened, which was the book of life. And the dead were judged by those things which were written in the books, according to their works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9493bf5" class="outline-3">
+<h3 id="org9493bf5">Revelation of John 20:13</h3>
+<div class="outline-text-3" id="text-org9493bf5">
+<p>
+And the sea gave up the dead that were in it: and death and hell gave up their dead that were in them. And they were judged, every one according to their works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc24b765" class="outline-3">
+<h3 id="orgc24b765">Revelation of John 20:14</h3>
+<div class="outline-text-3" id="text-orgc24b765">
+<p>
+And hell and death were cast into the pool of fire. This is the second death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd43cf99" class="outline-3">
+<h3 id="orgd43cf99">Revelation of John 20:15</h3>
+<div class="outline-text-3" id="text-orgd43cf99">
+<p>
+And whosoever was not found written in the book of life was cast into the pool of fire. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org683bc45" class="outline-2">
+<h2 id="org683bc45">Revelation of John 21</h2>
+<div class="outline-text-2" id="text-org683bc45">
+</div>
+<div id="outline-container-org3742ca7" class="outline-3">
+<h3 id="org3742ca7">Revelation of John 21:1</h3>
+<div class="outline-text-3" id="text-org3742ca7">
+<p>
+I saw a new heaven and a new earth. For the first heaven and the first earth was gone: and the sea is now no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefbbdcb" class="outline-3">
+<h3 id="orgefbbdcb">Revelation of John 21:2</h3>
+<div class="outline-text-3" id="text-orgefbbdcb">
+<p>
+And I, John, saw the holy city, the new Jerusalem, coming down out of heaven from God, prepared as a bride adorned for her husband.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb06a695" class="outline-3">
+<h3 id="orgb06a695">Revelation of John 21:3</h3>
+<div class="outline-text-3" id="text-orgb06a695">
+<p>
+And I heard a great voice from the throne, saying: Behold the tabernacle of God with men: and he will dwell with them. And they shall be his people: and God himself with them shall be their God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7d5b81" class="outline-3">
+<h3 id="orgd7d5b81">Revelation of John 21:4</h3>
+<div class="outline-text-3" id="text-orgd7d5b81">
+<p>
+And God shall wipe away all tears from their eyes: and death shall be no more. Nor mourning, nor crying, nor sorrow shall be any more, for the former things are passed away.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org661b0d8" class="outline-3">
+<h3 id="org661b0d8">Revelation of John 21:5</h3>
+<div class="outline-text-3" id="text-org661b0d8">
+<p>
+And he that sat on the throne, said: Behold, I make all things new. And he said to me: Write. For these words are most faithful and true.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba84931" class="outline-3">
+<h3 id="orgba84931">Revelation of John 21:6</h3>
+<div class="outline-text-3" id="text-orgba84931">
+<p>
+And he said to me: It is done. I am Alpha and Omega: the Beginning and the End. To him that thirsteth, I will give of the fountain of the water of life, freely.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77dd63c" class="outline-3">
+<h3 id="org77dd63c">Revelation of John 21:7</h3>
+<div class="outline-text-3" id="text-org77dd63c">
+<p>
+He that shall overcome shall possess these things. And I will be his God: and he shall be my son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9b8c06" class="outline-3">
+<h3 id="orgb9b8c06">Revelation of John 21:8</h3>
+<div class="outline-text-3" id="text-orgb9b8c06">
+<p>
+But the fearful and unbelieving and the abominable and murderers and whoremongers and sorcerers and idolaters and all liars, they shall have their portion in the pool burning with fire and brimstone, which is the second death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f7deb3" class="outline-3">
+<h3 id="org1f7deb3">Revelation of John 21:9</h3>
+<div class="outline-text-3" id="text-org1f7deb3">
+<p>
+And there came one of the seven angels, who had the vials full of the seven last plagues, and spoke with me, saying: Come and I will shew thee the bride, the wife of the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b3f558" class="outline-3">
+<h3 id="org5b3f558">Revelation of John 21:10</h3>
+<div class="outline-text-3" id="text-org5b3f558">
+<p>
+And he took me up in spirit to a great and high mountain: and he shewed me the holy city Jerusalem, coming down out of heaven from God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga593498" class="outline-3">
+<h3 id="orga593498">Revelation of John 21:11</h3>
+<div class="outline-text-3" id="text-orga593498">
+<p>
+Having the glory of God, and the light thereof was like to a precious stone, as to the jasper stone even as crystal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2fb857" class="outline-3">
+<h3 id="orgd2fb857">Revelation of John 21:12</h3>
+<div class="outline-text-3" id="text-orgd2fb857">
+<p>
+And it had a wall great and high, having twelve gates, and in the gates twelve angels, and names written thereon, which are the names of the twelve tribes of the children of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec67322" class="outline-3">
+<h3 id="orgec67322">Revelation of John 21:13</h3>
+<div class="outline-text-3" id="text-orgec67322">
+<p>
+On the east, three gates: and on the north, three gates: and on the south, three gates: and on the west, three gates.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6afc035" class="outline-3">
+<h3 id="org6afc035">Revelation of John 21:14</h3>
+<div class="outline-text-3" id="text-org6afc035">
+<p>
+And the wall of the city had twelve foundations: And in them, the twelve names of the twelve apostles of the Lamb,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53e2b9a" class="outline-3">
+<h3 id="org53e2b9a">Revelation of John 21:15</h3>
+<div class="outline-text-3" id="text-org53e2b9a">
+<p>
+And he that spoke with me had a measure of a reed of gold, to measure the city and the gates thereof and the wall.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37db9d3" class="outline-3">
+<h3 id="org37db9d3">Revelation of John 21:16</h3>
+<div class="outline-text-3" id="text-org37db9d3">
+<p>
+And the city lieth in a four-square: and the length thereof is as great as the breadth. And he measured the city with the golden reed for twelve thousand furlongs: and the length and the height and the breadth thereof are equal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70d7ad6" class="outline-3">
+<h3 id="org70d7ad6">Revelation of John 21:17</h3>
+<div class="outline-text-3" id="text-org70d7ad6">
+<p>
+And he measured the wall thereof an hundred forty-four cubits, the measure of a man, which is of an angel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ec4652" class="outline-3">
+<h3 id="org4ec4652">Revelation of John 21:18</h3>
+<div class="outline-text-3" id="text-org4ec4652">
+<p>
+And the building of the wall thereof was of jasper stone: but the city itself pure gold like to clear glass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c070e4" class="outline-3">
+<h3 id="org7c070e4">Revelation of John 21:19</h3>
+<div class="outline-text-3" id="text-org7c070e4">
+<p>
+And the foundations of the wall of the city were adorned with all manner of precious stones. The first foundation was jasper: the second, sapphire: the third; a chalcedony: the fourth, an emerald:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2582789" class="outline-3">
+<h3 id="org2582789">Revelation of John 21:20</h3>
+<div class="outline-text-3" id="text-org2582789">
+<p>
+The fifth, sardonyx: the sixth, sardius: the seventh, chrysolite: the eighth, beryl: the ninth, a topaz: the tenth, a chrysoprasus: the eleventh, a jacinth: the twelfth, an amethyst.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37642c2" class="outline-3">
+<h3 id="org37642c2">Revelation of John 21:21</h3>
+<div class="outline-text-3" id="text-org37642c2">
+<p>
+And the twelve gates are twelve pearls, one to each: and every several gate was of one several pearl. And the street of the city was pure gold, as it were, transparent glass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb91ae33" class="outline-3">
+<h3 id="orgb91ae33">Revelation of John 21:22</h3>
+<div class="outline-text-3" id="text-orgb91ae33">
+<p>
+And I saw no temple therein. For the Lord God Almighty is the temple thereof, and the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7dacd92" class="outline-3">
+<h3 id="org7dacd92">Revelation of John 21:23</h3>
+<div class="outline-text-3" id="text-org7dacd92">
+<p>
+And the city hath no need of the sun, nor of the moon, to shine in it. For the glory of God hath enlightened it: and the Lamb is the lamp thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c145ab" class="outline-3">
+<h3 id="org3c145ab">Revelation of John 21:24</h3>
+<div class="outline-text-3" id="text-org3c145ab">
+<p>
+And the nations shall walk in the light of it: and the kings of the earth shall bring their glory and honour into it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70e1400" class="outline-3">
+<h3 id="org70e1400">Revelation of John 21:25</h3>
+<div class="outline-text-3" id="text-org70e1400">
+<p>
+And the gates thereof shall not be shut by day: for there shall be no night there.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1e7b2a" class="outline-3">
+<h3 id="orgc1e7b2a">Revelation of John 21:26</h3>
+<div class="outline-text-3" id="text-orgc1e7b2a">
+<p>
+And they shall bring the glory and honour of the nations into it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf012fc" class="outline-3">
+<h3 id="orgbf012fc">Revelation of John 21:27</h3>
+<div class="outline-text-3" id="text-orgbf012fc">
+<p>
+There shall not enter into it any thing defiled or that worketh abomination or maketh a lie: but they that are written in the book of life of the Lamb. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6b17853" class="outline-2">
+<h2 id="org6b17853">Revelation of John 22</h2>
+<div class="outline-text-2" id="text-org6b17853">
+</div>
+<div id="outline-container-org205bfbc" class="outline-3">
+<h3 id="org205bfbc">Revelation of John 22:1</h3>
+<div class="outline-text-3" id="text-org205bfbc">
+<p>
+And he shewed me a river of water of life, clear as crystal, proceeding from the throne of God and of the Lamb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05f0b69" class="outline-3">
+<h3 id="org05f0b69">Revelation of John 22:2</h3>
+<div class="outline-text-3" id="text-org05f0b69">
+<p>
+In the midst of the street thereof, and on both sides of the river, was the tree of life, bearing twelve fruits, yielding its fruits every month: the leaves of the tree for the healing of the nations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27337b1" class="outline-3">
+<h3 id="org27337b1">Revelation of John 22:3</h3>
+<div class="outline-text-3" id="text-org27337b1">
+<p>
+And there shall be no curse any more: but the throne of God and of the Lamb shall be in it. And his servants shall serve him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfd6757" class="outline-3">
+<h3 id="orgdfd6757">Revelation of John 22:4</h3>
+<div class="outline-text-3" id="text-orgdfd6757">
+<p>
+And they shall see his face: and his name shall be on their foreheads.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71ed105" class="outline-3">
+<h3 id="org71ed105">Revelation of John 22:5</h3>
+<div class="outline-text-3" id="text-org71ed105">
+<p>
+And night shall be no more. And they shall not need the light of the lamp, nor the light of the sun, because the Lord God shall enlighten then. And they shall reign for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf067ac4" class="outline-3">
+<h3 id="orgf067ac4">Revelation of John 22:6</h3>
+<div class="outline-text-3" id="text-orgf067ac4">
+<p>
+And he said to me: These words are most faithful and true. And the Lord God of the spirits of the prophets sent his angel to shew his servant the things which must be done shortly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga58b12c" class="outline-3">
+<h3 id="orga58b12c">Revelation of John 22:7</h3>
+<div class="outline-text-3" id="text-orga58b12c">
+<p>
+And: Behold I come quickly. Blessed is he that keepeth the words of the prophecy of this book.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7d003f" class="outline-3">
+<h3 id="orgc7d003f">Revelation of John 22:8</h3>
+<div class="outline-text-3" id="text-orgc7d003f">
+<p>
+And I, John, who have heard and seen these things. And, after I had heard and seen, I fell down to adore before the feet of the angel who shewed me the things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org015d8ea" class="outline-3">
+<h3 id="org015d8ea">Revelation of John 22:9</h3>
+<div class="outline-text-3" id="text-org015d8ea">
+<p>
+And he said to me: See thou do it not. For I am thy fellow servant, and of thy brethren the prophets and of them that keep the words of the prophecy of this book. Adore God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6eb7c8d" class="outline-3">
+<h3 id="org6eb7c8d">Revelation of John 22:10</h3>
+<div class="outline-text-3" id="text-org6eb7c8d">
+<p>
+And he saith to me: Seal not the words of the prophecy of this book. For the time is at hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga71d0ae" class="outline-3">
+<h3 id="orga71d0ae">Revelation of John 22:11</h3>
+<div class="outline-text-3" id="text-orga71d0ae">
+<p>
+He that hurteth, let him hurt still: and he that is filthy, let him be filthy still: and he that is just, let him be justified still: and he that is holy, let him be sanctified still.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2a1973" class="outline-3">
+<h3 id="orga2a1973">Revelation of John 22:12</h3>
+<div class="outline-text-3" id="text-orga2a1973">
+<p>
+Behold, I come quickly: and my reward is with me, to render to every, man according to his works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga753e82" class="outline-3">
+<h3 id="orga753e82">Revelation of John 22:13</h3>
+<div class="outline-text-3" id="text-orga753e82">
+<p>
+I am Alpha and Omega, the First and the Last, the Beginning and the End.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cd3d77" class="outline-3">
+<h3 id="org2cd3d77">Revelation of John 22:14</h3>
+<div class="outline-text-3" id="text-org2cd3d77">
+<p>
+Blessed are they that wash their robes in the blood of the Lamb: that they may have a right to the tree of life and may enter in by the gates into the city.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org52616cc" class="outline-3">
+<h3 id="org52616cc">Revelation of John 22:15</h3>
+<div class="outline-text-3" id="text-org52616cc">
+<p>
+Without are dogs and sorcerers and unchaste and murderers and servers of idols and every one that loveth and maketh a lie.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88b80f8" class="outline-3">
+<h3 id="org88b80f8">Revelation of John 22:16</h3>
+<div class="outline-text-3" id="text-org88b80f8">
+<p>
+I, Jesus, have sent my angel, to testify to you these things in the churches. I am the root and stock of David, the bright and morning star.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a0b375" class="outline-3">
+<h3 id="org4a0b375">Revelation of John 22:17</h3>
+<div class="outline-text-3" id="text-org4a0b375">
+<p>
+And the spirit and the bride say: Come. And he that heareth, let him say: Come. And he that thirsteth, let him come. And he that will, let him take the water of life, freely.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga133b1a" class="outline-3">
+<h3 id="orga133b1a">Revelation of John 22:18</h3>
+<div class="outline-text-3" id="text-orga133b1a">
+<p>
+For I testify to every one that heareth the words of the prophecy of this book: If any man shall add to these things, God shall add unto him the plagues written in this book.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0b560a" class="outline-3">
+<h3 id="orge0b560a">Revelation of John 22:19</h3>
+<div class="outline-text-3" id="text-orge0b560a">
+<p>
+And if any man shall take away from the words of the book of this prophecy, God shall take away his part out of the book of life, and out of the holy city, and from these things that are written in this book.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89d26e8" class="outline-3">
+<h3 id="org89d26e8">Revelation of John 22:20</h3>
+<div class="outline-text-3" id="text-org89d26e8">
+<p>
+He that giveth testimony of these things, saith: Surely, I come quickly: Amen. Come, Lord Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37db3e6" class="outline-3">
+<h3 id="org37db3e6">Revelation of John 22:21</h3>
+<div class="outline-text-3" id="text-org37db3e6">
+<p>
+The grace of our Lord Jesus Christ be with you all. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

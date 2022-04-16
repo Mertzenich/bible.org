@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf2c0f00">Habakkuk 1</a>
+<ul>
+<li><a href="#orgd5b71fd">Habakkuk 1:1</a></li>
+<li><a href="#org5f55c03">Habakkuk 1:2</a></li>
+<li><a href="#org6024629">Habakkuk 1:3</a></li>
+<li><a href="#orgd6f0c0b">Habakkuk 1:4</a></li>
+<li><a href="#org3ebb2c7">Habakkuk 1:5</a></li>
+<li><a href="#orgdaa178c">Habakkuk 1:6</a></li>
+<li><a href="#org497d627">Habakkuk 1:7</a></li>
+<li><a href="#org07cfa9a">Habakkuk 1:8</a></li>
+<li><a href="#orge438f69">Habakkuk 1:9</a></li>
+<li><a href="#orgfb885af">Habakkuk 1:10</a></li>
+<li><a href="#org28a83a5">Habakkuk 1:11</a></li>
+<li><a href="#orge1d1338">Habakkuk 1:12</a></li>
+<li><a href="#org1ce2357">Habakkuk 1:13</a></li>
+<li><a href="#orgc58cb05">Habakkuk 1:14</a></li>
+<li><a href="#org1a4459f">Habakkuk 1:15</a></li>
+<li><a href="#orgb613343">Habakkuk 1:16</a></li>
+<li><a href="#org200b9d1">Habakkuk 1:17</a></li>
+</ul>
+</li>
+<li><a href="#org13f606b">Habakkuk 2</a>
+<ul>
+<li><a href="#org5ece4c9">Habakkuk 2:1</a></li>
+<li><a href="#org228c310">Habakkuk 2:2</a></li>
+<li><a href="#org0377b8f">Habakkuk 2:3</a></li>
+<li><a href="#org9dc8bc7">Habakkuk 2:4</a></li>
+<li><a href="#orgc7542a8">Habakkuk 2:5</a></li>
+<li><a href="#org953d7c3">Habakkuk 2:6</a></li>
+<li><a href="#org867ee49">Habakkuk 2:7</a></li>
+<li><a href="#org642a827">Habakkuk 2:8</a></li>
+<li><a href="#orgc6ddd68">Habakkuk 2:9</a></li>
+<li><a href="#org06564f4">Habakkuk 2:10</a></li>
+<li><a href="#org5b52881">Habakkuk 2:11</a></li>
+<li><a href="#orga5d8c28">Habakkuk 2:12</a></li>
+<li><a href="#org7b6f5bc">Habakkuk 2:13</a></li>
+<li><a href="#orgfa322e8">Habakkuk 2:14</a></li>
+<li><a href="#org5a6b6af">Habakkuk 2:15</a></li>
+<li><a href="#org375c535">Habakkuk 2:16</a></li>
+<li><a href="#orgec61452">Habakkuk 2:17</a></li>
+<li><a href="#org07b79d2">Habakkuk 2:18</a></li>
+<li><a href="#orgd19da99">Habakkuk 2:19</a></li>
+<li><a href="#orgbde74d7">Habakkuk 2:20</a></li>
+</ul>
+</li>
+<li><a href="#org568af2c">Habakkuk 3</a>
+<ul>
+<li><a href="#orgd824511">Habakkuk 3:1</a></li>
+<li><a href="#org14b5ef2">Habakkuk 3:2</a></li>
+<li><a href="#org2e49548">Habakkuk 3:3</a></li>
+<li><a href="#org40401f3">Habakkuk 3:4</a></li>
+<li><a href="#org85e9635">Habakkuk 3:5</a></li>
+<li><a href="#orgd5f6415">Habakkuk 3:6</a></li>
+<li><a href="#org8cab53f">Habakkuk 3:7</a></li>
+<li><a href="#orgac3f720">Habakkuk 3:8</a></li>
+<li><a href="#org38eca6a">Habakkuk 3:9</a></li>
+<li><a href="#org96c5442">Habakkuk 3:10</a></li>
+<li><a href="#org5c91533">Habakkuk 3:11</a></li>
+<li><a href="#orge4701b0">Habakkuk 3:12</a></li>
+<li><a href="#orgdfb53e0">Habakkuk 3:13</a></li>
+<li><a href="#orgededa56">Habakkuk 3:14</a></li>
+<li><a href="#orgc06715a">Habakkuk 3:15</a></li>
+<li><a href="#org66d998b">Habakkuk 3:16</a></li>
+<li><a href="#org33663d0">Habakkuk 3:17</a></li>
+<li><a href="#orgf4f5590">Habakkuk 3:18</a></li>
+<li><a href="#org5c2b956">Habakkuk 3:19</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2c0f00" class="outline-2">
+<h2 id="orgf2c0f00">Habakkuk 1</h2>
+<div class="outline-text-2" id="text-orgf2c0f00">
+</div>
+<div id="outline-container-orgd5b71fd" class="outline-3">
+<h3 id="orgd5b71fd">Habakkuk 1:1</h3>
+<div class="outline-text-3" id="text-orgd5b71fd">
+<p>
+The burden that Habakkuk the prophet saw.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f55c03" class="outline-3">
+<h3 id="org5f55c03">Habakkuk 1:2</h3>
+<div class="outline-text-3" id="text-org5f55c03">
+<p>
+How long, O Lord, shall I cry, and thou wilt not hear? shall I cry out to thee suffering violence, and thou wilt not save?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6024629" class="outline-3">
+<h3 id="org6024629">Habakkuk 1:3</h3>
+<div class="outline-text-3" id="text-org6024629">
+<p>
+Why hast thou shewn me iniquity and grievance, to see rapine and injustice before me? and there is a judgment, but opposition is more powerful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6f0c0b" class="outline-3">
+<h3 id="orgd6f0c0b">Habakkuk 1:4</h3>
+<div class="outline-text-3" id="text-orgd6f0c0b">
+<p>
+Therefore the law is torn in pieces, and judgment cometh not to the end: because the wicked prevaileth against the just, therefore wrong judgment goeth forth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ebb2c7" class="outline-3">
+<h3 id="org3ebb2c7">Habakkuk 1:5</h3>
+<div class="outline-text-3" id="text-org3ebb2c7">
+<p>
+Behold ye among the nations, and see: wonder, and be astonished: for a work is done in your days, which no man will believe when it shall be told.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaa178c" class="outline-3">
+<h3 id="orgdaa178c">Habakkuk 1:6</h3>
+<div class="outline-text-3" id="text-orgdaa178c">
+<p>
+For behold, I will raise up the Chaldeans, a bitter and swift nation, marching upon the breadth of the earth, to possess the dwelling places that are not their own.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org497d627" class="outline-3">
+<h3 id="org497d627">Habakkuk 1:7</h3>
+<div class="outline-text-3" id="text-org497d627">
+<p>
+They are dreadful, and terrible: from themselves shall their judgment, and their burden proceed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07cfa9a" class="outline-3">
+<h3 id="org07cfa9a">Habakkuk 1:8</h3>
+<div class="outline-text-3" id="text-org07cfa9a">
+<p>
+Their horses are lighter than leopards, and swifter than evening wolves; and their horsemen shall be spread abroad: for their horsemen shall come from afar, they shall fly as an eagle that maketh haste to eat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge438f69" class="outline-3">
+<h3 id="orge438f69">Habakkuk 1:9</h3>
+<div class="outline-text-3" id="text-orge438f69">
+<p>
+They shall all come to the prey, their face is like a burning wind: and they shall gather together captives as the sand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb885af" class="outline-3">
+<h3 id="orgfb885af">Habakkuk 1:10</h3>
+<div class="outline-text-3" id="text-orgfb885af">
+<p>
+And their prince shall triumph over kings, and princes shall be his laughingstock: and he shall laugh at every strong hold, and shall cast up a mount, and shall take it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28a83a5" class="outline-3">
+<h3 id="org28a83a5">Habakkuk 1:11</h3>
+<div class="outline-text-3" id="text-org28a83a5">
+<p>
+Then shall his spirit be changed, and he shall pass, and fall: this is his strength of his god.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1d1338" class="outline-3">
+<h3 id="orge1d1338">Habakkuk 1:12</h3>
+<div class="outline-text-3" id="text-orge1d1338">
+<p>
+Wast thou not from the beginning, O Lord my God, my holy one, and we shall not die? Lord, thou hast appointed him for judgment: and made him strong for correction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ce2357" class="outline-3">
+<h3 id="org1ce2357">Habakkuk 1:13</h3>
+<div class="outline-text-3" id="text-org1ce2357">
+<p>
+Thy eyes are too pure to behold evil, and thou canst not look on iniquity. Why lookest thou upon them that do unjust things, and holdest thy peace when the wicked devoureth the man that is more just than himself?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc58cb05" class="outline-3">
+<h3 id="orgc58cb05">Habakkuk 1:14</h3>
+<div class="outline-text-3" id="text-orgc58cb05">
+<p>
+And thou wilt make men as the fishes of the sea, and as the creeping things that have no ruler.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a4459f" class="outline-3">
+<h3 id="org1a4459f">Habakkuk 1:15</h3>
+<div class="outline-text-3" id="text-org1a4459f">
+<p>
+He lifted up all them with his hook, he drew them in his drag, and gathered them into his net: for this he will be glad and rejoice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb613343" class="outline-3">
+<h3 id="orgb613343">Habakkuk 1:16</h3>
+<div class="outline-text-3" id="text-orgb613343">
+<p>
+Therefore will he offer victims to his drag, and he will sacrifice to his net: because through them his portion is made fat, and his meat dainty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org200b9d1" class="outline-3">
+<h3 id="org200b9d1">Habakkuk 1:17</h3>
+<div class="outline-text-3" id="text-org200b9d1">
+<p>
+For this cause therefore he spreadeth his net, and will not spare continually to slay the nations. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org13f606b" class="outline-2">
+<h2 id="org13f606b">Habakkuk 2</h2>
+<div class="outline-text-2" id="text-org13f606b">
+</div>
+<div id="outline-container-org5ece4c9" class="outline-3">
+<h3 id="org5ece4c9">Habakkuk 2:1</h3>
+<div class="outline-text-3" id="text-org5ece4c9">
+<p>
+I will stand upon my watch, and fix my foot upon the tower: and I will watch, to see what will be said to me, and what I may answer to him that reproveth me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org228c310" class="outline-3">
+<h3 id="org228c310">Habakkuk 2:2</h3>
+<div class="outline-text-3" id="text-org228c310">
+<p>
+And the Lord answered me, and said: Write the vision, and make it plain upon tables: that he that readeth it may run over it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0377b8f" class="outline-3">
+<h3 id="org0377b8f">Habakkuk 2:3</h3>
+<div class="outline-text-3" id="text-org0377b8f">
+<p>
+For as yet the vision is far off, and it shall appear at the end, and shall not lie: if it make any delay, wait for it: for it shall surely come, and it shall not be slack.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9dc8bc7" class="outline-3">
+<h3 id="org9dc8bc7">Habakkuk 2:4</h3>
+<div class="outline-text-3" id="text-org9dc8bc7">
+<p>
+Behold, he that is unbelieving, his soul shall not be right in himself: but the just shall live in his faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7542a8" class="outline-3">
+<h3 id="orgc7542a8">Habakkuk 2:5</h3>
+<div class="outline-text-3" id="text-orgc7542a8">
+<p>
+And as wine deceiveth him that drinketh it: so shall the proud man be, and he shall not be honoured: who hath enlarged his desire like hell: and is himself like death, and he is never satisfied: but will gather together unto him all nations, and heap together unto him all people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org953d7c3" class="outline-3">
+<h3 id="org953d7c3">Habakkuk 2:6</h3>
+<div class="outline-text-3" id="text-org953d7c3">
+<p>
+Shall not all these take up a parable against him, and a dark speech concerning him: and it shall be said: Woe to him that heapeth together that which is not his own? how long also doth he load himself with thick clay?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org867ee49" class="outline-3">
+<h3 id="org867ee49">Habakkuk 2:7</h3>
+<div class="outline-text-3" id="text-org867ee49">
+<p>
+Shall they not rise up suddenly that shall bite thee: and they be stirred up that shall tear thee, and thou shalt be a spoil to them?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org642a827" class="outline-3">
+<h3 id="org642a827">Habakkuk 2:8</h3>
+<div class="outline-text-3" id="text-org642a827">
+<p>
+Because thou hast spoiled many nations, all that shall be left of the people shall spoil thee: because of men&rsquo;s blood, and for the iniquity of the land, of the city, and of all that dwell therein.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6ddd68" class="outline-3">
+<h3 id="orgc6ddd68">Habakkuk 2:9</h3>
+<div class="outline-text-3" id="text-orgc6ddd68">
+<p>
+Woe to him that gathereth together an evil covetousness to his house, that his nest may be on high, and thinketh he may be delivered out of the hand of evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06564f4" class="outline-3">
+<h3 id="org06564f4">Habakkuk 2:10</h3>
+<div class="outline-text-3" id="text-org06564f4">
+<p>
+Thou hast devised confusion to thy house, thou hast cut off many people, and thy soul hath sinned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b52881" class="outline-3">
+<h3 id="org5b52881">Habakkuk 2:11</h3>
+<div class="outline-text-3" id="text-org5b52881">
+<p>
+For the stone shall cry out of the wall: and the timber that is between the joints of the building, shall answer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5d8c28" class="outline-3">
+<h3 id="orga5d8c28">Habakkuk 2:12</h3>
+<div class="outline-text-3" id="text-orga5d8c28">
+<p>
+Woe to him that buildeth a town with blood, and prepareth a city by iniquity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b6f5bc" class="outline-3">
+<h3 id="org7b6f5bc">Habakkuk 2:13</h3>
+<div class="outline-text-3" id="text-org7b6f5bc">
+<p>
+Are not these things from the Lord of hosts? for the people shall labour in a great fire: and the nations in vain, and they shall faint.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa322e8" class="outline-3">
+<h3 id="orgfa322e8">Habakkuk 2:14</h3>
+<div class="outline-text-3" id="text-orgfa322e8">
+<p>
+For the earth shall be filled, that men may know the glory of the Lord, as waters covering the sea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a6b6af" class="outline-3">
+<h3 id="org5a6b6af">Habakkuk 2:15</h3>
+<div class="outline-text-3" id="text-org5a6b6af">
+<p>
+Woe to him that giveth drink to his friend, and presenteth his gall, and maketh him drunk, that he may behold his nakedness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org375c535" class="outline-3">
+<h3 id="org375c535">Habakkuk 2:16</h3>
+<div class="outline-text-3" id="text-org375c535">
+<p>
+Thou art filled with shame instead of glory: drink thou also, and fall fast asleep: the cup of the right hand of the Lord shall compass thee, and shameful vomiting shall be on thy glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec61452" class="outline-3">
+<h3 id="orgec61452">Habakkuk 2:17</h3>
+<div class="outline-text-3" id="text-orgec61452">
+<p>
+For the iniquity of Libanus shall cover thee, and the ravaging of beasts shall terrify them because of the blood of men, and the iniquity of the land, and of the city, and of all that dwell therein.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07b79d2" class="outline-3">
+<h3 id="org07b79d2">Habakkuk 2:18</h3>
+<div class="outline-text-3" id="text-org07b79d2">
+<p>
+What doth the graven thing avail, because the maker thereof hath graven it, a molten, and a false image? because the forger thereof hath trusted in a thing of his own forging, to make dumb idols.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd19da99" class="outline-3">
+<h3 id="orgd19da99">Habakkuk 2:19</h3>
+<div class="outline-text-3" id="text-orgd19da99">
+<p>
+Woe to him that saith to wood: Awake: to the dumb stone: Arise: can it teach? Behold, it is laid over with gold, and silver, and there is no spirit in the bowels thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbde74d7" class="outline-3">
+<h3 id="orgbde74d7">Habakkuk 2:20</h3>
+<div class="outline-text-3" id="text-orgbde74d7">
+<p>
+But the Lord is in his holy temple: let all the earth keep silence before him. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org568af2c" class="outline-2">
+<h2 id="org568af2c">Habakkuk 3</h2>
+<div class="outline-text-2" id="text-org568af2c">
+</div>
+<div id="outline-container-orgd824511" class="outline-3">
+<h3 id="orgd824511">Habakkuk 3:1</h3>
+<div class="outline-text-3" id="text-orgd824511">
+<p>
+A PRAYER OF Habakkuk THE PROPHET FOR IGNORANCES.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14b5ef2" class="outline-3">
+<h3 id="org14b5ef2">Habakkuk 3:2</h3>
+<div class="outline-text-3" id="text-org14b5ef2">
+<p>
+O Lord, I have heard thy hearing, and was afraid. O Lord, thy work, in the midst of the years bring it to life: In the midst of the years thou shalt make it known: when thou art angry, thou wilt remember mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e49548" class="outline-3">
+<h3 id="org2e49548">Habakkuk 3:3</h3>
+<div class="outline-text-3" id="text-org2e49548">
+<p>
+God will come from the south, and the holy one from mount Pharan: His glory covered the heavens, and the earth is full of his praise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40401f3" class="outline-3">
+<h3 id="org40401f3">Habakkuk 3:4</h3>
+<div class="outline-text-3" id="text-org40401f3">
+<p>
+His brightness shall be as the light: horns are in his hands: There is his strength hid:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85e9635" class="outline-3">
+<h3 id="org85e9635">Habakkuk 3:5</h3>
+<div class="outline-text-3" id="text-org85e9635">
+<p>
+Death shall go before his face. And the devil shall go forth before his feet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5f6415" class="outline-3">
+<h3 id="orgd5f6415">Habakkuk 3:6</h3>
+<div class="outline-text-3" id="text-orgd5f6415">
+<p>
+He stood and measured the earth. He beheld, and melted the nations: and the ancient mountains were crushed to pieces. The hills of the world were bowed down by the journeys of his eternity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cab53f" class="outline-3">
+<h3 id="org8cab53f">Habakkuk 3:7</h3>
+<div class="outline-text-3" id="text-org8cab53f">
+<p>
+I saw the tents of Ethiopia for their iniquity, the curtains of the land of Madian shall be troubled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac3f720" class="outline-3">
+<h3 id="orgac3f720">Habakkuk 3:8</h3>
+<div class="outline-text-3" id="text-orgac3f720">
+<p>
+Wast thou angry, O Lord, with the rivers? or was thy wrath upon the rivers? or thy indignation in the sea? Who will ride upon thy horses: and thy chariots are salvation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38eca6a" class="outline-3">
+<h3 id="org38eca6a">Habakkuk 3:9</h3>
+<div class="outline-text-3" id="text-org38eca6a">
+<p>
+Thou wilt surely take up thy bow: according to the oaths which thou hast spoken to the tribes. Thou wilt divide the rivers of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96c5442" class="outline-3">
+<h3 id="org96c5442">Habakkuk 3:10</h3>
+<div class="outline-text-3" id="text-org96c5442">
+<p>
+The mountains saw thee, and were grieved: the great body of waters passed away. The deep put forth its voice: the deep lifted up its hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c91533" class="outline-3">
+<h3 id="org5c91533">Habakkuk 3:11</h3>
+<div class="outline-text-3" id="text-org5c91533">
+<p>
+The sun and the moon stood still in their habitation, in the light of thy arrows, they shall go in the brightness of thy glittering spear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4701b0" class="outline-3">
+<h3 id="orge4701b0">Habakkuk 3:12</h3>
+<div class="outline-text-3" id="text-orge4701b0">
+<p>
+In thy anger thou wilt tread the earth under foot: in thy wrath thou wilt astonish the nations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfb53e0" class="outline-3">
+<h3 id="orgdfb53e0">Habakkuk 3:13</h3>
+<div class="outline-text-3" id="text-orgdfb53e0">
+<p>
+Thou wentest forth for the salvation of thy people: for salvation with thy Christ. Thou struckest the head of the house of the wicked: thou hast laid bare his foundation even to the neck.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgededa56" class="outline-3">
+<h3 id="orgededa56">Habakkuk 3:14</h3>
+<div class="outline-text-3" id="text-orgededa56">
+<p>
+Thou hast cursed his sceptres, the head of his warriors, them that came out as a whirlwind to scatter me. Their joy was like that of him that devoureth the poor man in secret.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc06715a" class="outline-3">
+<h3 id="orgc06715a">Habakkuk 3:15</h3>
+<div class="outline-text-3" id="text-orgc06715a">
+<p>
+Thou madest a way in the sea for thy horses, in the mud of many waters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66d998b" class="outline-3">
+<h3 id="org66d998b">Habakkuk 3:16</h3>
+<div class="outline-text-3" id="text-org66d998b">
+<p>
+I have heard and my bowels were troubled: my lips trembled at the voice. Let rottenness enter into my bones, and swarm under me. That I may rest in the day of tribulation: that I may go up to our people that are girded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33663d0" class="outline-3">
+<h3 id="org33663d0">Habakkuk 3:17</h3>
+<div class="outline-text-3" id="text-org33663d0">
+<p>
+For the fig tree shall not blossom: and there shall be no spring in the vines. The labour of the olive tree shall fail: and the fields shall yield no food: the flock shall be cut off from the fold, and there shall be no herd in the stalls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4f5590" class="outline-3">
+<h3 id="orgf4f5590">Habakkuk 3:18</h3>
+<div class="outline-text-3" id="text-orgf4f5590">
+<p>
+But I will rejoice in the Lord: and I will joy in God my Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c2b956" class="outline-3">
+<h3 id="org5c2b956">Habakkuk 3:19</h3>
+<div class="outline-text-3" id="text-org5c2b956">
+<p>
+The Lord God is my strength: and he will make my feet like the feet of harts: and he the conqueror will lead me upon my high places singing psalms.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

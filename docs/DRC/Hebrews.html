@@ -1,0 +1,3362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf89349a">Hebrews 1</a>
+<ul>
+<li><a href="#org8153529">Hebrews 1:1</a></li>
+<li><a href="#orgca3ff33">Hebrews 1:2</a></li>
+<li><a href="#orgc0b5b85">Hebrews 1:3</a></li>
+<li><a href="#orgfb325c1">Hebrews 1:4</a></li>
+<li><a href="#org9e70788">Hebrews 1:5</a></li>
+<li><a href="#orgf0b1ec5">Hebrews 1:6</a></li>
+<li><a href="#orgca39af1">Hebrews 1:7</a></li>
+<li><a href="#org562c0c8">Hebrews 1:8</a></li>
+<li><a href="#org0dea48b">Hebrews 1:9</a></li>
+<li><a href="#orgf168b6c">Hebrews 1:10</a></li>
+<li><a href="#org0669b9e">Hebrews 1:11</a></li>
+<li><a href="#org6e6f014">Hebrews 1:12</a></li>
+<li><a href="#orgf01a556">Hebrews 1:13</a></li>
+<li><a href="#orgf7cb934">Hebrews 1:14</a></li>
+</ul>
+</li>
+<li><a href="#org9197fde">Hebrews 2</a>
+<ul>
+<li><a href="#org8653aad">Hebrews 2:1</a></li>
+<li><a href="#org3cb5433">Hebrews 2:2</a></li>
+<li><a href="#org755bf7d">Hebrews 2:3</a></li>
+<li><a href="#orgbfe75a1">Hebrews 2:4</a></li>
+<li><a href="#org5f7ccbf">Hebrews 2:5</a></li>
+<li><a href="#orgc2603de">Hebrews 2:6</a></li>
+<li><a href="#org66ba77d">Hebrews 2:7</a></li>
+<li><a href="#orgd79c317">Hebrews 2:8</a></li>
+<li><a href="#org919c9af">Hebrews 2:9</a></li>
+<li><a href="#org54e7fc7">Hebrews 2:10</a></li>
+<li><a href="#orgdc5846f">Hebrews 2:11</a></li>
+<li><a href="#org2cc772b">Hebrews 2:12</a></li>
+<li><a href="#org397f2a6">Hebrews 2:13</a></li>
+<li><a href="#orgf0510f7">Hebrews 2:14</a></li>
+<li><a href="#org93e6aef">Hebrews 2:15</a></li>
+<li><a href="#orga81ba22">Hebrews 2:16</a></li>
+<li><a href="#orgc021654">Hebrews 2:17</a></li>
+<li><a href="#org65aded7">Hebrews 2:18</a></li>
+</ul>
+</li>
+<li><a href="#orgc96b482">Hebrews 3</a>
+<ul>
+<li><a href="#org2d8d93b">Hebrews 3:1</a></li>
+<li><a href="#org9a43183">Hebrews 3:2</a></li>
+<li><a href="#org261f718">Hebrews 3:3</a></li>
+<li><a href="#org634d3f3">Hebrews 3:4</a></li>
+<li><a href="#org8c91fd1">Hebrews 3:5</a></li>
+<li><a href="#org967786b">Hebrews 3:6</a></li>
+<li><a href="#orgb0c7417">Hebrews 3:7</a></li>
+<li><a href="#org2383341">Hebrews 3:8</a></li>
+<li><a href="#org45b53b6">Hebrews 3:9</a></li>
+<li><a href="#org7f755b6">Hebrews 3:10</a></li>
+<li><a href="#org8f1dc77">Hebrews 3:11</a></li>
+<li><a href="#org9ce1c8e">Hebrews 3:12</a></li>
+<li><a href="#org415ba67">Hebrews 3:13</a></li>
+<li><a href="#org869e4c5">Hebrews 3:14</a></li>
+<li><a href="#org29f6600">Hebrews 3:15</a></li>
+<li><a href="#org73288d0">Hebrews 3:16</a></li>
+<li><a href="#org51a39c4">Hebrews 3:17</a></li>
+<li><a href="#org15f5714">Hebrews 3:18</a></li>
+<li><a href="#orged146fc">Hebrews 3:19</a></li>
+</ul>
+</li>
+<li><a href="#org887b490">Hebrews 4</a>
+<ul>
+<li><a href="#org48af4cf">Hebrews 4:1</a></li>
+<li><a href="#org99d748a">Hebrews 4:2</a></li>
+<li><a href="#org80ea1db">Hebrews 4:3</a></li>
+<li><a href="#org9db40d3">Hebrews 4:4</a></li>
+<li><a href="#orgde49ba9">Hebrews 4:5</a></li>
+<li><a href="#orgfaa7668">Hebrews 4:6</a></li>
+<li><a href="#org795d5c4">Hebrews 4:7</a></li>
+<li><a href="#orgc098e74">Hebrews 4:8</a></li>
+<li><a href="#orgfeca71f">Hebrews 4:9</a></li>
+<li><a href="#org7527fdc">Hebrews 4:10</a></li>
+<li><a href="#org5c0215c">Hebrews 4:11</a></li>
+<li><a href="#org8ee1852">Hebrews 4:12</a></li>
+<li><a href="#org79ecca5">Hebrews 4:13</a></li>
+<li><a href="#org8cd05fd">Hebrews 4:14</a></li>
+<li><a href="#org3f81d7f">Hebrews 4:15</a></li>
+<li><a href="#org2284518">Hebrews 4:16</a></li>
+</ul>
+</li>
+<li><a href="#orgd754854">Hebrews 5</a>
+<ul>
+<li><a href="#org759abb5">Hebrews 5:1</a></li>
+<li><a href="#orgccfd97d">Hebrews 5:2</a></li>
+<li><a href="#orgcef8264">Hebrews 5:3</a></li>
+<li><a href="#org3192ba9">Hebrews 5:4</a></li>
+<li><a href="#orgfa66c0d">Hebrews 5:5</a></li>
+<li><a href="#org16aea13">Hebrews 5:6</a></li>
+<li><a href="#orge533986">Hebrews 5:7</a></li>
+<li><a href="#orgf8874e0">Hebrews 5:8</a></li>
+<li><a href="#org96e9a23">Hebrews 5:9</a></li>
+<li><a href="#org50329de">Hebrews 5:10</a></li>
+<li><a href="#org767edc5">Hebrews 5:11</a></li>
+<li><a href="#orgf2ec486">Hebrews 5:12</a></li>
+<li><a href="#org196bdcc">Hebrews 5:13</a></li>
+<li><a href="#org8c356f5">Hebrews 5:14</a></li>
+</ul>
+</li>
+<li><a href="#org153c96a">Hebrews 6</a>
+<ul>
+<li><a href="#org5472a03">Hebrews 6:1</a></li>
+<li><a href="#org14ab4a1">Hebrews 6:2</a></li>
+<li><a href="#orgb314be8">Hebrews 6:3</a></li>
+<li><a href="#org2fbd3ff">Hebrews 6:4</a></li>
+<li><a href="#orgfa909c0">Hebrews 6:5</a></li>
+<li><a href="#org2f5c9a6">Hebrews 6:6</a></li>
+<li><a href="#org48011ef">Hebrews 6:7</a></li>
+<li><a href="#org188b6a8">Hebrews 6:8</a></li>
+<li><a href="#orgbac335c">Hebrews 6:9</a></li>
+<li><a href="#org3b059ae">Hebrews 6:10</a></li>
+<li><a href="#orgb6551f1">Hebrews 6:11</a></li>
+<li><a href="#org951b43c">Hebrews 6:12</a></li>
+<li><a href="#org3e8133d">Hebrews 6:13</a></li>
+<li><a href="#orgc2ebd96">Hebrews 6:14</a></li>
+<li><a href="#org60478f5">Hebrews 6:15</a></li>
+<li><a href="#org95c6217">Hebrews 6:16</a></li>
+<li><a href="#org497fe78">Hebrews 6:17</a></li>
+<li><a href="#org844bfdd">Hebrews 6:18</a></li>
+<li><a href="#orgec37fff">Hebrews 6:19</a></li>
+<li><a href="#org5543d53">Hebrews 6:20</a></li>
+</ul>
+</li>
+<li><a href="#orgbbd82a4">Hebrews 7</a>
+<ul>
+<li><a href="#orgff9fc44">Hebrews 7:1</a></li>
+<li><a href="#org45c9626">Hebrews 7:2</a></li>
+<li><a href="#org4b94eaa">Hebrews 7:3</a></li>
+<li><a href="#org8adcf73">Hebrews 7:4</a></li>
+<li><a href="#orge8c8c58">Hebrews 7:5</a></li>
+<li><a href="#org818bb8e">Hebrews 7:6</a></li>
+<li><a href="#orgb4830ef">Hebrews 7:7</a></li>
+<li><a href="#orgacd53c5">Hebrews 7:8</a></li>
+<li><a href="#org21e423c">Hebrews 7:9</a></li>
+<li><a href="#orga1f8f6b">Hebrews 7:10</a></li>
+<li><a href="#orga742aa7">Hebrews 7:11</a></li>
+<li><a href="#orgf17efd7">Hebrews 7:12</a></li>
+<li><a href="#orga20d96e">Hebrews 7:13</a></li>
+<li><a href="#orgcbbb112">Hebrews 7:14</a></li>
+<li><a href="#orgd38b9bb">Hebrews 7:15</a></li>
+<li><a href="#org27d68ed">Hebrews 7:16</a></li>
+<li><a href="#org9563187">Hebrews 7:17</a></li>
+<li><a href="#org01ffd49">Hebrews 7:18</a></li>
+<li><a href="#org5c863fc">Hebrews 7:19</a></li>
+<li><a href="#org14c2e72">Hebrews 7:20</a></li>
+<li><a href="#orgc870b88">Hebrews 7:21</a></li>
+<li><a href="#org3673271">Hebrews 7:22</a></li>
+<li><a href="#org2331a53">Hebrews 7:23</a></li>
+<li><a href="#org76d87d6">Hebrews 7:24</a></li>
+<li><a href="#orgc9c97a7">Hebrews 7:25</a></li>
+<li><a href="#org1d598c9">Hebrews 7:26</a></li>
+<li><a href="#org56a77c4">Hebrews 7:27</a></li>
+<li><a href="#org8607d64">Hebrews 7:28</a></li>
+</ul>
+</li>
+<li><a href="#org62a9f76">Hebrews 8</a>
+<ul>
+<li><a href="#org6736d33">Hebrews 8:1</a></li>
+<li><a href="#org04e0eeb">Hebrews 8:2</a></li>
+<li><a href="#org64ceff2">Hebrews 8:3</a></li>
+<li><a href="#orga1460ce">Hebrews 8:4</a></li>
+<li><a href="#orgaf13d4d">Hebrews 8:5</a></li>
+<li><a href="#orgac0da14">Hebrews 8:6</a></li>
+<li><a href="#orga38e76e">Hebrews 8:7</a></li>
+<li><a href="#org0279476">Hebrews 8:8</a></li>
+<li><a href="#orgc9df952">Hebrews 8:9</a></li>
+<li><a href="#org70734bb">Hebrews 8:10</a></li>
+<li><a href="#orge8d8a6c">Hebrews 8:11</a></li>
+<li><a href="#org95d79be">Hebrews 8:12</a></li>
+<li><a href="#org6303175">Hebrews 8:13</a></li>
+</ul>
+</li>
+<li><a href="#org78f6816">Hebrews 9</a>
+<ul>
+<li><a href="#org8c172c0">Hebrews 9:1</a></li>
+<li><a href="#org2eb8f84">Hebrews 9:2</a></li>
+<li><a href="#orgfec2b09">Hebrews 9:3</a></li>
+<li><a href="#org672b513">Hebrews 9:4</a></li>
+<li><a href="#orgd69fcb8">Hebrews 9:5</a></li>
+<li><a href="#orge60ae3c">Hebrews 9:6</a></li>
+<li><a href="#orgd40f0c1">Hebrews 9:7</a></li>
+<li><a href="#org9d3085c">Hebrews 9:8</a></li>
+<li><a href="#org1220af6">Hebrews 9:9</a></li>
+<li><a href="#org8b182e8">Hebrews 9:10</a></li>
+<li><a href="#orga214ec0">Hebrews 9:11</a></li>
+<li><a href="#org37f3fc7">Hebrews 9:12</a></li>
+<li><a href="#org7765124">Hebrews 9:13</a></li>
+<li><a href="#org5d9a126">Hebrews 9:14</a></li>
+<li><a href="#org4afd3cf">Hebrews 9:15</a></li>
+<li><a href="#org3765bbd">Hebrews 9:16</a></li>
+<li><a href="#org9f14b16">Hebrews 9:17</a></li>
+<li><a href="#org6515fe6">Hebrews 9:18</a></li>
+<li><a href="#org5e36c96">Hebrews 9:19</a></li>
+<li><a href="#org9d5f452">Hebrews 9:20</a></li>
+<li><a href="#orgc48410e">Hebrews 9:21</a></li>
+<li><a href="#org3be360b">Hebrews 9:22</a></li>
+<li><a href="#org7d34a93">Hebrews 9:23</a></li>
+<li><a href="#org8404cf8">Hebrews 9:24</a></li>
+<li><a href="#org03e8ff9">Hebrews 9:25</a></li>
+<li><a href="#org6118df9">Hebrews 9:26</a></li>
+<li><a href="#org82aff72">Hebrews 9:27</a></li>
+<li><a href="#orgb699344">Hebrews 9:28</a></li>
+</ul>
+</li>
+<li><a href="#orgad55cc6">Hebrews 10</a>
+<ul>
+<li><a href="#orgc624018">Hebrews 10:1</a></li>
+<li><a href="#orga604f99">Hebrews 10:2</a></li>
+<li><a href="#org339424a">Hebrews 10:3</a></li>
+<li><a href="#org48d48fe">Hebrews 10:4</a></li>
+<li><a href="#org6bd2a8f">Hebrews 10:5</a></li>
+<li><a href="#org9840c75">Hebrews 10:6</a></li>
+<li><a href="#orgc9fb3e0">Hebrews 10:7</a></li>
+<li><a href="#orgde0ec0c">Hebrews 10:8</a></li>
+<li><a href="#orgf541199">Hebrews 10:9</a></li>
+<li><a href="#org5b25a29">Hebrews 10:10</a></li>
+<li><a href="#orga79f981">Hebrews 10:11</a></li>
+<li><a href="#org26f7b80">Hebrews 10:12</a></li>
+<li><a href="#orgf19810e">Hebrews 10:13</a></li>
+<li><a href="#org58691dd">Hebrews 10:14</a></li>
+<li><a href="#org343d441">Hebrews 10:15</a></li>
+<li><a href="#orgf060593">Hebrews 10:16</a></li>
+<li><a href="#orge299585">Hebrews 10:17</a></li>
+<li><a href="#org428f73f">Hebrews 10:18</a></li>
+<li><a href="#orga92f9d2">Hebrews 10:19</a></li>
+<li><a href="#orgee939d3">Hebrews 10:20</a></li>
+<li><a href="#org6e7f005">Hebrews 10:21</a></li>
+<li><a href="#org63e9a76">Hebrews 10:22</a></li>
+<li><a href="#org198f1e0">Hebrews 10:23</a></li>
+<li><a href="#orga17a34e">Hebrews 10:24</a></li>
+<li><a href="#org2538d92">Hebrews 10:25</a></li>
+<li><a href="#org9c33e1a">Hebrews 10:26</a></li>
+<li><a href="#org554e898">Hebrews 10:27</a></li>
+<li><a href="#org0b22645">Hebrews 10:28</a></li>
+<li><a href="#org6a1b40f">Hebrews 10:29</a></li>
+<li><a href="#org00e5da1">Hebrews 10:30</a></li>
+<li><a href="#orgb3c2b69">Hebrews 10:31</a></li>
+<li><a href="#orgc07df89">Hebrews 10:32</a></li>
+<li><a href="#org4620466">Hebrews 10:33</a></li>
+<li><a href="#org2223ab9">Hebrews 10:34</a></li>
+<li><a href="#org0e8a2cc">Hebrews 10:35</a></li>
+<li><a href="#org920854e">Hebrews 10:36</a></li>
+<li><a href="#org071ef7f">Hebrews 10:37</a></li>
+<li><a href="#orgb8793a6">Hebrews 10:38</a></li>
+<li><a href="#org056856c">Hebrews 10:39</a></li>
+</ul>
+</li>
+<li><a href="#org308bd75">Hebrews 11</a>
+<ul>
+<li><a href="#org916bcfb">Hebrews 11:1</a></li>
+<li><a href="#orgfc83c89">Hebrews 11:2</a></li>
+<li><a href="#orgcdc51af">Hebrews 11:3</a></li>
+<li><a href="#orge6cc5d7">Hebrews 11:4</a></li>
+<li><a href="#org6d221d8">Hebrews 11:5</a></li>
+<li><a href="#orgcf6ccb1">Hebrews 11:6</a></li>
+<li><a href="#org176dc8d">Hebrews 11:7</a></li>
+<li><a href="#org1b0e1b2">Hebrews 11:8</a></li>
+<li><a href="#org1cfd7d5">Hebrews 11:9</a></li>
+<li><a href="#org0182d34">Hebrews 11:10</a></li>
+<li><a href="#org145ad93">Hebrews 11:11</a></li>
+<li><a href="#orgcc6c652">Hebrews 11:12</a></li>
+<li><a href="#org8a49964">Hebrews 11:13</a></li>
+<li><a href="#org00b5ce0">Hebrews 11:14</a></li>
+<li><a href="#org1d9c253">Hebrews 11:15</a></li>
+<li><a href="#orgae4362e">Hebrews 11:16</a></li>
+<li><a href="#org9a05d17">Hebrews 11:17</a></li>
+<li><a href="#org43ad562">Hebrews 11:18</a></li>
+<li><a href="#org53ee9a7">Hebrews 11:19</a></li>
+<li><a href="#org32948c9">Hebrews 11:20</a></li>
+<li><a href="#org9863366">Hebrews 11:21</a></li>
+<li><a href="#org7ba0712">Hebrews 11:22</a></li>
+<li><a href="#org98e0ddf">Hebrews 11:23</a></li>
+<li><a href="#orgb5c8e4a">Hebrews 11:24</a></li>
+<li><a href="#orgf3f4fd4">Hebrews 11:25</a></li>
+<li><a href="#org6d10372">Hebrews 11:26</a></li>
+<li><a href="#org5cde7a2">Hebrews 11:27</a></li>
+<li><a href="#org1f86279">Hebrews 11:28</a></li>
+<li><a href="#orgb73167c">Hebrews 11:29</a></li>
+<li><a href="#orgff2b5cf">Hebrews 11:30</a></li>
+<li><a href="#orgbb375ae">Hebrews 11:31</a></li>
+<li><a href="#org1292b21">Hebrews 11:32</a></li>
+<li><a href="#org1618732">Hebrews 11:33</a></li>
+<li><a href="#org206a623">Hebrews 11:34</a></li>
+<li><a href="#org72b43b0">Hebrews 11:35</a></li>
+<li><a href="#org0b9dc75">Hebrews 11:36</a></li>
+<li><a href="#org8bfcb65">Hebrews 11:37</a></li>
+<li><a href="#orgdabac69">Hebrews 11:38</a></li>
+<li><a href="#org615d681">Hebrews 11:39</a></li>
+<li><a href="#orgd90e6ef">Hebrews 11:40</a></li>
+</ul>
+</li>
+<li><a href="#orge1c10da">Hebrews 12</a>
+<ul>
+<li><a href="#orgfac67bc">Hebrews 12:1</a></li>
+<li><a href="#orgcd32714">Hebrews 12:2</a></li>
+<li><a href="#org01e4fb2">Hebrews 12:3</a></li>
+<li><a href="#orgeeba22f">Hebrews 12:4</a></li>
+<li><a href="#orgbf997c7">Hebrews 12:5</a></li>
+<li><a href="#org04b7a0e">Hebrews 12:6</a></li>
+<li><a href="#orgddad44b">Hebrews 12:7</a></li>
+<li><a href="#org357eba6">Hebrews 12:8</a></li>
+<li><a href="#org7e698cd">Hebrews 12:9</a></li>
+<li><a href="#org6e42041">Hebrews 12:10</a></li>
+<li><a href="#orge875fa8">Hebrews 12:11</a></li>
+<li><a href="#org444c2a1">Hebrews 12:12</a></li>
+<li><a href="#org1937e68">Hebrews 12:13</a></li>
+<li><a href="#org11e14e7">Hebrews 12:14</a></li>
+<li><a href="#org7a2b535">Hebrews 12:15</a></li>
+<li><a href="#org2ef10c9">Hebrews 12:16</a></li>
+<li><a href="#org7d87d99">Hebrews 12:17</a></li>
+<li><a href="#org4e7be2e">Hebrews 12:18</a></li>
+<li><a href="#orgbb47384">Hebrews 12:19</a></li>
+<li><a href="#org81a2b96">Hebrews 12:20</a></li>
+<li><a href="#orga62ab1c">Hebrews 12:21</a></li>
+<li><a href="#org87a7e30">Hebrews 12:22</a></li>
+<li><a href="#org9e25981">Hebrews 12:23</a></li>
+<li><a href="#org4dba9ce">Hebrews 12:24</a></li>
+<li><a href="#org3fcc197">Hebrews 12:25</a></li>
+<li><a href="#orge976b5d">Hebrews 12:26</a></li>
+<li><a href="#orgb9a72e3">Hebrews 12:27</a></li>
+<li><a href="#orgbf3564d">Hebrews 12:28</a></li>
+<li><a href="#org473989f">Hebrews 12:29</a></li>
+</ul>
+</li>
+<li><a href="#org0195432">Hebrews 13</a>
+<ul>
+<li><a href="#orga7e40d4">Hebrews 13:1</a></li>
+<li><a href="#orga5fc409">Hebrews 13:2</a></li>
+<li><a href="#orga85dbe6">Hebrews 13:3</a></li>
+<li><a href="#org05c3790">Hebrews 13:4</a></li>
+<li><a href="#orgf5b47d0">Hebrews 13:5</a></li>
+<li><a href="#orgf616abf">Hebrews 13:6</a></li>
+<li><a href="#org03bdbe9">Hebrews 13:7</a></li>
+<li><a href="#orgbf1c0a0">Hebrews 13:8</a></li>
+<li><a href="#orgc2670c8">Hebrews 13:9</a></li>
+<li><a href="#org0e4aa0c">Hebrews 13:10</a></li>
+<li><a href="#org8acf5ac">Hebrews 13:11</a></li>
+<li><a href="#org7f2a978">Hebrews 13:12</a></li>
+<li><a href="#org80d8db5">Hebrews 13:13</a></li>
+<li><a href="#org9cb4c02">Hebrews 13:14</a></li>
+<li><a href="#org8ea089c">Hebrews 13:15</a></li>
+<li><a href="#orgc9c09aa">Hebrews 13:16</a></li>
+<li><a href="#orgcd6b216">Hebrews 13:17</a></li>
+<li><a href="#orga0a6186">Hebrews 13:18</a></li>
+<li><a href="#orgcd3218d">Hebrews 13:19</a></li>
+<li><a href="#orgcd77562">Hebrews 13:20</a></li>
+<li><a href="#org7881f50">Hebrews 13:21</a></li>
+<li><a href="#org6e51f00">Hebrews 13:22</a></li>
+<li><a href="#orgb0ab43d">Hebrews 13:23</a></li>
+<li><a href="#orgb8bf100">Hebrews 13:24</a></li>
+<li><a href="#org4451f06">Hebrews 13:25</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf89349a" class="outline-2">
+<h2 id="orgf89349a">Hebrews 1</h2>
+<div class="outline-text-2" id="text-orgf89349a">
+</div>
+<div id="outline-container-org8153529" class="outline-3">
+<h3 id="org8153529">Hebrews 1:1</h3>
+<div class="outline-text-3" id="text-org8153529">
+<p>
+God, who, at sundry times and in divers manners, spoke in times past to the fathers by the prophets, last of all,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca3ff33" class="outline-3">
+<h3 id="orgca3ff33">Hebrews 1:2</h3>
+<div class="outline-text-3" id="text-orgca3ff33">
+<p>
+In these days, hath spoken to us by his Son, whom he hath appointed heir of all things, by whom also he made the world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0b5b85" class="outline-3">
+<h3 id="orgc0b5b85">Hebrews 1:3</h3>
+<div class="outline-text-3" id="text-orgc0b5b85">
+<p>
+Who being the brightness of his glory and the figure of his substance and upholding all things by the word of his power, making purgation of sins, sitteth on the right hand of the majesty on high:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb325c1" class="outline-3">
+<h3 id="orgfb325c1">Hebrews 1:4</h3>
+<div class="outline-text-3" id="text-orgfb325c1">
+<p>
+Being made so much better than the angels as he hath inherited a more excellent name than they.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e70788" class="outline-3">
+<h3 id="org9e70788">Hebrews 1:5</h3>
+<div class="outline-text-3" id="text-org9e70788">
+<p>
+For to which of the angels hath he said at any time: Thou art my Son, to-day have I begotten thee? And again: I will be to him a Father, and he shall be to me a Son?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0b1ec5" class="outline-3">
+<h3 id="orgf0b1ec5">Hebrews 1:6</h3>
+<div class="outline-text-3" id="text-orgf0b1ec5">
+<p>
+And again, when he bringeth in the first begotten into the world, he saith: And let all the angels of God adore him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca39af1" class="outline-3">
+<h3 id="orgca39af1">Hebrews 1:7</h3>
+<div class="outline-text-3" id="text-orgca39af1">
+<p>
+And to the angels indeed he saith: He that maketh his angels spirits and his ministers a flame of fire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org562c0c8" class="outline-3">
+<h3 id="org562c0c8">Hebrews 1:8</h3>
+<div class="outline-text-3" id="text-org562c0c8">
+<p>
+But to the Son: Thy throne, O God, is for ever and ever: a sceptre of justice is the sceptre of thy kingdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0dea48b" class="outline-3">
+<h3 id="org0dea48b">Hebrews 1:9</h3>
+<div class="outline-text-3" id="text-org0dea48b">
+<p>
+Thou hast loved justice and hated iniquity: therefore God, thy God, hath anointed thee with the oil of gladness above thy fellows.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf168b6c" class="outline-3">
+<h3 id="orgf168b6c">Hebrews 1:10</h3>
+<div class="outline-text-3" id="text-orgf168b6c">
+<p>
+And: Thou in the beginning, O Lord, didst found the earth: and the works of thy hands are the heavens.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0669b9e" class="outline-3">
+<h3 id="org0669b9e">Hebrews 1:11</h3>
+<div class="outline-text-3" id="text-org0669b9e">
+<p>
+They shall perish: but thou shalt continue: and they shall all grow old as a garment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e6f014" class="outline-3">
+<h3 id="org6e6f014">Hebrews 1:12</h3>
+<div class="outline-text-3" id="text-org6e6f014">
+<p>
+And as a vesture shalt thou change them, and they shalt be changed. But thou art the selfsame: and thy years shall not fail.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf01a556" class="outline-3">
+<h3 id="orgf01a556">Hebrews 1:13</h3>
+<div class="outline-text-3" id="text-orgf01a556">
+<p>
+But to which of the angels said he at any time: Sit on my right hand, until I make thy enemies thy footstool?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7cb934" class="outline-3">
+<h3 id="orgf7cb934">Hebrews 1:14</h3>
+<div class="outline-text-3" id="text-orgf7cb934">
+<p>
+Are they not all ministering spirits, sent to minister for them who shall receive the inheritance of salvation? 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9197fde" class="outline-2">
+<h2 id="org9197fde">Hebrews 2</h2>
+<div class="outline-text-2" id="text-org9197fde">
+</div>
+<div id="outline-container-org8653aad" class="outline-3">
+<h3 id="org8653aad">Hebrews 2:1</h3>
+<div class="outline-text-3" id="text-org8653aad">
+<p>
+Therefore ought we more diligently to observe the things which we have heard lest perhaps we should let them slip.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3cb5433" class="outline-3">
+<h3 id="org3cb5433">Hebrews 2:2</h3>
+<div class="outline-text-3" id="text-org3cb5433">
+<p>
+For if the word spoken by angels became steadfast and every transgression and disobedience received a just recompense of reward:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org755bf7d" class="outline-3">
+<h3 id="org755bf7d">Hebrews 2:3</h3>
+<div class="outline-text-3" id="text-org755bf7d">
+<p>
+How shall we escape if we neglect so great salvation? Which, having begun to be declared by the Lord, was confirmed unto us by them that heard him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfe75a1" class="outline-3">
+<h3 id="orgbfe75a1">Hebrews 2:4</h3>
+<div class="outline-text-3" id="text-orgbfe75a1">
+<p>
+God also bearing them witness by signs and wonders and divers miracles and distributions of the Holy Ghost, according to his own will.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f7ccbf" class="outline-3">
+<h3 id="org5f7ccbf">Hebrews 2:5</h3>
+<div class="outline-text-3" id="text-org5f7ccbf">
+<p>
+For God hath not subjected unto angels the world to come, whereof we speak.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2603de" class="outline-3">
+<h3 id="orgc2603de">Hebrews 2:6</h3>
+<div class="outline-text-3" id="text-orgc2603de">
+<p>
+But one in a certain place hath testified, saying: What is man, that thou art mindful of him? Or the son of man, that thou visitest him?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66ba77d" class="outline-3">
+<h3 id="org66ba77d">Hebrews 2:7</h3>
+<div class="outline-text-3" id="text-org66ba77d">
+<p>
+Thou hast made him a little lower than the angels: thou hast crowned him with glory and honour and hast set him over the works of thy hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd79c317" class="outline-3">
+<h3 id="orgd79c317">Hebrews 2:8</h3>
+<div class="outline-text-3" id="text-orgd79c317">
+<p>
+Thou hast subjected all things under his feet. For in that he hath subjected all things to him he left nothing not subject to him. But now we see not as yet all things subject to him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org919c9af" class="outline-3">
+<h3 id="org919c9af">Hebrews 2:9</h3>
+<div class="outline-text-3" id="text-org919c9af">
+<p>
+But we see Jesus, who was made a little lower than the angels, for the suffering of death, crowned with glory and honour: that, through the grace of God he might taste death for all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54e7fc7" class="outline-3">
+<h3 id="org54e7fc7">Hebrews 2:10</h3>
+<div class="outline-text-3" id="text-org54e7fc7">
+<p>
+For it became him for whom are all things and by whom are all things, who had brought many children into glory, to perfect the author of their salvation, by his passion.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc5846f" class="outline-3">
+<h3 id="orgdc5846f">Hebrews 2:11</h3>
+<div class="outline-text-3" id="text-orgdc5846f">
+<p>
+For both he that sanctifieth and they who are sanctified are all of one. For which cause he is not ashamed to call them brethren, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cc772b" class="outline-3">
+<h3 id="org2cc772b">Hebrews 2:12</h3>
+<div class="outline-text-3" id="text-org2cc772b">
+<p>
+I will declare thy name to my brethren: in the midst of the church will I praise thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org397f2a6" class="outline-3">
+<h3 id="org397f2a6">Hebrews 2:13</h3>
+<div class="outline-text-3" id="text-org397f2a6">
+<p>
+And again: I will put my trust in him. And again: Behold I and my children, whom God hath given me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0510f7" class="outline-3">
+<h3 id="orgf0510f7">Hebrews 2:14</h3>
+<div class="outline-text-3" id="text-orgf0510f7">
+<p>
+Therefore because the children are partakers of flesh and blood, he also himself in like manner hath been partaker of the same: that, through death, he might destroy him who had the empire of death, that is to say, the devil:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93e6aef" class="outline-3">
+<h3 id="org93e6aef">Hebrews 2:15</h3>
+<div class="outline-text-3" id="text-org93e6aef">
+<p>
+And might deliver them, who through the fear of death were all their lifetime subject to servitude.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga81ba22" class="outline-3">
+<h3 id="orga81ba22">Hebrews 2:16</h3>
+<div class="outline-text-3" id="text-orga81ba22">
+<p>
+For nowhere doth he take hold of the angels: but of the seed of Abraham he taketh hold.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc021654" class="outline-3">
+<h3 id="orgc021654">Hebrews 2:17</h3>
+<div class="outline-text-3" id="text-orgc021654">
+<p>
+Wherefore, it behoved him in all things to be made like unto his brethren, that he might become a merciful and faithful high priest before God, that he might be a propitiation for the sins of the people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65aded7" class="outline-3">
+<h3 id="org65aded7">Hebrews 2:18</h3>
+<div class="outline-text-3" id="text-org65aded7">
+<p>
+For in that wherein he himself hath suffered and been tempted he is able to succour them also that are tempted. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc96b482" class="outline-2">
+<h2 id="orgc96b482">Hebrews 3</h2>
+<div class="outline-text-2" id="text-orgc96b482">
+</div>
+<div id="outline-container-org2d8d93b" class="outline-3">
+<h3 id="org2d8d93b">Hebrews 3:1</h3>
+<div class="outline-text-3" id="text-org2d8d93b">
+<p>
+Wherefore, holy brethren, partakers of the heavenly vocation consider the apostle and high priest of our confession, Jesus:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a43183" class="outline-3">
+<h3 id="org9a43183">Hebrews 3:2</h3>
+<div class="outline-text-3" id="text-org9a43183">
+<p>
+Who is faithful to him that made him, as was also Moses in all his house.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org261f718" class="outline-3">
+<h3 id="org261f718">Hebrews 3:3</h3>
+<div class="outline-text-3" id="text-org261f718">
+<p>
+For this man was counted worthy of greater glory than Moses, by so much as he that hath built the house hath greater honour than the house.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org634d3f3" class="outline-3">
+<h3 id="org634d3f3">Hebrews 3:4</h3>
+<div class="outline-text-3" id="text-org634d3f3">
+<p>
+For every house is built by some man: but he that created all things is God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c91fd1" class="outline-3">
+<h3 id="org8c91fd1">Hebrews 3:5</h3>
+<div class="outline-text-3" id="text-org8c91fd1">
+<p>
+And Moses indeed was faithful in all his house as a servant, for a testimony of those things which were to be said:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org967786b" class="outline-3">
+<h3 id="org967786b">Hebrews 3:6</h3>
+<div class="outline-text-3" id="text-org967786b">
+<p>
+But Christ, as the Son in his own house: which house are we, if we hold fast the confidence and glory of hope unto the end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0c7417" class="outline-3">
+<h3 id="orgb0c7417">Hebrews 3:7</h3>
+<div class="outline-text-3" id="text-orgb0c7417">
+<p>
+Wherefore, as the Holy Ghost saith: To-day if you shall hear his voice,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2383341" class="outline-3">
+<h3 id="org2383341">Hebrews 3:8</h3>
+<div class="outline-text-3" id="text-org2383341">
+<p>
+Harden not your hearts, as in the provocation, in the day of temptation in the desert,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45b53b6" class="outline-3">
+<h3 id="org45b53b6">Hebrews 3:9</h3>
+<div class="outline-text-3" id="text-org45b53b6">
+<p>
+Where your fathers tempted me, proved and saw my works,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f755b6" class="outline-3">
+<h3 id="org7f755b6">Hebrews 3:10</h3>
+<div class="outline-text-3" id="text-org7f755b6">
+<p>
+Forty years: for which cause I was offended with this generation, and I said: They always err in heart. And they have not known my ways.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f1dc77" class="outline-3">
+<h3 id="org8f1dc77">Hebrews 3:11</h3>
+<div class="outline-text-3" id="text-org8f1dc77">
+<p>
+As I have sworn in my wrath: If they shall enter into my rest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ce1c8e" class="outline-3">
+<h3 id="org9ce1c8e">Hebrews 3:12</h3>
+<div class="outline-text-3" id="text-org9ce1c8e">
+<p>
+Take heed, brethren, lest perhaps there be in any of you an evil heart of unbelief, to depart from the living God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org415ba67" class="outline-3">
+<h3 id="org415ba67">Hebrews 3:13</h3>
+<div class="outline-text-3" id="text-org415ba67">
+<p>
+But exhort one another every day, whilst it is called to day, that none of you be hardened through the deceitfulness of sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org869e4c5" class="outline-3">
+<h3 id="org869e4c5">Hebrews 3:14</h3>
+<div class="outline-text-3" id="text-org869e4c5">
+<p>
+For we are made partakers of Christ: yet so, if we hold the beginning of his substance firm unto the end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29f6600" class="outline-3">
+<h3 id="org29f6600">Hebrews 3:15</h3>
+<div class="outline-text-3" id="text-org29f6600">
+<p>
+While it is said: To day, if you shall hear his voice, harden not your hearts, as in that provocation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73288d0" class="outline-3">
+<h3 id="org73288d0">Hebrews 3:16</h3>
+<div class="outline-text-3" id="text-org73288d0">
+<p>
+For some who heard did provoke: but not all that came out of Egypt by Moses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51a39c4" class="outline-3">
+<h3 id="org51a39c4">Hebrews 3:17</h3>
+<div class="outline-text-3" id="text-org51a39c4">
+<p>
+And with whom was he offended forty years? Was it not with them that sinned, whose carcasses were overthrown in the desert?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15f5714" class="outline-3">
+<h3 id="org15f5714">Hebrews 3:18</h3>
+<div class="outline-text-3" id="text-org15f5714">
+<p>
+And to whom did he swear, that they should not enter into his rest: but to them that were incredulous?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged146fc" class="outline-3">
+<h3 id="orged146fc">Hebrews 3:19</h3>
+<div class="outline-text-3" id="text-orged146fc">
+<p>
+And we see that they could not enter in, because of unbelief. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org887b490" class="outline-2">
+<h2 id="org887b490">Hebrews 4</h2>
+<div class="outline-text-2" id="text-org887b490">
+</div>
+<div id="outline-container-org48af4cf" class="outline-3">
+<h3 id="org48af4cf">Hebrews 4:1</h3>
+<div class="outline-text-3" id="text-org48af4cf">
+<p>
+Let us fear therefore lest, the promise being left of entering into his rest, any of you should be thought to be wanting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99d748a" class="outline-3">
+<h3 id="org99d748a">Hebrews 4:2</h3>
+<div class="outline-text-3" id="text-org99d748a">
+<p>
+For unto us also it hath been declared in like manner as unto them. But the word of hearing did not profit them, not being mixed with faith of those things they heard.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80ea1db" class="outline-3">
+<h3 id="org80ea1db">Hebrews 4:3</h3>
+<div class="outline-text-3" id="text-org80ea1db">
+<p>
+For we, who have believed, shall enter into rest; as he said: As I have sworn in my wrath: If they shall enter into my rest; and this indeed when the works from the foundation of the world were finished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9db40d3" class="outline-3">
+<h3 id="org9db40d3">Hebrews 4:4</h3>
+<div class="outline-text-3" id="text-org9db40d3">
+<p>
+For in a certain place he spoke of the seventh day thus: And God rested the seventh day from all his works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde49ba9" class="outline-3">
+<h3 id="orgde49ba9">Hebrews 4:5</h3>
+<div class="outline-text-3" id="text-orgde49ba9">
+<p>
+And in this place again: If they shall enter into my rest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaa7668" class="outline-3">
+<h3 id="orgfaa7668">Hebrews 4:6</h3>
+<div class="outline-text-3" id="text-orgfaa7668">
+<p>
+Seeing then it remaineth that some are to enter into it, and they to whom it was first preached did not enter because of unbelief:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org795d5c4" class="outline-3">
+<h3 id="org795d5c4">Hebrews 4:7</h3>
+<div class="outline-text-3" id="text-org795d5c4">
+<p>
+Again he limiteth a certain day, saying in David; To day, after so long a time as it is above said: To day if you shall hear his voice, harden not your hearts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc098e74" class="outline-3">
+<h3 id="orgc098e74">Hebrews 4:8</h3>
+<div class="outline-text-3" id="text-orgc098e74">
+<p>
+For if Jesus had given them rest he would never have afterwards spoken of another day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfeca71f" class="outline-3">
+<h3 id="orgfeca71f">Hebrews 4:9</h3>
+<div class="outline-text-3" id="text-orgfeca71f">
+<p>
+There remaineth therefore a day of rest for the people of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7527fdc" class="outline-3">
+<h3 id="org7527fdc">Hebrews 4:10</h3>
+<div class="outline-text-3" id="text-org7527fdc">
+<p>
+For he that is entered into his rest, the same also hath rested from his works, as God did from his.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c0215c" class="outline-3">
+<h3 id="org5c0215c">Hebrews 4:11</h3>
+<div class="outline-text-3" id="text-org5c0215c">
+<p>
+Let us hasten therefore to enter into that rest: lest any man fall into the same example of unbelief.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ee1852" class="outline-3">
+<h3 id="org8ee1852">Hebrews 4:12</h3>
+<div class="outline-text-3" id="text-org8ee1852">
+<p>
+For the word of God is living and effectual and more piercing than any two edged sword; and reaching unto the division of the soul and the spirit, of the joints also and the marrow: and is a discerner of the thoughts and intents of the heart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79ecca5" class="outline-3">
+<h3 id="org79ecca5">Hebrews 4:13</h3>
+<div class="outline-text-3" id="text-org79ecca5">
+<p>
+Neither is there any creature invisible in his sight: but all things are naked and open to his eyes, to whom our speech is.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cd05fd" class="outline-3">
+<h3 id="org8cd05fd">Hebrews 4:14</h3>
+<div class="outline-text-3" id="text-org8cd05fd">
+<p>
+Having therefore a great high priest that hath passed into the heavens, Jesus the Son of God: let us hold fast our confession.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f81d7f" class="outline-3">
+<h3 id="org3f81d7f">Hebrews 4:15</h3>
+<div class="outline-text-3" id="text-org3f81d7f">
+<p>
+For we have not a high priest who cannot have compassion on our infirmities: but one tempted in all things like as we are, without sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2284518" class="outline-3">
+<h3 id="org2284518">Hebrews 4:16</h3>
+<div class="outline-text-3" id="text-org2284518">
+<p>
+Let us go therefore with confidence to the throne of grace: that we may obtain mercy and find grace in seasonable aid. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd754854" class="outline-2">
+<h2 id="orgd754854">Hebrews 5</h2>
+<div class="outline-text-2" id="text-orgd754854">
+</div>
+<div id="outline-container-org759abb5" class="outline-3">
+<h3 id="org759abb5">Hebrews 5:1</h3>
+<div class="outline-text-3" id="text-org759abb5">
+<p>
+For every high priest taken from among men is ordained for men in the things that appertain to God, that he may offer up gifts and sacrifices for sins:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccfd97d" class="outline-3">
+<h3 id="orgccfd97d">Hebrews 5:2</h3>
+<div class="outline-text-3" id="text-orgccfd97d">
+<p>
+Who can have compassion on them that are ignorant and that err: because he himself also is compassed with infirmity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcef8264" class="outline-3">
+<h3 id="orgcef8264">Hebrews 5:3</h3>
+<div class="outline-text-3" id="text-orgcef8264">
+<p>
+And therefore he ought, as for the people, so also for himself, to offer for sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3192ba9" class="outline-3">
+<h3 id="org3192ba9">Hebrews 5:4</h3>
+<div class="outline-text-3" id="text-org3192ba9">
+<p>
+Neither doth any man take the honour to himself, but he that is called by God, as Aaron was.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa66c0d" class="outline-3">
+<h3 id="orgfa66c0d">Hebrews 5:5</h3>
+<div class="outline-text-3" id="text-orgfa66c0d">
+<p>
+So Christ also did not glorify himself, that he might be made a high priest: but he that said unto him: Thou art my Son: this day have I begotten thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16aea13" class="outline-3">
+<h3 id="org16aea13">Hebrews 5:6</h3>
+<div class="outline-text-3" id="text-org16aea13">
+<p>
+As he saith also in another place: Thou art a priest for ever, according to the order of Melchisedech.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge533986" class="outline-3">
+<h3 id="orge533986">Hebrews 5:7</h3>
+<div class="outline-text-3" id="text-orge533986">
+<p>
+Who in the days of his flesh, with a strong cry and tears, offering up prayers and supplications to him that was able to save him from death, was heard for his reverence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8874e0" class="outline-3">
+<h3 id="orgf8874e0">Hebrews 5:8</h3>
+<div class="outline-text-3" id="text-orgf8874e0">
+<p>
+And whereas indeed he was the Son of God, he learned obedience by the things which he suffered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96e9a23" class="outline-3">
+<h3 id="org96e9a23">Hebrews 5:9</h3>
+<div class="outline-text-3" id="text-org96e9a23">
+<p>
+And being consummated, he became, to all that obey him, the cause of eternal salvation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50329de" class="outline-3">
+<h3 id="org50329de">Hebrews 5:10</h3>
+<div class="outline-text-3" id="text-org50329de">
+<p>
+Called by God a high priest, according to the order of Melchisedech.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org767edc5" class="outline-3">
+<h3 id="org767edc5">Hebrews 5:11</h3>
+<div class="outline-text-3" id="text-org767edc5">
+<p>
+Of whom we have much to say and hard to be intelligibly uttered: because you are become weak to hear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2ec486" class="outline-3">
+<h3 id="orgf2ec486">Hebrews 5:12</h3>
+<div class="outline-text-3" id="text-orgf2ec486">
+<p>
+For whereas for the time you ought to be masters, you have need to be taught again what are the first elements of the words of God: and you are become such as have need of milk and not of strong meat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org196bdcc" class="outline-3">
+<h3 id="org196bdcc">Hebrews 5:13</h3>
+<div class="outline-text-3" id="text-org196bdcc">
+<p>
+For every one that is a partaker of milk is unskilful in the word of justice: for he is a little child.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c356f5" class="outline-3">
+<h3 id="org8c356f5">Hebrews 5:14</h3>
+<div class="outline-text-3" id="text-org8c356f5">
+<p>
+But strong meat is for the perfect: for them who by custom have their senses exercised to the discerning of good and evil. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org153c96a" class="outline-2">
+<h2 id="org153c96a">Hebrews 6</h2>
+<div class="outline-text-2" id="text-org153c96a">
+</div>
+<div id="outline-container-org5472a03" class="outline-3">
+<h3 id="org5472a03">Hebrews 6:1</h3>
+<div class="outline-text-3" id="text-org5472a03">
+<p>
+Wherefore, leaving the word of the beginning of Christ, let us go on to things more perfect: not laying again the foundation of penance from dead works and of faith towards God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14ab4a1" class="outline-3">
+<h3 id="org14ab4a1">Hebrews 6:2</h3>
+<div class="outline-text-3" id="text-org14ab4a1">
+<p>
+Of the doctrine of baptisms and imposition of hands, and of the resurrection of the dead, and of eternal judgment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb314be8" class="outline-3">
+<h3 id="orgb314be8">Hebrews 6:3</h3>
+<div class="outline-text-3" id="text-orgb314be8">
+<p>
+And this will we do, if God permit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fbd3ff" class="outline-3">
+<h3 id="org2fbd3ff">Hebrews 6:4</h3>
+<div class="outline-text-3" id="text-org2fbd3ff">
+<p>
+For it is impossible for those who were once illuminated, have tasted also the heavenly gift and were made partakers of the Holy Ghost,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa909c0" class="outline-3">
+<h3 id="orgfa909c0">Hebrews 6:5</h3>
+<div class="outline-text-3" id="text-orgfa909c0">
+<p>
+Have moreover tasted the good word of God and the powers of the world to come,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f5c9a6" class="outline-3">
+<h3 id="org2f5c9a6">Hebrews 6:6</h3>
+<div class="outline-text-3" id="text-org2f5c9a6">
+<p>
+And are fallen away: to be renewed again to penance, crucifying again to themselves the Son of God and making him a mockery.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48011ef" class="outline-3">
+<h3 id="org48011ef">Hebrews 6:7</h3>
+<div class="outline-text-3" id="text-org48011ef">
+<p>
+For the earth, that drinketh in the rain which cometh often upon it and bringeth forth herbs meet for them by whom it is tilled, receiveth blessing from God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org188b6a8" class="outline-3">
+<h3 id="org188b6a8">Hebrews 6:8</h3>
+<div class="outline-text-3" id="text-org188b6a8">
+<p>
+But that which bringeth forth thorns and briers is reprobate and very near unto a curse: whose end is to be burnt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbac335c" class="outline-3">
+<h3 id="orgbac335c">Hebrews 6:9</h3>
+<div class="outline-text-3" id="text-orgbac335c">
+<p>
+But, my dearly beloved, we trust better things of you, and nearer to salvation; though we speak thus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b059ae" class="outline-3">
+<h3 id="org3b059ae">Hebrews 6:10</h3>
+<div class="outline-text-3" id="text-org3b059ae">
+<p>
+For God is not unjust, that he should forget your work and the love which you have shewn in his name, you who have ministered and do minister to the saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6551f1" class="outline-3">
+<h3 id="orgb6551f1">Hebrews 6:11</h3>
+<div class="outline-text-3" id="text-orgb6551f1">
+<p>
+And we desire that every one of you shew forth the same carefulness to the accomplishing of hope unto the end:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org951b43c" class="outline-3">
+<h3 id="org951b43c">Hebrews 6:12</h3>
+<div class="outline-text-3" id="text-org951b43c">
+<p>
+That you become not slothful, but followers of them who through faith and patience shall inherit the promises.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e8133d" class="outline-3">
+<h3 id="org3e8133d">Hebrews 6:13</h3>
+<div class="outline-text-3" id="text-org3e8133d">
+<p>
+For God making promises to Abraham, because he had no one greater by whom he might swear, swore by himself,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2ebd96" class="outline-3">
+<h3 id="orgc2ebd96">Hebrews 6:14</h3>
+<div class="outline-text-3" id="text-orgc2ebd96">
+<p>
+Saying: Unless blessing I shall bless thee and multiplying I shall multiply thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60478f5" class="outline-3">
+<h3 id="org60478f5">Hebrews 6:15</h3>
+<div class="outline-text-3" id="text-org60478f5">
+<p>
+And so patiently enduring he obtained the promise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95c6217" class="outline-3">
+<h3 id="org95c6217">Hebrews 6:16</h3>
+<div class="outline-text-3" id="text-org95c6217">
+<p>
+For men swear by one greater than themselves: and an oath for confirmation is the end of all their controversy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org497fe78" class="outline-3">
+<h3 id="org497fe78">Hebrews 6:17</h3>
+<div class="outline-text-3" id="text-org497fe78">
+<p>
+Wherein God, meaning more abundantly to shew to the heirs of the promise the immutability of his counsel, interposed an oath:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org844bfdd" class="outline-3">
+<h3 id="org844bfdd">Hebrews 6:18</h3>
+<div class="outline-text-3" id="text-org844bfdd">
+<p>
+That by two immutable things in which it is impossible for God to lie, we may have the strongest comfort, we who have fled for refuge to hold fast the hope set before us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec37fff" class="outline-3">
+<h3 id="orgec37fff">Hebrews 6:19</h3>
+<div class="outline-text-3" id="text-orgec37fff">
+<p>
+Which we have as an anchor of the soul, sure and firm, and which entereth in even within the veil:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5543d53" class="outline-3">
+<h3 id="org5543d53">Hebrews 6:20</h3>
+<div class="outline-text-3" id="text-org5543d53">
+<p>
+Where the forerunner Jesus is entered for us, made a high priest for ever according to the order of Melchisedech. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbbd82a4" class="outline-2">
+<h2 id="orgbbd82a4">Hebrews 7</h2>
+<div class="outline-text-2" id="text-orgbbd82a4">
+</div>
+<div id="outline-container-orgff9fc44" class="outline-3">
+<h3 id="orgff9fc44">Hebrews 7:1</h3>
+<div class="outline-text-3" id="text-orgff9fc44">
+<p>
+For this Melchisedech was king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings and blessed him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45c9626" class="outline-3">
+<h3 id="org45c9626">Hebrews 7:2</h3>
+<div class="outline-text-3" id="text-org45c9626">
+<p>
+To whom also Abraham divided the tithes of all: who first indeed by interpretation is king of justice: and then also king of Salem, that is, king of peace:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b94eaa" class="outline-3">
+<h3 id="org4b94eaa">Hebrews 7:3</h3>
+<div class="outline-text-3" id="text-org4b94eaa">
+<p>
+Without father, without mother, without genealogy, having neither beginning of days nor end of life, but likened unto the Son of God, continueth a priest for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8adcf73" class="outline-3">
+<h3 id="org8adcf73">Hebrews 7:4</h3>
+<div class="outline-text-3" id="text-org8adcf73">
+<p>
+Now consider how great this man is, to whom also Abraham the patriarch gave tithes out of the principal things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8c8c58" class="outline-3">
+<h3 id="orge8c8c58">Hebrews 7:5</h3>
+<div class="outline-text-3" id="text-orge8c8c58">
+<p>
+And indeed they that are of the sons of Levi, who receive the priesthood, have a commandment to take tithes of the people according to the law, that is to say, of their brethren: though they themselves also came out of the loins of Abraham.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org818bb8e" class="outline-3">
+<h3 id="org818bb8e">Hebrews 7:6</h3>
+<div class="outline-text-3" id="text-org818bb8e">
+<p>
+But he, whose pedigree is not numbered among them, received tithes of Abraham and blessed him that had the promises.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4830ef" class="outline-3">
+<h3 id="orgb4830ef">Hebrews 7:7</h3>
+<div class="outline-text-3" id="text-orgb4830ef">
+<p>
+And without all contradiction, that which is less is blessed by the better.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacd53c5" class="outline-3">
+<h3 id="orgacd53c5">Hebrews 7:8</h3>
+<div class="outline-text-3" id="text-orgacd53c5">
+<p>
+And here indeed, men that die receive tithes: but there, he hath witness that he liveth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21e423c" class="outline-3">
+<h3 id="org21e423c">Hebrews 7:9</h3>
+<div class="outline-text-3" id="text-org21e423c">
+<p>
+And (as it may be said) even Levi who received tithes paid tithes in Abraham:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1f8f6b" class="outline-3">
+<h3 id="orga1f8f6b">Hebrews 7:10</h3>
+<div class="outline-text-3" id="text-orga1f8f6b">
+<p>
+For he was yet in the loins of his father when Melchisedech met him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga742aa7" class="outline-3">
+<h3 id="orga742aa7">Hebrews 7:11</h3>
+<div class="outline-text-3" id="text-orga742aa7">
+<p>
+If then perfection was by the Levitical priesthood (for under it the people received the law), what further need was there that another priest should rise according to the order of Melchisedech: and not be called according to the order of Aaron?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf17efd7" class="outline-3">
+<h3 id="orgf17efd7">Hebrews 7:12</h3>
+<div class="outline-text-3" id="text-orgf17efd7">
+<p>
+For the priesthood being translated, it is necessary that a translation also be made of the law,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga20d96e" class="outline-3">
+<h3 id="orga20d96e">Hebrews 7:13</h3>
+<div class="outline-text-3" id="text-orga20d96e">
+<p>
+For he of whom these things are spoken is of another tribe, of which no one attended on the altar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcbbb112" class="outline-3">
+<h3 id="orgcbbb112">Hebrews 7:14</h3>
+<div class="outline-text-3" id="text-orgcbbb112">
+<p>
+For it is evident that our Lord sprung out of Juda: in which tribe Moses spoke nothing concerning priests.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd38b9bb" class="outline-3">
+<h3 id="orgd38b9bb">Hebrews 7:15</h3>
+<div class="outline-text-3" id="text-orgd38b9bb">
+<p>
+And it is yet far more evident: if according to the similitude of Melchisedech there ariseth another priest,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27d68ed" class="outline-3">
+<h3 id="org27d68ed">Hebrews 7:16</h3>
+<div class="outline-text-3" id="text-org27d68ed">
+<p>
+Who is made, not according to the law of a law of a carnal commandment, but according to the power of an indissoluble life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9563187" class="outline-3">
+<h3 id="org9563187">Hebrews 7:17</h3>
+<div class="outline-text-3" id="text-org9563187">
+<p>
+For he testifieth: Thou art a priest for ever according to the order of Melchisedech.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01ffd49" class="outline-3">
+<h3 id="org01ffd49">Hebrews 7:18</h3>
+<div class="outline-text-3" id="text-org01ffd49">
+<p>
+There is indeed a setting aside of the former commandment, because of the weakness and unprofitableness thereof:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c863fc" class="outline-3">
+<h3 id="org5c863fc">Hebrews 7:19</h3>
+<div class="outline-text-3" id="text-org5c863fc">
+<p>
+For the law brought nothing to perfection: but a bringing in of a better hope, by which we draw nigh to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14c2e72" class="outline-3">
+<h3 id="org14c2e72">Hebrews 7:20</h3>
+<div class="outline-text-3" id="text-org14c2e72">
+<p>
+And inasmuch as it is not without an oath (for the others indeed were made priests without an oath:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc870b88" class="outline-3">
+<h3 id="orgc870b88">Hebrews 7:21</h3>
+<div class="outline-text-3" id="text-orgc870b88">
+<p>
+But this with an oath, by him that said unto him: The Lord hath sworn and he will not repent: Thou art a priest for ever).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3673271" class="outline-3">
+<h3 id="org3673271">Hebrews 7:22</h3>
+<div class="outline-text-3" id="text-org3673271">
+<p>
+By so much is Jesus made a surety of a better testament.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2331a53" class="outline-3">
+<h3 id="org2331a53">Hebrews 7:23</h3>
+<div class="outline-text-3" id="text-org2331a53">
+<p>
+And the others indeed were made many priests, because by reason of death they were not suffered to continue:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76d87d6" class="outline-3">
+<h3 id="org76d87d6">Hebrews 7:24</h3>
+<div class="outline-text-3" id="text-org76d87d6">
+<p>
+But this, for that he continueth for ever, hath an everlasting priesthood:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9c97a7" class="outline-3">
+<h3 id="orgc9c97a7">Hebrews 7:25</h3>
+<div class="outline-text-3" id="text-orgc9c97a7">
+<p>
+Whereby he is able also to save for ever them that come to God by him; always living to make intercession for us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d598c9" class="outline-3">
+<h3 id="org1d598c9">Hebrews 7:26</h3>
+<div class="outline-text-3" id="text-org1d598c9">
+<p>
+For it was fitting that we should have such a high priest, holy, innocent, undefiled, separated from sinners, and made higher than the heavens:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56a77c4" class="outline-3">
+<h3 id="org56a77c4">Hebrews 7:27</h3>
+<div class="outline-text-3" id="text-org56a77c4">
+<p>
+Who needeth not daily (as the other priests) to offer sacrifices, first for his own sins, and then for the people&rsquo;s: for this he did once, in offering himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8607d64" class="outline-3">
+<h3 id="org8607d64">Hebrews 7:28</h3>
+<div class="outline-text-3" id="text-org8607d64">
+<p>
+For the law maketh men priests, who have infirmity: but the word of the oath (which was since the law) the Son who is perfected for evermore. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org62a9f76" class="outline-2">
+<h2 id="org62a9f76">Hebrews 8</h2>
+<div class="outline-text-2" id="text-org62a9f76">
+</div>
+<div id="outline-container-org6736d33" class="outline-3">
+<h3 id="org6736d33">Hebrews 8:1</h3>
+<div class="outline-text-3" id="text-org6736d33">
+<p>
+Now of the things which we have spoken, this is the sum: We have such an high priest who is set on the right hand of the throne of majesty in the heavens,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04e0eeb" class="outline-3">
+<h3 id="org04e0eeb">Hebrews 8:2</h3>
+<div class="outline-text-3" id="text-org04e0eeb">
+<p>
+A minister of the holies and of the true tabernacle, which the Lord hath pitched, and not man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64ceff2" class="outline-3">
+<h3 id="org64ceff2">Hebrews 8:3</h3>
+<div class="outline-text-3" id="text-org64ceff2">
+<p>
+For every high priest is appointed to offer gifts and sacrifices: wherefore it is necessary that he also should have some thing to offer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1460ce" class="outline-3">
+<h3 id="orga1460ce">Hebrews 8:4</h3>
+<div class="outline-text-3" id="text-orga1460ce">
+<p>
+If then he were on earth, he would not be a priest: seeing that there would be others to offer gifts according to the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf13d4d" class="outline-3">
+<h3 id="orgaf13d4d">Hebrews 8:5</h3>
+<div class="outline-text-3" id="text-orgaf13d4d">
+<p>
+Who serve unto the example and shadow of heavenly things. As it was answered to Moses, when he was to finish the tabernacle: See (saith he) that thou make all things according to the pattern which was shewn thee on the mount.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac0da14" class="outline-3">
+<h3 id="orgac0da14">Hebrews 8:6</h3>
+<div class="outline-text-3" id="text-orgac0da14">
+<p>
+But now he hath obtained a better ministry, by how much also he is a mediator of a better testament which is established on better promises.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga38e76e" class="outline-3">
+<h3 id="orga38e76e">Hebrews 8:7</h3>
+<div class="outline-text-3" id="text-orga38e76e">
+<p>
+For if that former had been faultless, there should not indeed a place have been sought for a second.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0279476" class="outline-3">
+<h3 id="org0279476">Hebrews 8:8</h3>
+<div class="outline-text-3" id="text-org0279476">
+<p>
+For, finding fault with them, he saith: Behold the days shall come, saith the Lord: and I will perfect, unto the house of Israel and unto the house of Juda, a new testament:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9df952" class="outline-3">
+<h3 id="orgc9df952">Hebrews 8:9</h3>
+<div class="outline-text-3" id="text-orgc9df952">
+<p>
+Not according to the testament which I made to their fathers, on the day when I took them by the hand to lead them out of the land of Egypt: because they continued not in my testament: and I regarded them not, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70734bb" class="outline-3">
+<h3 id="org70734bb">Hebrews 8:10</h3>
+<div class="outline-text-3" id="text-org70734bb">
+<p>
+For this is the testament which I will make to the house of Israel after those days, saith the Lord: I will give my laws into their mind: and in their heart will I write them. And I will be their God: and they shall be my people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8d8a6c" class="outline-3">
+<h3 id="orge8d8a6c">Hebrews 8:11</h3>
+<div class="outline-text-3" id="text-orge8d8a6c">
+<p>
+And they shall not teach every man his neighbour and every man his brother, saying: Know the Lord. For all shall know me, from the least to the greatest of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95d79be" class="outline-3">
+<h3 id="org95d79be">Hebrews 8:12</h3>
+<div class="outline-text-3" id="text-org95d79be">
+<p>
+Because I will be merciful to their iniquities: and their sins I will remember no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6303175" class="outline-3">
+<h3 id="org6303175">Hebrews 8:13</h3>
+<div class="outline-text-3" id="text-org6303175">
+<p>
+Now in saying a new, he hath made the former old. And that which decayeth and groweth old is near its end. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org78f6816" class="outline-2">
+<h2 id="org78f6816">Hebrews 9</h2>
+<div class="outline-text-2" id="text-org78f6816">
+</div>
+<div id="outline-container-org8c172c0" class="outline-3">
+<h3 id="org8c172c0">Hebrews 9:1</h3>
+<div class="outline-text-3" id="text-org8c172c0">
+<p>
+The former indeed had also justifications of divine service and a sanctuary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2eb8f84" class="outline-3">
+<h3 id="org2eb8f84">Hebrews 9:2</h3>
+<div class="outline-text-3" id="text-org2eb8f84">
+<p>
+For there was a tabernacle made the first, wherein were the candlesticks and the table and the setting forth of loaves, which is called the Holy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfec2b09" class="outline-3">
+<h3 id="orgfec2b09">Hebrews 9:3</h3>
+<div class="outline-text-3" id="text-orgfec2b09">
+<p>
+And after the second veil, the tabernacle which is called the Holy of Holies:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org672b513" class="outline-3">
+<h3 id="org672b513">Hebrews 9:4</h3>
+<div class="outline-text-3" id="text-org672b513">
+<p>
+Having a golden censer and the ark of the testament covered about on every part with gold, in which was a golden pot that had manna and the rod of Aaron that had blossomed and the tables of the testament.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd69fcb8" class="outline-3">
+<h3 id="orgd69fcb8">Hebrews 9:5</h3>
+<div class="outline-text-3" id="text-orgd69fcb8">
+<p>
+And over it were the cherubims of glory overshadowing the propitiatory: of which it is not needful to speak now particularly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge60ae3c" class="outline-3">
+<h3 id="orge60ae3c">Hebrews 9:6</h3>
+<div class="outline-text-3" id="text-orge60ae3c">
+<p>
+Now these things being thus ordered, into the first tabernacle, the priests indeed always entered, accomplishing the offices of sacrifices.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd40f0c1" class="outline-3">
+<h3 id="orgd40f0c1">Hebrews 9:7</h3>
+<div class="outline-text-3" id="text-orgd40f0c1">
+<p>
+But into the second, the high priest alone, once a year: not without blood, which he offereth for his own and the people&rsquo;s ignorance:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d3085c" class="outline-3">
+<h3 id="org9d3085c">Hebrews 9:8</h3>
+<div class="outline-text-3" id="text-org9d3085c">
+<p>
+The Holy Ghost signifying this: That the way into the Holies was not yet made manifest, whilst the former tabernacle was yet standing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1220af6" class="outline-3">
+<h3 id="org1220af6">Hebrews 9:9</h3>
+<div class="outline-text-3" id="text-org1220af6">
+<p>
+Which is a parable of the time present: according to which gifts and sacrifices are offered, which cannot, as to the conscience, make him perfect that serveth, only in meats and in drinks,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b182e8" class="outline-3">
+<h3 id="org8b182e8">Hebrews 9:10</h3>
+<div class="outline-text-3" id="text-org8b182e8">
+<p>
+And divers washings and justices of the flesh laid on them until the time of correction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga214ec0" class="outline-3">
+<h3 id="orga214ec0">Hebrews 9:11</h3>
+<div class="outline-text-3" id="text-orga214ec0">
+<p>
+But Christ, being come an high Priest of the good things to come, by a greater and more perfect tabernacle, not made with hand, that is, not of this creation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37f3fc7" class="outline-3">
+<h3 id="org37f3fc7">Hebrews 9:12</h3>
+<div class="outline-text-3" id="text-org37f3fc7">
+<p>
+Neither by the blood of goats or of calves, but by his own blood, entered once into the Holies, having obtained eternal redemption.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7765124" class="outline-3">
+<h3 id="org7765124">Hebrews 9:13</h3>
+<div class="outline-text-3" id="text-org7765124">
+<p>
+For if the blood of goats and of oxen, and the ashes of an heifer, being sprinkled, sanctify such as are defiled, to the cleansing of the flesh:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d9a126" class="outline-3">
+<h3 id="org5d9a126">Hebrews 9:14</h3>
+<div class="outline-text-3" id="text-org5d9a126">
+<p>
+How much more shall the blood of Christ, who by the Holy Ghost offered himself unspotted unto God, cleanse our conscience from dead works, to serve the living God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4afd3cf" class="outline-3">
+<h3 id="org4afd3cf">Hebrews 9:15</h3>
+<div class="outline-text-3" id="text-org4afd3cf">
+<p>
+And therefore he is the mediator of the new testament: that by means of his death for the redemption of those transgressions which were under the former testament, they that are called may receive the promise of eternal inheritance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3765bbd" class="outline-3">
+<h3 id="org3765bbd">Hebrews 9:16</h3>
+<div class="outline-text-3" id="text-org3765bbd">
+<p>
+For where there is a testament the death of the testator must of necessity come in.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f14b16" class="outline-3">
+<h3 id="org9f14b16">Hebrews 9:17</h3>
+<div class="outline-text-3" id="text-org9f14b16">
+<p>
+For a testament is of force after men are dead: otherwise it is as yet of no strength, whilst the testator liveth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6515fe6" class="outline-3">
+<h3 id="org6515fe6">Hebrews 9:18</h3>
+<div class="outline-text-3" id="text-org6515fe6">
+<p>
+Whereupon neither was the first indeed dedicated without blood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e36c96" class="outline-3">
+<h3 id="org5e36c96">Hebrews 9:19</h3>
+<div class="outline-text-3" id="text-org5e36c96">
+<p>
+For when every commandment of the law had been read by Moses to all the people, he took the blood of calves and goats, with water, and scarlet wool and hyssop, and sprinkled both the book itself and all the people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d5f452" class="outline-3">
+<h3 id="org9d5f452">Hebrews 9:20</h3>
+<div class="outline-text-3" id="text-org9d5f452">
+<p>
+Saying: This is the blood of the testament which God hath enjoined unto you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc48410e" class="outline-3">
+<h3 id="orgc48410e">Hebrews 9:21</h3>
+<div class="outline-text-3" id="text-orgc48410e">
+<p>
+The tabernacle also and all the vessels of the ministry, in like manner, he sprinkled with blood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3be360b" class="outline-3">
+<h3 id="org3be360b">Hebrews 9:22</h3>
+<div class="outline-text-3" id="text-org3be360b">
+<p>
+And almost all things, according to the law, are cleansed with blood: and without shedding of blood there is no remission.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d34a93" class="outline-3">
+<h3 id="org7d34a93">Hebrews 9:23</h3>
+<div class="outline-text-3" id="text-org7d34a93">
+<p>
+It is necessary therefore that the patterns of heavenly things should be cleansed with these: but the heavenly things themselves with better sacrifices than these.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8404cf8" class="outline-3">
+<h3 id="org8404cf8">Hebrews 9:24</h3>
+<div class="outline-text-3" id="text-org8404cf8">
+<p>
+For Jesus is not entered into the Holies made with hands, the patterns of the true: but into Heaven itself, that he may appear now in the presence of God for us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03e8ff9" class="outline-3">
+<h3 id="org03e8ff9">Hebrews 9:25</h3>
+<div class="outline-text-3" id="text-org03e8ff9">
+<p>
+Nor yet that he should offer himself often, as the high priest entereth into the Holies every year with the blood of others:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6118df9" class="outline-3">
+<h3 id="org6118df9">Hebrews 9:26</h3>
+<div class="outline-text-3" id="text-org6118df9">
+<p>
+For then he ought to have suffered often from the beginning of the world. But now once, at the end of ages, he hath appeared for the destruction of sin by the sacrifice of himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82aff72" class="outline-3">
+<h3 id="org82aff72">Hebrews 9:27</h3>
+<div class="outline-text-3" id="text-org82aff72">
+<p>
+And as it is appointed unto men once to die, and after this the judgment:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb699344" class="outline-3">
+<h3 id="orgb699344">Hebrews 9:28</h3>
+<div class="outline-text-3" id="text-orgb699344">
+<p>
+So also Christ was offered once to exhaust the sins of many. The second time he shall appear without sin to them that expect him unto salvation. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad55cc6" class="outline-2">
+<h2 id="orgad55cc6">Hebrews 10</h2>
+<div class="outline-text-2" id="text-orgad55cc6">
+</div>
+<div id="outline-container-orgc624018" class="outline-3">
+<h3 id="orgc624018">Hebrews 10:1</h3>
+<div class="outline-text-3" id="text-orgc624018">
+<p>
+For the law, having a shadow of the good things to come, not the very image of the things, by the selfsame sacrifices which they offer continually every year, can never make the comers thereunto perfect.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga604f99" class="outline-3">
+<h3 id="orga604f99">Hebrews 10:2</h3>
+<div class="outline-text-3" id="text-orga604f99">
+<p>
+For then they would have ceased to be offered: because the worshippers once cleansed should have no conscience of sin any longer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org339424a" class="outline-3">
+<h3 id="org339424a">Hebrews 10:3</h3>
+<div class="outline-text-3" id="text-org339424a">
+<p>
+But in them there is made a commemoration of sins every year:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48d48fe" class="outline-3">
+<h3 id="org48d48fe">Hebrews 10:4</h3>
+<div class="outline-text-3" id="text-org48d48fe">
+<p>
+For it is impossible that with the blood of oxen and goats sin should be taken away.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bd2a8f" class="outline-3">
+<h3 id="org6bd2a8f">Hebrews 10:5</h3>
+<div class="outline-text-3" id="text-org6bd2a8f">
+<p>
+Wherefore, when he cometh into the world he saith: Sacrifice and oblation thou wouldest not: but a body thou hast fitted to me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9840c75" class="outline-3">
+<h3 id="org9840c75">Hebrews 10:6</h3>
+<div class="outline-text-3" id="text-org9840c75">
+<p>
+Holocausts for sin did not please thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9fb3e0" class="outline-3">
+<h3 id="orgc9fb3e0">Hebrews 10:7</h3>
+<div class="outline-text-3" id="text-orgc9fb3e0">
+<p>
+Then said I: Behold I come: in the head of the book it is written of me: that I should do thy will, O God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde0ec0c" class="outline-3">
+<h3 id="orgde0ec0c">Hebrews 10:8</h3>
+<div class="outline-text-3" id="text-orgde0ec0c">
+<p>
+In saying before, Sacrifices, and oblations, and holocausts for sin thou wouldest not, neither are they pleasing to thee, which are offered according to the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf541199" class="outline-3">
+<h3 id="orgf541199">Hebrews 10:9</h3>
+<div class="outline-text-3" id="text-orgf541199">
+<p>
+Then said I: Behold, I come to do thy will, O God: He taketh away the first, that he may establish that which followeth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b25a29" class="outline-3">
+<h3 id="org5b25a29">Hebrews 10:10</h3>
+<div class="outline-text-3" id="text-org5b25a29">
+<p>
+In the which will, we are sanctified by the oblation of the body of Jesus Christ once.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga79f981" class="outline-3">
+<h3 id="orga79f981">Hebrews 10:11</h3>
+<div class="outline-text-3" id="text-orga79f981">
+<p>
+And every priest indeed standeth daily ministering and often offering the same sacrifices which can never take away sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26f7b80" class="outline-3">
+<h3 id="org26f7b80">Hebrews 10:12</h3>
+<div class="outline-text-3" id="text-org26f7b80">
+<p>
+But this man, offering one sacrifice for sins, for ever sitteth on the right hand of God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf19810e" class="outline-3">
+<h3 id="orgf19810e">Hebrews 10:13</h3>
+<div class="outline-text-3" id="text-orgf19810e">
+<p>
+From henceforth expecting until his enemies be made his footstool.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58691dd" class="outline-3">
+<h3 id="org58691dd">Hebrews 10:14</h3>
+<div class="outline-text-3" id="text-org58691dd">
+<p>
+For by one oblation he hath perfected for ever them that are sanctified.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org343d441" class="outline-3">
+<h3 id="org343d441">Hebrews 10:15</h3>
+<div class="outline-text-3" id="text-org343d441">
+<p>
+And the Holy Ghost also doth testify this to us. For after that he said:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf060593" class="outline-3">
+<h3 id="orgf060593">Hebrews 10:16</h3>
+<div class="outline-text-3" id="text-orgf060593">
+<p>
+And this is the testament which I will make unto them after those days, saith the Lord. I will give my laws in their hearts and on their minds will I write them:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge299585" class="outline-3">
+<h3 id="orge299585">Hebrews 10:17</h3>
+<div class="outline-text-3" id="text-orge299585">
+<p>
+And their sins and iniquities I will remember no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org428f73f" class="outline-3">
+<h3 id="org428f73f">Hebrews 10:18</h3>
+<div class="outline-text-3" id="text-org428f73f">
+<p>
+Now, where there is a remission of these, there is no more an oblation for sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga92f9d2" class="outline-3">
+<h3 id="orga92f9d2">Hebrews 10:19</h3>
+<div class="outline-text-3" id="text-orga92f9d2">
+<p>
+Having therefore, brethren, a confidence in the entering into the holies by the blood of Christ:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee939d3" class="outline-3">
+<h3 id="orgee939d3">Hebrews 10:20</h3>
+<div class="outline-text-3" id="text-orgee939d3">
+<p>
+A new and living way which he hath dedicated for us through the veil, that is to say, his flesh:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e7f005" class="outline-3">
+<h3 id="org6e7f005">Hebrews 10:21</h3>
+<div class="outline-text-3" id="text-org6e7f005">
+<p>
+And a high priest over the house of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63e9a76" class="outline-3">
+<h3 id="org63e9a76">Hebrews 10:22</h3>
+<div class="outline-text-3" id="text-org63e9a76">
+<p>
+Let us draw near with a true heart, in fulness of faith, having our hearts sprinkled from an evil conscience and our bodies washed with clean water.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org198f1e0" class="outline-3">
+<h3 id="org198f1e0">Hebrews 10:23</h3>
+<div class="outline-text-3" id="text-org198f1e0">
+<p>
+Let us hold fast the confession of our hope without wavering (for he is faithful that hath promised):
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga17a34e" class="outline-3">
+<h3 id="orga17a34e">Hebrews 10:24</h3>
+<div class="outline-text-3" id="text-orga17a34e">
+<p>
+And let us consider one another, to provoke unto charity and to good works:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2538d92" class="outline-3">
+<h3 id="org2538d92">Hebrews 10:25</h3>
+<div class="outline-text-3" id="text-org2538d92">
+<p>
+Not forsaking our assembly, as some are accustomed: but comforting one anther, and so much the more as you see the day approaching.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c33e1a" class="outline-3">
+<h3 id="org9c33e1a">Hebrews 10:26</h3>
+<div class="outline-text-3" id="text-org9c33e1a">
+<p>
+For if we sin wilfully after having the knowledge of the truth, there is now left no sacrifice for sins:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org554e898" class="outline-3">
+<h3 id="org554e898">Hebrews 10:27</h3>
+<div class="outline-text-3" id="text-org554e898">
+<p>
+But a certain dreadful expectation of judgment, and the rage of a fire which shall consume the adversaries.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b22645" class="outline-3">
+<h3 id="org0b22645">Hebrews 10:28</h3>
+<div class="outline-text-3" id="text-org0b22645">
+<p>
+A man making void the law of Moses dieth without any mercy under two or three witnesses:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a1b40f" class="outline-3">
+<h3 id="org6a1b40f">Hebrews 10:29</h3>
+<div class="outline-text-3" id="text-org6a1b40f">
+<p>
+How much more, do you think he deserveth worse punishments, who hath trodden under foot the Son of God and hath esteemed the blood of the testament unclean, by which he was sanctified, and hath offered an affront to the Spirit of grace?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00e5da1" class="outline-3">
+<h3 id="org00e5da1">Hebrews 10:30</h3>
+<div class="outline-text-3" id="text-org00e5da1">
+<p>
+For we know him that hath said: Vengeance belongeth to me, and I will repay. And again: The Lord shall judge his people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3c2b69" class="outline-3">
+<h3 id="orgb3c2b69">Hebrews 10:31</h3>
+<div class="outline-text-3" id="text-orgb3c2b69">
+<p>
+It is a fearful thing to fall into the hands of the living God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc07df89" class="outline-3">
+<h3 id="orgc07df89">Hebrews 10:32</h3>
+<div class="outline-text-3" id="text-orgc07df89">
+<p>
+But call to mind the former days, wherein, being illuminated, you endured a great fight of afflictions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4620466" class="outline-3">
+<h3 id="org4620466">Hebrews 10:33</h3>
+<div class="outline-text-3" id="text-org4620466">
+<p>
+And on the one hand indeed, by reproaches and tribulations, were made a gazingstock; and on the other, became companions of them that were used in such sort.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2223ab9" class="outline-3">
+<h3 id="org2223ab9">Hebrews 10:34</h3>
+<div class="outline-text-3" id="text-org2223ab9">
+<p>
+For you both had compassion on them that were in bands and took with joy the being stripped of your own goods, knowing that you have a better and a lasting substance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e8a2cc" class="outline-3">
+<h3 id="org0e8a2cc">Hebrews 10:35</h3>
+<div class="outline-text-3" id="text-org0e8a2cc">
+<p>
+Do not therefore lose your confidence which hath a great reward.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org920854e" class="outline-3">
+<h3 id="org920854e">Hebrews 10:36</h3>
+<div class="outline-text-3" id="text-org920854e">
+<p>
+For patience is necessary for you: that, doing the will of God, you may receive the promise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org071ef7f" class="outline-3">
+<h3 id="org071ef7f">Hebrews 10:37</h3>
+<div class="outline-text-3" id="text-org071ef7f">
+<p>
+For yet a little and a very little while, and he that is to come will come and will not delay.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8793a6" class="outline-3">
+<h3 id="orgb8793a6">Hebrews 10:38</h3>
+<div class="outline-text-3" id="text-orgb8793a6">
+<p>
+But my just man liveth by faith: but if he withdraw himself, he shall not please my soul.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org056856c" class="outline-3">
+<h3 id="org056856c">Hebrews 10:39</h3>
+<div class="outline-text-3" id="text-org056856c">
+<p>
+But we are not the children of withdrawing unto perdition, but of faith to the saving of the soul. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org308bd75" class="outline-2">
+<h2 id="org308bd75">Hebrews 11</h2>
+<div class="outline-text-2" id="text-org308bd75">
+</div>
+<div id="outline-container-org916bcfb" class="outline-3">
+<h3 id="org916bcfb">Hebrews 11:1</h3>
+<div class="outline-text-3" id="text-org916bcfb">
+<p>
+Now, faith is the substance of things to be hoped for, the evidence of things that appear not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc83c89" class="outline-3">
+<h3 id="orgfc83c89">Hebrews 11:2</h3>
+<div class="outline-text-3" id="text-orgfc83c89">
+<p>
+For by this the ancients obtained a testimony.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdc51af" class="outline-3">
+<h3 id="orgcdc51af">Hebrews 11:3</h3>
+<div class="outline-text-3" id="text-orgcdc51af">
+<p>
+By faith we understand that the world was framed by the word of God: that from invisible things visible things might be made.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6cc5d7" class="outline-3">
+<h3 id="orge6cc5d7">Hebrews 11:4</h3>
+<div class="outline-text-3" id="text-orge6cc5d7">
+<p>
+By faith Abel offered to God a sacrifice exceeding that of Cain, by which he obtained a testimony that he was just, God giving testimony to his gifts. And by it he being dead yet speaketh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d221d8" class="outline-3">
+<h3 id="org6d221d8">Hebrews 11:5</h3>
+<div class="outline-text-3" id="text-org6d221d8">
+<p>
+By faith Henoch was translated that he should not see death: and he was not found because God had translated him. For before his translation he had testimony that he pleased God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf6ccb1" class="outline-3">
+<h3 id="orgcf6ccb1">Hebrews 11:6</h3>
+<div class="outline-text-3" id="text-orgcf6ccb1">
+<p>
+But without faith it is impossible to please God. For he that cometh to God must believe that he is: and is a rewarder to them that seek him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org176dc8d" class="outline-3">
+<h3 id="org176dc8d">Hebrews 11:7</h3>
+<div class="outline-text-3" id="text-org176dc8d">
+<p>
+By faith Noe, having received an answer concerning those things which as yet were not seen, moved with fear, framed the ark for the saving of his house: by the which he condemned the world and was instituted heir of the justice which is by faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b0e1b2" class="outline-3">
+<h3 id="org1b0e1b2">Hebrews 11:8</h3>
+<div class="outline-text-3" id="text-org1b0e1b2">
+<p>
+By faith he that is called Abraham obeyed to go out into a place which he was to receive for an inheritance. And he went out, not knowing whither he went.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1cfd7d5" class="outline-3">
+<h3 id="org1cfd7d5">Hebrews 11:9</h3>
+<div class="outline-text-3" id="text-org1cfd7d5">
+<p>
+By faith he abode in the land of promise, as in a strange country, dwelling in cottages, with Isaac and Jacob, the co-heirs of the same promise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0182d34" class="outline-3">
+<h3 id="org0182d34">Hebrews 11:10</h3>
+<div class="outline-text-3" id="text-org0182d34">
+<p>
+For he looked for a city that hath foundations: whose builder and maker is God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org145ad93" class="outline-3">
+<h3 id="org145ad93">Hebrews 11:11</h3>
+<div class="outline-text-3" id="text-org145ad93">
+<p>
+By faith also Sara herself, being barren, received strength to conceive seed, even past the time of age: because she believed that he was faithful who had promised,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc6c652" class="outline-3">
+<h3 id="orgcc6c652">Hebrews 11:12</h3>
+<div class="outline-text-3" id="text-orgcc6c652">
+<p>
+For which cause there sprung even from one (and him as good as dead) as the stars of heaven in multitude and as the sand which is by the sea shore innumerable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a49964" class="outline-3">
+<h3 id="org8a49964">Hebrews 11:13</h3>
+<div class="outline-text-3" id="text-org8a49964">
+<p>
+All these died according to faith, not having received the promises but beholding them afar off and saluting them and confessing that they are pilgrims and strangers on the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00b5ce0" class="outline-3">
+<h3 id="org00b5ce0">Hebrews 11:14</h3>
+<div class="outline-text-3" id="text-org00b5ce0">
+<p>
+For they that say these things do signify that they seek a country.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d9c253" class="outline-3">
+<h3 id="org1d9c253">Hebrews 11:15</h3>
+<div class="outline-text-3" id="text-org1d9c253">
+<p>
+And truly, if they had been mindful of that from whence they came out, they had doubtless, time to return.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae4362e" class="outline-3">
+<h3 id="orgae4362e">Hebrews 11:16</h3>
+<div class="outline-text-3" id="text-orgae4362e">
+<p>
+But now they desire a better, that is to say, a heavenly country. Therefore, God is not ashamed to be called their God: for he hath prepared for them a city.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a05d17" class="outline-3">
+<h3 id="org9a05d17">Hebrews 11:17</h3>
+<div class="outline-text-3" id="text-org9a05d17">
+<p>
+By faith Abraham, when he was tried, offered Isaac: and he that had received the promises offered up his only begotten son,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43ad562" class="outline-3">
+<h3 id="org43ad562">Hebrews 11:18</h3>
+<div class="outline-text-3" id="text-org43ad562">
+<p>
+(To whom it was said: In Isaac shalt thy seed be called:)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53ee9a7" class="outline-3">
+<h3 id="org53ee9a7">Hebrews 11:19</h3>
+<div class="outline-text-3" id="text-org53ee9a7">
+<p>
+Accounting that God is able to raise up even from the dead. Whereupon also he received him for a parable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32948c9" class="outline-3">
+<h3 id="org32948c9">Hebrews 11:20</h3>
+<div class="outline-text-3" id="text-org32948c9">
+<p>
+By faith also of things to come Isaac blessed Jacob and Esau.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9863366" class="outline-3">
+<h3 id="org9863366">Hebrews 11:21</h3>
+<div class="outline-text-3" id="text-org9863366">
+<p>
+By faith Jacob, dying, blessed each of the sons of Joseph and adored the top of his rod.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ba0712" class="outline-3">
+<h3 id="org7ba0712">Hebrews 11:22</h3>
+<div class="outline-text-3" id="text-org7ba0712">
+<p>
+By faith Joseph, when he was dying, made mention of the going out of the children of Israel and gave commandment concerning his bones.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98e0ddf" class="outline-3">
+<h3 id="org98e0ddf">Hebrews 11:23</h3>
+<div class="outline-text-3" id="text-org98e0ddf">
+<p>
+By faith Moses, when he was born, was hid three months by his parents: because they saw he was a comely babe, and they feared not the king&rsquo;s edict.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5c8e4a" class="outline-3">
+<h3 id="orgb5c8e4a">Hebrews 11:24</h3>
+<div class="outline-text-3" id="text-orgb5c8e4a">
+<p>
+By faith Moses, when he was grown up, denied himself to be the son of Pharao&rsquo;s daughter:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3f4fd4" class="outline-3">
+<h3 id="orgf3f4fd4">Hebrews 11:25</h3>
+<div class="outline-text-3" id="text-orgf3f4fd4">
+<p>
+Rather choosing to be afflicted with the people of God than to have the pleasure of sin for a time:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d10372" class="outline-3">
+<h3 id="org6d10372">Hebrews 11:26</h3>
+<div class="outline-text-3" id="text-org6d10372">
+<p>
+Esteeming the reproach of Christ greater riches than the treasure of the Egyptians. For he looked unto the reward.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5cde7a2" class="outline-3">
+<h3 id="org5cde7a2">Hebrews 11:27</h3>
+<div class="outline-text-3" id="text-org5cde7a2">
+<p>
+By faith he left Egypt, not fearing the fierceness of the king: for he endured, as seeing him that is invisible.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f86279" class="outline-3">
+<h3 id="org1f86279">Hebrews 11:28</h3>
+<div class="outline-text-3" id="text-org1f86279">
+<p>
+By faith he celebrated the pasch and the shedding of the blood: that he who destroyed the firstborn might not touch them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb73167c" class="outline-3">
+<h3 id="orgb73167c">Hebrews 11:29</h3>
+<div class="outline-text-3" id="text-orgb73167c">
+<p>
+By faith they passed through the Red Sea, as by dry land: which the Egyptians attempting, were swallowed up.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff2b5cf" class="outline-3">
+<h3 id="orgff2b5cf">Hebrews 11:30</h3>
+<div class="outline-text-3" id="text-orgff2b5cf">
+<p>
+By faith the walls of Jericho fell down, by the going round them seven days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb375ae" class="outline-3">
+<h3 id="orgbb375ae">Hebrews 11:31</h3>
+<div class="outline-text-3" id="text-orgbb375ae">
+<p>
+By faith Rahab the harlot perished not with the unbelievers, receiving the spies with peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1292b21" class="outline-3">
+<h3 id="org1292b21">Hebrews 11:32</h3>
+<div class="outline-text-3" id="text-org1292b21">
+<p>
+And what shall I yet say? For the time would fail me to tell of Gedeon, Barac, Samson, Jephthe, David, Samuel, and the prophets:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1618732" class="outline-3">
+<h3 id="org1618732">Hebrews 11:33</h3>
+<div class="outline-text-3" id="text-org1618732">
+<p>
+Who by faith conquered kingdoms, wrought justice, obtained promises, stopped the mouths of lions,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org206a623" class="outline-3">
+<h3 id="org206a623">Hebrews 11:34</h3>
+<div class="outline-text-3" id="text-org206a623">
+<p>
+Quenched the violence of fire, escaped the edge of the sword, recovered strength from weakness, became valiant in battle, put to flight the armies of foreigners.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72b43b0" class="outline-3">
+<h3 id="org72b43b0">Hebrews 11:35</h3>
+<div class="outline-text-3" id="text-org72b43b0">
+<p>
+Women received their dead raised to life again. But others were racked, not accepting deliverance, that they might find a better resurrection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b9dc75" class="outline-3">
+<h3 id="org0b9dc75">Hebrews 11:36</h3>
+<div class="outline-text-3" id="text-org0b9dc75">
+<p>
+And others had trial of mockeries and stripes: moreover also of bands and prisons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bfcb65" class="outline-3">
+<h3 id="org8bfcb65">Hebrews 11:37</h3>
+<div class="outline-text-3" id="text-org8bfcb65">
+<p>
+They were stoned, they were cut asunder, they were tempted, they were put to death by the sword, they wandered about in sheepskins, in goatskins, being in want, distressed, afflicted:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdabac69" class="outline-3">
+<h3 id="orgdabac69">Hebrews 11:38</h3>
+<div class="outline-text-3" id="text-orgdabac69">
+<p>
+Of whom the world was not worthy: wandering in deserts, in mountains and in dens and in caves of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org615d681" class="outline-3">
+<h3 id="org615d681">Hebrews 11:39</h3>
+<div class="outline-text-3" id="text-org615d681">
+<p>
+And all these, being approved by the testimony of faith, received not the promise:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd90e6ef" class="outline-3">
+<h3 id="orgd90e6ef">Hebrews 11:40</h3>
+<div class="outline-text-3" id="text-orgd90e6ef">
+<p>
+God providing some better thing for us, that they should not be perfected without us. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge1c10da" class="outline-2">
+<h2 id="orge1c10da">Hebrews 12</h2>
+<div class="outline-text-2" id="text-orge1c10da">
+</div>
+<div id="outline-container-orgfac67bc" class="outline-3">
+<h3 id="orgfac67bc">Hebrews 12:1</h3>
+<div class="outline-text-3" id="text-orgfac67bc">
+<p>
+And therefore we also having so great a cloud of witnesses over our head, laying aside every weight and sin which surrounds us, let us run by patience to the fight proposed to us:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd32714" class="outline-3">
+<h3 id="orgcd32714">Hebrews 12:2</h3>
+<div class="outline-text-3" id="text-orgcd32714">
+<p>
+Looking on Jesus, the author and finisher of faith, who, having joy set before him, endured the cross, despising the shame, and now sitteth on the right hand of the throne of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01e4fb2" class="outline-3">
+<h3 id="org01e4fb2">Hebrews 12:3</h3>
+<div class="outline-text-3" id="text-org01e4fb2">
+<p>
+For think diligently upon him that endured such opposition from sinners against himself that you be not wearied, fainting in your minds.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeeba22f" class="outline-3">
+<h3 id="orgeeba22f">Hebrews 12:4</h3>
+<div class="outline-text-3" id="text-orgeeba22f">
+<p>
+For you have not yet resisted unto blood, striving against sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf997c7" class="outline-3">
+<h3 id="orgbf997c7">Hebrews 12:5</h3>
+<div class="outline-text-3" id="text-orgbf997c7">
+<p>
+And you have forgotten the consolation which speaketh to you, as unto children, saying: My son, neglect not the discipline of the Lord: neither be thou wearied whilst thou art rebuked by him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04b7a0e" class="outline-3">
+<h3 id="org04b7a0e">Hebrews 12:6</h3>
+<div class="outline-text-3" id="text-org04b7a0e">
+<p>
+For whom the Lord loveth he chastiseth: and he scourgeth every son whom he receiveth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgddad44b" class="outline-3">
+<h3 id="orgddad44b">Hebrews 12:7</h3>
+<div class="outline-text-3" id="text-orgddad44b">
+<p>
+Persevere under discipline. God dealeth with you as with his sons. For what son is there whom the father doth not correct?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org357eba6" class="outline-3">
+<h3 id="org357eba6">Hebrews 12:8</h3>
+<div class="outline-text-3" id="text-org357eba6">
+<p>
+But if you be without chastisement, whereof all are made partakers, then are you bastards and not sons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e698cd" class="outline-3">
+<h3 id="org7e698cd">Hebrews 12:9</h3>
+<div class="outline-text-3" id="text-org7e698cd">
+<p>
+Moreover, we have had fathers of our flesh for instructors, and we reverenced them. Shall we not much more obey the Father of spirits and live?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e42041" class="outline-3">
+<h3 id="org6e42041">Hebrews 12:10</h3>
+<div class="outline-text-3" id="text-org6e42041">
+<p>
+And they indeed for a few days, according to their own pleasure, instructed us: but he, for our profit, that we might receive his sanctification.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge875fa8" class="outline-3">
+<h3 id="orge875fa8">Hebrews 12:11</h3>
+<div class="outline-text-3" id="text-orge875fa8">
+<p>
+Now all chastisement for the present indeed seemeth not to bring with it joy, but sorrow: but afterwards it will yield to them that are exercised by it the most peaceable fruit of justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org444c2a1" class="outline-3">
+<h3 id="org444c2a1">Hebrews 12:12</h3>
+<div class="outline-text-3" id="text-org444c2a1">
+<p>
+Wherefore, lift up the hands which hang down and the feeble knees:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1937e68" class="outline-3">
+<h3 id="org1937e68">Hebrews 12:13</h3>
+<div class="outline-text-3" id="text-org1937e68">
+<p>
+And make straight steps with your feet: that no one, halting, may go out of the way; but rather be healed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11e14e7" class="outline-3">
+<h3 id="org11e14e7">Hebrews 12:14</h3>
+<div class="outline-text-3" id="text-org11e14e7">
+<p>
+Follow peace with all men and holiness: without which no man shall see God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a2b535" class="outline-3">
+<h3 id="org7a2b535">Hebrews 12:15</h3>
+<div class="outline-text-3" id="text-org7a2b535">
+<p>
+Looking diligently, lest any man be wanting to the grace of God: lest any root of bitterness springing up do hinder and by it many be defiled:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ef10c9" class="outline-3">
+<h3 id="org2ef10c9">Hebrews 12:16</h3>
+<div class="outline-text-3" id="text-org2ef10c9">
+<p>
+Lest there be any fornicator or profane person, as Esau who for one mess sold his first birthright.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d87d99" class="outline-3">
+<h3 id="org7d87d99">Hebrews 12:17</h3>
+<div class="outline-text-3" id="text-org7d87d99">
+<p>
+For know ye that afterwards, when he desired to inherit the benediction, he was rejected. For he found no place of repentance, although with tears he had sought it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e7be2e" class="outline-3">
+<h3 id="org4e7be2e">Hebrews 12:18</h3>
+<div class="outline-text-3" id="text-org4e7be2e">
+<p>
+For you are not come to a mountain that might be touched and a burning fire and a whirlwind and darkness and storm,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb47384" class="outline-3">
+<h3 id="orgbb47384">Hebrews 12:19</h3>
+<div class="outline-text-3" id="text-orgbb47384">
+<p>
+And the sound of a trumpet and the voice of words, which they that had excused themselves, that the word might not be spoken to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81a2b96" class="outline-3">
+<h3 id="org81a2b96">Hebrews 12:20</h3>
+<div class="outline-text-3" id="text-org81a2b96">
+<p>
+For they did not endure that which was said: and if so much as a beast shall touch the mount, it shall be stoned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga62ab1c" class="outline-3">
+<h3 id="orga62ab1c">Hebrews 12:21</h3>
+<div class="outline-text-3" id="text-orga62ab1c">
+<p>
+And so terrible was that which was seen, Moses said: I am frighted, and tremble.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87a7e30" class="outline-3">
+<h3 id="org87a7e30">Hebrews 12:22</h3>
+<div class="outline-text-3" id="text-org87a7e30">
+<p>
+But you are come to mount Sion and to the city of the living God, the heavenly Jerusalem, and to the company of many thousands of angels,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e25981" class="outline-3">
+<h3 id="org9e25981">Hebrews 12:23</h3>
+<div class="outline-text-3" id="text-org9e25981">
+<p>
+And to the church of the firstborn who are written in the heavens, and to God the judge of all, and to the spirits of the just made perfect,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4dba9ce" class="outline-3">
+<h3 id="org4dba9ce">Hebrews 12:24</h3>
+<div class="outline-text-3" id="text-org4dba9ce">
+<p>
+And to Jesus the mediator of the new testament, and to the sprinkling of blood which speaketh better than that of Abel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fcc197" class="outline-3">
+<h3 id="org3fcc197">Hebrews 12:25</h3>
+<div class="outline-text-3" id="text-org3fcc197">
+<p>
+See that you refuse him not that speaketh. For if they escaped not who refused him that spoke upon earth, much more shall not we that turn away from him that speaketh to us from heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge976b5d" class="outline-3">
+<h3 id="orge976b5d">Hebrews 12:26</h3>
+<div class="outline-text-3" id="text-orge976b5d">
+<p>
+Whose voice then moved the earth; but now he promiseth, saying: Yet once more: and I will move, not only the earth, but heaven also.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9a72e3" class="outline-3">
+<h3 id="orgb9a72e3">Hebrews 12:27</h3>
+<div class="outline-text-3" id="text-orgb9a72e3">
+<p>
+And in that he saith: Yet once more, he signifieth the translation of the moveable things as made, that those things may remain which are immoveable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf3564d" class="outline-3">
+<h3 id="orgbf3564d">Hebrews 12:28</h3>
+<div class="outline-text-3" id="text-orgbf3564d">
+<p>
+Therefore, receiving an immoveable kingdom, we have grace: whereby let us serve, pleasing God, with fear and reverence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org473989f" class="outline-3">
+<h3 id="org473989f">Hebrews 12:29</h3>
+<div class="outline-text-3" id="text-org473989f">
+<p>
+For our God is a consuming fire. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0195432" class="outline-2">
+<h2 id="org0195432">Hebrews 13</h2>
+<div class="outline-text-2" id="text-org0195432">
+</div>
+<div id="outline-container-orga7e40d4" class="outline-3">
+<h3 id="orga7e40d4">Hebrews 13:1</h3>
+<div class="outline-text-3" id="text-orga7e40d4">
+<p>
+Let the charity of the brotherhood abide in you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5fc409" class="outline-3">
+<h3 id="orga5fc409">Hebrews 13:2</h3>
+<div class="outline-text-3" id="text-orga5fc409">
+<p>
+And hospitality do not forget: for by this some, being not aware of it, have entertained angels.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga85dbe6" class="outline-3">
+<h3 id="orga85dbe6">Hebrews 13:3</h3>
+<div class="outline-text-3" id="text-orga85dbe6">
+<p>
+Remember them that are in bands, as if you were bound with them: and them that labour, as being yourselves also in the body.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05c3790" class="outline-3">
+<h3 id="org05c3790">Hebrews 13:4</h3>
+<div class="outline-text-3" id="text-org05c3790">
+<p>
+Marriage honourable in all, and the bed undefiled. For fornicators and adulterers God will judge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5b47d0" class="outline-3">
+<h3 id="orgf5b47d0">Hebrews 13:5</h3>
+<div class="outline-text-3" id="text-orgf5b47d0">
+<p>
+Let your manners be without covetousness, contented with such things as you have. For he hath said: I will not leave thee: neither will I forsake thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf616abf" class="outline-3">
+<h3 id="orgf616abf">Hebrews 13:6</h3>
+<div class="outline-text-3" id="text-orgf616abf">
+<p>
+So that we may confidently say: The Lord is my helper: I will not fear what man shall do to me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03bdbe9" class="outline-3">
+<h3 id="org03bdbe9">Hebrews 13:7</h3>
+<div class="outline-text-3" id="text-org03bdbe9">
+<p>
+Remember your prelates who have spoken the word of God to you: whose faith follow, considering the end of their conversation,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf1c0a0" class="outline-3">
+<h3 id="orgbf1c0a0">Hebrews 13:8</h3>
+<div class="outline-text-3" id="text-orgbf1c0a0">
+<p>
+Jesus Christ, yesterday, and today: and the same for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2670c8" class="outline-3">
+<h3 id="orgc2670c8">Hebrews 13:9</h3>
+<div class="outline-text-3" id="text-orgc2670c8">
+<p>
+Be not led away with various and strange doctrines. For it is best that the heart be established with grace, not with meats: which have not profited those that walk in them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e4aa0c" class="outline-3">
+<h3 id="org0e4aa0c">Hebrews 13:10</h3>
+<div class="outline-text-3" id="text-org0e4aa0c">
+<p>
+We have an altar whereof they have no power to eat who serve the tabernacle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8acf5ac" class="outline-3">
+<h3 id="org8acf5ac">Hebrews 13:11</h3>
+<div class="outline-text-3" id="text-org8acf5ac">
+<p>
+For the bodies of those beasts whose blood is brought into the holies by the high priest for sin are burned without the camp.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f2a978" class="outline-3">
+<h3 id="org7f2a978">Hebrews 13:12</h3>
+<div class="outline-text-3" id="text-org7f2a978">
+<p>
+Wherefore Jesus also, that he might sanctify the people by his own blood, suffered without the gate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80d8db5" class="outline-3">
+<h3 id="org80d8db5">Hebrews 13:13</h3>
+<div class="outline-text-3" id="text-org80d8db5">
+<p>
+Let us go forth therefore to him without the camp, bearing his reproach.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cb4c02" class="outline-3">
+<h3 id="org9cb4c02">Hebrews 13:14</h3>
+<div class="outline-text-3" id="text-org9cb4c02">
+<p>
+For, we have not here a lasting city: but we seek one that is to come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ea089c" class="outline-3">
+<h3 id="org8ea089c">Hebrews 13:15</h3>
+<div class="outline-text-3" id="text-org8ea089c">
+<p>
+By him therefore let us offer the sacrifice of praise always to God, that is to say, the fruit of lips confessing to his name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9c09aa" class="outline-3">
+<h3 id="orgc9c09aa">Hebrews 13:16</h3>
+<div class="outline-text-3" id="text-orgc9c09aa">
+<p>
+And do not forget to do good and to impart: for by such sacrifices God&rsquo;s favour is obtained.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd6b216" class="outline-3">
+<h3 id="orgcd6b216">Hebrews 13:17</h3>
+<div class="outline-text-3" id="text-orgcd6b216">
+<p>
+Obey your prelates and be subject to them. For they watch as being to render an account of your souls: that they may do this with joy and not with grief. For this is not expedient for you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0a6186" class="outline-3">
+<h3 id="orga0a6186">Hebrews 13:18</h3>
+<div class="outline-text-3" id="text-orga0a6186">
+<p>
+Pray for us. For we trust we have a good conscience, being willing to behave ourselves well in all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd3218d" class="outline-3">
+<h3 id="orgcd3218d">Hebrews 13:19</h3>
+<div class="outline-text-3" id="text-orgcd3218d">
+<p>
+And I beseech you the more to do this, that I may be restored to you the sooner.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd77562" class="outline-3">
+<h3 id="orgcd77562">Hebrews 13:20</h3>
+<div class="outline-text-3" id="text-orgcd77562">
+<p>
+And may the God of peace, who brought again from the dead the great pastor of the sheep, our Lord Jesus Christ, in the blood of the everlasting testament,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7881f50" class="outline-3">
+<h3 id="org7881f50">Hebrews 13:21</h3>
+<div class="outline-text-3" id="text-org7881f50">
+<p>
+Fit you in all goodness, that you may do his will; doing in you that which is well pleasing in his sight, through Jesus Christ, to whom is glory for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e51f00" class="outline-3">
+<h3 id="org6e51f00">Hebrews 13:22</h3>
+<div class="outline-text-3" id="text-org6e51f00">
+<p>
+And I beseech you, brethren, that you suffer this word of consolation. For I have written to you in a few words.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0ab43d" class="outline-3">
+<h3 id="orgb0ab43d">Hebrews 13:23</h3>
+<div class="outline-text-3" id="text-orgb0ab43d">
+<p>
+Know ye that our brother Timothy is set at liberty: with whom (if he come shortly) I will see you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8bf100" class="outline-3">
+<h3 id="orgb8bf100">Hebrews 13:24</h3>
+<div class="outline-text-3" id="text-orgb8bf100">
+<p>
+Salute all your prelates and all the saints. The brethren from Italy salute you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4451f06" class="outline-3">
+<h3 id="org4451f06">Hebrews 13:25</h3>
+<div class="outline-text-3" id="text-org4451f06">
+<p>
+Grace be with you all. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

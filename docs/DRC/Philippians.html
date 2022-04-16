@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9cd6a02">Philippians 1</a>
+<ul>
+<li><a href="#org5cac86f">Philippians 1:1</a></li>
+<li><a href="#org78ad24d">Philippians 1:2</a></li>
+<li><a href="#orge2c8274">Philippians 1:3</a></li>
+<li><a href="#orgc64e593">Philippians 1:4</a></li>
+<li><a href="#orgbc3bb74">Philippians 1:5</a></li>
+<li><a href="#orgf9d6e2d">Philippians 1:6</a></li>
+<li><a href="#org3239309">Philippians 1:7</a></li>
+<li><a href="#orgc2324d1">Philippians 1:8</a></li>
+<li><a href="#org4e3c342">Philippians 1:9</a></li>
+<li><a href="#org287c098">Philippians 1:10</a></li>
+<li><a href="#org9a570a7">Philippians 1:11</a></li>
+<li><a href="#org319ac55">Philippians 1:12</a></li>
+<li><a href="#org888fd58">Philippians 1:13</a></li>
+<li><a href="#org1be05d4">Philippians 1:14</a></li>
+<li><a href="#org68be6b4">Philippians 1:15</a></li>
+<li><a href="#org33c5915">Philippians 1:16</a></li>
+<li><a href="#orgccb13cc">Philippians 1:17</a></li>
+<li><a href="#org2490c6e">Philippians 1:18</a></li>
+<li><a href="#org3ada694">Philippians 1:19</a></li>
+<li><a href="#orgc33225f">Philippians 1:20</a></li>
+<li><a href="#org5d36bb9">Philippians 1:21</a></li>
+<li><a href="#org1d0cb28">Philippians 1:22</a></li>
+<li><a href="#org3e205a5">Philippians 1:23</a></li>
+<li><a href="#orgb5a3413">Philippians 1:24</a></li>
+<li><a href="#org4337c4a">Philippians 1:25</a></li>
+<li><a href="#org99746a0">Philippians 1:26</a></li>
+<li><a href="#org1fd2cc2">Philippians 1:27</a></li>
+<li><a href="#org20c5405">Philippians 1:28</a></li>
+<li><a href="#orgaa6365a">Philippians 1:29</a></li>
+<li><a href="#org6227d69">Philippians 1:30</a></li>
+</ul>
+</li>
+<li><a href="#org16e6bda">Philippians 2</a>
+<ul>
+<li><a href="#orgb92de7f">Philippians 2:1</a></li>
+<li><a href="#orga64c3c1">Philippians 2:2</a></li>
+<li><a href="#orge7a5ee3">Philippians 2:3</a></li>
+<li><a href="#orga9d6a87">Philippians 2:4</a></li>
+<li><a href="#org9379d0d">Philippians 2:5</a></li>
+<li><a href="#org72cabb0">Philippians 2:6</a></li>
+<li><a href="#org3470793">Philippians 2:7</a></li>
+<li><a href="#org9f11885">Philippians 2:8</a></li>
+<li><a href="#org41373ef">Philippians 2:9</a></li>
+<li><a href="#org5997ef9">Philippians 2:10</a></li>
+<li><a href="#org91e11d0">Philippians 2:11</a></li>
+<li><a href="#orge0150da">Philippians 2:12</a></li>
+<li><a href="#orgb18d89a">Philippians 2:13</a></li>
+<li><a href="#orgdf8bc03">Philippians 2:14</a></li>
+<li><a href="#org2c6dad6">Philippians 2:15</a></li>
+<li><a href="#org45378f9">Philippians 2:16</a></li>
+<li><a href="#org9444946">Philippians 2:17</a></li>
+<li><a href="#org1770f46">Philippians 2:18</a></li>
+<li><a href="#orga77143a">Philippians 2:19</a></li>
+<li><a href="#org89a6ad8">Philippians 2:20</a></li>
+<li><a href="#org01aaf50">Philippians 2:21</a></li>
+<li><a href="#org3274d08">Philippians 2:22</a></li>
+<li><a href="#org11108d5">Philippians 2:23</a></li>
+<li><a href="#orgf4e8a1d">Philippians 2:24</a></li>
+<li><a href="#org1de284d">Philippians 2:25</a></li>
+<li><a href="#org1e720a9">Philippians 2:26</a></li>
+<li><a href="#org5d3f3e6">Philippians 2:27</a></li>
+<li><a href="#org0960cb9">Philippians 2:28</a></li>
+<li><a href="#orgb5b9a1a">Philippians 2:29</a></li>
+<li><a href="#org00c47a1">Philippians 2:30</a></li>
+</ul>
+</li>
+<li><a href="#org6aecfe9">Philippians 3</a>
+<ul>
+<li><a href="#org62dad68">Philippians 3:1</a></li>
+<li><a href="#org2cdb653">Philippians 3:2</a></li>
+<li><a href="#org42d1243">Philippians 3:3</a></li>
+<li><a href="#org3c6bbe8">Philippians 3:4</a></li>
+<li><a href="#orge4a7b64">Philippians 3:5</a></li>
+<li><a href="#org80ccbe0">Philippians 3:6</a></li>
+<li><a href="#org22b8ab7">Philippians 3:7</a></li>
+<li><a href="#org193f9d9">Philippians 3:8</a></li>
+<li><a href="#org6e8a910">Philippians 3:9</a></li>
+<li><a href="#org2f4df81">Philippians 3:10</a></li>
+<li><a href="#org8c46891">Philippians 3:11</a></li>
+<li><a href="#org0fc9a95">Philippians 3:12</a></li>
+<li><a href="#org2793fb6">Philippians 3:13</a></li>
+<li><a href="#org4408463">Philippians 3:14</a></li>
+<li><a href="#org8920944">Philippians 3:15</a></li>
+<li><a href="#org6b18226">Philippians 3:16</a></li>
+<li><a href="#orgfd81a9f">Philippians 3:17</a></li>
+<li><a href="#orgc2e2b49">Philippians 3:18</a></li>
+<li><a href="#org65d5628">Philippians 3:19</a></li>
+<li><a href="#orgb1854eb">Philippians 3:20</a></li>
+<li><a href="#orgb64ec18">Philippians 3:21</a></li>
+</ul>
+</li>
+<li><a href="#orgf2f9e7d">Philippians 4</a>
+<ul>
+<li><a href="#org811792b">Philippians 4:1</a></li>
+<li><a href="#orgeaf4294">Philippians 4:2</a></li>
+<li><a href="#orge588a49">Philippians 4:3</a></li>
+<li><a href="#orgc0367a1">Philippians 4:4</a></li>
+<li><a href="#orgac129d5">Philippians 4:5</a></li>
+<li><a href="#org9534693">Philippians 4:6</a></li>
+<li><a href="#org00e39d1">Philippians 4:7</a></li>
+<li><a href="#orgad5094e">Philippians 4:8</a></li>
+<li><a href="#org1eaa80d">Philippians 4:9</a></li>
+<li><a href="#orgd56d21e">Philippians 4:10</a></li>
+<li><a href="#orga22cf6d">Philippians 4:11</a></li>
+<li><a href="#org9e48517">Philippians 4:12</a></li>
+<li><a href="#orgeef8f6b">Philippians 4:13</a></li>
+<li><a href="#org883e7c0">Philippians 4:14</a></li>
+<li><a href="#org32bbaca">Philippians 4:15</a></li>
+<li><a href="#orga0a6d4c">Philippians 4:16</a></li>
+<li><a href="#orgc2d9447">Philippians 4:17</a></li>
+<li><a href="#org533866b">Philippians 4:18</a></li>
+<li><a href="#org1a082a4">Philippians 4:19</a></li>
+<li><a href="#orgb58d82d">Philippians 4:20</a></li>
+<li><a href="#orgbbfce0c">Philippians 4:21</a></li>
+<li><a href="#orgeab4161">Philippians 4:22</a></li>
+<li><a href="#org44ad3e1">Philippians 4:23</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9cd6a02" class="outline-2">
+<h2 id="org9cd6a02">Philippians 1</h2>
+<div class="outline-text-2" id="text-org9cd6a02">
+</div>
+<div id="outline-container-org5cac86f" class="outline-3">
+<h3 id="org5cac86f">Philippians 1:1</h3>
+<div class="outline-text-3" id="text-org5cac86f">
+<p>
+Paul and Timothy, the servants of Jesus Christ: to all the saints in Christ Jesus who are at Philippi, with the bishops and deacons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78ad24d" class="outline-3">
+<h3 id="org78ad24d">Philippians 1:2</h3>
+<div class="outline-text-3" id="text-org78ad24d">
+<p>
+Grace be unto you and peace, from God our Father and from the Lord Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2c8274" class="outline-3">
+<h3 id="orge2c8274">Philippians 1:3</h3>
+<div class="outline-text-3" id="text-orge2c8274">
+<p>
+I give thanks to my God in every remembrance of you:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc64e593" class="outline-3">
+<h3 id="orgc64e593">Philippians 1:4</h3>
+<div class="outline-text-3" id="text-orgc64e593">
+<p>
+Always in all my prayers making supplication for you all with joy:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc3bb74" class="outline-3">
+<h3 id="orgbc3bb74">Philippians 1:5</h3>
+<div class="outline-text-3" id="text-orgbc3bb74">
+<p>
+For your communication in the gospel of Christ, from the first day unto now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9d6e2d" class="outline-3">
+<h3 id="orgf9d6e2d">Philippians 1:6</h3>
+<div class="outline-text-3" id="text-orgf9d6e2d">
+<p>
+Being confident of this very thing: that he who hath begun a good work in you will perfect it unto the day of Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3239309" class="outline-3">
+<h3 id="org3239309">Philippians 1:7</h3>
+<div class="outline-text-3" id="text-org3239309">
+<p>
+As it is meet for me to think this for you all, for that I have you in my heart; and that, in my bands and in the defence and confirmation of the gospel, you all are partakers of my joy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2324d1" class="outline-3">
+<h3 id="orgc2324d1">Philippians 1:8</h3>
+<div class="outline-text-3" id="text-orgc2324d1">
+<p>
+For God is my witness how I long after you all in the bowels of Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e3c342" class="outline-3">
+<h3 id="org4e3c342">Philippians 1:9</h3>
+<div class="outline-text-3" id="text-org4e3c342">
+<p>
+And this I pray: That your charity may more and more abound in knowledge and in all understanding:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org287c098" class="outline-3">
+<h3 id="org287c098">Philippians 1:10</h3>
+<div class="outline-text-3" id="text-org287c098">
+<p>
+That you may approve the better things: that you may be sincere and without offence unto the day of Christ:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a570a7" class="outline-3">
+<h3 id="org9a570a7">Philippians 1:11</h3>
+<div class="outline-text-3" id="text-org9a570a7">
+<p>
+Filled with the fruit of justice, through Jesus Christ, unto the glory and praise of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org319ac55" class="outline-3">
+<h3 id="org319ac55">Philippians 1:12</h3>
+<div class="outline-text-3" id="text-org319ac55">
+<p>
+Now, brethren, I desire you should know that the things which have happened to me have fallen out rather to the furtherance of the gospel:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org888fd58" class="outline-3">
+<h3 id="org888fd58">Philippians 1:13</h3>
+<div class="outline-text-3" id="text-org888fd58">
+<p>
+So that my bands are made manifest in Christ, in all the court and in all other places.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1be05d4" class="outline-3">
+<h3 id="org1be05d4">Philippians 1:14</h3>
+<div class="outline-text-3" id="text-org1be05d4">
+<p>
+And many of the brethren in the Lord, growing confident by my bands, are much more bold to speak the word of God without fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68be6b4" class="outline-3">
+<h3 id="org68be6b4">Philippians 1:15</h3>
+<div class="outline-text-3" id="text-org68be6b4">
+<p>
+Some indeed, even out of envy and contention: but some also for good will preach Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33c5915" class="outline-3">
+<h3 id="org33c5915">Philippians 1:16</h3>
+<div class="outline-text-3" id="text-org33c5915">
+<p>
+Some out of charity, knowing that I am set for the defence of the gospel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccb13cc" class="outline-3">
+<h3 id="orgccb13cc">Philippians 1:17</h3>
+<div class="outline-text-3" id="text-orgccb13cc">
+<p>
+And some out of contention preach Christ not sincerely: supposing that they raise affliction to my bands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2490c6e" class="outline-3">
+<h3 id="org2490c6e">Philippians 1:18</h3>
+<div class="outline-text-3" id="text-org2490c6e">
+<p>
+But what then? So that by all means, whether by occasion or by truth, Christ be preached: in this also I rejoice, yea, and will rejoice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ada694" class="outline-3">
+<h3 id="org3ada694">Philippians 1:19</h3>
+<div class="outline-text-3" id="text-org3ada694">
+<p>
+For I know that this shall fall out to me unto salvation, through your prayer and the supply of the Spirit of Jesus Christ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc33225f" class="outline-3">
+<h3 id="orgc33225f">Philippians 1:20</h3>
+<div class="outline-text-3" id="text-orgc33225f">
+<p>
+According to my expectation and hope; that in nothing I shall be confounded: but with all confidence, as always, so now also, shall Christ be magnified in my body, whether it be by life or by death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d36bb9" class="outline-3">
+<h3 id="org5d36bb9">Philippians 1:21</h3>
+<div class="outline-text-3" id="text-org5d36bb9">
+<p>
+For to me, to live is Christ: and to die is gain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d0cb28" class="outline-3">
+<h3 id="org1d0cb28">Philippians 1:22</h3>
+<div class="outline-text-3" id="text-org1d0cb28">
+<p>
+And if to live in the flesh: this is to me the fruit of labour. And what I shall choose I know not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e205a5" class="outline-3">
+<h3 id="org3e205a5">Philippians 1:23</h3>
+<div class="outline-text-3" id="text-org3e205a5">
+<p>
+But I am straitened between two: having a desire to be dissolved and to be with Christ, a thing by far the better.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5a3413" class="outline-3">
+<h3 id="orgb5a3413">Philippians 1:24</h3>
+<div class="outline-text-3" id="text-orgb5a3413">
+<p>
+But to abide still in the flesh is needful for you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4337c4a" class="outline-3">
+<h3 id="org4337c4a">Philippians 1:25</h3>
+<div class="outline-text-3" id="text-org4337c4a">
+<p>
+And having this confidence, I know that I shall abide and continue with you all, for your furtherance and joy of faith:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99746a0" class="outline-3">
+<h3 id="org99746a0">Philippians 1:26</h3>
+<div class="outline-text-3" id="text-org99746a0">
+<p>
+That your rejoicing may abound in Christ Jesus for me, by my coming to you again.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fd2cc2" class="outline-3">
+<h3 id="org1fd2cc2">Philippians 1:27</h3>
+<div class="outline-text-3" id="text-org1fd2cc2">
+<p>
+Only let your conversation be worthy of the gospel of Christ: that, whether I come and see you, or, being absent, may hear of you, that you stand fast in one spirit, with one mind labouring together for the faith of the gospel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20c5405" class="outline-3">
+<h3 id="org20c5405">Philippians 1:28</h3>
+<div class="outline-text-3" id="text-org20c5405">
+<p>
+And in nothing be ye terrified by the adversaries: which to them is a cause of perdition, but to you of salvation, and this from God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa6365a" class="outline-3">
+<h3 id="orgaa6365a">Philippians 1:29</h3>
+<div class="outline-text-3" id="text-orgaa6365a">
+<p>
+For unto you it is given for Christ, not only to believe in him, but also to suffer for him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6227d69" class="outline-3">
+<h3 id="org6227d69">Philippians 1:30</h3>
+<div class="outline-text-3" id="text-org6227d69">
+<p>
+Having the same conflict as that which you have seen in me and now have heard of me. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org16e6bda" class="outline-2">
+<h2 id="org16e6bda">Philippians 2</h2>
+<div class="outline-text-2" id="text-org16e6bda">
+</div>
+<div id="outline-container-orgb92de7f" class="outline-3">
+<h3 id="orgb92de7f">Philippians 2:1</h3>
+<div class="outline-text-3" id="text-orgb92de7f">
+<p>
+If there be therefore any consolation in Christ, if any comfort of charity, if any society of the spirit, if any bowels of commiseration:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga64c3c1" class="outline-3">
+<h3 id="orga64c3c1">Philippians 2:2</h3>
+<div class="outline-text-3" id="text-orga64c3c1">
+<p>
+Fulfil ye my joy, that you be of one mind, having the same charity, being of one accord, agreeing in sentiment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7a5ee3" class="outline-3">
+<h3 id="orge7a5ee3">Philippians 2:3</h3>
+<div class="outline-text-3" id="text-orge7a5ee3">
+<p>
+Let nothing be done through contention: neither by vain glory. But in humility, let each esteem others better than themselves:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9d6a87" class="outline-3">
+<h3 id="orga9d6a87">Philippians 2:4</h3>
+<div class="outline-text-3" id="text-orga9d6a87">
+<p>
+Each one not considering the things that are his own, but those that are other men&rsquo;s.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9379d0d" class="outline-3">
+<h3 id="org9379d0d">Philippians 2:5</h3>
+<div class="outline-text-3" id="text-org9379d0d">
+<p>
+For let this mind be in you, which was also in Christ Jesus:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72cabb0" class="outline-3">
+<h3 id="org72cabb0">Philippians 2:6</h3>
+<div class="outline-text-3" id="text-org72cabb0">
+<p>
+Who being in the form of God, thought it not robbery to be equal with God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3470793" class="outline-3">
+<h3 id="org3470793">Philippians 2:7</h3>
+<div class="outline-text-3" id="text-org3470793">
+<p>
+But emptied himself, taking the form of a servant, being made in the likeness of men, and in habit found as a man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f11885" class="outline-3">
+<h3 id="org9f11885">Philippians 2:8</h3>
+<div class="outline-text-3" id="text-org9f11885">
+<p>
+He humbled himself, becoming obedient unto death, even to the death of the cross.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org41373ef" class="outline-3">
+<h3 id="org41373ef">Philippians 2:9</h3>
+<div class="outline-text-3" id="text-org41373ef">
+<p>
+For which cause, God also hath exalted him and hath given him a name which is above all names:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5997ef9" class="outline-3">
+<h3 id="org5997ef9">Philippians 2:10</h3>
+<div class="outline-text-3" id="text-org5997ef9">
+<p>
+That in the name of Jesus every knee should bow, of those that are in heaven, on earth, and under the earth:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91e11d0" class="outline-3">
+<h3 id="org91e11d0">Philippians 2:11</h3>
+<div class="outline-text-3" id="text-org91e11d0">
+<p>
+And that every tongue should confess that the Lord Jesus Christ is in the glory of God the Father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0150da" class="outline-3">
+<h3 id="orge0150da">Philippians 2:12</h3>
+<div class="outline-text-3" id="text-orge0150da">
+<p>
+Wherefore, my dearly beloved, (as you have always obeyed, not as in my presence only but much more now in my absence) with fear and trembling work out your salvation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb18d89a" class="outline-3">
+<h3 id="orgb18d89a">Philippians 2:13</h3>
+<div class="outline-text-3" id="text-orgb18d89a">
+<p>
+For it is God who worketh in you, both to will and to accomplish, according to his good will.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf8bc03" class="outline-3">
+<h3 id="orgdf8bc03">Philippians 2:14</h3>
+<div class="outline-text-3" id="text-orgdf8bc03">
+<p>
+And do ye all things without murmurings and hesitations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c6dad6" class="outline-3">
+<h3 id="org2c6dad6">Philippians 2:15</h3>
+<div class="outline-text-3" id="text-org2c6dad6">
+<p>
+That you may be blameless and sincere children of God, without reproof, in the midst of a crooked and perverse generation: among whom you shine as lights in the world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45378f9" class="outline-3">
+<h3 id="org45378f9">Philippians 2:16</h3>
+<div class="outline-text-3" id="text-org45378f9">
+<p>
+Holding forth the word of life to my glory in the day of Christ: because I have not run in vain, nor laboured in vain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9444946" class="outline-3">
+<h3 id="org9444946">Philippians 2:17</h3>
+<div class="outline-text-3" id="text-org9444946">
+<p>
+Yea, and if I be made a victim upon the sacrifice and service of your faith, I rejoice and congratulate with you all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1770f46" class="outline-3">
+<h3 id="org1770f46">Philippians 2:18</h3>
+<div class="outline-text-3" id="text-org1770f46">
+<p>
+And for the selfsame thing, do you also rejoice and congratulate with me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga77143a" class="outline-3">
+<h3 id="orga77143a">Philippians 2:19</h3>
+<div class="outline-text-3" id="text-orga77143a">
+<p>
+And I hope in the Lord Jesus to send Timothy unto you shortly, that I also may be of good comfort, when I know the things concerning you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89a6ad8" class="outline-3">
+<h3 id="org89a6ad8">Philippians 2:20</h3>
+<div class="outline-text-3" id="text-org89a6ad8">
+<p>
+For I have no man so of the same mind, who with sincere affection is solicitous for you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01aaf50" class="outline-3">
+<h3 id="org01aaf50">Philippians 2:21</h3>
+<div class="outline-text-3" id="text-org01aaf50">
+<p>
+For all seek the things that are their own not the things that are Jesus Christ&rsquo;s.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3274d08" class="outline-3">
+<h3 id="org3274d08">Philippians 2:22</h3>
+<div class="outline-text-3" id="text-org3274d08">
+<p>
+Now know ye the proof of him: that as a son with the father, so hath he served with me in the gospel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11108d5" class="outline-3">
+<h3 id="org11108d5">Philippians 2:23</h3>
+<div class="outline-text-3" id="text-org11108d5">
+<p>
+Him therefore I hope to send unto you immediately: so soon as I shall see how it will go with me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4e8a1d" class="outline-3">
+<h3 id="orgf4e8a1d">Philippians 2:24</h3>
+<div class="outline-text-3" id="text-orgf4e8a1d">
+<p>
+And I trust in the Lord that I myself also shall come to you shortly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1de284d" class="outline-3">
+<h3 id="org1de284d">Philippians 2:25</h3>
+<div class="outline-text-3" id="text-org1de284d">
+<p>
+But I have thought it necessary to send to you Epaphroditus, my brother and fellow labourer and fellow soldier, but your apostle: and he that hath ministered to my wants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e720a9" class="outline-3">
+<h3 id="org1e720a9">Philippians 2:26</h3>
+<div class="outline-text-3" id="text-org1e720a9">
+<p>
+For indeed he longed after you all: and was sad, for that you had heard that he was sick.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d3f3e6" class="outline-3">
+<h3 id="org5d3f3e6">Philippians 2:27</h3>
+<div class="outline-text-3" id="text-org5d3f3e6">
+<p>
+For indeed he was sick, nigh unto death: but God had mercy on him. And not only on him, but on me also, lest I should have sorrow upon sorrow.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0960cb9" class="outline-3">
+<h3 id="org0960cb9">Philippians 2:28</h3>
+<div class="outline-text-3" id="text-org0960cb9">
+<p>
+Therefore, I sent him the more speedily: that seeing him again, you may rejoice, and I may be without sorrow.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5b9a1a" class="outline-3">
+<h3 id="orgb5b9a1a">Philippians 2:29</h3>
+<div class="outline-text-3" id="text-orgb5b9a1a">
+<p>
+Receive him therefore with all joy in the Lord: and treat with honour such as he is.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00c47a1" class="outline-3">
+<h3 id="org00c47a1">Philippians 2:30</h3>
+<div class="outline-text-3" id="text-org00c47a1">
+<p>
+Because for the work of Christ he came to the point of death: delivering his life, that he might fulfil that which on your part was wanting towards my service. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6aecfe9" class="outline-2">
+<h2 id="org6aecfe9">Philippians 3</h2>
+<div class="outline-text-2" id="text-org6aecfe9">
+</div>
+<div id="outline-container-org62dad68" class="outline-3">
+<h3 id="org62dad68">Philippians 3:1</h3>
+<div class="outline-text-3" id="text-org62dad68">
+<p>
+As to the rest, my brethren, rejoice in the Lord. To write the same things to you, to me indeed is not wearisome, but to you is necessary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cdb653" class="outline-3">
+<h3 id="org2cdb653">Philippians 3:2</h3>
+<div class="outline-text-3" id="text-org2cdb653">
+<p>
+Beware of dogs: beware of evil workers: beware of the concision.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42d1243" class="outline-3">
+<h3 id="org42d1243">Philippians 3:3</h3>
+<div class="outline-text-3" id="text-org42d1243">
+<p>
+For we are the circumcision, who in spirit serve God and glory in Christ Jesus, not having confidence in the flesh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c6bbe8" class="outline-3">
+<h3 id="org3c6bbe8">Philippians 3:4</h3>
+<div class="outline-text-3" id="text-org3c6bbe8">
+<p>
+Though I might also have confidence in the flesh. If any other thinketh he may have confidence in the flesh, I more:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4a7b64" class="outline-3">
+<h3 id="orge4a7b64">Philippians 3:5</h3>
+<div class="outline-text-3" id="text-orge4a7b64">
+<p>
+Being circumcised the eighth day, of the stock of Israel, of the tribe of Benjamin, an Hebrew of the Hebrews. According to the law, a Pharisee:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80ccbe0" class="outline-3">
+<h3 id="org80ccbe0">Philippians 3:6</h3>
+<div class="outline-text-3" id="text-org80ccbe0">
+<p>
+According to zeal, persecuting the church of God: According to the justice that is in the law, conversing without blame.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22b8ab7" class="outline-3">
+<h3 id="org22b8ab7">Philippians 3:7</h3>
+<div class="outline-text-3" id="text-org22b8ab7">
+<p>
+But the things that were gain to me, the same I have counted loss for Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org193f9d9" class="outline-3">
+<h3 id="org193f9d9">Philippians 3:8</h3>
+<div class="outline-text-3" id="text-org193f9d9">
+<p>
+Furthermore, I count all things to be but loss for the excellent knowledge of Jesus Christ, my Lord: for whom I have suffered the loss of all things and count them but as dung, that I may gain Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e8a910" class="outline-3">
+<h3 id="org6e8a910">Philippians 3:9</h3>
+<div class="outline-text-3" id="text-org6e8a910">
+<p>
+And may be found in him, not having my justice, which is of the law, but that which is of the faith of Christ Jesus, which is of God: justice in faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f4df81" class="outline-3">
+<h3 id="org2f4df81">Philippians 3:10</h3>
+<div class="outline-text-3" id="text-org2f4df81">
+<p>
+That I may know him and the power of his resurrection and the fellowship of his sufferings: being made conformable to his death,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c46891" class="outline-3">
+<h3 id="org8c46891">Philippians 3:11</h3>
+<div class="outline-text-3" id="text-org8c46891">
+<p>
+If by any means I may attain to the resurrection which is from the dead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fc9a95" class="outline-3">
+<h3 id="org0fc9a95">Philippians 3:12</h3>
+<div class="outline-text-3" id="text-org0fc9a95">
+<p>
+Not as though I had already attained, or were already perfect: but I follow after, if I may by any means apprehend, wherein I am also apprehended by Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2793fb6" class="outline-3">
+<h3 id="org2793fb6">Philippians 3:13</h3>
+<div class="outline-text-3" id="text-org2793fb6">
+<p>
+Brethren, I do not count myself to have apprehended. But one thing I do: Forgetting the things that are behind and stretching forth myself to those that are before,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4408463" class="outline-3">
+<h3 id="org4408463">Philippians 3:14</h3>
+<div class="outline-text-3" id="text-org4408463">
+<p>
+I press towards the mark, to the prize of the supernal vocation of God in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8920944" class="outline-3">
+<h3 id="org8920944">Philippians 3:15</h3>
+<div class="outline-text-3" id="text-org8920944">
+<p>
+Let us therefore, as many as are perfect, be thus minded: and if in any thing you be otherwise minded, this also God will reveal to you,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b18226" class="outline-3">
+<h3 id="org6b18226">Philippians 3:16</h3>
+<div class="outline-text-3" id="text-org6b18226">
+<p>
+Nevertheless, whereunto we are come, that we be of the same mind, let us also continue in the same rule.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd81a9f" class="outline-3">
+<h3 id="orgfd81a9f">Philippians 3:17</h3>
+<div class="outline-text-3" id="text-orgfd81a9f">
+<p>
+Be ye followers of me, brethren: and observe them who walk so as you have our model.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2e2b49" class="outline-3">
+<h3 id="orgc2e2b49">Philippians 3:18</h3>
+<div class="outline-text-3" id="text-orgc2e2b49">
+<p>
+For many walk, of whom I have told you often (and now tell you weeping) that they are enemies of the cross of Christ:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65d5628" class="outline-3">
+<h3 id="org65d5628">Philippians 3:19</h3>
+<div class="outline-text-3" id="text-org65d5628">
+<p>
+Whose end is destruction: whose God is their belly: and whose glory is in their shame: who mind earthly things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1854eb" class="outline-3">
+<h3 id="orgb1854eb">Philippians 3:20</h3>
+<div class="outline-text-3" id="text-orgb1854eb">
+<p>
+But our conversation is in heaven: from whence also we look for the Saviour, our Lord Jesus Christ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb64ec18" class="outline-3">
+<h3 id="orgb64ec18">Philippians 3:21</h3>
+<div class="outline-text-3" id="text-orgb64ec18">
+<p>
+Who will reform the body of our lowness, made like to the body of his glory, according to the operation whereby also he is able to subdue all things unto himself. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf2f9e7d" class="outline-2">
+<h2 id="orgf2f9e7d">Philippians 4</h2>
+<div class="outline-text-2" id="text-orgf2f9e7d">
+</div>
+<div id="outline-container-org811792b" class="outline-3">
+<h3 id="org811792b">Philippians 4:1</h3>
+<div class="outline-text-3" id="text-org811792b">
+<p>
+Therefore my dearly beloved brethren and most desired, my joy and my crown: so stand fast in the Lord, my dearly beloved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeaf4294" class="outline-3">
+<h3 id="orgeaf4294">Philippians 4:2</h3>
+<div class="outline-text-3" id="text-orgeaf4294">
+<p>
+I beg of Evodia and I beseech Syntyche to be of one mind in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge588a49" class="outline-3">
+<h3 id="orge588a49">Philippians 4:3</h3>
+<div class="outline-text-3" id="text-orge588a49">
+<p>
+And I entreat thee also, my sincere companion, help those women who have laboured with me in the gospel, with Clement and the rest of my fellow labourers, whose names are in the book of life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0367a1" class="outline-3">
+<h3 id="orgc0367a1">Philippians 4:4</h3>
+<div class="outline-text-3" id="text-orgc0367a1">
+<p>
+Rejoice in the Lord always: again, I say, rejoice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac129d5" class="outline-3">
+<h3 id="orgac129d5">Philippians 4:5</h3>
+<div class="outline-text-3" id="text-orgac129d5">
+<p>
+Let your modesty be known to all men. The Lord is nigh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9534693" class="outline-3">
+<h3 id="org9534693">Philippians 4:6</h3>
+<div class="outline-text-3" id="text-org9534693">
+<p>
+Be nothing solicitous: but in every thing, by prayer and supplication, with thanksgiving, let your petitions be made known to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00e39d1" class="outline-3">
+<h3 id="org00e39d1">Philippians 4:7</h3>
+<div class="outline-text-3" id="text-org00e39d1">
+<p>
+And the peace of God, which surpasseth all understanding, keep your hearts and minds in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad5094e" class="outline-3">
+<h3 id="orgad5094e">Philippians 4:8</h3>
+<div class="outline-text-3" id="text-orgad5094e">
+<p>
+For the rest, brethren, whatsoever things are true, whatsoever modest, whatsoever just, whatsoever holy, whatsoever lovely, whatsoever of good fame, if there be any virtue, if any praise of discipline: think on these things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1eaa80d" class="outline-3">
+<h3 id="org1eaa80d">Philippians 4:9</h3>
+<div class="outline-text-3" id="text-org1eaa80d">
+<p>
+The things which you have both learned and received and heard and seen in me, these do ye: and the God of peace shall be with you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd56d21e" class="outline-3">
+<h3 id="orgd56d21e">Philippians 4:10</h3>
+<div class="outline-text-3" id="text-orgd56d21e">
+<p>
+Now I rejoice in the Lord exceedingly that now at length your thought for me hath flourished again, as you did also think; but you were busied.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga22cf6d" class="outline-3">
+<h3 id="orga22cf6d">Philippians 4:11</h3>
+<div class="outline-text-3" id="text-orga22cf6d">
+<p>
+I speak not as it were for want. For I have learned, in whatsoever state I am, to be content therewith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e48517" class="outline-3">
+<h3 id="org9e48517">Philippians 4:12</h3>
+<div class="outline-text-3" id="text-org9e48517">
+<p>
+I know both how to be brought low, and I know how to abound (every where and in all things I am instructed): both to be full and to be hungry: both to abound and to suffer need.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeef8f6b" class="outline-3">
+<h3 id="orgeef8f6b">Philippians 4:13</h3>
+<div class="outline-text-3" id="text-orgeef8f6b">
+<p>
+I can do all things in him who strengtheneth me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org883e7c0" class="outline-3">
+<h3 id="org883e7c0">Philippians 4:14</h3>
+<div class="outline-text-3" id="text-org883e7c0">
+<p>
+Nevertheless, you have done well in communicating to my tribulation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32bbaca" class="outline-3">
+<h3 id="org32bbaca">Philippians 4:15</h3>
+<div class="outline-text-3" id="text-org32bbaca">
+<p>
+And you also know, O Philippians, that in the beginning of the gospel, when I departed from Macedonia, no church communicated with me as concerning giving and receiving, but you only.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0a6d4c" class="outline-3">
+<h3 id="orga0a6d4c">Philippians 4:16</h3>
+<div class="outline-text-3" id="text-orga0a6d4c">
+<p>
+For unto Thessalonica also you sent once and again for my use.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2d9447" class="outline-3">
+<h3 id="orgc2d9447">Philippians 4:17</h3>
+<div class="outline-text-3" id="text-orgc2d9447">
+<p>
+Not that I seek the gift: but I seek the fruit that may abound to your account.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org533866b" class="outline-3">
+<h3 id="org533866b">Philippians 4:18</h3>
+<div class="outline-text-3" id="text-org533866b">
+<p>
+But I have all and abound: I am filled, having received from Epaphroditus the things you sent, an odour of sweetness, an acceptable sacrifice, pleasing to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a082a4" class="outline-3">
+<h3 id="org1a082a4">Philippians 4:19</h3>
+<div class="outline-text-3" id="text-org1a082a4">
+<p>
+And may my God supply all your want, according to his riches in glory in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb58d82d" class="outline-3">
+<h3 id="orgb58d82d">Philippians 4:20</h3>
+<div class="outline-text-3" id="text-orgb58d82d">
+<p>
+Now to God and our Father be glory, world without end. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbfce0c" class="outline-3">
+<h3 id="orgbbfce0c">Philippians 4:21</h3>
+<div class="outline-text-3" id="text-orgbbfce0c">
+<p>
+Salute ye every saint in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeab4161" class="outline-3">
+<h3 id="orgeab4161">Philippians 4:22</h3>
+<div class="outline-text-3" id="text-orgeab4161">
+<p>
+The brethren who are with me salute you. All the saints salute you: especially they that are of Caesar&rsquo;s household.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44ad3e1" class="outline-3">
+<h3 id="org44ad3e1">Philippians 4:23</h3>
+<div class="outline-text-3" id="text-org44ad3e1">
+<p>
+The grace of our Lord Jesus Christ be with your spirit. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

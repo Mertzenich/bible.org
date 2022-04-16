@@ -1,0 +1,2451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org88befd9">Zechariah 1</a>
+<ul>
+<li><a href="#org85f2a98">Zechariah 1:1</a></li>
+<li><a href="#orgaee4cfc">Zechariah 1:2</a></li>
+<li><a href="#org0f00388">Zechariah 1:3</a></li>
+<li><a href="#org4894f1a">Zechariah 1:4</a></li>
+<li><a href="#org909105f">Zechariah 1:5</a></li>
+<li><a href="#orgb075b53">Zechariah 1:6</a></li>
+<li><a href="#org34e1da6">Zechariah 1:7</a></li>
+<li><a href="#org5d3a4b9">Zechariah 1:8</a></li>
+<li><a href="#orgdaee84f">Zechariah 1:9</a></li>
+<li><a href="#org59dd311">Zechariah 1:10</a></li>
+<li><a href="#orgbf15a5c">Zechariah 1:11</a></li>
+<li><a href="#orgc805c25">Zechariah 1:12</a></li>
+<li><a href="#orgb61ed77">Zechariah 1:13</a></li>
+<li><a href="#orgbc71477">Zechariah 1:14</a></li>
+<li><a href="#orgcfd2f9a">Zechariah 1:15</a></li>
+<li><a href="#org8a90c06">Zechariah 1:16</a></li>
+<li><a href="#org8081d2b">Zechariah 1:17</a></li>
+<li><a href="#org98aafd1">Zechariah 1:18</a></li>
+<li><a href="#org61c94d9">Zechariah 1:19</a></li>
+<li><a href="#orgf861a3d">Zechariah 1:20</a></li>
+<li><a href="#org5cb8e5c">Zechariah 1:21</a></li>
+</ul>
+</li>
+<li><a href="#orga9d42c5">Zechariah 2</a>
+<ul>
+<li><a href="#orgb91706f">Zechariah 2:1</a></li>
+<li><a href="#org0b72245">Zechariah 2:2</a></li>
+<li><a href="#orgc88c46f">Zechariah 2:3</a></li>
+<li><a href="#org24e7f66">Zechariah 2:4</a></li>
+<li><a href="#org1ccfc64">Zechariah 2:5</a></li>
+<li><a href="#orgbc9c7ff">Zechariah 2:6</a></li>
+<li><a href="#orgf578a9b">Zechariah 2:7</a></li>
+<li><a href="#org741cc66">Zechariah 2:8</a></li>
+<li><a href="#orge56cb44">Zechariah 2:9</a></li>
+<li><a href="#org301546a">Zechariah 2:10</a></li>
+<li><a href="#orgcf7989b">Zechariah 2:11</a></li>
+<li><a href="#orgf927280">Zechariah 2:12</a></li>
+<li><a href="#org49d5023">Zechariah 2:13</a></li>
+</ul>
+</li>
+<li><a href="#org1ee57f2">Zechariah 3</a>
+<ul>
+<li><a href="#orgcb3f50c">Zechariah 3:1</a></li>
+<li><a href="#org340e2a9">Zechariah 3:2</a></li>
+<li><a href="#org35f0b35">Zechariah 3:3</a></li>
+<li><a href="#org629ba7b">Zechariah 3:4</a></li>
+<li><a href="#org082f96e">Zechariah 3:5</a></li>
+<li><a href="#orgdc6a4cb">Zechariah 3:6</a></li>
+<li><a href="#orgd2c5dc8">Zechariah 3:7</a></li>
+<li><a href="#orgbb8ff81">Zechariah 3:8</a></li>
+<li><a href="#org1937f7a">Zechariah 3:9</a></li>
+<li><a href="#orgf7a243a">Zechariah 3:10</a></li>
+</ul>
+</li>
+<li><a href="#orgffd6cf9">Zechariah 4</a>
+<ul>
+<li><a href="#orgf058a1d">Zechariah 4:1</a></li>
+<li><a href="#orgfcb1f3f">Zechariah 4:2</a></li>
+<li><a href="#orgb507096">Zechariah 4:3</a></li>
+<li><a href="#orgfa5f510">Zechariah 4:4</a></li>
+<li><a href="#org0031907">Zechariah 4:5</a></li>
+<li><a href="#org393c54a">Zechariah 4:6</a></li>
+<li><a href="#org4ce58d1">Zechariah 4:7</a></li>
+<li><a href="#orgde832b7">Zechariah 4:8</a></li>
+<li><a href="#org9a4f776">Zechariah 4:9</a></li>
+<li><a href="#orgedd7040">Zechariah 4:10</a></li>
+<li><a href="#orgcb928b9">Zechariah 4:11</a></li>
+<li><a href="#orga9b7942">Zechariah 4:12</a></li>
+<li><a href="#org9e4feaa">Zechariah 4:13</a></li>
+<li><a href="#org3bd9901">Zechariah 4:14</a></li>
+</ul>
+</li>
+<li><a href="#org1ffcad9">Zechariah 5</a>
+<ul>
+<li><a href="#orgbd95f34">Zechariah 5:1</a></li>
+<li><a href="#org555f877">Zechariah 5:2</a></li>
+<li><a href="#orgf59ea37">Zechariah 5:3</a></li>
+<li><a href="#orgec66553">Zechariah 5:4</a></li>
+<li><a href="#org6a84ec6">Zechariah 5:5</a></li>
+<li><a href="#org091df3a">Zechariah 5:6</a></li>
+<li><a href="#org51c1098">Zechariah 5:7</a></li>
+<li><a href="#org58a4563">Zechariah 5:8</a></li>
+<li><a href="#org8cb3181">Zechariah 5:9</a></li>
+<li><a href="#org9fea499">Zechariah 5:10</a></li>
+<li><a href="#orgb0ad25c">Zechariah 5:11</a></li>
+</ul>
+</li>
+<li><a href="#org58e5828">Zechariah 6</a>
+<ul>
+<li><a href="#orgb5331ac">Zechariah 6:1</a></li>
+<li><a href="#orga9e9a39">Zechariah 6:2</a></li>
+<li><a href="#orgea1112e">Zechariah 6:3</a></li>
+<li><a href="#orgf3cf19c">Zechariah 6:4</a></li>
+<li><a href="#org57fcb6b">Zechariah 6:5</a></li>
+<li><a href="#org8f6705f">Zechariah 6:6</a></li>
+<li><a href="#orgabc7315">Zechariah 6:7</a></li>
+<li><a href="#org712001e">Zechariah 6:8</a></li>
+<li><a href="#org42d5ebd">Zechariah 6:9</a></li>
+<li><a href="#org6a26051">Zechariah 6:10</a></li>
+<li><a href="#org49d573a">Zechariah 6:11</a></li>
+<li><a href="#orgd1707cd">Zechariah 6:12</a></li>
+<li><a href="#org01f9c60">Zechariah 6:13</a></li>
+<li><a href="#orgfdc7ca8">Zechariah 6:14</a></li>
+<li><a href="#org32f6521">Zechariah 6:15</a></li>
+</ul>
+</li>
+<li><a href="#orga79bdc3">Zechariah 7</a>
+<ul>
+<li><a href="#org1fa6565">Zechariah 7:1</a></li>
+<li><a href="#org8583b27">Zechariah 7:2</a></li>
+<li><a href="#org36c7943">Zechariah 7:3</a></li>
+<li><a href="#org261b8b5">Zechariah 7:4</a></li>
+<li><a href="#org5b79e0f">Zechariah 7:5</a></li>
+<li><a href="#orgfc02d1d">Zechariah 7:6</a></li>
+<li><a href="#orgd4e0d2b">Zechariah 7:7</a></li>
+<li><a href="#org48c3a23">Zechariah 7:8</a></li>
+<li><a href="#orgd14a859">Zechariah 7:9</a></li>
+<li><a href="#org0384a48">Zechariah 7:10</a></li>
+<li><a href="#orgcf9b525">Zechariah 7:11</a></li>
+<li><a href="#orgc3d4c6e">Zechariah 7:12</a></li>
+<li><a href="#org574e215">Zechariah 7:13</a></li>
+<li><a href="#org9450e25">Zechariah 7:14</a></li>
+</ul>
+</li>
+<li><a href="#orgab0df00">Zechariah 8</a>
+<ul>
+<li><a href="#orgcb91a9c">Zechariah 8:1</a></li>
+<li><a href="#orgfc4f0b6">Zechariah 8:2</a></li>
+<li><a href="#org78dd1ab">Zechariah 8:3</a></li>
+<li><a href="#org48d6e11">Zechariah 8:4</a></li>
+<li><a href="#orgc1f9d03">Zechariah 8:5</a></li>
+<li><a href="#org63391df">Zechariah 8:6</a></li>
+<li><a href="#org68037f7">Zechariah 8:7</a></li>
+<li><a href="#org597bd09">Zechariah 8:8</a></li>
+<li><a href="#org49cd68a">Zechariah 8:9</a></li>
+<li><a href="#orgc0b6340">Zechariah 8:10</a></li>
+<li><a href="#org11e4c52">Zechariah 8:11</a></li>
+<li><a href="#org8a045dc">Zechariah 8:12</a></li>
+<li><a href="#orgc86cc2c">Zechariah 8:13</a></li>
+<li><a href="#orgf654993">Zechariah 8:14</a></li>
+<li><a href="#org2f776e9">Zechariah 8:15</a></li>
+<li><a href="#org89b5856">Zechariah 8:16</a></li>
+<li><a href="#org060909f">Zechariah 8:17</a></li>
+<li><a href="#org0f171ab">Zechariah 8:18</a></li>
+<li><a href="#org3fef7ef">Zechariah 8:19</a></li>
+<li><a href="#org1789e3f">Zechariah 8:20</a></li>
+<li><a href="#orgf243547">Zechariah 8:21</a></li>
+<li><a href="#org955e5a4">Zechariah 8:22</a></li>
+<li><a href="#org73fe780">Zechariah 8:23</a></li>
+</ul>
+</li>
+<li><a href="#org6a12fe4">Zechariah 9</a>
+<ul>
+<li><a href="#org7e9b35e">Zechariah 9:1</a></li>
+<li><a href="#org82ccf5e">Zechariah 9:2</a></li>
+<li><a href="#orgbad2962">Zechariah 9:3</a></li>
+<li><a href="#orgde9cc8b">Zechariah 9:4</a></li>
+<li><a href="#orgc18a037">Zechariah 9:5</a></li>
+<li><a href="#orgdc8969e">Zechariah 9:6</a></li>
+<li><a href="#orgb798269">Zechariah 9:7</a></li>
+<li><a href="#orgea6cc2a">Zechariah 9:8</a></li>
+<li><a href="#orgf910cca">Zechariah 9:9</a></li>
+<li><a href="#org826d057">Zechariah 9:10</a></li>
+<li><a href="#org006815a">Zechariah 9:11</a></li>
+<li><a href="#org6e73abb">Zechariah 9:12</a></li>
+<li><a href="#org0e47b34">Zechariah 9:13</a></li>
+<li><a href="#orgd5d0424">Zechariah 9:14</a></li>
+<li><a href="#org05c885a">Zechariah 9:15</a></li>
+<li><a href="#org75c467f">Zechariah 9:16</a></li>
+<li><a href="#orgc2fcfaf">Zechariah 9:17</a></li>
+</ul>
+</li>
+<li><a href="#org00c0860">Zechariah 10</a>
+<ul>
+<li><a href="#orge7d0f1d">Zechariah 10:1</a></li>
+<li><a href="#org398209a">Zechariah 10:2</a></li>
+<li><a href="#org53cdb79">Zechariah 10:3</a></li>
+<li><a href="#org933a67a">Zechariah 10:4</a></li>
+<li><a href="#org69266fb">Zechariah 10:5</a></li>
+<li><a href="#org3a6dc04">Zechariah 10:6</a></li>
+<li><a href="#org47ce9d3">Zechariah 10:7</a></li>
+<li><a href="#org33a0a1f">Zechariah 10:8</a></li>
+<li><a href="#org2a263e8">Zechariah 10:9</a></li>
+<li><a href="#orgff5b5ab">Zechariah 10:10</a></li>
+<li><a href="#org31d566d">Zechariah 10:11</a></li>
+<li><a href="#org7945a80">Zechariah 10:12</a></li>
+</ul>
+</li>
+<li><a href="#org3a1cc1e">Zechariah 11</a>
+<ul>
+<li><a href="#org18dec11">Zechariah 11:1</a></li>
+<li><a href="#org4089dde">Zechariah 11:2</a></li>
+<li><a href="#org3d1f949">Zechariah 11:3</a></li>
+<li><a href="#org1333f55">Zechariah 11:4</a></li>
+<li><a href="#orgccddfd1">Zechariah 11:5</a></li>
+<li><a href="#org868d520">Zechariah 11:6</a></li>
+<li><a href="#orge2609bf">Zechariah 11:7</a></li>
+<li><a href="#orgdf1daf6">Zechariah 11:8</a></li>
+<li><a href="#org3d40adc">Zechariah 11:9</a></li>
+<li><a href="#org94d31f5">Zechariah 11:10</a></li>
+<li><a href="#orgc347f5a">Zechariah 11:11</a></li>
+<li><a href="#org9a9f159">Zechariah 11:12</a></li>
+<li><a href="#orga2b426f">Zechariah 11:13</a></li>
+<li><a href="#org6464467">Zechariah 11:14</a></li>
+<li><a href="#orgfb7e3d9">Zechariah 11:15</a></li>
+<li><a href="#orge3aebe2">Zechariah 11:16</a></li>
+<li><a href="#org2bf70c1">Zechariah 11:17</a></li>
+</ul>
+</li>
+<li><a href="#org06a6356">Zechariah 12</a>
+<ul>
+<li><a href="#org85158eb">Zechariah 12:1</a></li>
+<li><a href="#orgcd4a26b">Zechariah 12:2</a></li>
+<li><a href="#org67e2f47">Zechariah 12:3</a></li>
+<li><a href="#orgb6dce11">Zechariah 12:4</a></li>
+<li><a href="#org2f1622f">Zechariah 12:5</a></li>
+<li><a href="#org631dc32">Zechariah 12:6</a></li>
+<li><a href="#orgbcc092f">Zechariah 12:7</a></li>
+<li><a href="#org10527b5">Zechariah 12:8</a></li>
+<li><a href="#orge59dc3c">Zechariah 12:9</a></li>
+<li><a href="#orgc79812c">Zechariah 12:10</a></li>
+<li><a href="#org126d393">Zechariah 12:11</a></li>
+<li><a href="#org9910159">Zechariah 12:12</a></li>
+<li><a href="#org0471752">Zechariah 12:13</a></li>
+<li><a href="#org904f834">Zechariah 12:14</a></li>
+</ul>
+</li>
+<li><a href="#orga035a1c">Zechariah 13</a>
+<ul>
+<li><a href="#orgdedf90b">Zechariah 13:1</a></li>
+<li><a href="#org9b46f23">Zechariah 13:2</a></li>
+<li><a href="#orgb455cf5">Zechariah 13:3</a></li>
+<li><a href="#orgcc7698c">Zechariah 13:4</a></li>
+<li><a href="#orgefa13d3">Zechariah 13:5</a></li>
+<li><a href="#org1071789">Zechariah 13:6</a></li>
+<li><a href="#orgef0fc15">Zechariah 13:7</a></li>
+<li><a href="#orge048e45">Zechariah 13:8</a></li>
+<li><a href="#org9d30526">Zechariah 13:9</a></li>
+</ul>
+</li>
+<li><a href="#org8b6b4f2">Zechariah 14</a>
+<ul>
+<li><a href="#org477bfb6">Zechariah 14:1</a></li>
+<li><a href="#org719c199">Zechariah 14:2</a></li>
+<li><a href="#orgd64cd60">Zechariah 14:3</a></li>
+<li><a href="#org6a9514f">Zechariah 14:4</a></li>
+<li><a href="#orga2f1f3e">Zechariah 14:5</a></li>
+<li><a href="#orge4690ba">Zechariah 14:6</a></li>
+<li><a href="#orgb2ccbd5">Zechariah 14:7</a></li>
+<li><a href="#orgc6320ed">Zechariah 14:8</a></li>
+<li><a href="#orge23d9b9">Zechariah 14:9</a></li>
+<li><a href="#org00853a8">Zechariah 14:10</a></li>
+<li><a href="#orgceb97db">Zechariah 14:11</a></li>
+<li><a href="#orgaedc552">Zechariah 14:12</a></li>
+<li><a href="#org6ca74ee">Zechariah 14:13</a></li>
+<li><a href="#org0d49643">Zechariah 14:14</a></li>
+<li><a href="#org8bd3c7a">Zechariah 14:15</a></li>
+<li><a href="#orgc99e6cd">Zechariah 14:16</a></li>
+<li><a href="#org537d71b">Zechariah 14:17</a></li>
+<li><a href="#org9c30c4f">Zechariah 14:18</a></li>
+<li><a href="#orge4a72cb">Zechariah 14:19</a></li>
+<li><a href="#org09975bb">Zechariah 14:20</a></li>
+<li><a href="#org5f94c9a">Zechariah 14:21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88befd9" class="outline-2">
+<h2 id="org88befd9">Zechariah 1</h2>
+<div class="outline-text-2" id="text-org88befd9">
+</div>
+<div id="outline-container-org85f2a98" class="outline-3">
+<h3 id="org85f2a98">Zechariah 1:1</h3>
+<div class="outline-text-3" id="text-org85f2a98">
+<p>
+In the eighth month, in the second year of king Darius, the word of the Lord came to Zechariah the son of Barachias, the son of Addo, the prophet, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaee4cfc" class="outline-3">
+<h3 id="orgaee4cfc">Zechariah 1:2</h3>
+<div class="outline-text-3" id="text-orgaee4cfc">
+<p>
+The Lord hath been exceeding angry with your fathers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f00388" class="outline-3">
+<h3 id="org0f00388">Zechariah 1:3</h3>
+<div class="outline-text-3" id="text-org0f00388">
+<p>
+And thou shalt say to them: Thus saith the Lord of hosts: Turn ye to me, saith the Lord of hosts: and I will turn to you, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4894f1a" class="outline-3">
+<h3 id="org4894f1a">Zechariah 1:4</h3>
+<div class="outline-text-3" id="text-org4894f1a">
+<p>
+Be not as your fathers, to whom the former prophets have cried, saying: Thus saith the Lord of hosts: Turn ye from your evil ways, and from your wicked thoughts: but they did not give ear, neither did they hearken to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org909105f" class="outline-3">
+<h3 id="org909105f">Zechariah 1:5</h3>
+<div class="outline-text-3" id="text-org909105f">
+<p>
+Your fathers, where are they? and the prophets, shall they live always?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb075b53" class="outline-3">
+<h3 id="orgb075b53">Zechariah 1:6</h3>
+<div class="outline-text-3" id="text-orgb075b53">
+<p>
+But yet my words, and my ordinances, which I gave in charge to my servants the prophets, did they not take hold of your fathers, and they returned, and said: As the Lord of hosts thought to do to us according to our ways, and according to our devices, so he hath done to us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34e1da6" class="outline-3">
+<h3 id="org34e1da6">Zechariah 1:7</h3>
+<div class="outline-text-3" id="text-org34e1da6">
+<p>
+In the four and twentieth day of the eleventh month which is called Sabath, in the second year of Darius, the word of the Lord came to Zechariah the son of Barachias, the son of Addo, the prophet, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d3a4b9" class="outline-3">
+<h3 id="org5d3a4b9">Zechariah 1:8</h3>
+<div class="outline-text-3" id="text-org5d3a4b9">
+<p>
+I saw by night, and behold a man riding upon a red horse, and he stood among the myrtle trees, that were in the bottom: and behind him were horses, red, speckled, and white.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaee84f" class="outline-3">
+<h3 id="orgdaee84f">Zechariah 1:9</h3>
+<div class="outline-text-3" id="text-orgdaee84f">
+<p>
+And I said: What are these, my Lord? and the angel that spoke in me, said to me: I will shew thee what these are:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59dd311" class="outline-3">
+<h3 id="org59dd311">Zechariah 1:10</h3>
+<div class="outline-text-3" id="text-org59dd311">
+<p>
+And the man that stood among the myrtle trees answered, and said: These are they, whom the Lord hath sent to walk through the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf15a5c" class="outline-3">
+<h3 id="orgbf15a5c">Zechariah 1:11</h3>
+<div class="outline-text-3" id="text-orgbf15a5c">
+<p>
+And they answered the angel of the Lord, that stood among the myrtle trees, and said: We have walked through the earth, and behold all the earth is inhabited, and is at rest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc805c25" class="outline-3">
+<h3 id="orgc805c25">Zechariah 1:12</h3>
+<div class="outline-text-3" id="text-orgc805c25">
+<p>
+And the angel of the Lord answered, and said: O Lord of hosts, how long wilt thou not have mercy on Jerusalem, and on the cities of Juda, with which thou hast been angry? this is now the seventieth year.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb61ed77" class="outline-3">
+<h3 id="orgb61ed77">Zechariah 1:13</h3>
+<div class="outline-text-3" id="text-orgb61ed77">
+<p>
+And the Lord answered the angel, that spoke in me, good words, comfortable words.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc71477" class="outline-3">
+<h3 id="orgbc71477">Zechariah 1:14</h3>
+<div class="outline-text-3" id="text-orgbc71477">
+<p>
+And the angel that spoke in me, said to me: Cry thou, saying: Thus saith the Lord of hosts: I am zealous for Jerusalem, and Sion with a great zeal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcfd2f9a" class="outline-3">
+<h3 id="orgcfd2f9a">Zechariah 1:15</h3>
+<div class="outline-text-3" id="text-orgcfd2f9a">
+<p>
+And I am angry with a great anger with the wealthy nations: for I was angry a little, but they helped forward the evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a90c06" class="outline-3">
+<h3 id="org8a90c06">Zechariah 1:16</h3>
+<div class="outline-text-3" id="text-org8a90c06">
+<p>
+Therefore thus saith the Lord: I will return to Jerusalem in mercies: my house shall be built in it, saith the Lord of hosts: and the building line shall be stretched forth upon Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8081d2b" class="outline-3">
+<h3 id="org8081d2b">Zechariah 1:17</h3>
+<div class="outline-text-3" id="text-org8081d2b">
+<p>
+Cry yet, saying: Thus saith the Lord of hosts: My cities shall yet flow with good things: and the Lord will yet comfort Sion, and he will yet choose Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98aafd1" class="outline-3">
+<h3 id="org98aafd1">Zechariah 1:18</h3>
+<div class="outline-text-3" id="text-org98aafd1">
+<p>
+And I lifted up my eyes, and saw: and behold four horns.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61c94d9" class="outline-3">
+<h3 id="org61c94d9">Zechariah 1:19</h3>
+<div class="outline-text-3" id="text-org61c94d9">
+<p>
+And I said to the angel that spoke in me: What are these? And he said to me: These are the horns that have scattered Juda, and Israel, and Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf861a3d" class="outline-3">
+<h3 id="orgf861a3d">Zechariah 1:20</h3>
+<div class="outline-text-3" id="text-orgf861a3d">
+<p>
+And the Lord shewed me four smiths.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5cb8e5c" class="outline-3">
+<h3 id="org5cb8e5c">Zechariah 1:21</h3>
+<div class="outline-text-3" id="text-org5cb8e5c">
+<p>
+And I said: What come these to do? and he spoke, saying: These are the horns which have scattered Juda every man apart, and none of them lifted up his head: and these are come to fray them, to cast down the horns of the nations, that have lifted up the horn upon the land of Juda to scatter it. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga9d42c5" class="outline-2">
+<h2 id="orga9d42c5">Zechariah 2</h2>
+<div class="outline-text-2" id="text-orga9d42c5">
+</div>
+<div id="outline-container-orgb91706f" class="outline-3">
+<h3 id="orgb91706f">Zechariah 2:1</h3>
+<div class="outline-text-3" id="text-orgb91706f">
+<p>
+And I lifted up my eyes, and saw, and behold a man, with a measuring line in his hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b72245" class="outline-3">
+<h3 id="org0b72245">Zechariah 2:2</h3>
+<div class="outline-text-3" id="text-org0b72245">
+<p>
+And I said: Whither goest thou? and he said to me: To measure Jerusalem, and to see how great is the breadth thereof, and how great the length thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc88c46f" class="outline-3">
+<h3 id="orgc88c46f">Zechariah 2:3</h3>
+<div class="outline-text-3" id="text-orgc88c46f">
+<p>
+And behold the angel that spoke in me went forth, and another angel went out to meet him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24e7f66" class="outline-3">
+<h3 id="org24e7f66">Zechariah 2:4</h3>
+<div class="outline-text-3" id="text-org24e7f66">
+<p>
+And he said to him: Run, speak to this young man, saying: Jerusalem shall be inhabited without walls, by reason of the multitude of men, and of the beasts in the midst thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ccfc64" class="outline-3">
+<h3 id="org1ccfc64">Zechariah 2:5</h3>
+<div class="outline-text-3" id="text-org1ccfc64">
+<p>
+And I will be to it, saith the Lord, a wall of fire round about: and I will be in glory in the midst thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc9c7ff" class="outline-3">
+<h3 id="orgbc9c7ff">Zechariah 2:6</h3>
+<div class="outline-text-3" id="text-orgbc9c7ff">
+<p>
+O, O flee ye out of the land of the north, saith the Lord, for I have scattered you into the four winds of heaven, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf578a9b" class="outline-3">
+<h3 id="orgf578a9b">Zechariah 2:7</h3>
+<div class="outline-text-3" id="text-orgf578a9b">
+<p>
+O Sion, flee, thou that dwellest with the daughter of Babylon:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org741cc66" class="outline-3">
+<h3 id="org741cc66">Zechariah 2:8</h3>
+<div class="outline-text-3" id="text-org741cc66">
+<p>
+For thus saith the Lord of hosts: After the glory he hath sent me to the nations that have robbed you: for he that toucheth you, toucheth the apple of my eye:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge56cb44" class="outline-3">
+<h3 id="orge56cb44">Zechariah 2:9</h3>
+<div class="outline-text-3" id="text-orge56cb44">
+<p>
+For behold, I lift up my hand upon them, and they shall be a prey to those that served them: and you shall know that the Lord of hosts sent me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org301546a" class="outline-3">
+<h3 id="org301546a">Zechariah 2:10</h3>
+<div class="outline-text-3" id="text-org301546a">
+<p>
+Sing praise, and rejoice, O daughter of Sion: for behold I come, and I will dwell in the midst of thee: saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf7989b" class="outline-3">
+<h3 id="orgcf7989b">Zechariah 2:11</h3>
+<div class="outline-text-3" id="text-orgcf7989b">
+<p>
+And many nations shall be joined to the Lord in that day, and they shall be my people, and I will dwell in the midst of thee: and thou shalt know that the Lord of hosts hath sent me to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf927280" class="outline-3">
+<h3 id="orgf927280">Zechariah 2:12</h3>
+<div class="outline-text-3" id="text-orgf927280">
+<p>
+And the Lord shall possess Juda his portion in the sanctified land: and he shall yet choose Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49d5023" class="outline-3">
+<h3 id="org49d5023">Zechariah 2:13</h3>
+<div class="outline-text-3" id="text-org49d5023">
+<p>
+Let all flesh be silent at the presence of the Lord: for he is risen up out of his holy habitation. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1ee57f2" class="outline-2">
+<h2 id="org1ee57f2">Zechariah 3</h2>
+<div class="outline-text-2" id="text-org1ee57f2">
+</div>
+<div id="outline-container-orgcb3f50c" class="outline-3">
+<h3 id="orgcb3f50c">Zechariah 3:1</h3>
+<div class="outline-text-3" id="text-orgcb3f50c">
+<p>
+And the Lord shewed me Jesus the high priest standing before the angel of the Lord: and Satan stood on his right hand to be his adversary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org340e2a9" class="outline-3">
+<h3 id="org340e2a9">Zechariah 3:2</h3>
+<div class="outline-text-3" id="text-org340e2a9">
+<p>
+And the Lord said to Satan: The Lord rebuke thee, O Satan: and the Lord that chose Jerusalem rebuke thee: Is not this a brand plucked out of the fire?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35f0b35" class="outline-3">
+<h3 id="org35f0b35">Zechariah 3:3</h3>
+<div class="outline-text-3" id="text-org35f0b35">
+<p>
+And Jesus was clothed with filthy garments: and he stood before the face of the angel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org629ba7b" class="outline-3">
+<h3 id="org629ba7b">Zechariah 3:4</h3>
+<div class="outline-text-3" id="text-org629ba7b">
+<p>
+Who answered, and said to them that stood before him, saying: Take away the filthy garments from him. And he said to him: Behold I have taken away thy iniquity, and have clothed thee with change of garments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org082f96e" class="outline-3">
+<h3 id="org082f96e">Zechariah 3:5</h3>
+<div class="outline-text-3" id="text-org082f96e">
+<p>
+And he said: Put a clean mitre upon his head: and they put a clean mitre upon his head, and clothed him with garments, and the angel of the Lord stood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc6a4cb" class="outline-3">
+<h3 id="orgdc6a4cb">Zechariah 3:6</h3>
+<div class="outline-text-3" id="text-orgdc6a4cb">
+<p>
+And the angel of the Lord protested to Jesus, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2c5dc8" class="outline-3">
+<h3 id="orgd2c5dc8">Zechariah 3:7</h3>
+<div class="outline-text-3" id="text-orgd2c5dc8">
+<p>
+Thus saith the Lord of hosts: If thou wilt walk in my ways, and keep my charge, thou also shalt judge my house, and shalt keep my courts, and I will give thee some of them that are now present here to walk with thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb8ff81" class="outline-3">
+<h3 id="orgbb8ff81">Zechariah 3:8</h3>
+<div class="outline-text-3" id="text-orgbb8ff81">
+<p>
+Hear, O Jesus thou high priest, thou and thy friends that dwell before thee, for they are portending men: for behold, I WILL BRING MY SERVANT THE ORIENT.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1937f7a" class="outline-3">
+<h3 id="org1937f7a">Zechariah 3:9</h3>
+<div class="outline-text-3" id="text-org1937f7a">
+<p>
+For behold the stone that I have laid before Jesus: upon one stone there are seven eyes: behold I will grave the graving thereof, saith the Lord of hosts: and I will take away the iniquity of that land in one day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7a243a" class="outline-3">
+<h3 id="orgf7a243a">Zechariah 3:10</h3>
+<div class="outline-text-3" id="text-orgf7a243a">
+<p>
+In that day, saith the Lord of hosts, every man shall call his friend under the vine and under the fig tree. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgffd6cf9" class="outline-2">
+<h2 id="orgffd6cf9">Zechariah 4</h2>
+<div class="outline-text-2" id="text-orgffd6cf9">
+</div>
+<div id="outline-container-orgf058a1d" class="outline-3">
+<h3 id="orgf058a1d">Zechariah 4:1</h3>
+<div class="outline-text-3" id="text-orgf058a1d">
+<p>
+And the angel that spoke in me came again: and he waked me, as a man that is wakened out of his sleep.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcb1f3f" class="outline-3">
+<h3 id="orgfcb1f3f">Zechariah 4:2</h3>
+<div class="outline-text-3" id="text-orgfcb1f3f">
+<p>
+And he said to me: What seest thou? And I said: I have looked, and behold a candlestick all of gold, and its lamp upon the top of it: and the seven lights thereof upon it: and seven funnels for the lights that were upon the top thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb507096" class="outline-3">
+<h3 id="orgb507096">Zechariah 4:3</h3>
+<div class="outline-text-3" id="text-orgb507096">
+<p>
+And two olive trees over it: one upon the right side of the lamp, and the other upon the left side thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa5f510" class="outline-3">
+<h3 id="orgfa5f510">Zechariah 4:4</h3>
+<div class="outline-text-3" id="text-orgfa5f510">
+<p>
+And I answered, and said to the angel that spoke in me, saying: What are these things, my lord?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0031907" class="outline-3">
+<h3 id="org0031907">Zechariah 4:5</h3>
+<div class="outline-text-3" id="text-org0031907">
+<p>
+And the angel that spoke in me answered, and said to me: Knowest thou not what these things are? And I said: No, my lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org393c54a" class="outline-3">
+<h3 id="org393c54a">Zechariah 4:6</h3>
+<div class="outline-text-3" id="text-org393c54a">
+<p>
+And he answered, and spoke to me, saying: This is the word of the Lord to Zorobabel, saying: Not with an army, nor by might, but by my spirit, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ce58d1" class="outline-3">
+<h3 id="org4ce58d1">Zechariah 4:7</h3>
+<div class="outline-text-3" id="text-org4ce58d1">
+<p>
+Who art thou, O great mountain, before Zorobabel? thou shalt become a plain: and he shall bring out the chief stone, and shall give equal grace to the grace thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde832b7" class="outline-3">
+<h3 id="orgde832b7">Zechariah 4:8</h3>
+<div class="outline-text-3" id="text-orgde832b7">
+<p>
+And the word of the Lord came to me, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a4f776" class="outline-3">
+<h3 id="org9a4f776">Zechariah 4:9</h3>
+<div class="outline-text-3" id="text-org9a4f776">
+<p>
+The hands of Zorobabel have laid the foundations of this house, and his hands shall finish it: and you shall know that the Lord of hosts hath sent me to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedd7040" class="outline-3">
+<h3 id="orgedd7040">Zechariah 4:10</h3>
+<div class="outline-text-3" id="text-orgedd7040">
+<p>
+For who hath despised little days? and they shall rejoice, and shall see the tin plummet in the hand of Zorobabel. These are the seven eyes of the Lord, that run to and fro through the whole earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb928b9" class="outline-3">
+<h3 id="orgcb928b9">Zechariah 4:11</h3>
+<div class="outline-text-3" id="text-orgcb928b9">
+<p>
+And I answered, and said to him: What are these two olive trees upon the right side of the candlestick, and upon the left side thereof ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9b7942" class="outline-3">
+<h3 id="orga9b7942">Zechariah 4:12</h3>
+<div class="outline-text-3" id="text-orga9b7942">
+<p>
+And I answered again, and said to him: What are the two olive branches, that are by the two golden beaks, in which are the funnels of gold?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e4feaa" class="outline-3">
+<h3 id="org9e4feaa">Zechariah 4:13</h3>
+<div class="outline-text-3" id="text-org9e4feaa">
+<p>
+And he spoke to me, saying: Knowest thou not what these are? And I said: No, my lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3bd9901" class="outline-3">
+<h3 id="org3bd9901">Zechariah 4:14</h3>
+<div class="outline-text-3" id="text-org3bd9901">
+<p>
+And he said: These are two sons of oil who stand before the Lord of the whole earth. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1ffcad9" class="outline-2">
+<h2 id="org1ffcad9">Zechariah 5</h2>
+<div class="outline-text-2" id="text-org1ffcad9">
+</div>
+<div id="outline-container-orgbd95f34" class="outline-3">
+<h3 id="orgbd95f34">Zechariah 5:1</h3>
+<div class="outline-text-3" id="text-orgbd95f34">
+<p>
+And I turned and lifted up my eyes: and I saw, and behold a volume flying.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org555f877" class="outline-3">
+<h3 id="org555f877">Zechariah 5:2</h3>
+<div class="outline-text-3" id="text-org555f877">
+<p>
+And he said to me: What seest thou? And I said: I see a volume flying: the length thereof is twenty cubits, and the breadth thereof ten cubits.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf59ea37" class="outline-3">
+<h3 id="orgf59ea37">Zechariah 5:3</h3>
+<div class="outline-text-3" id="text-orgf59ea37">
+<p>
+And he said to me: This is the curse that goeth forth over the face of the earth: for every thief shall be judged as is there written: and every one that sweareth in like manner shall be judged by it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec66553" class="outline-3">
+<h3 id="orgec66553">Zechariah 5:4</h3>
+<div class="outline-text-3" id="text-orgec66553">
+<p>
+I will bring it forth, saith the Lord of hosts: and it shall come to the house of the thief, and to the house of him that sweareth falsely by my name: and it shall remain in the midst of his house, and shall consume it, with the timber thereof, and the stones thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a84ec6" class="outline-3">
+<h3 id="org6a84ec6">Zechariah 5:5</h3>
+<div class="outline-text-3" id="text-org6a84ec6">
+<p>
+And the angel went forth that spoke in me, and he said to me: Lift up thy eyes, and see what this is, that goeth forth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org091df3a" class="outline-3">
+<h3 id="org091df3a">Zechariah 5:6</h3>
+<div class="outline-text-3" id="text-org091df3a">
+<p>
+And I said: What is it? And he said: This is a vessel going forth. And he said: This is their eye in all the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51c1098" class="outline-3">
+<h3 id="org51c1098">Zechariah 5:7</h3>
+<div class="outline-text-3" id="text-org51c1098">
+<p>
+And behold a talent of lead was carried, and behold a woman sitting in the midst of the vessel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58a4563" class="outline-3">
+<h3 id="org58a4563">Zechariah 5:8</h3>
+<div class="outline-text-3" id="text-org58a4563">
+<p>
+And he said: This is wickedness. And he cast her into the midst of the vessel, and cast the weight of lead upon the mouth thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cb3181" class="outline-3">
+<h3 id="org8cb3181">Zechariah 5:9</h3>
+<div class="outline-text-3" id="text-org8cb3181">
+<p>
+And I lifted up my eyes and looked: and behold there came out two women, and wind was in their wings, and they had wings like the wings of a kite: and they lifted up the vessel between the earth and the heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fea499" class="outline-3">
+<h3 id="org9fea499">Zechariah 5:10</h3>
+<div class="outline-text-3" id="text-org9fea499">
+<p>
+And I said to the angel that spoke in me: Whither do these carry the vessel?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0ad25c" class="outline-3">
+<h3 id="orgb0ad25c">Zechariah 5:11</h3>
+<div class="outline-text-3" id="text-orgb0ad25c">
+<p>
+And he said to me: That a house may be built for it in the land of Sennaar, and that it may be established, and set there upon its own basis. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org58e5828" class="outline-2">
+<h2 id="org58e5828">Zechariah 6</h2>
+<div class="outline-text-2" id="text-org58e5828">
+</div>
+<div id="outline-container-orgb5331ac" class="outline-3">
+<h3 id="orgb5331ac">Zechariah 6:1</h3>
+<div class="outline-text-3" id="text-orgb5331ac">
+<p>
+And I turned, and lifted up my eyes, and saw: and behold four chariots came out from the midst of two mountains: and the mountains were mountains of brass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9e9a39" class="outline-3">
+<h3 id="orga9e9a39">Zechariah 6:2</h3>
+<div class="outline-text-3" id="text-orga9e9a39">
+<p>
+In the first chariot were red horses, and in the second chariot black horses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea1112e" class="outline-3">
+<h3 id="orgea1112e">Zechariah 6:3</h3>
+<div class="outline-text-3" id="text-orgea1112e">
+<p>
+And in the third chariot white horses, and in the fourth chariot grisled horses, and strong ones.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3cf19c" class="outline-3">
+<h3 id="orgf3cf19c">Zechariah 6:4</h3>
+<div class="outline-text-3" id="text-orgf3cf19c">
+<p>
+And I answered, and said to the angel that spoke in me: What are these, my lord?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57fcb6b" class="outline-3">
+<h3 id="org57fcb6b">Zechariah 6:5</h3>
+<div class="outline-text-3" id="text-org57fcb6b">
+<p>
+And the angel answered, and said to me: These are the four winds of the heaven, which go forth to stand before the Lord of all the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f6705f" class="outline-3">
+<h3 id="org8f6705f">Zechariah 6:6</h3>
+<div class="outline-text-3" id="text-org8f6705f">
+<p>
+That in which were the black horses went forth into the land of the north, and the white went forth after them: and the grisled went forth to the land the south.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabc7315" class="outline-3">
+<h3 id="orgabc7315">Zechariah 6:7</h3>
+<div class="outline-text-3" id="text-orgabc7315">
+<p>
+And they that were most strong, went out, and sought to go, and to run to and fro through all the earth. And he said: Go, walk throughout the earth: and they walked throughout the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org712001e" class="outline-3">
+<h3 id="org712001e">Zechariah 6:8</h3>
+<div class="outline-text-3" id="text-org712001e">
+<p>
+And he called me, and spoke to me, saying: Behold they that go forth into the land of the north, have quieted my spirit in the land of the north.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42d5ebd" class="outline-3">
+<h3 id="org42d5ebd">Zechariah 6:9</h3>
+<div class="outline-text-3" id="text-org42d5ebd">
+<p>
+And the word of the Lord came to me, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a26051" class="outline-3">
+<h3 id="org6a26051">Zechariah 6:10</h3>
+<div class="outline-text-3" id="text-org6a26051">
+<p>
+Take of them of the captivity, of Holdai, and of Tobias, and of Idaias; thou shalt come in that day, and shalt go into the house of Josias, the son of Sophonias, who came out of Babylon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49d573a" class="outline-3">
+<h3 id="org49d573a">Zechariah 6:11</h3>
+<div class="outline-text-3" id="text-org49d573a">
+<p>
+And thou shalt take gold and silver: and shalt make crowns, and thou shalt set them on the head of Jesus the son of Josedec, the high priest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1707cd" class="outline-3">
+<h3 id="orgd1707cd">Zechariah 6:12</h3>
+<div class="outline-text-3" id="text-orgd1707cd">
+<p>
+And thou shalt speak to him, saying: Thus saith the Lord of hosts, saying: BEHOLD A MAN, THE ORIENT IS HIS NAME: and under him shall he spring up, and shall build a temple to the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01f9c60" class="outline-3">
+<h3 id="org01f9c60">Zechariah 6:13</h3>
+<div class="outline-text-3" id="text-org01f9c60">
+<p>
+Yea, he shall build a temple to the Lord: and he shall bear the glory, and shall sit, and rule upon his throne: and he shall be a priest upon his throne, and the counsel of peace shall be between them both.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdc7ca8" class="outline-3">
+<h3 id="orgfdc7ca8">Zechariah 6:14</h3>
+<div class="outline-text-3" id="text-orgfdc7ca8">
+<p>
+And the crowns shall be to Helem, and Tobias, and Idaias, and to Hem, the son of Sophonias, a memorial in the temple of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32f6521" class="outline-3">
+<h3 id="org32f6521">Zechariah 6:15</h3>
+<div class="outline-text-3" id="text-org32f6521">
+<p>
+And they that are far off, shall come and shall build in the temple of the Lord: and you shall know that the Lord of hosts sent me to you. But this shall come to pass, if hearing you will hear the voice of the Lord your God. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga79bdc3" class="outline-2">
+<h2 id="orga79bdc3">Zechariah 7</h2>
+<div class="outline-text-2" id="text-orga79bdc3">
+</div>
+<div id="outline-container-org1fa6565" class="outline-3">
+<h3 id="org1fa6565">Zechariah 7:1</h3>
+<div class="outline-text-3" id="text-org1fa6565">
+<p>
+And it came to pass in the fourth year of king Darius, that the word of the Lord came to Zechariah, in the fourth day of the ninth month, which is Casleu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8583b27" class="outline-3">
+<h3 id="org8583b27">Zechariah 7:2</h3>
+<div class="outline-text-3" id="text-org8583b27">
+<p>
+When Sarasar, and Rogommelech, and the men that were with him, sent to the house of God, to entreat the face of the Lord:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36c7943" class="outline-3">
+<h3 id="org36c7943">Zechariah 7:3</h3>
+<div class="outline-text-3" id="text-org36c7943">
+<p>
+To speak to the priests of the house of the Lord of hosts, and to the prophets, saying: Must I weep in the fifth month, or must I sanctify myself as I have now done for many years?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org261b8b5" class="outline-3">
+<h3 id="org261b8b5">Zechariah 7:4</h3>
+<div class="outline-text-3" id="text-org261b8b5">
+<p>
+And the word of the Lord of hosts came to me, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b79e0f" class="outline-3">
+<h3 id="org5b79e0f">Zechariah 7:5</h3>
+<div class="outline-text-3" id="text-org5b79e0f">
+<p>
+Speak to all the people of the land, and to the priests, saying: When you fasted, and mourned in the fifth and the seventh month for these seventy years: did you keep a fast unto me?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc02d1d" class="outline-3">
+<h3 id="orgfc02d1d">Zechariah 7:6</h3>
+<div class="outline-text-3" id="text-orgfc02d1d">
+<p>
+And when you did eat and drink, did you not eat for yourselves, and drink for yourselves?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4e0d2b" class="outline-3">
+<h3 id="orgd4e0d2b">Zechariah 7:7</h3>
+<div class="outline-text-3" id="text-orgd4e0d2b">
+<p>
+Are not these the words which the Lord spoke by the hand of the former prophets, when Jerusalem as yet was inhabited, and was wealthy, both itself and the cities round about it, and there were inhabitants towards the south, and in the plain?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48c3a23" class="outline-3">
+<h3 id="org48c3a23">Zechariah 7:8</h3>
+<div class="outline-text-3" id="text-org48c3a23">
+<p>
+And the word of the Lord came to Zechariah, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd14a859" class="outline-3">
+<h3 id="orgd14a859">Zechariah 7:9</h3>
+<div class="outline-text-3" id="text-orgd14a859">
+<p>
+Thus saith the Lord of hosts, saying: Judge ye true judgment, and shew ye mercy and compassion every man to his brother.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0384a48" class="outline-3">
+<h3 id="org0384a48">Zechariah 7:10</h3>
+<div class="outline-text-3" id="text-org0384a48">
+<p>
+And oppress not the widow, and the fatherless, and the stranger, and the poor: and let not a man devise evil in his heart against his brother.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf9b525" class="outline-3">
+<h3 id="orgcf9b525">Zechariah 7:11</h3>
+<div class="outline-text-3" id="text-orgcf9b525">
+<p>
+But they would not hearken, and they turned away the shoulder to depart: and they stopped their ears, not to hear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3d4c6e" class="outline-3">
+<h3 id="orgc3d4c6e">Zechariah 7:12</h3>
+<div class="outline-text-3" id="text-orgc3d4c6e">
+<p>
+And they made their heart as the adamant stone, lest they should hear the law, and the words which the Lord of hosts sent in his spirit by the hand of the former prophets: so a great indignation came from Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org574e215" class="outline-3">
+<h3 id="org574e215">Zechariah 7:13</h3>
+<div class="outline-text-3" id="text-org574e215">
+<p>
+And it came to pass that as he spoke, and they heard not: so shall they cry, and I will not hear, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9450e25" class="outline-3">
+<h3 id="org9450e25">Zechariah 7:14</h3>
+<div class="outline-text-3" id="text-org9450e25">
+<p>
+And I dispersed them throughout all kingdoms, which they know not: and the land was left desolate behind them, so that no man passed through or returned: and they changed the delightful land into a wilderness. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgab0df00" class="outline-2">
+<h2 id="orgab0df00">Zechariah 8</h2>
+<div class="outline-text-2" id="text-orgab0df00">
+</div>
+<div id="outline-container-orgcb91a9c" class="outline-3">
+<h3 id="orgcb91a9c">Zechariah 8:1</h3>
+<div class="outline-text-3" id="text-orgcb91a9c">
+<p>
+And the word of the Lord of hosts came to me, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc4f0b6" class="outline-3">
+<h3 id="orgfc4f0b6">Zechariah 8:2</h3>
+<div class="outline-text-3" id="text-orgfc4f0b6">
+<p>
+Thus saith the Lord of hosts: I have been jealous for Sion with a great jealousy, and with a great indignation have I been jealous for her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78dd1ab" class="outline-3">
+<h3 id="org78dd1ab">Zechariah 8:3</h3>
+<div class="outline-text-3" id="text-org78dd1ab">
+<p>
+Thus saith the Lord of hosts: I am returned to Sion, and I will dwell in the midst of Jerusalem: and Jerusalem shall be called The city of truth, and the mountain of the Lord of hosts, The sanctified mountain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48d6e11" class="outline-3">
+<h3 id="org48d6e11">Zechariah 8:4</h3>
+<div class="outline-text-3" id="text-org48d6e11">
+<p>
+Thus saith the Lord of hosts: There shall yet old men and old women dwell in the streets of Jerusalem: and every man with his staff in his hand through multitude of days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1f9d03" class="outline-3">
+<h3 id="orgc1f9d03">Zechariah 8:5</h3>
+<div class="outline-text-3" id="text-orgc1f9d03">
+<p>
+And the streets of the city shall be full of boys and girls, playing in the streets thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63391df" class="outline-3">
+<h3 id="org63391df">Zechariah 8:6</h3>
+<div class="outline-text-3" id="text-org63391df">
+<p>
+Thus saith the Lord of hosts: If it seem hard in the eyes of the remnant of this people in those days: shall it be hard in my eyes, saith the Lord of hosts?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68037f7" class="outline-3">
+<h3 id="org68037f7">Zechariah 8:7</h3>
+<div class="outline-text-3" id="text-org68037f7">
+<p>
+Thus saith the Lord of hosts: Behold I will save my people from the land of the east, and from the land of the going down of the sun.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org597bd09" class="outline-3">
+<h3 id="org597bd09">Zechariah 8:8</h3>
+<div class="outline-text-3" id="text-org597bd09">
+<p>
+And I will bring them, and they shall dwell in the midst of Jerusalem: and they shall be my people, and I will be their God in truth and in justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49cd68a" class="outline-3">
+<h3 id="org49cd68a">Zechariah 8:9</h3>
+<div class="outline-text-3" id="text-org49cd68a">
+<p>
+Thus saith the Lord of hosts: Let your hands be strengthened, you that hear in these days these words by the mouth of the prophets, in the day that the house of the Lord of hosts was founded, that the temple might be built.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0b6340" class="outline-3">
+<h3 id="orgc0b6340">Zechariah 8:10</h3>
+<div class="outline-text-3" id="text-orgc0b6340">
+<p>
+For before those days there was no hire for men, neither was there hire for beasts, neither was there peace to him that came in, nor to him that went out, because of the tribulation: and I let all men go every one against his neighbour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11e4c52" class="outline-3">
+<h3 id="org11e4c52">Zechariah 8:11</h3>
+<div class="outline-text-3" id="text-org11e4c52">
+<p>
+But now I will not deal with the remnant of this people according to the former days, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a045dc" class="outline-3">
+<h3 id="org8a045dc">Zechariah 8:12</h3>
+<div class="outline-text-3" id="text-org8a045dc">
+<p>
+But there shall be the seed of peace: the vine shall yield her fruit, and the earth shall give her increase, and the heavens shall give their dew: and I will cause the remnant of this people to possess all these things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc86cc2c" class="outline-3">
+<h3 id="orgc86cc2c">Zechariah 8:13</h3>
+<div class="outline-text-3" id="text-orgc86cc2c">
+<p>
+And it shall come to pass, that as you were a curse among the Gentiles, O house of Juda, and house of Israel: so will I save you, and you shall be a blessing: fear not, let your hands be strengthened.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf654993" class="outline-3">
+<h3 id="orgf654993">Zechariah 8:14</h3>
+<div class="outline-text-3" id="text-orgf654993">
+<p>
+For thus saith the Lord of hosts: As I purposed to afflict you, when your fathers had provoked me to wrath, saith the Lord,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f776e9" class="outline-3">
+<h3 id="org2f776e9">Zechariah 8:15</h3>
+<div class="outline-text-3" id="text-org2f776e9">
+<p>
+And I had no mercy: so turning again I have thought in these days to do good to the house of Juda, and Jerusalem: fear not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89b5856" class="outline-3">
+<h3 id="org89b5856">Zechariah 8:16</h3>
+<div class="outline-text-3" id="text-org89b5856">
+<p>
+These then are the things, which you shall do: Speak ye truth every one to his neighbour; judge ye truth and judgment of peace in your gates.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org060909f" class="outline-3">
+<h3 id="org060909f">Zechariah 8:17</h3>
+<div class="outline-text-3" id="text-org060909f">
+<p>
+And let none of you imagine evil in your hearts against his friend: and love not a false oath: for all these are the things that I hate, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f171ab" class="outline-3">
+<h3 id="org0f171ab">Zechariah 8:18</h3>
+<div class="outline-text-3" id="text-org0f171ab">
+<p>
+And the word of the Lord of hosts came to me, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fef7ef" class="outline-3">
+<h3 id="org3fef7ef">Zechariah 8:19</h3>
+<div class="outline-text-3" id="text-org3fef7ef">
+<p>
+Thus saith the Lord of hosts: The fast of the fourth month, and the fast of the fifth, and the fast of the seventh, and the fast of the tenth shall be to the house of Juda, joy, and gladness, and great solemnities: only love ye truth and peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1789e3f" class="outline-3">
+<h3 id="org1789e3f">Zechariah 8:20</h3>
+<div class="outline-text-3" id="text-org1789e3f">
+<p>
+Thus saith the Lord of hosts, until people come and dwell in many cities,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf243547" class="outline-3">
+<h3 id="orgf243547">Zechariah 8:21</h3>
+<div class="outline-text-3" id="text-orgf243547">
+<p>
+And the inhabitants go one to another, saying: Let us go, and entreat the face of the Lord, and let us seek the Lord of hosts: I also will go.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org955e5a4" class="outline-3">
+<h3 id="org955e5a4">Zechariah 8:22</h3>
+<div class="outline-text-3" id="text-org955e5a4">
+<p>
+And many peoples, and strong nations shall come to seek the Lord of hosts in Jerusalem, and to entreat the face of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73fe780" class="outline-3">
+<h3 id="org73fe780">Zechariah 8:23</h3>
+<div class="outline-text-3" id="text-org73fe780">
+<p>
+Thus saith the Lord of hosts: In those days, wherein ten men of all languages of the Gentiles shall take hold, and shall hold fast the skirt of one that is a Jew, saying: We will go with you: for we have heard that God is with you. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6a12fe4" class="outline-2">
+<h2 id="org6a12fe4">Zechariah 9</h2>
+<div class="outline-text-2" id="text-org6a12fe4">
+</div>
+<div id="outline-container-org7e9b35e" class="outline-3">
+<h3 id="org7e9b35e">Zechariah 9:1</h3>
+<div class="outline-text-3" id="text-org7e9b35e">
+<p>
+The burden of the word of the Lord in the land of Hadrach, and of Damascus the rest thereof: for the eye of man, and of all the tribes of Israel is the Lord&rsquo;s.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82ccf5e" class="outline-3">
+<h3 id="org82ccf5e">Zechariah 9:2</h3>
+<div class="outline-text-3" id="text-org82ccf5e">
+<p>
+Emath also in the borders thereof, and Tyre, and Sidon: for they have taken to themselves to be exceeding wise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbad2962" class="outline-3">
+<h3 id="orgbad2962">Zechariah 9:3</h3>
+<div class="outline-text-3" id="text-orgbad2962">
+<p>
+And Tyre hath built herself a strong hold, and heaped together silver as earth, and gold as the mire of the streets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde9cc8b" class="outline-3">
+<h3 id="orgde9cc8b">Zechariah 9:4</h3>
+<div class="outline-text-3" id="text-orgde9cc8b">
+<p>
+Behold the Lord shall possess her, and shall strike her strength in the sea, and she shall be devoured with fire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc18a037" class="outline-3">
+<h3 id="orgc18a037">Zechariah 9:5</h3>
+<div class="outline-text-3" id="text-orgc18a037">
+<p>
+Ascalon shall see, and shall fear, and Gaza, and shall be very sorrowful: and Accaron, because her hope is confounded: and the king shall perish from Gaza, and Ascalon shall not be inhabited.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc8969e" class="outline-3">
+<h3 id="orgdc8969e">Zechariah 9:6</h3>
+<div class="outline-text-3" id="text-orgdc8969e">
+<p>
+And the divider shall sit in Azotus, and I will destroy the pride of the Philistines.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb798269" class="outline-3">
+<h3 id="orgb798269">Zechariah 9:7</h3>
+<div class="outline-text-3" id="text-orgb798269">
+<p>
+And I will take away his blood out of his mouth, and his abominations from between his teeth: and even he shall be left to our God, and he shall be as a governor in Juda, and Accaron as a Jebusite.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea6cc2a" class="outline-3">
+<h3 id="orgea6cc2a">Zechariah 9:8</h3>
+<div class="outline-text-3" id="text-orgea6cc2a">
+<p>
+And I will encompass my house with them that serve me in war, going and returning, and the oppressor shall no more pass through them: for now I have seen with my eyes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf910cca" class="outline-3">
+<h3 id="orgf910cca">Zechariah 9:9</h3>
+<div class="outline-text-3" id="text-orgf910cca">
+<p>
+Rejoice greatly, O daughter of Sion, shout for joy, O daughter of Jerusalem: BEHOLD THY KING will come to thee, the just and saviour: he is poor, and riding upon an ass, and upon a colt, the foal of an ass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org826d057" class="outline-3">
+<h3 id="org826d057">Zechariah 9:10</h3>
+<div class="outline-text-3" id="text-org826d057">
+<p>
+And I will destroy the chariot out of Ephraim, and the horse out of Jerusalem, and the bow for war shall be broken: and he shall speak peace to the Gentiles, and his power shall be from sea to sea, and from the rivers even to the end of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org006815a" class="outline-3">
+<h3 id="org006815a">Zechariah 9:11</h3>
+<div class="outline-text-3" id="text-org006815a">
+<p>
+Thou also by the blood of thy testament hast sent forth thy prisoners out of the pit, wherein is no water.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e73abb" class="outline-3">
+<h3 id="org6e73abb">Zechariah 9:12</h3>
+<div class="outline-text-3" id="text-org6e73abb">
+<p>
+Return to the strong hold, ye prisoners of hope, I will render thee double as I declare today.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e47b34" class="outline-3">
+<h3 id="org0e47b34">Zechariah 9:13</h3>
+<div class="outline-text-3" id="text-org0e47b34">
+<p>
+Because I have bent Juda for me as a bow, I have filled Ephraim: and I will raise up thy sons, O Sion, above thy sons, O Greece, and I will make thee as the sword of the mighty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5d0424" class="outline-3">
+<h3 id="orgd5d0424">Zechariah 9:14</h3>
+<div class="outline-text-3" id="text-orgd5d0424">
+<p>
+And the Lord God shall be seen over them, and his dart shall go forth as lightning: and the Lord God will sound the trumpet, and go in the whirlwind of the south.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05c885a" class="outline-3">
+<h3 id="org05c885a">Zechariah 9:15</h3>
+<div class="outline-text-3" id="text-org05c885a">
+<p>
+The Lord of hosts will protect them: and they shall devour, and subdue with the stones of the sling: and drinking they shall be inebriated as it were with wine, and they shall be filled as bowls, and as the horns of the altar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75c467f" class="outline-3">
+<h3 id="org75c467f">Zechariah 9:16</h3>
+<div class="outline-text-3" id="text-org75c467f">
+<p>
+And the Lord their God will save them in that day, as the flock of his people: for holy stones shall be lifted up over his land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2fcfaf" class="outline-3">
+<h3 id="orgc2fcfaf">Zechariah 9:17</h3>
+<div class="outline-text-3" id="text-orgc2fcfaf">
+<p>
+For what is the good thing of him, and what is his beautiful thing, but the corn of the elect, and wine springing forth virgins? 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org00c0860" class="outline-2">
+<h2 id="org00c0860">Zechariah 10</h2>
+<div class="outline-text-2" id="text-org00c0860">
+</div>
+<div id="outline-container-orge7d0f1d" class="outline-3">
+<h3 id="orge7d0f1d">Zechariah 10:1</h3>
+<div class="outline-text-3" id="text-orge7d0f1d">
+<p>
+Ask ye of the Lord rain in the latter season, and the Lord will make snows, and will give them showers of rain, to every one grass in the field.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org398209a" class="outline-3">
+<h3 id="org398209a">Zechariah 10:2</h3>
+<div class="outline-text-3" id="text-org398209a">
+<p>
+For the idols have spoken what was unprofitable, and the diviners have seen a lie, and the dreamers have spoken vanity: they comforted in vain: therefore they were led away as a flock: they shall be afflicted, because they have no shepherd.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53cdb79" class="outline-3">
+<h3 id="org53cdb79">Zechariah 10:3</h3>
+<div class="outline-text-3" id="text-org53cdb79">
+<p>
+My wrath is kindled against the shepherds, and I will visit upon the buck goats: for the Lord of hosts hath visited his flock, the house of Juda, and hath made them as the horse of his glory in the battle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org933a67a" class="outline-3">
+<h3 id="org933a67a">Zechariah 10:4</h3>
+<div class="outline-text-3" id="text-org933a67a">
+<p>
+Out of him shall come forth the corner, out of him the pin, out of him the bow of battle, out of him every exacter together.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69266fb" class="outline-3">
+<h3 id="org69266fb">Zechariah 10:5</h3>
+<div class="outline-text-3" id="text-org69266fb">
+<p>
+And they shall be as mighty men, treading under foot the mire of the ways in battle: and they shall fight, because the Lord is with them, and the riders of horses shall be confounded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a6dc04" class="outline-3">
+<h3 id="org3a6dc04">Zechariah 10:6</h3>
+<div class="outline-text-3" id="text-org3a6dc04">
+<p>
+And I will strengthen the house of Juda, and save the house of Joseph: and I will bring them back again, because I will have mercy on them: and they shall be as they were when I had not cast them off, for I am the Lord their God, and will hear them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47ce9d3" class="outline-3">
+<h3 id="org47ce9d3">Zechariah 10:7</h3>
+<div class="outline-text-3" id="text-org47ce9d3">
+<p>
+And they shall be as the valiant men of Ephraim, and their heart shall rejoice as through wine: and their children shall see, and shall rejoice, and their heart shall be joyful in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33a0a1f" class="outline-3">
+<h3 id="org33a0a1f">Zechariah 10:8</h3>
+<div class="outline-text-3" id="text-org33a0a1f">
+<p>
+I will whistle for them, and I will gather them together, because I have redeemed them: and I will multiply them as they were multiplied before.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a263e8" class="outline-3">
+<h3 id="org2a263e8">Zechariah 10:9</h3>
+<div class="outline-text-3" id="text-org2a263e8">
+<p>
+And I will sow them among peoples: and from afar they shall remember me: and they shall live with their children, and shall return.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff5b5ab" class="outline-3">
+<h3 id="orgff5b5ab">Zechariah 10:10</h3>
+<div class="outline-text-3" id="text-orgff5b5ab">
+<p>
+And I will bring them back out of the land of Egypt, and I will gather them from among the Assyrians: and will bring them to the land of Galaad, and Libanus, and place shall not be found for them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31d566d" class="outline-3">
+<h3 id="org31d566d">Zechariah 10:11</h3>
+<div class="outline-text-3" id="text-org31d566d">
+<p>
+And he shall pass over the strait of the sea, and shall strike the waves in the sea, and all the depths of the river shall be confounded, and the pride of Assyria shall be humbled, and the sceptre of Egypt shall depart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7945a80" class="outline-3">
+<h3 id="org7945a80">Zechariah 10:12</h3>
+<div class="outline-text-3" id="text-org7945a80">
+<p>
+I will strengthen them in the Lord, and they shall walk in his name, saith the Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3a1cc1e" class="outline-2">
+<h2 id="org3a1cc1e">Zechariah 11</h2>
+<div class="outline-text-2" id="text-org3a1cc1e">
+</div>
+<div id="outline-container-org18dec11" class="outline-3">
+<h3 id="org18dec11">Zechariah 11:1</h3>
+<div class="outline-text-3" id="text-org18dec11">
+<p>
+Open thy gates, O Libanus, and let fire devour thy cedars.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4089dde" class="outline-3">
+<h3 id="org4089dde">Zechariah 11:2</h3>
+<div class="outline-text-3" id="text-org4089dde">
+<p>
+Howl, thou fir tree, for the cedar is fallen, for the mighty are laid waste: howl, ye oaks of Basan, because the fenced forest is cut down.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d1f949" class="outline-3">
+<h3 id="org3d1f949">Zechariah 11:3</h3>
+<div class="outline-text-3" id="text-org3d1f949">
+<p>
+The voice of the howling of the shepherds, because their glory is laid waste: the voice of the roaring of the lions, because the pride of the Jordan is spoiled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1333f55" class="outline-3">
+<h3 id="org1333f55">Zechariah 11:4</h3>
+<div class="outline-text-3" id="text-org1333f55">
+<p>
+Thus saith the Lord my God: Feed the flock of the slaughter,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccddfd1" class="outline-3">
+<h3 id="orgccddfd1">Zechariah 11:5</h3>
+<div class="outline-text-3" id="text-orgccddfd1">
+<p>
+Which they that possessed, slew, and repented not, and they sold them, saying: Blessed be the Lord, we are become rich: and their shepherds spared them not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org868d520" class="outline-3">
+<h3 id="org868d520">Zechariah 11:6</h3>
+<div class="outline-text-3" id="text-org868d520">
+<p>
+And I will no more spare the inhabitants of the land, saith the Lord: behold I will deliver the men, every one into his neighbour&rsquo;s hand, and into the hand of his king: and they shall destroy the land, and I will not deliver it out of their hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2609bf" class="outline-3">
+<h3 id="orge2609bf">Zechariah 11:7</h3>
+<div class="outline-text-3" id="text-orge2609bf">
+<p>
+And I will feed the flock of slaughter for this, O ye poor of the flock. And I took unto me two rods, one I called Beauty, and the other I called a Cord, and I fed the flock.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf1daf6" class="outline-3">
+<h3 id="orgdf1daf6">Zechariah 11:8</h3>
+<div class="outline-text-3" id="text-orgdf1daf6">
+<p>
+And I cut off three shepherds in one month, and my soul was straitened in their regard: for their soul also varied in my regard.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d40adc" class="outline-3">
+<h3 id="org3d40adc">Zechariah 11:9</h3>
+<div class="outline-text-3" id="text-org3d40adc">
+<p>
+And I said: I will not feed you: that which dieth, let it die: and that which is cut off, let it be cut off: and let the rest devour every one the flesh of his neighbour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94d31f5" class="outline-3">
+<h3 id="org94d31f5">Zechariah 11:10</h3>
+<div class="outline-text-3" id="text-org94d31f5">
+<p>
+And I took my rod that was called Beauty, and I cut it asunder to make void my covenant, which I had made with all people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc347f5a" class="outline-3">
+<h3 id="orgc347f5a">Zechariah 11:11</h3>
+<div class="outline-text-3" id="text-orgc347f5a">
+<p>
+And it was made void in that day: and so the poor of the flock that keep for me, understood that it is the word of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a9f159" class="outline-3">
+<h3 id="org9a9f159">Zechariah 11:12</h3>
+<div class="outline-text-3" id="text-org9a9f159">
+<p>
+And I said to them: If it be good in your eyes, bring hither my wages: and if not, be quiet. And they weighed for my wages thirty pieces of silver.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2b426f" class="outline-3">
+<h3 id="orga2b426f">Zechariah 11:13</h3>
+<div class="outline-text-3" id="text-orga2b426f">
+<p>
+And the Lord said to me: Cast it to the statuary, a handsome price, that I was prized at by them. And I took the thirty pieces of silver, and I cast them into the house of the Lord to the statuary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6464467" class="outline-3">
+<h3 id="org6464467">Zechariah 11:14</h3>
+<div class="outline-text-3" id="text-org6464467">
+<p>
+And I cut off my second rod that was called a Cord, that I might break the brotherhood between Juda and Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb7e3d9" class="outline-3">
+<h3 id="orgfb7e3d9">Zechariah 11:15</h3>
+<div class="outline-text-3" id="text-orgfb7e3d9">
+<p>
+And the Lord said to me: Take to thee yet the instruments of a foolish shepherd.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3aebe2" class="outline-3">
+<h3 id="orge3aebe2">Zechariah 11:16</h3>
+<div class="outline-text-3" id="text-orge3aebe2">
+<p>
+For behold I will raise up a shepherd in the land, who shall not visit what is forsaken, nor seek what is scattered, nor heal what is broken, nor nourish that which standeth, and he shall eat the flesh of the fat ones, and break their hoofs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bf70c1" class="outline-3">
+<h3 id="org2bf70c1">Zechariah 11:17</h3>
+<div class="outline-text-3" id="text-org2bf70c1">
+<p>
+O shepherd, and idol, that forsaketh the flock: the sword upon his arm and upon his right eye: his arm shall quite wither away, and his right eye shall be utterly darkened. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org06a6356" class="outline-2">
+<h2 id="org06a6356">Zechariah 12</h2>
+<div class="outline-text-2" id="text-org06a6356">
+</div>
+<div id="outline-container-org85158eb" class="outline-3">
+<h3 id="org85158eb">Zechariah 12:1</h3>
+<div class="outline-text-3" id="text-org85158eb">
+<p>
+The burden of the word of the Lord upon Israel. Thus saith the Lord, who stretcheth forth the heavens, and layeth the foundations of the earth, and formeth the spirit of man in him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd4a26b" class="outline-3">
+<h3 id="orgcd4a26b">Zechariah 12:2</h3>
+<div class="outline-text-3" id="text-orgcd4a26b">
+<p>
+Behold I will make Jerusalem a lintel of surfeiting to all the people round about: and Juda also shall be in the siege against Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67e2f47" class="outline-3">
+<h3 id="org67e2f47">Zechariah 12:3</h3>
+<div class="outline-text-3" id="text-org67e2f47">
+<p>
+And it shall come to pass in that day, that I will make Jerusalem a burdensome stone to all people: all that shall lift it up shall be rent and torn, and all the kingdoms of the earth shall be gathered together against her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6dce11" class="outline-3">
+<h3 id="orgb6dce11">Zechariah 12:4</h3>
+<div class="outline-text-3" id="text-orgb6dce11">
+<p>
+In that day, saith the Lord, I will strike every horse with astonishment, and his rider with madness: and I will open my eyes upon the house of Juda, and will strike every horse of the nations with blindness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f1622f" class="outline-3">
+<h3 id="org2f1622f">Zechariah 12:5</h3>
+<div class="outline-text-3" id="text-org2f1622f">
+<p>
+And the governors of Juda shall say in their heart: Let the inhabitants of Jerusalem be strengthened for me in the Lord of hosts, their God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org631dc32" class="outline-3">
+<h3 id="org631dc32">Zechariah 12:6</h3>
+<div class="outline-text-3" id="text-org631dc32">
+<p>
+In that day I will make the governors of Juda like a furnace of fire amongst wood, and as a firebrand amongst hay: and they shall devour all the people round about, to the right hand, and to the left: and Jerusalem shall be inhabited again in her own place in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcc092f" class="outline-3">
+<h3 id="orgbcc092f">Zechariah 12:7</h3>
+<div class="outline-text-3" id="text-orgbcc092f">
+<p>
+And the Lord shall save the tabernacles of Juda, as in the beginning: that the house of David, and the glory of the inhabitants of Jerusalem, may not boast and magnify themselves against Juda.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10527b5" class="outline-3">
+<h3 id="org10527b5">Zechariah 12:8</h3>
+<div class="outline-text-3" id="text-org10527b5">
+<p>
+In that day shall the Lord protect the inhabitants of Jerusalem, and he that hath offended among them in that day shall be as David: and the house of David, as that of God, as an angel of the Lord in their sight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge59dc3c" class="outline-3">
+<h3 id="orge59dc3c">Zechariah 12:9</h3>
+<div class="outline-text-3" id="text-orge59dc3c">
+<p>
+And it shall come to pass in that day, that I will seek to destroy all the nations that come against Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc79812c" class="outline-3">
+<h3 id="orgc79812c">Zechariah 12:10</h3>
+<div class="outline-text-3" id="text-orgc79812c">
+<p>
+And I will pour out upon the house of David, and upon the inhabitants of Jerusalem, the spirit of grace, and of prayers: and they shall look upon me, whom they have pierced: and they shall mourn for him as one mourneth for an only son, and they shall grieve over him, as the manner is to grieve for the death of the firstborn.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org126d393" class="outline-3">
+<h3 id="org126d393">Zechariah 12:11</h3>
+<div class="outline-text-3" id="text-org126d393">
+<p>
+In that day there shall be a great lamentation in Jerusalem like the lamentation of Adadremmon in the plain of Mageddon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9910159" class="outline-3">
+<h3 id="org9910159">Zechariah 12:12</h3>
+<div class="outline-text-3" id="text-org9910159">
+<p>
+And the land shall mourn: families and families apart: the families of the house of David apart, and their women apart:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0471752" class="outline-3">
+<h3 id="org0471752">Zechariah 12:13</h3>
+<div class="outline-text-3" id="text-org0471752">
+<p>
+The families of the house of Nathan apart, and their women apart: the families of the house of Levi apart, and their women apart: the families of Semei apart, and their women apart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org904f834" class="outline-3">
+<h3 id="org904f834">Zechariah 12:14</h3>
+<div class="outline-text-3" id="text-org904f834">
+<p>
+All the rest of the families, families and families apart, and their women apart. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga035a1c" class="outline-2">
+<h2 id="orga035a1c">Zechariah 13</h2>
+<div class="outline-text-2" id="text-orga035a1c">
+</div>
+<div id="outline-container-orgdedf90b" class="outline-3">
+<h3 id="orgdedf90b">Zechariah 13:1</h3>
+<div class="outline-text-3" id="text-orgdedf90b">
+<p>
+In that day there shall be a fountain open to the house of David, and to the inhabitants of Jerusalem: for the washing of the sinner, and of the unclean woman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b46f23" class="outline-3">
+<h3 id="org9b46f23">Zechariah 13:2</h3>
+<div class="outline-text-3" id="text-org9b46f23">
+<p>
+And it shall come to pass in that day, saith the Lord of hosts, that I will destroy the names of idols out of the earth, and they shall be remembered no more: and I will take away the false prophets, and the unclean spirit out of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb455cf5" class="outline-3">
+<h3 id="orgb455cf5">Zechariah 13:3</h3>
+<div class="outline-text-3" id="text-orgb455cf5">
+<p>
+And it shall come to pass, that when any man shall prophesy any more, his father and his mother that brought him into the world, shall say to him: Thou shalt not live: because thou hast spoken a lie in the name of the Lord. And his father, and his mother, his parents, shall thrust him through, when he shall prophesy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc7698c" class="outline-3">
+<h3 id="orgcc7698c">Zechariah 13:4</h3>
+<div class="outline-text-3" id="text-orgcc7698c">
+<p>
+And it shall come to pass in that day, that the prophets shall be confounded, every one by his own vision, when he shall prophesy, neither shall they be clad with a garment of sackcloth, to deceive:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefa13d3" class="outline-3">
+<h3 id="orgefa13d3">Zechariah 13:5</h3>
+<div class="outline-text-3" id="text-orgefa13d3">
+<p>
+But he shall say: I am no prophet, I am a husbandman: for Adam is my example from my youth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1071789" class="outline-3">
+<h3 id="org1071789">Zechariah 13:6</h3>
+<div class="outline-text-3" id="text-org1071789">
+<p>
+And they shall say to him: What are these wounds in the midst of thy hands? And he shall say: With these I was wounded in the house of them that loved me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef0fc15" class="outline-3">
+<h3 id="orgef0fc15">Zechariah 13:7</h3>
+<div class="outline-text-3" id="text-orgef0fc15">
+<p>
+Awake, O sword, against my shepherd, and against the man that cleaveth to me, saith the Lord of hosts: strike the shepherd, and the sheep shall be scattered: and I will turn my hand to the little ones.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge048e45" class="outline-3">
+<h3 id="orge048e45">Zechariah 13:8</h3>
+<div class="outline-text-3" id="text-orge048e45">
+<p>
+And there shall be in all the earth, saith the Lord, two parts in it shall be scattered, and shall perish: but the third part shall be left therein.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d30526" class="outline-3">
+<h3 id="org9d30526">Zechariah 13:9</h3>
+<div class="outline-text-3" id="text-org9d30526">
+<p>
+And I will bring the third part through the fire, and will refine them as silver is refined: and I will try them as gold is tried. They shall call on my name, and I will hear them. I will say: Thou art my people: and they shall say: The Lord is my God. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8b6b4f2" class="outline-2">
+<h2 id="org8b6b4f2">Zechariah 14</h2>
+<div class="outline-text-2" id="text-org8b6b4f2">
+</div>
+<div id="outline-container-org477bfb6" class="outline-3">
+<h3 id="org477bfb6">Zechariah 14:1</h3>
+<div class="outline-text-3" id="text-org477bfb6">
+<p>
+Behold the days of the Lord shall come, and thy spoils shall be divided in the midst of thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org719c199" class="outline-3">
+<h3 id="org719c199">Zechariah 14:2</h3>
+<div class="outline-text-3" id="text-org719c199">
+<p>
+And I will gather all nations to Jerusalem to battle, and the city shall be taken, and the houses shall be rifled, and the women shall be defiled: and half of the city shall go forth into captivity, and the rest of the people shall not be taken away out of the city.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd64cd60" class="outline-3">
+<h3 id="orgd64cd60">Zechariah 14:3</h3>
+<div class="outline-text-3" id="text-orgd64cd60">
+<p>
+Then the Lord shall go forth, and shall fight against those nations, as when he fought in the day of battle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a9514f" class="outline-3">
+<h3 id="org6a9514f">Zechariah 14:4</h3>
+<div class="outline-text-3" id="text-org6a9514f">
+<p>
+And his feet shall stand in that day upon the mount of Olives, which is over against Jerusalem towards the east: and the mount of Olives shall be divided in the midst thereof to the east, and to the west with a very great opening, and half of the mountain shall be separated to the north, and half thereof to the south.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2f1f3e" class="outline-3">
+<h3 id="orga2f1f3e">Zechariah 14:5</h3>
+<div class="outline-text-3" id="text-orga2f1f3e">
+<p>
+And you shall flee to the valley of those mountains, for the valley of the mountains shall be joined even to the next, and you shall flee as you fled from the face of the earthquake in the days of Ozias king of Juda: and the Lord my God shall come, and all the saints with him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4690ba" class="outline-3">
+<h3 id="orge4690ba">Zechariah 14:6</h3>
+<div class="outline-text-3" id="text-orge4690ba">
+<p>
+And it shall come to pass in that day, that there shall be no light, but cold and frost.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2ccbd5" class="outline-3">
+<h3 id="orgb2ccbd5">Zechariah 14:7</h3>
+<div class="outline-text-3" id="text-orgb2ccbd5">
+<p>
+And there shall be one day, which is known to the Lord, not day nor night: and in the time of the evening there shall be light:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6320ed" class="outline-3">
+<h3 id="orgc6320ed">Zechariah 14:8</h3>
+<div class="outline-text-3" id="text-orgc6320ed">
+<p>
+And it shall come to pass in that day, that living waters shall go out from Jerusalem: half of them to the east sea, and half of them to the last sea: they shall be in summer and in winter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge23d9b9" class="outline-3">
+<h3 id="orge23d9b9">Zechariah 14:9</h3>
+<div class="outline-text-3" id="text-orge23d9b9">
+<p>
+And the Lord shall be king over all the earth: in that day there shall be one Lord, and his name shall be one.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00853a8" class="outline-3">
+<h3 id="org00853a8">Zechariah 14:10</h3>
+<div class="outline-text-3" id="text-org00853a8">
+<p>
+And all the land shall return even to the desert, from the hill to Remmon to the south of Jerusalem: and she shall be exalted, and shall dwell in her own place, from the gate of Benjamin even to the place of the former gate, and even to the gate of the corners: and from the tower of Hananeel even to the king&rsquo;s winepresses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgceb97db" class="outline-3">
+<h3 id="orgceb97db">Zechariah 14:11</h3>
+<div class="outline-text-3" id="text-orgceb97db">
+<p>
+And people shall dwell in it, and there shall be no more an anathema: but Jerusalem shall sit secure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaedc552" class="outline-3">
+<h3 id="orgaedc552">Zechariah 14:12</h3>
+<div class="outline-text-3" id="text-orgaedc552">
+<p>
+And this shall be the plague wherewith the Lord shall strike all nations that have fought against Jerusalem: the flesh of every one shall consume away while they stand upon their feet, and their eyes shall consume away in their holes, and their tongue shall consume away in their mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ca74ee" class="outline-3">
+<h3 id="org6ca74ee">Zechariah 14:13</h3>
+<div class="outline-text-3" id="text-org6ca74ee">
+<p>
+In that day there shall be a great tumult from the Lord among them: and a man shall take the hand of his neighbour, and his hand shall be clasped upon his neighbour&rsquo;s hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d49643" class="outline-3">
+<h3 id="org0d49643">Zechariah 14:14</h3>
+<div class="outline-text-3" id="text-org0d49643">
+<p>
+And even Juda shall fight against Jerusalem: and the riches of all nations round about shall be gathered together, gold, and silver, and garments in great abundance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bd3c7a" class="outline-3">
+<h3 id="org8bd3c7a">Zechariah 14:15</h3>
+<div class="outline-text-3" id="text-org8bd3c7a">
+<p>
+And the destruction of the horse, and of the mule, and of the camel, and of the ass, and of all the beasts, that shall be in those tents, shall be like this destruction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc99e6cd" class="outline-3">
+<h3 id="orgc99e6cd">Zechariah 14:16</h3>
+<div class="outline-text-3" id="text-orgc99e6cd">
+<p>
+And all they that shall be left of all nations that came against Jerusalem, shall go up from year to year, to adore the King, the Lord of hosts, and to keep the feast of tabernacles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org537d71b" class="outline-3">
+<h3 id="org537d71b">Zechariah 14:17</h3>
+<div class="outline-text-3" id="text-org537d71b">
+<p>
+And it shall come to pass, that he that shall not go up of the families of the land to Jerusalem, to adore the King, the Lord of hosts, there shall be no rain upon them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c30c4f" class="outline-3">
+<h3 id="org9c30c4f">Zechariah 14:18</h3>
+<div class="outline-text-3" id="text-org9c30c4f">
+<p>
+And if the family of Egypt go not up nor come: neither shall it be upon them, but there shall be destruction wherewith the Lord will strike all nations that will not go up to keep the feast of tabernacles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4a72cb" class="outline-3">
+<h3 id="orge4a72cb">Zechariah 14:19</h3>
+<div class="outline-text-3" id="text-orge4a72cb">
+<p>
+This shall be the sin of Egypt, and this the sin of all nations, that will not go up to keep the feast of tabernacles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09975bb" class="outline-3">
+<h3 id="org09975bb">Zechariah 14:20</h3>
+<div class="outline-text-3" id="text-org09975bb">
+<p>
+In that day that which is upon the bridle of the horse shall be holy to the Lord: and the caldrons in the house of the Lord shall be as the phials before the altar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f94c9a" class="outline-3">
+<h3 id="org5f94c9a">Zechariah 14:21</h3>
+<div class="outline-text-3" id="text-org5f94c9a">
+<p>
+And every caldron in Jerusalem and Juda shall be sanctified to the Lord of hosts: and all that sacrifice shall come, and take of them, and shall seethe in them: and the merchant shall be no more in the house of the Lord of hosts in that day.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:43</p>
+</div>
+</body>
+</html>

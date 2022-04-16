@@ -1,0 +1,4776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4960e62">Wisdom 1</a>
+<ul>
+<li><a href="#org59ec525">Wisdom 1:1</a></li>
+<li><a href="#orga978b55">Wisdom 1:2</a></li>
+<li><a href="#org41a6aeb">Wisdom 1:3</a></li>
+<li><a href="#orge579b40">Wisdom 1:4</a></li>
+<li><a href="#org59dcd80">Wisdom 1:5</a></li>
+<li><a href="#org626aeba">Wisdom 1:6</a></li>
+<li><a href="#orgbea4e1d">Wisdom 1:7</a></li>
+<li><a href="#org6502320">Wisdom 1:8</a></li>
+<li><a href="#org6af9e60">Wisdom 1:9</a></li>
+<li><a href="#orgea6c9a0">Wisdom 1:10</a></li>
+<li><a href="#orgb265f63">Wisdom 1:11</a></li>
+<li><a href="#org72a9776">Wisdom 1:12</a></li>
+<li><a href="#orgd18bad7">Wisdom 1:13</a></li>
+<li><a href="#orgbd56ac0">Wisdom 1:14</a></li>
+<li><a href="#org0673f16">Wisdom 1:15</a></li>
+<li><a href="#org2ac7b0b">Wisdom 1:16</a></li>
+</ul>
+</li>
+<li><a href="#orgfa1c471">Wisdom 2</a>
+<ul>
+<li><a href="#orgf67ad43">Wisdom 2:1</a></li>
+<li><a href="#org6b788f9">Wisdom 2:2</a></li>
+<li><a href="#org174d137">Wisdom 2:3</a></li>
+<li><a href="#orgf6e0927">Wisdom 2:4</a></li>
+<li><a href="#org3e76ee7">Wisdom 2:5</a></li>
+<li><a href="#org1e4fad8">Wisdom 2:6</a></li>
+<li><a href="#orgc5129c8">Wisdom 2:7</a></li>
+<li><a href="#org137e7f3">Wisdom 2:8</a></li>
+<li><a href="#org86f8c13">Wisdom 2:9</a></li>
+<li><a href="#orgd5d7e76">Wisdom 2:10</a></li>
+<li><a href="#orgb07bbc3">Wisdom 2:11</a></li>
+<li><a href="#orgec162a9">Wisdom 2:12</a></li>
+<li><a href="#orgf8b3e6f">Wisdom 2:13</a></li>
+<li><a href="#orgb2820dd">Wisdom 2:14</a></li>
+<li><a href="#org908faff">Wisdom 2:15</a></li>
+<li><a href="#org0417981">Wisdom 2:16</a></li>
+<li><a href="#org84242a5">Wisdom 2:17</a></li>
+<li><a href="#org101ede0">Wisdom 2:18</a></li>
+<li><a href="#org6b432f0">Wisdom 2:19</a></li>
+<li><a href="#org450967c">Wisdom 2:20</a></li>
+<li><a href="#org5e1beef">Wisdom 2:21</a></li>
+<li><a href="#org97f3bab">Wisdom 2:22</a></li>
+<li><a href="#org6fcef14">Wisdom 2:23</a></li>
+<li><a href="#orga611f35">Wisdom 2:24</a></li>
+<li><a href="#org426f3af">Wisdom 2:25</a></li>
+</ul>
+</li>
+<li><a href="#org57121d9">Wisdom 3</a>
+<ul>
+<li><a href="#orgd335ad0">Wisdom 3:1</a></li>
+<li><a href="#org35cfeba">Wisdom 3:2</a></li>
+<li><a href="#org740a0f0">Wisdom 3:3</a></li>
+<li><a href="#orgea5641a">Wisdom 3:4</a></li>
+<li><a href="#org50aa5c0">Wisdom 3:5</a></li>
+<li><a href="#org4706e3f">Wisdom 3:6</a></li>
+<li><a href="#org090c74f">Wisdom 3:7</a></li>
+<li><a href="#org4a3e919">Wisdom 3:8</a></li>
+<li><a href="#org8978146">Wisdom 3:9</a></li>
+<li><a href="#org989f278">Wisdom 3:10</a></li>
+<li><a href="#org465ba3a">Wisdom 3:11</a></li>
+<li><a href="#org32dd55d">Wisdom 3:12</a></li>
+<li><a href="#org8fb4e1d">Wisdom 3:13</a></li>
+<li><a href="#org0d7a024">Wisdom 3:14</a></li>
+<li><a href="#orgcabc1b7">Wisdom 3:15</a></li>
+<li><a href="#org71d466b">Wisdom 3:16</a></li>
+<li><a href="#org5565aec">Wisdom 3:17</a></li>
+<li><a href="#orgf30e2a5">Wisdom 3:18</a></li>
+<li><a href="#orgdb473d4">Wisdom 3:19</a></li>
+</ul>
+</li>
+<li><a href="#org637698d">Wisdom 4</a>
+<ul>
+<li><a href="#orgd683057">Wisdom 4:1</a></li>
+<li><a href="#org35cc85a">Wisdom 4:2</a></li>
+<li><a href="#orgc71b087">Wisdom 4:3</a></li>
+<li><a href="#org86d8c58">Wisdom 4:4</a></li>
+<li><a href="#org8d60c20">Wisdom 4:5</a></li>
+<li><a href="#orgf3f05cc">Wisdom 4:6</a></li>
+<li><a href="#org07d79b7">Wisdom 4:7</a></li>
+<li><a href="#org2cd5128">Wisdom 4:8</a></li>
+<li><a href="#org500ec56">Wisdom 4:9</a></li>
+<li><a href="#orgc0d6845">Wisdom 4:10</a></li>
+<li><a href="#org257dee0">Wisdom 4:11</a></li>
+<li><a href="#orgf41d10a">Wisdom 4:12</a></li>
+<li><a href="#org4cfff55">Wisdom 4:13</a></li>
+<li><a href="#orgd864b9a">Wisdom 4:14</a></li>
+<li><a href="#orgf5d72da">Wisdom 4:15</a></li>
+<li><a href="#org1adaeeb">Wisdom 4:16</a></li>
+<li><a href="#org7e969e3">Wisdom 4:17</a></li>
+<li><a href="#orgf1dd011">Wisdom 4:18</a></li>
+<li><a href="#org9b72422">Wisdom 4:19</a></li>
+<li><a href="#org7c27830">Wisdom 4:20</a></li>
+</ul>
+</li>
+<li><a href="#orgfdd671b">Wisdom 5</a>
+<ul>
+<li><a href="#org765ba75">Wisdom 5:1</a></li>
+<li><a href="#orgc5da5f2">Wisdom 5:2</a></li>
+<li><a href="#org64f9be0">Wisdom 5:3</a></li>
+<li><a href="#org22128e6">Wisdom 5:4</a></li>
+<li><a href="#orgacf6ba4">Wisdom 5:5</a></li>
+<li><a href="#org1e9e700">Wisdom 5:6</a></li>
+<li><a href="#orgf3fb600">Wisdom 5:7</a></li>
+<li><a href="#org692ab16">Wisdom 5:8</a></li>
+<li><a href="#orga01827e">Wisdom 5:9</a></li>
+<li><a href="#org79907ad">Wisdom 5:10</a></li>
+<li><a href="#org5b0b2f4">Wisdom 5:11</a></li>
+<li><a href="#orgdf997bd">Wisdom 5:12</a></li>
+<li><a href="#org3c967d3">Wisdom 5:13</a></li>
+<li><a href="#orgbe1ba62">Wisdom 5:14</a></li>
+<li><a href="#orge085100">Wisdom 5:15</a></li>
+<li><a href="#org4928ecc">Wisdom 5:16</a></li>
+<li><a href="#org7f715ce">Wisdom 5:17</a></li>
+<li><a href="#org292174e">Wisdom 5:18</a></li>
+<li><a href="#org948b333">Wisdom 5:19</a></li>
+<li><a href="#org605b3d7">Wisdom 5:20</a></li>
+<li><a href="#orgc62736b">Wisdom 5:21</a></li>
+<li><a href="#orge9534ee">Wisdom 5:22</a></li>
+<li><a href="#org10d9d65">Wisdom 5:23</a></li>
+<li><a href="#orgd051c50">Wisdom 5:24</a></li>
+</ul>
+</li>
+<li><a href="#orgded70f5">Wisdom 6</a>
+<ul>
+<li><a href="#org3e56a97">Wisdom 6:1</a></li>
+<li><a href="#org16a71a6">Wisdom 6:2</a></li>
+<li><a href="#orga46f962">Wisdom 6:3</a></li>
+<li><a href="#org529143f">Wisdom 6:4</a></li>
+<li><a href="#org93add3c">Wisdom 6:5</a></li>
+<li><a href="#orgd72db1b">Wisdom 6:6</a></li>
+<li><a href="#orgc39b45c">Wisdom 6:7</a></li>
+<li><a href="#orge07c52e">Wisdom 6:8</a></li>
+<li><a href="#org4d3cba0">Wisdom 6:9</a></li>
+<li><a href="#org5d223c6">Wisdom 6:10</a></li>
+<li><a href="#org36f163d">Wisdom 6:11</a></li>
+<li><a href="#org65e40c2">Wisdom 6:12</a></li>
+<li><a href="#org28bff09">Wisdom 6:13</a></li>
+<li><a href="#orge2ed448">Wisdom 6:14</a></li>
+<li><a href="#orga24cc61">Wisdom 6:15</a></li>
+<li><a href="#org46eef5c">Wisdom 6:16</a></li>
+<li><a href="#org24f1833">Wisdom 6:17</a></li>
+<li><a href="#orgf8e15e9">Wisdom 6:18</a></li>
+<li><a href="#orge3364d7">Wisdom 6:19</a></li>
+<li><a href="#orgcd49170">Wisdom 6:20</a></li>
+<li><a href="#org3d43ee6">Wisdom 6:21</a></li>
+<li><a href="#org8d1510a">Wisdom 6:22</a></li>
+<li><a href="#orgd8632f1">Wisdom 6:23</a></li>
+<li><a href="#orgbb99511">Wisdom 6:24</a></li>
+<li><a href="#orgc21e861">Wisdom 6:25</a></li>
+<li><a href="#org0ea4905">Wisdom 6:26</a></li>
+<li><a href="#org3fb41f4">Wisdom 6:27</a></li>
+</ul>
+</li>
+<li><a href="#org1706917">Wisdom 7</a>
+<ul>
+<li><a href="#org7837da9">Wisdom 7:1</a></li>
+<li><a href="#org4bd1b9e">Wisdom 7:2</a></li>
+<li><a href="#orga547247">Wisdom 7:3</a></li>
+<li><a href="#orgeeb3924">Wisdom 7:4</a></li>
+<li><a href="#org54c348c">Wisdom 7:5</a></li>
+<li><a href="#orgd6cbb42">Wisdom 7:6</a></li>
+<li><a href="#orga74294b">Wisdom 7:7</a></li>
+<li><a href="#org0acf23f">Wisdom 7:8</a></li>
+<li><a href="#org94260d4">Wisdom 7:9</a></li>
+<li><a href="#org365113f">Wisdom 7:10</a></li>
+<li><a href="#org0f87374">Wisdom 7:11</a></li>
+<li><a href="#org2b5ce56">Wisdom 7:12</a></li>
+<li><a href="#org9bc0cd4">Wisdom 7:13</a></li>
+<li><a href="#orgef3b46f">Wisdom 7:14</a></li>
+<li><a href="#org03f1005">Wisdom 7:15</a></li>
+<li><a href="#orge11701b">Wisdom 7:16</a></li>
+<li><a href="#org4a96bcb">Wisdom 7:17</a></li>
+<li><a href="#org5ed3eb7">Wisdom 7:18</a></li>
+<li><a href="#org984a646">Wisdom 7:19</a></li>
+<li><a href="#org24e648f">Wisdom 7:20</a></li>
+<li><a href="#org8073657">Wisdom 7:21</a></li>
+<li><a href="#org61e623c">Wisdom 7:22</a></li>
+<li><a href="#org8466ad3">Wisdom 7:23</a></li>
+<li><a href="#org2b1aa54">Wisdom 7:24</a></li>
+<li><a href="#orgcaa1b63">Wisdom 7:25</a></li>
+<li><a href="#org24497b9">Wisdom 7:26</a></li>
+<li><a href="#orgca537b3">Wisdom 7:27</a></li>
+<li><a href="#org11672fe">Wisdom 7:28</a></li>
+<li><a href="#orgb11402d">Wisdom 7:29</a></li>
+<li><a href="#orgc32ab6c">Wisdom 7:30</a></li>
+</ul>
+</li>
+<li><a href="#org2c48be5">Wisdom 8</a>
+<ul>
+<li><a href="#org0e9b78f">Wisdom 8:1</a></li>
+<li><a href="#org4d7d0c5">Wisdom 8:2</a></li>
+<li><a href="#orgc953aa7">Wisdom 8:3</a></li>
+<li><a href="#orgde5ffb1">Wisdom 8:4</a></li>
+<li><a href="#org2306144">Wisdom 8:5</a></li>
+<li><a href="#orgbc48a2b">Wisdom 8:6</a></li>
+<li><a href="#org1325dde">Wisdom 8:7</a></li>
+<li><a href="#orgf803b1a">Wisdom 8:8</a></li>
+<li><a href="#org716bf09">Wisdom 8:9</a></li>
+<li><a href="#org2d0b020">Wisdom 8:10</a></li>
+<li><a href="#org585f479">Wisdom 8:11</a></li>
+<li><a href="#orge68de8d">Wisdom 8:12</a></li>
+<li><a href="#org6126215">Wisdom 8:13</a></li>
+<li><a href="#orga42d691">Wisdom 8:14</a></li>
+<li><a href="#org0752362">Wisdom 8:15</a></li>
+<li><a href="#org07ca4b0">Wisdom 8:16</a></li>
+<li><a href="#orgb8a4cb5">Wisdom 8:17</a></li>
+<li><a href="#org757ec03">Wisdom 8:18</a></li>
+<li><a href="#org15af991">Wisdom 8:19</a></li>
+<li><a href="#orgef65e96">Wisdom 8:20</a></li>
+<li><a href="#org313b3b6">Wisdom 8:21</a></li>
+</ul>
+</li>
+<li><a href="#org0e02b2d">Wisdom 9</a>
+<ul>
+<li><a href="#orgad9372d">Wisdom 9:1</a></li>
+<li><a href="#orge398186">Wisdom 9:2</a></li>
+<li><a href="#org3b66a29">Wisdom 9:3</a></li>
+<li><a href="#org698a981">Wisdom 9:4</a></li>
+<li><a href="#org8ad10d6">Wisdom 9:5</a></li>
+<li><a href="#orgf6bff27">Wisdom 9:6</a></li>
+<li><a href="#org70d85bc">Wisdom 9:7</a></li>
+<li><a href="#org0c11cb8">Wisdom 9:8</a></li>
+<li><a href="#org475b35a">Wisdom 9:9</a></li>
+<li><a href="#org0c6734a">Wisdom 9:10</a></li>
+<li><a href="#org4c7fed6">Wisdom 9:11</a></li>
+<li><a href="#org0df06e4">Wisdom 9:12</a></li>
+<li><a href="#org50c62d0">Wisdom 9:13</a></li>
+<li><a href="#org14376a8">Wisdom 9:14</a></li>
+<li><a href="#orgeca1175">Wisdom 9:15</a></li>
+<li><a href="#orgc4dac6f">Wisdom 9:16</a></li>
+<li><a href="#orgfc831fa">Wisdom 9:17</a></li>
+<li><a href="#orgbc6c2df">Wisdom 9:18</a></li>
+<li><a href="#org2eb4fcb">Wisdom 9:19</a></li>
+</ul>
+</li>
+<li><a href="#org21957bd">Wisdom 10</a>
+<ul>
+<li><a href="#org4ac4557">Wisdom 10:1</a></li>
+<li><a href="#org4e3036c">Wisdom 10:2</a></li>
+<li><a href="#org85ffab1">Wisdom 10:3</a></li>
+<li><a href="#orgaeaa131">Wisdom 10:4</a></li>
+<li><a href="#org78f5eb6">Wisdom 10:5</a></li>
+<li><a href="#orgbea10b1">Wisdom 10:6</a></li>
+<li><a href="#org9e96699">Wisdom 10:7</a></li>
+<li><a href="#orgff39ed0">Wisdom 10:8</a></li>
+<li><a href="#org8a2f7f8">Wisdom 10:9</a></li>
+<li><a href="#org0f6f482">Wisdom 10:10</a></li>
+<li><a href="#org6152064">Wisdom 10:11</a></li>
+<li><a href="#orgf232b34">Wisdom 10:12</a></li>
+<li><a href="#org9918dd1">Wisdom 10:13</a></li>
+<li><a href="#org05fe577">Wisdom 10:14</a></li>
+<li><a href="#org11d0022">Wisdom 10:15</a></li>
+<li><a href="#orgcf13f59">Wisdom 10:16</a></li>
+<li><a href="#org81dc2a2">Wisdom 10:17</a></li>
+<li><a href="#org7560f34">Wisdom 10:18</a></li>
+<li><a href="#org52814ed">Wisdom 10:19</a></li>
+<li><a href="#orgc874aea">Wisdom 10:20</a></li>
+<li><a href="#org9ebf648">Wisdom 10:21</a></li>
+</ul>
+</li>
+<li><a href="#org3cf187d">Wisdom 11</a>
+<ul>
+<li><a href="#org9226868">Wisdom 11:1</a></li>
+<li><a href="#org794b8e8">Wisdom 11:2</a></li>
+<li><a href="#org7494344">Wisdom 11:3</a></li>
+<li><a href="#orgc2d96fc">Wisdom 11:4</a></li>
+<li><a href="#org5779ff2">Wisdom 11:5</a></li>
+<li><a href="#org27d5fee">Wisdom 11:6</a></li>
+<li><a href="#org010818c">Wisdom 11:7</a></li>
+<li><a href="#org7395254">Wisdom 11:8</a></li>
+<li><a href="#org7276692">Wisdom 11:9</a></li>
+<li><a href="#orgaaddd7c">Wisdom 11:10</a></li>
+<li><a href="#org7f5ce6b">Wisdom 11:11</a></li>
+<li><a href="#org95416a5">Wisdom 11:12</a></li>
+<li><a href="#orge331a0b">Wisdom 11:13</a></li>
+<li><a href="#org33d9f8a">Wisdom 11:14</a></li>
+<li><a href="#orgb70b7e8">Wisdom 11:15</a></li>
+<li><a href="#orgf7a2c2e">Wisdom 11:16</a></li>
+<li><a href="#org6ca8f1e">Wisdom 11:17</a></li>
+<li><a href="#org7931c33">Wisdom 11:18</a></li>
+<li><a href="#orgaa0b11c">Wisdom 11:19</a></li>
+<li><a href="#org3a77426">Wisdom 11:20</a></li>
+<li><a href="#orgf21c403">Wisdom 11:21</a></li>
+<li><a href="#org529373f">Wisdom 11:22</a></li>
+<li><a href="#org2f19378">Wisdom 11:23</a></li>
+<li><a href="#orge034338">Wisdom 11:24</a></li>
+<li><a href="#org44aa0ad">Wisdom 11:25</a></li>
+<li><a href="#orgca30799">Wisdom 11:26</a></li>
+<li><a href="#orgea17c7d">Wisdom 11:27</a></li>
+</ul>
+</li>
+<li><a href="#orgb931632">Wisdom 12</a>
+<ul>
+<li><a href="#org8d43fcf">Wisdom 12:1</a></li>
+<li><a href="#org15cd236">Wisdom 12:2</a></li>
+<li><a href="#orge76902c">Wisdom 12:3</a></li>
+<li><a href="#org1d136e3">Wisdom 12:4</a></li>
+<li><a href="#org04c8e77">Wisdom 12:5</a></li>
+<li><a href="#org1c0449c">Wisdom 12:6</a></li>
+<li><a href="#org92a986f">Wisdom 12:7</a></li>
+<li><a href="#org01a1309">Wisdom 12:8</a></li>
+<li><a href="#orgf6bf291">Wisdom 12:9</a></li>
+<li><a href="#org14a97e4">Wisdom 12:10</a></li>
+<li><a href="#org777e161">Wisdom 12:11</a></li>
+<li><a href="#org1e43272">Wisdom 12:12</a></li>
+<li><a href="#org5234cf2">Wisdom 12:13</a></li>
+<li><a href="#org324ecb7">Wisdom 12:14</a></li>
+<li><a href="#org1eee767">Wisdom 12:15</a></li>
+<li><a href="#org0937ab6">Wisdom 12:16</a></li>
+<li><a href="#orgfb8fbb0">Wisdom 12:17</a></li>
+<li><a href="#orgf87aefc">Wisdom 12:18</a></li>
+<li><a href="#orgb2dc264">Wisdom 12:19</a></li>
+<li><a href="#org73503aa">Wisdom 12:20</a></li>
+<li><a href="#orgb903b25">Wisdom 12:21</a></li>
+<li><a href="#orge276954">Wisdom 12:22</a></li>
+<li><a href="#org90b949b">Wisdom 12:23</a></li>
+<li><a href="#org76784fe">Wisdom 12:24</a></li>
+<li><a href="#org13df803">Wisdom 12:25</a></li>
+<li><a href="#orgcd6c140">Wisdom 12:26</a></li>
+<li><a href="#org7973ebf">Wisdom 12:27</a></li>
+</ul>
+</li>
+<li><a href="#org4e8ecd3">Wisdom 13</a>
+<ul>
+<li><a href="#org3a9a23c">Wisdom 13:1</a></li>
+<li><a href="#org0b5e6d2">Wisdom 13:2</a></li>
+<li><a href="#org810daa3">Wisdom 13:3</a></li>
+<li><a href="#orgea08a78">Wisdom 13:4</a></li>
+<li><a href="#org3edad9d">Wisdom 13:5</a></li>
+<li><a href="#org72fdb23">Wisdom 13:6</a></li>
+<li><a href="#org0b53070">Wisdom 13:7</a></li>
+<li><a href="#org404b0f1">Wisdom 13:8</a></li>
+<li><a href="#orgd702a51">Wisdom 13:9</a></li>
+<li><a href="#org47e39b5">Wisdom 13:10</a></li>
+<li><a href="#org84df1f2">Wisdom 13:11</a></li>
+<li><a href="#orgbffb135">Wisdom 13:12</a></li>
+<li><a href="#org9139334">Wisdom 13:13</a></li>
+<li><a href="#org139e0bb">Wisdom 13:14</a></li>
+<li><a href="#org7312162">Wisdom 13:15</a></li>
+<li><a href="#org57f713e">Wisdom 13:16</a></li>
+<li><a href="#org511a0a5">Wisdom 13:17</a></li>
+<li><a href="#orgcc81a69">Wisdom 13:18</a></li>
+<li><a href="#org7d7bdbd">Wisdom 13:19</a></li>
+</ul>
+</li>
+<li><a href="#org8d268f5">Wisdom 14</a>
+<ul>
+<li><a href="#org0188076">Wisdom 14:1</a></li>
+<li><a href="#org3dacce9">Wisdom 14:2</a></li>
+<li><a href="#org2be7296">Wisdom 14:3</a></li>
+<li><a href="#org7211812">Wisdom 14:4</a></li>
+<li><a href="#orgc9195c4">Wisdom 14:5</a></li>
+<li><a href="#org73e16a2">Wisdom 14:6</a></li>
+<li><a href="#org897fbfc">Wisdom 14:7</a></li>
+<li><a href="#org4f3cb23">Wisdom 14:8</a></li>
+<li><a href="#orgb66f55b">Wisdom 14:9</a></li>
+<li><a href="#orgd27f5a6">Wisdom 14:10</a></li>
+<li><a href="#orgf938a1e">Wisdom 14:11</a></li>
+<li><a href="#org92d1003">Wisdom 14:12</a></li>
+<li><a href="#org6e93df5">Wisdom 14:13</a></li>
+<li><a href="#orgd6290a6">Wisdom 14:14</a></li>
+<li><a href="#org7d6d9cd">Wisdom 14:15</a></li>
+<li><a href="#org273f02e">Wisdom 14:16</a></li>
+<li><a href="#org33e146b">Wisdom 14:17</a></li>
+<li><a href="#orgdd36878">Wisdom 14:18</a></li>
+<li><a href="#orgafa88e1">Wisdom 14:19</a></li>
+<li><a href="#org2c74509">Wisdom 14:20</a></li>
+<li><a href="#org61f1780">Wisdom 14:21</a></li>
+<li><a href="#org874906f">Wisdom 14:22</a></li>
+<li><a href="#org6382e92">Wisdom 14:23</a></li>
+<li><a href="#orge0b73f4">Wisdom 14:24</a></li>
+<li><a href="#org0b4e622">Wisdom 14:25</a></li>
+<li><a href="#org852e546">Wisdom 14:26</a></li>
+<li><a href="#org0bb18de">Wisdom 14:27</a></li>
+<li><a href="#org078f24b">Wisdom 14:28</a></li>
+<li><a href="#org2700a9e">Wisdom 14:29</a></li>
+<li><a href="#org8f1c477">Wisdom 14:30</a></li>
+<li><a href="#orga55114f">Wisdom 14:31</a></li>
+</ul>
+</li>
+<li><a href="#org24e87a1">Wisdom 15</a>
+<ul>
+<li><a href="#org9cee034">Wisdom 15:1</a></li>
+<li><a href="#orge97b892">Wisdom 15:2</a></li>
+<li><a href="#org74d937a">Wisdom 15:3</a></li>
+<li><a href="#org0a00b17">Wisdom 15:4</a></li>
+<li><a href="#org1e75fc7">Wisdom 15:5</a></li>
+<li><a href="#org17a17da">Wisdom 15:6</a></li>
+<li><a href="#orgcb860c5">Wisdom 15:7</a></li>
+<li><a href="#org8dea767">Wisdom 15:8</a></li>
+<li><a href="#orgaa301d8">Wisdom 15:9</a></li>
+<li><a href="#org5a55700">Wisdom 15:10</a></li>
+<li><a href="#org14b5837">Wisdom 15:11</a></li>
+<li><a href="#org8a0b58a">Wisdom 15:12</a></li>
+<li><a href="#org8ee2631">Wisdom 15:13</a></li>
+<li><a href="#orge2ce2c5">Wisdom 15:14</a></li>
+<li><a href="#orgad0cc07">Wisdom 15:15</a></li>
+<li><a href="#org97608ff">Wisdom 15:16</a></li>
+<li><a href="#org632a87e">Wisdom 15:17</a></li>
+<li><a href="#orgdfd8fc8">Wisdom 15:18</a></li>
+<li><a href="#org54d8a09">Wisdom 15:19</a></li>
+</ul>
+</li>
+<li><a href="#orgcbec3a2">Wisdom 16</a>
+<ul>
+<li><a href="#orgfc81997">Wisdom 16:1</a></li>
+<li><a href="#orgc8b4275">Wisdom 16:2</a></li>
+<li><a href="#orge6ac359">Wisdom 16:3</a></li>
+<li><a href="#orgdaf0b09">Wisdom 16:4</a></li>
+<li><a href="#orgd5eec20">Wisdom 16:5</a></li>
+<li><a href="#org76a346d">Wisdom 16:6</a></li>
+<li><a href="#org05c7156">Wisdom 16:7</a></li>
+<li><a href="#orgd70d32c">Wisdom 16:8</a></li>
+<li><a href="#orgab9f960">Wisdom 16:9</a></li>
+<li><a href="#orga0dfa79">Wisdom 16:10</a></li>
+<li><a href="#org3ab4803">Wisdom 16:11</a></li>
+<li><a href="#org6f9110e">Wisdom 16:12</a></li>
+<li><a href="#org7dda31f">Wisdom 16:13</a></li>
+<li><a href="#org7bfb88a">Wisdom 16:14</a></li>
+<li><a href="#org1b031f7">Wisdom 16:15</a></li>
+<li><a href="#orgaeaadc6">Wisdom 16:16</a></li>
+<li><a href="#org99ddb8e">Wisdom 16:17</a></li>
+<li><a href="#org5899c0e">Wisdom 16:18</a></li>
+<li><a href="#org8e1818b">Wisdom 16:19</a></li>
+<li><a href="#orgc83f099">Wisdom 16:20</a></li>
+<li><a href="#org6a6632b">Wisdom 16:21</a></li>
+<li><a href="#org6d6e312">Wisdom 16:22</a></li>
+<li><a href="#org99d574b">Wisdom 16:23</a></li>
+<li><a href="#orgef5ab27">Wisdom 16:24</a></li>
+<li><a href="#org24ba50e">Wisdom 16:25</a></li>
+<li><a href="#org309bb06">Wisdom 16:26</a></li>
+<li><a href="#org6431580">Wisdom 16:27</a></li>
+<li><a href="#orgd57fdb4">Wisdom 16:28</a></li>
+<li><a href="#org3061ab1">Wisdom 16:29</a></li>
+</ul>
+</li>
+<li><a href="#org2391b3a">Wisdom 17</a>
+<ul>
+<li><a href="#orge76ff02">Wisdom 17:1</a></li>
+<li><a href="#org76263a8">Wisdom 17:2</a></li>
+<li><a href="#org59c4b2d">Wisdom 17:3</a></li>
+<li><a href="#orgcc601fb">Wisdom 17:4</a></li>
+<li><a href="#org314f6d7">Wisdom 17:5</a></li>
+<li><a href="#org2079e29">Wisdom 17:6</a></li>
+<li><a href="#org31bbc42">Wisdom 17:7</a></li>
+<li><a href="#orge051979">Wisdom 17:8</a></li>
+<li><a href="#orgcc10522">Wisdom 17:9</a></li>
+<li><a href="#org458c11c">Wisdom 17:10</a></li>
+<li><a href="#org757a0a8">Wisdom 17:11</a></li>
+<li><a href="#org8f6b13d">Wisdom 17:12</a></li>
+<li><a href="#org1664601">Wisdom 17:13</a></li>
+<li><a href="#org2627a8b">Wisdom 17:14</a></li>
+<li><a href="#org686f1b4">Wisdom 17:15</a></li>
+<li><a href="#orgd8eb912">Wisdom 17:16</a></li>
+<li><a href="#org1f41c05">Wisdom 17:17</a></li>
+<li><a href="#orgf242bec">Wisdom 17:18</a></li>
+<li><a href="#org14645c9">Wisdom 17:19</a></li>
+<li><a href="#org3ce3de1">Wisdom 17:20</a></li>
+</ul>
+</li>
+<li><a href="#org6ed3ebc">Wisdom 18</a>
+<ul>
+<li><a href="#org5c33d54">Wisdom 18:1</a></li>
+<li><a href="#org894899d">Wisdom 18:2</a></li>
+<li><a href="#org5a8e67f">Wisdom 18:3</a></li>
+<li><a href="#orgc398322">Wisdom 18:4</a></li>
+<li><a href="#org537e04a">Wisdom 18:5</a></li>
+<li><a href="#org5e0f73a">Wisdom 18:6</a></li>
+<li><a href="#orgc00d4b5">Wisdom 18:7</a></li>
+<li><a href="#org1986fb8">Wisdom 18:8</a></li>
+<li><a href="#org7d96179">Wisdom 18:9</a></li>
+<li><a href="#orgf7b4a00">Wisdom 18:10</a></li>
+<li><a href="#org1686303">Wisdom 18:11</a></li>
+<li><a href="#orga065e03">Wisdom 18:12</a></li>
+<li><a href="#org18f093e">Wisdom 18:13</a></li>
+<li><a href="#org6e61221">Wisdom 18:14</a></li>
+<li><a href="#org4f1ec4f">Wisdom 18:15</a></li>
+<li><a href="#orge158655">Wisdom 18:16</a></li>
+<li><a href="#org1a764f9">Wisdom 18:17</a></li>
+<li><a href="#orgf73cfb6">Wisdom 18:18</a></li>
+<li><a href="#org3fc95cb">Wisdom 18:19</a></li>
+<li><a href="#org8ab3929">Wisdom 18:20</a></li>
+<li><a href="#orge381b56">Wisdom 18:21</a></li>
+<li><a href="#orgf8bdde1">Wisdom 18:22</a></li>
+<li><a href="#org106455c">Wisdom 18:23</a></li>
+<li><a href="#org5d9478f">Wisdom 18:24</a></li>
+<li><a href="#org925f32e">Wisdom 18:25</a></li>
+</ul>
+</li>
+<li><a href="#org8a09f1f">Wisdom 19</a>
+<ul>
+<li><a href="#orgf115787">Wisdom 19:1</a></li>
+<li><a href="#org689afcb">Wisdom 19:2</a></li>
+<li><a href="#org3a6bb79">Wisdom 19:3</a></li>
+<li><a href="#org67556c2">Wisdom 19:4</a></li>
+<li><a href="#org01c887f">Wisdom 19:5</a></li>
+<li><a href="#orgb0c580f">Wisdom 19:6</a></li>
+<li><a href="#org1387961">Wisdom 19:7</a></li>
+<li><a href="#org060fe08">Wisdom 19:8</a></li>
+<li><a href="#org70b2c7b">Wisdom 19:9</a></li>
+<li><a href="#org0f671aa">Wisdom 19:10</a></li>
+<li><a href="#org44e77dc">Wisdom 19:11</a></li>
+<li><a href="#org37a97e2">Wisdom 19:12</a></li>
+<li><a href="#org800c99c">Wisdom 19:13</a></li>
+<li><a href="#orgf82b3dc">Wisdom 19:14</a></li>
+<li><a href="#org7b1d2fc">Wisdom 19:15</a></li>
+<li><a href="#orgd22d342">Wisdom 19:16</a></li>
+<li><a href="#org9eec393">Wisdom 19:17</a></li>
+<li><a href="#orgf34d1ce">Wisdom 19:18</a></li>
+<li><a href="#org8295592">Wisdom 19:19</a></li>
+<li><a href="#org7106ec7">Wisdom 19:20</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4960e62" class="outline-2">
+<h2 id="org4960e62">Wisdom 1</h2>
+<div class="outline-text-2" id="text-org4960e62">
+</div>
+<div id="outline-container-org59ec525" class="outline-3">
+<h3 id="org59ec525">Wisdom 1:1</h3>
+<div class="outline-text-3" id="text-org59ec525">
+<p>
+Love justice, you that are the judges of the earth. Think of the Lord in goodness, and seek him in simplicity of heart:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga978b55" class="outline-3">
+<h3 id="orga978b55">Wisdom 1:2</h3>
+<div class="outline-text-3" id="text-orga978b55">
+<p>
+For he is found by them that tempt him not: and he sheweth himself to them that have faith in him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org41a6aeb" class="outline-3">
+<h3 id="org41a6aeb">Wisdom 1:3</h3>
+<div class="outline-text-3" id="text-org41a6aeb">
+<p>
+For perverse thoughts separate from God: and his power, when it is tried, reproveth the unwise:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge579b40" class="outline-3">
+<h3 id="orge579b40">Wisdom 1:4</h3>
+<div class="outline-text-3" id="text-orge579b40">
+<p>
+For wisdom will not enter into a malicious soul, nor dwell in a body subject to sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59dcd80" class="outline-3">
+<h3 id="org59dcd80">Wisdom 1:5</h3>
+<div class="outline-text-3" id="text-org59dcd80">
+<p>
+For the Holy Spirit of discipline will flee from the deceitful, and will withdraw himself from thoughts that are without understanding, and he shall not abide when iniquity cometh in.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org626aeba" class="outline-3">
+<h3 id="org626aeba">Wisdom 1:6</h3>
+<div class="outline-text-3" id="text-org626aeba">
+<p>
+For the spirit of wisdom is benevolent, and will not acquit the evil speaker from his lips: for God is witness of his reins, and he is a true searcher of his heart, and a hearer of his tongue.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbea4e1d" class="outline-3">
+<h3 id="orgbea4e1d">Wisdom 1:7</h3>
+<div class="outline-text-3" id="text-orgbea4e1d">
+<p>
+For the Spirit of the Lord hath filled the whole world: and that which containeth all things, hath knowledge of the voice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6502320" class="outline-3">
+<h3 id="org6502320">Wisdom 1:8</h3>
+<div class="outline-text-3" id="text-org6502320">
+<p>
+Therefore he that speaketh unjust things, cannot be hid, neither shall the chastising judgment pass him by.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6af9e60" class="outline-3">
+<h3 id="org6af9e60">Wisdom 1:9</h3>
+<div class="outline-text-3" id="text-org6af9e60">
+<p>
+For inquisition shall be made into the thoughts of the ungodly, and the hearing of his words shall come to God, to the chastising of his iniquities.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea6c9a0" class="outline-3">
+<h3 id="orgea6c9a0">Wisdom 1:10</h3>
+<div class="outline-text-3" id="text-orgea6c9a0">
+<p>
+For the ear of jealousy heareth all things, and the tumult of murmuring shall not be hid.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb265f63" class="outline-3">
+<h3 id="orgb265f63">Wisdom 1:11</h3>
+<div class="outline-text-3" id="text-orgb265f63">
+<p>
+Keep yourselves, therefore, from murmuring, which profiteth nothing, and refrain your tongue from detraction, for an obscure speech shall not go for nought: and the mouth that belieth, killeth the soul.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72a9776" class="outline-3">
+<h3 id="org72a9776">Wisdom 1:12</h3>
+<div class="outline-text-3" id="text-org72a9776">
+<p>
+Seek not death in the error of your life, neither procure ye destruction by the works of your hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd18bad7" class="outline-3">
+<h3 id="orgd18bad7">Wisdom 1:13</h3>
+<div class="outline-text-3" id="text-orgd18bad7">
+<p>
+For God made not death, neither hath he pleasure in the destruction of the living.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd56ac0" class="outline-3">
+<h3 id="orgbd56ac0">Wisdom 1:14</h3>
+<div class="outline-text-3" id="text-orgbd56ac0">
+<p>
+For he created all things that they might be: and he made the nations of the earth for health: and there is no poison of destruction in them, nor kingdom of hell upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0673f16" class="outline-3">
+<h3 id="org0673f16">Wisdom 1:15</h3>
+<div class="outline-text-3" id="text-org0673f16">
+<p>
+For justice is perpetual and immortal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ac7b0b" class="outline-3">
+<h3 id="org2ac7b0b">Wisdom 1:16</h3>
+<div class="outline-text-3" id="text-org2ac7b0b">
+<p>
+But the wicked with works and words have called it to them: and esteeming it a friend, have fallen away and have made a covenant with it: because they are worthy to be of the part thereof. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa1c471" class="outline-2">
+<h2 id="orgfa1c471">Wisdom 2</h2>
+<div class="outline-text-2" id="text-orgfa1c471">
+</div>
+<div id="outline-container-orgf67ad43" class="outline-3">
+<h3 id="orgf67ad43">Wisdom 2:1</h3>
+<div class="outline-text-3" id="text-orgf67ad43">
+<p>
+For they have said, reasoning with themselves, but not right: The time of our life is short and tedious, and in the end of a man there is no remedy, and no man hath been known to have returned from hell:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b788f9" class="outline-3">
+<h3 id="org6b788f9">Wisdom 2:2</h3>
+<div class="outline-text-3" id="text-org6b788f9">
+<p>
+For we are born of nothing, and after this we shall be as if we had not been: for the breath in our nostrils is smoke: and speech a spark to move our heart,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org174d137" class="outline-3">
+<h3 id="org174d137">Wisdom 2:3</h3>
+<div class="outline-text-3" id="text-org174d137">
+<p>
+Which being put out, our body shall be ashes, and our spirit shall be poured abroad as soft air, and our life shall pass away as the trace of a cloud, and shall be dispersed as a mist, which is driven away by the beams of the sun, and overpowered with the heat thereof:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6e0927" class="outline-3">
+<h3 id="orgf6e0927">Wisdom 2:4</h3>
+<div class="outline-text-3" id="text-orgf6e0927">
+<p>
+And our name in time shall be forgotten, and no man shall have any remembrance of our works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e76ee7" class="outline-3">
+<h3 id="org3e76ee7">Wisdom 2:5</h3>
+<div class="outline-text-3" id="text-org3e76ee7">
+<p>
+For our time is as the passing of a shadow, and there is no going back of our end: for it is fast sealed, and no man returneth:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e4fad8" class="outline-3">
+<h3 id="org1e4fad8">Wisdom 2:6</h3>
+<div class="outline-text-3" id="text-org1e4fad8">
+<p>
+Come, therefore, and let us enjoy the good things that are present, and let us speedily use the creatures as in youth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc5129c8" class="outline-3">
+<h3 id="orgc5129c8">Wisdom 2:7</h3>
+<div class="outline-text-3" id="text-orgc5129c8">
+<p>
+Let us fill ourselves with costly wine, and ointments: and let not the flower of the time pass by us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org137e7f3" class="outline-3">
+<h3 id="org137e7f3">Wisdom 2:8</h3>
+<div class="outline-text-3" id="text-org137e7f3">
+<p>
+Let us crown ourselves with roses, before they be withered: let no meadow escape our riot.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86f8c13" class="outline-3">
+<h3 id="org86f8c13">Wisdom 2:9</h3>
+<div class="outline-text-3" id="text-org86f8c13">
+<p>
+Let none of us go without his part in luxury: let us every where leave tokens of joy: for this is our portion, and this our lot.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5d7e76" class="outline-3">
+<h3 id="orgd5d7e76">Wisdom 2:10</h3>
+<div class="outline-text-3" id="text-orgd5d7e76">
+<p>
+Let us oppress the poor just man, and not spare the widow, nor honour the ancient grey hairs of the aged.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb07bbc3" class="outline-3">
+<h3 id="orgb07bbc3">Wisdom 2:11</h3>
+<div class="outline-text-3" id="text-orgb07bbc3">
+<p>
+But let our strength be the law of justice: for that which is feeble is found to be nothing worth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec162a9" class="outline-3">
+<h3 id="orgec162a9">Wisdom 2:12</h3>
+<div class="outline-text-3" id="text-orgec162a9">
+<p>
+Let us, therefore, lie in wait for the just, because he is not for our turn, and he is contrary to our doings, and upbraideth us with transgressions of the law, and divulgeth against us the sins of our way of life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8b3e6f" class="outline-3">
+<h3 id="orgf8b3e6f">Wisdom 2:13</h3>
+<div class="outline-text-3" id="text-orgf8b3e6f">
+<p>
+He boasteth that he hath the knowledge of God, and calleth himself the son of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2820dd" class="outline-3">
+<h3 id="orgb2820dd">Wisdom 2:14</h3>
+<div class="outline-text-3" id="text-orgb2820dd">
+<p>
+He is become a censurer of our thoughts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org908faff" class="outline-3">
+<h3 id="org908faff">Wisdom 2:15</h3>
+<div class="outline-text-3" id="text-org908faff">
+<p>
+He is grievous unto us, even to behold: for his life is not like other men&rsquo;s, and his ways are very different.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0417981" class="outline-3">
+<h3 id="org0417981">Wisdom 2:16</h3>
+<div class="outline-text-3" id="text-org0417981">
+<p>
+We are esteemed by him as triflers, and he abstaineth from our ways as from filthiness, and he preferreth the latter end of the just, and glorieth that he hath God for his father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84242a5" class="outline-3">
+<h3 id="org84242a5">Wisdom 2:17</h3>
+<div class="outline-text-3" id="text-org84242a5">
+<p>
+Let us see then if his words be true, and let us prove what shall happen to him, and we shall know what his end shall be.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org101ede0" class="outline-3">
+<h3 id="org101ede0">Wisdom 2:18</h3>
+<div class="outline-text-3" id="text-org101ede0">
+<p>
+For if he be the true son of God, he will defend him, and will deliver him from the hands of his enemies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b432f0" class="outline-3">
+<h3 id="org6b432f0">Wisdom 2:19</h3>
+<div class="outline-text-3" id="text-org6b432f0">
+<p>
+Let us examine him by outrages and tortures, that we may know his meekness, and try his patience.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org450967c" class="outline-3">
+<h3 id="org450967c">Wisdom 2:20</h3>
+<div class="outline-text-3" id="text-org450967c">
+<p>
+Let us condemn him to a most shameful death: for there shall be respect had unto him by his words.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e1beef" class="outline-3">
+<h3 id="org5e1beef">Wisdom 2:21</h3>
+<div class="outline-text-3" id="text-org5e1beef">
+<p>
+These things they thought, and were deceived: for their own malice blinded them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97f3bab" class="outline-3">
+<h3 id="org97f3bab">Wisdom 2:22</h3>
+<div class="outline-text-3" id="text-org97f3bab">
+<p>
+And they knew not the secrets of God, nor hoped for the wages of justice, nor esteemed the honour of holy souls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fcef14" class="outline-3">
+<h3 id="org6fcef14">Wisdom 2:23</h3>
+<div class="outline-text-3" id="text-org6fcef14">
+<p>
+For God created man incorruptible, and to the image of his own likeness he made him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga611f35" class="outline-3">
+<h3 id="orga611f35">Wisdom 2:24</h3>
+<div class="outline-text-3" id="text-orga611f35">
+<p>
+But by the envy of the devil, death came into the world:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org426f3af" class="outline-3">
+<h3 id="org426f3af">Wisdom 2:25</h3>
+<div class="outline-text-3" id="text-org426f3af">
+<p>
+And they follow him that are of his side. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org57121d9" class="outline-2">
+<h2 id="org57121d9">Wisdom 3</h2>
+<div class="outline-text-2" id="text-org57121d9">
+</div>
+<div id="outline-container-orgd335ad0" class="outline-3">
+<h3 id="orgd335ad0">Wisdom 3:1</h3>
+<div class="outline-text-3" id="text-orgd335ad0">
+<p>
+But the souls of the just are in the hand of God, and the torment of death shall not touch them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35cfeba" class="outline-3">
+<h3 id="org35cfeba">Wisdom 3:2</h3>
+<div class="outline-text-3" id="text-org35cfeba">
+<p>
+In the sight of the unwise they seemed to die: and their departure was taken for misery:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org740a0f0" class="outline-3">
+<h3 id="org740a0f0">Wisdom 3:3</h3>
+<div class="outline-text-3" id="text-org740a0f0">
+<p>
+And their going away from us, for utter destruction: but they are in peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea5641a" class="outline-3">
+<h3 id="orgea5641a">Wisdom 3:4</h3>
+<div class="outline-text-3" id="text-orgea5641a">
+<p>
+And though in the sight of men they suffered torments, their hope is full of immortality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50aa5c0" class="outline-3">
+<h3 id="org50aa5c0">Wisdom 3:5</h3>
+<div class="outline-text-3" id="text-org50aa5c0">
+<p>
+Afflicted in few things, in many they shall be well rewarded: because God hath tried them, and found them worthy of himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4706e3f" class="outline-3">
+<h3 id="org4706e3f">Wisdom 3:6</h3>
+<div class="outline-text-3" id="text-org4706e3f">
+<p>
+As gold in the furnace, he hath proved them, and as a victim of a holocaust, he hath received them, and in time there shall be respect had to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org090c74f" class="outline-3">
+<h3 id="org090c74f">Wisdom 3:7</h3>
+<div class="outline-text-3" id="text-org090c74f">
+<p>
+The just shall shine, and shall run to and fro like sparks among the reeds.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a3e919" class="outline-3">
+<h3 id="org4a3e919">Wisdom 3:8</h3>
+<div class="outline-text-3" id="text-org4a3e919">
+<p>
+They shall judge nations, and rule over people, and their Lord shall reign for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8978146" class="outline-3">
+<h3 id="org8978146">Wisdom 3:9</h3>
+<div class="outline-text-3" id="text-org8978146">
+<p>
+They that trust in him shall understand the truth: and they that are faithful in love, shall rest in him: for grace and peace are to his elect.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org989f278" class="outline-3">
+<h3 id="org989f278">Wisdom 3:10</h3>
+<div class="outline-text-3" id="text-org989f278">
+<p>
+But the wicked shall be punished according to their own devices: who have neglected the just, and have revolted from the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org465ba3a" class="outline-3">
+<h3 id="org465ba3a">Wisdom 3:11</h3>
+<div class="outline-text-3" id="text-org465ba3a">
+<p>
+For he that rejecteth wisdom, and discipline, is unhappy: and their hope is vain, and their labours without fruit, and their works unprofitable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32dd55d" class="outline-3">
+<h3 id="org32dd55d">Wisdom 3:12</h3>
+<div class="outline-text-3" id="text-org32dd55d">
+<p>
+Their wives are foolish, and their children wicked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8fb4e1d" class="outline-3">
+<h3 id="org8fb4e1d">Wisdom 3:13</h3>
+<div class="outline-text-3" id="text-org8fb4e1d">
+<p>
+Their offspring is cursed, for happy is the barren: and the undefiled, that hath not known bed in sin, she shall have fruit in the visitation of holy souls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d7a024" class="outline-3">
+<h3 id="org0d7a024">Wisdom 3:14</h3>
+<div class="outline-text-3" id="text-org0d7a024">
+<p>
+And the eunuch, that hath not wrought iniquity with his hands, nor thought wicked things against God for the precious gift of faith shall be given to him, and a most acceptable lot in the temple of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcabc1b7" class="outline-3">
+<h3 id="orgcabc1b7">Wisdom 3:15</h3>
+<div class="outline-text-3" id="text-orgcabc1b7">
+<p>
+For the fruit of good labours is glorious, and the root of wisdom never faileth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71d466b" class="outline-3">
+<h3 id="org71d466b">Wisdom 3:16</h3>
+<div class="outline-text-3" id="text-org71d466b">
+<p>
+But the children of adulterers shall not come to perfection, and the seed of the unlawful bed shall be rooted out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5565aec" class="outline-3">
+<h3 id="org5565aec">Wisdom 3:17</h3>
+<div class="outline-text-3" id="text-org5565aec">
+<p>
+And if they live long, they shall be nothing regarded, and their last old age shall be without honour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf30e2a5" class="outline-3">
+<h3 id="orgf30e2a5">Wisdom 3:18</h3>
+<div class="outline-text-3" id="text-orgf30e2a5">
+<p>
+And if they die quickly, they shall have no hope, nor speech of comfort in the day of trial.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb473d4" class="outline-3">
+<h3 id="orgdb473d4">Wisdom 3:19</h3>
+<div class="outline-text-3" id="text-orgdb473d4">
+<p>
+For dreadful are the ends of a wicked race. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org637698d" class="outline-2">
+<h2 id="org637698d">Wisdom 4</h2>
+<div class="outline-text-2" id="text-org637698d">
+</div>
+<div id="outline-container-orgd683057" class="outline-3">
+<h3 id="orgd683057">Wisdom 4:1</h3>
+<div class="outline-text-3" id="text-orgd683057">
+<p>
+How beautiful is the chaste generation with glory: for the memory thereof is immortal: because it is known both with God and with men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35cc85a" class="outline-3">
+<h3 id="org35cc85a">Wisdom 4:2</h3>
+<div class="outline-text-3" id="text-org35cc85a">
+<p>
+When it is present, they imitate it: and they desire it, when it hath withdrawn itself, and it triumpheth crowned for ever, winning the reward of undefiled conflicts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc71b087" class="outline-3">
+<h3 id="orgc71b087">Wisdom 4:3</h3>
+<div class="outline-text-3" id="text-orgc71b087">
+<p>
+But the multiplied brood of the wicked shall not thrive, and bastard slips shall not take deep root, nor any fast foundation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86d8c58" class="outline-3">
+<h3 id="org86d8c58">Wisdom 4:4</h3>
+<div class="outline-text-3" id="text-org86d8c58">
+<p>
+And if they flourish in branches for a time, yet standing not fast, they shall be shaken with the wind, and through the force of winds they shall be rooted out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d60c20" class="outline-3">
+<h3 id="org8d60c20">Wisdom 4:5</h3>
+<div class="outline-text-3" id="text-org8d60c20">
+<p>
+For the branches not being perfect, shall be broken, and their fruits shall be unprofitable, and sour to eat, and fit for nothing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3f05cc" class="outline-3">
+<h3 id="orgf3f05cc">Wisdom 4:6</h3>
+<div class="outline-text-3" id="text-orgf3f05cc">
+<p>
+For the children that are born of unlawful beds, are witnesses of wickedness against their parents in their trial.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07d79b7" class="outline-3">
+<h3 id="org07d79b7">Wisdom 4:7</h3>
+<div class="outline-text-3" id="text-org07d79b7">
+<p>
+But the just man, if he be prevented with death, shall be in rest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cd5128" class="outline-3">
+<h3 id="org2cd5128">Wisdom 4:8</h3>
+<div class="outline-text-3" id="text-org2cd5128">
+<p>
+For venerable old age is not that of long time, nor counted by the number of years: but the understanding of a man is grey hairs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org500ec56" class="outline-3">
+<h3 id="org500ec56">Wisdom 4:9</h3>
+<div class="outline-text-3" id="text-org500ec56">
+<p>
+And a spotless life is old age.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0d6845" class="outline-3">
+<h3 id="orgc0d6845">Wisdom 4:10</h3>
+<div class="outline-text-3" id="text-orgc0d6845">
+<p>
+He pleased God, and was beloved, and living among sinners, he was translated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org257dee0" class="outline-3">
+<h3 id="org257dee0">Wisdom 4:11</h3>
+<div class="outline-text-3" id="text-org257dee0">
+<p>
+He was taken away, lest wickedness should alter his understanding, or deceit beguile his soul.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf41d10a" class="outline-3">
+<h3 id="orgf41d10a">Wisdom 4:12</h3>
+<div class="outline-text-3" id="text-orgf41d10a">
+<p>
+For the bewitching of vanity obscureth good things, and the wandering of concupiscence overturneth the innocent mind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4cfff55" class="outline-3">
+<h3 id="org4cfff55">Wisdom 4:13</h3>
+<div class="outline-text-3" id="text-org4cfff55">
+<p>
+Being made perfect in a short space, he fulfilled a long time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd864b9a" class="outline-3">
+<h3 id="orgd864b9a">Wisdom 4:14</h3>
+<div class="outline-text-3" id="text-orgd864b9a">
+<p>
+For his soul pleased God: therefore he hastened to bring him out of the midst of iniquities: but the people see this, and understand not, nor lay up such things in their hearts:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5d72da" class="outline-3">
+<h3 id="orgf5d72da">Wisdom 4:15</h3>
+<div class="outline-text-3" id="text-orgf5d72da">
+<p>
+That the grace of God, and his mercy is with his saints, and that he hath respect to his chosen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1adaeeb" class="outline-3">
+<h3 id="org1adaeeb">Wisdom 4:16</h3>
+<div class="outline-text-3" id="text-org1adaeeb">
+<p>
+But the just that is dead, condemneth the wicked that are living, and youth soon ended, the long life of the unjust.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e969e3" class="outline-3">
+<h3 id="org7e969e3">Wisdom 4:17</h3>
+<div class="outline-text-3" id="text-org7e969e3">
+<p>
+For they shall see the end of the wise man, and it shall not understand what God hath designed for him, and why the Lord hath set him in safety.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1dd011" class="outline-3">
+<h3 id="orgf1dd011">Wisdom 4:18</h3>
+<div class="outline-text-3" id="text-orgf1dd011">
+<p>
+They shall see him, and shall despise him: but the Lord shall laugh them to scorn.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b72422" class="outline-3">
+<h3 id="org9b72422">Wisdom 4:19</h3>
+<div class="outline-text-3" id="text-org9b72422">
+<p>
+And they shall fall after this without honour, and be a reproach among the dead for ever: for he shall burst them puffed up and speechless, and shall shake them from the foundations, and they shall be utterly laid waste: they shall be in sorrow, and their memory shall perish.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c27830" class="outline-3">
+<h3 id="org7c27830">Wisdom 4:20</h3>
+<div class="outline-text-3" id="text-org7c27830">
+<p>
+They shall come with fear at the thought of their sins, and their iniquities shall stand against them to convict them. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfdd671b" class="outline-2">
+<h2 id="orgfdd671b">Wisdom 5</h2>
+<div class="outline-text-2" id="text-orgfdd671b">
+</div>
+<div id="outline-container-org765ba75" class="outline-3">
+<h3 id="org765ba75">Wisdom 5:1</h3>
+<div class="outline-text-3" id="text-org765ba75">
+<p>
+Then shall the just stand with great constancy against those that have afflicted them, and taken away their labours.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc5da5f2" class="outline-3">
+<h3 id="orgc5da5f2">Wisdom 5:2</h3>
+<div class="outline-text-3" id="text-orgc5da5f2">
+<p>
+These seeing it, shall be troubled with terrible fear, and shall be amazed at the suddenness of their unexpected salvation,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64f9be0" class="outline-3">
+<h3 id="org64f9be0">Wisdom 5:3</h3>
+<div class="outline-text-3" id="text-org64f9be0">
+<p>
+Saying within themselves, repenting, and groaning for anguish of spirit: These are they, whom we had sometime in derision, and for a parable of reproach.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22128e6" class="outline-3">
+<h3 id="org22128e6">Wisdom 5:4</h3>
+<div class="outline-text-3" id="text-org22128e6">
+<p>
+We fools esteemed their life madness, and their end without honour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacf6ba4" class="outline-3">
+<h3 id="orgacf6ba4">Wisdom 5:5</h3>
+<div class="outline-text-3" id="text-orgacf6ba4">
+<p>
+Behold, how they are numbered among the children of God, and their lot is among the saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e9e700" class="outline-3">
+<h3 id="org1e9e700">Wisdom 5:6</h3>
+<div class="outline-text-3" id="text-org1e9e700">
+<p>
+Therefore we have erred from the way of truth, and the light of justice hath not shined unto us, and the sun of understanding hath not risen upon us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3fb600" class="outline-3">
+<h3 id="orgf3fb600">Wisdom 5:7</h3>
+<div class="outline-text-3" id="text-orgf3fb600">
+<p>
+We wearied ourselves in the way of iniquity and destruction, and have walked through hard ways, but the way of the Lord we have not known.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org692ab16" class="outline-3">
+<h3 id="org692ab16">Wisdom 5:8</h3>
+<div class="outline-text-3" id="text-org692ab16">
+<p>
+What hath pride profited us? or what advantage hath the boasting of riches brought us?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga01827e" class="outline-3">
+<h3 id="orga01827e">Wisdom 5:9</h3>
+<div class="outline-text-3" id="text-orga01827e">
+<p>
+All those things are passed away like a shadow, and like a post that runneth on,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79907ad" class="outline-3">
+<h3 id="org79907ad">Wisdom 5:10</h3>
+<div class="outline-text-3" id="text-org79907ad">
+<p>
+And as a ship, that passeth through the waves: whereof when it is gone by, the trace cannot be found. nor the path of its keel in the waters:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b0b2f4" class="outline-3">
+<h3 id="org5b0b2f4">Wisdom 5:11</h3>
+<div class="outline-text-3" id="text-org5b0b2f4">
+<p>
+Or as when a bird flieth through the air, of the passage of which no mark can be found, but only the sound of the wings beating the light air, and parting it by the force of her flight: she moved her wings, and hath flown through, and there is no mark found afterwards of her way:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf997bd" class="outline-3">
+<h3 id="orgdf997bd">Wisdom 5:12</h3>
+<div class="outline-text-3" id="text-orgdf997bd">
+<p>
+Or as when an arrow is shot at a mark, the divided air quickly cometh together again, so that the passage thereof is not known:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c967d3" class="outline-3">
+<h3 id="org3c967d3">Wisdom 5:13</h3>
+<div class="outline-text-3" id="text-org3c967d3">
+<p>
+So we also being born, forthwith ceased to be: and have been able to shew no mark of virtue: but are consumed in our wickedness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe1ba62" class="outline-3">
+<h3 id="orgbe1ba62">Wisdom 5:14</h3>
+<div class="outline-text-3" id="text-orgbe1ba62">
+<p>
+Such things as these the sinners said in hell:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge085100" class="outline-3">
+<h3 id="orge085100">Wisdom 5:15</h3>
+<div class="outline-text-3" id="text-orge085100">
+<p>
+For the hope of the wicked is as dust, which is blown away with the wind, and as a thin froth which is dispersed by the storm: and a smoke that is scattered abroad by the wind: and as the remembrance of a guest of one day that passeth by.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4928ecc" class="outline-3">
+<h3 id="org4928ecc">Wisdom 5:16</h3>
+<div class="outline-text-3" id="text-org4928ecc">
+<p>
+But the just shall live for evermore: and their reward is with the Lord, and the care of them with the most High.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f715ce" class="outline-3">
+<h3 id="org7f715ce">Wisdom 5:17</h3>
+<div class="outline-text-3" id="text-org7f715ce">
+<p>
+Therefore shall they receive a kingdom of glory, and a crown of beauty at the hand of the Lord: for with his right hand he will cover them, and with his holy arm he will defend them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org292174e" class="outline-3">
+<h3 id="org292174e">Wisdom 5:18</h3>
+<div class="outline-text-3" id="text-org292174e">
+<p>
+And his zeal will take armour, and he will arm the creature for the revenge of his enemies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org948b333" class="outline-3">
+<h3 id="org948b333">Wisdom 5:19</h3>
+<div class="outline-text-3" id="text-org948b333">
+<p>
+He will put on justice as a breastplate, and will take true judgment instead of a helmet:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org605b3d7" class="outline-3">
+<h3 id="org605b3d7">Wisdom 5:20</h3>
+<div class="outline-text-3" id="text-org605b3d7">
+<p>
+He will take equity for an invincible shield:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc62736b" class="outline-3">
+<h3 id="orgc62736b">Wisdom 5:21</h3>
+<div class="outline-text-3" id="text-orgc62736b">
+<p>
+And he will sharpen his severe wrath for a spear, and the whole world shall fight with him against the unwise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9534ee" class="outline-3">
+<h3 id="orge9534ee">Wisdom 5:22</h3>
+<div class="outline-text-3" id="text-orge9534ee">
+<p>
+Then shafts of lightning shall go directly from the clouds, as from a bow well bent, they shall be shot out, and shall fly to the mark.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10d9d65" class="outline-3">
+<h3 id="org10d9d65">Wisdom 5:23</h3>
+<div class="outline-text-3" id="text-org10d9d65">
+<p>
+And thick hail shall be cast upon them from the stone casting wrath: the water of the sea shall rage against them, and the rivers shall run together in a terrible manner.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd051c50" class="outline-3">
+<h3 id="orgd051c50">Wisdom 5:24</h3>
+<div class="outline-text-3" id="text-orgd051c50">
+<p>
+A mighty wind shall stand up against them, and as a whirlwind shall divide them: and their iniquity shall bring all the earth to a desert, and wickedness shall overthrow the thrones of the mighty. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgded70f5" class="outline-2">
+<h2 id="orgded70f5">Wisdom 6</h2>
+<div class="outline-text-2" id="text-orgded70f5">
+</div>
+<div id="outline-container-org3e56a97" class="outline-3">
+<h3 id="org3e56a97">Wisdom 6:1</h3>
+<div class="outline-text-3" id="text-org3e56a97">
+<p>
+Wisdom is better than strength: and a wise man is better than a strong man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16a71a6" class="outline-3">
+<h3 id="org16a71a6">Wisdom 6:2</h3>
+<div class="outline-text-3" id="text-org16a71a6">
+<p>
+Hear, therefore, ye kings, and understand, learn ye that are judges of the ends of the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga46f962" class="outline-3">
+<h3 id="orga46f962">Wisdom 6:3</h3>
+<div class="outline-text-3" id="text-orga46f962">
+<p>
+Give ear, you that rule the people, and that please yourselves in multitudes of nations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org529143f" class="outline-3">
+<h3 id="org529143f">Wisdom 6:4</h3>
+<div class="outline-text-3" id="text-org529143f">
+<p>
+For power is given you by the Lord, and strength by the most High, who will examine your works: and search out your thoughts:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93add3c" class="outline-3">
+<h3 id="org93add3c">Wisdom 6:5</h3>
+<div class="outline-text-3" id="text-org93add3c">
+<p>
+Because being ministers of his kingdom, you have not judged rightly, nor kept the law of justice, nor walked according to the will of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd72db1b" class="outline-3">
+<h3 id="orgd72db1b">Wisdom 6:6</h3>
+<div class="outline-text-3" id="text-orgd72db1b">
+<p>
+Horribly and speedily will he appear to you: for a most severe judgment shall be for them that bear rule.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc39b45c" class="outline-3">
+<h3 id="orgc39b45c">Wisdom 6:7</h3>
+<div class="outline-text-3" id="text-orgc39b45c">
+<p>
+For to him that is little, mercy is granted: but the mighty shall be mightily tormented.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge07c52e" class="outline-3">
+<h3 id="orge07c52e">Wisdom 6:8</h3>
+<div class="outline-text-3" id="text-orge07c52e">
+<p>
+For God will not except any man&rsquo;s person, neither will he stand in awe of any man&rsquo;s greatness: for he made the little and the great, and he hath equally care of all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d3cba0" class="outline-3">
+<h3 id="org4d3cba0">Wisdom 6:9</h3>
+<div class="outline-text-3" id="text-org4d3cba0">
+<p>
+But a greater punishment is ready for the more mighty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d223c6" class="outline-3">
+<h3 id="org5d223c6">Wisdom 6:10</h3>
+<div class="outline-text-3" id="text-org5d223c6">
+<p>
+To you, therefore, O kings, are these my words, that you may learn wisdom, and not fall from it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36f163d" class="outline-3">
+<h3 id="org36f163d">Wisdom 6:11</h3>
+<div class="outline-text-3" id="text-org36f163d">
+<p>
+For they that have kept just things justly, shall be justified: and they that have learned these things, shall find what to answer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65e40c2" class="outline-3">
+<h3 id="org65e40c2">Wisdom 6:12</h3>
+<div class="outline-text-3" id="text-org65e40c2">
+<p>
+Covet ye, therefore, my words, and love them, and you shall have instruction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28bff09" class="outline-3">
+<h3 id="org28bff09">Wisdom 6:13</h3>
+<div class="outline-text-3" id="text-org28bff09">
+<p>
+Wisdom is glorious, and never fadeth away, and is easily seen by them that love her, and is found by them that seek her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2ed448" class="outline-3">
+<h3 id="orge2ed448">Wisdom 6:14</h3>
+<div class="outline-text-3" id="text-orge2ed448">
+<p>
+She preventeth them that covet her, so that she first sheweth herself unto them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga24cc61" class="outline-3">
+<h3 id="orga24cc61">Wisdom 6:15</h3>
+<div class="outline-text-3" id="text-orga24cc61">
+<p>
+He that awaketh early to seek her, shall not labour: for he shall find her sitting at his door.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46eef5c" class="outline-3">
+<h3 id="org46eef5c">Wisdom 6:16</h3>
+<div class="outline-text-3" id="text-org46eef5c">
+<p>
+To think, therefore, upon her, is perfect understanding: and he that watcheth for her, shall quickly be secure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24f1833" class="outline-3">
+<h3 id="org24f1833">Wisdom 6:17</h3>
+<div class="outline-text-3" id="text-org24f1833">
+<p>
+For she goeth about seeking such as are worthy of her, and she sheweth herself to them cheerfully in the ways, and meeteth them with all providence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8e15e9" class="outline-3">
+<h3 id="orgf8e15e9">Wisdom 6:18</h3>
+<div class="outline-text-3" id="text-orgf8e15e9">
+<p>
+For the beginning of her is the most true desire of discipline.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3364d7" class="outline-3">
+<h3 id="orge3364d7">Wisdom 6:19</h3>
+<div class="outline-text-3" id="text-orge3364d7">
+<p>
+And the care of discipline is love: and love is the keeping of her laws: and the keeping of her laws is the firm foundation of incorruption:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd49170" class="outline-3">
+<h3 id="orgcd49170">Wisdom 6:20</h3>
+<div class="outline-text-3" id="text-orgcd49170">
+<p>
+And incorruption bringeth near to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d43ee6" class="outline-3">
+<h3 id="org3d43ee6">Wisdom 6:21</h3>
+<div class="outline-text-3" id="text-org3d43ee6">
+<p>
+Therefore the desire of wisdom bringeth to the everlasting kingdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d1510a" class="outline-3">
+<h3 id="org8d1510a">Wisdom 6:22</h3>
+<div class="outline-text-3" id="text-org8d1510a">
+<p>
+If then your delight be in thrones, and sceptres, O ye kings of the people, love wisdom, that you may reign for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8632f1" class="outline-3">
+<h3 id="orgd8632f1">Wisdom 6:23</h3>
+<div class="outline-text-3" id="text-orgd8632f1">
+<p>
+Love the light of wisdom, all ye that bear rule over peoples.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb99511" class="outline-3">
+<h3 id="orgbb99511">Wisdom 6:24</h3>
+<div class="outline-text-3" id="text-orgbb99511">
+<p>
+Now what wisdom is, and what was her origin, I will declare: and I will not hide from you the mysteries of God, but will seek her out from the beginning of her birth, and bring the knowledge of her to light, and will not pass over the truth:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc21e861" class="outline-3">
+<h3 id="orgc21e861">Wisdom 6:25</h3>
+<div class="outline-text-3" id="text-orgc21e861">
+<p>
+Neither will I go with consuming envy: for such a man shall not be partaker of wisdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ea4905" class="outline-3">
+<h3 id="org0ea4905">Wisdom 6:26</h3>
+<div class="outline-text-3" id="text-org0ea4905">
+<p>
+Now the multitude of the wise is the welfare of the whole world: and a wise king is the upholding of the people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fb41f4" class="outline-3">
+<h3 id="org3fb41f4">Wisdom 6:27</h3>
+<div class="outline-text-3" id="text-org3fb41f4">
+<p>
+Receive, therefore, instruction by my words, and it shall be profitable to you. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1706917" class="outline-2">
+<h2 id="org1706917">Wisdom 7</h2>
+<div class="outline-text-2" id="text-org1706917">
+</div>
+<div id="outline-container-org7837da9" class="outline-3">
+<h3 id="org7837da9">Wisdom 7:1</h3>
+<div class="outline-text-3" id="text-org7837da9">
+<p>
+I myself am a mortal man, like all others, and of the race of him, that was first made of the earth, and in the womb of my mother I was fashioned to be flesh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bd1b9e" class="outline-3">
+<h3 id="org4bd1b9e">Wisdom 7:2</h3>
+<div class="outline-text-3" id="text-org4bd1b9e">
+<p>
+In the time of ten months I was compacted in blood, of the seed of man, and the pleasure of sleep concurring.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga547247" class="outline-3">
+<h3 id="orga547247">Wisdom 7:3</h3>
+<div class="outline-text-3" id="text-orga547247">
+<p>
+And being born, I drew in the common air, and fell upon the earth, that is made alike, and the first voice which I uttered was crying, as all others do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeeb3924" class="outline-3">
+<h3 id="orgeeb3924">Wisdom 7:4</h3>
+<div class="outline-text-3" id="text-orgeeb3924">
+<p>
+I was nursed in swaddling clothes, and with great cares.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54c348c" class="outline-3">
+<h3 id="org54c348c">Wisdom 7:5</h3>
+<div class="outline-text-3" id="text-org54c348c">
+<p>
+For none of the kings had any other beginning of birth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6cbb42" class="outline-3">
+<h3 id="orgd6cbb42">Wisdom 7:6</h3>
+<div class="outline-text-3" id="text-orgd6cbb42">
+<p>
+For all men have one entrance into life, and the like going out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga74294b" class="outline-3">
+<h3 id="orga74294b">Wisdom 7:7</h3>
+<div class="outline-text-3" id="text-orga74294b">
+<p>
+Wherefore I wished, and understanding was given me: and I called upon God, and the spirit of wisdom came upon me:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0acf23f" class="outline-3">
+<h3 id="org0acf23f">Wisdom 7:8</h3>
+<div class="outline-text-3" id="text-org0acf23f">
+<p>
+And I preferred her before kingdoms and thrones, and esteemed riches nothing in comparison of her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94260d4" class="outline-3">
+<h3 id="org94260d4">Wisdom 7:9</h3>
+<div class="outline-text-3" id="text-org94260d4">
+<p>
+Neither did I compare unto her any precious stone: for all gold, in comparison of her, is as a little sand; and silver, in respect to her, shall be counted as clay.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org365113f" class="outline-3">
+<h3 id="org365113f">Wisdom 7:10</h3>
+<div class="outline-text-3" id="text-org365113f">
+<p>
+I loved her above health and beauty, and chose to have her instead of light: for her light cannot be put out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f87374" class="outline-3">
+<h3 id="org0f87374">Wisdom 7:11</h3>
+<div class="outline-text-3" id="text-org0f87374">
+<p>
+Now all good things came to me together with her, and innumerable riches through her hands,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b5ce56" class="outline-3">
+<h3 id="org2b5ce56">Wisdom 7:12</h3>
+<div class="outline-text-3" id="text-org2b5ce56">
+<p>
+And I rejoiced in all these: for this wisdom went before me, and I knew not that she was the mother of them all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bc0cd4" class="outline-3">
+<h3 id="org9bc0cd4">Wisdom 7:13</h3>
+<div class="outline-text-3" id="text-org9bc0cd4">
+<p>
+Which I have learned without guile, and communicate without envy, and her riches I hide not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef3b46f" class="outline-3">
+<h3 id="orgef3b46f">Wisdom 7:14</h3>
+<div class="outline-text-3" id="text-orgef3b46f">
+<p>
+For she is an infinite treasure to men: which they that use, become the friends of God, being commended for the gifts of discipline.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03f1005" class="outline-3">
+<h3 id="org03f1005">Wisdom 7:15</h3>
+<div class="outline-text-3" id="text-org03f1005">
+<p>
+And God hath given to me to speak as I would, and to conceive thoughts worthy of those things that are given me: because he is the guide of wisdom, and the director of the wise:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge11701b" class="outline-3">
+<h3 id="orge11701b">Wisdom 7:16</h3>
+<div class="outline-text-3" id="text-orge11701b">
+<p>
+For in his hand are both we, and our words, and all wisdom, and the knowledge and skill of works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a96bcb" class="outline-3">
+<h3 id="org4a96bcb">Wisdom 7:17</h3>
+<div class="outline-text-3" id="text-org4a96bcb">
+<p>
+For he hath given me the true knowledge of the things that are: to know the disposition of the whole world, and the virtues of the elements,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ed3eb7" class="outline-3">
+<h3 id="org5ed3eb7">Wisdom 7:18</h3>
+<div class="outline-text-3" id="text-org5ed3eb7">
+<p>
+The beginning, and ending, and midst of the times, the alterations of their courses, and the changes of seasons,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org984a646" class="outline-3">
+<h3 id="org984a646">Wisdom 7:19</h3>
+<div class="outline-text-3" id="text-org984a646">
+<p>
+The revolutions of the year, and the dispositions of the stars,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24e648f" class="outline-3">
+<h3 id="org24e648f">Wisdom 7:20</h3>
+<div class="outline-text-3" id="text-org24e648f">
+<p>
+The natures of living creatures, and rage of wild beasts, the force of winds, and reasonings of men, the diversities of plants, and the virtues of roots,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8073657" class="outline-3">
+<h3 id="org8073657">Wisdom 7:21</h3>
+<div class="outline-text-3" id="text-org8073657">
+<p>
+And all such things as are hid, and not foreseen, I have learned: for wisdom, which is the worker of all things, taught me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61e623c" class="outline-3">
+<h3 id="org61e623c">Wisdom 7:22</h3>
+<div class="outline-text-3" id="text-org61e623c">
+<p>
+For in her is the spirit of understanding; holy, one, manifold, subtile, eloquent, active, undefiled, sure, sweet, loving that which is good, quick, which nothing hindereth, beneficent,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8466ad3" class="outline-3">
+<h3 id="org8466ad3">Wisdom 7:23</h3>
+<div class="outline-text-3" id="text-org8466ad3">
+<p>
+Gentle, kind, steadfast, assured, secure, having all power, overseeing all things, and containing all spirits: intelligible, pure, subtile:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b1aa54" class="outline-3">
+<h3 id="org2b1aa54">Wisdom 7:24</h3>
+<div class="outline-text-3" id="text-org2b1aa54">
+<p>
+For wisdom is more active than all active things; and reacheth everywhere, by reason of her purity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcaa1b63" class="outline-3">
+<h3 id="orgcaa1b63">Wisdom 7:25</h3>
+<div class="outline-text-3" id="text-orgcaa1b63">
+<p>
+For she is a vapour of the power of God, and a certain pure emmanation of the glory of the Almighty God: and therefore no defiled thing cometh into her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24497b9" class="outline-3">
+<h3 id="org24497b9">Wisdom 7:26</h3>
+<div class="outline-text-3" id="text-org24497b9">
+<p>
+For she is the brightness of eternal light, and the unspotted mirror of God&rsquo;s majesty, and the image of his goodness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca537b3" class="outline-3">
+<h3 id="orgca537b3">Wisdom 7:27</h3>
+<div class="outline-text-3" id="text-orgca537b3">
+<p>
+And being but one, she can do all things: and remaining in herself the same, she reneweth all things, and through nations conveyeth herself into holy souls, she maketh the friends of God and prophets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11672fe" class="outline-3">
+<h3 id="org11672fe">Wisdom 7:28</h3>
+<div class="outline-text-3" id="text-org11672fe">
+<p>
+For God loveth none but him that dwelleth with wisdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb11402d" class="outline-3">
+<h3 id="orgb11402d">Wisdom 7:29</h3>
+<div class="outline-text-3" id="text-orgb11402d">
+<p>
+For she is more beautiful than the sun, and above all the order of the stars: being compared with the light, she is found before it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc32ab6c" class="outline-3">
+<h3 id="orgc32ab6c">Wisdom 7:30</h3>
+<div class="outline-text-3" id="text-orgc32ab6c">
+<p>
+For after this cometh night, but no evil can overcome wisdom. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2c48be5" class="outline-2">
+<h2 id="org2c48be5">Wisdom 8</h2>
+<div class="outline-text-2" id="text-org2c48be5">
+</div>
+<div id="outline-container-org0e9b78f" class="outline-3">
+<h3 id="org0e9b78f">Wisdom 8:1</h3>
+<div class="outline-text-3" id="text-org0e9b78f">
+<p>
+She reacheth, therefore, from end to end mightily, and ordereth all things sweetly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d7d0c5" class="outline-3">
+<h3 id="org4d7d0c5">Wisdom 8:2</h3>
+<div class="outline-text-3" id="text-org4d7d0c5">
+<p>
+Her have I loved, and have sought her out from my youth, and have desired to take for my spouse, and I became a lover of her beauty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc953aa7" class="outline-3">
+<h3 id="orgc953aa7">Wisdom 8:3</h3>
+<div class="outline-text-3" id="text-orgc953aa7">
+<p>
+She glorifieth her nobility by being conversant with God: yea, and the Lord of all things hath loved her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde5ffb1" class="outline-3">
+<h3 id="orgde5ffb1">Wisdom 8:4</h3>
+<div class="outline-text-3" id="text-orgde5ffb1">
+<p>
+For it is she that teacheth the knowledge of God and is the chooser of his works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2306144" class="outline-3">
+<h3 id="org2306144">Wisdom 8:5</h3>
+<div class="outline-text-3" id="text-org2306144">
+<p>
+And if riches be desired in life, what is richer than wisdom, which maketh all things?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc48a2b" class="outline-3">
+<h3 id="orgbc48a2b">Wisdom 8:6</h3>
+<div class="outline-text-3" id="text-orgbc48a2b">
+<p>
+And if sense do work: who is a more artful worker than she of those things that are?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1325dde" class="outline-3">
+<h3 id="org1325dde">Wisdom 8:7</h3>
+<div class="outline-text-3" id="text-org1325dde">
+<p>
+And if a man love justice: her labours have great virtues: for she teacheth temperance, and prudence, and justice, and fortitude, which are such things as men can have nothing more profitable in life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf803b1a" class="outline-3">
+<h3 id="orgf803b1a">Wisdom 8:8</h3>
+<div class="outline-text-3" id="text-orgf803b1a">
+<p>
+And if a man desire much knowledge: she knoweth things past, and judgeth of things to come: she knoweth the subtilties of speeches, and the solutions of arguments: she knoweth signs and wonders before they be done, and the events of times and ages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org716bf09" class="outline-3">
+<h3 id="org716bf09">Wisdom 8:9</h3>
+<div class="outline-text-3" id="text-org716bf09">
+<p>
+I purposed, therefore, to take her to me to live with me: knowing that she will communicate to me of her good things, and will be a comfort in my cares and grief.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d0b020" class="outline-3">
+<h3 id="org2d0b020">Wisdom 8:10</h3>
+<div class="outline-text-3" id="text-org2d0b020">
+<p>
+For her sake I shall have glory among the multitude, and honour with the ancients, though I be young:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org585f479" class="outline-3">
+<h3 id="org585f479">Wisdom 8:11</h3>
+<div class="outline-text-3" id="text-org585f479">
+<p>
+And I shall be found of a quick conceit in judgment, and shall be admired in the sight of the mighty, and the faces of princes shall wonder at me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge68de8d" class="outline-3">
+<h3 id="orge68de8d">Wisdom 8:12</h3>
+<div class="outline-text-3" id="text-orge68de8d">
+<p>
+They shall wait for me when I hold my peace, and they shall look upon me when I speak; and if I talk much, they shall lay their hands on their mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6126215" class="outline-3">
+<h3 id="org6126215">Wisdom 8:13</h3>
+<div class="outline-text-3" id="text-org6126215">
+<p>
+Moreover, by the means of her I shall have immortality: and shall leave behind me an everlasting memory to them that come after me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga42d691" class="outline-3">
+<h3 id="orga42d691">Wisdom 8:14</h3>
+<div class="outline-text-3" id="text-orga42d691">
+<p>
+I shall set the people in order: and nations shall be subject to me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0752362" class="outline-3">
+<h3 id="org0752362">Wisdom 8:15</h3>
+<div class="outline-text-3" id="text-org0752362">
+<p>
+Terrible kings hearing, shall be afraid of me: among the multitude I shall be found good, and valiant in war.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07ca4b0" class="outline-3">
+<h3 id="org07ca4b0">Wisdom 8:16</h3>
+<div class="outline-text-3" id="text-org07ca4b0">
+<p>
+When I go into my house, I shall repose myself with her: for her conversation hath no bitterness, nor her company any tediousness, but joy and gladness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8a4cb5" class="outline-3">
+<h3 id="orgb8a4cb5">Wisdom 8:17</h3>
+<div class="outline-text-3" id="text-orgb8a4cb5">
+<p>
+Thinking these things with myself, and pondering them in my heart, that to be allied to wisdom is immortality,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org757ec03" class="outline-3">
+<h3 id="org757ec03">Wisdom 8:18</h3>
+<div class="outline-text-3" id="text-org757ec03">
+<p>
+And that there is great delight in her friendship, and inexhaustible riches in the works of her hands, and in the exercise of conference with her, wisdom, and glory in the communication of her words: I went about seeking, that I might take her to myself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15af991" class="outline-3">
+<h3 id="org15af991">Wisdom 8:19</h3>
+<div class="outline-text-3" id="text-org15af991">
+<p>
+And I was a witty child, and had received a good soul.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef65e96" class="outline-3">
+<h3 id="orgef65e96">Wisdom 8:20</h3>
+<div class="outline-text-3" id="text-orgef65e96">
+<p>
+And whereas I was more good, I came to a body undefiled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org313b3b6" class="outline-3">
+<h3 id="org313b3b6">Wisdom 8:21</h3>
+<div class="outline-text-3" id="text-org313b3b6">
+<p>
+And as I knew that I could not otherwise be continent, except God gave it, and this also was a point of wisdom, to know whose gift it was, I went to the Lord, and besought him, and said with my whole heart: 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e02b2d" class="outline-2">
+<h2 id="org0e02b2d">Wisdom 9</h2>
+<div class="outline-text-2" id="text-org0e02b2d">
+</div>
+<div id="outline-container-orgad9372d" class="outline-3">
+<h3 id="orgad9372d">Wisdom 9:1</h3>
+<div class="outline-text-3" id="text-orgad9372d">
+<p>
+God of my fathers, and Lord of mercy, who hast made all things with thy word,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge398186" class="outline-3">
+<h3 id="orge398186">Wisdom 9:2</h3>
+<div class="outline-text-3" id="text-orge398186">
+<p>
+And by thy wisdom hast appointed man, that he should have dominion over the creature that was made by thee,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b66a29" class="outline-3">
+<h3 id="org3b66a29">Wisdom 9:3</h3>
+<div class="outline-text-3" id="text-org3b66a29">
+<p>
+That he should order the world according to equity and justice, and execute justice with an upright heart:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org698a981" class="outline-3">
+<h3 id="org698a981">Wisdom 9:4</h3>
+<div class="outline-text-3" id="text-org698a981">
+<p>
+Give me wisdom, that sitteth by thy throne, and cast me not off from among thy children:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ad10d6" class="outline-3">
+<h3 id="org8ad10d6">Wisdom 9:5</h3>
+<div class="outline-text-3" id="text-org8ad10d6">
+<p>
+For I am thy servant, and the son of thy handmaid, a weak man, and of short time, and falling short of the understanding of judgment and laws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6bff27" class="outline-3">
+<h3 id="orgf6bff27">Wisdom 9:6</h3>
+<div class="outline-text-3" id="text-orgf6bff27">
+<p>
+For if one be perfect among the children of men, yet if thy wisdom be not with him, he shall be nothing regarded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70d85bc" class="outline-3">
+<h3 id="org70d85bc">Wisdom 9:7</h3>
+<div class="outline-text-3" id="text-org70d85bc">
+<p>
+Thou hast chosen me to be king of thy people, and a judge of thy sons and daughters:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c11cb8" class="outline-3">
+<h3 id="org0c11cb8">Wisdom 9:8</h3>
+<div class="outline-text-3" id="text-org0c11cb8">
+<p>
+And hast commanded me to build a temple on thy holy mount, and an altar in the city of thy dwelling place, a resemblance of thy holy tabernacle, which thou hast prepared from the beginning:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org475b35a" class="outline-3">
+<h3 id="org475b35a">Wisdom 9:9</h3>
+<div class="outline-text-3" id="text-org475b35a">
+<p>
+And thy wisdom with thee, which knoweth thy works, which then also was present when thou madest the world, and knew what was agreeable to thy eyes, and what was right in thy commandments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c6734a" class="outline-3">
+<h3 id="org0c6734a">Wisdom 9:10</h3>
+<div class="outline-text-3" id="text-org0c6734a">
+<p>
+Send her out of thy holy heaven, and from the throne of thy majesty, that she may be with me, and may labour with me, that I may know what is acceptable with thee:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c7fed6" class="outline-3">
+<h3 id="org4c7fed6">Wisdom 9:11</h3>
+<div class="outline-text-3" id="text-org4c7fed6">
+<p>
+For she knoweth and understandeth all things, and shall lead me soberly in my works, and shall preserve me by her power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0df06e4" class="outline-3">
+<h3 id="org0df06e4">Wisdom 9:12</h3>
+<div class="outline-text-3" id="text-org0df06e4">
+<p>
+So shall my works be acceptable, and I shall govern thy people justly, and shall be worthy of the throne of my father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50c62d0" class="outline-3">
+<h3 id="org50c62d0">Wisdom 9:13</h3>
+<div class="outline-text-3" id="text-org50c62d0">
+<p>
+For who among men is he that can know the counsel of God? or who can think what the will of God is?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14376a8" class="outline-3">
+<h3 id="org14376a8">Wisdom 9:14</h3>
+<div class="outline-text-3" id="text-org14376a8">
+<p>
+For the thoughts of mortal men are fearful, and our counsels uncertain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeca1175" class="outline-3">
+<h3 id="orgeca1175">Wisdom 9:15</h3>
+<div class="outline-text-3" id="text-orgeca1175">
+<p>
+For the corruptible body is a load upon the soul, and the earthly habitation presseth down the mind that museth upon many things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4dac6f" class="outline-3">
+<h3 id="orgc4dac6f">Wisdom 9:16</h3>
+<div class="outline-text-3" id="text-orgc4dac6f">
+<p>
+And hardly do we guess aright at things that are upon earth: and with labour do we find the things that are before us. But the things that are in heaven, who shall search out?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc831fa" class="outline-3">
+<h3 id="orgfc831fa">Wisdom 9:17</h3>
+<div class="outline-text-3" id="text-orgfc831fa">
+<p>
+And who shall know thy thought, except thou give wisdom, and send thy holy Spirit from above:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc6c2df" class="outline-3">
+<h3 id="orgbc6c2df">Wisdom 9:18</h3>
+<div class="outline-text-3" id="text-orgbc6c2df">
+<p>
+And so the ways of them that are upon earth may be corrected, and men may learn the things that please thee?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2eb4fcb" class="outline-3">
+<h3 id="org2eb4fcb">Wisdom 9:19</h3>
+<div class="outline-text-3" id="text-org2eb4fcb">
+<p>
+For by wisdom they were healed, whosoever have pleased thee, O Lord, from the beginning. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org21957bd" class="outline-2">
+<h2 id="org21957bd">Wisdom 10</h2>
+<div class="outline-text-2" id="text-org21957bd">
+</div>
+<div id="outline-container-org4ac4557" class="outline-3">
+<h3 id="org4ac4557">Wisdom 10:1</h3>
+<div class="outline-text-3" id="text-org4ac4557">
+<p>
+She preserved him, that was first formed by God, the father of the world, when he was created alone,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e3036c" class="outline-3">
+<h3 id="org4e3036c">Wisdom 10:2</h3>
+<div class="outline-text-3" id="text-org4e3036c">
+<p>
+And she brought him out of his sin, and gave him power to govern all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85ffab1" class="outline-3">
+<h3 id="org85ffab1">Wisdom 10:3</h3>
+<div class="outline-text-3" id="text-org85ffab1">
+<p>
+But when the unjust went away from her in his anger, he perished by the fury wherewith he murdered his brother.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaeaa131" class="outline-3">
+<h3 id="orgaeaa131">Wisdom 10:4</h3>
+<div class="outline-text-3" id="text-orgaeaa131">
+<p>
+For whose cause, when water destroyed the earth, wisdom healed it again, directing the course of the just by contemptible wood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78f5eb6" class="outline-3">
+<h3 id="org78f5eb6">Wisdom 10:5</h3>
+<div class="outline-text-3" id="text-org78f5eb6">
+<p>
+Moreover, when the nations had conspired together to consent to wickedness, she knew the just, and preserved him without blame to God, and kept him strong against the compassion for his son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbea10b1" class="outline-3">
+<h3 id="orgbea10b1">Wisdom 10:6</h3>
+<div class="outline-text-3" id="text-orgbea10b1">
+<p>
+She delivered the just man, who fled from the wicked that were perishing, when the fire came down upon Pentapolis:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e96699" class="outline-3">
+<h3 id="org9e96699">Wisdom 10:7</h3>
+<div class="outline-text-3" id="text-org9e96699">
+<p>
+Whose land, for a testimony of their wickedness, is desolate, and smoketh to this day, and the trees bear fruits that ripen not, and a standing pillar of salt is a monument of an incredulous soul.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff39ed0" class="outline-3">
+<h3 id="orgff39ed0">Wisdom 10:8</h3>
+<div class="outline-text-3" id="text-orgff39ed0">
+<p>
+For regarding not wisdom, they did not only slip in this, that they were ignorant of good things; but they left also unto men a memorial of their folly, so that in the things in which they sinned, they could not so much as lie hid.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a2f7f8" class="outline-3">
+<h3 id="org8a2f7f8">Wisdom 10:9</h3>
+<div class="outline-text-3" id="text-org8a2f7f8">
+<p>
+But wisdom hath delivered from sorrow them that attend upon her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f6f482" class="outline-3">
+<h3 id="org0f6f482">Wisdom 10:10</h3>
+<div class="outline-text-3" id="text-org0f6f482">
+<p>
+She conducted the just, when he fled from his brother&rsquo;s wrath, through the right ways, and shewed him the kingdom of God, and gave him the knowledge of the holy things, made him honourable in his labours, and accomplished his labours.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6152064" class="outline-3">
+<h3 id="org6152064">Wisdom 10:11</h3>
+<div class="outline-text-3" id="text-org6152064">
+<p>
+In the deceit of them that overreached him, she stood by him, and made him honourable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf232b34" class="outline-3">
+<h3 id="orgf232b34">Wisdom 10:12</h3>
+<div class="outline-text-3" id="text-orgf232b34">
+<p>
+She kept him safe from his enemies, and she defended him from seducers, and gave him a strong conflict, that he might overcome, and know that wisdom is mightier than all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9918dd1" class="outline-3">
+<h3 id="org9918dd1">Wisdom 10:13</h3>
+<div class="outline-text-3" id="text-org9918dd1">
+<p>
+She forsook not the just when he was sold, but delivered him from sinners: she went down with him into the pit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05fe577" class="outline-3">
+<h3 id="org05fe577">Wisdom 10:14</h3>
+<div class="outline-text-3" id="text-org05fe577">
+<p>
+And in bands she left him not, till she brought him the sceptre of the kingdom, and power against those that oppressed him: and shewed them to be liars that had accused him, and gave him everlasting glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11d0022" class="outline-3">
+<h3 id="org11d0022">Wisdom 10:15</h3>
+<div class="outline-text-3" id="text-org11d0022">
+<p>
+She delivered the just people, and blameless seed, from the nations that oppressed them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf13f59" class="outline-3">
+<h3 id="orgcf13f59">Wisdom 10:16</h3>
+<div class="outline-text-3" id="text-orgcf13f59">
+<p>
+She entered into the soul of the servant of God and stood against dreadful kings in wonders and signs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81dc2a2" class="outline-3">
+<h3 id="org81dc2a2">Wisdom 10:17</h3>
+<div class="outline-text-3" id="text-org81dc2a2">
+<p>
+And she rendered to the just the wages of their labours, and conducted them in a wonderful way: and she was to them for a covert by day, and for the light of stars by night:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7560f34" class="outline-3">
+<h3 id="org7560f34">Wisdom 10:18</h3>
+<div class="outline-text-3" id="text-org7560f34">
+<p>
+And she brought them through the Red Sea, and carried them over through a great water.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org52814ed" class="outline-3">
+<h3 id="org52814ed">Wisdom 10:19</h3>
+<div class="outline-text-3" id="text-org52814ed">
+<p>
+But their enemies she drowned in the sea, and from the depth of hell she brought them out. Therefore the just took the spoils of the wicked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc874aea" class="outline-3">
+<h3 id="orgc874aea">Wisdom 10:20</h3>
+<div class="outline-text-3" id="text-orgc874aea">
+<p>
+And they sung to thy holy name, O Lord, and they praised with one accord thy victorious hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ebf648" class="outline-3">
+<h3 id="org9ebf648">Wisdom 10:21</h3>
+<div class="outline-text-3" id="text-org9ebf648">
+<p>
+For wisdom opened the mouth of the dumb, and made the tongues of infants eloquent. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3cf187d" class="outline-2">
+<h2 id="org3cf187d">Wisdom 11</h2>
+<div class="outline-text-2" id="text-org3cf187d">
+</div>
+<div id="outline-container-org9226868" class="outline-3">
+<h3 id="org9226868">Wisdom 11:1</h3>
+<div class="outline-text-3" id="text-org9226868">
+<p>
+She prospered their works in the hands of the holy prophet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org794b8e8" class="outline-3">
+<h3 id="org794b8e8">Wisdom 11:2</h3>
+<div class="outline-text-3" id="text-org794b8e8">
+<p>
+They went through wildernesses that were not inhabited, and in desert places they pitched their tents.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7494344" class="outline-3">
+<h3 id="org7494344">Wisdom 11:3</h3>
+<div class="outline-text-3" id="text-org7494344">
+<p>
+They stood against their enemies, and revenged themselves of their adversaries.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2d96fc" class="outline-3">
+<h3 id="orgc2d96fc">Wisdom 11:4</h3>
+<div class="outline-text-3" id="text-orgc2d96fc">
+<p>
+They were thirsty, and they called upon thee, and water was given them out of the high rock, and a refreshment of their thirst out of the hard stone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5779ff2" class="outline-3">
+<h3 id="org5779ff2">Wisdom 11:5</h3>
+<div class="outline-text-3" id="text-org5779ff2">
+<p>
+For by what things their enemies were punished, when their drink failed them, while the children of Israel abounded therewith, and rejoiced:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27d5fee" class="outline-3">
+<h3 id="org27d5fee">Wisdom 11:6</h3>
+<div class="outline-text-3" id="text-org27d5fee">
+<p>
+By the same things they in their need were benefited.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org010818c" class="outline-3">
+<h3 id="org010818c">Wisdom 11:7</h3>
+<div class="outline-text-3" id="text-org010818c">
+<p>
+For instead of a fountain of an ever running river, thou gavest human blood to the unjust.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7395254" class="outline-3">
+<h3 id="org7395254">Wisdom 11:8</h3>
+<div class="outline-text-3" id="text-org7395254">
+<p>
+And whilst they were diminished for a manifest reproof of their murdering the infants, thou gavest to thine abundant water unlooked for:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7276692" class="outline-3">
+<h3 id="org7276692">Wisdom 11:9</h3>
+<div class="outline-text-3" id="text-org7276692">
+<p>
+Shewing by the thirst that was then, how thou didst exalt thine, and didst kill their adversaries.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaaddd7c" class="outline-3">
+<h3 id="orgaaddd7c">Wisdom 11:10</h3>
+<div class="outline-text-3" id="text-orgaaddd7c">
+<p>
+For when they were tried, and chastised with mercy, they knew how the wicked were judged with wrath, and tormented.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f5ce6b" class="outline-3">
+<h3 id="org7f5ce6b">Wisdom 11:11</h3>
+<div class="outline-text-3" id="text-org7f5ce6b">
+<p>
+For thou didst admonish and try them as a father: but the others, as a severe king, thou didst examine and condemn.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95416a5" class="outline-3">
+<h3 id="org95416a5">Wisdom 11:12</h3>
+<div class="outline-text-3" id="text-org95416a5">
+<p>
+For whether absent or present, they were tormented alike.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge331a0b" class="outline-3">
+<h3 id="orge331a0b">Wisdom 11:13</h3>
+<div class="outline-text-3" id="text-orge331a0b">
+<p>
+For a double affliction came upon them, and a groaning for the remembrance of things past.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33d9f8a" class="outline-3">
+<h3 id="org33d9f8a">Wisdom 11:14</h3>
+<div class="outline-text-3" id="text-org33d9f8a">
+<p>
+For when they heard that by their punishments the others were benefited, they remembered the Lord, wondering at the end of what was come to pass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb70b7e8" class="outline-3">
+<h3 id="orgb70b7e8">Wisdom 11:15</h3>
+<div class="outline-text-3" id="text-orgb70b7e8">
+<p>
+For whom they scorned before, when he was thrown out at the time of his being wickedly exposed to perish, him they admired in the end, when they saw the event: their thirsting being unlike to that of the just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7a2c2e" class="outline-3">
+<h3 id="orgf7a2c2e">Wisdom 11:16</h3>
+<div class="outline-text-3" id="text-orgf7a2c2e">
+<p>
+But for the foolish devices of their iniquity, because some being deceived worshipped dumb serpents and worthless beasts, thou didst send upon them a multitude of dumb beasts for vengeance:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ca8f1e" class="outline-3">
+<h3 id="org6ca8f1e">Wisdom 11:17</h3>
+<div class="outline-text-3" id="text-org6ca8f1e">
+<p>
+That they might know that by what things a man sinneth, by the same also he is tormented.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7931c33" class="outline-3">
+<h3 id="org7931c33">Wisdom 11:18</h3>
+<div class="outline-text-3" id="text-org7931c33">
+<p>
+For thy almighty hand, which made the world of matter without form, was not unable to send upon them a multitude of bears, or fierce lions,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa0b11c" class="outline-3">
+<h3 id="orgaa0b11c">Wisdom 11:19</h3>
+<div class="outline-text-3" id="text-orgaa0b11c">
+<p>
+Or unknown beasts of a new kind, full of rage; either breathing out a fiery vapour, or sending forth a stinking smoke, or shooting horrible sparks out of their eyes:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a77426" class="outline-3">
+<h3 id="org3a77426">Wisdom 11:20</h3>
+<div class="outline-text-3" id="text-org3a77426">
+<p>
+Whereof not only the hurt might be able to destroy them, but also the very sight might kill them through fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf21c403" class="outline-3">
+<h3 id="orgf21c403">Wisdom 11:21</h3>
+<div class="outline-text-3" id="text-orgf21c403">
+<p>
+Yea, and without these, they might have been slain with one blast, persecuted by their own deeds, and scattered by the breath of thy power: but thou hast ordered all things in measure, and number, and weight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org529373f" class="outline-3">
+<h3 id="org529373f">Wisdom 11:22</h3>
+<div class="outline-text-3" id="text-org529373f">
+<p>
+For great power always belonged to thee alone: and who shall resist the strength of thy arm?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f19378" class="outline-3">
+<h3 id="org2f19378">Wisdom 11:23</h3>
+<div class="outline-text-3" id="text-org2f19378">
+<p>
+For the whole world before thee is as the least grain of the balance, and as a drop of the morning dew, that falleth down upon tho earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge034338" class="outline-3">
+<h3 id="orge034338">Wisdom 11:24</h3>
+<div class="outline-text-3" id="text-orge034338">
+<p>
+But thou hast mercy upon all, because thou canst do all things, and overlookest the sins of men for the sake of repentance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44aa0ad" class="outline-3">
+<h3 id="org44aa0ad">Wisdom 11:25</h3>
+<div class="outline-text-3" id="text-org44aa0ad">
+<p>
+For thou lovest all things that are, and hatest none of the things which thou hast made: for thou didst not appoint, or make any thing hating it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca30799" class="outline-3">
+<h3 id="orgca30799">Wisdom 11:26</h3>
+<div class="outline-text-3" id="text-orgca30799">
+<p>
+And how could any thing endure, if thou wouldst not? or be preserved, if not called by thee?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea17c7d" class="outline-3">
+<h3 id="orgea17c7d">Wisdom 11:27</h3>
+<div class="outline-text-3" id="text-orgea17c7d">
+<p>
+But thou sparest all: because they are thine, O Lord, who lovest souls. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb931632" class="outline-2">
+<h2 id="orgb931632">Wisdom 12</h2>
+<div class="outline-text-2" id="text-orgb931632">
+</div>
+<div id="outline-container-org8d43fcf" class="outline-3">
+<h3 id="org8d43fcf">Wisdom 12:1</h3>
+<div class="outline-text-3" id="text-org8d43fcf">
+<p>
+O how good and sweet is thy Spirit, O Lord, in all things!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15cd236" class="outline-3">
+<h3 id="org15cd236">Wisdom 12:2</h3>
+<div class="outline-text-3" id="text-org15cd236">
+<p>
+And therefore thou chastisest them that err, by little and little: and admonishest them, and speakest to them, concerning the things wherein they offend: that leaving their wickedness, they may believe in thee, O Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge76902c" class="outline-3">
+<h3 id="orge76902c">Wisdom 12:3</h3>
+<div class="outline-text-3" id="text-orge76902c">
+<p>
+For those ancient inhabitants of thy holy land, whom thou didst abhor,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d136e3" class="outline-3">
+<h3 id="org1d136e3">Wisdom 12:4</h3>
+<div class="outline-text-3" id="text-org1d136e3">
+<p>
+Because they did works hateful to thee by their sorceries, and wicked sacrifices,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04c8e77" class="outline-3">
+<h3 id="org04c8e77">Wisdom 12:5</h3>
+<div class="outline-text-3" id="text-org04c8e77">
+<p>
+And those merciless murderers of their own children, and eaters of men&rsquo;s bowels, and devourers of blood from the midst of thy consecration,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c0449c" class="outline-3">
+<h3 id="org1c0449c">Wisdom 12:6</h3>
+<div class="outline-text-3" id="text-org1c0449c">
+<p>
+And those parents sacrificing with their own hands helpless souls, it was thy will to destroy by the hands of our parents,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92a986f" class="outline-3">
+<h3 id="org92a986f">Wisdom 12:7</h3>
+<div class="outline-text-3" id="text-org92a986f">
+<p>
+That the land which of all is most dear to thee, might receive a worthy colony of the children of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01a1309" class="outline-3">
+<h3 id="org01a1309">Wisdom 12:8</h3>
+<div class="outline-text-3" id="text-org01a1309">
+<p>
+Yet even those thou sparedst as men, and didst send wasps forerunners of thy host, to destroy them by little and little.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6bf291" class="outline-3">
+<h3 id="orgf6bf291">Wisdom 12:9</h3>
+<div class="outline-text-3" id="text-orgf6bf291">
+<p>
+Not that thou wast unable to bring the wicked under the just by war, or by cruel beasts, or with one rough word to destroy them at once:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14a97e4" class="outline-3">
+<h3 id="org14a97e4">Wisdom 12:10</h3>
+<div class="outline-text-3" id="text-org14a97e4">
+<p>
+But executing thy judgments by degrees, thou gavest them place of repentance, not being ignorant that they were a wicked generation, and their malice natural, and that their thought could never be changed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org777e161" class="outline-3">
+<h3 id="org777e161">Wisdom 12:11</h3>
+<div class="outline-text-3" id="text-org777e161">
+<p>
+For it was a cursed seed from the beginning: neither didst thou for fear of any one give pardon to their sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e43272" class="outline-3">
+<h3 id="org1e43272">Wisdom 12:12</h3>
+<div class="outline-text-3" id="text-org1e43272">
+<p>
+For who shall say to thee: What hast thou done? or who shall withstand thy judgment? or who shall come before thee to be a revenger of wicked men? or who shall accuse thee, if the nations perish, which thou hast made ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5234cf2" class="outline-3">
+<h3 id="org5234cf2">Wisdom 12:13</h3>
+<div class="outline-text-3" id="text-org5234cf2">
+<p>
+For there is no other God but thou, who hast care of all, that thou shouldst shew that thou dost not give judgment unjustly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org324ecb7" class="outline-3">
+<h3 id="org324ecb7">Wisdom 12:14</h3>
+<div class="outline-text-3" id="text-org324ecb7">
+<p>
+Neither shall king, nor tyrant, in thy sight inquire about them whom thou hast destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1eee767" class="outline-3">
+<h3 id="org1eee767">Wisdom 12:15</h3>
+<div class="outline-text-3" id="text-org1eee767">
+<p>
+For so much then, as thou art just, thou orderest all things justly: thinking it not agreeable to the power, to condemn him who deserveth not to be punished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0937ab6" class="outline-3">
+<h3 id="org0937ab6">Wisdom 12:16</h3>
+<div class="outline-text-3" id="text-org0937ab6">
+<p>
+For thy power is the beginning of justice: and because thou art Lord of all, thou makest thyself gracious to all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb8fbb0" class="outline-3">
+<h3 id="orgfb8fbb0">Wisdom 12:17</h3>
+<div class="outline-text-3" id="text-orgfb8fbb0">
+<p>
+For thou shewest thy power, when men will not believe thee to be absolute in power, and thou convincest the boldness of them that know thee not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf87aefc" class="outline-3">
+<h3 id="orgf87aefc">Wisdom 12:18</h3>
+<div class="outline-text-3" id="text-orgf87aefc">
+<p>
+But thou being master of power, judgest with tranquillity, and with great favour disposest of us: for thy power is at hand when thou wilt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2dc264" class="outline-3">
+<h3 id="orgb2dc264">Wisdom 12:19</h3>
+<div class="outline-text-3" id="text-orgb2dc264">
+<p>
+But thou hast taught thy people by such works, that they must be just and humane, and hast made thy children to be of a good hope: because in judging, thou givest place for repentance for sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73503aa" class="outline-3">
+<h3 id="org73503aa">Wisdom 12:20</h3>
+<div class="outline-text-3" id="text-org73503aa">
+<p>
+For if thou didst punish the enemies of thy servants, and that deserved to die, with so great deliberation, giving them time and place whereby they might be changed from their wickedness:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb903b25" class="outline-3">
+<h3 id="orgb903b25">Wisdom 12:21</h3>
+<div class="outline-text-3" id="text-orgb903b25">
+<p>
+With what circumspection hast thou judged thy own children, to whose parents thou hast sworn, and made covenants of good promises?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge276954" class="outline-3">
+<h3 id="orge276954">Wisdom 12:22</h3>
+<div class="outline-text-3" id="text-orge276954">
+<p>
+Therefore whereas thou chastisest us, thou scourgest our enemies very many ways, to the end that when we judge we may think on thy goodness: and when we are judged, we may hope for thy mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90b949b" class="outline-3">
+<h3 id="org90b949b">Wisdom 12:23</h3>
+<div class="outline-text-3" id="text-org90b949b">
+<p>
+Wherefore thou hast also greatly tormented them, who, in their life, have lived foolishly and unjustly, by the same things which they worshipped.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76784fe" class="outline-3">
+<h3 id="org76784fe">Wisdom 12:24</h3>
+<div class="outline-text-3" id="text-org76784fe">
+<p>
+For they went astray for a long time in the ways of error, holding those things for gods which are the most worthless among beasts, living after the manner of children without understanding.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13df803" class="outline-3">
+<h3 id="org13df803">Wisdom 12:25</h3>
+<div class="outline-text-3" id="text-org13df803">
+<p>
+Therefore thou hast sent a judgment upon them, as senseless children, to mock them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd6c140" class="outline-3">
+<h3 id="orgcd6c140">Wisdom 12:26</h3>
+<div class="outline-text-3" id="text-orgcd6c140">
+<p>
+But they that were not amended by mockeries and reprehensions, experienced the worthy judgment of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7973ebf" class="outline-3">
+<h3 id="org7973ebf">Wisdom 12:27</h3>
+<div class="outline-text-3" id="text-org7973ebf">
+<p>
+For seeing, with indignation, that they suffered by those very things which they took for gods, when they were destroyed by the same, they acknowledged him the true God, whom in time past they denied that they knew: for which cause the end also of their condemnation came upon them. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4e8ecd3" class="outline-2">
+<h2 id="org4e8ecd3">Wisdom 13</h2>
+<div class="outline-text-2" id="text-org4e8ecd3">
+</div>
+<div id="outline-container-org3a9a23c" class="outline-3">
+<h3 id="org3a9a23c">Wisdom 13:1</h3>
+<div class="outline-text-3" id="text-org3a9a23c">
+<p>
+But all men are vain, in whom there is not the knowledge of God: and who by these good things that are seen, could not understand him that is, neither by attending to the works have acknowledged who was the workman:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b5e6d2" class="outline-3">
+<h3 id="org0b5e6d2">Wisdom 13:2</h3>
+<div class="outline-text-3" id="text-org0b5e6d2">
+<p>
+But have imagined either the fire, or the wind, or the swift air, or the circle of the stars, or the great water, or the sun and moon, to be the gods that rule the world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org810daa3" class="outline-3">
+<h3 id="org810daa3">Wisdom 13:3</h3>
+<div class="outline-text-3" id="text-org810daa3">
+<p>
+With whose beauty, if they, being delighted, took them to be gods: let them know how much the Lord of them is more beautiful than they: for the first author of beauty made all those things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea08a78" class="outline-3">
+<h3 id="orgea08a78">Wisdom 13:4</h3>
+<div class="outline-text-3" id="text-orgea08a78">
+<p>
+Or if they admired their power, and their effects, let them understand by them, that he that made them, is mightier than they:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3edad9d" class="outline-3">
+<h3 id="org3edad9d">Wisdom 13:5</h3>
+<div class="outline-text-3" id="text-org3edad9d">
+<p>
+For by the greatness of the beauty, and of the creature, the creator of them may be seen, so as to be known thereby.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72fdb23" class="outline-3">
+<h3 id="org72fdb23">Wisdom 13:6</h3>
+<div class="outline-text-3" id="text-org72fdb23">
+<p>
+But yet as to these they are less to be blamed. For they perhaps err, seeking God, and desirous to find him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b53070" class="outline-3">
+<h3 id="org0b53070">Wisdom 13:7</h3>
+<div class="outline-text-3" id="text-org0b53070">
+<p>
+For being conversant among his works, they search: and they are persuaded that the things are good which are seen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org404b0f1" class="outline-3">
+<h3 id="org404b0f1">Wisdom 13:8</h3>
+<div class="outline-text-3" id="text-org404b0f1">
+<p>
+But then again they are not to be pardoned.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd702a51" class="outline-3">
+<h3 id="orgd702a51">Wisdom 13:9</h3>
+<div class="outline-text-3" id="text-orgd702a51">
+<p>
+For if they were able to know so much as to make a judgment of the world: how did they not more easily find out the Lord thereof?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47e39b5" class="outline-3">
+<h3 id="org47e39b5">Wisdom 13:10</h3>
+<div class="outline-text-3" id="text-org47e39b5">
+<p>
+But unhappy are they, and their hope is among the dead, who have called gods the works of the hand of men, gold and silver, the inventions of art, and the resemblances of beasts, or an unprofitable stone the work of an ancient hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84df1f2" class="outline-3">
+<h3 id="org84df1f2">Wisdom 13:11</h3>
+<div class="outline-text-3" id="text-org84df1f2">
+<p>
+Or if an artist, a carpenter, hath cut down a tree proper for his use in the wood, and skilfully taken off all the bark thereof, and with his art, diligently formeth a vessel profitable for the common uses of life,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbffb135" class="outline-3">
+<h3 id="orgbffb135">Wisdom 13:12</h3>
+<div class="outline-text-3" id="text-orgbffb135">
+<p>
+And useth the chips of his work to dress his meat:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9139334" class="outline-3">
+<h3 id="org9139334">Wisdom 13:13</h3>
+<div class="outline-text-3" id="text-org9139334">
+<p>
+And taking what was left thereof, which is good for nothing, being a crooked piece of wood, and full of knots, carveth it diligently when he hath nothing else to do, and by the skill of his art fashioneth it, and maketh it like the image of a man:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org139e0bb" class="outline-3">
+<h3 id="org139e0bb">Wisdom 13:14</h3>
+<div class="outline-text-3" id="text-org139e0bb">
+<p>
+Or the resemblance of some beast, laying it over with vermilion, and painting it red, and covering every spot that is in it:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7312162" class="outline-3">
+<h3 id="org7312162">Wisdom 13:15</h3>
+<div class="outline-text-3" id="text-org7312162">
+<p>
+And maketh a convenient dwelling place for it, and setting it in a wall, and fastening it with iron,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57f713e" class="outline-3">
+<h3 id="org57f713e">Wisdom 13:16</h3>
+<div class="outline-text-3" id="text-org57f713e">
+<p>
+Providing for it, lest it should fall, knowing that it is unable to help itself: for it is an image, and hath need of help.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org511a0a5" class="outline-3">
+<h3 id="org511a0a5">Wisdom 13:17</h3>
+<div class="outline-text-3" id="text-org511a0a5">
+<p>
+And then maketh prayer to it, enquiring concerning his substance, and his children, or his marriage. And he is not ashamed to speak to that which hath no life:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc81a69" class="outline-3">
+<h3 id="orgcc81a69">Wisdom 13:18</h3>
+<div class="outline-text-3" id="text-orgcc81a69">
+<p>
+And for health he maketh supplication to the weak, and for life prayeth to that which is dead, and for help calleth upon that which is unprofitable:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d7bdbd" class="outline-3">
+<h3 id="org7d7bdbd">Wisdom 13:19</h3>
+<div class="outline-text-3" id="text-org7d7bdbd">
+<p>
+And for a good journey he petitioneth him that cannot walk: and for getting, and for working, and for the event of all things he asketh him that is unable to do any thing. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d268f5" class="outline-2">
+<h2 id="org8d268f5">Wisdom 14</h2>
+<div class="outline-text-2" id="text-org8d268f5">
+</div>
+<div id="outline-container-org0188076" class="outline-3">
+<h3 id="org0188076">Wisdom 14:1</h3>
+<div class="outline-text-3" id="text-org0188076">
+<p>
+Again, another designing to sail, and beginning to make his voyage through the raging waves, calleth upon a piece of wood more frail than the wood that carrieth him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dacce9" class="outline-3">
+<h3 id="org3dacce9">Wisdom 14:2</h3>
+<div class="outline-text-3" id="text-org3dacce9">
+<p>
+For this the desire of gain devised, and the workman built it by his skill.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2be7296" class="outline-3">
+<h3 id="org2be7296">Wisdom 14:3</h3>
+<div class="outline-text-3" id="text-org2be7296">
+<p>
+But thy providence, O Father, governeth it: for thou hast made a way even in the sea, and a most sure path among the waves,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7211812" class="outline-3">
+<h3 id="org7211812">Wisdom 14:4</h3>
+<div class="outline-text-3" id="text-org7211812">
+<p>
+Shewing that thou art able to save out of all things, yea, though a man went to sea without art.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9195c4" class="outline-3">
+<h3 id="orgc9195c4">Wisdom 14:5</h3>
+<div class="outline-text-3" id="text-orgc9195c4">
+<p>
+But that the works of thy wisdom might not be idle: therefore men also trust their lives even to a little wood, and passing over the sea by ship, are saved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73e16a2" class="outline-3">
+<h3 id="org73e16a2">Wisdom 14:6</h3>
+<div class="outline-text-3" id="text-org73e16a2">
+<p>
+And from the beginning also, when the proud giants perished, the hope of the world fleeing to a vessel, which was governed by thy hand, left to the world seed of generation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org897fbfc" class="outline-3">
+<h3 id="org897fbfc">Wisdom 14:7</h3>
+<div class="outline-text-3" id="text-org897fbfc">
+<p>
+For blessed is the wood, by which justice cometh
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f3cb23" class="outline-3">
+<h3 id="org4f3cb23">Wisdom 14:8</h3>
+<div class="outline-text-3" id="text-org4f3cb23">
+<p>
+But the idol that is made by hands, is cursed, as well it, as he that made it: he because he made it; and it because being frail it is called a god.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb66f55b" class="outline-3">
+<h3 id="orgb66f55b">Wisdom 14:9</h3>
+<div class="outline-text-3" id="text-orgb66f55b">
+<p>
+But to God the wicked and his wickedness are hateful alike.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd27f5a6" class="outline-3">
+<h3 id="orgd27f5a6">Wisdom 14:10</h3>
+<div class="outline-text-3" id="text-orgd27f5a6">
+<p>
+For that which is made, together with him that made it, shall suffer torments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf938a1e" class="outline-3">
+<h3 id="orgf938a1e">Wisdom 14:11</h3>
+<div class="outline-text-3" id="text-orgf938a1e">
+<p>
+Therefore there shall be no respect had even to the idols of the Gentiles: because the creatures of God are turned to an abomination, and a temptation to the souls of men, and a snare to the feet of the unwise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92d1003" class="outline-3">
+<h3 id="org92d1003">Wisdom 14:12</h3>
+<div class="outline-text-3" id="text-org92d1003">
+<p>
+For the beginning of fornication is the devising of idols: and the invention of them is the corruption of life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e93df5" class="outline-3">
+<h3 id="org6e93df5">Wisdom 14:13</h3>
+<div class="outline-text-3" id="text-org6e93df5">
+<p>
+For neither were they from the beginning, neither shall they be for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6290a6" class="outline-3">
+<h3 id="orgd6290a6">Wisdom 14:14</h3>
+<div class="outline-text-3" id="text-orgd6290a6">
+<p>
+For by the vanity of men they came into the world: and therefore they shall be found to come shortly to an end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d6d9cd" class="outline-3">
+<h3 id="org7d6d9cd">Wisdom 14:15</h3>
+<div class="outline-text-3" id="text-org7d6d9cd">
+<p>
+For a father being afflicted with bitter grief, made to himself the image of his son, who was quickly taken away: and him who then had died as a man, he began now to worship as a god, and appointed him rites and sacrifices among his servants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org273f02e" class="outline-3">
+<h3 id="org273f02e">Wisdom 14:16</h3>
+<div class="outline-text-3" id="text-org273f02e">
+<p>
+Then, in process of time, wicked custom prevailing, this error was kept as a law, and statues were worshipped by the commandment of tyrants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33e146b" class="outline-3">
+<h3 id="org33e146b">Wisdom 14:17</h3>
+<div class="outline-text-3" id="text-org33e146b">
+<p>
+And those whom men could not honour in presence, because they dwelt far off, they brought their resemblance from afar, and made an express image of the king, whom they had a mind to honour: that by this their diligence, they might honour as present, him that was absent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd36878" class="outline-3">
+<h3 id="orgdd36878">Wisdom 14:18</h3>
+<div class="outline-text-3" id="text-orgdd36878">
+<p>
+And to the worshipping of these, the singular diligence also of the artificer helped to set forward the ignorant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafa88e1" class="outline-3">
+<h3 id="orgafa88e1">Wisdom 14:19</h3>
+<div class="outline-text-3" id="text-orgafa88e1">
+<p>
+For he being willing to please him that employed him, laboured with all his art to make the resemblance in the best manner.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c74509" class="outline-3">
+<h3 id="org2c74509">Wisdom 14:20</h3>
+<div class="outline-text-3" id="text-org2c74509">
+<p>
+And the multitude of men, carried away by the beauty of the work, took him now for a god, that little before was but honoured as a man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61f1780" class="outline-3">
+<h3 id="org61f1780">Wisdom 14:21</h3>
+<div class="outline-text-3" id="text-org61f1780">
+<p>
+And this was the occasion of deceiving human life: for men serving either their affection, or their kings, gave the incommunicable name to stones and wood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org874906f" class="outline-3">
+<h3 id="org874906f">Wisdom 14:22</h3>
+<div class="outline-text-3" id="text-org874906f">
+<p>
+And it was not enough for them to err about the knowledge of God, but whereas they lived in a great war of ignorance, they call so many and so great evils peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6382e92" class="outline-3">
+<h3 id="org6382e92">Wisdom 14:23</h3>
+<div class="outline-text-3" id="text-org6382e92">
+<p>
+For either they sacrifice their own children, or use hidden sacrifices, or keep watches full of madness,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0b73f4" class="outline-3">
+<h3 id="orge0b73f4">Wisdom 14:24</h3>
+<div class="outline-text-3" id="text-orge0b73f4">
+<p>
+So that now they neither keep life, nor marriage undefiled, but one killeth another through envy, or grieveth him by adultery:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b4e622" class="outline-3">
+<h3 id="org0b4e622">Wisdom 14:25</h3>
+<div class="outline-text-3" id="text-org0b4e622">
+<p>
+And all things are mingled together, blood, murder, theft, and dissimulation, corruption and unfaithfulness, tumults and perjury, disquieting of the good,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org852e546" class="outline-3">
+<h3 id="org852e546">Wisdom 14:26</h3>
+<div class="outline-text-3" id="text-org852e546">
+<p>
+Forgetfulness of God, defiling of souls, changing of nature, disorder in marriage, and the irregularity of adultery and uncleanness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bb18de" class="outline-3">
+<h3 id="org0bb18de">Wisdom 14:27</h3>
+<div class="outline-text-3" id="text-org0bb18de">
+<p>
+For the worship of abominable idols is the cause, and the beginning and end of all evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org078f24b" class="outline-3">
+<h3 id="org078f24b">Wisdom 14:28</h3>
+<div class="outline-text-3" id="text-org078f24b">
+<p>
+For either they are mad when they are merry: or they prophesy lies, or they live unjustly, or easily forswear themselves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2700a9e" class="outline-3">
+<h3 id="org2700a9e">Wisdom 14:29</h3>
+<div class="outline-text-3" id="text-org2700a9e">
+<p>
+For whilst they trust in idols, which are without life, though they swear amiss, they look not to be hurt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f1c477" class="outline-3">
+<h3 id="org8f1c477">Wisdom 14:30</h3>
+<div class="outline-text-3" id="text-org8f1c477">
+<p>
+But for both these things they shall be justly punished, because they have thought not well of God, giving heed to idols, and have sworn unjustly, in guile despising justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga55114f" class="outline-3">
+<h3 id="orga55114f">Wisdom 14:31</h3>
+<div class="outline-text-3" id="text-orga55114f">
+<p>
+For it is not the power of them, by whom they swear, but the just vengeance of sinners always punisheth the transgression of the unjust. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org24e87a1" class="outline-2">
+<h2 id="org24e87a1">Wisdom 15</h2>
+<div class="outline-text-2" id="text-org24e87a1">
+</div>
+<div id="outline-container-org9cee034" class="outline-3">
+<h3 id="org9cee034">Wisdom 15:1</h3>
+<div class="outline-text-3" id="text-org9cee034">
+<p>
+But thou, our God, art gracious and true, patient, and ordering all things in mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge97b892" class="outline-3">
+<h3 id="orge97b892">Wisdom 15:2</h3>
+<div class="outline-text-3" id="text-orge97b892">
+<p>
+For if we sin, we are thine, knowing thy greatness: and if we sin not, we know that we are counted with thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74d937a" class="outline-3">
+<h3 id="org74d937a">Wisdom 15:3</h3>
+<div class="outline-text-3" id="text-org74d937a">
+<p>
+For to know thee is perfect justice: and to know thy justice, and thy power, is the root of immortality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a00b17" class="outline-3">
+<h3 id="org0a00b17">Wisdom 15:4</h3>
+<div class="outline-text-3" id="text-org0a00b17">
+<p>
+For the invention of mischievous men hath not deceived us, nor the shadow of a picture, a fruitless labour, a graven figure with divers colours,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e75fc7" class="outline-3">
+<h3 id="org1e75fc7">Wisdom 15:5</h3>
+<div class="outline-text-3" id="text-org1e75fc7">
+<p>
+The sight whereof enticeth the fool to lust after it, and he loveth the lifeless figure of a dead image.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17a17da" class="outline-3">
+<h3 id="org17a17da">Wisdom 15:6</h3>
+<div class="outline-text-3" id="text-org17a17da">
+<p>
+The lovers of evil things deserve to have no better things to trust in, both they that make them, and they that love them, and they that worship them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb860c5" class="outline-3">
+<h3 id="orgcb860c5">Wisdom 15:7</h3>
+<div class="outline-text-3" id="text-orgcb860c5">
+<p>
+The potter also tempering soft earth, with labour fashioneth every vessel for our service, and of the same clay he maketh both vessels that are for clean uses, and likewise such as serve to the contrary: but what is the use of these vessels, the potter is the judge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8dea767" class="outline-3">
+<h3 id="org8dea767">Wisdom 15:8</h3>
+<div class="outline-text-3" id="text-org8dea767">
+<p>
+And of the same clay by a vain labour he maketh a god: he who a little before was made of earth himself, and a little after returneth to the same out of which he was taken, when his life, which was lent him, shall be called for again.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa301d8" class="outline-3">
+<h3 id="orgaa301d8">Wisdom 15:9</h3>
+<div class="outline-text-3" id="text-orgaa301d8">
+<p>
+But his care is, not that he shall labour, nor that his life is short, but he striveth with the goldsmiths and silversmiths: and he endeavoureth to do like the workers in brass, and counteth it a glory to make vain things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a55700" class="outline-3">
+<h3 id="org5a55700">Wisdom 15:10</h3>
+<div class="outline-text-3" id="text-org5a55700">
+<p>
+For his heart is ashes, and his hope vain earth and his life more base than clay:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14b5837" class="outline-3">
+<h3 id="org14b5837">Wisdom 15:11</h3>
+<div class="outline-text-3" id="text-org14b5837">
+<p>
+Forasmuch as he knew not his maker, and him that inspired into him the soul that worketh, and that breathed into him a living spirit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a0b58a" class="outline-3">
+<h3 id="org8a0b58a">Wisdom 15:12</h3>
+<div class="outline-text-3" id="text-org8a0b58a">
+<p>
+Yea, and they have counted our life a pastime and the business of life to be gain, and that we must be getting every way, even out of evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ee2631" class="outline-3">
+<h3 id="org8ee2631">Wisdom 15:13</h3>
+<div class="outline-text-3" id="text-org8ee2631">
+<p>
+For that man knoweth that he offendeth above all others, who of earthly matter maketh brittle vessels, and graven gods.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2ce2c5" class="outline-3">
+<h3 id="orge2ce2c5">Wisdom 15:14</h3>
+<div class="outline-text-3" id="text-orge2ce2c5">
+<p>
+But all the enemies of thy people that hold them in subjection, are foolish, and unhappy, and proud beyond measure:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad0cc07" class="outline-3">
+<h3 id="orgad0cc07">Wisdom 15:15</h3>
+<div class="outline-text-3" id="text-orgad0cc07">
+<p>
+For they have esteemed all the idols of the heathens for gods, which neither have the use of eyes to see, nor noses to draw breath, nor ears to hear, nor fingers of hands to handle, and as for their feet, they are slow to walk.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97608ff" class="outline-3">
+<h3 id="org97608ff">Wisdom 15:16</h3>
+<div class="outline-text-3" id="text-org97608ff">
+<p>
+For man made them: and he that borroweth his own breath, fashioned them. For no man can make a god like to himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org632a87e" class="outline-3">
+<h3 id="org632a87e">Wisdom 15:17</h3>
+<div class="outline-text-3" id="text-org632a87e">
+<p>
+For being mortal himself, he formeth a dead thing with his wicked hands. For he is better than they whom he worshippeth, because he indeed hath lived, though he were mortal, but they never.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfd8fc8" class="outline-3">
+<h3 id="orgdfd8fc8">Wisdom 15:18</h3>
+<div class="outline-text-3" id="text-orgdfd8fc8">
+<p>
+Moreover, they worship also the vilest creatures: but things without sense, compared to these, are worse than they.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54d8a09" class="outline-3">
+<h3 id="org54d8a09">Wisdom 15:19</h3>
+<div class="outline-text-3" id="text-org54d8a09">
+<p>
+Yea, neither by sight can any man see good of these beasts. But they have fled from the praise of God, and from his blessing. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcbec3a2" class="outline-2">
+<h2 id="orgcbec3a2">Wisdom 16</h2>
+<div class="outline-text-2" id="text-orgcbec3a2">
+</div>
+<div id="outline-container-orgfc81997" class="outline-3">
+<h3 id="orgfc81997">Wisdom 16:1</h3>
+<div class="outline-text-3" id="text-orgfc81997">
+<p>
+For these things, and by the like things to these, they were worthily punished, and were destroyed by a multitude of beasts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8b4275" class="outline-3">
+<h3 id="orgc8b4275">Wisdom 16:2</h3>
+<div class="outline-text-3" id="text-orgc8b4275">
+<p>
+Instead of which punishment, dealing well with thy people, thou gavest them their desire of delicious food, of a new taste, preparing for them quails for their meat:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6ac359" class="outline-3">
+<h3 id="orge6ac359">Wisdom 16:3</h3>
+<div class="outline-text-3" id="text-orge6ac359">
+<p>
+To the end, that they indeed desiring food, by means of those things that were shewn and sent among them, might loath even that which was necessary to satisfy their desire. But these, after suffering want for a short time, tasted a new meat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaf0b09" class="outline-3">
+<h3 id="orgdaf0b09">Wisdom 16:4</h3>
+<div class="outline-text-3" id="text-orgdaf0b09">
+<p>
+For it was requisite that inevitable destruction should come upon them that exercised tyranny: but to these it should only be shewn how their enemies were destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5eec20" class="outline-3">
+<h3 id="orgd5eec20">Wisdom 16:5</h3>
+<div class="outline-text-3" id="text-orgd5eec20">
+<p>
+For when the fierce rage of beasts came upon these, they were destroyed by the bitings of crooked serpents.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76a346d" class="outline-3">
+<h3 id="org76a346d">Wisdom 16:6</h3>
+<div class="outline-text-3" id="text-org76a346d">
+<p>
+But thy wrath endured not for ever, but they were troubled for a short time for their correction, having a sign of salvation, to put them in remembrance of the commandment of thy law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05c7156" class="outline-3">
+<h3 id="org05c7156">Wisdom 16:7</h3>
+<div class="outline-text-3" id="text-org05c7156">
+<p>
+For he that turned to it, was not healed by that which he saw, but by thee, the Saviour of all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd70d32c" class="outline-3">
+<h3 id="orgd70d32c">Wisdom 16:8</h3>
+<div class="outline-text-3" id="text-orgd70d32c">
+<p>
+And in this thou didst shew to our enemies, that thou art he who deliverest from all evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab9f960" class="outline-3">
+<h3 id="orgab9f960">Wisdom 16:9</h3>
+<div class="outline-text-3" id="text-orgab9f960">
+<p>
+For the bitings of locusts, and of flies, killed them, and there was found no remedy for their life: because they were worthy to be destroyed by such things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0dfa79" class="outline-3">
+<h3 id="orga0dfa79">Wisdom 16:10</h3>
+<div class="outline-text-3" id="text-orga0dfa79">
+<p>
+But not even the teeth of venomous serpents overcame thy children: for thy mercy came and healed them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ab4803" class="outline-3">
+<h3 id="org3ab4803">Wisdom 16:11</h3>
+<div class="outline-text-3" id="text-org3ab4803">
+<p>
+For they were examined for the remembrance of thy words, and were quickly healed, lest falling into deep forgetfulness, they might not be able to use thy help.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f9110e" class="outline-3">
+<h3 id="org6f9110e">Wisdom 16:12</h3>
+<div class="outline-text-3" id="text-org6f9110e">
+<p>
+For it was neither herb, nor mollifying plaster, that healed them, but thy word, O Lord, which healeth all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7dda31f" class="outline-3">
+<h3 id="org7dda31f">Wisdom 16:13</h3>
+<div class="outline-text-3" id="text-org7dda31f">
+<p>
+For it is thou, O Lord, that hast power of life and death, and leadest down to the gates of death, and bringest back again:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bfb88a" class="outline-3">
+<h3 id="org7bfb88a">Wisdom 16:14</h3>
+<div class="outline-text-3" id="text-org7bfb88a">
+<p>
+A man indeed killeth through malice, and when the spirit is gone forth, it shall not return, neither shall he call back the soul that is received:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b031f7" class="outline-3">
+<h3 id="org1b031f7">Wisdom 16:15</h3>
+<div class="outline-text-3" id="text-org1b031f7">
+<p>
+But it is impossible to escape thy hand:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaeaadc6" class="outline-3">
+<h3 id="orgaeaadc6">Wisdom 16:16</h3>
+<div class="outline-text-3" id="text-orgaeaadc6">
+<p>
+For the wicked that denied to know thee, were scourged by the strength of thy arm, being persecuted by strange waters, and hail, and rain, and consumed by fire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99ddb8e" class="outline-3">
+<h3 id="org99ddb8e">Wisdom 16:17</h3>
+<div class="outline-text-3" id="text-org99ddb8e">
+<p>
+And which was wonderful, in water, which extinguisheth all things, the fire had more force: for the world fighteth for the just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5899c0e" class="outline-3">
+<h3 id="org5899c0e">Wisdom 16:18</h3>
+<div class="outline-text-3" id="text-org5899c0e">
+<p>
+For at one time the fire was mitigated, that the beasts which were sent against the wicked might not be burnt, but that they might see, and perceive that they were persecuted by the judgment of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e1818b" class="outline-3">
+<h3 id="org8e1818b">Wisdom 16:19</h3>
+<div class="outline-text-3" id="text-org8e1818b">
+<p>
+And at another time the fire, above its own power, burnt in the midst of water, to destroy the fruits of a wicked land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc83f099" class="outline-3">
+<h3 id="orgc83f099">Wisdom 16:20</h3>
+<div class="outline-text-3" id="text-orgc83f099">
+<p>
+Instead of which things, thou didst feed thy people with the food of angels, and gavest them bread from heaven, prepared without labour; having in it all that is delicious, and the sweetness of every taste.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a6632b" class="outline-3">
+<h3 id="org6a6632b">Wisdom 16:21</h3>
+<div class="outline-text-3" id="text-org6a6632b">
+<p>
+For thy sustenance shewed thy sweetness to thy children, and serving every man&rsquo;s will, it was turned to what every man liked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d6e312" class="outline-3">
+<h3 id="org6d6e312">Wisdom 16:22</h3>
+<div class="outline-text-3" id="text-org6d6e312">
+<p>
+But snow and ice endured the force of fire, and melted not: that they might know that the fire, burning in the hail, and flashing in the rain, destroyed the fruits of the enemies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99d574b" class="outline-3">
+<h3 id="org99d574b">Wisdom 16:23</h3>
+<div class="outline-text-3" id="text-org99d574b">
+<p>
+But this same again, that the just might be nourished, did even forget its own strength.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef5ab27" class="outline-3">
+<h3 id="orgef5ab27">Wisdom 16:24</h3>
+<div class="outline-text-3" id="text-orgef5ab27">
+<p>
+For the creature serving thee, the Creator, is made fierce against the unjust for their punishment: and abateth its strength for the benefit of them that trust in thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24ba50e" class="outline-3">
+<h3 id="org24ba50e">Wisdom 16:25</h3>
+<div class="outline-text-3" id="text-org24ba50e">
+<p>
+Therefore even then it was transformed into all things, and was obedient to thy grace, that nourisheth all, according to the will of them that desired it of thee:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org309bb06" class="outline-3">
+<h3 id="org309bb06">Wisdom 16:26</h3>
+<div class="outline-text-3" id="text-org309bb06">
+<p>
+That thy children, O Lord, whom thou lovedst, might know that it is not the growing of fruits that nourisheth men, but thy word preserveth them that believe in thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6431580" class="outline-3">
+<h3 id="org6431580">Wisdom 16:27</h3>
+<div class="outline-text-3" id="text-org6431580">
+<p>
+For that which could not be destroyed by fire, being warmed with a little sunbeam, presently melted away:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd57fdb4" class="outline-3">
+<h3 id="orgd57fdb4">Wisdom 16:28</h3>
+<div class="outline-text-3" id="text-orgd57fdb4">
+<p>
+That it might be known to all, that we ought to prevent the sun to bless thee, and adore thee at the dawning of the light.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3061ab1" class="outline-3">
+<h3 id="org3061ab1">Wisdom 16:29</h3>
+<div class="outline-text-3" id="text-org3061ab1">
+<p>
+For the hope of the unthankful shall melt away as the winter&rsquo;s ice, and shall run off as unprofitable water. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2391b3a" class="outline-2">
+<h2 id="org2391b3a">Wisdom 17</h2>
+<div class="outline-text-2" id="text-org2391b3a">
+</div>
+<div id="outline-container-orge76ff02" class="outline-3">
+<h3 id="orge76ff02">Wisdom 17:1</h3>
+<div class="outline-text-3" id="text-orge76ff02">
+<p>
+For thy judgments, O Lord, are great, and thy words cannot be expressed: therefore undisciplined souls have erred.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76263a8" class="outline-3">
+<h3 id="org76263a8">Wisdom 17:2</h3>
+<div class="outline-text-3" id="text-org76263a8">
+<p>
+For while the wicked thought to be able to have dominion over the holy nation, they themselves being fettered with the bonds of darkness, and a long night, shut up in their houses, lay there exiled from the eternal providence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59c4b2d" class="outline-3">
+<h3 id="org59c4b2d">Wisdom 17:3</h3>
+<div class="outline-text-3" id="text-org59c4b2d">
+<p>
+And while they thought to lie hid in their obscure sins, they were scattered under a dark veil of forgetfullness, being horribly afraid, and troubled with exceeding great astonishment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc601fb" class="outline-3">
+<h3 id="orgcc601fb">Wisdom 17:4</h3>
+<div class="outline-text-3" id="text-orgcc601fb">
+<p>
+For neither did the den that held them, keep them from fear: for noises coming down troubled them, and sad visions appearing to them, affrighted them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org314f6d7" class="outline-3">
+<h3 id="org314f6d7">Wisdom 17:5</h3>
+<div class="outline-text-3" id="text-org314f6d7">
+<p>
+And no power of fire could give them light, neither could the bright flames of the stars enlighten that horrible night.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2079e29" class="outline-3">
+<h3 id="org2079e29">Wisdom 17:6</h3>
+<div class="outline-text-3" id="text-org2079e29">
+<p>
+But there appeared to them a sudden fire, very dreadful: and being struck with the fear of that face, which was not seen, they thought the things which they saw to be worse:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31bbc42" class="outline-3">
+<h3 id="org31bbc42">Wisdom 17:7</h3>
+<div class="outline-text-3" id="text-org31bbc42">
+<p>
+And the delusions of their magic art were put down, and their boasting of wisdom was reproachfully rebuked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge051979" class="outline-3">
+<h3 id="orge051979">Wisdom 17:8</h3>
+<div class="outline-text-3" id="text-orge051979">
+<p>
+For they who promised to drive away fears and troubles from a sick soul, were sick themselves of a fear worthy to be laughed at.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc10522" class="outline-3">
+<h3 id="orgcc10522">Wisdom 17:9</h3>
+<div class="outline-text-3" id="text-orgcc10522">
+<p>
+For though no terrible thing disturbed them: yet being scared with the passing by of beasts, and hissing of serpents, they died for fear and denying that they saw the air, which could by no means be avoided.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org458c11c" class="outline-3">
+<h3 id="org458c11c">Wisdom 17:10</h3>
+<div class="outline-text-3" id="text-org458c11c">
+<p>
+For whereas wickedness is fearful, it beareth witness of its condemnation: for a troubled conscience always forecasteth grievous things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org757a0a8" class="outline-3">
+<h3 id="org757a0a8">Wisdom 17:11</h3>
+<div class="outline-text-3" id="text-org757a0a8">
+<p>
+For fear is nothing else but a yielding up of the succours from thought.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f6b13d" class="outline-3">
+<h3 id="org8f6b13d">Wisdom 17:12</h3>
+<div class="outline-text-3" id="text-org8f6b13d">
+<p>
+And while there is less expectation from within, the greater doth it count the ignorance of that cause which bringeth the torment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1664601" class="outline-3">
+<h3 id="org1664601">Wisdom 17:13</h3>
+<div class="outline-text-3" id="text-org1664601">
+<p>
+But they that during that night, in which nothing could be done, and which came upon them from the lowest and deepest hell, slept the same sleep,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2627a8b" class="outline-3">
+<h3 id="org2627a8b">Wisdom 17:14</h3>
+<div class="outline-text-3" id="text-org2627a8b">
+<p>
+Were sometimes molested with the fear of monsters, sometimes fainted away, their soul failing them: for a sudden and unlooked for fear was come upon them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org686f1b4" class="outline-3">
+<h3 id="org686f1b4">Wisdom 17:15</h3>
+<div class="outline-text-3" id="text-org686f1b4">
+<p>
+Moreover, if any of them had fallen down, he was kept shut up in prison without irons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8eb912" class="outline-3">
+<h3 id="orgd8eb912">Wisdom 17:16</h3>
+<div class="outline-text-3" id="text-orgd8eb912">
+<p>
+For if any one were a husbandman, or a shepherd, or a labourer in the field, and was suddenly overtaken, he endured a necessity from which he could not fly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f41c05" class="outline-3">
+<h3 id="org1f41c05">Wisdom 17:17</h3>
+<div class="outline-text-3" id="text-org1f41c05">
+<p>
+For they were all bound together with one chain of darkness. Whether it were a whistling wind, or the melodious voice of birds, among the spreading branches of trees, or a fall of water running down with violence,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf242bec" class="outline-3">
+<h3 id="orgf242bec">Wisdom 17:18</h3>
+<div class="outline-text-3" id="text-orgf242bec">
+<p>
+Or the mighty noise of stones tumbling down, or the running that could not be seen of beasts playing together, or the roaring voice of wild beasts, or a rebounding echo from the highest mountains: these things made them to swoon for fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14645c9" class="outline-3">
+<h3 id="org14645c9">Wisdom 17:19</h3>
+<div class="outline-text-3" id="text-org14645c9">
+<p>
+For the whole world was enlightened, with a clear light, and none were hindered in their labours.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ce3de1" class="outline-3">
+<h3 id="org3ce3de1">Wisdom 17:20</h3>
+<div class="outline-text-3" id="text-org3ce3de1">
+<p>
+But over them only was spread a heavy night, an image of that darkness which was to come upon them. But they were to themselves more grievous than the darkness. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6ed3ebc" class="outline-2">
+<h2 id="org6ed3ebc">Wisdom 18</h2>
+<div class="outline-text-2" id="text-org6ed3ebc">
+</div>
+<div id="outline-container-org5c33d54" class="outline-3">
+<h3 id="org5c33d54">Wisdom 18:1</h3>
+<div class="outline-text-3" id="text-org5c33d54">
+<p>
+But thy saints had a very great light, and they heard their voice indeed, but did not see their shape. And because they also did not suffer the same things, they glorified thee:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org894899d" class="outline-3">
+<h3 id="org894899d">Wisdom 18:2</h3>
+<div class="outline-text-3" id="text-org894899d">
+<p>
+And they that before had been wronged, gave thanks, because they were not hurt now: and asked this gift, that there might be a difference.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a8e67f" class="outline-3">
+<h3 id="org5a8e67f">Wisdom 18:3</h3>
+<div class="outline-text-3" id="text-org5a8e67f">
+<p>
+Therefore they received a burning pillar of fire for a guide of the way which they knew not, and thou gavest them a harmless sun of a good entertainment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc398322" class="outline-3">
+<h3 id="orgc398322">Wisdom 18:4</h3>
+<div class="outline-text-3" id="text-orgc398322">
+<p>
+The others indeed were worthy to be deprived of light, and imprisoned in darkness, who kept thy children shut up, by whom the pure light of the law was to be given to the world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org537e04a" class="outline-3">
+<h3 id="org537e04a">Wisdom 18:5</h3>
+<div class="outline-text-3" id="text-org537e04a">
+<p>
+And whereas they thought to kill the babes of the just: one child being cast forth, and saved to reprove them, thou tookest away a multitude of their children, and destroyedst them altogether in a mighty water.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e0f73a" class="outline-3">
+<h3 id="org5e0f73a">Wisdom 18:6</h3>
+<div class="outline-text-3" id="text-org5e0f73a">
+<p>
+For that night was known before by our fathers, that assuredly knowing what oaths they had trusted to, they might be of better courage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc00d4b5" class="outline-3">
+<h3 id="orgc00d4b5">Wisdom 18:7</h3>
+<div class="outline-text-3" id="text-orgc00d4b5">
+<p>
+So thy people received the salvation of the just, and destruction of the unjust.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1986fb8" class="outline-3">
+<h3 id="org1986fb8">Wisdom 18:8</h3>
+<div class="outline-text-3" id="text-org1986fb8">
+<p>
+For as thou didst punish the adversaries so thou didst also encourage and glorify us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d96179" class="outline-3">
+<h3 id="org7d96179">Wisdom 18:9</h3>
+<div class="outline-text-3" id="text-org7d96179">
+<p>
+For the just children of good men were offering sacrifice secretly, and they unanimously ordered a law of justice: that the just should receive both good and evil alike, singing now the praises of the fathers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7b4a00" class="outline-3">
+<h3 id="orgf7b4a00">Wisdom 18:10</h3>
+<div class="outline-text-3" id="text-orgf7b4a00">
+<p>
+But on the other side there sounded an ill according cry of the enemies, and a lamentable mourning was heard for the children that were bewailed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1686303" class="outline-3">
+<h3 id="org1686303">Wisdom 18:11</h3>
+<div class="outline-text-3" id="text-org1686303">
+<p>
+And the servant suffered the same punishment as the master, and a common man suffered in like manner as the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga065e03" class="outline-3">
+<h3 id="orga065e03">Wisdom 18:12</h3>
+<div class="outline-text-3" id="text-orga065e03">
+<p>
+So all alike had innumerable dead, with one kind of death. Neither were the living sufficient to bury them: for in one moment the noblest offspring of them was destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18f093e" class="outline-3">
+<h3 id="org18f093e">Wisdom 18:13</h3>
+<div class="outline-text-3" id="text-org18f093e">
+<p>
+For whereas they would not believe any thing before by reason of the enchantments, then first upon the destruction of the firstborn, they acknowledged the people to be of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e61221" class="outline-3">
+<h3 id="org6e61221">Wisdom 18:14</h3>
+<div class="outline-text-3" id="text-org6e61221">
+<p>
+For while all things were in quiet silence, and the night was in the midst of her course,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f1ec4f" class="outline-3">
+<h3 id="org4f1ec4f">Wisdom 18:15</h3>
+<div class="outline-text-3" id="text-org4f1ec4f">
+<p>
+Thy Almighty word leaped down from heaven from thy royal throne, as a fierce conqueror into the midst of the land of destruction,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge158655" class="outline-3">
+<h3 id="orge158655">Wisdom 18:16</h3>
+<div class="outline-text-3" id="text-orge158655">
+<p>
+With a sharp sword carrying thy unfeigned commandment, and he stood and filled all things with death, and standing on the earth, reached even to heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a764f9" class="outline-3">
+<h3 id="org1a764f9">Wisdom 18:17</h3>
+<div class="outline-text-3" id="text-org1a764f9">
+<p>
+Then suddenly visions of evil dreams troubled them, and fears unlooked for came upon them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf73cfb6" class="outline-3">
+<h3 id="orgf73cfb6">Wisdom 18:18</h3>
+<div class="outline-text-3" id="text-orgf73cfb6">
+<p>
+And one thrown here, another there, half dead, shewed the cause of his death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fc95cb" class="outline-3">
+<h3 id="org3fc95cb">Wisdom 18:19</h3>
+<div class="outline-text-3" id="text-org3fc95cb">
+<p>
+For the visions that troubled them foreshewed these things, lest they should perish, and not know why they suffered these evils.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ab3929" class="outline-3">
+<h3 id="org8ab3929">Wisdom 18:20</h3>
+<div class="outline-text-3" id="text-org8ab3929">
+<p>
+But the just also were afterwards touched by an assault of death, and there was a disturbance of the multitude in the wilderness: but thy wrath did not long continue;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge381b56" class="outline-3">
+<h3 id="orge381b56">Wisdom 18:21</h3>
+<div class="outline-text-3" id="text-orge381b56">
+<p>
+For a blameless man made haste to pry for the people, bringing forth the shield of his ministry, prayer, and by incense making supplication, withstood the wrath, and put an end to the calamity, shewing that he was thy servant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8bdde1" class="outline-3">
+<h3 id="orgf8bdde1">Wisdom 18:22</h3>
+<div class="outline-text-3" id="text-orgf8bdde1">
+<p>
+And he overcame the disturbance, not by strength of body nor with force of arms, but with a word he subdued him that punished them, alleging the oath and covenant made with the fathers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org106455c" class="outline-3">
+<h3 id="org106455c">Wisdom 18:23</h3>
+<div class="outline-text-3" id="text-org106455c">
+<p>
+For when they were now fallen down dead by heaps one upon another, he stood between and stayed the assault, and cut off the way to the living.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d9478f" class="outline-3">
+<h3 id="org5d9478f">Wisdom 18:24</h3>
+<div class="outline-text-3" id="text-org5d9478f">
+<p>
+For in the priestly robe which he wore, was the whole world: and in the four rows of the stones, the glory of the fathers was graven, and thy majesty was written upon the diadem of his head.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org925f32e" class="outline-3">
+<h3 id="org925f32e">Wisdom 18:25</h3>
+<div class="outline-text-3" id="text-org925f32e">
+<p>
+And to these the destroyer gave place, and was afraid of them: for the proof only of wrath was enough. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8a09f1f" class="outline-2">
+<h2 id="org8a09f1f">Wisdom 19</h2>
+<div class="outline-text-2" id="text-org8a09f1f">
+</div>
+<div id="outline-container-orgf115787" class="outline-3">
+<h3 id="orgf115787">Wisdom 19:1</h3>
+<div class="outline-text-3" id="text-orgf115787">
+<p>
+But as to the wicked, even to the end there came upon them wrath without mercy. For he knew before also what they would do:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org689afcb" class="outline-3">
+<h3 id="org689afcb">Wisdom 19:2</h3>
+<div class="outline-text-3" id="text-org689afcb">
+<p>
+For when they had given them leave to depart and had sent them away with great care, they repented and pursued after them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a6bb79" class="outline-3">
+<h3 id="org3a6bb79">Wisdom 19:3</h3>
+<div class="outline-text-3" id="text-org3a6bb79">
+<p>
+For whilst they were yet mourning, and lamenting at the graves of the dead, they took up another foolish device: and pursued them as fugitives whom they had pressed to be gone:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67556c2" class="outline-3">
+<h3 id="org67556c2">Wisdom 19:4</h3>
+<div class="outline-text-3" id="text-org67556c2">
+<p>
+For a necessity, of which they were worthy, brought them to this end: and they lost the remembrance of those things which had happened, that their punishment might fill up what was wanting to their torments:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01c887f" class="outline-3">
+<h3 id="org01c887f">Wisdom 19:5</h3>
+<div class="outline-text-3" id="text-org01c887f">
+<p>
+And that thy people might wonderfully pass through, but they might find a new death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0c580f" class="outline-3">
+<h3 id="orgb0c580f">Wisdom 19:6</h3>
+<div class="outline-text-3" id="text-orgb0c580f">
+<p>
+For every creature, according to its kind was fashioned again as from the beginning, obeying thy commandments, that thy children might be kept without hurt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1387961" class="outline-3">
+<h3 id="org1387961">Wisdom 19:7</h3>
+<div class="outline-text-3" id="text-org1387961">
+<p>
+For a cloud overshadowed their camps and where water was before, dry land appeared, and in the Red Sea a way without hindrance, and out of the great deep a springing field:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org060fe08" class="outline-3">
+<h3 id="org060fe08">Wisdom 19:8</h3>
+<div class="outline-text-3" id="text-org060fe08">
+<p>
+Through which all the nation passed which was protected with thy hand, seeing thy miracles and wonders.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70b2c7b" class="outline-3">
+<h3 id="org70b2c7b">Wisdom 19:9</h3>
+<div class="outline-text-3" id="text-org70b2c7b">
+<p>
+For they fed on their food like horses, and they skipped like lambs, praising thee, O Lord, who hadst delivered them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f671aa" class="outline-3">
+<h3 id="org0f671aa">Wisdom 19:10</h3>
+<div class="outline-text-3" id="text-org0f671aa">
+<p>
+For they were yet mindful of those things which had been done in the time of their sojourning, how the ground brought forth flies instead of cattle, and how the river cast up a multitude of frogs instead of fishes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44e77dc" class="outline-3">
+<h3 id="org44e77dc">Wisdom 19:11</h3>
+<div class="outline-text-3" id="text-org44e77dc">
+<p>
+And at length they saw a new generation of birds, when being led by their appetite, they asked for delicate meats.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37a97e2" class="outline-3">
+<h3 id="org37a97e2">Wisdom 19:12</h3>
+<div class="outline-text-3" id="text-org37a97e2">
+<p>
+For to satisfy their desire, the quail came up to them from the sea: and punishments came upon the sinners, not without foregoing signs by the force of thunders: for they suffered justly according to their own wickedness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org800c99c" class="outline-3">
+<h3 id="org800c99c">Wisdom 19:13</h3>
+<div class="outline-text-3" id="text-org800c99c">
+<p>
+For they exercised a more detestable inhospitality than any: others indeed received not strangers unknown to them, but these brought their guests into bondage that had deserved well of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf82b3dc" class="outline-3">
+<h3 id="orgf82b3dc">Wisdom 19:14</h3>
+<div class="outline-text-3" id="text-orgf82b3dc">
+<p>
+And not only so, but in another respect also they were worse: for the others against their will received the strangers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b1d2fc" class="outline-3">
+<h3 id="org7b1d2fc">Wisdom 19:15</h3>
+<div class="outline-text-3" id="text-org7b1d2fc">
+<p>
+But these grievously afflicted them whom they had received with joy, and who lived under the same laws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd22d342" class="outline-3">
+<h3 id="orgd22d342">Wisdom 19:16</h3>
+<div class="outline-text-3" id="text-orgd22d342">
+<p>
+But they were struck with blindness: as those others were at the doors of the just man, when they were covered with sudden darkness, and every one sought the passage of his own door.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9eec393" class="outline-3">
+<h3 id="org9eec393">Wisdom 19:17</h3>
+<div class="outline-text-3" id="text-org9eec393">
+<p>
+For while the elements are changed in themselves, as in an instrument the sound of the quality is changed, yet all keep their sound: which may clearly be perceived by the very sight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf34d1ce" class="outline-3">
+<h3 id="orgf34d1ce">Wisdom 19:18</h3>
+<div class="outline-text-3" id="text-orgf34d1ce">
+<p>
+For the things of the land were turned into things of the water: and the things that before swam in the water passed upon the land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8295592" class="outline-3">
+<h3 id="org8295592">Wisdom 19:19</h3>
+<div class="outline-text-3" id="text-org8295592">
+<p>
+The fire had power in water above its own virtue, and the water forgot its quenching nature.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7106ec7" class="outline-3">
+<h3 id="org7106ec7">Wisdom 19:20</h3>
+<div class="outline-text-3" id="text-org7106ec7">
+<p>
+On the other side, the flames wasted not the flesh of corruptible animals walking therein, neither did they melt that good food, which was apt to melt as ice. For in all things thou didst magnify thy people, O Lord, and didst honour them, and didst not despise them, but didst assist them at all times, and in every place.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgcd0c4d0">Jonah 1</a>
+<ul>
+<li><a href="#org9e7ef14">Jonah 1:1</a></li>
+<li><a href="#org0e3fbe4">Jonah 1:2</a></li>
+<li><a href="#orgcaefee9">Jonah 1:3</a></li>
+<li><a href="#orgf603221">Jonah 1:4</a></li>
+<li><a href="#org3857002">Jonah 1:5</a></li>
+<li><a href="#orgaf48929">Jonah 1:6</a></li>
+<li><a href="#org8bc8dd0">Jonah 1:7</a></li>
+<li><a href="#org5b8f96c">Jonah 1:8</a></li>
+<li><a href="#org1641971">Jonah 1:9</a></li>
+<li><a href="#org94342f4">Jonah 1:10</a></li>
+<li><a href="#org2686bf8">Jonah 1:11</a></li>
+<li><a href="#org21d168b">Jonah 1:12</a></li>
+<li><a href="#org961073f">Jonah 1:13</a></li>
+<li><a href="#org7917dfa">Jonah 1:14</a></li>
+<li><a href="#org61d5840">Jonah 1:15</a></li>
+<li><a href="#org13f6a52">Jonah 1:16</a></li>
+</ul>
+</li>
+<li><a href="#orgf04e052">Jonah 2</a>
+<ul>
+<li><a href="#orgbe53f15">Jonah 2:1</a></li>
+<li><a href="#org0fe294f">Jonah 2:2</a></li>
+<li><a href="#org865ce61">Jonah 2:3</a></li>
+<li><a href="#orgd9a3e74">Jonah 2:4</a></li>
+<li><a href="#org3501aa7">Jonah 2:5</a></li>
+<li><a href="#org6f860da">Jonah 2:6</a></li>
+<li><a href="#orge3e4320">Jonah 2:7</a></li>
+<li><a href="#org55c1428">Jonah 2:8</a></li>
+<li><a href="#org3015ff4">Jonah 2:9</a></li>
+<li><a href="#orgbfb215b">Jonah 2:10</a></li>
+<li><a href="#org55e193c">Jonah 2:11</a></li>
+</ul>
+</li>
+<li><a href="#org7522892">Jonah 3</a>
+<ul>
+<li><a href="#org1b4e4da">Jonah 3:1</a></li>
+<li><a href="#org3facf5a">Jonah 3:2</a></li>
+<li><a href="#orga97b5a6">Jonah 3:3</a></li>
+<li><a href="#org329b04f">Jonah 3:4</a></li>
+<li><a href="#orgc925de1">Jonah 3:5</a></li>
+<li><a href="#orgc978ad9">Jonah 3:6</a></li>
+<li><a href="#org5f892d3">Jonah 3:7</a></li>
+<li><a href="#org12a310d">Jonah 3:8</a></li>
+<li><a href="#orgc737820">Jonah 3:9</a></li>
+<li><a href="#orgd13a8d5">Jonah 3:10</a></li>
+</ul>
+</li>
+<li><a href="#orgc4a23d4">Jonah 4</a>
+<ul>
+<li><a href="#org1ac988c">Jonah 4:1</a></li>
+<li><a href="#orgf316a8b">Jonah 4:2</a></li>
+<li><a href="#org1fd7df4">Jonah 4:3</a></li>
+<li><a href="#orgf9ac818">Jonah 4:4</a></li>
+<li><a href="#orgd0dd5a7">Jonah 4:5</a></li>
+<li><a href="#org329f470">Jonah 4:6</a></li>
+<li><a href="#orgd6df749">Jonah 4:7</a></li>
+<li><a href="#org1d70d42">Jonah 4:8</a></li>
+<li><a href="#org1ff1c7f">Jonah 4:9</a></li>
+<li><a href="#orga35a2a2">Jonah 4:10</a></li>
+<li><a href="#org64b79a4">Jonah 4:11</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcd0c4d0" class="outline-2">
+<h2 id="orgcd0c4d0">Jonah 1</h2>
+<div class="outline-text-2" id="text-orgcd0c4d0">
+</div>
+<div id="outline-container-org9e7ef14" class="outline-3">
+<h3 id="org9e7ef14">Jonah 1:1</h3>
+<div class="outline-text-3" id="text-org9e7ef14">
+<p>
+Now the word of the Lord came to Jonah, the son of Amathi, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e3fbe4" class="outline-3">
+<h3 id="org0e3fbe4">Jonah 1:2</h3>
+<div class="outline-text-3" id="text-org0e3fbe4">
+<p>
+Arise and go to Ninive, the great city, and preach in it: For the wickedness thereof is come up before me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcaefee9" class="outline-3">
+<h3 id="orgcaefee9">Jonah 1:3</h3>
+<div class="outline-text-3" id="text-orgcaefee9">
+<p>
+And Jonah rose up to flee into Tharsis from the face of the Lord, and he went down to Joppe, and found a ship going to Tharsis: and he paid the fare thereof, and went down into it, to go with them to Tharsis from the face of the Lord,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf603221" class="outline-3">
+<h3 id="orgf603221">Jonah 1:4</h3>
+<div class="outline-text-3" id="text-orgf603221">
+<p>
+But the Lord sent a great wind to the sea: and a great tempest was raised in the sea, and the ship was in danger to be broken.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3857002" class="outline-3">
+<h3 id="org3857002">Jonah 1:5</h3>
+<div class="outline-text-3" id="text-org3857002">
+<p>
+And the mariners were afraid, and the men cried to their god: and they cast forth the wares that were in the ship, into the sea, to lighten it of them: and Jonah went down into the inner part of the ship, and fell into a deep sleep.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf48929" class="outline-3">
+<h3 id="orgaf48929">Jonah 1:6</h3>
+<div class="outline-text-3" id="text-orgaf48929">
+<p>
+And the ship master came to him and said to him: Why art thou fast asleep? rise up call upon thy God, if so be that God will think of us that we may not perish.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bc8dd0" class="outline-3">
+<h3 id="org8bc8dd0">Jonah 1:7</h3>
+<div class="outline-text-3" id="text-org8bc8dd0">
+<p>
+And they said every one to his fellow: Come and let us cast lots, that we may know why this evil is upon us. And they cast lots, and the lot fell upon Jonah.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b8f96c" class="outline-3">
+<h3 id="org5b8f96c">Jonah 1:8</h3>
+<div class="outline-text-3" id="text-org5b8f96c">
+<p>
+And they said to him: Tell us for what cause this evil is upon us, what is thy business? of what country art thou? and whither goest thou? or of what people art thou?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1641971" class="outline-3">
+<h3 id="org1641971">Jonah 1:9</h3>
+<div class="outline-text-3" id="text-org1641971">
+<p>
+And he said to them: I am a Hebrew, and I fear the Lord, and the God of heaven, who made both the sea and the dry land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94342f4" class="outline-3">
+<h3 id="org94342f4">Jonah 1:10</h3>
+<div class="outline-text-3" id="text-org94342f4">
+<p>
+And the men were greatly afraid, and they said to him: Why hast thou done this? (For the men knew that he fled from the face of the Lord: because he had told them.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2686bf8" class="outline-3">
+<h3 id="org2686bf8">Jonah 1:11</h3>
+<div class="outline-text-3" id="text-org2686bf8">
+<p>
+And they said to him: What shall we do with thee, that the sea may be calm to us? for the sea flowed and swelled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21d168b" class="outline-3">
+<h3 id="org21d168b">Jonah 1:12</h3>
+<div class="outline-text-3" id="text-org21d168b">
+<p>
+And he said to them: take me up, and cast me into the sea, and the sea shall be calm to you: for I know for my sake this great tempest is upon you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org961073f" class="outline-3">
+<h3 id="org961073f">Jonah 1:13</h3>
+<div class="outline-text-3" id="text-org961073f">
+<p>
+And the men rowed hard to return the land, but they were not able: because the sea tossed and swelled upon them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7917dfa" class="outline-3">
+<h3 id="org7917dfa">Jonah 1:14</h3>
+<div class="outline-text-3" id="text-org7917dfa">
+<p>
+And they cried to the Lord, and said: We beseech thee, O Lord let us not perish for this man&rsquo;s life, and lay not upon us innocent blood: for thou, oh Lord, hast done as it pleased thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61d5840" class="outline-3">
+<h3 id="org61d5840">Jonah 1:15</h3>
+<div class="outline-text-3" id="text-org61d5840">
+<p>
+And they took Jonah, and cast him into the sea, and the sea ceased from raging.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13f6a52" class="outline-3">
+<h3 id="org13f6a52">Jonah 1:16</h3>
+<div class="outline-text-3" id="text-org13f6a52">
+<p>
+And the men feared the Lord exceedingly, and sacrificed victims to the Lord, and made vows. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf04e052" class="outline-2">
+<h2 id="orgf04e052">Jonah 2</h2>
+<div class="outline-text-2" id="text-orgf04e052">
+</div>
+<div id="outline-container-orgbe53f15" class="outline-3">
+<h3 id="orgbe53f15">Jonah 2:1</h3>
+<div class="outline-text-3" id="text-orgbe53f15">
+<p>
+Now the Lord prepared a great fish to swallow up Jonah: and Jonah was in the belly of a fish for three days and three nights.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fe294f" class="outline-3">
+<h3 id="org0fe294f">Jonah 2:2</h3>
+<div class="outline-text-3" id="text-org0fe294f">
+<p>
+And Jonah prayed to the Lord, his God, out of the belly of the fish.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org865ce61" class="outline-3">
+<h3 id="org865ce61">Jonah 2:3</h3>
+<div class="outline-text-3" id="text-org865ce61">
+<p>
+And he said: I cried out of my affliction to the Lord, and he heard me: I cried out of the belly of hell, and thou hast heard my voice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9a3e74" class="outline-3">
+<h3 id="orgd9a3e74">Jonah 2:4</h3>
+<div class="outline-text-3" id="text-orgd9a3e74">
+<p>
+And thou hast cast me forth into the deep, in the heart of the sea, and a flood hast compassed me: all thy billows, and thy waves have passed over me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3501aa7" class="outline-3">
+<h3 id="org3501aa7">Jonah 2:5</h3>
+<div class="outline-text-3" id="text-org3501aa7">
+<p>
+And I said: I am cast away out of the sight of thy eyes: but yet I shall see the holy temple again.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f860da" class="outline-3">
+<h3 id="org6f860da">Jonah 2:6</h3>
+<div class="outline-text-3" id="text-org6f860da">
+<p>
+The waters compassed me about even to the soul: the deep hath closed me round about, the sea hath covered my head.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3e4320" class="outline-3">
+<h3 id="orge3e4320">Jonah 2:7</h3>
+<div class="outline-text-3" id="text-orge3e4320">
+<p>
+I went down to the lowest parts of the mountains: the bars of the earth have shut me up for ever: and thou wilt bring up my life from corruption, O Lord, my God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55c1428" class="outline-3">
+<h3 id="org55c1428">Jonah 2:8</h3>
+<div class="outline-text-3" id="text-org55c1428">
+<p>
+When my soul was in distress within me, I remembered the Lord: that my prayer may come to thee, unto the holy temple.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3015ff4" class="outline-3">
+<h3 id="org3015ff4">Jonah 2:9</h3>
+<div class="outline-text-3" id="text-org3015ff4">
+<p>
+They that in vain observe vanities, forsake their own mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfb215b" class="outline-3">
+<h3 id="orgbfb215b">Jonah 2:10</h3>
+<div class="outline-text-3" id="text-orgbfb215b">
+<p>
+But I with the voice of praise will sacrifice to thee: I will pay whatsoever I have vowed for my salvation to the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55e193c" class="outline-3">
+<h3 id="org55e193c">Jonah 2:11</h3>
+<div class="outline-text-3" id="text-org55e193c">
+<p>
+And the Lord spoke to the fish: and it vomited out Jonah upon the dry land. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7522892" class="outline-2">
+<h2 id="org7522892">Jonah 3</h2>
+<div class="outline-text-2" id="text-org7522892">
+</div>
+<div id="outline-container-org1b4e4da" class="outline-3">
+<h3 id="org1b4e4da">Jonah 3:1</h3>
+<div class="outline-text-3" id="text-org1b4e4da">
+<p>
+And the word of the Lord came to Jonah the second time saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3facf5a" class="outline-3">
+<h3 id="org3facf5a">Jonah 3:2</h3>
+<div class="outline-text-3" id="text-org3facf5a">
+<p>
+Arise, and go to Ninive, the great city: and preach in it the preaching that I bid thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga97b5a6" class="outline-3">
+<h3 id="orga97b5a6">Jonah 3:3</h3>
+<div class="outline-text-3" id="text-orga97b5a6">
+<p>
+And Jonah arose, and went to Ninive, according to the word of the Lord: now Ninive was a great city of three days&rsquo; journey.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org329b04f" class="outline-3">
+<h3 id="org329b04f">Jonah 3:4</h3>
+<div class="outline-text-3" id="text-org329b04f">
+<p>
+And Jonah began to enter into the city one day&rsquo;s journey: and he cried and said: Yet forty days and Ninive shall be destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc925de1" class="outline-3">
+<h3 id="orgc925de1">Jonah 3:5</h3>
+<div class="outline-text-3" id="text-orgc925de1">
+<p>
+And the men of Ninive believed in God: and they proclaimed a fast, and put on sackcloth from the greatest to the least.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc978ad9" class="outline-3">
+<h3 id="orgc978ad9">Jonah 3:6</h3>
+<div class="outline-text-3" id="text-orgc978ad9">
+<p>
+And the word came to the king of Ninive: and he rose up out of his throne, and cast away his robe from him, and was clothed in sackcloth, and sat in ashes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f892d3" class="outline-3">
+<h3 id="org5f892d3">Jonah 3:7</h3>
+<div class="outline-text-3" id="text-org5f892d3">
+<p>
+And he caused it to be proclaimed and published in Ninive, from the mouth of the king and of his princes, saying: Let neither men nor beasts, oxen, nor sheep taste anything: let them not feed, nor drink water.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12a310d" class="outline-3">
+<h3 id="org12a310d">Jonah 3:8</h3>
+<div class="outline-text-3" id="text-org12a310d">
+<p>
+And let men and beasts be covered with sackcloth, and cry to the Lord with all their strength, and let them turn every one from his evil way, and from the iniquity that is in their hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc737820" class="outline-3">
+<h3 id="orgc737820">Jonah 3:9</h3>
+<div class="outline-text-3" id="text-orgc737820">
+<p>
+Who can tell if God will turn, and forgive: and will turn away from his fierce anger, and we shall not perish?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd13a8d5" class="outline-3">
+<h3 id="orgd13a8d5">Jonah 3:10</h3>
+<div class="outline-text-3" id="text-orgd13a8d5">
+<p>
+And God saw their works, that they were turned from their evil way: and God had mercy with regard to the evil which he had said that he would do to them, and he did it not. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc4a23d4" class="outline-2">
+<h2 id="orgc4a23d4">Jonah 4</h2>
+<div class="outline-text-2" id="text-orgc4a23d4">
+</div>
+<div id="outline-container-org1ac988c" class="outline-3">
+<h3 id="org1ac988c">Jonah 4:1</h3>
+<div class="outline-text-3" id="text-org1ac988c">
+<p>
+And Jonah was exceedingly troubled, and was angry:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf316a8b" class="outline-3">
+<h3 id="orgf316a8b">Jonah 4:2</h3>
+<div class="outline-text-3" id="text-orgf316a8b">
+<p>
+And he prayed to the Lord, and said: I beseech thee, O Lord, is not this what I said, when I was yet in my own country? therefore I went before to flee into Tharsis: for I know that thou art a gracious and merciful God, patient, and of much compassion, and easy to forgive evil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fd7df4" class="outline-3">
+<h3 id="org1fd7df4">Jonah 4:3</h3>
+<div class="outline-text-3" id="text-org1fd7df4">
+<p>
+And now, O Lord, I beseech thee take my life from me: for it is better for me to die than to live.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9ac818" class="outline-3">
+<h3 id="orgf9ac818">Jonah 4:4</h3>
+<div class="outline-text-3" id="text-orgf9ac818">
+<p>
+And the Lord said: Dost thou think thou hast reason to be angry?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0dd5a7" class="outline-3">
+<h3 id="orgd0dd5a7">Jonah 4:5</h3>
+<div class="outline-text-3" id="text-orgd0dd5a7">
+<p>
+Then Jonah went out of the city, and sat toward the east side of the city: and he made himself a booth there, and he sat under it in the shadow, till he might see what would befall the city.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org329f470" class="outline-3">
+<h3 id="org329f470">Jonah 4:6</h3>
+<div class="outline-text-3" id="text-org329f470">
+<p>
+And the Lord God prepared an ivy, and it came up over the head of Jonah, to be a shadow over his head, and to cover him (for he was fatigued): and Jonah was exceeding glad of the ivy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6df749" class="outline-3">
+<h3 id="orgd6df749">Jonah 4:7</h3>
+<div class="outline-text-3" id="text-orgd6df749">
+<p>
+But God prepared a worm, when the morning arose on the following day: and it struck the ivy and it withered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d70d42" class="outline-3">
+<h3 id="org1d70d42">Jonah 4:8</h3>
+<div class="outline-text-3" id="text-org1d70d42">
+<p>
+And when the sun was risen, the Lord commanded a hot and burning wind: and the sun beat upon the head of Jonah, and he broiled with the heat: and he desired for his soul that he might die, and said: It is better for me to die than to live.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ff1c7f" class="outline-3">
+<h3 id="org1ff1c7f">Jonah 4:9</h3>
+<div class="outline-text-3" id="text-org1ff1c7f">
+<p>
+And the Lord said to Jonah: Dost thou think thou hast reason to be angry, for the ivy? And he said: I am angry with reason even unto death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga35a2a2" class="outline-3">
+<h3 id="orga35a2a2">Jonah 4:10</h3>
+<div class="outline-text-3" id="text-orga35a2a2">
+<p>
+And the Lord said: Thou art grieved for the ivy, for which thou hast not laboured, nor made it to grow, which in one night came up, and in one night perished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64b79a4" class="outline-3">
+<h3 id="org64b79a4">Jonah 4:11</h3>
+<div class="outline-text-3" id="text-org64b79a4">
+<p>
+And shall I not spare Ninive, that great city, in which there are more than a hundred and twenty thousand persons, that know how to distinguish between their right hand and their left, and many beasts?  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

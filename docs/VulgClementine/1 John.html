@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3fd4631">I John 1</a>
+<ul>
+<li><a href="#org5ee98f8">I John 1:1</a></li>
+<li><a href="#orgbe92bb6">I John 1:2</a></li>
+<li><a href="#orga3729ef">I John 1:3</a></li>
+<li><a href="#orgc8be22c">I John 1:4</a></li>
+<li><a href="#org9de5d62">I John 1:5</a></li>
+<li><a href="#orgfdd8d4a">I John 1:6</a></li>
+<li><a href="#orgc924d17">I John 1:7</a></li>
+<li><a href="#orgd837170">I John 1:8</a></li>
+<li><a href="#org322a787">I John 1:9</a></li>
+<li><a href="#org47b9f7d">I John 1:10</a></li>
+</ul>
+</li>
+<li><a href="#org461b1b5">I John 2</a>
+<ul>
+<li><a href="#org07d9925">I John 2:1</a></li>
+<li><a href="#org151b9e2">I John 2:2</a></li>
+<li><a href="#orgd311797">I John 2:3</a></li>
+<li><a href="#orgc7e0cd8">I John 2:4</a></li>
+<li><a href="#orga34a6a0">I John 2:5</a></li>
+<li><a href="#orgd5c2003">I John 2:6</a></li>
+<li><a href="#orga9e54e7">I John 2:7</a></li>
+<li><a href="#org399b094">I John 2:8</a></li>
+<li><a href="#org9074fc0">I John 2:9</a></li>
+<li><a href="#org05629f3">I John 2:10</a></li>
+<li><a href="#org5c4850c">I John 2:11</a></li>
+<li><a href="#org6d6b541">I John 2:12</a></li>
+<li><a href="#org05cafec">I John 2:13</a></li>
+<li><a href="#orgdd33b0e">I John 2:14</a></li>
+<li><a href="#orgd4eb1f8">I John 2:15</a></li>
+<li><a href="#org3e47600">I John 2:16</a></li>
+<li><a href="#orgfd2acb1">I John 2:17</a></li>
+<li><a href="#orgba3a0cf">I John 2:18</a></li>
+<li><a href="#org7e45267">I John 2:19</a></li>
+<li><a href="#org32bd7a8">I John 2:20</a></li>
+<li><a href="#org55bf1ac">I John 2:21</a></li>
+<li><a href="#org2941c5c">I John 2:22</a></li>
+<li><a href="#org354145f">I John 2:23</a></li>
+<li><a href="#org5ecba4f">I John 2:24</a></li>
+<li><a href="#org8d111fc">I John 2:25</a></li>
+<li><a href="#orgf9b663e">I John 2:26</a></li>
+<li><a href="#orgb0672d0">I John 2:27</a></li>
+<li><a href="#orgc6b7e8d">I John 2:28</a></li>
+<li><a href="#org4145916">I John 2:29</a></li>
+</ul>
+</li>
+<li><a href="#orgb7c434c">I John 3</a>
+<ul>
+<li><a href="#org2e853c1">I John 3:1</a></li>
+<li><a href="#orgef5f118">I John 3:2</a></li>
+<li><a href="#org12a779a">I John 3:3</a></li>
+<li><a href="#org56c1d31">I John 3:4</a></li>
+<li><a href="#org30993d9">I John 3:5</a></li>
+<li><a href="#org58d7463">I John 3:6</a></li>
+<li><a href="#org0328422">I John 3:7</a></li>
+<li><a href="#orgf1b1db3">I John 3:8</a></li>
+<li><a href="#orgb149545">I John 3:9</a></li>
+<li><a href="#orgcade030">I John 3:10</a></li>
+<li><a href="#orge80eadc">I John 3:11</a></li>
+<li><a href="#orga5a3399">I John 3:12</a></li>
+<li><a href="#org2539314">I John 3:13</a></li>
+<li><a href="#org3b8a067">I John 3:14</a></li>
+<li><a href="#org436f371">I John 3:15</a></li>
+<li><a href="#org106d2c8">I John 3:16</a></li>
+<li><a href="#org911349b">I John 3:17</a></li>
+<li><a href="#orga34fb85">I John 3:18</a></li>
+<li><a href="#org4ceb56d">I John 3:19</a></li>
+<li><a href="#orgdfe7d7d">I John 3:20</a></li>
+<li><a href="#org705973f">I John 3:21</a></li>
+<li><a href="#orge06c3cd">I John 3:22</a></li>
+<li><a href="#org24463f3">I John 3:23</a></li>
+<li><a href="#org3acb998">I John 3:24</a></li>
+</ul>
+</li>
+<li><a href="#org4924103">I John 4</a>
+<ul>
+<li><a href="#orgb0a36ca">I John 4:1</a></li>
+<li><a href="#org0fbff07">I John 4:2</a></li>
+<li><a href="#org32e06be">I John 4:3</a></li>
+<li><a href="#orgd033292">I John 4:4</a></li>
+<li><a href="#org04d9e39">I John 4:5</a></li>
+<li><a href="#org8342f65">I John 4:6</a></li>
+<li><a href="#org40e2db2">I John 4:7</a></li>
+<li><a href="#org43521b0">I John 4:8</a></li>
+<li><a href="#org914a234">I John 4:9</a></li>
+<li><a href="#orgb518cb8">I John 4:10</a></li>
+<li><a href="#orgea17663">I John 4:11</a></li>
+<li><a href="#orged54084">I John 4:12</a></li>
+<li><a href="#org3042384">I John 4:13</a></li>
+<li><a href="#orgfabb34a">I John 4:14</a></li>
+<li><a href="#org4483e26">I John 4:15</a></li>
+<li><a href="#org6ce3765">I John 4:16</a></li>
+<li><a href="#org5de550f">I John 4:17</a></li>
+<li><a href="#org0927429">I John 4:18</a></li>
+<li><a href="#org40e1e0a">I John 4:19</a></li>
+<li><a href="#orga7ef815">I John 4:20</a></li>
+<li><a href="#orgafdf98a">I John 4:21</a></li>
+</ul>
+</li>
+<li><a href="#org353ed54">I John 5</a>
+<ul>
+<li><a href="#org152d244">I John 5:1</a></li>
+<li><a href="#org7ce631c">I John 5:2</a></li>
+<li><a href="#org366b73c">I John 5:3</a></li>
+<li><a href="#orgfd1bb49">I John 5:4</a></li>
+<li><a href="#org6624b0e">I John 5:5</a></li>
+<li><a href="#org06ec097">I John 5:6</a></li>
+<li><a href="#orgddc3993">I John 5:7</a></li>
+<li><a href="#org28b0f6f">I John 5:8</a></li>
+<li><a href="#org694a4ff">I John 5:9</a></li>
+<li><a href="#org64ecf1d">I John 5:10</a></li>
+<li><a href="#orga4d7d8d">I John 5:11</a></li>
+<li><a href="#org85605de">I John 5:12</a></li>
+<li><a href="#org8b85adc">I John 5:13</a></li>
+<li><a href="#org61cdc90">I John 5:14</a></li>
+<li><a href="#org45e9658">I John 5:15</a></li>
+<li><a href="#org3e7d24a">I John 5:16</a></li>
+<li><a href="#orgb0c3dc2">I John 5:17</a></li>
+<li><a href="#orgf814c1d">I John 5:18</a></li>
+<li><a href="#org0b78cad">I John 5:19</a></li>
+<li><a href="#orgc6057db">I John 5:20</a></li>
+<li><a href="#org0ade1e2">I John 5:21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3fd4631" class="outline-2">
+<h2 id="org3fd4631">I John 1</h2>
+<div class="outline-text-2" id="text-org3fd4631">
+</div>
+<div id="outline-container-org5ee98f8" class="outline-3">
+<h3 id="org5ee98f8">I John 1:1</h3>
+<div class="outline-text-3" id="text-org5ee98f8">
+<p>
+Quod fuit ab initio, quod audivimus, quod vidimus oculis nostris, quod perspeximus, et manus nostræ contrectaverunt de verbo vitæ :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe92bb6" class="outline-3">
+<h3 id="orgbe92bb6">I John 1:2</h3>
+<div class="outline-text-3" id="text-orgbe92bb6">
+<p>
+et vita manifestata est, et vidimus, et testamur, et annuntiamus vobis vitam æternam, quæ erat apud Patrem, et apparuit nobis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3729ef" class="outline-3">
+<h3 id="orga3729ef">I John 1:3</h3>
+<div class="outline-text-3" id="text-orga3729ef">
+<p>
+quod vidimus et audivimus, annuntiamus vobis, ut et vos societatem habeatis nobiscum, et societas nostra sit cum Patre, et cum Filio ejus Jesu Christo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8be22c" class="outline-3">
+<h3 id="orgc8be22c">I John 1:4</h3>
+<div class="outline-text-3" id="text-orgc8be22c">
+<p>
+Et hæc scribimus vobis ut gaudeatis, et gaudium vestrum sit plenum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9de5d62" class="outline-3">
+<h3 id="org9de5d62">I John 1:5</h3>
+<div class="outline-text-3" id="text-org9de5d62">
+<p>
+Et hæc est annuntiatio, quam audivimus ab eo, et annuntiamus vobis : quoniam Deus lux est, et tenebræ in eo non sunt ullæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdd8d4a" class="outline-3">
+<h3 id="orgfdd8d4a">I John 1:6</h3>
+<div class="outline-text-3" id="text-orgfdd8d4a">
+<p>
+Si dixerimus quoniam societatem habemus cum eo, et in tenebris ambulamus, mentimur, et veritatem non facimus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc924d17" class="outline-3">
+<h3 id="orgc924d17">I John 1:7</h3>
+<div class="outline-text-3" id="text-orgc924d17">
+<p>
+Si autem in luce ambulamus sicut et ipse est in luce, societatem habemus ad invicem, et sanguis Jesu Christi, Filii ejus, emundat nos ab omni peccato.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd837170" class="outline-3">
+<h3 id="orgd837170">I John 1:8</h3>
+<div class="outline-text-3" id="text-orgd837170">
+<p>
+Si dixerimus quoniam peccatum non habemus, ipsi nos seducimus, et veritas in nobis non est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org322a787" class="outline-3">
+<h3 id="org322a787">I John 1:9</h3>
+<div class="outline-text-3" id="text-org322a787">
+<p>
+Si confiteamur peccata nostra : fidelis est, et justus, ut remittat nobis peccata nostra, et emundet nos ab omni iniquitate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47b9f7d" class="outline-3">
+<h3 id="org47b9f7d">I John 1:10</h3>
+<div class="outline-text-3" id="text-org47b9f7d">
+<p>
+Si dixerimus quoniam non peccavimus, mendacem facimus eum, et verbum ejus non est in nobis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org461b1b5" class="outline-2">
+<h2 id="org461b1b5">I John 2</h2>
+<div class="outline-text-2" id="text-org461b1b5">
+</div>
+<div id="outline-container-org07d9925" class="outline-3">
+<h3 id="org07d9925">I John 2:1</h3>
+<div class="outline-text-3" id="text-org07d9925">
+<p>
+Filioli mei, hæc scribo vobis, ut non peccetis. Sed et si quis peccaverit, advocatum habemus apud Patrem, Jesum Christum justum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org151b9e2" class="outline-3">
+<h3 id="org151b9e2">I John 2:2</h3>
+<div class="outline-text-3" id="text-org151b9e2">
+<p>
+et ipse est propitiatio pro peccatis nostris : non pro nostris autem tantum, sed etiam pro totius mundi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd311797" class="outline-3">
+<h3 id="orgd311797">I John 2:3</h3>
+<div class="outline-text-3" id="text-orgd311797">
+<p>
+Et in hoc scimus quoniam cognovimus eum, si mandata ejus observemus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7e0cd8" class="outline-3">
+<h3 id="orgc7e0cd8">I John 2:4</h3>
+<div class="outline-text-3" id="text-orgc7e0cd8">
+<p>
+Qui dicit se nosse eum, et mandata ejus non custodit, mendax est, et in hoc veritas non est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga34a6a0" class="outline-3">
+<h3 id="orga34a6a0">I John 2:5</h3>
+<div class="outline-text-3" id="text-orga34a6a0">
+<p>
+Qui autem servat verbum ejus, vere in hoc caritas Dei perfecta est : et in hoc scimus quoniam in ipso sumus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5c2003" class="outline-3">
+<h3 id="orgd5c2003">I John 2:6</h3>
+<div class="outline-text-3" id="text-orgd5c2003">
+<p>
+Qui dicit se in ipso manere, debet, sicut ille ambulavit, et ipse ambulare.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9e54e7" class="outline-3">
+<h3 id="orga9e54e7">I John 2:7</h3>
+<div class="outline-text-3" id="text-orga9e54e7">
+<p>
+Carissimi, non mandatum novum scribo vobis, sed mandatum vetus, quod habuistis ab initio. Mandatum vetus est verbum, quod audistis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org399b094" class="outline-3">
+<h3 id="org399b094">I John 2:8</h3>
+<div class="outline-text-3" id="text-org399b094">
+<p>
+Iterum mandatum novum scribo vobis, quod verum est et in ipso, et in vobis : quia tenebræ transierunt, et verum lumen jam lucet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9074fc0" class="outline-3">
+<h3 id="org9074fc0">I John 2:9</h3>
+<div class="outline-text-3" id="text-org9074fc0">
+<p>
+Qui dicit se in luce esse, et fratrem suum odit, in tenebris est usque adhuc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05629f3" class="outline-3">
+<h3 id="org05629f3">I John 2:10</h3>
+<div class="outline-text-3" id="text-org05629f3">
+<p>
+Qui diligit fratrem suum, in lumine manet, et scandalum in eo non est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c4850c" class="outline-3">
+<h3 id="org5c4850c">I John 2:11</h3>
+<div class="outline-text-3" id="text-org5c4850c">
+<p>
+Qui autem odit fratrem suum, in tenebris est, et in tenebris ambulat, et nescit quo eat : quia tenebræ obcæcaverunt oculos ejus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d6b541" class="outline-3">
+<h3 id="org6d6b541">I John 2:12</h3>
+<div class="outline-text-3" id="text-org6d6b541">
+<p>
+Scribo vobis, filioli, quoniam remittuntur vobis peccata propter nomen ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05cafec" class="outline-3">
+<h3 id="org05cafec">I John 2:13</h3>
+<div class="outline-text-3" id="text-org05cafec">
+<p>
+Scribo vobis, patres, quoniam cognovistis eum, qui ab initio est. Scribo vobis, adolescentes, quoniam vicistis malignum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd33b0e" class="outline-3">
+<h3 id="orgdd33b0e">I John 2:14</h3>
+<div class="outline-text-3" id="text-orgdd33b0e">
+<p>
+Scribo vobis, infantes, quoniam cognovistis patrem. Scribo vobis juvenes, quoniam fortes estis, et verbum Dei manet in vobis, et vicistis malignum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4eb1f8" class="outline-3">
+<h3 id="orgd4eb1f8">I John 2:15</h3>
+<div class="outline-text-3" id="text-orgd4eb1f8">
+<p>
+Nolite diligere mundum, neque ea quæ in mundo sunt. Si quis diligit mundum, non est caritas Patris in eo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e47600" class="outline-3">
+<h3 id="org3e47600">I John 2:16</h3>
+<div class="outline-text-3" id="text-org3e47600">
+<p>
+quoniam omne quod est in mundo, concupiscentia carnis est, et concupiscentia oculorum, et superbia vitæ : quæ non est ex Patre, sed ex mundo est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd2acb1" class="outline-3">
+<h3 id="orgfd2acb1">I John 2:17</h3>
+<div class="outline-text-3" id="text-orgfd2acb1">
+<p>
+Et mundus transit, et concupiscentia ejus : qui autem facit voluntatem Dei manet in æternum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba3a0cf" class="outline-3">
+<h3 id="orgba3a0cf">I John 2:18</h3>
+<div class="outline-text-3" id="text-orgba3a0cf">
+<p>
+Filioli, novissima hora est : et sicut audistis quia antichristus venit, et nunc antichristi multi facti sunt ; unde scimus, quia novissima hora est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e45267" class="outline-3">
+<h3 id="org7e45267">I John 2:19</h3>
+<div class="outline-text-3" id="text-org7e45267">
+<p>
+Ex nobis prodierunt, sed non erant ex nobis, nam, si fuissent ex nobis, permansissent utique nobiscum : sed ut manifesti sint quoniam non sunt omnes ex nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32bd7a8" class="outline-3">
+<h3 id="org32bd7a8">I John 2:20</h3>
+<div class="outline-text-3" id="text-org32bd7a8">
+<p>
+Sed vos unctionem habetis a Sancto, et nostis omnia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55bf1ac" class="outline-3">
+<h3 id="org55bf1ac">I John 2:21</h3>
+<div class="outline-text-3" id="text-org55bf1ac">
+<p>
+Non scripsi vobis quasi ignorantibus veritatem, sed quasi scientibus eam : et quoniam omne mendacium ex veritate non est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2941c5c" class="outline-3">
+<h3 id="org2941c5c">I John 2:22</h3>
+<div class="outline-text-3" id="text-org2941c5c">
+<p>
+Quis est mendax, nisi is qui negat quoniam Jesus est Christus ? Hic est antichristus, qui negat Patrem, et Filium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org354145f" class="outline-3">
+<h3 id="org354145f">I John 2:23</h3>
+<div class="outline-text-3" id="text-org354145f">
+<p>
+Omnis qui negat Filium, nec Patrem habet : qui confitetur Filium, et Patrem habet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ecba4f" class="outline-3">
+<h3 id="org5ecba4f">I John 2:24</h3>
+<div class="outline-text-3" id="text-org5ecba4f">
+<p>
+Vos quod audistis ab initio, in vobis permaneat : si in vobis permanserit quod audistis ab initio, et vos in Filio et Patre manebitis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d111fc" class="outline-3">
+<h3 id="org8d111fc">I John 2:25</h3>
+<div class="outline-text-3" id="text-org8d111fc">
+<p>
+Et hæc est repromissio, quam ipse pollicitus est nobis, vitam æternam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9b663e" class="outline-3">
+<h3 id="orgf9b663e">I John 2:26</h3>
+<div class="outline-text-3" id="text-orgf9b663e">
+<p>
+Hæc scripsi vobis de his, qui seducant vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0672d0" class="outline-3">
+<h3 id="orgb0672d0">I John 2:27</h3>
+<div class="outline-text-3" id="text-orgb0672d0">
+<p>
+Et vos unctionem, quam accepistis ab eo, maneat in vobis. Et non necesse habetis ut aliquis doceat vos : sed sicut unctio ejus docet vos de omnibus, et verum est, et non est mendacium. Et sicut docuit vos : manete in eo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6b7e8d" class="outline-3">
+<h3 id="orgc6b7e8d">I John 2:28</h3>
+<div class="outline-text-3" id="text-orgc6b7e8d">
+<p>
+Et nunc, filioli, manete in eo : ut cum apparuerit, habeamus fiduciam, et non confundamur ab eo in adventu ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4145916" class="outline-3">
+<h3 id="org4145916">I John 2:29</h3>
+<div class="outline-text-3" id="text-org4145916">
+<p>
+Si scitis quoniam justus est, scitote quoniam et omnis, qui facit justitiam, ex ipso natus est.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb7c434c" class="outline-2">
+<h2 id="orgb7c434c">I John 3</h2>
+<div class="outline-text-2" id="text-orgb7c434c">
+</div>
+<div id="outline-container-org2e853c1" class="outline-3">
+<h3 id="org2e853c1">I John 3:1</h3>
+<div class="outline-text-3" id="text-org2e853c1">
+<p>
+Videte qualem caritatem dedit nobis Pater, ut filii Dei nominemur et simus. Propter hoc mundus non novit nos : quia non novit eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef5f118" class="outline-3">
+<h3 id="orgef5f118">I John 3:2</h3>
+<div class="outline-text-3" id="text-orgef5f118">
+<p>
+Carissimi, nunc filii Dei sumus : et nondum apparuit quid erimus. Scimus quoniam cum apparuerit, similes ei erimus : quoniam videbimus eum sicuti est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12a779a" class="outline-3">
+<h3 id="org12a779a">I John 3:3</h3>
+<div class="outline-text-3" id="text-org12a779a">
+<p>
+Et omnis qui habet hanc spem in eo, sanctificat se, sicut et ille sanctus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56c1d31" class="outline-3">
+<h3 id="org56c1d31">I John 3:4</h3>
+<div class="outline-text-3" id="text-org56c1d31">
+<p>
+Omnis qui facit peccatum, et iniquitatem facit : et peccatum est iniquitas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30993d9" class="outline-3">
+<h3 id="org30993d9">I John 3:5</h3>
+<div class="outline-text-3" id="text-org30993d9">
+<p>
+Et scitis quia ille apparuit ut peccata nostra tolleret : et peccatum in eo non est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58d7463" class="outline-3">
+<h3 id="org58d7463">I John 3:6</h3>
+<div class="outline-text-3" id="text-org58d7463">
+<p>
+Omnis qui in eo manet, non peccat : et omnis qui peccat, non vidit eum, nec cognovit eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0328422" class="outline-3">
+<h3 id="org0328422">I John 3:7</h3>
+<div class="outline-text-3" id="text-org0328422">
+<p>
+Filioli, nemo vos seducat. Qui facit justitiam, justus est, sicut et ille justus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1b1db3" class="outline-3">
+<h3 id="orgf1b1db3">I John 3:8</h3>
+<div class="outline-text-3" id="text-orgf1b1db3">
+<p>
+Qui facit peccatum, ex diabolo est : quoniam ab initio diabolus peccat. In hoc apparuit Filius Dei, ut dissolvat opera diaboli.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb149545" class="outline-3">
+<h3 id="orgb149545">I John 3:9</h3>
+<div class="outline-text-3" id="text-orgb149545">
+<p>
+Omnis qui natus est ex Deo, peccatum non facit : quoniam semen ipsius in eo manet, et non potest peccare, quoniam ex Deo natus est.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcade030" class="outline-3">
+<h3 id="orgcade030">I John 3:10</h3>
+<div class="outline-text-3" id="text-orgcade030">
+<p>
+In hoc manifesti sunt filii Dei, et filii diaboli. Omnis qui non est justus, non est ex Deo, et qui non diligit fratrem suum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge80eadc" class="outline-3">
+<h3 id="orge80eadc">I John 3:11</h3>
+<div class="outline-text-3" id="text-orge80eadc">
+<p>
+quoniam hæc est annuntiatio, quam audistis ab initio, ut diligatis alterutrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5a3399" class="outline-3">
+<h3 id="orga5a3399">I John 3:12</h3>
+<div class="outline-text-3" id="text-orga5a3399">
+<p>
+Non sicut Cain, qui ex maligno erat, et occidit fratrem suum. Et propter quid occidit eum ? Quoniam opera ejus maligna erant : fratris autem ejus, justa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2539314" class="outline-3">
+<h3 id="org2539314">I John 3:13</h3>
+<div class="outline-text-3" id="text-org2539314">
+<p>
+Nolite mirari, fratres, si odit vos mundus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b8a067" class="outline-3">
+<h3 id="org3b8a067">I John 3:14</h3>
+<div class="outline-text-3" id="text-org3b8a067">
+<p>
+Nos scimus quoniam translati sumus de morte ad vitam, quoniam diligimus fratres. Qui non diligit, manet in morte :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org436f371" class="outline-3">
+<h3 id="org436f371">I John 3:15</h3>
+<div class="outline-text-3" id="text-org436f371">
+<p>
+omnis qui odit fratrem suum, homicida est. Et scitis quoniam omnis homicida non habet vitam æternam in semetipso manentem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org106d2c8" class="outline-3">
+<h3 id="org106d2c8">I John 3:16</h3>
+<div class="outline-text-3" id="text-org106d2c8">
+<p>
+In hoc cognovimus caritatem Dei, quoniam ille animam suam pro nobis posuit : et nos debemus pro fratribus animas ponere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org911349b" class="outline-3">
+<h3 id="org911349b">I John 3:17</h3>
+<div class="outline-text-3" id="text-org911349b">
+<p>
+Qui habuerit substantiam hujus mundi, et viderit fratrem suum necessitatem habere, et clauserit viscera sua ab eo : quomodo caritas Dei manet in eo ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga34fb85" class="outline-3">
+<h3 id="orga34fb85">I John 3:18</h3>
+<div class="outline-text-3" id="text-orga34fb85">
+<p>
+Filioli mei, non diligamus verbo neque lingua, sed opere et veritate :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ceb56d" class="outline-3">
+<h3 id="org4ceb56d">I John 3:19</h3>
+<div class="outline-text-3" id="text-org4ceb56d">
+<p>
+in hoc cognoscimus quoniam ex veritate sumus : et in conspectu ejus suadebimus corda nostra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfe7d7d" class="outline-3">
+<h3 id="orgdfe7d7d">I John 3:20</h3>
+<div class="outline-text-3" id="text-orgdfe7d7d">
+<p>
+Quoniam si reprehenderit nos cor nostrum : major est Deus corde nostro, et novit omnia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org705973f" class="outline-3">
+<h3 id="org705973f">I John 3:21</h3>
+<div class="outline-text-3" id="text-org705973f">
+<p>
+Carissimi, si cor nostrum non reprehenderit nos, fiduciam habemus ad Deum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge06c3cd" class="outline-3">
+<h3 id="orge06c3cd">I John 3:22</h3>
+<div class="outline-text-3" id="text-orge06c3cd">
+<p>
+et quidquid petierimus, accipiemus ab eo : quoniam mandata ejus custodimus, et ea, quæ sunt placita coram eo, facimus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24463f3" class="outline-3">
+<h3 id="org24463f3">I John 3:23</h3>
+<div class="outline-text-3" id="text-org24463f3">
+<p>
+Et hoc est mandatum ejus : ut credamus in nomine Filii ejus Jesu Christi : et diligamus alterutrum, sicut dedit mandatum nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3acb998" class="outline-3">
+<h3 id="org3acb998">I John 3:24</h3>
+<div class="outline-text-3" id="text-org3acb998">
+<p>
+Et qui servat mandata ejus, in illo manet, et ipse in eo : et in hoc scimus quoniam manet in nobis, de Spiritu quem dedit nobis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4924103" class="outline-2">
+<h2 id="org4924103">I John 4</h2>
+<div class="outline-text-2" id="text-org4924103">
+</div>
+<div id="outline-container-orgb0a36ca" class="outline-3">
+<h3 id="orgb0a36ca">I John 4:1</h3>
+<div class="outline-text-3" id="text-orgb0a36ca">
+<p>
+Carissimi, nolite omni spiritui credere, sed probate spiritus si ex Deo sint : quoniam multi pseudoprophetæ exierunt in mundum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fbff07" class="outline-3">
+<h3 id="org0fbff07">I John 4:2</h3>
+<div class="outline-text-3" id="text-org0fbff07">
+<p>
+In hoc cognoscitur Spiritus Dei : omnis spiritus qui confitetur Jesum Christum in carne venisse, ex Deo est :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32e06be" class="outline-3">
+<h3 id="org32e06be">I John 4:3</h3>
+<div class="outline-text-3" id="text-org32e06be">
+<p>
+et omnis spiritus qui solvit Jesum, ex Deo non est, et hic est antichristus, de quo audistis quoniam venit, et nunc jam in mundo est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd033292" class="outline-3">
+<h3 id="orgd033292">I John 4:4</h3>
+<div class="outline-text-3" id="text-orgd033292">
+<p>
+Vos ex Deo estis filioli, et vicistis eum, quoniam major est qui in vobis est, quam qui in mundo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04d9e39" class="outline-3">
+<h3 id="org04d9e39">I John 4:5</h3>
+<div class="outline-text-3" id="text-org04d9e39">
+<p>
+Ipsi de mundo sunt : ideo de mundo loquuntur, et mundus eos audit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8342f65" class="outline-3">
+<h3 id="org8342f65">I John 4:6</h3>
+<div class="outline-text-3" id="text-org8342f65">
+<p>
+Nos ex Deo sumus. Qui novit Deum, audit nos ; qui non est ex Deo, non audit nos : in hoc cognoscimus Spiritum veritatis, et spiritum erroris.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40e2db2" class="outline-3">
+<h3 id="org40e2db2">I John 4:7</h3>
+<div class="outline-text-3" id="text-org40e2db2">
+<p>
+Carissimi, diligamus nos invicem : quia caritas ex Deo est. Et omnis qui diligit, ex Deo natus est, et cognoscit Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43521b0" class="outline-3">
+<h3 id="org43521b0">I John 4:8</h3>
+<div class="outline-text-3" id="text-org43521b0">
+<p>
+Qui non diligit, non novit Deum : quoniam Deus caritas est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org914a234" class="outline-3">
+<h3 id="org914a234">I John 4:9</h3>
+<div class="outline-text-3" id="text-org914a234">
+<p>
+In hoc apparuit caritas Dei in nobis, quoniam Filium suum unigenitum misit Deus in mundum, ut vivamus per eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb518cb8" class="outline-3">
+<h3 id="orgb518cb8">I John 4:10</h3>
+<div class="outline-text-3" id="text-orgb518cb8">
+<p>
+In hoc est caritas : non quasi nos dilexerimus Deum, sed quoniam ipse prior dilexit nos, et misit Filium suum propitiationem pro peccatis nostris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea17663" class="outline-3">
+<h3 id="orgea17663">I John 4:11</h3>
+<div class="outline-text-3" id="text-orgea17663">
+<p>
+Carissimi, si sic Deus dilexit nos : et nos debemus alterutrum diligere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged54084" class="outline-3">
+<h3 id="orged54084">I John 4:12</h3>
+<div class="outline-text-3" id="text-orged54084">
+<p>
+Deum nemo vidit umquam. Si diligamus invicem, Deus in nobis manet, et caritas ejus in nobis perfecta est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3042384" class="outline-3">
+<h3 id="org3042384">I John 4:13</h3>
+<div class="outline-text-3" id="text-org3042384">
+<p>
+In hoc cognoscimus quoniam in eo manemus, et ipse in nobis : quoniam de Spiritu suo dedit nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfabb34a" class="outline-3">
+<h3 id="orgfabb34a">I John 4:14</h3>
+<div class="outline-text-3" id="text-orgfabb34a">
+<p>
+Et nos vidimus, et testificamur quoniam Pater misit Filium suum Salvatorem mundi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4483e26" class="outline-3">
+<h3 id="org4483e26">I John 4:15</h3>
+<div class="outline-text-3" id="text-org4483e26">
+<p>
+Quisquis confessus fuerit quoniam Jesus est Filius Dei, Deus in eo manet, et ipse in Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ce3765" class="outline-3">
+<h3 id="org6ce3765">I John 4:16</h3>
+<div class="outline-text-3" id="text-org6ce3765">
+<p>
+Et nos cognovimus, et credidimus caritati, quam habet Deus in nobis. Deus caritas est : et qui manet in caritate, in Deo manet, et Deus in eo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5de550f" class="outline-3">
+<h3 id="org5de550f">I John 4:17</h3>
+<div class="outline-text-3" id="text-org5de550f">
+<p>
+In hoc perfecta est caritas Dei nobiscum, ut fiduciam habeamus in die judicii : quia sicut ille est, et nos sumus in hoc mundo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0927429" class="outline-3">
+<h3 id="org0927429">I John 4:18</h3>
+<div class="outline-text-3" id="text-org0927429">
+<p>
+Timor non est in caritate : sed perfecta caritas foras mittit timorem, quoniam timor pœnam habet : qui autem timet, non est perfectus in caritate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40e1e0a" class="outline-3">
+<h3 id="org40e1e0a">I John 4:19</h3>
+<div class="outline-text-3" id="text-org40e1e0a">
+<p>
+Nos ergo diligamus Deum, quoniam Deus prior dilexit nos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7ef815" class="outline-3">
+<h3 id="orga7ef815">I John 4:20</h3>
+<div class="outline-text-3" id="text-orga7ef815">
+<p>
+Si quis dixerit : Quoniam diligo Deum, et fratrem suum oderit, mendax est. Qui enim non diligit fratrem suum quem vidit, Deum, quem non vidit, quomodo potest diligere ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafdf98a" class="outline-3">
+<h3 id="orgafdf98a">I John 4:21</h3>
+<div class="outline-text-3" id="text-orgafdf98a">
+<p>
+Et hoc mandatum habemus a Deo : ut qui diligit Deum, diligat et fratrem suum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org353ed54" class="outline-2">
+<h2 id="org353ed54">I John 5</h2>
+<div class="outline-text-2" id="text-org353ed54">
+</div>
+<div id="outline-container-org152d244" class="outline-3">
+<h3 id="org152d244">I John 5:1</h3>
+<div class="outline-text-3" id="text-org152d244">
+<p>
+Omnis qui credit quoniam Jesus est Christus, ex Deo natus est. Et omnis qui diligit eum qui genuit, diligit et eum qui natus est ex eo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ce631c" class="outline-3">
+<h3 id="org7ce631c">I John 5:2</h3>
+<div class="outline-text-3" id="text-org7ce631c">
+<p>
+In hoc cognoscimus quoniam diligamus natos Dei, cum Deum diligamus, et mandata ejus faciamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org366b73c" class="outline-3">
+<h3 id="org366b73c">I John 5:3</h3>
+<div class="outline-text-3" id="text-org366b73c">
+<p>
+Hæc est enim caritas Dei, ut mandata ejus custodiamus : et mandata ejus gravia non sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd1bb49" class="outline-3">
+<h3 id="orgfd1bb49">I John 5:4</h3>
+<div class="outline-text-3" id="text-orgfd1bb49">
+<p>
+Quoniam omne quod natum est ex Deo, vincit mundum : et hæc est victoria, quæ vincit mundum, fides nostra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6624b0e" class="outline-3">
+<h3 id="org6624b0e">I John 5:5</h3>
+<div class="outline-text-3" id="text-org6624b0e">
+<p>
+Quis est, qui vincit mundum, nisi qui credit quoniam Jesus est Filius Dei ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06ec097" class="outline-3">
+<h3 id="org06ec097">I John 5:6</h3>
+<div class="outline-text-3" id="text-org06ec097">
+<p>
+Hic est, qui venit per aquam et sanguinem, Jesus Christus : non in aqua solum, sed in aqua et sanguine. Et Spiritus est, qui testificatur quoniam Christus est veritas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgddc3993" class="outline-3">
+<h3 id="orgddc3993">I John 5:7</h3>
+<div class="outline-text-3" id="text-orgddc3993">
+<p>
+Quoniam tres sunt, qui testimonium dant in cælo : Pater, Verbum, et Spiritus Sanctus : et hi tres unum sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28b0f6f" class="outline-3">
+<h3 id="org28b0f6f">I John 5:8</h3>
+<div class="outline-text-3" id="text-org28b0f6f">
+<p>
+Et tres sunt, qui testimonium dant in terra : spiritus, et aqua, et sanguis : et hi tres unum sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org694a4ff" class="outline-3">
+<h3 id="org694a4ff">I John 5:9</h3>
+<div class="outline-text-3" id="text-org694a4ff">
+<p>
+Si testimonium hominum accipimus, testimonium Dei majus est : quoniam hoc est testimonium Dei, quod majus est, quoniam testificatus est de Filio suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64ecf1d" class="outline-3">
+<h3 id="org64ecf1d">I John 5:10</h3>
+<div class="outline-text-3" id="text-org64ecf1d">
+<p>
+Qui credit in Filium Dei, habet testimonium Dei in se. Qui non credit Filio, mendacem facit eum : quia non credit in testimonium quod testificatus est Deus de Filio suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4d7d8d" class="outline-3">
+<h3 id="orga4d7d8d">I John 5:11</h3>
+<div class="outline-text-3" id="text-orga4d7d8d">
+<p>
+Et hoc est testimonium, quoniam vitam æternam dedit nobis Deus : et hæc vita in Filio ejus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85605de" class="outline-3">
+<h3 id="org85605de">I John 5:12</h3>
+<div class="outline-text-3" id="text-org85605de">
+<p>
+Qui habet Filium, habet vitam : qui non habet Filium, vitam non habet.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b85adc" class="outline-3">
+<h3 id="org8b85adc">I John 5:13</h3>
+<div class="outline-text-3" id="text-org8b85adc">
+<p>
+Hæc scribo vobis ut sciatis quoniam vitam habetis æternam, qui creditis in nomine Filii Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61cdc90" class="outline-3">
+<h3 id="org61cdc90">I John 5:14</h3>
+<div class="outline-text-3" id="text-org61cdc90">
+<p>
+Et hæc est fiducia, quam habemus ad eum : quia quodcumque petierimus, secundum voluntatem ejus, audit nos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45e9658" class="outline-3">
+<h3 id="org45e9658">I John 5:15</h3>
+<div class="outline-text-3" id="text-org45e9658">
+<p>
+Et scimus quia audit nos quidquid petierimus : scimus quoniam habemus petitiones quas postulamus ab eo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e7d24a" class="outline-3">
+<h3 id="org3e7d24a">I John 5:16</h3>
+<div class="outline-text-3" id="text-org3e7d24a">
+<p>
+Qui scit fratrem suum peccare peccatum non ad mortem, petat, et dabitur ei vita peccanti non ad mortem. Est peccatum ad mortem : non pro illo dico ut roget quis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0c3dc2" class="outline-3">
+<h3 id="orgb0c3dc2">I John 5:17</h3>
+<div class="outline-text-3" id="text-orgb0c3dc2">
+<p>
+Omnis iniquitas, peccatum est : et est peccatum ad mortem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf814c1d" class="outline-3">
+<h3 id="orgf814c1d">I John 5:18</h3>
+<div class="outline-text-3" id="text-orgf814c1d">
+<p>
+Scimus quia omnis qui natus est ex Deo, non peccat : sed generatio Dei conservat eum, et malignus non tangit eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b78cad" class="outline-3">
+<h3 id="org0b78cad">I John 5:19</h3>
+<div class="outline-text-3" id="text-org0b78cad">
+<p>
+Scimus quoniam ex Deo sumus : et mundus totus in maligno positus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6057db" class="outline-3">
+<h3 id="orgc6057db">I John 5:20</h3>
+<div class="outline-text-3" id="text-orgc6057db">
+<p>
+Et scimus quoniam Filius Dei venit, et dedit nobis sensum ut cognoscamus verum Deum, et simus in vero Filio ejus. Hic est verus Deus, et vita æterna.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ade1e2" class="outline-3">
+<h3 id="org0ade1e2">I John 5:21</h3>
+<div class="outline-text-3" id="text-org0ade1e2">
+<p>
+Filioli, custodite vos a simulacris. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:40</p>
+</div>
+</body>
+</html>

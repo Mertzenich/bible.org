@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgab12754">I Peter 1</a>
+<ul>
+<li><a href="#orga2976a8">I Peter 1:1</a></li>
+<li><a href="#org023cfb7">I Peter 1:2</a></li>
+<li><a href="#org6b571eb">I Peter 1:3</a></li>
+<li><a href="#org7626c3a">I Peter 1:4</a></li>
+<li><a href="#org0471f7f">I Peter 1:5</a></li>
+<li><a href="#orgb17df26">I Peter 1:6</a></li>
+<li><a href="#org918cb7a">I Peter 1:7</a></li>
+<li><a href="#org0eadd7d">I Peter 1:8</a></li>
+<li><a href="#orgf7a3dc1">I Peter 1:9</a></li>
+<li><a href="#org01bf4eb">I Peter 1:10</a></li>
+<li><a href="#orge4ed324">I Peter 1:11</a></li>
+<li><a href="#orgacdea06">I Peter 1:12</a></li>
+<li><a href="#orgfcaa307">I Peter 1:13</a></li>
+<li><a href="#org0bd316f">I Peter 1:14</a></li>
+<li><a href="#org57c2336">I Peter 1:15</a></li>
+<li><a href="#org244313a">I Peter 1:16</a></li>
+<li><a href="#orgdfc6202">I Peter 1:17</a></li>
+<li><a href="#orga41d3a6">I Peter 1:18</a></li>
+<li><a href="#org757b3c4">I Peter 1:19</a></li>
+<li><a href="#orgea6d3e8">I Peter 1:20</a></li>
+<li><a href="#org142f168">I Peter 1:21</a></li>
+<li><a href="#orgfade9de">I Peter 1:22</a></li>
+<li><a href="#org4386175">I Peter 1:23</a></li>
+<li><a href="#orgf6babe6">I Peter 1:24</a></li>
+<li><a href="#orgd9ae26b">I Peter 1:25</a></li>
+</ul>
+</li>
+<li><a href="#org9153acd">I Peter 2</a>
+<ul>
+<li><a href="#orgc1d44f9">I Peter 2:1</a></li>
+<li><a href="#org86782ea">I Peter 2:2</a></li>
+<li><a href="#org18502a3">I Peter 2:3</a></li>
+<li><a href="#orga9fb7b8">I Peter 2:4</a></li>
+<li><a href="#org0178938">I Peter 2:5</a></li>
+<li><a href="#org75e1a64">I Peter 2:6</a></li>
+<li><a href="#org70e40cd">I Peter 2:7</a></li>
+<li><a href="#org720da0e">I Peter 2:8</a></li>
+<li><a href="#orgbb0d3b6">I Peter 2:9</a></li>
+<li><a href="#orgea07d00">I Peter 2:10</a></li>
+<li><a href="#orgde4bcfb">I Peter 2:11</a></li>
+<li><a href="#org77a4b25">I Peter 2:12</a></li>
+<li><a href="#orgf2c33c0">I Peter 2:13</a></li>
+<li><a href="#org4eee98e">I Peter 2:14</a></li>
+<li><a href="#org9770340">I Peter 2:15</a></li>
+<li><a href="#org0c9a491">I Peter 2:16</a></li>
+<li><a href="#org7554735">I Peter 2:17</a></li>
+<li><a href="#org9683c54">I Peter 2:18</a></li>
+<li><a href="#org0848800">I Peter 2:19</a></li>
+<li><a href="#orgb12d92a">I Peter 2:20</a></li>
+<li><a href="#orgacf6264">I Peter 2:21</a></li>
+<li><a href="#orga4af9d1">I Peter 2:22</a></li>
+<li><a href="#org9f584c3">I Peter 2:23</a></li>
+<li><a href="#org2951f5a">I Peter 2:24</a></li>
+<li><a href="#org5e3a794">I Peter 2:25</a></li>
+</ul>
+</li>
+<li><a href="#org28ac361">I Peter 3</a>
+<ul>
+<li><a href="#orga22218e">I Peter 3:1</a></li>
+<li><a href="#org5f55315">I Peter 3:2</a></li>
+<li><a href="#org2ae016e">I Peter 3:3</a></li>
+<li><a href="#org55523b8">I Peter 3:4</a></li>
+<li><a href="#orge6f675c">I Peter 3:5</a></li>
+<li><a href="#org393cefa">I Peter 3:6</a></li>
+<li><a href="#org401bae5">I Peter 3:7</a></li>
+<li><a href="#orgabff3be">I Peter 3:8</a></li>
+<li><a href="#org4ec6068">I Peter 3:9</a></li>
+<li><a href="#orgf0426ca">I Peter 3:10</a></li>
+<li><a href="#orgbe3abc4">I Peter 3:11</a></li>
+<li><a href="#org4b8e46b">I Peter 3:12</a></li>
+<li><a href="#orge92d9e5">I Peter 3:13</a></li>
+<li><a href="#org3b9322b">I Peter 3:14</a></li>
+<li><a href="#orgc52a786">I Peter 3:15</a></li>
+<li><a href="#org53ccdd3">I Peter 3:16</a></li>
+<li><a href="#org0e97bc1">I Peter 3:17</a></li>
+<li><a href="#orga89d7fa">I Peter 3:18</a></li>
+<li><a href="#org85c6927">I Peter 3:19</a></li>
+<li><a href="#orgd8029c3">I Peter 3:20</a></li>
+<li><a href="#orgf792a8d">I Peter 3:21</a></li>
+<li><a href="#org9ea78a2">I Peter 3:22</a></li>
+</ul>
+</li>
+<li><a href="#org1a320a4">I Peter 4</a>
+<ul>
+<li><a href="#orgbfb24b0">I Peter 4:1</a></li>
+<li><a href="#org387135f">I Peter 4:2</a></li>
+<li><a href="#org02b61fc">I Peter 4:3</a></li>
+<li><a href="#org6fd908c">I Peter 4:4</a></li>
+<li><a href="#orgdb5b880">I Peter 4:5</a></li>
+<li><a href="#org9260dc2">I Peter 4:6</a></li>
+<li><a href="#orgef784cd">I Peter 4:7</a></li>
+<li><a href="#org8bc838a">I Peter 4:8</a></li>
+<li><a href="#orgbb92b7d">I Peter 4:9</a></li>
+<li><a href="#orgb7b4c66">I Peter 4:10</a></li>
+<li><a href="#org824722b">I Peter 4:11</a></li>
+<li><a href="#org955308a">I Peter 4:12</a></li>
+<li><a href="#org5acad87">I Peter 4:13</a></li>
+<li><a href="#org7ccec39">I Peter 4:14</a></li>
+<li><a href="#org3001402">I Peter 4:15</a></li>
+<li><a href="#org525af2e">I Peter 4:16</a></li>
+<li><a href="#org68f8626">I Peter 4:17</a></li>
+<li><a href="#orgbfe0f38">I Peter 4:18</a></li>
+<li><a href="#org9cd2d57">I Peter 4:19</a></li>
+</ul>
+</li>
+<li><a href="#orga90d354">I Peter 5</a>
+<ul>
+<li><a href="#org0f1a162">I Peter 5:1</a></li>
+<li><a href="#org058e22a">I Peter 5:2</a></li>
+<li><a href="#org97d44a6">I Peter 5:3</a></li>
+<li><a href="#orgbe165e1">I Peter 5:4</a></li>
+<li><a href="#org2fd86aa">I Peter 5:5</a></li>
+<li><a href="#org08cdc5d">I Peter 5:6</a></li>
+<li><a href="#orgd78c4fa">I Peter 5:7</a></li>
+<li><a href="#orge5f3a71">I Peter 5:8</a></li>
+<li><a href="#org1534c64">I Peter 5:9</a></li>
+<li><a href="#org93ca5fd">I Peter 5:10</a></li>
+<li><a href="#org830031c">I Peter 5:11</a></li>
+<li><a href="#org5ca5168">I Peter 5:12</a></li>
+<li><a href="#orgf2790f9">I Peter 5:13</a></li>
+<li><a href="#orgf37fa8c">I Peter 5:14</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgab12754" class="outline-2">
+<h2 id="orgab12754">I Peter 1</h2>
+<div class="outline-text-2" id="text-orgab12754">
+</div>
+<div id="outline-container-orga2976a8" class="outline-3">
+<h3 id="orga2976a8">I Peter 1:1</h3>
+<div class="outline-text-3" id="text-orga2976a8">
+<p>
+Petrus Apostolus Jesu Christi, electis advenis dispersionis Ponti, Galatiæ, Cappadociæ, Asiæ, et Bithyniæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org023cfb7" class="outline-3">
+<h3 id="org023cfb7">I Peter 1:2</h3>
+<div class="outline-text-3" id="text-org023cfb7">
+<p>
+secundum præscientiam Dei Patris, in sanctificationem Spiritus, in obedientiam, et aspersionem sanguinis Jesu Christi. Gratia vobis, et pax multiplicetur.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b571eb" class="outline-3">
+<h3 id="org6b571eb">I Peter 1:3</h3>
+<div class="outline-text-3" id="text-org6b571eb">
+<p>
+Benedictus Deus et Pater Domini nostri Jesu Christi, qui secundum misericordiam suam magnam regeneravit nos in spem vivam, per resurrectionem Jesu Christi ex mortuis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7626c3a" class="outline-3">
+<h3 id="org7626c3a">I Peter 1:4</h3>
+<div class="outline-text-3" id="text-org7626c3a">
+<p>
+in hæreditatem incorruptibilem, et incontaminatam, et immarcescibilem, conservatam in cælis in vobis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0471f7f" class="outline-3">
+<h3 id="org0471f7f">I Peter 1:5</h3>
+<div class="outline-text-3" id="text-org0471f7f">
+<p>
+qui in virtute Dei custodimini per fidem in salutem, paratam revelari in tempore novissimo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb17df26" class="outline-3">
+<h3 id="orgb17df26">I Peter 1:6</h3>
+<div class="outline-text-3" id="text-orgb17df26">
+<p>
+In quo exsultabis, modicum nunc si oportet contristari in variis tentationibus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org918cb7a" class="outline-3">
+<h3 id="org918cb7a">I Peter 1:7</h3>
+<div class="outline-text-3" id="text-org918cb7a">
+<p>
+ut probatio vestræ fidei multo pretiosior auro (quod per ignem probatur) inveniatur in laudem, et gloriam, et honorem in revelatione Jesu Christi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0eadd7d" class="outline-3">
+<h3 id="org0eadd7d">I Peter 1:8</h3>
+<div class="outline-text-3" id="text-org0eadd7d">
+<p>
+quem cum non videritis, diligitis : in quem nunc quoque non videntes creditis : credentes autem exsultabitis lætitia inenarrabili, et glorificata :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7a3dc1" class="outline-3">
+<h3 id="orgf7a3dc1">I Peter 1:9</h3>
+<div class="outline-text-3" id="text-orgf7a3dc1">
+<p>
+reportantes finem fidei vestræ, salutem animarum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01bf4eb" class="outline-3">
+<h3 id="org01bf4eb">I Peter 1:10</h3>
+<div class="outline-text-3" id="text-org01bf4eb">
+<p>
+De qua salute exquisierunt, atque scrutati sunt prophetæ, qui de futura in vobis gratia prophetaverunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4ed324" class="outline-3">
+<h3 id="orge4ed324">I Peter 1:11</h3>
+<div class="outline-text-3" id="text-orge4ed324">
+<p>
+scrutantes in quod vel quale tempus significaret in eis Spiritus Christi : prænuntians eas quæ in Christo sunt passiones, et posteriores glorias :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacdea06" class="outline-3">
+<h3 id="orgacdea06">I Peter 1:12</h3>
+<div class="outline-text-3" id="text-orgacdea06">
+<p>
+quibus revelatum est quia non sibimetipsis, vobis autem ministrabant ea quæ nunc nuntiata sunt vobis per eos qui evangelizaverunt vobis, Spiritu Sancto misso de cælo, in quem desiderant angeli prospicere.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcaa307" class="outline-3">
+<h3 id="orgfcaa307">I Peter 1:13</h3>
+<div class="outline-text-3" id="text-orgfcaa307">
+<p>
+Propter quod succincti lumbos mentis vestræ, sobrii, perfecte sperate in eam, quæ offertur vobis, gratiam, in revelationem Jesu Christi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bd316f" class="outline-3">
+<h3 id="org0bd316f">I Peter 1:14</h3>
+<div class="outline-text-3" id="text-org0bd316f">
+<p>
+quasi filii obedientiæ, non configurati prioribus ignorantiæ vestræ desideriis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57c2336" class="outline-3">
+<h3 id="org57c2336">I Peter 1:15</h3>
+<div class="outline-text-3" id="text-org57c2336">
+<p>
+sed secundum eum qui vocavit vos, Sanctum : et ipsi in omni conversatione sancti sitis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org244313a" class="outline-3">
+<h3 id="org244313a">I Peter 1:16</h3>
+<div class="outline-text-3" id="text-org244313a">
+<p>
+quoniam scriptum est : Sancti eritis, quoniam ego sanctus sum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfc6202" class="outline-3">
+<h3 id="orgdfc6202">I Peter 1:17</h3>
+<div class="outline-text-3" id="text-orgdfc6202">
+<p>
+Et si patrem invocatis eum, qui sine acceptione personarum judicat secundum uniuscujusque opus, in timore incolatus vestri tempore conversamini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga41d3a6" class="outline-3">
+<h3 id="orga41d3a6">I Peter 1:18</h3>
+<div class="outline-text-3" id="text-orga41d3a6">
+<p>
+Scientes quod non corruptibilibus, auro vel argento, redempti estis de vana vestra conversatione paternæ traditionis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org757b3c4" class="outline-3">
+<h3 id="org757b3c4">I Peter 1:19</h3>
+<div class="outline-text-3" id="text-org757b3c4">
+<p>
+sed pretioso sanguine quasi agni immaculati Christi, et incontaminati :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea6d3e8" class="outline-3">
+<h3 id="orgea6d3e8">I Peter 1:20</h3>
+<div class="outline-text-3" id="text-orgea6d3e8">
+<p>
+præcogniti quidem ante mundi constitutionem, manifestati autem novissimis temporibus propter vos,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org142f168" class="outline-3">
+<h3 id="org142f168">I Peter 1:21</h3>
+<div class="outline-text-3" id="text-org142f168">
+<p>
+qui per ipsum fideles estis in Deo, qui suscitavit eum a mortuis, et dedit ei gloriam, ut fides vestra et spes esset in Deo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfade9de" class="outline-3">
+<h3 id="orgfade9de">I Peter 1:22</h3>
+<div class="outline-text-3" id="text-orgfade9de">
+<p>
+animas vestras castificantes in obedientia caritatis, in fraternitatis amore, simplici ex corde invicem diligite attentius :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4386175" class="outline-3">
+<h3 id="org4386175">I Peter 1:23</h3>
+<div class="outline-text-3" id="text-org4386175">
+<p>
+renati non ex semine corruptibili, sed incorruptibili per verbum Dei vivi, et permanentis in æternum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6babe6" class="outline-3">
+<h3 id="orgf6babe6">I Peter 1:24</h3>
+<div class="outline-text-3" id="text-orgf6babe6">
+<p>
+quia omnis caro ut fœnum : et omnis gloria ejus tamquam flos fœni : exaruit fœnum, et flos ejus decidit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9ae26b" class="outline-3">
+<h3 id="orgd9ae26b">I Peter 1:25</h3>
+<div class="outline-text-3" id="text-orgd9ae26b">
+<p>
+Verbum autem Domini manet in æternum : hoc est autem verbum, quod evangelizatum est in vos.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9153acd" class="outline-2">
+<h2 id="org9153acd">I Peter 2</h2>
+<div class="outline-text-2" id="text-org9153acd">
+</div>
+<div id="outline-container-orgc1d44f9" class="outline-3">
+<h3 id="orgc1d44f9">I Peter 2:1</h3>
+<div class="outline-text-3" id="text-orgc1d44f9">
+<p>
+Deponentes igitur omnem malitiam, et omnem dolum, et simulationes, et invidias, et omnes detractiones,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86782ea" class="outline-3">
+<h3 id="org86782ea">I Peter 2:2</h3>
+<div class="outline-text-3" id="text-org86782ea">
+<p>
+sicut modo geniti infantes, rationabile, sine dolo lac concupiscite : ut in eo crescatis in salutem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18502a3" class="outline-3">
+<h3 id="org18502a3">I Peter 2:3</h3>
+<div class="outline-text-3" id="text-org18502a3">
+<p>
+si tamen gustastis quoniam dulcis est Dominus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9fb7b8" class="outline-3">
+<h3 id="orga9fb7b8">I Peter 2:4</h3>
+<div class="outline-text-3" id="text-orga9fb7b8">
+<p>
+Ad quem accedentes lapidem vivum, ab hominibus quidem reprobatum, a Deo autem electum, et honorificatum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0178938" class="outline-3">
+<h3 id="org0178938">I Peter 2:5</h3>
+<div class="outline-text-3" id="text-org0178938">
+<p>
+et ipsi tamquam lapides vivi superædificamini, domus spiritualis, sacerdotium sanctum, offerre spirituales hostias, acceptabiles Deo per Jesum Christum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75e1a64" class="outline-3">
+<h3 id="org75e1a64">I Peter 2:6</h3>
+<div class="outline-text-3" id="text-org75e1a64">
+<p>
+Propter quod continet Scriptura : Ecce pono in Sion lapidem summum angularem, electum, pretiosum : et qui crediderit in eum, non confundetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70e40cd" class="outline-3">
+<h3 id="org70e40cd">I Peter 2:7</h3>
+<div class="outline-text-3" id="text-org70e40cd">
+<p>
+Vobis igitur honor credentibus : non credentibus autem lapis, quem reprobaverunt ædificantes : hic factus est in caput anguli,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org720da0e" class="outline-3">
+<h3 id="org720da0e">I Peter 2:8</h3>
+<div class="outline-text-3" id="text-org720da0e">
+<p>
+et lapis offensionis, et petra scandali, his qui offendunt verbo, nec credunt in quo et positi sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb0d3b6" class="outline-3">
+<h3 id="orgbb0d3b6">I Peter 2:9</h3>
+<div class="outline-text-3" id="text-orgbb0d3b6">
+<p>
+Vos autem genus electum, regale sacerdotium, gens sancta, populus acquisitionis : ut virtutes annuntietis ejus qui de tenebris vos vocavit in admirabile lumen suum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea07d00" class="outline-3">
+<h3 id="orgea07d00">I Peter 2:10</h3>
+<div class="outline-text-3" id="text-orgea07d00">
+<p>
+Qui aliquando non populus, nunc autem populus Dei : qui non consecuti misericordiam, nunc autem misericordiam consecuti.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde4bcfb" class="outline-3">
+<h3 id="orgde4bcfb">I Peter 2:11</h3>
+<div class="outline-text-3" id="text-orgde4bcfb">
+<p>
+Carissimi, obsecro vos tamquam advenas et peregrinos abstinere vos a carnalibus desideriis, quæ militant adversus animam,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77a4b25" class="outline-3">
+<h3 id="org77a4b25">I Peter 2:12</h3>
+<div class="outline-text-3" id="text-org77a4b25">
+<p>
+conversationem vestram inter gentes habentes bonam : ut in eo quod detrectant de vobis tamquam de malefactoribus, ex bonis operibus vos considerantes, glorificent Deum in die visitationis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2c33c0" class="outline-3">
+<h3 id="orgf2c33c0">I Peter 2:13</h3>
+<div class="outline-text-3" id="text-orgf2c33c0">
+<p>
+Subjecti igitur estote omni humanæ creaturæ propter Deum : sive regi quasi præcellenti :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4eee98e" class="outline-3">
+<h3 id="org4eee98e">I Peter 2:14</h3>
+<div class="outline-text-3" id="text-org4eee98e">
+<p>
+sive ducibus tamquam ab eo missis ad vindictam malefactorum, laudem vero bonorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9770340" class="outline-3">
+<h3 id="org9770340">I Peter 2:15</h3>
+<div class="outline-text-3" id="text-org9770340">
+<p>
+quia sic est voluntas Dei, ut benefacientes obmutescere faciatis imprudentium hominum ignorantiam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c9a491" class="outline-3">
+<h3 id="org0c9a491">I Peter 2:16</h3>
+<div class="outline-text-3" id="text-org0c9a491">
+<p>
+quasi liberi, et non quasi velamen habentes malitiæ libertatem, sed sicut servi Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7554735" class="outline-3">
+<h3 id="org7554735">I Peter 2:17</h3>
+<div class="outline-text-3" id="text-org7554735">
+<p>
+Omnes honorate : fraternitatem diligite : Deum timete : regem honorificate.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9683c54" class="outline-3">
+<h3 id="org9683c54">I Peter 2:18</h3>
+<div class="outline-text-3" id="text-org9683c54">
+<p>
+Servi, subditi estote in omni timore dominis, non tantum bonis et modestis, sed etiam dyscolis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0848800" class="outline-3">
+<h3 id="org0848800">I Peter 2:19</h3>
+<div class="outline-text-3" id="text-org0848800">
+<p>
+Hæc est enim gratia, si propter Dei conscientiam sustinet quis tristitias, patiens injuste.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb12d92a" class="outline-3">
+<h3 id="orgb12d92a">I Peter 2:20</h3>
+<div class="outline-text-3" id="text-orgb12d92a">
+<p>
+Quæ enim est gloria, si peccantes, et colaphizati suffertis ? sed si bene facientes patienter sustinetis, hæc est gratia apud Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacf6264" class="outline-3">
+<h3 id="orgacf6264">I Peter 2:21</h3>
+<div class="outline-text-3" id="text-orgacf6264">
+<p>
+In hoc enim vocati estis : quia et Christus passus est pro nobis, vobis relinquens exemplum ut sequamini vestigia ejus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4af9d1" class="outline-3">
+<h3 id="orga4af9d1">I Peter 2:22</h3>
+<div class="outline-text-3" id="text-orga4af9d1">
+<p>
+qui peccatum non fecit, nec inventus est dolus in ore ejus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f584c3" class="outline-3">
+<h3 id="org9f584c3">I Peter 2:23</h3>
+<div class="outline-text-3" id="text-org9f584c3">
+<p>
+qui cum malediceretur, non maledicebat : cum pateretur, non comminabatur : tradebat autem judicanti se injuste :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2951f5a" class="outline-3">
+<h3 id="org2951f5a">I Peter 2:24</h3>
+<div class="outline-text-3" id="text-org2951f5a">
+<p>
+qui peccata nostra ipse pertulit in corpore suo super lignum ; ut peccatis mortui, justitiæ vivamus : cujus livore sanati estis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e3a794" class="outline-3">
+<h3 id="org5e3a794">I Peter 2:25</h3>
+<div class="outline-text-3" id="text-org5e3a794">
+<p>
+Eratis enim sicut oves errantes, sed conversi estis nunc ad pastorem, et episcopum animarum vestrarum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org28ac361" class="outline-2">
+<h2 id="org28ac361">I Peter 3</h2>
+<div class="outline-text-2" id="text-org28ac361">
+</div>
+<div id="outline-container-orga22218e" class="outline-3">
+<h3 id="orga22218e">I Peter 3:1</h3>
+<div class="outline-text-3" id="text-orga22218e">
+<p>
+Similiter et mulieres subditæ sint viris suis : ut etsi qui non credunt verbo, per mulierem conversationem sine verbo lucrifiant :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f55315" class="outline-3">
+<h3 id="org5f55315">I Peter 3:2</h3>
+<div class="outline-text-3" id="text-org5f55315">
+<p>
+considerantes in timore castam conversationem vestram.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ae016e" class="outline-3">
+<h3 id="org2ae016e">I Peter 3:3</h3>
+<div class="outline-text-3" id="text-org2ae016e">
+<p>
+Quarum non sit extrinsecus capillatura, aut circumdatio auri, aut indumenti vestimentorum cultus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55523b8" class="outline-3">
+<h3 id="org55523b8">I Peter 3:4</h3>
+<div class="outline-text-3" id="text-org55523b8">
+<p>
+sed qui absconditus est cordis homo, in incorruptibilitate quieti, et modesti spiritus, qui est in conspectu Dei locuples.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6f675c" class="outline-3">
+<h3 id="orge6f675c">I Peter 3:5</h3>
+<div class="outline-text-3" id="text-orge6f675c">
+<p>
+Sic enim aliquando et sanctæ mulieres, sperantes in Deo, ornabant se, subjectæ propriis viris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org393cefa" class="outline-3">
+<h3 id="org393cefa">I Peter 3:6</h3>
+<div class="outline-text-3" id="text-org393cefa">
+<p>
+Sicut Sara obediebat Abrahæ, dominum eum vocans : cujus estis filiæ benefacientes, et non pertimentes ullam perturbationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org401bae5" class="outline-3">
+<h3 id="org401bae5">I Peter 3:7</h3>
+<div class="outline-text-3" id="text-org401bae5">
+<p>
+Viri similiter cohabitantes secundum scientiam, quasi infirmiori vasculo muliebri impartientes honorem, tamquam et cohæredibus gratiæ vitæ : ut non impediantur orationes vestræ.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabff3be" class="outline-3">
+<h3 id="orgabff3be">I Peter 3:8</h3>
+<div class="outline-text-3" id="text-orgabff3be">
+<p>
+In fine autem omnes unanimes, compatientes fraternitatis amatores, misericordes, modesti, humiles :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ec6068" class="outline-3">
+<h3 id="org4ec6068">I Peter 3:9</h3>
+<div class="outline-text-3" id="text-org4ec6068">
+<p>
+non reddentes malum pro malo, nec maledictum pro maledicto, sed e contrario benedicentes : quia in hoc vocati estis, ut benedictionem hæreditate possideatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0426ca" class="outline-3">
+<h3 id="orgf0426ca">I Peter 3:10</h3>
+<div class="outline-text-3" id="text-orgf0426ca">
+<p>
+Qui enim vult vitam diligere, et dies videre bonos, coërceat linguam suam a malo, et labia ejus ne loquantur dolum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe3abc4" class="outline-3">
+<h3 id="orgbe3abc4">I Peter 3:11</h3>
+<div class="outline-text-3" id="text-orgbe3abc4">
+<p>
+Declinet a malo, et faciat bonum : inquirat pacem, et sequatur eam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b8e46b" class="outline-3">
+<h3 id="org4b8e46b">I Peter 3:12</h3>
+<div class="outline-text-3" id="text-org4b8e46b">
+<p>
+quia oculi Domini super justos, et aures ejus in preces eorum : vultus autem Domini super facientes mala.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge92d9e5" class="outline-3">
+<h3 id="orge92d9e5">I Peter 3:13</h3>
+<div class="outline-text-3" id="text-orge92d9e5">
+<p>
+Et quis est qui vobis noceat, si boni æmulatores fueritis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b9322b" class="outline-3">
+<h3 id="org3b9322b">I Peter 3:14</h3>
+<div class="outline-text-3" id="text-org3b9322b">
+<p>
+Sed et si quid patimini propter justitiam, beati. Timorem autem eorum ne timueritis, et non conturbemini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc52a786" class="outline-3">
+<h3 id="orgc52a786">I Peter 3:15</h3>
+<div class="outline-text-3" id="text-orgc52a786">
+<p>
+Dominum autem Christum sanctificate in cordibus vestris, parati semper ad satisfactionem omni poscenti vos rationem de ea, quæ in vobis est, spe.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53ccdd3" class="outline-3">
+<h3 id="org53ccdd3">I Peter 3:16</h3>
+<div class="outline-text-3" id="text-org53ccdd3">
+<p>
+Sed cum modestia, et timore, conscientiam habentes bonam : ut in eo, quod detrahunt vobis, confundantur, qui calumniantur vestram bonam in Christo conversationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e97bc1" class="outline-3">
+<h3 id="org0e97bc1">I Peter 3:17</h3>
+<div class="outline-text-3" id="text-org0e97bc1">
+<p>
+Melius est enim benefacientes (si voluntas Dei velit) pati, quam malefacientes.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga89d7fa" class="outline-3">
+<h3 id="orga89d7fa">I Peter 3:18</h3>
+<div class="outline-text-3" id="text-orga89d7fa">
+<p>
+Quia et Christus semel pro peccatis nostris mortuus est, justus pro injustis, ut nos offerret Deo, mortificatus quidem carne, vivificatus autem spiritu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85c6927" class="outline-3">
+<h3 id="org85c6927">I Peter 3:19</h3>
+<div class="outline-text-3" id="text-org85c6927">
+<p>
+In quo et his, qui in carcere erant, spiritibus veniens prædicavit :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8029c3" class="outline-3">
+<h3 id="orgd8029c3">I Peter 3:20</h3>
+<div class="outline-text-3" id="text-orgd8029c3">
+<p>
+qui increduli fuerant aliquando, quando exspectabant Dei patientiam in diebus Noë, cum fabricaretur arca : in qua pauci, id est octo animæ, salvæ factæ sunt per aquam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf792a8d" class="outline-3">
+<h3 id="orgf792a8d">I Peter 3:21</h3>
+<div class="outline-text-3" id="text-orgf792a8d">
+<p>
+Quod et vos nunc similis formæ salvos fecit baptisma : non carnis depositio sordium, sed conscientiæ bonæ interrogatio in Deum per resurrectionem Jesu Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ea78a2" class="outline-3">
+<h3 id="org9ea78a2">I Peter 3:22</h3>
+<div class="outline-text-3" id="text-org9ea78a2">
+<p>
+Qui est in dextera Dei, deglutiens mortem ut vitæ æternæ hæredes efficeremur : profectus in cælum subjectis sibi angelis, et potestatibus, et virtutibus.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a320a4" class="outline-2">
+<h2 id="org1a320a4">I Peter 4</h2>
+<div class="outline-text-2" id="text-org1a320a4">
+</div>
+<div id="outline-container-orgbfb24b0" class="outline-3">
+<h3 id="orgbfb24b0">I Peter 4:1</h3>
+<div class="outline-text-3" id="text-orgbfb24b0">
+<p>
+Christo igitur passo in carne, et vos eadem cogitatione armamini : quia qui passus est in carne, desiit a peccatis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org387135f" class="outline-3">
+<h3 id="org387135f">I Peter 4:2</h3>
+<div class="outline-text-3" id="text-org387135f">
+<p>
+ut jam non desideriis hominum, sed voluntati Dei, quod reliquum est in carne vivat temporis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02b61fc" class="outline-3">
+<h3 id="org02b61fc">I Peter 4:3</h3>
+<div class="outline-text-3" id="text-org02b61fc">
+<p>
+Sufficit enim præteritum tempus ad voluntatem gentium consummandam his qui ambulaverunt in luxuriis, desideriis, vinolentiis, comessationibus, potationibus, et illicitis idolorum cultibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fd908c" class="outline-3">
+<h3 id="org6fd908c">I Peter 4:4</h3>
+<div class="outline-text-3" id="text-org6fd908c">
+<p>
+In quo admirantur non concurrentibus vobis in eamdem luxuriæ confusionem, blasphemantes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb5b880" class="outline-3">
+<h3 id="orgdb5b880">I Peter 4:5</h3>
+<div class="outline-text-3" id="text-orgdb5b880">
+<p>
+Qui reddent rationem ei qui paratus est judicare vivos et mortuos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9260dc2" class="outline-3">
+<h3 id="org9260dc2">I Peter 4:6</h3>
+<div class="outline-text-3" id="text-org9260dc2">
+<p>
+Propter hoc enim et mortuis evangelizatum est : ut judicentur quidem secundum homines in carne, vivant autem secundum Deum in spiritu.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef784cd" class="outline-3">
+<h3 id="orgef784cd">I Peter 4:7</h3>
+<div class="outline-text-3" id="text-orgef784cd">
+<p>
+Omnium autem finis appropinquavit. Estote itaque prudentes, et vigilate in orationibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bc838a" class="outline-3">
+<h3 id="org8bc838a">I Peter 4:8</h3>
+<div class="outline-text-3" id="text-org8bc838a">
+<p>
+Ante omnia autem, mutuam in vobismetipsis caritatem continuam habentes : quia caritas operit multitudinem peccatorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb92b7d" class="outline-3">
+<h3 id="orgbb92b7d">I Peter 4:9</h3>
+<div class="outline-text-3" id="text-orgbb92b7d">
+<p>
+Hospitales invicem sine murmuratione.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7b4c66" class="outline-3">
+<h3 id="orgb7b4c66">I Peter 4:10</h3>
+<div class="outline-text-3" id="text-orgb7b4c66">
+<p>
+Unusquisque, sicut accepit gratiam, in alterutrum illam administrantes, sicut boni dispensatores multiformis gratiæ Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org824722b" class="outline-3">
+<h3 id="org824722b">I Peter 4:11</h3>
+<div class="outline-text-3" id="text-org824722b">
+<p>
+Si quis loquitur, quasi sermones Dei : si quis ministrat, tamquam ex virtute, quam administrat Deus : ut in omnibus honorificetur Deus per Jesum Christum : cui est gloria et imperium in sæcula sæculorum. Amen.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org955308a" class="outline-3">
+<h3 id="org955308a">I Peter 4:12</h3>
+<div class="outline-text-3" id="text-org955308a">
+<p>
+Carissimi, nolite peregrinari in fervore, qui ad tentationem vobis fit, quasi novi aliquid vobis contingat :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5acad87" class="outline-3">
+<h3 id="org5acad87">I Peter 4:13</h3>
+<div class="outline-text-3" id="text-org5acad87">
+<p>
+sed communicantes Christi passionibus gaudete, ut et in revelatione gloriæ ejus gaudeatis exsultantes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ccec39" class="outline-3">
+<h3 id="org7ccec39">I Peter 4:14</h3>
+<div class="outline-text-3" id="text-org7ccec39">
+<p>
+Si exprobramini in nomine Christi, beati eritis : quoniam quod est honoris, gloriæ, et virtutis Dei, et qui est ejus Spiritus, super vos requiescit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3001402" class="outline-3">
+<h3 id="org3001402">I Peter 4:15</h3>
+<div class="outline-text-3" id="text-org3001402">
+<p>
+Nemo autem vestrum patiatur ut homicida, aut fur, aut maledicus, aut alienorum appetitor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org525af2e" class="outline-3">
+<h3 id="org525af2e">I Peter 4:16</h3>
+<div class="outline-text-3" id="text-org525af2e">
+<p>
+Si autem ut christianus, non erubescat : glorificet autem Deum in isto nomine :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68f8626" class="outline-3">
+<h3 id="org68f8626">I Peter 4:17</h3>
+<div class="outline-text-3" id="text-org68f8626">
+<p>
+quoniam tempus est ut incipiat judicium a domo Dei. Si autem primum a nobis, quis finis eorum, qui non credunt Dei Evangelio ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfe0f38" class="outline-3">
+<h3 id="orgbfe0f38">I Peter 4:18</h3>
+<div class="outline-text-3" id="text-orgbfe0f38">
+<p>
+et si justus vix salvabitur, impius et peccator ubi parebunt ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cd2d57" class="outline-3">
+<h3 id="org9cd2d57">I Peter 4:19</h3>
+<div class="outline-text-3" id="text-org9cd2d57">
+<p>
+Itaque et hi, qui patiuntur secundum voluntatem Dei, fideli Creatori commendent animas suas in benefactis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga90d354" class="outline-2">
+<h2 id="orga90d354">I Peter 5</h2>
+<div class="outline-text-2" id="text-orga90d354">
+</div>
+<div id="outline-container-org0f1a162" class="outline-3">
+<h3 id="org0f1a162">I Peter 5:1</h3>
+<div class="outline-text-3" id="text-org0f1a162">
+<p>
+Seniores ergo, qui in vobis sunt, obsecro, consenior et testis Christi passionum : qui et ejus, quæ in futuro revelanda est, gloriæ communicator :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org058e22a" class="outline-3">
+<h3 id="org058e22a">I Peter 5:2</h3>
+<div class="outline-text-3" id="text-org058e22a">
+<p>
+pascite qui in vobis est gregem Dei, providentes non coacte, sed spontanee secundum Deum : neque turpis lucri gratia, sed voluntarie :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97d44a6" class="outline-3">
+<h3 id="org97d44a6">I Peter 5:3</h3>
+<div class="outline-text-3" id="text-org97d44a6">
+<p>
+neque ut dominantes in cleris, sed forma facti gregis ex animo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe165e1" class="outline-3">
+<h3 id="orgbe165e1">I Peter 5:4</h3>
+<div class="outline-text-3" id="text-orgbe165e1">
+<p>
+Et cum apparuerit princeps pastorum, percipietis immarcescibilem gloriæ coronam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fd86aa" class="outline-3">
+<h3 id="org2fd86aa">I Peter 5:5</h3>
+<div class="outline-text-3" id="text-org2fd86aa">
+<p>
+Similiter adolescentes subditi estote senioribus.   Omnes autem invicem humilitatem insinuate, quia Deus superbis resistit, humilibus autem dat gratiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08cdc5d" class="outline-3">
+<h3 id="org08cdc5d">I Peter 5:6</h3>
+<div class="outline-text-3" id="text-org08cdc5d">
+<p>
+Humiliamini igitur sub potenti manu Dei, ut vos exaltet in tempore visitationis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd78c4fa" class="outline-3">
+<h3 id="orgd78c4fa">I Peter 5:7</h3>
+<div class="outline-text-3" id="text-orgd78c4fa">
+<p>
+omnem sollicitudinem vestram projicientes in eum, quoniam ipsi cura est de vobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5f3a71" class="outline-3">
+<h3 id="orge5f3a71">I Peter 5:8</h3>
+<div class="outline-text-3" id="text-orge5f3a71">
+<p>
+Sobrii estote, et vigilate : quia adversarius vester diabolus tamquam leo rugiens circuit, quærens quem devoret :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1534c64" class="outline-3">
+<h3 id="org1534c64">I Peter 5:9</h3>
+<div class="outline-text-3" id="text-org1534c64">
+<p>
+cui resistite fortes in fide : scientes eamdem passionem ei quæ in mundo est vestræ fraternitati fieri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93ca5fd" class="outline-3">
+<h3 id="org93ca5fd">I Peter 5:10</h3>
+<div class="outline-text-3" id="text-org93ca5fd">
+<p>
+Deus autem omnis gratiæ, qui vocavit nos in æternam suam gloriam in Christo Jesu, modicum passos ipse perficiet, confirmabit, solidabitque.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org830031c" class="outline-3">
+<h3 id="org830031c">I Peter 5:11</h3>
+<div class="outline-text-3" id="text-org830031c">
+<p>
+Ipsi gloria, et imperium in sæcula sæculorum. Amen.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ca5168" class="outline-3">
+<h3 id="org5ca5168">I Peter 5:12</h3>
+<div class="outline-text-3" id="text-org5ca5168">
+<p>
+Per Silvanum fidelem fratrem vobis, ut arbitror, breviter scripsi : obsecrans et contestans, hanc esse veram gratiam Dei, in qua statis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2790f9" class="outline-3">
+<h3 id="orgf2790f9">I Peter 5:13</h3>
+<div class="outline-text-3" id="text-orgf2790f9">
+<p>
+Salutat vos ecclesia quæ est in Babylone coëlecta, et Marcus filius meus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf37fa8c" class="outline-3">
+<h3 id="orgf37fa8c">I Peter 5:14</h3>
+<div class="outline-text-3" id="text-orgf37fa8c">
+<p>
+Salutate invicem in osculo sancto. Gratia vobis omnibus qui estis in Christo Jesu. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

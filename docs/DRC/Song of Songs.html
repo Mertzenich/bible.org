@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgfe333ff">Song of Solomon 1</a>
+<ul>
+<li><a href="#orgfaa056c">Song of Solomon 1:1</a></li>
+<li><a href="#orgb9cbf14">Song of Solomon 1:2</a></li>
+<li><a href="#org23a1661">Song of Solomon 1:3</a></li>
+<li><a href="#orgacb78b3">Song of Solomon 1:4</a></li>
+<li><a href="#org0b42d5e">Song of Solomon 1:5</a></li>
+<li><a href="#org10d7f47">Song of Solomon 1:6</a></li>
+<li><a href="#org9c54cc8">Song of Solomon 1:7</a></li>
+<li><a href="#org566ac89">Song of Solomon 1:8</a></li>
+<li><a href="#orgbf6da01">Song of Solomon 1:9</a></li>
+<li><a href="#org2400a37">Song of Solomon 1:10</a></li>
+<li><a href="#orgdfaac96">Song of Solomon 1:11</a></li>
+<li><a href="#orgdb47a21">Song of Solomon 1:12</a></li>
+<li><a href="#orgf9576fe">Song of Solomon 1:13</a></li>
+<li><a href="#org14d9189">Song of Solomon 1:14</a></li>
+<li><a href="#orgc817f28">Song of Solomon 1:15</a></li>
+<li><a href="#orge390e42">Song of Solomon 1:16</a></li>
+</ul>
+</li>
+<li><a href="#orgeaa8190">Song of Solomon 2</a>
+<ul>
+<li><a href="#orgcb4f04b">Song of Solomon 2:1</a></li>
+<li><a href="#orgb7d340c">Song of Solomon 2:2</a></li>
+<li><a href="#org1e0c2ff">Song of Solomon 2:3</a></li>
+<li><a href="#org5e5dc75">Song of Solomon 2:4</a></li>
+<li><a href="#org662cd33">Song of Solomon 2:5</a></li>
+<li><a href="#orgd4ce61c">Song of Solomon 2:6</a></li>
+<li><a href="#org2afaebc">Song of Solomon 2:7</a></li>
+<li><a href="#orgf5e1758">Song of Solomon 2:8</a></li>
+<li><a href="#orgb8f5206">Song of Solomon 2:9</a></li>
+<li><a href="#org25bc3ae">Song of Solomon 2:10</a></li>
+<li><a href="#orgb16dc38">Song of Solomon 2:11</a></li>
+<li><a href="#org9ee95cf">Song of Solomon 2:12</a></li>
+<li><a href="#orgde5d913">Song of Solomon 2:13</a></li>
+<li><a href="#orga711266">Song of Solomon 2:14</a></li>
+<li><a href="#org80befb6">Song of Solomon 2:15</a></li>
+<li><a href="#org495f29d">Song of Solomon 2:16</a></li>
+<li><a href="#orge01c3f5">Song of Solomon 2:17</a></li>
+</ul>
+</li>
+<li><a href="#org99a2d29">Song of Solomon 3</a>
+<ul>
+<li><a href="#org2316d57">Song of Solomon 3:1</a></li>
+<li><a href="#org74d1003">Song of Solomon 3:2</a></li>
+<li><a href="#orgc93eda5">Song of Solomon 3:3</a></li>
+<li><a href="#orga0f58ac">Song of Solomon 3:4</a></li>
+<li><a href="#org1a13669">Song of Solomon 3:5</a></li>
+<li><a href="#org5a46476">Song of Solomon 3:6</a></li>
+<li><a href="#org134d941">Song of Solomon 3:7</a></li>
+<li><a href="#orgc60c1c3">Song of Solomon 3:8</a></li>
+<li><a href="#orga684694">Song of Solomon 3:9</a></li>
+<li><a href="#orge2330ef">Song of Solomon 3:10</a></li>
+<li><a href="#org72d664e">Song of Solomon 3:11</a></li>
+</ul>
+</li>
+<li><a href="#org486a215">Song of Solomon 4</a>
+<ul>
+<li><a href="#org8e00b9a">Song of Solomon 4:1</a></li>
+<li><a href="#org5a34935">Song of Solomon 4:2</a></li>
+<li><a href="#orgb4cfc18">Song of Solomon 4:3</a></li>
+<li><a href="#orgec7c6e4">Song of Solomon 4:4</a></li>
+<li><a href="#org2f17006">Song of Solomon 4:5</a></li>
+<li><a href="#org688293d">Song of Solomon 4:6</a></li>
+<li><a href="#org4bc01b9">Song of Solomon 4:7</a></li>
+<li><a href="#orgf063d25">Song of Solomon 4:8</a></li>
+<li><a href="#org0a0af76">Song of Solomon 4:9</a></li>
+<li><a href="#org443ba45">Song of Solomon 4:10</a></li>
+<li><a href="#org20ef691">Song of Solomon 4:11</a></li>
+<li><a href="#org675e9e4">Song of Solomon 4:12</a></li>
+<li><a href="#org46cdaf2">Song of Solomon 4:13</a></li>
+<li><a href="#orgcf90ad6">Song of Solomon 4:14</a></li>
+<li><a href="#org8403910">Song of Solomon 4:15</a></li>
+<li><a href="#org23c5d8d">Song of Solomon 4:16</a></li>
+</ul>
+</li>
+<li><a href="#org7b312c5">Song of Solomon 5</a>
+<ul>
+<li><a href="#orgb81ed58">Song of Solomon 5:1</a></li>
+<li><a href="#org54d4192">Song of Solomon 5:2</a></li>
+<li><a href="#org9c9d71f">Song of Solomon 5:3</a></li>
+<li><a href="#orgdc070a3">Song of Solomon 5:4</a></li>
+<li><a href="#orgfca5407">Song of Solomon 5:5</a></li>
+<li><a href="#orgae768ce">Song of Solomon 5:6</a></li>
+<li><a href="#orgc1bcfd7">Song of Solomon 5:7</a></li>
+<li><a href="#org4326e20">Song of Solomon 5:8</a></li>
+<li><a href="#orgad6ef35">Song of Solomon 5:9</a></li>
+<li><a href="#org8f9308e">Song of Solomon 5:10</a></li>
+<li><a href="#orgab2c84c">Song of Solomon 5:11</a></li>
+<li><a href="#org58f1845">Song of Solomon 5:12</a></li>
+<li><a href="#org0cd2fa1">Song of Solomon 5:13</a></li>
+<li><a href="#orgdaafa20">Song of Solomon 5:14</a></li>
+<li><a href="#orgfaf0069">Song of Solomon 5:15</a></li>
+<li><a href="#orgad40559">Song of Solomon 5:16</a></li>
+<li><a href="#org49a9225">Song of Solomon 5:17</a></li>
+</ul>
+</li>
+<li><a href="#org6124330">Song of Solomon 6</a>
+<ul>
+<li><a href="#org2d2b1df">Song of Solomon 6:1</a></li>
+<li><a href="#org58279b1">Song of Solomon 6:2</a></li>
+<li><a href="#org8e09595">Song of Solomon 6:3</a></li>
+<li><a href="#org1c023ab">Song of Solomon 6:4</a></li>
+<li><a href="#orgebdec0f">Song of Solomon 6:5</a></li>
+<li><a href="#org49773a0">Song of Solomon 6:6</a></li>
+<li><a href="#org492914f">Song of Solomon 6:7</a></li>
+<li><a href="#orge120200">Song of Solomon 6:8</a></li>
+<li><a href="#orgb243832">Song of Solomon 6:9</a></li>
+<li><a href="#orgccf198c">Song of Solomon 6:10</a></li>
+<li><a href="#orgb4058f4">Song of Solomon 6:11</a></li>
+<li><a href="#orgea206a8">Song of Solomon 6:12</a></li>
+</ul>
+</li>
+<li><a href="#org1d5d2c0">Song of Solomon 7</a>
+<ul>
+<li><a href="#orge756cae">Song of Solomon 7:1</a></li>
+<li><a href="#orgccb417f">Song of Solomon 7:2</a></li>
+<li><a href="#org516b03a">Song of Solomon 7:3</a></li>
+<li><a href="#orgd333971">Song of Solomon 7:4</a></li>
+<li><a href="#orgaa59c31">Song of Solomon 7:5</a></li>
+<li><a href="#org2955f57">Song of Solomon 7:6</a></li>
+<li><a href="#org0b9f0d7">Song of Solomon 7:7</a></li>
+<li><a href="#orgd3d1127">Song of Solomon 7:8</a></li>
+<li><a href="#orge17a80c">Song of Solomon 7:9</a></li>
+<li><a href="#org141a21a">Song of Solomon 7:10</a></li>
+<li><a href="#org5a3c978">Song of Solomon 7:11</a></li>
+<li><a href="#orgcb385ce">Song of Solomon 7:12</a></li>
+<li><a href="#org155da47">Song of Solomon 7:13</a></li>
+</ul>
+</li>
+<li><a href="#org9f0ef80">Song of Solomon 8</a>
+<ul>
+<li><a href="#org56a374c">Song of Solomon 8:1</a></li>
+<li><a href="#orgc6cd3c1">Song of Solomon 8:2</a></li>
+<li><a href="#org803c60c">Song of Solomon 8:3</a></li>
+<li><a href="#orgc3390cd">Song of Solomon 8:4</a></li>
+<li><a href="#orgcc8a4df">Song of Solomon 8:5</a></li>
+<li><a href="#org1a2fac8">Song of Solomon 8:6</a></li>
+<li><a href="#orgfe9d088">Song of Solomon 8:7</a></li>
+<li><a href="#orgf4e623c">Song of Solomon 8:8</a></li>
+<li><a href="#orgf3a37a8">Song of Solomon 8:9</a></li>
+<li><a href="#org8994142">Song of Solomon 8:10</a></li>
+<li><a href="#org37a1f78">Song of Solomon 8:11</a></li>
+<li><a href="#orgff76a81">Song of Solomon 8:12</a></li>
+<li><a href="#org1e49501">Song of Solomon 8:13</a></li>
+<li><a href="#org1fdaaaf">Song of Solomon 8:14</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe333ff" class="outline-2">
+<h2 id="orgfe333ff">Song of Solomon 1</h2>
+<div class="outline-text-2" id="text-orgfe333ff">
+</div>
+<div id="outline-container-orgfaa056c" class="outline-3">
+<h3 id="orgfaa056c">Song of Solomon 1:1</h3>
+<div class="outline-text-3" id="text-orgfaa056c">
+<p>
+Let him kiss me with the kiss of his mouth: for thy breasts are better than wine,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9cbf14" class="outline-3">
+<h3 id="orgb9cbf14">Song of Solomon 1:2</h3>
+<div class="outline-text-3" id="text-orgb9cbf14">
+<p>
+Smelling sweet of the best ointments. Thy name is as oil poured out: therefore young maidens have loved thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23a1661" class="outline-3">
+<h3 id="org23a1661">Song of Solomon 1:3</h3>
+<div class="outline-text-3" id="text-org23a1661">
+<p>
+Draw me: we will run after thee to the odour of thy ointments. The king hath brought me into his storerooms: we will be glad and rejoice in thee, remembering thy breasts more than wine: the rightous love thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacb78b3" class="outline-3">
+<h3 id="orgacb78b3">Song of Solomon 1:4</h3>
+<div class="outline-text-3" id="text-orgacb78b3">
+<p>
+I am black but beautiful, O ye daughters of Jerusalem, as the tents of Cedar, as the curtains of Solomon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b42d5e" class="outline-3">
+<h3 id="org0b42d5e">Song of Solomon 1:5</h3>
+<div class="outline-text-3" id="text-org0b42d5e">
+<p>
+Do not consider me that I am brown, because the sun hath altered my colour: the sons of my mother have fought against me, they have made me the keeper in the vineyards: my vineyard I have not kept.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10d7f47" class="outline-3">
+<h3 id="org10d7f47">Song of Solomon 1:6</h3>
+<div class="outline-text-3" id="text-org10d7f47">
+<p>
+Shew me, O thou whom my soul loveth, where thou feedest, where thou liest in the midday, lest I begin to wander after the flocks of thy companions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c54cc8" class="outline-3">
+<h3 id="org9c54cc8">Song of Solomon 1:7</h3>
+<div class="outline-text-3" id="text-org9c54cc8">
+<p>
+If thou know not thyself, O fairest among women, go forth, and follow after the steps of the flocks, and feed thy kids beside the tents of the shepherds.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org566ac89" class="outline-3">
+<h3 id="org566ac89">Song of Solomon 1:8</h3>
+<div class="outline-text-3" id="text-org566ac89">
+<p>
+To my company of horsemen, in Pharao&rsquo;s chariots, have I likened thee, O my love.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf6da01" class="outline-3">
+<h3 id="orgbf6da01">Song of Solomon 1:9</h3>
+<div class="outline-text-3" id="text-orgbf6da01">
+<p>
+Thy cheeks are beautiful as the turtledove&rsquo;s, thy neck as jewels.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2400a37" class="outline-3">
+<h3 id="org2400a37">Song of Solomon 1:10</h3>
+<div class="outline-text-3" id="text-org2400a37">
+<p>
+We will make thee chains of gold, inlaid with silver.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfaac96" class="outline-3">
+<h3 id="orgdfaac96">Song of Solomon 1:11</h3>
+<div class="outline-text-3" id="text-orgdfaac96">
+<p>
+While the king was at his repose, my spikenard sent forth the odour thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb47a21" class="outline-3">
+<h3 id="orgdb47a21">Song of Solomon 1:12</h3>
+<div class="outline-text-3" id="text-orgdb47a21">
+<p>
+A bundle of myrrh is my beloved to me, he shall abide between my breasts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9576fe" class="outline-3">
+<h3 id="orgf9576fe">Song of Solomon 1:13</h3>
+<div class="outline-text-3" id="text-orgf9576fe">
+<p>
+A cluster of cypress my love is to me, in the vineyards of Engaddi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14d9189" class="outline-3">
+<h3 id="org14d9189">Song of Solomon 1:14</h3>
+<div class="outline-text-3" id="text-org14d9189">
+<p>
+Behold thou are fair, O my love, behold thou are fair, thy eyes are as those of doves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc817f28" class="outline-3">
+<h3 id="orgc817f28">Song of Solomon 1:15</h3>
+<div class="outline-text-3" id="text-orgc817f28">
+<p>
+Behold thou art fair, my beloved, and comely. Our bed is flourishing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge390e42" class="outline-3">
+<h3 id="orge390e42">Song of Solomon 1:16</h3>
+<div class="outline-text-3" id="text-orge390e42">
+<p>
+The beams of our houses are of cedar, our rafters of cypress trees. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeaa8190" class="outline-2">
+<h2 id="orgeaa8190">Song of Solomon 2</h2>
+<div class="outline-text-2" id="text-orgeaa8190">
+</div>
+<div id="outline-container-orgcb4f04b" class="outline-3">
+<h3 id="orgcb4f04b">Song of Solomon 2:1</h3>
+<div class="outline-text-3" id="text-orgcb4f04b">
+<p>
+I am the flower of the field, and the lily of the valleys.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7d340c" class="outline-3">
+<h3 id="orgb7d340c">Song of Solomon 2:2</h3>
+<div class="outline-text-3" id="text-orgb7d340c">
+<p>
+As the lily among thorns, so is my love among the daughters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e0c2ff" class="outline-3">
+<h3 id="org1e0c2ff">Song of Solomon 2:3</h3>
+<div class="outline-text-3" id="text-org1e0c2ff">
+<p>
+As the apple tree among the trees of the woods, so is my beloved among the sons. I sat down under his shadow, whom I desired: and his fruit was sweet to my palate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e5dc75" class="outline-3">
+<h3 id="org5e5dc75">Song of Solomon 2:4</h3>
+<div class="outline-text-3" id="text-org5e5dc75">
+<p>
+He brought me into the cellar of wine, he set in order charity in me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org662cd33" class="outline-3">
+<h3 id="org662cd33">Song of Solomon 2:5</h3>
+<div class="outline-text-3" id="text-org662cd33">
+<p>
+Stay me up with flowers, compass me about with apples: because I languish with love.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4ce61c" class="outline-3">
+<h3 id="orgd4ce61c">Song of Solomon 2:6</h3>
+<div class="outline-text-3" id="text-orgd4ce61c">
+<p>
+His left hand is under my head, and his right hand shall embrace me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2afaebc" class="outline-3">
+<h3 id="org2afaebc">Song of Solomon 2:7</h3>
+<div class="outline-text-3" id="text-org2afaebc">
+<p>
+I adjure you, O ye daughters of Jerusalem, by the roes, and the harts of the field, that you stir not up, nor make the beloved to awake, till she please.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5e1758" class="outline-3">
+<h3 id="orgf5e1758">Song of Solomon 2:8</h3>
+<div class="outline-text-3" id="text-orgf5e1758">
+<p>
+The voice of my beloved, behold he cometh leaping upon the mountains, skipping over the hills.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8f5206" class="outline-3">
+<h3 id="orgb8f5206">Song of Solomon 2:9</h3>
+<div class="outline-text-3" id="text-orgb8f5206">
+<p>
+My beloved is like a roe, or a young hart. Behold he standeth behind our wall, looking through the windows, looking through the lattices.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25bc3ae" class="outline-3">
+<h3 id="org25bc3ae">Song of Solomon 2:10</h3>
+<div class="outline-text-3" id="text-org25bc3ae">
+<p>
+Behold my beloved speaketh to me: Arise, make haste, my love, my dove, my beautiful one, and come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb16dc38" class="outline-3">
+<h3 id="orgb16dc38">Song of Solomon 2:11</h3>
+<div class="outline-text-3" id="text-orgb16dc38">
+<p>
+For winter is now past, the rain is over and gone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ee95cf" class="outline-3">
+<h3 id="org9ee95cf">Song of Solomon 2:12</h3>
+<div class="outline-text-3" id="text-org9ee95cf">
+<p>
+The flowers have appeared in our land, the time of pruning is come: the voice of the turtle is heard in our land:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde5d913" class="outline-3">
+<h3 id="orgde5d913">Song of Solomon 2:13</h3>
+<div class="outline-text-3" id="text-orgde5d913">
+<p>
+The fig tree hath put forth her green figs: the vines in flower yield their sweet smell. Arise, my love, my beautiful one, and come:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga711266" class="outline-3">
+<h3 id="orga711266">Song of Solomon 2:14</h3>
+<div class="outline-text-3" id="text-orga711266">
+<p>
+My dove in the clefts of the rock, in the hollow places of the wall, shew me thy face, let thy voice sound in my ears: for thy voice is sweet, and thy face comely.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80befb6" class="outline-3">
+<h3 id="org80befb6">Song of Solomon 2:15</h3>
+<div class="outline-text-3" id="text-org80befb6">
+<p>
+Catch us the little foxes that destroy the vines: for our vineyard hath flourished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org495f29d" class="outline-3">
+<h3 id="org495f29d">Song of Solomon 2:16</h3>
+<div class="outline-text-3" id="text-org495f29d">
+<p>
+My beloved to me, and I to him who feedeth among the lilies,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge01c3f5" class="outline-3">
+<h3 id="orge01c3f5">Song of Solomon 2:17</h3>
+<div class="outline-text-3" id="text-orge01c3f5">
+<p>
+Till the day break, and the shadows retire. Return: be like, my beloved, to a roe, or to a young hart upon the mountains of Bether. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org99a2d29" class="outline-2">
+<h2 id="org99a2d29">Song of Solomon 3</h2>
+<div class="outline-text-2" id="text-org99a2d29">
+</div>
+<div id="outline-container-org2316d57" class="outline-3">
+<h3 id="org2316d57">Song of Solomon 3:1</h3>
+<div class="outline-text-3" id="text-org2316d57">
+<p>
+In my bed by night I sought him whom my soul loveth: I sought him, and found him not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74d1003" class="outline-3">
+<h3 id="org74d1003">Song of Solomon 3:2</h3>
+<div class="outline-text-3" id="text-org74d1003">
+<p>
+I will rise, and will go about the city: in the streets and the broad ways I will seek him whom my soul loveth: I sought him, and I found him not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc93eda5" class="outline-3">
+<h3 id="orgc93eda5">Song of Solomon 3:3</h3>
+<div class="outline-text-3" id="text-orgc93eda5">
+<p>
+The watchmen who keep the city, found me: Have you seen him, whom my soul loveth?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0f58ac" class="outline-3">
+<h3 id="orga0f58ac">Song of Solomon 3:4</h3>
+<div class="outline-text-3" id="text-orga0f58ac">
+<p>
+When I had a little passed by them, I found him whom my soul loveth: I held him: and I will not let him go, till I bring him into my mother&rsquo;s house, and into the chamber of her that bore me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a13669" class="outline-3">
+<h3 id="org1a13669">Song of Solomon 3:5</h3>
+<div class="outline-text-3" id="text-org1a13669">
+<p>
+I adjure you, O daughters of Jerusalem, by the roes and the harts of the fields, that you stir not up, nor awake my beloved, till she please.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a46476" class="outline-3">
+<h3 id="org5a46476">Song of Solomon 3:6</h3>
+<div class="outline-text-3" id="text-org5a46476">
+<p>
+Who is she that goeth up by the desert, as a pillar of smoke of aromatical spices, of myrrh, and frankincense, and of all the powders of the perfumer?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org134d941" class="outline-3">
+<h3 id="org134d941">Song of Solomon 3:7</h3>
+<div class="outline-text-3" id="text-org134d941">
+<p>
+Behold threescore valiant ones of the most valiant of Israel, surrounded the bed of Solomon?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc60c1c3" class="outline-3">
+<h3 id="orgc60c1c3">Song of Solomon 3:8</h3>
+<div class="outline-text-3" id="text-orgc60c1c3">
+<p>
+All holding swords, and most expert in war: every man&rsquo;s sword upon his thigh, because of fears in the night.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga684694" class="outline-3">
+<h3 id="orga684694">Song of Solomon 3:9</h3>
+<div class="outline-text-3" id="text-orga684694">
+<p>
+King Solomon hath made him a litter of the wood of Libanus:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2330ef" class="outline-3">
+<h3 id="orge2330ef">Song of Solomon 3:10</h3>
+<div class="outline-text-3" id="text-orge2330ef">
+<p>
+The pillars thereof he made of silver, the seat of gold, the going up of purple: the midst he covered with charity for the daughters of Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72d664e" class="outline-3">
+<h3 id="org72d664e">Song of Solomon 3:11</h3>
+<div class="outline-text-3" id="text-org72d664e">
+<p>
+Go forth, ye daughters of Sion, and see king Solomon in the diadem, wherewith his mother crowned him in the day of his espousal, in the day of the joy of his heart. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org486a215" class="outline-2">
+<h2 id="org486a215">Song of Solomon 4</h2>
+<div class="outline-text-2" id="text-org486a215">
+</div>
+<div id="outline-container-org8e00b9a" class="outline-3">
+<h3 id="org8e00b9a">Song of Solomon 4:1</h3>
+<div class="outline-text-3" id="text-org8e00b9a">
+<p>
+How beautiful art thou, my love, how beautiful art thou! thy eyes are doves&rsquo; eyes, besides what is hid within. Thy hair is as flocks of goats, which come up from mount Galaad.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a34935" class="outline-3">
+<h3 id="org5a34935">Song of Solomon 4:2</h3>
+<div class="outline-text-3" id="text-org5a34935">
+<p>
+Thy teeth as flocks of sheep, that are shorn, which come up from the washing, all with twins, and there is none barren among them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4cfc18" class="outline-3">
+<h3 id="orgb4cfc18">Song of Solomon 4:3</h3>
+<div class="outline-text-3" id="text-orgb4cfc18">
+<p>
+Thy lips are as a scarlet lace: and thy speech sweet. Thy cheeks are as a piece of a pomegranate, besides that which lieth hid within.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec7c6e4" class="outline-3">
+<h3 id="orgec7c6e4">Song of Solomon 4:4</h3>
+<div class="outline-text-3" id="text-orgec7c6e4">
+<p>
+Thy neck, is as the tower of David, which is built with bulwarks: a thousand bucklers hang upon it, all the armour of valiant men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f17006" class="outline-3">
+<h3 id="org2f17006">Song of Solomon 4:5</h3>
+<div class="outline-text-3" id="text-org2f17006">
+<p>
+Thy two breasts like two young roes that are twins, which feed among the lilies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org688293d" class="outline-3">
+<h3 id="org688293d">Song of Solomon 4:6</h3>
+<div class="outline-text-3" id="text-org688293d">
+<p>
+Till the day break, and the shadows retire, I will go to the mountain of myrrh, and to the hill of frankincense.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bc01b9" class="outline-3">
+<h3 id="org4bc01b9">Song of Solomon 4:7</h3>
+<div class="outline-text-3" id="text-org4bc01b9">
+<p>
+Thou art all fair, O my love, and there is not a spot in thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf063d25" class="outline-3">
+<h3 id="orgf063d25">Song of Solomon 4:8</h3>
+<div class="outline-text-3" id="text-orgf063d25">
+<p>
+Come from Libanus, my spouse, come from Libanus, come: thou shalt be crowned from the top of Amana, from the top of Sanir and Hermon, from the dens of the lions, from the mountains of the leopards.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a0af76" class="outline-3">
+<h3 id="org0a0af76">Song of Solomon 4:9</h3>
+<div class="outline-text-3" id="text-org0a0af76">
+<p>
+Thou hast wounded my heart, my sister, my spouse, thou hast wounded my heart with one of thy eyes, and with one hair of thy neck.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org443ba45" class="outline-3">
+<h3 id="org443ba45">Song of Solomon 4:10</h3>
+<div class="outline-text-3" id="text-org443ba45">
+<p>
+How beautiful are thy breasts, my sister, my spouse! thy breasts are more beautiful than wine, and the sweet smell of thy ointments above all aromatical spices.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20ef691" class="outline-3">
+<h3 id="org20ef691">Song of Solomon 4:11</h3>
+<div class="outline-text-3" id="text-org20ef691">
+<p>
+Thy lips, my spouse, are as a dropping honeycomb, honey and milk are under thy tongue; and the smell of thy garments, as the smell of frankincense.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org675e9e4" class="outline-3">
+<h3 id="org675e9e4">Song of Solomon 4:12</h3>
+<div class="outline-text-3" id="text-org675e9e4">
+<p>
+My sister, my spouse, is a garden enclosed, a garden enclosed, a fountain sealed up.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46cdaf2" class="outline-3">
+<h3 id="org46cdaf2">Song of Solomon 4:13</h3>
+<div class="outline-text-3" id="text-org46cdaf2">
+<p>
+Thy plants are a paradise of pomegranates with the fruits of the orchard. Cypress with spikenard.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf90ad6" class="outline-3">
+<h3 id="orgcf90ad6">Song of Solomon 4:14</h3>
+<div class="outline-text-3" id="text-orgcf90ad6">
+<p>
+Spikenard and saffron, sweet cane and cinnamon, with all the trees of Libanus, myrrh and aloes with all the chief perfumes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8403910" class="outline-3">
+<h3 id="org8403910">Song of Solomon 4:15</h3>
+<div class="outline-text-3" id="text-org8403910">
+<p>
+The fountain of gardens: the well of living waters, which run with a strong stream from Libanus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23c5d8d" class="outline-3">
+<h3 id="org23c5d8d">Song of Solomon 4:16</h3>
+<div class="outline-text-3" id="text-org23c5d8d">
+<p>
+Arise, O north wind, and come, O south wind, blow through my garden, and let the aromatical spices thereof flow. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7b312c5" class="outline-2">
+<h2 id="org7b312c5">Song of Solomon 5</h2>
+<div class="outline-text-2" id="text-org7b312c5">
+</div>
+<div id="outline-container-orgb81ed58" class="outline-3">
+<h3 id="orgb81ed58">Song of Solomon 5:1</h3>
+<div class="outline-text-3" id="text-orgb81ed58">
+<p>
+Let my beloved come into his garden, and eat the fruit of his apple trees. I am come into my garden, O my sister, my spouse, I have gathered my myrrh, with my aromatical spices: I have eaten the honeycomb with my honey, I have drunk my wine with my milk: eat, O friends, and drink, and be inebriated, my dearly beloved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54d4192" class="outline-3">
+<h3 id="org54d4192">Song of Solomon 5:2</h3>
+<div class="outline-text-3" id="text-org54d4192">
+<p>
+I sleep, and my heart watcheth: the voice of my beloved knocking: Open to me, my sister, my love, my dove, my undefiled: for my head is full of dew, and my locks of the drops of the nights.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c9d71f" class="outline-3">
+<h3 id="org9c9d71f">Song of Solomon 5:3</h3>
+<div class="outline-text-3" id="text-org9c9d71f">
+<p>
+I have put off my garment, how shall I put it on? I have washed my feet, how shall I defile them?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc070a3" class="outline-3">
+<h3 id="orgdc070a3">Song of Solomon 5:4</h3>
+<div class="outline-text-3" id="text-orgdc070a3">
+<p>
+My beloved put his hand through the key hole, and my bowels were moved at his touch.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfca5407" class="outline-3">
+<h3 id="orgfca5407">Song of Solomon 5:5</h3>
+<div class="outline-text-3" id="text-orgfca5407">
+<p>
+I arose up to open to my beloved: my hands dropped with myrrh, and my fingers were full of the choicest myrrh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae768ce" class="outline-3">
+<h3 id="orgae768ce">Song of Solomon 5:6</h3>
+<div class="outline-text-3" id="text-orgae768ce">
+<p>
+I opened the bolt of my door to my beloved: but he had turned aside, and was gone. My soul melted when he spoke: I sought him, and found him not: I called, and he did not answer me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1bcfd7" class="outline-3">
+<h3 id="orgc1bcfd7">Song of Solomon 5:7</h3>
+<div class="outline-text-3" id="text-orgc1bcfd7">
+<p>
+The keepers that go about the city found me: they struck me: and wounded me: the keepers of the walls took away my veil from me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4326e20" class="outline-3">
+<h3 id="org4326e20">Song of Solomon 5:8</h3>
+<div class="outline-text-3" id="text-org4326e20">
+<p>
+I adjure you, O daughters of Jerusalem, if you find my beloved, that you tell him that I languish with love.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad6ef35" class="outline-3">
+<h3 id="orgad6ef35">Song of Solomon 5:9</h3>
+<div class="outline-text-3" id="text-orgad6ef35">
+<p>
+What manner of one is thy beloved of the beloved, O thou most beautiful among women? what manner of one is thy beloved of the beloved, that thou hast so adjured us?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f9308e" class="outline-3">
+<h3 id="org8f9308e">Song of Solomon 5:10</h3>
+<div class="outline-text-3" id="text-org8f9308e">
+<p>
+My beloved is white and ruddy, chosen out of thousands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab2c84c" class="outline-3">
+<h3 id="orgab2c84c">Song of Solomon 5:11</h3>
+<div class="outline-text-3" id="text-orgab2c84c">
+<p>
+His head is as the finest gold: his locks as branches of palm trees, black as a raven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58f1845" class="outline-3">
+<h3 id="org58f1845">Song of Solomon 5:12</h3>
+<div class="outline-text-3" id="text-org58f1845">
+<p>
+His eyes as doves upon brooks of waters, which are washed with milk, and sit beside the plentiful streams.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0cd2fa1" class="outline-3">
+<h3 id="org0cd2fa1">Song of Solomon 5:13</h3>
+<div class="outline-text-3" id="text-org0cd2fa1">
+<p>
+His cheeks are as beds of aromatical spices set by the perfumers. His lips are as lilies dropping choice myrrh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaafa20" class="outline-3">
+<h3 id="orgdaafa20">Song of Solomon 5:14</h3>
+<div class="outline-text-3" id="text-orgdaafa20">
+<p>
+His hands are turned and as of gold, full of hyacinths. His belly as of ivory, set with sapphires.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaf0069" class="outline-3">
+<h3 id="orgfaf0069">Song of Solomon 5:15</h3>
+<div class="outline-text-3" id="text-orgfaf0069">
+<p>
+His legs as pillars of marble, that are set upon bases of gold. His form as of Libanus, excellent as the cedars.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad40559" class="outline-3">
+<h3 id="orgad40559">Song of Solomon 5:16</h3>
+<div class="outline-text-3" id="text-orgad40559">
+<p>
+His throat most sweet, and he is all lovely: such is my beloved, and he is my friend, O ye daughters of Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49a9225" class="outline-3">
+<h3 id="org49a9225">Song of Solomon 5:17</h3>
+<div class="outline-text-3" id="text-org49a9225">
+<p>
+Whither is thy beloved gone, O thou most beautiful among women? whither is thy beloved turned aside, and we will seek him with thee? 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6124330" class="outline-2">
+<h2 id="org6124330">Song of Solomon 6</h2>
+<div class="outline-text-2" id="text-org6124330">
+</div>
+<div id="outline-container-org2d2b1df" class="outline-3">
+<h3 id="org2d2b1df">Song of Solomon 6:1</h3>
+<div class="outline-text-3" id="text-org2d2b1df">
+<p>
+My beloved is gone down into his garden, to the bed of aromatical spices, to feed in the gardens, and to gather lilies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58279b1" class="outline-3">
+<h3 id="org58279b1">Song of Solomon 6:2</h3>
+<div class="outline-text-3" id="text-org58279b1">
+<p>
+I to my beloved, and my beloved to me, who feedeth among the lilies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e09595" class="outline-3">
+<h3 id="org8e09595">Song of Solomon 6:3</h3>
+<div class="outline-text-3" id="text-org8e09595">
+<p>
+Thou art beautiful, O my love, sweet and comely as Jerusalem terrible as an army set in array.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c023ab" class="outline-3">
+<h3 id="org1c023ab">Song of Solomon 6:4</h3>
+<div class="outline-text-3" id="text-org1c023ab">
+<p>
+Turn away thy eyes from me, for they have made me flee away. Thy hair is as a flock of goats, that appear from Galaad.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgebdec0f" class="outline-3">
+<h3 id="orgebdec0f">Song of Solomon 6:5</h3>
+<div class="outline-text-3" id="text-orgebdec0f">
+<p>
+Thy teeth as a flock of sheep, which come up from the washing, all with twins, and there is none barren among them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49773a0" class="outline-3">
+<h3 id="org49773a0">Song of Solomon 6:6</h3>
+<div class="outline-text-3" id="text-org49773a0">
+<p>
+Thy cheeks are as the bark of a pomegranate, beside what is hidden within thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org492914f" class="outline-3">
+<h3 id="org492914f">Song of Solomon 6:7</h3>
+<div class="outline-text-3" id="text-org492914f">
+<p>
+There are threescore queens, and fourscore concubines, and young maidens without number.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge120200" class="outline-3">
+<h3 id="orge120200">Song of Solomon 6:8</h3>
+<div class="outline-text-3" id="text-orge120200">
+<p>
+One is my dove, my perfect one is but one, she is the only one of her mother, the chosen of her that bore her. The daughters saw her, and declared her most blessed: the queens and concubines, and they praised her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb243832" class="outline-3">
+<h3 id="orgb243832">Song of Solomon 6:9</h3>
+<div class="outline-text-3" id="text-orgb243832">
+<p>
+Who is she that cometh forth as the morning rising, fair as the moon, bright as the sun, terrible as an army set in array?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccf198c" class="outline-3">
+<h3 id="orgccf198c">Song of Solomon 6:10</h3>
+<div class="outline-text-3" id="text-orgccf198c">
+<p>
+I went down into the garden of nuts, to see the fruits of the valleys, and to look if the vineyard had flourished, and the pomegranates budded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4058f4" class="outline-3">
+<h3 id="orgb4058f4">Song of Solomon 6:11</h3>
+<div class="outline-text-3" id="text-orgb4058f4">
+<p>
+I knew not: my soul troubled me for the chariots of Aminadab.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea206a8" class="outline-3">
+<h3 id="orgea206a8">Song of Solomon 6:12</h3>
+<div class="outline-text-3" id="text-orgea206a8">
+<p>
+Return, return, O Sulamitess: return, return that we may behold thee. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1d5d2c0" class="outline-2">
+<h2 id="org1d5d2c0">Song of Solomon 7</h2>
+<div class="outline-text-2" id="text-org1d5d2c0">
+</div>
+<div id="outline-container-orge756cae" class="outline-3">
+<h3 id="orge756cae">Song of Solomon 7:1</h3>
+<div class="outline-text-3" id="text-orge756cae">
+<p>
+What shalt thou see in the Sulamitess but the companies of camps? How beautiful are thy steps in shoes, O prince&rsquo;s daughter! The joints of thy thighs are like jewels, that are made by the hand of a skilful workman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccb417f" class="outline-3">
+<h3 id="orgccb417f">Song of Solomon 7:2</h3>
+<div class="outline-text-3" id="text-orgccb417f">
+<p>
+Thy navel is like a round bowl never wanting cups. Thy belly is like a heap of wheat, set about with lilies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org516b03a" class="outline-3">
+<h3 id="org516b03a">Song of Solomon 7:3</h3>
+<div class="outline-text-3" id="text-org516b03a">
+<p>
+Thy two breasts are like two young roes that are twins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd333971" class="outline-3">
+<h3 id="orgd333971">Song of Solomon 7:4</h3>
+<div class="outline-text-3" id="text-orgd333971">
+<p>
+Thy neck as a tower of ivory. Thy eyes like the fishpools in Hesebon, which are in the gate of the daughter of the multitude. Thy nose is as the tower of Libanus, that looketh toward Damascus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa59c31" class="outline-3">
+<h3 id="orgaa59c31">Song of Solomon 7:5</h3>
+<div class="outline-text-3" id="text-orgaa59c31">
+<p>
+Thy head is like Carmel: and the hairs of thy head as the purple of the king bound in the channels.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2955f57" class="outline-3">
+<h3 id="org2955f57">Song of Solomon 7:6</h3>
+<div class="outline-text-3" id="text-org2955f57">
+<p>
+How beautiful art thou, and how comely, my dearest, in delights!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b9f0d7" class="outline-3">
+<h3 id="org0b9f0d7">Song of Solomon 7:7</h3>
+<div class="outline-text-3" id="text-org0b9f0d7">
+<p>
+Thy stature is like to a palm tree, and thy breasts to clusters of grapes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3d1127" class="outline-3">
+<h3 id="orgd3d1127">Song of Solomon 7:8</h3>
+<div class="outline-text-3" id="text-orgd3d1127">
+<p>
+I said: I will go up into the palm tree, and will take hold of the fruit thereof: and thy breasts shall be as the clusters of the vine: and the odour of thy mouth like apples.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge17a80c" class="outline-3">
+<h3 id="orge17a80c">Song of Solomon 7:9</h3>
+<div class="outline-text-3" id="text-orge17a80c">
+<p>
+Thy throat like the best wine, worthy for my beloved to drink, and for his lips and his teeth to ruminate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org141a21a" class="outline-3">
+<h3 id="org141a21a">Song of Solomon 7:10</h3>
+<div class="outline-text-3" id="text-org141a21a">
+<p>
+I to my beloved, and his turning is towards me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a3c978" class="outline-3">
+<h3 id="org5a3c978">Song of Solomon 7:11</h3>
+<div class="outline-text-3" id="text-org5a3c978">
+<p>
+Come, my beloved, let us go forth into the field, let us abide in the villages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb385ce" class="outline-3">
+<h3 id="orgcb385ce">Song of Solomon 7:12</h3>
+<div class="outline-text-3" id="text-orgcb385ce">
+<p>
+Let us get up early to the vineyards, let us see if the vineyard flourish, if the flowers be ready to bring forth fruits, if the pomegranates flourish: there will I give thee my breasts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org155da47" class="outline-3">
+<h3 id="org155da47">Song of Solomon 7:13</h3>
+<div class="outline-text-3" id="text-org155da47">
+<p>
+The mandrakes give a smell. In our gates are all fruits: the new and the old, my beloved, I have kept for thee. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f0ef80" class="outline-2">
+<h2 id="org9f0ef80">Song of Solomon 8</h2>
+<div class="outline-text-2" id="text-org9f0ef80">
+</div>
+<div id="outline-container-org56a374c" class="outline-3">
+<h3 id="org56a374c">Song of Solomon 8:1</h3>
+<div class="outline-text-3" id="text-org56a374c">
+<p>
+Who shall give thee to me for my brother, sucking the breasts of my mother, that I may find thee without, and kiss thee, and now no man may despise me?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6cd3c1" class="outline-3">
+<h3 id="orgc6cd3c1">Song of Solomon 8:2</h3>
+<div class="outline-text-3" id="text-orgc6cd3c1">
+<p>
+I will take hold of thee, and bring thee into my mother&rsquo;s house: there thou shalt teach me, and I will give thee a cup of spiced wine and new wine of my pomegranates.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org803c60c" class="outline-3">
+<h3 id="org803c60c">Song of Solomon 8:3</h3>
+<div class="outline-text-3" id="text-org803c60c">
+<p>
+His left hand under my head, and his right hand shall embrace me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3390cd" class="outline-3">
+<h3 id="orgc3390cd">Song of Solomon 8:4</h3>
+<div class="outline-text-3" id="text-orgc3390cd">
+<p>
+I adjure you, O daughters of Jerusalem, that you stir not up, nor awake my love till she please.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc8a4df" class="outline-3">
+<h3 id="orgcc8a4df">Song of Solomon 8:5</h3>
+<div class="outline-text-3" id="text-orgcc8a4df">
+<p>
+Who is this that cometh up from the desert, flowing with delights, leaning upon her beloved? Under the apple tree I raised thee up: there thy mother was corrupted, there she was defloured that bore thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a2fac8" class="outline-3">
+<h3 id="org1a2fac8">Song of Solomon 8:6</h3>
+<div class="outline-text-3" id="text-org1a2fac8">
+<p>
+Put me as a seal upon thy heart, as a seal upon thy arm, for love is strong as death, jealousy as hard as hell, the lamps thereof are fire and flames.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe9d088" class="outline-3">
+<h3 id="orgfe9d088">Song of Solomon 8:7</h3>
+<div class="outline-text-3" id="text-orgfe9d088">
+<p>
+Many waters cannot quench charity, neither can the floods drown it: if a man should give all the substance of his house for love, he shall despise it as nothing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4e623c" class="outline-3">
+<h3 id="orgf4e623c">Song of Solomon 8:8</h3>
+<div class="outline-text-3" id="text-orgf4e623c">
+<p>
+Our sister is little, and hath no breasts. What shall we do to our sister in the day when she is to be spoken to?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3a37a8" class="outline-3">
+<h3 id="orgf3a37a8">Song of Solomon 8:9</h3>
+<div class="outline-text-3" id="text-orgf3a37a8">
+<p>
+If she be a wall: let us build upon it bulwarks of silver: if she be a door, let us join it together with boards of cedar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8994142" class="outline-3">
+<h3 id="org8994142">Song of Solomon 8:10</h3>
+<div class="outline-text-3" id="text-org8994142">
+<p>
+I am a wall: and my breasts are as a tower since I am become in his presence as one finding peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37a1f78" class="outline-3">
+<h3 id="org37a1f78">Song of Solomon 8:11</h3>
+<div class="outline-text-3" id="text-org37a1f78">
+<p>
+The peaceable had a vineyard, in that which hath people: he let out the same to keepers, every man bringeth for the fruit thereof a thousand pieces of silver.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff76a81" class="outline-3">
+<h3 id="orgff76a81">Song of Solomon 8:12</h3>
+<div class="outline-text-3" id="text-orgff76a81">
+<p>
+My vineyard is before me. A thousand are for thee, the peaceable, and two hundred for them that keep the fruit thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e49501" class="outline-3">
+<h3 id="org1e49501">Song of Solomon 8:13</h3>
+<div class="outline-text-3" id="text-org1e49501">
+<p>
+Thou that dwellest in the gardens, the friends hearken: make me hear thy voice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fdaaaf" class="outline-3">
+<h3 id="org1fdaaaf">Song of Solomon 8:14</h3>
+<div class="outline-text-3" id="text-org1fdaaaf">
+<p>
+Flee away, O my beloved, and be like to the roe, and to the young hart upon the mountains of aromatical spices.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

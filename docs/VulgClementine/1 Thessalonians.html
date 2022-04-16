@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf546e46">I Thessalonians 1</a>
+<ul>
+<li><a href="#orgc4f6596">I Thessalonians 1:1</a></li>
+<li><a href="#org68144ae">I Thessalonians 1:2</a></li>
+<li><a href="#orge54615e">I Thessalonians 1:3</a></li>
+<li><a href="#org58a5b78">I Thessalonians 1:4</a></li>
+<li><a href="#orgc1a509d">I Thessalonians 1:5</a></li>
+<li><a href="#org47bc44b">I Thessalonians 1:6</a></li>
+<li><a href="#org2ab2731">I Thessalonians 1:7</a></li>
+<li><a href="#org23157e7">I Thessalonians 1:8</a></li>
+<li><a href="#org7a54d7b">I Thessalonians 1:9</a></li>
+<li><a href="#orgdaa0b92">I Thessalonians 1:10</a></li>
+</ul>
+</li>
+<li><a href="#org4e9b5f8">I Thessalonians 2</a>
+<ul>
+<li><a href="#org83ec9b8">I Thessalonians 2:1</a></li>
+<li><a href="#org7b6de25">I Thessalonians 2:2</a></li>
+<li><a href="#orga5ab38f">I Thessalonians 2:3</a></li>
+<li><a href="#org6d80c94">I Thessalonians 2:4</a></li>
+<li><a href="#org7550d4e">I Thessalonians 2:5</a></li>
+<li><a href="#orgedfe5cf">I Thessalonians 2:6</a></li>
+<li><a href="#org8d3493f">I Thessalonians 2:7</a></li>
+<li><a href="#orgc350d70">I Thessalonians 2:8</a></li>
+<li><a href="#org733f21b">I Thessalonians 2:9</a></li>
+<li><a href="#org53d61ee">I Thessalonians 2:10</a></li>
+<li><a href="#orgdd60ba7">I Thessalonians 2:11</a></li>
+<li><a href="#org397cc81">I Thessalonians 2:12</a></li>
+<li><a href="#orgd1d22d9">I Thessalonians 2:13</a></li>
+<li><a href="#orgbdc296e">I Thessalonians 2:14</a></li>
+<li><a href="#org315d892">I Thessalonians 2:15</a></li>
+<li><a href="#orgaa34178">I Thessalonians 2:16</a></li>
+<li><a href="#orga22510f">I Thessalonians 2:17</a></li>
+<li><a href="#org74ec96e">I Thessalonians 2:18</a></li>
+<li><a href="#org45e536f">I Thessalonians 2:19</a></li>
+<li><a href="#orga6b6117">I Thessalonians 2:20</a></li>
+</ul>
+</li>
+<li><a href="#org1a92c9c">I Thessalonians 3</a>
+<ul>
+<li><a href="#org0df1be3">I Thessalonians 3:1</a></li>
+<li><a href="#org1a708d5">I Thessalonians 3:2</a></li>
+<li><a href="#orgf0073f4">I Thessalonians 3:3</a></li>
+<li><a href="#orgfaf2368">I Thessalonians 3:4</a></li>
+<li><a href="#orgbba6905">I Thessalonians 3:5</a></li>
+<li><a href="#org1d28e37">I Thessalonians 3:6</a></li>
+<li><a href="#org637cb9b">I Thessalonians 3:7</a></li>
+<li><a href="#org30ef728">I Thessalonians 3:8</a></li>
+<li><a href="#orgadbc156">I Thessalonians 3:9</a></li>
+<li><a href="#orgfda6f74">I Thessalonians 3:10</a></li>
+<li><a href="#org35bf2d4">I Thessalonians 3:11</a></li>
+<li><a href="#org7431d41">I Thessalonians 3:12</a></li>
+<li><a href="#org1d07499">I Thessalonians 3:13</a></li>
+</ul>
+</li>
+<li><a href="#orgbf10f0d">I Thessalonians 4</a>
+<ul>
+<li><a href="#org60c83d3">I Thessalonians 4:1</a></li>
+<li><a href="#orgbddcb7a">I Thessalonians 4:2</a></li>
+<li><a href="#org0a90f71">I Thessalonians 4:3</a></li>
+<li><a href="#org4c5f42b">I Thessalonians 4:4</a></li>
+<li><a href="#org67c4eb8">I Thessalonians 4:5</a></li>
+<li><a href="#org5bc4573">I Thessalonians 4:6</a></li>
+<li><a href="#org830e354">I Thessalonians 4:7</a></li>
+<li><a href="#org9dcc0f5">I Thessalonians 4:8</a></li>
+<li><a href="#org73c93b9">I Thessalonians 4:9</a></li>
+<li><a href="#orgd32c929">I Thessalonians 4:10</a></li>
+<li><a href="#org342d630">I Thessalonians 4:11</a></li>
+<li><a href="#org42b5fec">I Thessalonians 4:12</a></li>
+<li><a href="#orgca5c045">I Thessalonians 4:13</a></li>
+<li><a href="#org0e24887">I Thessalonians 4:14</a></li>
+<li><a href="#org639348f">I Thessalonians 4:15</a></li>
+<li><a href="#orgaa18f96">I Thessalonians 4:16</a></li>
+<li><a href="#org28514d5">I Thessalonians 4:17</a></li>
+<li><a href="#org9ff50cd">I Thessalonians 4:18</a></li>
+</ul>
+</li>
+<li><a href="#orgeb4fdaf">I Thessalonians 5</a>
+<ul>
+<li><a href="#org5d379c0">I Thessalonians 5:1</a></li>
+<li><a href="#orga3346e6">I Thessalonians 5:2</a></li>
+<li><a href="#orgc8c9b6b">I Thessalonians 5:3</a></li>
+<li><a href="#org8691ddf">I Thessalonians 5:4</a></li>
+<li><a href="#org4a2d14c">I Thessalonians 5:5</a></li>
+<li><a href="#org33b8154">I Thessalonians 5:6</a></li>
+<li><a href="#orgb299ab0">I Thessalonians 5:7</a></li>
+<li><a href="#orgfed0413">I Thessalonians 5:8</a></li>
+<li><a href="#org980d2a1">I Thessalonians 5:9</a></li>
+<li><a href="#orge3ff289">I Thessalonians 5:10</a></li>
+<li><a href="#orgc63a862">I Thessalonians 5:11</a></li>
+<li><a href="#org6e2546c">I Thessalonians 5:12</a></li>
+<li><a href="#org8c20a78">I Thessalonians 5:13</a></li>
+<li><a href="#orgdbda43b">I Thessalonians 5:14</a></li>
+<li><a href="#org81723ab">I Thessalonians 5:15</a></li>
+<li><a href="#org9240a2f">I Thessalonians 5:16</a></li>
+<li><a href="#orgba2a0c5">I Thessalonians 5:17</a></li>
+<li><a href="#org2155c5e">I Thessalonians 5:18</a></li>
+<li><a href="#org75e5211">I Thessalonians 5:19</a></li>
+<li><a href="#org7c496e4">I Thessalonians 5:20</a></li>
+<li><a href="#org477be9d">I Thessalonians 5:21</a></li>
+<li><a href="#orgf007f60">I Thessalonians 5:22</a></li>
+<li><a href="#org5d73ee6">I Thessalonians 5:23</a></li>
+<li><a href="#org2ffd686">I Thessalonians 5:24</a></li>
+<li><a href="#org8de6702">I Thessalonians 5:25</a></li>
+<li><a href="#orgfbeb1a5">I Thessalonians 5:26</a></li>
+<li><a href="#org9bce464">I Thessalonians 5:27</a></li>
+<li><a href="#org8e6abce">I Thessalonians 5:28</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf546e46" class="outline-2">
+<h2 id="orgf546e46">I Thessalonians 1</h2>
+<div class="outline-text-2" id="text-orgf546e46">
+</div>
+<div id="outline-container-orgc4f6596" class="outline-3">
+<h3 id="orgc4f6596">I Thessalonians 1:1</h3>
+<div class="outline-text-3" id="text-orgc4f6596">
+<p>
+Paulus, et Silvanus, et Timotheus ecclesiæ Thessalonicensium in Deo Patre, et Domino Jesu Christo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68144ae" class="outline-3">
+<h3 id="org68144ae">I Thessalonians 1:2</h3>
+<div class="outline-text-3" id="text-org68144ae">
+<p>
+Gratia vobis, et pax.   Gratias agimus Deo semper pro omnibus vobis, memoriam vestri facientes in orationibus nostris sine intermissione,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge54615e" class="outline-3">
+<h3 id="orge54615e">I Thessalonians 1:3</h3>
+<div class="outline-text-3" id="text-orge54615e">
+<p>
+memores operis fidei vestræ, et laboris, et caritatis, et sustinentiæ spei Domini nostri Jesu Christi, ante Deum et Patrem nostrum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58a5b78" class="outline-3">
+<h3 id="org58a5b78">I Thessalonians 1:4</h3>
+<div class="outline-text-3" id="text-org58a5b78">
+<p>
+scientes, fratres dilecti a Deo, electionem vestram :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1a509d" class="outline-3">
+<h3 id="orgc1a509d">I Thessalonians 1:5</h3>
+<div class="outline-text-3" id="text-orgc1a509d">
+<p>
+quia Evangelium nostrum non fuit ad vos in sermone tantum, sed et in virtute, et in Spiritu Sancto, et in plenitudine multa, sicut scitis quales fuerimus in vobis propter vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47bc44b" class="outline-3">
+<h3 id="org47bc44b">I Thessalonians 1:6</h3>
+<div class="outline-text-3" id="text-org47bc44b">
+<p>
+Et vos imitatores nostri facti estis, et Domini, excipientes verbum in tribulatione multa, cum gaudio Spiritus Sancti :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ab2731" class="outline-3">
+<h3 id="org2ab2731">I Thessalonians 1:7</h3>
+<div class="outline-text-3" id="text-org2ab2731">
+<p>
+ita ut facti sitis forma omnibus credentibus in Macedonia, et in Achaia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23157e7" class="outline-3">
+<h3 id="org23157e7">I Thessalonians 1:8</h3>
+<div class="outline-text-3" id="text-org23157e7">
+<p>
+A vobis enim diffamatus est sermo Domini, non solum in Macedonia, et in Achaia, sed et in omni loco fides vestra, quæ est ad Deum, profecta est ita ut non sit nobis necesse quidquam loqui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a54d7b" class="outline-3">
+<h3 id="org7a54d7b">I Thessalonians 1:9</h3>
+<div class="outline-text-3" id="text-org7a54d7b">
+<p>
+Ipsi enim de nobis annuntiant qualem introitum habuerimus ad vos : et quomodo conversi estis ad Deum a simulacris, servire Deo vivo, et vero,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaa0b92" class="outline-3">
+<h3 id="orgdaa0b92">I Thessalonians 1:10</h3>
+<div class="outline-text-3" id="text-orgdaa0b92">
+<p>
+et exspectare Filium ejus de cælis (quem suscitavit a mortuis) Jesum, qui eripuit nos ab ira ventura.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4e9b5f8" class="outline-2">
+<h2 id="org4e9b5f8">I Thessalonians 2</h2>
+<div class="outline-text-2" id="text-org4e9b5f8">
+</div>
+<div id="outline-container-org83ec9b8" class="outline-3">
+<h3 id="org83ec9b8">I Thessalonians 2:1</h3>
+<div class="outline-text-3" id="text-org83ec9b8">
+<p>
+Nam ipsi scitis, fratres, introitum nostrum ad vos, quia non inanis fuit :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b6de25" class="outline-3">
+<h3 id="org7b6de25">I Thessalonians 2:2</h3>
+<div class="outline-text-3" id="text-org7b6de25">
+<p>
+sed ante passi, et contumeliis affecti (sicut scitis) in Philippis, fiduciam habuimus in Deo nostro, loqui ad vos Evangelium Dei in multa sollicitudine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5ab38f" class="outline-3">
+<h3 id="orga5ab38f">I Thessalonians 2:3</h3>
+<div class="outline-text-3" id="text-orga5ab38f">
+<p>
+Exhortatio enim nostra non de errore, neque de immunditia, neque in dolo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d80c94" class="outline-3">
+<h3 id="org6d80c94">I Thessalonians 2:4</h3>
+<div class="outline-text-3" id="text-org6d80c94">
+<p>
+sed sicut probati sumus a Deo ut crederetur nobis Evangelium : ita loquimur non quasi hominibus placentes, sed Deo, qui probat corda nostra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7550d4e" class="outline-3">
+<h3 id="org7550d4e">I Thessalonians 2:5</h3>
+<div class="outline-text-3" id="text-org7550d4e">
+<p>
+Neque enim aliquando fuimus in sermone adulationis, sicut scitis : neque in occasione avaritiæ : Deus testis est :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedfe5cf" class="outline-3">
+<h3 id="orgedfe5cf">I Thessalonians 2:6</h3>
+<div class="outline-text-3" id="text-orgedfe5cf">
+<p>
+nec quærentes ab hominibus gloriam, neque a vobis, neque ab aliis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d3493f" class="outline-3">
+<h3 id="org8d3493f">I Thessalonians 2:7</h3>
+<div class="outline-text-3" id="text-org8d3493f">
+<p>
+Cum possemus vobis oneri esse ut Christi apostoli : sed facti sumus parvuli in medio vestrum, tamquam si nutrix foveat filios suos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc350d70" class="outline-3">
+<h3 id="orgc350d70">I Thessalonians 2:8</h3>
+<div class="outline-text-3" id="text-orgc350d70">
+<p>
+Ita desiderantes vos, cupide volebamus tradere vobis non solum Evangelium Dei, sed etiam animas nostras : quoniam carissimi nobis facti estis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org733f21b" class="outline-3">
+<h3 id="org733f21b">I Thessalonians 2:9</h3>
+<div class="outline-text-3" id="text-org733f21b">
+<p>
+Memores enim estis, fratres, laboris nostri, et fatigationis : nocte ac die operantes, ne quem vestrum gravaremus, prædicavimus in vobis Evangelium Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53d61ee" class="outline-3">
+<h3 id="org53d61ee">I Thessalonians 2:10</h3>
+<div class="outline-text-3" id="text-org53d61ee">
+<p>
+Vos testes estis, et Deus, quam sancte, et juste, et sine querela, vobis, qui credidistis, fuimus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd60ba7" class="outline-3">
+<h3 id="orgdd60ba7">I Thessalonians 2:11</h3>
+<div class="outline-text-3" id="text-orgdd60ba7">
+<p>
+sicut scitis, qualiter unumquemque vestrum (sicut pater filios suos)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org397cc81" class="outline-3">
+<h3 id="org397cc81">I Thessalonians 2:12</h3>
+<div class="outline-text-3" id="text-org397cc81">
+<p>
+deprecantes vos, et consolantes, testificati sumus, ut ambularetis digne Deo, qui vocavit vos in suum regnum et gloriam.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1d22d9" class="outline-3">
+<h3 id="orgd1d22d9">I Thessalonians 2:13</h3>
+<div class="outline-text-3" id="text-orgd1d22d9">
+<p>
+Ideo et nos gratias agimus Deo sine intermissione : quoniam cum accepissetis a nobis verbum auditus Dei, accepistis illud, non ut verbum hominum, sed (sicut est vere) verbum Dei, qui operatur in vobis, qui credidistis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdc296e" class="outline-3">
+<h3 id="orgbdc296e">I Thessalonians 2:14</h3>
+<div class="outline-text-3" id="text-orgbdc296e">
+<p>
+vos enim imitatores facti estis, fratres, ecclesiarum Dei, quæ sunt in Judæa in Christo Jesu : quia eadem passi estis et vos a contribulibus vestris, sicut et ipsi a Judæis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org315d892" class="outline-3">
+<h3 id="org315d892">I Thessalonians 2:15</h3>
+<div class="outline-text-3" id="text-org315d892">
+<p>
+qui et Dominum occiderunt Jesum, et prophetas, et nos persecuti sunt, et Deo non placent, et omnibus hominibus adversantur,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa34178" class="outline-3">
+<h3 id="orgaa34178">I Thessalonians 2:16</h3>
+<div class="outline-text-3" id="text-orgaa34178">
+<p>
+prohibentes nos gentibus loqui ut salvæ fiant, ut impleant peccata sua semper : pervenit enim ira Dei super illos usque in finem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga22510f" class="outline-3">
+<h3 id="orga22510f">I Thessalonians 2:17</h3>
+<div class="outline-text-3" id="text-orga22510f">
+<p>
+Nos autem fratres desolati a vobis ad tempus horæ, aspectu, non corde, abundantius festinavimus faciem vestram videre cum multo desiderio :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74ec96e" class="outline-3">
+<h3 id="org74ec96e">I Thessalonians 2:18</h3>
+<div class="outline-text-3" id="text-org74ec96e">
+<p>
+quoniam voluimus venire ad vos, ego quidem Paulus, et semel, et iterum : sed impedivit nos Satanas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45e536f" class="outline-3">
+<h3 id="org45e536f">I Thessalonians 2:19</h3>
+<div class="outline-text-3" id="text-org45e536f">
+<p>
+Quæ est enim nostra spes aut gaudium, aut corona gloriæ ? nonne vos ante Dominum nostrum Jesum Christum estis in adventu ejus ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6b6117" class="outline-3">
+<h3 id="orga6b6117">I Thessalonians 2:20</h3>
+<div class="outline-text-3" id="text-orga6b6117">
+<p>
+vos enim estis gloria nostra et gaudium.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a92c9c" class="outline-2">
+<h2 id="org1a92c9c">I Thessalonians 3</h2>
+<div class="outline-text-2" id="text-org1a92c9c">
+</div>
+<div id="outline-container-org0df1be3" class="outline-3">
+<h3 id="org0df1be3">I Thessalonians 3:1</h3>
+<div class="outline-text-3" id="text-org0df1be3">
+<p>
+Propter quod non sustinentes amplius, placuit nobis remanere Athenis, solis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a708d5" class="outline-3">
+<h3 id="org1a708d5">I Thessalonians 3:2</h3>
+<div class="outline-text-3" id="text-org1a708d5">
+<p>
+et misimus Timotheum fratrem nostrum, et ministrum Dei in Evangelio Christi, ad confirmandos vos, et exhortandos pro fide vestra :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0073f4" class="outline-3">
+<h3 id="orgf0073f4">I Thessalonians 3:3</h3>
+<div class="outline-text-3" id="text-orgf0073f4">
+<p>
+ut nemo moveatur in tribulationibus istis : ipsi enim scitis quod in hoc positi sumus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaf2368" class="outline-3">
+<h3 id="orgfaf2368">I Thessalonians 3:4</h3>
+<div class="outline-text-3" id="text-orgfaf2368">
+<p>
+Nam et cum apud vos essemus, prædicebamus vobis passuros nos tribulationes, sicut et factum est, et scitis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbba6905" class="outline-3">
+<h3 id="orgbba6905">I Thessalonians 3:5</h3>
+<div class="outline-text-3" id="text-orgbba6905">
+<p>
+Propterea et ego amplius non sustinens, misi ad cognoscendam fidem vestram : ne forte tentaverit vos is qui tentat, et inanis fiat labor noster.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d28e37" class="outline-3">
+<h3 id="org1d28e37">I Thessalonians 3:6</h3>
+<div class="outline-text-3" id="text-org1d28e37">
+<p>
+Nunc autem veniente Timotheo ad nos a vobis, et annuntiante nobis fidem et caritatem vestram, et quia memoriam nostri habetis bonam semper, desiderantes nos videre, sicut et nos quoque vos :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org637cb9b" class="outline-3">
+<h3 id="org637cb9b">I Thessalonians 3:7</h3>
+<div class="outline-text-3" id="text-org637cb9b">
+<p>
+ideo consolati sumus, fratres, in vobis in omni necessitate et tribulatione nostra, per fidem vestram,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30ef728" class="outline-3">
+<h3 id="org30ef728">I Thessalonians 3:8</h3>
+<div class="outline-text-3" id="text-org30ef728">
+<p>
+quoniam nunc vivimus, si vos statis in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadbc156" class="outline-3">
+<h3 id="orgadbc156">I Thessalonians 3:9</h3>
+<div class="outline-text-3" id="text-orgadbc156">
+<p>
+Quam enim gratiarum actionem possumus Deo retribuere pro vobis in omni gaudio, quo gaudemus propter vos ante Deum nostrum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfda6f74" class="outline-3">
+<h3 id="orgfda6f74">I Thessalonians 3:10</h3>
+<div class="outline-text-3" id="text-orgfda6f74">
+<p>
+nocte ac die abundantius orantes, ut videamus faciem vestram, et compleamus ea quæ desunt fidei vestræ ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35bf2d4" class="outline-3">
+<h3 id="org35bf2d4">I Thessalonians 3:11</h3>
+<div class="outline-text-3" id="text-org35bf2d4">
+<p>
+Ipse autem Deus, et Pater noster, et Dominus noster Jesus Christus, dirigat viam nostram ad vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7431d41" class="outline-3">
+<h3 id="org7431d41">I Thessalonians 3:12</h3>
+<div class="outline-text-3" id="text-org7431d41">
+<p>
+Vos autem Dominus multiplicet, et abundare faciat caritatem vestram in invicem, et in omnes, quemadmodum et nos in vobis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d07499" class="outline-3">
+<h3 id="org1d07499">I Thessalonians 3:13</h3>
+<div class="outline-text-3" id="text-org1d07499">
+<p>
+ad confirmanda corda vestra sine querela in sanctitate, ante Deum et Patrem nostrum, in adventu Domini nostri Jesu Christi cum omnibus sanctis ejus. Amen.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf10f0d" class="outline-2">
+<h2 id="orgbf10f0d">I Thessalonians 4</h2>
+<div class="outline-text-2" id="text-orgbf10f0d">
+</div>
+<div id="outline-container-org60c83d3" class="outline-3">
+<h3 id="org60c83d3">I Thessalonians 4:1</h3>
+<div class="outline-text-3" id="text-org60c83d3">
+<p>
+De cetero ergo, fratres, rogamus vos et obsecramus in Domino Jesu, ut quemadmodum accepistis a nobis quomodo oporteat vos ambulare, et placere Deo, sic et ambuletis ut abundetis magis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbddcb7a" class="outline-3">
+<h3 id="orgbddcb7a">I Thessalonians 4:2</h3>
+<div class="outline-text-3" id="text-orgbddcb7a">
+<p>
+Scitis enim quæ præcepta dederim vobis per Dominum Jesum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a90f71" class="outline-3">
+<h3 id="org0a90f71">I Thessalonians 4:3</h3>
+<div class="outline-text-3" id="text-org0a90f71">
+<p>
+Hæc est enim voluntas Dei, sanctificatio vestra : ut abstineatis vos a fornicatione,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c5f42b" class="outline-3">
+<h3 id="org4c5f42b">I Thessalonians 4:4</h3>
+<div class="outline-text-3" id="text-org4c5f42b">
+<p>
+ut sciat unusquisque vestrum vas suum possidere in sanctificatione, et honore :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67c4eb8" class="outline-3">
+<h3 id="org67c4eb8">I Thessalonians 4:5</h3>
+<div class="outline-text-3" id="text-org67c4eb8">
+<p>
+non in passione desiderii, sicut et gentes, quæ ignorant Deum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5bc4573" class="outline-3">
+<h3 id="org5bc4573">I Thessalonians 4:6</h3>
+<div class="outline-text-3" id="text-org5bc4573">
+<p>
+et ne quis supergrediatur, neque circumveniat in negotio fratrem suum : quoniam vindex est Dominus de his omnibus, sicut prædiximus vobis, et testificati sumus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org830e354" class="outline-3">
+<h3 id="org830e354">I Thessalonians 4:7</h3>
+<div class="outline-text-3" id="text-org830e354">
+<p>
+Non enim vocavit nos Deus in immunditiam, sed in sanctificationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9dcc0f5" class="outline-3">
+<h3 id="org9dcc0f5">I Thessalonians 4:8</h3>
+<div class="outline-text-3" id="text-org9dcc0f5">
+<p>
+Itaque qui hæc spernit, non hominem spernit, sed Deum : qui etiam dedit Spiritum suum Sanctum in nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73c93b9" class="outline-3">
+<h3 id="org73c93b9">I Thessalonians 4:9</h3>
+<div class="outline-text-3" id="text-org73c93b9">
+<p>
+De caritate autem fraternitatis non necesse habemus scribere vobis : ipsi enim vos a Deo didicistis ut diligatis invicem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd32c929" class="outline-3">
+<h3 id="orgd32c929">I Thessalonians 4:10</h3>
+<div class="outline-text-3" id="text-orgd32c929">
+<p>
+Etenim illud facitis in omnes fratres in universa Macedonia. Rogamus autem vos, fratres, ut abundetis magis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org342d630" class="outline-3">
+<h3 id="org342d630">I Thessalonians 4:11</h3>
+<div class="outline-text-3" id="text-org342d630">
+<p>
+et operam detis ut quieti sitis, et ut vestrum negotium agatis, et operemini manibus vestris, sicut præcepimus vobis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42b5fec" class="outline-3">
+<h3 id="org42b5fec">I Thessalonians 4:12</h3>
+<div class="outline-text-3" id="text-org42b5fec">
+<p>
+et ut honeste ambuletis ad eos qui foris sunt : et nullius aliquid desideretis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca5c045" class="outline-3">
+<h3 id="orgca5c045">I Thessalonians 4:13</h3>
+<div class="outline-text-3" id="text-orgca5c045">
+<p>
+Nolumus autem vos ignorare fratres de dormientibus, ut non contristemini sicut et ceteri, qui spem non habent.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e24887" class="outline-3">
+<h3 id="org0e24887">I Thessalonians 4:14</h3>
+<div class="outline-text-3" id="text-org0e24887">
+<p>
+Si enim credimus quod Jesus mortuus est, et resurrexit : ita et Deus eos qui dormierunt per Jesum, adducet cum eo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org639348f" class="outline-3">
+<h3 id="org639348f">I Thessalonians 4:15</h3>
+<div class="outline-text-3" id="text-org639348f">
+<p>
+Hoc enim vobis dicimus in verbo Domini, quia nos, qui vivimus, qui residui sumus in adventum Domini, non præveniemus eos qui dormierunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa18f96" class="outline-3">
+<h3 id="orgaa18f96">I Thessalonians 4:16</h3>
+<div class="outline-text-3" id="text-orgaa18f96">
+<p>
+Quoniam ipse Dominus in jussu, et in voce archangeli, et in tuba Dei descendet de cælo : et mortui, qui in Christo sunt, resurgent primi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28514d5" class="outline-3">
+<h3 id="org28514d5">I Thessalonians 4:17</h3>
+<div class="outline-text-3" id="text-org28514d5">
+<p>
+Deinde nos, qui vivimus, qui relinquimur, simul rapiemur cum illis in nubibus obviam Christo in aëra, et sic semper cum Domino erimus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ff50cd" class="outline-3">
+<h3 id="org9ff50cd">I Thessalonians 4:18</h3>
+<div class="outline-text-3" id="text-org9ff50cd">
+<p>
+Itaque consolamini invicem in verbis istis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb4fdaf" class="outline-2">
+<h2 id="orgeb4fdaf">I Thessalonians 5</h2>
+<div class="outline-text-2" id="text-orgeb4fdaf">
+</div>
+<div id="outline-container-org5d379c0" class="outline-3">
+<h3 id="org5d379c0">I Thessalonians 5:1</h3>
+<div class="outline-text-3" id="text-org5d379c0">
+<p>
+De temporibus autem, et momentis, fratres, non indigetis ut scribamus vobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3346e6" class="outline-3">
+<h3 id="orga3346e6">I Thessalonians 5:2</h3>
+<div class="outline-text-3" id="text-orga3346e6">
+<p>
+Ipsi enim diligenter scitis quia dies Domini, sicut fur in nocte, ita veniet :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8c9b6b" class="outline-3">
+<h3 id="orgc8c9b6b">I Thessalonians 5:3</h3>
+<div class="outline-text-3" id="text-orgc8c9b6b">
+<p>
+cum enim dixerint : Pax et securitas : tunc repentinus eis superveniet interitus, sicut dolor in utero habenti, et non effugient.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8691ddf" class="outline-3">
+<h3 id="org8691ddf">I Thessalonians 5:4</h3>
+<div class="outline-text-3" id="text-org8691ddf">
+<p>
+Vos autem, fratres, non estis in tenebris, ut vos dies illa tamquam fur comprehendat :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a2d14c" class="outline-3">
+<h3 id="org4a2d14c">I Thessalonians 5:5</h3>
+<div class="outline-text-3" id="text-org4a2d14c">
+<p>
+omnes enim vos filii lucis estis, et filii diei : non sumus noctis, neque tenebrarum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33b8154" class="outline-3">
+<h3 id="org33b8154">I Thessalonians 5:6</h3>
+<div class="outline-text-3" id="text-org33b8154">
+<p>
+Igitur non dormiamus sicut et ceteri, sed vigilemus, et sobrii simus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb299ab0" class="outline-3">
+<h3 id="orgb299ab0">I Thessalonians 5:7</h3>
+<div class="outline-text-3" id="text-orgb299ab0">
+<p>
+Qui enim dormiunt, nocte dormiunt : et qui ebrii sunt, nocte ebrii sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfed0413" class="outline-3">
+<h3 id="orgfed0413">I Thessalonians 5:8</h3>
+<div class="outline-text-3" id="text-orgfed0413">
+<p>
+Nos autem, qui diei sumus, sobrii simus, induti loricam fidei et caritatis, et galeam spem salutis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org980d2a1" class="outline-3">
+<h3 id="org980d2a1">I Thessalonians 5:9</h3>
+<div class="outline-text-3" id="text-org980d2a1">
+<p>
+quoniam non posuit nos Deus in iram, sed in acquisitionem salutis per Dominum nostrum Jesum Christum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3ff289" class="outline-3">
+<h3 id="orge3ff289">I Thessalonians 5:10</h3>
+<div class="outline-text-3" id="text-orge3ff289">
+<p>
+qui mortuus est pro nobis : ut sive vigilemus, sive dormiamus, simul cum illo vivamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc63a862" class="outline-3">
+<h3 id="orgc63a862">I Thessalonians 5:11</h3>
+<div class="outline-text-3" id="text-orgc63a862">
+<p>
+Propter quod consolamini invicem, et ædificate alterutrum, sicut et facitis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e2546c" class="outline-3">
+<h3 id="org6e2546c">I Thessalonians 5:12</h3>
+<div class="outline-text-3" id="text-org6e2546c">
+<p>
+Rogamus autem vos, fratres, ut noveritis eos qui laborant inter vos, et præsunt vobis in Domino, et monent vos,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c20a78" class="outline-3">
+<h3 id="org8c20a78">I Thessalonians 5:13</h3>
+<div class="outline-text-3" id="text-org8c20a78">
+<p>
+ut habeatis illos abundantius in caritate propter opus illorum : pacem habete cum eis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbda43b" class="outline-3">
+<h3 id="orgdbda43b">I Thessalonians 5:14</h3>
+<div class="outline-text-3" id="text-orgdbda43b">
+<p>
+Rogamus autem vos, fratres, corripite inquietos, consolamini pusillanimes, suscipite infirmos, patientes estote ad omnes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81723ab" class="outline-3">
+<h3 id="org81723ab">I Thessalonians 5:15</h3>
+<div class="outline-text-3" id="text-org81723ab">
+<p>
+Videte ne quis malum pro malo alicui reddat : sed semper quod bonum est sectamini in invicem, et in omnes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9240a2f" class="outline-3">
+<h3 id="org9240a2f">I Thessalonians 5:16</h3>
+<div class="outline-text-3" id="text-org9240a2f">
+<p>
+Semper gaudete.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba2a0c5" class="outline-3">
+<h3 id="orgba2a0c5">I Thessalonians 5:17</h3>
+<div class="outline-text-3" id="text-orgba2a0c5">
+<p>
+Sine intermissione orate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2155c5e" class="outline-3">
+<h3 id="org2155c5e">I Thessalonians 5:18</h3>
+<div class="outline-text-3" id="text-org2155c5e">
+<p>
+In omnibus gratias agite : hæc est enim voluntas Dei in Christo Jesu in omnibus vobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75e5211" class="outline-3">
+<h3 id="org75e5211">I Thessalonians 5:19</h3>
+<div class="outline-text-3" id="text-org75e5211">
+<p>
+Spiritum nolite extinguere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c496e4" class="outline-3">
+<h3 id="org7c496e4">I Thessalonians 5:20</h3>
+<div class="outline-text-3" id="text-org7c496e4">
+<p>
+Prophetias nolite spernere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org477be9d" class="outline-3">
+<h3 id="org477be9d">I Thessalonians 5:21</h3>
+<div class="outline-text-3" id="text-org477be9d">
+<p>
+Omnia autem probate : quod bonum est tenete.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf007f60" class="outline-3">
+<h3 id="orgf007f60">I Thessalonians 5:22</h3>
+<div class="outline-text-3" id="text-orgf007f60">
+<p>
+Ab omni specie mala abstinete vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d73ee6" class="outline-3">
+<h3 id="org5d73ee6">I Thessalonians 5:23</h3>
+<div class="outline-text-3" id="text-org5d73ee6">
+<p>
+Ipse autem Deus pacis sanctificet vos per omnia : ut integer spiritus vester, et anima, et corpus sine querela in adventu Domini nostri Jesu Christi servetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ffd686" class="outline-3">
+<h3 id="org2ffd686">I Thessalonians 5:24</h3>
+<div class="outline-text-3" id="text-org2ffd686">
+<p>
+Fidelis est, qui vocavit vos : qui etiam faciet.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8de6702" class="outline-3">
+<h3 id="org8de6702">I Thessalonians 5:25</h3>
+<div class="outline-text-3" id="text-org8de6702">
+<p>
+Fratres, orate pro nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbeb1a5" class="outline-3">
+<h3 id="orgfbeb1a5">I Thessalonians 5:26</h3>
+<div class="outline-text-3" id="text-orgfbeb1a5">
+<p>
+Salutate fratres omnes in osculo sancto.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bce464" class="outline-3">
+<h3 id="org9bce464">I Thessalonians 5:27</h3>
+<div class="outline-text-3" id="text-org9bce464">
+<p>
+Adjuro vos per Dominum ut legatur epistola hæc omnibus sanctis fratribus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e6abce" class="outline-3">
+<h3 id="org8e6abce">I Thessalonians 5:28</h3>
+<div class="outline-text-3" id="text-org8e6abce">
+<p>
+Gratia Domini nostri Jesu Christi vobiscum. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

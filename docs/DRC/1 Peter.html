@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org966d902">I Peter 1</a>
+<ul>
+<li><a href="#orgc60d8fa">I Peter 1:1</a></li>
+<li><a href="#org3ade688">I Peter 1:2</a></li>
+<li><a href="#org39d6c2e">I Peter 1:3</a></li>
+<li><a href="#orgd3659ce">I Peter 1:4</a></li>
+<li><a href="#org718834f">I Peter 1:5</a></li>
+<li><a href="#org0f82feb">I Peter 1:6</a></li>
+<li><a href="#org371a5a2">I Peter 1:7</a></li>
+<li><a href="#org24cac5f">I Peter 1:8</a></li>
+<li><a href="#org3ca5302">I Peter 1:9</a></li>
+<li><a href="#org56b1a32">I Peter 1:10</a></li>
+<li><a href="#org65b64aa">I Peter 1:11</a></li>
+<li><a href="#org574c96d">I Peter 1:12</a></li>
+<li><a href="#org4ce0d67">I Peter 1:13</a></li>
+<li><a href="#org463defc">I Peter 1:14</a></li>
+<li><a href="#orge637086">I Peter 1:15</a></li>
+<li><a href="#org2a0acc3">I Peter 1:16</a></li>
+<li><a href="#org7c33cda">I Peter 1:17</a></li>
+<li><a href="#org70be5cf">I Peter 1:18</a></li>
+<li><a href="#orgafaeb02">I Peter 1:19</a></li>
+<li><a href="#org5f6de71">I Peter 1:20</a></li>
+<li><a href="#orge5d0b6d">I Peter 1:21</a></li>
+<li><a href="#org309eddb">I Peter 1:22</a></li>
+<li><a href="#org70ad105">I Peter 1:23</a></li>
+<li><a href="#org89fa04c">I Peter 1:24</a></li>
+<li><a href="#org2ab42a6">I Peter 1:25</a></li>
+</ul>
+</li>
+<li><a href="#org1721a93">I Peter 2</a>
+<ul>
+<li><a href="#org537fc1e">I Peter 2:1</a></li>
+<li><a href="#orga3be7c8">I Peter 2:2</a></li>
+<li><a href="#org20dca12">I Peter 2:3</a></li>
+<li><a href="#org13fc83c">I Peter 2:4</a></li>
+<li><a href="#org8e77d30">I Peter 2:5</a></li>
+<li><a href="#orgee5fe67">I Peter 2:6</a></li>
+<li><a href="#org0307c7e">I Peter 2:7</a></li>
+<li><a href="#org71e6f9f">I Peter 2:8</a></li>
+<li><a href="#orgba7d363">I Peter 2:9</a></li>
+<li><a href="#orge7c8574">I Peter 2:10</a></li>
+<li><a href="#org997e2c7">I Peter 2:11</a></li>
+<li><a href="#org49a6cdd">I Peter 2:12</a></li>
+<li><a href="#orga08ef84">I Peter 2:13</a></li>
+<li><a href="#org0e21345">I Peter 2:14</a></li>
+<li><a href="#org1f4fec5">I Peter 2:15</a></li>
+<li><a href="#org735b123">I Peter 2:16</a></li>
+<li><a href="#org197c834">I Peter 2:17</a></li>
+<li><a href="#org584c1f3">I Peter 2:18</a></li>
+<li><a href="#orgb5a5d71">I Peter 2:19</a></li>
+<li><a href="#org48ecc97">I Peter 2:20</a></li>
+<li><a href="#org691fd37">I Peter 2:21</a></li>
+<li><a href="#orgec7a7bf">I Peter 2:22</a></li>
+<li><a href="#org04e8591">I Peter 2:23</a></li>
+<li><a href="#orgc3deee7">I Peter 2:24</a></li>
+<li><a href="#org00da47a">I Peter 2:25</a></li>
+</ul>
+</li>
+<li><a href="#orgee73fae">I Peter 3</a>
+<ul>
+<li><a href="#org5ac959b">I Peter 3:1</a></li>
+<li><a href="#org6273199">I Peter 3:2</a></li>
+<li><a href="#org12ab131">I Peter 3:3</a></li>
+<li><a href="#orgec318ef">I Peter 3:4</a></li>
+<li><a href="#org5c16720">I Peter 3:5</a></li>
+<li><a href="#orgb2ca163">I Peter 3:6</a></li>
+<li><a href="#orga92c96c">I Peter 3:7</a></li>
+<li><a href="#orge20f317">I Peter 3:8</a></li>
+<li><a href="#orgf7d38ed">I Peter 3:9</a></li>
+<li><a href="#org425ea4e">I Peter 3:10</a></li>
+<li><a href="#orgc529ef2">I Peter 3:11</a></li>
+<li><a href="#orge0442ff">I Peter 3:12</a></li>
+<li><a href="#org2780a8c">I Peter 3:13</a></li>
+<li><a href="#org0d739cd">I Peter 3:14</a></li>
+<li><a href="#org802a99b">I Peter 3:15</a></li>
+<li><a href="#org624a0a8">I Peter 3:16</a></li>
+<li><a href="#orga8167b1">I Peter 3:17</a></li>
+<li><a href="#org955893a">I Peter 3:18</a></li>
+<li><a href="#orga0fd06a">I Peter 3:19</a></li>
+<li><a href="#orgf22158e">I Peter 3:20</a></li>
+<li><a href="#orgf4568f9">I Peter 3:21</a></li>
+<li><a href="#org23ab18a">I Peter 3:22</a></li>
+</ul>
+</li>
+<li><a href="#org9aae385">I Peter 4</a>
+<ul>
+<li><a href="#org7f66707">I Peter 4:1</a></li>
+<li><a href="#org64034f4">I Peter 4:2</a></li>
+<li><a href="#org766421c">I Peter 4:3</a></li>
+<li><a href="#orgc64c325">I Peter 4:4</a></li>
+<li><a href="#orgb63ae6b">I Peter 4:5</a></li>
+<li><a href="#orgecd2c4b">I Peter 4:6</a></li>
+<li><a href="#org9982c1c">I Peter 4:7</a></li>
+<li><a href="#orgd57ef61">I Peter 4:8</a></li>
+<li><a href="#orga236d18">I Peter 4:9</a></li>
+<li><a href="#org7d23cdc">I Peter 4:10</a></li>
+<li><a href="#org9d5679e">I Peter 4:11</a></li>
+<li><a href="#org58acc95">I Peter 4:12</a></li>
+<li><a href="#org716fbe8">I Peter 4:13</a></li>
+<li><a href="#org3bd21e4">I Peter 4:14</a></li>
+<li><a href="#orgf9c4b70">I Peter 4:15</a></li>
+<li><a href="#org3066b43">I Peter 4:16</a></li>
+<li><a href="#org66aa042">I Peter 4:17</a></li>
+<li><a href="#orgbf69930">I Peter 4:18</a></li>
+<li><a href="#org0b5df98">I Peter 4:19</a></li>
+</ul>
+</li>
+<li><a href="#orgeaa0376">I Peter 5</a>
+<ul>
+<li><a href="#org3442569">I Peter 5:1</a></li>
+<li><a href="#org54a30aa">I Peter 5:2</a></li>
+<li><a href="#orgf51d2ac">I Peter 5:3</a></li>
+<li><a href="#orgc18bcf9">I Peter 5:4</a></li>
+<li><a href="#org0536dac">I Peter 5:5</a></li>
+<li><a href="#orgc3b5ecc">I Peter 5:6</a></li>
+<li><a href="#orgb694699">I Peter 5:7</a></li>
+<li><a href="#org42a521e">I Peter 5:8</a></li>
+<li><a href="#org00a4e55">I Peter 5:9</a></li>
+<li><a href="#org5c8a140">I Peter 5:10</a></li>
+<li><a href="#orgf3d8cbd">I Peter 5:11</a></li>
+<li><a href="#org7bcb234">I Peter 5:12</a></li>
+<li><a href="#org105c272">I Peter 5:13</a></li>
+<li><a href="#org9ca0366">I Peter 5:14</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org966d902" class="outline-2">
+<h2 id="org966d902">I Peter 1</h2>
+<div class="outline-text-2" id="text-org966d902">
+</div>
+<div id="outline-container-orgc60d8fa" class="outline-3">
+<h3 id="orgc60d8fa">I Peter 1:1</h3>
+<div class="outline-text-3" id="text-orgc60d8fa">
+<p>
+Peter, an apostle of Jesus Christ, to the strangers dispersed through Pontus, Cappadocia, Asia and Bithynia, elect,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ade688" class="outline-3">
+<h3 id="org3ade688">I Peter 1:2</h3>
+<div class="outline-text-3" id="text-org3ade688">
+<p>
+According to the foreknowledge of God the Father, unto the sanctification of the Spirit, unto obedience and sprinkling of the blood of Jesus Christ. Grace unto you and peace be multiplied.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39d6c2e" class="outline-3">
+<h3 id="org39d6c2e">I Peter 1:3</h3>
+<div class="outline-text-3" id="text-org39d6c2e">
+<p>
+Blessed be the God and Father of our Lord Jesus Christ, who according to his great mercy hath regenerated us unto a lively hope, by the resurrection of Jesus Christ from the dead:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3659ce" class="outline-3">
+<h3 id="orgd3659ce">I Peter 1:4</h3>
+<div class="outline-text-3" id="text-orgd3659ce">
+<p>
+Unto an inheritance, incorruptible, and undefiled and that cannot fade, reserved in heaven for you,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org718834f" class="outline-3">
+<h3 id="org718834f">I Peter 1:5</h3>
+<div class="outline-text-3" id="text-org718834f">
+<p>
+Who, by the power of God, are kept by faith unto salvation, ready to be revealed in the last time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f82feb" class="outline-3">
+<h3 id="org0f82feb">I Peter 1:6</h3>
+<div class="outline-text-3" id="text-org0f82feb">
+<p>
+Wherein you shalt greatly rejoice, if now you must be for a little time made sorrowful in divers temptations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org371a5a2" class="outline-3">
+<h3 id="org371a5a2">I Peter 1:7</h3>
+<div class="outline-text-3" id="text-org371a5a2">
+<p>
+That the trial of your faith (much more precious than gold which is tried by the fire) may be found unto praise and glory and honour at the appearing of Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24cac5f" class="outline-3">
+<h3 id="org24cac5f">I Peter 1:8</h3>
+<div class="outline-text-3" id="text-org24cac5f">
+<p>
+Whom having not seen, you love: in whom also now though you see him not, you believe and, believing, shall rejoice with joy unspeakable and glorified;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ca5302" class="outline-3">
+<h3 id="org3ca5302">I Peter 1:9</h3>
+<div class="outline-text-3" id="text-org3ca5302">
+<p>
+Receiving the end of your faith, even the salvation of your souls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56b1a32" class="outline-3">
+<h3 id="org56b1a32">I Peter 1:10</h3>
+<div class="outline-text-3" id="text-org56b1a32">
+<p>
+Of which salvation the prophets have inquired and diligently searched, who prophesied of the grace to come in you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65b64aa" class="outline-3">
+<h3 id="org65b64aa">I Peter 1:11</h3>
+<div class="outline-text-3" id="text-org65b64aa">
+<p>
+Searching what or what manner of time the Spirit of Christ in them did signify, when it foretold those sufferings that are in Christ and the glories that should follow.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org574c96d" class="outline-3">
+<h3 id="org574c96d">I Peter 1:12</h3>
+<div class="outline-text-3" id="text-org574c96d">
+<p>
+To whom it was revealed that, not to themselves but to you, they ministered those things which are now declared to you by them that have preached the gospel to you: the Holy Ghost being sent down from heaven, on whom the angels desire to look.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ce0d67" class="outline-3">
+<h3 id="org4ce0d67">I Peter 1:13</h3>
+<div class="outline-text-3" id="text-org4ce0d67">
+<p>
+Wherefore, having the loins of your mind girt up, being sober, trust perfectly in the grace which is offered you in the revelation of Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org463defc" class="outline-3">
+<h3 id="org463defc">I Peter 1:14</h3>
+<div class="outline-text-3" id="text-org463defc">
+<p>
+As children of obedience, not fashioned according to the former desires of your ignorance,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge637086" class="outline-3">
+<h3 id="orge637086">I Peter 1:15</h3>
+<div class="outline-text-3" id="text-orge637086">
+<p>
+But according to him that hath called you, who is holy, be you also in all manner of conversation holy:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a0acc3" class="outline-3">
+<h3 id="org2a0acc3">I Peter 1:16</h3>
+<div class="outline-text-3" id="text-org2a0acc3">
+<p>
+Because it is written: You shall be holy, for I am holy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c33cda" class="outline-3">
+<h3 id="org7c33cda">I Peter 1:17</h3>
+<div class="outline-text-3" id="text-org7c33cda">
+<p>
+And if you invoke as Father him who, without respect of persons, judgeth according to every one&rsquo;s work: converse in fear during the time of your sojourning here.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70be5cf" class="outline-3">
+<h3 id="org70be5cf">I Peter 1:18</h3>
+<div class="outline-text-3" id="text-org70be5cf">
+<p>
+Knowing that you were not redeemed with corruptible things, as gold or silver, from your vain conversation of the tradition of your fathers:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafaeb02" class="outline-3">
+<h3 id="orgafaeb02">I Peter 1:19</h3>
+<div class="outline-text-3" id="text-orgafaeb02">
+<p>
+But with the precious blood of Christ, as of a lamb unspotted and undefiled
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f6de71" class="outline-3">
+<h3 id="org5f6de71">I Peter 1:20</h3>
+<div class="outline-text-3" id="text-org5f6de71">
+<p>
+Foreknown indeed before the foundation of the world, but manifested in the last times for you:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5d0b6d" class="outline-3">
+<h3 id="orge5d0b6d">I Peter 1:21</h3>
+<div class="outline-text-3" id="text-orge5d0b6d">
+<p>
+Who through him are faithful in God who raised him up from the dead and hath given him glory, that your faith and hope might be in God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org309eddb" class="outline-3">
+<h3 id="org309eddb">I Peter 1:22</h3>
+<div class="outline-text-3" id="text-org309eddb">
+<p>
+Purifying your souls in the obedience of charity, with a brotherly love, from a sincere heart love one another earnestly:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70ad105" class="outline-3">
+<h3 id="org70ad105">I Peter 1:23</h3>
+<div class="outline-text-3" id="text-org70ad105">
+<p>
+Being born again, not of corruptible seed, but incorruptible, by the word of God who liveth and remaineth for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89fa04c" class="outline-3">
+<h3 id="org89fa04c">I Peter 1:24</h3>
+<div class="outline-text-3" id="text-org89fa04c">
+<p>
+For all flesh is as grass and all the glory thereof as the flower of grass. The grass is withered and the flower thereof is fallen away.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ab42a6" class="outline-3">
+<h3 id="org2ab42a6">I Peter 1:25</h3>
+<div class="outline-text-3" id="text-org2ab42a6">
+<p>
+But the word of the Lord endureth for ever. And this is the word which by the gospel hath been preached unto you. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1721a93" class="outline-2">
+<h2 id="org1721a93">I Peter 2</h2>
+<div class="outline-text-2" id="text-org1721a93">
+</div>
+<div id="outline-container-org537fc1e" class="outline-3">
+<h3 id="org537fc1e">I Peter 2:1</h3>
+<div class="outline-text-3" id="text-org537fc1e">
+<p>
+Wherefore laying away all malice and all guile and dissimulations and envies and all detractions,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3be7c8" class="outline-3">
+<h3 id="orga3be7c8">I Peter 2:2</h3>
+<div class="outline-text-3" id="text-orga3be7c8">
+<p>
+As newborn babes, desire the rational milk without guile, that thereby you may grow unto salvation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20dca12" class="outline-3">
+<h3 id="org20dca12">I Peter 2:3</h3>
+<div class="outline-text-3" id="text-org20dca12">
+<p>
+If so be you have tasted that the Lord is sweet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13fc83c" class="outline-3">
+<h3 id="org13fc83c">I Peter 2:4</h3>
+<div class="outline-text-3" id="text-org13fc83c">
+<p>
+Unto whom coming, as to a living stone, rejected indeed by men but chosen and made honourable by God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e77d30" class="outline-3">
+<h3 id="org8e77d30">I Peter 2:5</h3>
+<div class="outline-text-3" id="text-org8e77d30">
+<p>
+Be you also as living stones built up, a spiritual house, a holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee5fe67" class="outline-3">
+<h3 id="orgee5fe67">I Peter 2:6</h3>
+<div class="outline-text-3" id="text-orgee5fe67">
+<p>
+Wherefore it is said in the scripture: Behold, I lay in Sion a chief corner stone, elect, precious. And he that shall believe in him shall not be confounded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0307c7e" class="outline-3">
+<h3 id="org0307c7e">I Peter 2:7</h3>
+<div class="outline-text-3" id="text-org0307c7e">
+<p>
+To you therefore that believe, he is honour: but to them that believe not, the stone which the builders rejected, the same is made the head of the corner:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71e6f9f" class="outline-3">
+<h3 id="org71e6f9f">I Peter 2:8</h3>
+<div class="outline-text-3" id="text-org71e6f9f">
+<p>
+And a stone of stumbling and a rock of scandal, to them who stumble at the word, neither do believe, whereunto also they are set.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba7d363" class="outline-3">
+<h3 id="orgba7d363">I Peter 2:9</h3>
+<div class="outline-text-3" id="text-orgba7d363">
+<p>
+But you are a chosen generation, a kingly priesthood, a holy nation, a purchased people: that you may declare his virtues, who hath called you out of darkness into his marvelous light:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7c8574" class="outline-3">
+<h3 id="orge7c8574">I Peter 2:10</h3>
+<div class="outline-text-3" id="text-orge7c8574">
+<p>
+Who in times past were not a people: but are now the people of God. Who had not obtained mercy: but now have obtained mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org997e2c7" class="outline-3">
+<h3 id="org997e2c7">I Peter 2:11</h3>
+<div class="outline-text-3" id="text-org997e2c7">
+<p>
+Dearly beloved, I beseech you, as strangers and pilgrims, to refrain yourselves from carnal desires which war against the soul,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49a6cdd" class="outline-3">
+<h3 id="org49a6cdd">I Peter 2:12</h3>
+<div class="outline-text-3" id="text-org49a6cdd">
+<p>
+Having your conversation good among the Gentiles: that whereas they speak against you as evildoers, they may, by the good works which they shall behold in you, glorify God in the day of visitation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga08ef84" class="outline-3">
+<h3 id="orga08ef84">I Peter 2:13</h3>
+<div class="outline-text-3" id="text-orga08ef84">
+<p>
+Be ye subject therefore to every human creature for God&rsquo;s sake: whether it be to the king as excelling,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e21345" class="outline-3">
+<h3 id="org0e21345">I Peter 2:14</h3>
+<div class="outline-text-3" id="text-org0e21345">
+<p>
+Or to governors as sent by him for the punishment of evildoers and for the praise of the good.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f4fec5" class="outline-3">
+<h3 id="org1f4fec5">I Peter 2:15</h3>
+<div class="outline-text-3" id="text-org1f4fec5">
+<p>
+For so is the will of God, that by doing well you may put to silence the ignorance of foolish men:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org735b123" class="outline-3">
+<h3 id="org735b123">I Peter 2:16</h3>
+<div class="outline-text-3" id="text-org735b123">
+<p>
+As free and not as making liberty a cloak for malice, but as the servants of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org197c834" class="outline-3">
+<h3 id="org197c834">I Peter 2:17</h3>
+<div class="outline-text-3" id="text-org197c834">
+<p>
+Honour all men. Love the brotherhood. Fear God. Honour the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org584c1f3" class="outline-3">
+<h3 id="org584c1f3">I Peter 2:18</h3>
+<div class="outline-text-3" id="text-org584c1f3">
+<p>
+Servants, be subject to your masters with all fear, not only to the good and gentle but also to the froward.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5a5d71" class="outline-3">
+<h3 id="orgb5a5d71">I Peter 2:19</h3>
+<div class="outline-text-3" id="text-orgb5a5d71">
+<p>
+For this is thankworthy: if, for conscience towards God, a man endure sorrows, suffering wrongfully.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48ecc97" class="outline-3">
+<h3 id="org48ecc97">I Peter 2:20</h3>
+<div class="outline-text-3" id="text-org48ecc97">
+<p>
+For what glory is it, if, committing sin and being buffeted for it, you endure? But if doing well you suffer patiently: this is thankworthy before God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org691fd37" class="outline-3">
+<h3 id="org691fd37">I Peter 2:21</h3>
+<div class="outline-text-3" id="text-org691fd37">
+<p>
+For unto this are you called: because Christ also suffered for us, leaving you an example that you should follow his steps.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec7a7bf" class="outline-3">
+<h3 id="orgec7a7bf">I Peter 2:22</h3>
+<div class="outline-text-3" id="text-orgec7a7bf">
+<p>
+Who did no sin, neither was guile found in his mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04e8591" class="outline-3">
+<h3 id="org04e8591">I Peter 2:23</h3>
+<div class="outline-text-3" id="text-org04e8591">
+<p>
+Who, when he was reviled, did not revile: when he suffered, he threatened not, but delivered himself to him that judged him unjustly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3deee7" class="outline-3">
+<h3 id="orgc3deee7">I Peter 2:24</h3>
+<div class="outline-text-3" id="text-orgc3deee7">
+<p>
+Who his own self bore our sins in his body upon the tree: that we, being dead to sins, should live to justice: by whose stripes you were healed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00da47a" class="outline-3">
+<h3 id="org00da47a">I Peter 2:25</h3>
+<div class="outline-text-3" id="text-org00da47a">
+<p>
+For you were as sheep going astray: but you are now converted to the shepherd and bishop of your souls. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee73fae" class="outline-2">
+<h2 id="orgee73fae">I Peter 3</h2>
+<div class="outline-text-2" id="text-orgee73fae">
+</div>
+<div id="outline-container-org5ac959b" class="outline-3">
+<h3 id="org5ac959b">I Peter 3:1</h3>
+<div class="outline-text-3" id="text-org5ac959b">
+<p>
+In like manner also, let wives be subject to their husbands: that, if any believe not the word, they may be won without the word, by the conversation of the wives,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6273199" class="outline-3">
+<h3 id="org6273199">I Peter 3:2</h3>
+<div class="outline-text-3" id="text-org6273199">
+<p>
+Considering your chaste conversation with fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12ab131" class="outline-3">
+<h3 id="org12ab131">I Peter 3:3</h3>
+<div class="outline-text-3" id="text-org12ab131">
+<p>
+Whose adorning, let it not be the outward plaiting of the hair, or the wearing of gold, or the putting on of apparel:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec318ef" class="outline-3">
+<h3 id="orgec318ef">I Peter 3:4</h3>
+<div class="outline-text-3" id="text-orgec318ef">
+<p>
+But the hidden man of the heart, in the incorruptibility of a quiet and a meek spirit which is rich in the sight of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c16720" class="outline-3">
+<h3 id="org5c16720">I Peter 3:5</h3>
+<div class="outline-text-3" id="text-org5c16720">
+<p>
+For after this manner heretofore, the holy women also who trusted in God adorned themselves, being in subjection to their own husbands:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2ca163" class="outline-3">
+<h3 id="orgb2ca163">I Peter 3:6</h3>
+<div class="outline-text-3" id="text-orgb2ca163">
+<p>
+As Sara obeyed Abraham, calling him lord: whose daughters you are, doing well and not fearing any disturbance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga92c96c" class="outline-3">
+<h3 id="orga92c96c">I Peter 3:7</h3>
+<div class="outline-text-3" id="text-orga92c96c">
+<p>
+Ye husbands, likewise dwelling with them according to knowledge, giving honour to the female as to the weaker vessel and as to the co-heirs of the grace of life: that your prayers be not hindered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge20f317" class="outline-3">
+<h3 id="orge20f317">I Peter 3:8</h3>
+<div class="outline-text-3" id="text-orge20f317">
+<p>
+And in fine, be ye all of one mind, having compassion one of another, being lovers of the brotherhood, merciful, modest, humble:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7d38ed" class="outline-3">
+<h3 id="orgf7d38ed">I Peter 3:9</h3>
+<div class="outline-text-3" id="text-orgf7d38ed">
+<p>
+Not rendering evil for evil, nor railing for railing, but contrariwise, blessing: for unto this are you called, that you may inherit a blessing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org425ea4e" class="outline-3">
+<h3 id="org425ea4e">I Peter 3:10</h3>
+<div class="outline-text-3" id="text-org425ea4e">
+<p>
+For he that will love life and see good days, let him refrain his tongue from evil, and his lips that they speak no guile.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc529ef2" class="outline-3">
+<h3 id="orgc529ef2">I Peter 3:11</h3>
+<div class="outline-text-3" id="text-orgc529ef2">
+<p>
+Let him decline from evil and do good: Let him seek after peace and pursue it:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0442ff" class="outline-3">
+<h3 id="orge0442ff">I Peter 3:12</h3>
+<div class="outline-text-3" id="text-orge0442ff">
+<p>
+Because the eyes of the Lord are upon the just, and his ears unto their prayers but the countenance of the Lord upon them that do evil things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2780a8c" class="outline-3">
+<h3 id="org2780a8c">I Peter 3:13</h3>
+<div class="outline-text-3" id="text-org2780a8c">
+<p>
+And who is he that can hurt you, if you be zealous of good?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d739cd" class="outline-3">
+<h3 id="org0d739cd">I Peter 3:14</h3>
+<div class="outline-text-3" id="text-org0d739cd">
+<p>
+But if also you suffer any thing for justice&rsquo; sake, blessed are ye. And be not afraid of their fear: and be not troubled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org802a99b" class="outline-3">
+<h3 id="org802a99b">I Peter 3:15</h3>
+<div class="outline-text-3" id="text-org802a99b">
+<p>
+But sanctify the Lord Christ in your hearts, being ready always to satisfy every one that asketh you a reason of that hope which is in you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org624a0a8" class="outline-3">
+<h3 id="org624a0a8">I Peter 3:16</h3>
+<div class="outline-text-3" id="text-org624a0a8">
+<p>
+But with modesty and fear, having a good conscience: that whereas they speak evil of you, they may be ashamed who falsely accuse your good conversation in Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8167b1" class="outline-3">
+<h3 id="orga8167b1">I Peter 3:17</h3>
+<div class="outline-text-3" id="text-orga8167b1">
+<p>
+For it is better doing well (if such be the will of God) to suffer than doing ill.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org955893a" class="outline-3">
+<h3 id="org955893a">I Peter 3:18</h3>
+<div class="outline-text-3" id="text-org955893a">
+<p>
+Because Christ also died once for our sins, the just for the unjust: that he might offer us to God, being put to death indeed in the flesh, but enlivened in the spirit,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0fd06a" class="outline-3">
+<h3 id="orga0fd06a">I Peter 3:19</h3>
+<div class="outline-text-3" id="text-orga0fd06a">
+<p>
+In which also coming he preached to those spirits that were in prison:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf22158e" class="outline-3">
+<h3 id="orgf22158e">I Peter 3:20</h3>
+<div class="outline-text-3" id="text-orgf22158e">
+<p>
+Which had been some time incredulous, when they waited for the patience of God in the days of Noe, when the ark was a building: wherein a few, that is, eight souls, were saved by water.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4568f9" class="outline-3">
+<h3 id="orgf4568f9">I Peter 3:21</h3>
+<div class="outline-text-3" id="text-orgf4568f9">
+<p>
+Whereunto baptism, being of the like form, now saveth you also: not the putting away of the filth of the flesh, but, the examination of a good conscience towards God by the resurrection of Jesus Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23ab18a" class="outline-3">
+<h3 id="org23ab18a">I Peter 3:22</h3>
+<div class="outline-text-3" id="text-org23ab18a">
+<p>
+Who is on the right hand of God, swallowing down death that we might be made heirs of life everlasting: being gone into heaven, the angels and powers and virtues being made subject to him. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9aae385" class="outline-2">
+<h2 id="org9aae385">I Peter 4</h2>
+<div class="outline-text-2" id="text-org9aae385">
+</div>
+<div id="outline-container-org7f66707" class="outline-3">
+<h3 id="org7f66707">I Peter 4:1</h3>
+<div class="outline-text-3" id="text-org7f66707">
+<p>
+Christ therefore having suffered in the flesh, be you also armed with the same thought: for he that hath suffered in the flesh hath ceased from sins:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64034f4" class="outline-3">
+<h3 id="org64034f4">I Peter 4:2</h3>
+<div class="outline-text-3" id="text-org64034f4">
+<p>
+That now he may live the rest of his time in the flesh, not after the desires of men but according to the will of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org766421c" class="outline-3">
+<h3 id="org766421c">I Peter 4:3</h3>
+<div class="outline-text-3" id="text-org766421c">
+<p>
+For the time past is sufficient to have fulfilled the will of the Gentiles, for them who have walked in riotousness, lusts, excess of wine, revellings, banquetings and unlawful worshipping of idols.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc64c325" class="outline-3">
+<h3 id="orgc64c325">I Peter 4:4</h3>
+<div class="outline-text-3" id="text-orgc64c325">
+<p>
+Wherein they think it strange that you run not with them into the same confusion of riotousness: speaking evil of you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb63ae6b" class="outline-3">
+<h3 id="orgb63ae6b">I Peter 4:5</h3>
+<div class="outline-text-3" id="text-orgb63ae6b">
+<p>
+Who shall render account to him who is ready to judge the living and the dead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecd2c4b" class="outline-3">
+<h3 id="orgecd2c4b">I Peter 4:6</h3>
+<div class="outline-text-3" id="text-orgecd2c4b">
+<p>
+For, for this cause was the gospel preached also to the dead: That they might be judged indeed according to men, in the flesh: but may live according to God, in the Spirit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9982c1c" class="outline-3">
+<h3 id="org9982c1c">I Peter 4:7</h3>
+<div class="outline-text-3" id="text-org9982c1c">
+<p>
+But the end of all is at hand. Be prudent therefore and watch in prayers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd57ef61" class="outline-3">
+<h3 id="orgd57ef61">I Peter 4:8</h3>
+<div class="outline-text-3" id="text-orgd57ef61">
+<p>
+But before all things have a constant mutual charity among yourselves: for charity covereth a multitude of sins.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga236d18" class="outline-3">
+<h3 id="orga236d18">I Peter 4:9</h3>
+<div class="outline-text-3" id="text-orga236d18">
+<p>
+Using hospitality one towards another, without murmuring,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d23cdc" class="outline-3">
+<h3 id="org7d23cdc">I Peter 4:10</h3>
+<div class="outline-text-3" id="text-org7d23cdc">
+<p>
+As every man hath received grace, ministering the same one to another: as good stewards of the manifold grace of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d5679e" class="outline-3">
+<h3 id="org9d5679e">I Peter 4:11</h3>
+<div class="outline-text-3" id="text-org9d5679e">
+<p>
+If any man speak, let him speak, as the words of God. If any minister, let him do it, as of the power which God administereth: that in all things God may be honoured through Jesus Christ: to whom is glory and empire for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58acc95" class="outline-3">
+<h3 id="org58acc95">I Peter 4:12</h3>
+<div class="outline-text-3" id="text-org58acc95">
+<p>
+Dearly beloved, think not strange the burning heat which is to try you: as if some new thing happened to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org716fbe8" class="outline-3">
+<h3 id="org716fbe8">I Peter 4:13</h3>
+<div class="outline-text-3" id="text-org716fbe8">
+<p>
+But if you partake of the sufferings of Christ, rejoice that, when his glory shall be revealed, you may also be glad with exceeding joy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3bd21e4" class="outline-3">
+<h3 id="org3bd21e4">I Peter 4:14</h3>
+<div class="outline-text-3" id="text-org3bd21e4">
+<p>
+If you be reproached for the name of Christ, you shall be blessed: for that which is of the honour, glory and power of God, and that which is his Spirit resteth upon you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9c4b70" class="outline-3">
+<h3 id="orgf9c4b70">I Peter 4:15</h3>
+<div class="outline-text-3" id="text-orgf9c4b70">
+<p>
+But let none of you suffer as a murderer or a thief or a railer or coveter of other men&rsquo;s things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3066b43" class="outline-3">
+<h3 id="org3066b43">I Peter 4:16</h3>
+<div class="outline-text-3" id="text-org3066b43">
+<p>
+But, if as a Christian, let him not be ashamed: but let him glorify God in that name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66aa042" class="outline-3">
+<h3 id="org66aa042">I Peter 4:17</h3>
+<div class="outline-text-3" id="text-org66aa042">
+<p>
+For the time is, that judgment should begin at the house of God. And if at first at us, what shall be the end of them that believe not the gospel of God?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf69930" class="outline-3">
+<h3 id="orgbf69930">I Peter 4:18</h3>
+<div class="outline-text-3" id="text-orgbf69930">
+<p>
+And if the just man shall scarcely be saved, where shall the ungodly and the sinner appear?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b5df98" class="outline-3">
+<h3 id="org0b5df98">I Peter 4:19</h3>
+<div class="outline-text-3" id="text-org0b5df98">
+<p>
+Wherefore let them also that suffer according to the will of God commend their souls in good deeds to the faithful Creator. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeaa0376" class="outline-2">
+<h2 id="orgeaa0376">I Peter 5</h2>
+<div class="outline-text-2" id="text-orgeaa0376">
+</div>
+<div id="outline-container-org3442569" class="outline-3">
+<h3 id="org3442569">I Peter 5:1</h3>
+<div class="outline-text-3" id="text-org3442569">
+<p>
+The ancients therefore that are among you, I beseech who am myself also an ancient and a witness of the sufferings of Christ, as also a partaker of that glory which is to be revealed in time to come:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54a30aa" class="outline-3">
+<h3 id="org54a30aa">I Peter 5:2</h3>
+<div class="outline-text-3" id="text-org54a30aa">
+<p>
+Feed the flock of God which is among you, taking care of it, not by constraint but willingly, according to God: not for filthy lucre&rsquo;s sake but voluntarily:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf51d2ac" class="outline-3">
+<h3 id="orgf51d2ac">I Peter 5:3</h3>
+<div class="outline-text-3" id="text-orgf51d2ac">
+<p>
+Neither as lording it over the clergy but being made a pattern of the flock from the heart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc18bcf9" class="outline-3">
+<h3 id="orgc18bcf9">I Peter 5:4</h3>
+<div class="outline-text-3" id="text-orgc18bcf9">
+<p>
+And when the prince of pastors shall appear, you shall receive a never fading crown of glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0536dac" class="outline-3">
+<h3 id="org0536dac">I Peter 5:5</h3>
+<div class="outline-text-3" id="text-org0536dac">
+<p>
+In like manner, ye young men, be subject to the ancients. And do you all insinuate humility one to another: for God resisteth the proud, but to the humble he giveth grace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3b5ecc" class="outline-3">
+<h3 id="orgc3b5ecc">I Peter 5:6</h3>
+<div class="outline-text-3" id="text-orgc3b5ecc">
+<p>
+Be you humbled therefore under the mighty hand of God, that he may exalt you in the time of visitation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb694699" class="outline-3">
+<h3 id="orgb694699">I Peter 5:7</h3>
+<div class="outline-text-3" id="text-orgb694699">
+<p>
+Casting all your care upon him, for he hath care of you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42a521e" class="outline-3">
+<h3 id="org42a521e">I Peter 5:8</h3>
+<div class="outline-text-3" id="text-org42a521e">
+<p>
+Be sober and watch: because your adversary the devil, as a roaring lion, goeth about seeking whom he may devour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00a4e55" class="outline-3">
+<h3 id="org00a4e55">I Peter 5:9</h3>
+<div class="outline-text-3" id="text-org00a4e55">
+<p>
+Whom resist ye, strong in faith: knowing that the same affliction befalls, your brethren who are in the world.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c8a140" class="outline-3">
+<h3 id="org5c8a140">I Peter 5:10</h3>
+<div class="outline-text-3" id="text-org5c8a140">
+<p>
+But the God of all grace, who hath called us unto his eternal glory in Christ Jesus, after you have suffered a little, will himself perfect you and confirm you and establish you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3d8cbd" class="outline-3">
+<h3 id="orgf3d8cbd">I Peter 5:11</h3>
+<div class="outline-text-3" id="text-orgf3d8cbd">
+<p>
+To him be glory and empire, for ever and ever. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bcb234" class="outline-3">
+<h3 id="org7bcb234">I Peter 5:12</h3>
+<div class="outline-text-3" id="text-org7bcb234">
+<p>
+By Sylvanus, a faithful brother unto you, as I think, I have written briefly: beseeching and testifying that this is the true grace of God, wherein you stand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org105c272" class="outline-3">
+<h3 id="org105c272">I Peter 5:13</h3>
+<div class="outline-text-3" id="text-org105c272">
+<p>
+The church that is in Babylon, elected together with you, saluteth you. And so doth my son, Mark.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ca0366" class="outline-3">
+<h3 id="org9ca0366">I Peter 5:14</h3>
+<div class="outline-text-3" id="text-org9ca0366">
+<p>
+Salute one another with a holy kiss. Grace be to all you who are in Christ Jesus. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

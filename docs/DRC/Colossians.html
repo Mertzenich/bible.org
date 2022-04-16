@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgcad8ce0">Colossians 1</a>
+<ul>
+<li><a href="#org818c342">Colossians 1:1</a></li>
+<li><a href="#org98ff9cf">Colossians 1:2</a></li>
+<li><a href="#orgec432d5">Colossians 1:3</a></li>
+<li><a href="#orgb889bdf">Colossians 1:4</a></li>
+<li><a href="#org2498ad1">Colossians 1:5</a></li>
+<li><a href="#org4b04e1e">Colossians 1:6</a></li>
+<li><a href="#orgca81d58">Colossians 1:7</a></li>
+<li><a href="#orgf33330f">Colossians 1:8</a></li>
+<li><a href="#org69e0377">Colossians 1:9</a></li>
+<li><a href="#orga7c24f4">Colossians 1:10</a></li>
+<li><a href="#org4e2c685">Colossians 1:11</a></li>
+<li><a href="#org3eb23a7">Colossians 1:12</a></li>
+<li><a href="#org6ddd229">Colossians 1:13</a></li>
+<li><a href="#orgdb9c34a">Colossians 1:14</a></li>
+<li><a href="#orgd02fb26">Colossians 1:15</a></li>
+<li><a href="#orgbae0296">Colossians 1:16</a></li>
+<li><a href="#orgd692ee9">Colossians 1:17</a></li>
+<li><a href="#orgecedff8">Colossians 1:18</a></li>
+<li><a href="#orgf38e207">Colossians 1:19</a></li>
+<li><a href="#org29ec3f3">Colossians 1:20</a></li>
+<li><a href="#org66abf68">Colossians 1:21</a></li>
+<li><a href="#org839ebe7">Colossians 1:22</a></li>
+<li><a href="#org4e31c31">Colossians 1:23</a></li>
+<li><a href="#orgaa50c5c">Colossians 1:24</a></li>
+<li><a href="#orgc6d8de5">Colossians 1:25</a></li>
+<li><a href="#orgb3823a0">Colossians 1:26</a></li>
+<li><a href="#orgc82fe69">Colossians 1:27</a></li>
+<li><a href="#org1f706ca">Colossians 1:28</a></li>
+<li><a href="#org0a5d66e">Colossians 1:29</a></li>
+</ul>
+</li>
+<li><a href="#orgecc6a1c">Colossians 2</a>
+<ul>
+<li><a href="#org5b0ea51">Colossians 2:1</a></li>
+<li><a href="#org3f8bd24">Colossians 2:2</a></li>
+<li><a href="#org5ddc3c1">Colossians 2:3</a></li>
+<li><a href="#orgb0e0f57">Colossians 2:4</a></li>
+<li><a href="#org68d85a0">Colossians 2:5</a></li>
+<li><a href="#orgce50079">Colossians 2:6</a></li>
+<li><a href="#org63bc6df">Colossians 2:7</a></li>
+<li><a href="#org35f7279">Colossians 2:8</a></li>
+<li><a href="#org9c2a5ff">Colossians 2:9</a></li>
+<li><a href="#org96529b3">Colossians 2:10</a></li>
+<li><a href="#orgf43b3b5">Colossians 2:11</a></li>
+<li><a href="#orgc7eb88d">Colossians 2:12</a></li>
+<li><a href="#org51e4d55">Colossians 2:13</a></li>
+<li><a href="#org8b7a40c">Colossians 2:14</a></li>
+<li><a href="#org2c72359">Colossians 2:15</a></li>
+<li><a href="#orged4dc71">Colossians 2:16</a></li>
+<li><a href="#org9c5f377">Colossians 2:17</a></li>
+<li><a href="#org4d429b3">Colossians 2:18</a></li>
+<li><a href="#org7f271c0">Colossians 2:19</a></li>
+<li><a href="#orgc3d49ed">Colossians 2:20</a></li>
+<li><a href="#org32f7ad7">Colossians 2:21</a></li>
+<li><a href="#orgb8e4e39">Colossians 2:22</a></li>
+<li><a href="#orgdf82022">Colossians 2:23</a></li>
+</ul>
+</li>
+<li><a href="#org90b150b">Colossians 3</a>
+<ul>
+<li><a href="#orgf9372eb">Colossians 3:1</a></li>
+<li><a href="#orgbeb6729">Colossians 3:2</a></li>
+<li><a href="#orgf3eb5f2">Colossians 3:3</a></li>
+<li><a href="#orgd96c293">Colossians 3:4</a></li>
+<li><a href="#org711b69a">Colossians 3:5</a></li>
+<li><a href="#org957f696">Colossians 3:6</a></li>
+<li><a href="#org30a8e8d">Colossians 3:7</a></li>
+<li><a href="#org91ae9ba">Colossians 3:8</a></li>
+<li><a href="#org100f99d">Colossians 3:9</a></li>
+<li><a href="#org422e338">Colossians 3:10</a></li>
+<li><a href="#org7a4adf1">Colossians 3:11</a></li>
+<li><a href="#org227cfed">Colossians 3:12</a></li>
+<li><a href="#org8a9d1a7">Colossians 3:13</a></li>
+<li><a href="#org0c16e35">Colossians 3:14</a></li>
+<li><a href="#orgaba81db">Colossians 3:15</a></li>
+<li><a href="#org6fab55f">Colossians 3:16</a></li>
+<li><a href="#org7d4b943">Colossians 3:17</a></li>
+<li><a href="#org0519053">Colossians 3:18</a></li>
+<li><a href="#org8527577">Colossians 3:19</a></li>
+<li><a href="#orgb233ff4">Colossians 3:20</a></li>
+<li><a href="#orge4bb334">Colossians 3:21</a></li>
+<li><a href="#org49e131b">Colossians 3:22</a></li>
+<li><a href="#orge4e8c50">Colossians 3:23</a></li>
+<li><a href="#org43d1558">Colossians 3:24</a></li>
+<li><a href="#orgf33e30b">Colossians 3:25</a></li>
+</ul>
+</li>
+<li><a href="#orgdf9a2a4">Colossians 4</a>
+<ul>
+<li><a href="#org04581de">Colossians 4:1</a></li>
+<li><a href="#orgb7d33d4">Colossians 4:2</a></li>
+<li><a href="#orgdcaf8b4">Colossians 4:3</a></li>
+<li><a href="#org65403c9">Colossians 4:4</a></li>
+<li><a href="#org5d3a347">Colossians 4:5</a></li>
+<li><a href="#org3018925">Colossians 4:6</a></li>
+<li><a href="#org432385e">Colossians 4:7</a></li>
+<li><a href="#org63c06b3">Colossians 4:8</a></li>
+<li><a href="#org4313bde">Colossians 4:9</a></li>
+<li><a href="#orgdc20c8a">Colossians 4:10</a></li>
+<li><a href="#org8cc6f93">Colossians 4:11</a></li>
+<li><a href="#orgff6c5f5">Colossians 4:12</a></li>
+<li><a href="#org5ac8935">Colossians 4:13</a></li>
+<li><a href="#orgec96a6a">Colossians 4:14</a></li>
+<li><a href="#org6a37fc4">Colossians 4:15</a></li>
+<li><a href="#org2113a3a">Colossians 4:16</a></li>
+<li><a href="#org32fee3d">Colossians 4:17</a></li>
+<li><a href="#org3de057f">Colossians 4:18</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcad8ce0" class="outline-2">
+<h2 id="orgcad8ce0">Colossians 1</h2>
+<div class="outline-text-2" id="text-orgcad8ce0">
+</div>
+<div id="outline-container-org818c342" class="outline-3">
+<h3 id="org818c342">Colossians 1:1</h3>
+<div class="outline-text-3" id="text-org818c342">
+<p>
+Paul, an apostle of Jesus Christ, by the will of God, and Timothy, a brother:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98ff9cf" class="outline-3">
+<h3 id="org98ff9cf">Colossians 1:2</h3>
+<div class="outline-text-3" id="text-org98ff9cf">
+<p>
+To the saints and faithful brethren in Christ Jesus who are at Colossa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec432d5" class="outline-3">
+<h3 id="orgec432d5">Colossians 1:3</h3>
+<div class="outline-text-3" id="text-orgec432d5">
+<p>
+Grace be to you and peace, from God our Father and from the Lord Jesus Christ. We give thanks to God and the Father of our Lord Jesus Christ, praying always for you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb889bdf" class="outline-3">
+<h3 id="orgb889bdf">Colossians 1:4</h3>
+<div class="outline-text-3" id="text-orgb889bdf">
+<p>
+Hearing your faith in Christ Jesus and the love which you have towards all the saints.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2498ad1" class="outline-3">
+<h3 id="org2498ad1">Colossians 1:5</h3>
+<div class="outline-text-3" id="text-org2498ad1">
+<p>
+For the hope that is laid up for you in heaven, which you have heard in the word of the truth of the gospel,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b04e1e" class="outline-3">
+<h3 id="org4b04e1e">Colossians 1:6</h3>
+<div class="outline-text-3" id="text-org4b04e1e">
+<p>
+Which is come unto you, as also it is in the whole world and bringeth forth fruit and groweth, even as it doth in you, since the day you heard and knew the grace of God in truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca81d58" class="outline-3">
+<h3 id="orgca81d58">Colossians 1:7</h3>
+<div class="outline-text-3" id="text-orgca81d58">
+<p>
+As you learned of Epaphras, our most beloved fellow servant, who is for you a faithful minister of Christ Jesus;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf33330f" class="outline-3">
+<h3 id="orgf33330f">Colossians 1:8</h3>
+<div class="outline-text-3" id="text-orgf33330f">
+<p>
+Who also hath manifested your love in the spirit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69e0377" class="outline-3">
+<h3 id="org69e0377">Colossians 1:9</h3>
+<div class="outline-text-3" id="text-org69e0377">
+<p>
+Therefore we also, from the day that we heard it, cease not to pray for you and to beg that you may be filled with the knowledge of his will, in all wisdom and spiritual understanding:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7c24f4" class="outline-3">
+<h3 id="orga7c24f4">Colossians 1:10</h3>
+<div class="outline-text-3" id="text-orga7c24f4">
+<p>
+That you may walk worthy of God, in all things pleasing; being fruitful in every good work and increasing in the knowledge of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e2c685" class="outline-3">
+<h3 id="org4e2c685">Colossians 1:11</h3>
+<div class="outline-text-3" id="text-org4e2c685">
+<p>
+Strengthened with all might according to the power of his glory, in all patience and longsuffering with joy,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3eb23a7" class="outline-3">
+<h3 id="org3eb23a7">Colossians 1:12</h3>
+<div class="outline-text-3" id="text-org3eb23a7">
+<p>
+Giving thanks to God the Father, who hath made us worthy to be partakers of the lot of the saints in light:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ddd229" class="outline-3">
+<h3 id="org6ddd229">Colossians 1:13</h3>
+<div class="outline-text-3" id="text-org6ddd229">
+<p>
+Who hath delivered us from the power of darkness and hath translated us into the kingdom of the Son of his love,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb9c34a" class="outline-3">
+<h3 id="orgdb9c34a">Colossians 1:14</h3>
+<div class="outline-text-3" id="text-orgdb9c34a">
+<p>
+In whom we have redemption through his blood, the remission of sins:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd02fb26" class="outline-3">
+<h3 id="orgd02fb26">Colossians 1:15</h3>
+<div class="outline-text-3" id="text-orgd02fb26">
+<p>
+Who is the image of the invisible God, the firstborn of every creature:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbae0296" class="outline-3">
+<h3 id="orgbae0296">Colossians 1:16</h3>
+<div class="outline-text-3" id="text-orgbae0296">
+<p>
+For in him were all things created in heaven and on earth, visible and invisible, whether thrones, or dominations, or principalities, or powers. All things were created by him and in him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd692ee9" class="outline-3">
+<h3 id="orgd692ee9">Colossians 1:17</h3>
+<div class="outline-text-3" id="text-orgd692ee9">
+<p>
+And he is before all: and by him all things consist.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecedff8" class="outline-3">
+<h3 id="orgecedff8">Colossians 1:18</h3>
+<div class="outline-text-3" id="text-orgecedff8">
+<p>
+And he is the head of the body, the church: who is the beginning, the firstborn from the dead, that in all things he may hold the primacy:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf38e207" class="outline-3">
+<h3 id="orgf38e207">Colossians 1:19</h3>
+<div class="outline-text-3" id="text-orgf38e207">
+<p>
+Because in him, it hath well pleased the Father that all fulness should dwell:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29ec3f3" class="outline-3">
+<h3 id="org29ec3f3">Colossians 1:20</h3>
+<div class="outline-text-3" id="text-org29ec3f3">
+<p>
+And through him to reconcile all things unto himself, making peace through the blood of his cross, both as to the things that are on earth and the things that are in heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66abf68" class="outline-3">
+<h3 id="org66abf68">Colossians 1:21</h3>
+<div class="outline-text-3" id="text-org66abf68">
+<p>
+And you, whereas you were some time alienated and enemies in mind in evil works:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org839ebe7" class="outline-3">
+<h3 id="org839ebe7">Colossians 1:22</h3>
+<div class="outline-text-3" id="text-org839ebe7">
+<p>
+Yet now he hath reconciled in the body of his flesh through death, to present you holy and unspotted and blameless before him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e31c31" class="outline-3">
+<h3 id="org4e31c31">Colossians 1:23</h3>
+<div class="outline-text-3" id="text-org4e31c31">
+<p>
+If so ye continue in the faith, grounded and settled, and immoveable from the hope of the gospel which you have heard, which is preached in all the creation that is under heaven: whereof I Paul am made a minister.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa50c5c" class="outline-3">
+<h3 id="orgaa50c5c">Colossians 1:24</h3>
+<div class="outline-text-3" id="text-orgaa50c5c">
+<p>
+Who now rejoice in my sufferings for you and fill up those things that are wanting of the sufferings of Christ, in my flesh, for his body, which is the church:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6d8de5" class="outline-3">
+<h3 id="orgc6d8de5">Colossians 1:25</h3>
+<div class="outline-text-3" id="text-orgc6d8de5">
+<p>
+Whereof I am made a minister according to the dispensation of God, which is given me towards you, that I may fulfil the word of God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3823a0" class="outline-3">
+<h3 id="orgb3823a0">Colossians 1:26</h3>
+<div class="outline-text-3" id="text-orgb3823a0">
+<p>
+The mystery which hath been hidden from ages and generations, but now is manifested to his saints,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc82fe69" class="outline-3">
+<h3 id="orgc82fe69">Colossians 1:27</h3>
+<div class="outline-text-3" id="text-orgc82fe69">
+<p>
+To whom God would make known the riches of the glory of this mystery among the Gentiles, which is Christ, in you the hope of glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f706ca" class="outline-3">
+<h3 id="org1f706ca">Colossians 1:28</h3>
+<div class="outline-text-3" id="text-org1f706ca">
+<p>
+Whom we preach, admonishing every man and teaching every man in all wisdom, that we may present every man perfect in Christ Jesus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a5d66e" class="outline-3">
+<h3 id="org0a5d66e">Colossians 1:29</h3>
+<div class="outline-text-3" id="text-org0a5d66e">
+<p>
+Wherein also I labour, striving according to his working which he worketh in me in power. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgecc6a1c" class="outline-2">
+<h2 id="orgecc6a1c">Colossians 2</h2>
+<div class="outline-text-2" id="text-orgecc6a1c">
+</div>
+<div id="outline-container-org5b0ea51" class="outline-3">
+<h3 id="org5b0ea51">Colossians 2:1</h3>
+<div class="outline-text-3" id="text-org5b0ea51">
+<p>
+For I would have you know what manner of care I have for you and for them that are at Laodicea and whosoever have not seen my face in the flesh:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f8bd24" class="outline-3">
+<h3 id="org3f8bd24">Colossians 2:2</h3>
+<div class="outline-text-3" id="text-org3f8bd24">
+<p>
+That their hearts may be comforted, being instructed in charity and unto all riches of fulness of understanding, unto the knowledge of the mystery of God the Father and of Christ Jesus:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ddc3c1" class="outline-3">
+<h3 id="org5ddc3c1">Colossians 2:3</h3>
+<div class="outline-text-3" id="text-org5ddc3c1">
+<p>
+In whom are hid all the treasures of wisdom and knowledge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0e0f57" class="outline-3">
+<h3 id="orgb0e0f57">Colossians 2:4</h3>
+<div class="outline-text-3" id="text-orgb0e0f57">
+<p>
+Now this I say, that no man may deceive you by loftiness of words.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68d85a0" class="outline-3">
+<h3 id="org68d85a0">Colossians 2:5</h3>
+<div class="outline-text-3" id="text-org68d85a0">
+<p>
+For though I be absent in body, yet in spirit I am with you, rejoicing, and beholding your order and the steadfastness of your faith which is in Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce50079" class="outline-3">
+<h3 id="orgce50079">Colossians 2:6</h3>
+<div class="outline-text-3" id="text-orgce50079">
+<p>
+As therefore you have received Jesus Christ the Lord, walk ye in him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63bc6df" class="outline-3">
+<h3 id="org63bc6df">Colossians 2:7</h3>
+<div class="outline-text-3" id="text-org63bc6df">
+<p>
+Rooted and built up in him and confirmed in the faith, as also you have learned: abounding in him in thanksgiving.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35f7279" class="outline-3">
+<h3 id="org35f7279">Colossians 2:8</h3>
+<div class="outline-text-3" id="text-org35f7279">
+<p>
+Beware lest any man cheat you by philosophy and vain deceit: according to the tradition of men according to the elements of the world and not according to Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c2a5ff" class="outline-3">
+<h3 id="org9c2a5ff">Colossians 2:9</h3>
+<div class="outline-text-3" id="text-org9c2a5ff">
+<p>
+For in him dwelleth all the fulness of the Godhead corporeally.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96529b3" class="outline-3">
+<h3 id="org96529b3">Colossians 2:10</h3>
+<div class="outline-text-3" id="text-org96529b3">
+<p>
+And you are filled in him, who is the head of all principality and power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf43b3b5" class="outline-3">
+<h3 id="orgf43b3b5">Colossians 2:11</h3>
+<div class="outline-text-3" id="text-orgf43b3b5">
+<p>
+In whom also you are circumcised with circumcision not made by hand in despoiling of the body of the flesh: but in the circumcision of Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7eb88d" class="outline-3">
+<h3 id="orgc7eb88d">Colossians 2:12</h3>
+<div class="outline-text-3" id="text-orgc7eb88d">
+<p>
+Buried with him in baptism: in whom also you are risen again by the faith of the operation of God who hath raised him up from the dead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51e4d55" class="outline-3">
+<h3 id="org51e4d55">Colossians 2:13</h3>
+<div class="outline-text-3" id="text-org51e4d55">
+<p>
+And you, when you were dead in your sins and the uncircumcision of your flesh, he hath quickened together with him, forgiving you all offences:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b7a40c" class="outline-3">
+<h3 id="org8b7a40c">Colossians 2:14</h3>
+<div class="outline-text-3" id="text-org8b7a40c">
+<p>
+Blotting out the handwriting of the decree that was against us, which was contrary to us. And he hath taken the same out of the way, fastening it to the cross.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c72359" class="outline-3">
+<h3 id="org2c72359">Colossians 2:15</h3>
+<div class="outline-text-3" id="text-org2c72359">
+<p>
+And despoiling the principalities and powers, he hath exposed them confidently in open shew, triumphing over them in himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged4dc71" class="outline-3">
+<h3 id="orged4dc71">Colossians 2:16</h3>
+<div class="outline-text-3" id="text-orged4dc71">
+<p>
+Let no man therefore judge you in meat or in drink or in respect of a festival day or of the new moon or of the sabbaths,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c5f377" class="outline-3">
+<h3 id="org9c5f377">Colossians 2:17</h3>
+<div class="outline-text-3" id="text-org9c5f377">
+<p>
+Which are a shadow of things to come: but the body is of Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d429b3" class="outline-3">
+<h3 id="org4d429b3">Colossians 2:18</h3>
+<div class="outline-text-3" id="text-org4d429b3">
+<p>
+Let no man seduce you, willing in humility and religion of angels, walking in the things which he hath not seen, in vain puffed up by the sense of his flesh:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f271c0" class="outline-3">
+<h3 id="org7f271c0">Colossians 2:19</h3>
+<div class="outline-text-3" id="text-org7f271c0">
+<p>
+And not holding the head, from which the whole body, by joints and bands, being supplied with nourishment and compacted, groweth into the increase of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3d49ed" class="outline-3">
+<h3 id="orgc3d49ed">Colossians 2:20</h3>
+<div class="outline-text-3" id="text-orgc3d49ed">
+<p>
+If then you be dead with Christ from the elements of this world, why do you yet decree as though living in the world?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32f7ad7" class="outline-3">
+<h3 id="org32f7ad7">Colossians 2:21</h3>
+<div class="outline-text-3" id="text-org32f7ad7">
+<p>
+Touch not: taste not: handle not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8e4e39" class="outline-3">
+<h3 id="orgb8e4e39">Colossians 2:22</h3>
+<div class="outline-text-3" id="text-orgb8e4e39">
+<p>
+Which all are unto destruction by the very use, according to the precepts and doctrines of men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf82022" class="outline-3">
+<h3 id="orgdf82022">Colossians 2:23</h3>
+<div class="outline-text-3" id="text-orgdf82022">
+<p>
+Which things have indeed a shew of wisdom in superstition and humility, and not sparing the body; not in any honour to the filling of the flesh. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org90b150b" class="outline-2">
+<h2 id="org90b150b">Colossians 3</h2>
+<div class="outline-text-2" id="text-org90b150b">
+</div>
+<div id="outline-container-orgf9372eb" class="outline-3">
+<h3 id="orgf9372eb">Colossians 3:1</h3>
+<div class="outline-text-3" id="text-orgf9372eb">
+<p>
+Therefore if you be risen with Christ, seek the things that are above, where Christ is sitting at the right hand of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbeb6729" class="outline-3">
+<h3 id="orgbeb6729">Colossians 3:2</h3>
+<div class="outline-text-3" id="text-orgbeb6729">
+<p>
+Mind the things that are above, not the things that are upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3eb5f2" class="outline-3">
+<h3 id="orgf3eb5f2">Colossians 3:3</h3>
+<div class="outline-text-3" id="text-orgf3eb5f2">
+<p>
+For you are dead: and your life is hid with Christ in God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd96c293" class="outline-3">
+<h3 id="orgd96c293">Colossians 3:4</h3>
+<div class="outline-text-3" id="text-orgd96c293">
+<p>
+When Christ shall appear, who is your life, then you also shall appear with him in glory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org711b69a" class="outline-3">
+<h3 id="org711b69a">Colossians 3:5</h3>
+<div class="outline-text-3" id="text-org711b69a">
+<p>
+Mortify therefore your members which are upon the earth: fornication, uncleanness, lust, evil concupiscence and covetousness, which is the service of idols.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org957f696" class="outline-3">
+<h3 id="org957f696">Colossians 3:6</h3>
+<div class="outline-text-3" id="text-org957f696">
+<p>
+For which things the wrath of God cometh upon the children of unbelief.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30a8e8d" class="outline-3">
+<h3 id="org30a8e8d">Colossians 3:7</h3>
+<div class="outline-text-3" id="text-org30a8e8d">
+<p>
+In which you also walked some time, when you lived in them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91ae9ba" class="outline-3">
+<h3 id="org91ae9ba">Colossians 3:8</h3>
+<div class="outline-text-3" id="text-org91ae9ba">
+<p>
+But now put you also all away: anger, indignation, malice, blasphemy, filthy speech out of your mouth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org100f99d" class="outline-3">
+<h3 id="org100f99d">Colossians 3:9</h3>
+<div class="outline-text-3" id="text-org100f99d">
+<p>
+Lie not one to another: stripping yourselves of the old man with his deeds,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org422e338" class="outline-3">
+<h3 id="org422e338">Colossians 3:10</h3>
+<div class="outline-text-3" id="text-org422e338">
+<p>
+And putting on the new, him who is renewed unto knowledge, according to the image of him that created him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a4adf1" class="outline-3">
+<h3 id="org7a4adf1">Colossians 3:11</h3>
+<div class="outline-text-3" id="text-org7a4adf1">
+<p>
+Where there is neither Gentile nor Jew, circumcision nor uncircumcision, Barbarian nor Scythian, bond nor free. But Christ is all and in all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org227cfed" class="outline-3">
+<h3 id="org227cfed">Colossians 3:12</h3>
+<div class="outline-text-3" id="text-org227cfed">
+<p>
+Put ye on therefore, as the elect of God, holy and beloved, the bowels of mercy, benignity, humility, modesty, patience:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a9d1a7" class="outline-3">
+<h3 id="org8a9d1a7">Colossians 3:13</h3>
+<div class="outline-text-3" id="text-org8a9d1a7">
+<p>
+Bearing with one another and forgiving one another, if any have a complaint against another. Even as the Lord hath forgiven you, so do you also.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c16e35" class="outline-3">
+<h3 id="org0c16e35">Colossians 3:14</h3>
+<div class="outline-text-3" id="text-org0c16e35">
+<p>
+But above all these things have charity, which is the bond of perfection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaba81db" class="outline-3">
+<h3 id="orgaba81db">Colossians 3:15</h3>
+<div class="outline-text-3" id="text-orgaba81db">
+<p>
+And let the peace of Christ rejoice in your hearts, wherein also you are called in one body: and be ye thankful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fab55f" class="outline-3">
+<h3 id="org6fab55f">Colossians 3:16</h3>
+<div class="outline-text-3" id="text-org6fab55f">
+<p>
+Let the word of Christ dwell in you abundantly: in all wisdom, teaching and admonishing one another in psalms, hymns and spiritual canticles, singing in grace in your hearts to God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d4b943" class="outline-3">
+<h3 id="org7d4b943">Colossians 3:17</h3>
+<div class="outline-text-3" id="text-org7d4b943">
+<p>
+All whatsoever you do in word or in work, do all in the name of the Lord Jesus Christ, giving thanks to God and the Father by him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0519053" class="outline-3">
+<h3 id="org0519053">Colossians 3:18</h3>
+<div class="outline-text-3" id="text-org0519053">
+<p>
+Wives, be subject to your husbands, as it behoveth in the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8527577" class="outline-3">
+<h3 id="org8527577">Colossians 3:19</h3>
+<div class="outline-text-3" id="text-org8527577">
+<p>
+Husbands, love your wives and be not bitter towards them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb233ff4" class="outline-3">
+<h3 id="orgb233ff4">Colossians 3:20</h3>
+<div class="outline-text-3" id="text-orgb233ff4">
+<p>
+Children, obey your parents in all things: for this is well pleasing to the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4bb334" class="outline-3">
+<h3 id="orge4bb334">Colossians 3:21</h3>
+<div class="outline-text-3" id="text-orge4bb334">
+<p>
+Fathers, provoke not your children to indignation, lest they be discouraged.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49e131b" class="outline-3">
+<h3 id="org49e131b">Colossians 3:22</h3>
+<div class="outline-text-3" id="text-org49e131b">
+<p>
+Servants, obey in all things your masters according to the flesh: not serving to the eye, as pleasing men: but in simplicity of heart, fearing God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4e8c50" class="outline-3">
+<h3 id="orge4e8c50">Colossians 3:23</h3>
+<div class="outline-text-3" id="text-orge4e8c50">
+<p>
+Whatsoever you do, do it from the heart, as to the Lord, and not to men:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43d1558" class="outline-3">
+<h3 id="org43d1558">Colossians 3:24</h3>
+<div class="outline-text-3" id="text-org43d1558">
+<p>
+Knowing that you shall receive of the Lord the reward of inheritance. Serve ye the Lord Christ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf33e30b" class="outline-3">
+<h3 id="orgf33e30b">Colossians 3:25</h3>
+<div class="outline-text-3" id="text-orgf33e30b">
+<p>
+For he that doth wrong shall receive for that which he hath done wrongfully. And there is no respect of persons with God. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdf9a2a4" class="outline-2">
+<h2 id="orgdf9a2a4">Colossians 4</h2>
+<div class="outline-text-2" id="text-orgdf9a2a4">
+</div>
+<div id="outline-container-org04581de" class="outline-3">
+<h3 id="org04581de">Colossians 4:1</h3>
+<div class="outline-text-3" id="text-org04581de">
+<p>
+Masters, do to your servants that which is just and equal: knowing that you also have a master in heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7d33d4" class="outline-3">
+<h3 id="orgb7d33d4">Colossians 4:2</h3>
+<div class="outline-text-3" id="text-orgb7d33d4">
+<p>
+Be instant in prayer: watching in it with thanksgiving.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdcaf8b4" class="outline-3">
+<h3 id="orgdcaf8b4">Colossians 4:3</h3>
+<div class="outline-text-3" id="text-orgdcaf8b4">
+<p>
+Praying withal for us also, that God may open unto us a door of speech to speak the mystery of Christ (for which also I am bound):
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65403c9" class="outline-3">
+<h3 id="org65403c9">Colossians 4:4</h3>
+<div class="outline-text-3" id="text-org65403c9">
+<p>
+That I may make it manifest as I ought to speak.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d3a347" class="outline-3">
+<h3 id="org5d3a347">Colossians 4:5</h3>
+<div class="outline-text-3" id="text-org5d3a347">
+<p>
+Walk with wisdom towards them that are without, redeeming the time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3018925" class="outline-3">
+<h3 id="org3018925">Colossians 4:6</h3>
+<div class="outline-text-3" id="text-org3018925">
+<p>
+Let your speech be always in grace seasoned with salt: that you may know how you ought to answer every man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org432385e" class="outline-3">
+<h3 id="org432385e">Colossians 4:7</h3>
+<div class="outline-text-3" id="text-org432385e">
+<p>
+All the things that concern me, Tychicus, our dearest brother and faithful minister and fellow servant in the Lord, will make known to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63c06b3" class="outline-3">
+<h3 id="org63c06b3">Colossians 4:8</h3>
+<div class="outline-text-3" id="text-org63c06b3">
+<p>
+What I have sent to you for this same purpose, that he may know the things that concern you and comfort your hearts:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4313bde" class="outline-3">
+<h3 id="org4313bde">Colossians 4:9</h3>
+<div class="outline-text-3" id="text-org4313bde">
+<p>
+With Onesimus, a most beloved and faithful brother, who is one of you. All things that are done here, they shall make known to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc20c8a" class="outline-3">
+<h3 id="orgdc20c8a">Colossians 4:10</h3>
+<div class="outline-text-3" id="text-orgdc20c8a">
+<p>
+Aristarchus, my fellow prisoner, saluteth you: and Mark, the cousin german of Barnabas, touching whom you have received commandments. If he come unto you, receive him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cc6f93" class="outline-3">
+<h3 id="org8cc6f93">Colossians 4:11</h3>
+<div class="outline-text-3" id="text-org8cc6f93">
+<p>
+And Jesus that is called Justus: who are of the circumcision. These only are my helpers, in the kingdom of God: who have been a comfort to me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff6c5f5" class="outline-3">
+<h3 id="orgff6c5f5">Colossians 4:12</h3>
+<div class="outline-text-3" id="text-orgff6c5f5">
+<p>
+Epaphras saluteth you, who is one of you, a servant of Christ Jesus, who is always solicitous for you in prayers, that you may stand perfect and full in all the will of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ac8935" class="outline-3">
+<h3 id="org5ac8935">Colossians 4:13</h3>
+<div class="outline-text-3" id="text-org5ac8935">
+<p>
+For I bear him testimony that he hath much labour for you and for them that are at Laodicea and them at Hierapolis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec96a6a" class="outline-3">
+<h3 id="orgec96a6a">Colossians 4:14</h3>
+<div class="outline-text-3" id="text-orgec96a6a">
+<p>
+Luke, the most dear physician, saluteth you: and Demas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a37fc4" class="outline-3">
+<h3 id="org6a37fc4">Colossians 4:15</h3>
+<div class="outline-text-3" id="text-org6a37fc4">
+<p>
+Salute the brethren who are at Laodicea: and Nymphas and the church that is in his house.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2113a3a" class="outline-3">
+<h3 id="org2113a3a">Colossians 4:16</h3>
+<div class="outline-text-3" id="text-org2113a3a">
+<p>
+And when this epistle shall have been read with you, cause that it be read also in the church of the Laodiceans: and that you read that which is of the Laodiceans.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32fee3d" class="outline-3">
+<h3 id="org32fee3d">Colossians 4:17</h3>
+<div class="outline-text-3" id="text-org32fee3d">
+<p>
+And say to Archippus: Take heed to the ministry which thou hast received in the Lord, that thou fulfil it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3de057f" class="outline-3">
+<h3 id="org3de057f">Colossians 4:18</h3>
+<div class="outline-text-3" id="text-org3de057f">
+<p>
+The salutation of Paul with my own hand. Be mindful of my bands. Grace be with you. Amen.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:43</p>
+</div>
+</body>
+</html>

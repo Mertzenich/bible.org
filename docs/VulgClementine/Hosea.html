@@ -1,0 +1,2321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga0b6d3f">Hosea 1</a>
+<ul>
+<li><a href="#orgfd9d5e1">Hosea 1:1</a></li>
+<li><a href="#org9cbca84">Hosea 1:2</a></li>
+<li><a href="#org99f320e">Hosea 1:3</a></li>
+<li><a href="#orgb687aa8">Hosea 1:4</a></li>
+<li><a href="#org2071ee0">Hosea 1:5</a></li>
+<li><a href="#org4eb82fa">Hosea 1:6</a></li>
+<li><a href="#org373080a">Hosea 1:7</a></li>
+<li><a href="#orgffc9d37">Hosea 1:8</a></li>
+<li><a href="#orgb26cf89">Hosea 1:9</a></li>
+<li><a href="#org68b69d0">Hosea 1:10</a></li>
+<li><a href="#org11bcc6d">Hosea 1:11</a></li>
+</ul>
+</li>
+<li><a href="#orgbe8b57c">Hosea 2</a>
+<ul>
+<li><a href="#orge29c81b">Hosea 2:1</a></li>
+<li><a href="#org3dfa2cd">Hosea 2:2</a></li>
+<li><a href="#org1e89d25">Hosea 2:3</a></li>
+<li><a href="#orgbdb05d0">Hosea 2:4</a></li>
+<li><a href="#orge46e65e">Hosea 2:5</a></li>
+<li><a href="#orgd2029a0">Hosea 2:6</a></li>
+<li><a href="#orgda84924">Hosea 2:7</a></li>
+<li><a href="#org908ef8c">Hosea 2:8</a></li>
+<li><a href="#org5bcb48b">Hosea 2:9</a></li>
+<li><a href="#org62bcc14">Hosea 2:10</a></li>
+<li><a href="#org3347b3c">Hosea 2:11</a></li>
+<li><a href="#org347423a">Hosea 2:12</a></li>
+<li><a href="#orge23ae1b">Hosea 2:13</a></li>
+<li><a href="#org06d3102">Hosea 2:14</a></li>
+<li><a href="#org156a510">Hosea 2:15</a></li>
+<li><a href="#orgb3773c3">Hosea 2:16</a></li>
+<li><a href="#org159603b">Hosea 2:17</a></li>
+<li><a href="#org9d58112">Hosea 2:18</a></li>
+<li><a href="#org99979e5">Hosea 2:19</a></li>
+<li><a href="#org562a317">Hosea 2:20</a></li>
+<li><a href="#org379571a">Hosea 2:21</a></li>
+<li><a href="#orgc975205">Hosea 2:22</a></li>
+<li><a href="#orga9b63da">Hosea 2:23</a></li>
+<li><a href="#orgcc4d9f0">Hosea 2:24</a></li>
+</ul>
+</li>
+<li><a href="#orge1228a2">Hosea 3</a>
+<ul>
+<li><a href="#org3dfc0c9">Hosea 3:1</a></li>
+<li><a href="#org275da6b">Hosea 3:2</a></li>
+<li><a href="#orgc4cd28d">Hosea 3:3</a></li>
+<li><a href="#org673763d">Hosea 3:4</a></li>
+<li><a href="#org7e95368">Hosea 3:5</a></li>
+</ul>
+</li>
+<li><a href="#org9a81af9">Hosea 4</a>
+<ul>
+<li><a href="#orgdffe47c">Hosea 4:1</a></li>
+<li><a href="#orgd063e1e">Hosea 4:2</a></li>
+<li><a href="#orgd4863ae">Hosea 4:3</a></li>
+<li><a href="#orgd772571">Hosea 4:4</a></li>
+<li><a href="#org4328d6f">Hosea 4:5</a></li>
+<li><a href="#org07c8668">Hosea 4:6</a></li>
+<li><a href="#orgd885c48">Hosea 4:7</a></li>
+<li><a href="#orge085c18">Hosea 4:8</a></li>
+<li><a href="#orgd8f757f">Hosea 4:9</a></li>
+<li><a href="#org22a3dd5">Hosea 4:10</a></li>
+<li><a href="#org85b3542">Hosea 4:11</a></li>
+<li><a href="#org2171d87">Hosea 4:12</a></li>
+<li><a href="#orgfe1ba9e">Hosea 4:13</a></li>
+<li><a href="#org093a156">Hosea 4:14</a></li>
+<li><a href="#org6474bca">Hosea 4:15</a></li>
+<li><a href="#orgd027fb4">Hosea 4:16</a></li>
+<li><a href="#orgdeed284">Hosea 4:17</a></li>
+<li><a href="#org7b98f06">Hosea 4:18</a></li>
+<li><a href="#orgdf77615">Hosea 4:19</a></li>
+</ul>
+</li>
+<li><a href="#org2793f75">Hosea 5</a>
+<ul>
+<li><a href="#org12202e9">Hosea 5:1</a></li>
+<li><a href="#org90b734e">Hosea 5:2</a></li>
+<li><a href="#org6583ff3">Hosea 5:3</a></li>
+<li><a href="#org3d23018">Hosea 5:4</a></li>
+<li><a href="#org14209bc">Hosea 5:5</a></li>
+<li><a href="#orge9615f8">Hosea 5:6</a></li>
+<li><a href="#org857ade8">Hosea 5:7</a></li>
+<li><a href="#orgb78639a">Hosea 5:8</a></li>
+<li><a href="#orgcc1208d">Hosea 5:9</a></li>
+<li><a href="#orgca923bf">Hosea 5:10</a></li>
+<li><a href="#org02b04b5">Hosea 5:11</a></li>
+<li><a href="#org617897e">Hosea 5:12</a></li>
+<li><a href="#org7a7c6a6">Hosea 5:13</a></li>
+<li><a href="#orgbcdc560">Hosea 5:14</a></li>
+<li><a href="#org8146232">Hosea 5:15</a></li>
+</ul>
+</li>
+<li><a href="#orgcf02655">Hosea 6</a>
+<ul>
+<li><a href="#orgb4fd6ef">Hosea 6:1</a></li>
+<li><a href="#org640e58d">Hosea 6:2</a></li>
+<li><a href="#orge54f289">Hosea 6:3</a></li>
+<li><a href="#org0101e57">Hosea 6:4</a></li>
+<li><a href="#org8d6a316">Hosea 6:5</a></li>
+<li><a href="#org495ba66">Hosea 6:6</a></li>
+<li><a href="#orgf652726">Hosea 6:7</a></li>
+<li><a href="#orgd05825a">Hosea 6:8</a></li>
+<li><a href="#org294b05d">Hosea 6:9</a></li>
+<li><a href="#orgbefa02d">Hosea 6:10</a></li>
+<li><a href="#orgbf23258">Hosea 6:11</a></li>
+</ul>
+</li>
+<li><a href="#orgb7e2881">Hosea 7</a>
+<ul>
+<li><a href="#orgfe1ed62">Hosea 7:1</a></li>
+<li><a href="#org0059fee">Hosea 7:2</a></li>
+<li><a href="#org833e5bd">Hosea 7:3</a></li>
+<li><a href="#org6b82f1b">Hosea 7:4</a></li>
+<li><a href="#org6be4012">Hosea 7:5</a></li>
+<li><a href="#org943e38e">Hosea 7:6</a></li>
+<li><a href="#org85b0c28">Hosea 7:7</a></li>
+<li><a href="#org1f99d91">Hosea 7:8</a></li>
+<li><a href="#org2b0d9bb">Hosea 7:9</a></li>
+<li><a href="#org38d67db">Hosea 7:10</a></li>
+<li><a href="#org7197d25">Hosea 7:11</a></li>
+<li><a href="#org4afe5fa">Hosea 7:12</a></li>
+<li><a href="#orgf1b0b5a">Hosea 7:13</a></li>
+<li><a href="#org8096946">Hosea 7:14</a></li>
+<li><a href="#orgd57a4e6">Hosea 7:15</a></li>
+<li><a href="#orge08229b">Hosea 7:16</a></li>
+</ul>
+</li>
+<li><a href="#org5bacb90">Hosea 8</a>
+<ul>
+<li><a href="#orga8028b8">Hosea 8:1</a></li>
+<li><a href="#orgc4ab233">Hosea 8:2</a></li>
+<li><a href="#orgdc5e313">Hosea 8:3</a></li>
+<li><a href="#org0338879">Hosea 8:4</a></li>
+<li><a href="#orge9b4387">Hosea 8:5</a></li>
+<li><a href="#org639d6cb">Hosea 8:6</a></li>
+<li><a href="#orgb93f544">Hosea 8:7</a></li>
+<li><a href="#org797148b">Hosea 8:8</a></li>
+<li><a href="#org036084d">Hosea 8:9</a></li>
+<li><a href="#orgcda9e12">Hosea 8:10</a></li>
+<li><a href="#org0ee1fe3">Hosea 8:11</a></li>
+<li><a href="#org506326e">Hosea 8:12</a></li>
+<li><a href="#orgfaa4ebb">Hosea 8:13</a></li>
+<li><a href="#orgc98a3c9">Hosea 8:14</a></li>
+</ul>
+</li>
+<li><a href="#org9e03cbb">Hosea 9</a>
+<ul>
+<li><a href="#org3b9a6f5">Hosea 9:1</a></li>
+<li><a href="#orge1ef3be">Hosea 9:2</a></li>
+<li><a href="#org666609d">Hosea 9:3</a></li>
+<li><a href="#org5950284">Hosea 9:4</a></li>
+<li><a href="#orgd4cf6f8">Hosea 9:5</a></li>
+<li><a href="#orge726427">Hosea 9:6</a></li>
+<li><a href="#orga343400">Hosea 9:7</a></li>
+<li><a href="#orgba7d748">Hosea 9:8</a></li>
+<li><a href="#orgca6d8df">Hosea 9:9</a></li>
+<li><a href="#org809de5e">Hosea 9:10</a></li>
+<li><a href="#org78bc21d">Hosea 9:11</a></li>
+<li><a href="#org827f609">Hosea 9:12</a></li>
+<li><a href="#org1dde16f">Hosea 9:13</a></li>
+<li><a href="#org378ce90">Hosea 9:14</a></li>
+<li><a href="#orgcd89dc2">Hosea 9:15</a></li>
+<li><a href="#orgce946c4">Hosea 9:16</a></li>
+<li><a href="#orgb7b120b">Hosea 9:17</a></li>
+</ul>
+</li>
+<li><a href="#org89f0148">Hosea 10</a>
+<ul>
+<li><a href="#org411402e">Hosea 10:1</a></li>
+<li><a href="#org90156ce">Hosea 10:2</a></li>
+<li><a href="#org87cce7c">Hosea 10:3</a></li>
+<li><a href="#org8b153cd">Hosea 10:4</a></li>
+<li><a href="#orgd9c50dc">Hosea 10:5</a></li>
+<li><a href="#org076aba9">Hosea 10:6</a></li>
+<li><a href="#orgf32f78b">Hosea 10:7</a></li>
+<li><a href="#org1d6d470">Hosea 10:8</a></li>
+<li><a href="#org1f12cfd">Hosea 10:9</a></li>
+<li><a href="#orgb1b2dd4">Hosea 10:10</a></li>
+<li><a href="#orgc8a6e1a">Hosea 10:11</a></li>
+<li><a href="#orge803302">Hosea 10:12</a></li>
+<li><a href="#org702c76c">Hosea 10:13</a></li>
+<li><a href="#org3245939">Hosea 10:14</a></li>
+<li><a href="#org3e94d21">Hosea 10:15</a></li>
+</ul>
+</li>
+<li><a href="#org5b9eeb6">Hosea 11</a>
+<ul>
+<li><a href="#orga3b626a">Hosea 11:1</a></li>
+<li><a href="#org58d139d">Hosea 11:2</a></li>
+<li><a href="#org4fdd147">Hosea 11:3</a></li>
+<li><a href="#org4679e62">Hosea 11:4</a></li>
+<li><a href="#org952ebb4">Hosea 11:5</a></li>
+<li><a href="#orgae9f991">Hosea 11:6</a></li>
+<li><a href="#org4809962">Hosea 11:7</a></li>
+<li><a href="#org1fe9ea8">Hosea 11:8</a></li>
+<li><a href="#orgc76523f">Hosea 11:9</a></li>
+<li><a href="#org6d2f2f6">Hosea 11:10</a></li>
+<li><a href="#orgb31d3c0">Hosea 11:11</a></li>
+<li><a href="#org237a7dc">Hosea 11:12</a></li>
+</ul>
+</li>
+<li><a href="#org9d54ea4">Hosea 12</a>
+<ul>
+<li><a href="#org1843690">Hosea 12:1</a></li>
+<li><a href="#org43a561a">Hosea 12:2</a></li>
+<li><a href="#org92e6176">Hosea 12:3</a></li>
+<li><a href="#org9f3a199">Hosea 12:4</a></li>
+<li><a href="#org0a3cf82">Hosea 12:5</a></li>
+<li><a href="#orgdf15205">Hosea 12:6</a></li>
+<li><a href="#orgd6450e4">Hosea 12:7</a></li>
+<li><a href="#org9ccd231">Hosea 12:8</a></li>
+<li><a href="#orgf2a71ff">Hosea 12:9</a></li>
+<li><a href="#orgaae7d79">Hosea 12:10</a></li>
+<li><a href="#org1e35859">Hosea 12:11</a></li>
+<li><a href="#orgf72e0c9">Hosea 12:12</a></li>
+<li><a href="#orgf4d8b81">Hosea 12:13</a></li>
+<li><a href="#orge0a8c04">Hosea 12:14</a></li>
+</ul>
+</li>
+<li><a href="#org93a3ebd">Hosea 13</a>
+<ul>
+<li><a href="#org9c59850">Hosea 13:1</a></li>
+<li><a href="#org6c78430">Hosea 13:2</a></li>
+<li><a href="#org0c2e04f">Hosea 13:3</a></li>
+<li><a href="#orgf4043ee">Hosea 13:4</a></li>
+<li><a href="#orgee0b373">Hosea 13:5</a></li>
+<li><a href="#org70253d2">Hosea 13:6</a></li>
+<li><a href="#orgca04285">Hosea 13:7</a></li>
+<li><a href="#orgdd55a3c">Hosea 13:8</a></li>
+<li><a href="#org82ef73b">Hosea 13:9</a></li>
+<li><a href="#org878cd0f">Hosea 13:10</a></li>
+<li><a href="#org92a976b">Hosea 13:11</a></li>
+<li><a href="#org1db6a76">Hosea 13:12</a></li>
+<li><a href="#org8c07549">Hosea 13:13</a></li>
+<li><a href="#org611818e">Hosea 13:14</a></li>
+<li><a href="#org1705af6">Hosea 13:15</a></li>
+</ul>
+</li>
+<li><a href="#org9bf8357">Hosea 14</a>
+<ul>
+<li><a href="#org51946f5">Hosea 14:1</a></li>
+<li><a href="#orge60efe0">Hosea 14:2</a></li>
+<li><a href="#org4c51215">Hosea 14:3</a></li>
+<li><a href="#org5112045">Hosea 14:4</a></li>
+<li><a href="#orgd866666">Hosea 14:5</a></li>
+<li><a href="#org63f676a">Hosea 14:6</a></li>
+<li><a href="#orgdf12c96">Hosea 14:7</a></li>
+<li><a href="#orgd16d0dc">Hosea 14:8</a></li>
+<li><a href="#org1e9a2ed">Hosea 14:9</a></li>
+<li><a href="#org6faa0d8">Hosea 14:10</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga0b6d3f" class="outline-2">
+<h2 id="orga0b6d3f">Hosea 1</h2>
+<div class="outline-text-2" id="text-orga0b6d3f">
+</div>
+<div id="outline-container-orgfd9d5e1" class="outline-3">
+<h3 id="orgfd9d5e1">Hosea 1:1</h3>
+<div class="outline-text-3" id="text-orgfd9d5e1">
+<p>
+Verbum Domini, quod factum est ad Osee, filium Beeri, in diebus Oziæ, Joathan, Achaz, Ezechiæ, regum Juda ; et in diebus Jeroboam, filii Joas, regis Israël.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cbca84" class="outline-3">
+<h3 id="org9cbca84">Hosea 1:2</h3>
+<div class="outline-text-3" id="text-org9cbca84">
+<p>
+Principium loquendi Domino in Osee. Et dixit Dominus ad Osee : Vade, sume tibi uxorem fornicationum, et fac tibi filios fornicationum, quia fornicans fornicabitur terra a Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99f320e" class="outline-3">
+<h3 id="org99f320e">Hosea 1:3</h3>
+<div class="outline-text-3" id="text-org99f320e">
+<p>
+Et abiit, et accepit Gomer, filiam Debelaim : et concepit, et peperit ei filium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb687aa8" class="outline-3">
+<h3 id="orgb687aa8">Hosea 1:4</h3>
+<div class="outline-text-3" id="text-orgb687aa8">
+<p>
+Et dixit Dominus ad eum : Voca nomen ejus Jezrahel, quoniam adhuc modicum, et visitabo sanguinem Jezrahel super domum Jehu, et quiescere faciam regnum domus Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2071ee0" class="outline-3">
+<h3 id="org2071ee0">Hosea 1:5</h3>
+<div class="outline-text-3" id="text-org2071ee0">
+<p>
+Et in illa die conteram arcum Israël in valle Jezrahel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4eb82fa" class="outline-3">
+<h3 id="org4eb82fa">Hosea 1:6</h3>
+<div class="outline-text-3" id="text-org4eb82fa">
+<p>
+Et concepit adhuc, et peperit filiam. Et dixit ei : Voca nomen ejus, Absque misericordia, quia non addam ultra misereri domui Israël, sed oblivione obliviscar eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org373080a" class="outline-3">
+<h3 id="org373080a">Hosea 1:7</h3>
+<div class="outline-text-3" id="text-org373080a">
+<p>
+Et domui Juda miserebor, et salvabo eos in Domino Deo suo ; et non salvabo eos in arcu et gladio, et in bello, et in equis, et in equitibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffc9d37" class="outline-3">
+<h3 id="orgffc9d37">Hosea 1:8</h3>
+<div class="outline-text-3" id="text-orgffc9d37">
+<p>
+Et ablactavit eam quæ erat Absque misericordia. Et concepit, et peperit filium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb26cf89" class="outline-3">
+<h3 id="orgb26cf89">Hosea 1:9</h3>
+<div class="outline-text-3" id="text-orgb26cf89">
+<p>
+Et dixit : Voca nomen ejus, Non populus meus, quia vos non populus meus, et ego non ero vester.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68b69d0" class="outline-3">
+<h3 id="org68b69d0">Hosea 1:10</h3>
+<div class="outline-text-3" id="text-org68b69d0">
+<p>
+Et erit numerus filiorum Israël quasi arena maris, quæ sine mensura est, et non numerabitur. Et erit in loco ubi dicetur eis : Non populus meus vos : dicetur eis : Filii Dei viventis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11bcc6d" class="outline-3">
+<h3 id="org11bcc6d">Hosea 1:11</h3>
+<div class="outline-text-3" id="text-org11bcc6d">
+<p>
+Et congregabuntur filii Juda et filii Israël pariter ; et ponent sibimet caput unum, et ascendent de terra, quia magnus dies Jezrahel.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe8b57c" class="outline-2">
+<h2 id="orgbe8b57c">Hosea 2</h2>
+<div class="outline-text-2" id="text-orgbe8b57c">
+</div>
+<div id="outline-container-orge29c81b" class="outline-3">
+<h3 id="orge29c81b">Hosea 2:1</h3>
+<div class="outline-text-3" id="text-orge29c81b">
+<p>
+Dicite fratribus vestris : Populus meus ; et sorori vestræ : Misericordiam consecuta.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dfa2cd" class="outline-3">
+<h3 id="org3dfa2cd">Hosea 2:2</h3>
+<div class="outline-text-3" id="text-org3dfa2cd">
+<p>
+Judicate matrem vestram, judicate,  quoniam ipsa non uxor mea,  et ego non vir ejus.  Auferat fornicationes suas a facie sua,  et adulteria sua de medio uberum suorum ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e89d25" class="outline-3">
+<h3 id="org1e89d25">Hosea 2:3</h3>
+<div class="outline-text-3" id="text-org1e89d25">
+<p>
+ne forte expoliem eam nudam,  et statuam eam secundum diem nativitatis suæ,  et ponam eam quasi solitudinem,  et statuam eam velut terram inviam,  et interficiam eam siti. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdb05d0" class="outline-3">
+<h3 id="orgbdb05d0">Hosea 2:4</h3>
+<div class="outline-text-3" id="text-orgbdb05d0">
+<p>
+Et filiorum illius non miserebor,  quoniam filii fornicationum sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge46e65e" class="outline-3">
+<h3 id="orge46e65e">Hosea 2:5</h3>
+<div class="outline-text-3" id="text-orge46e65e">
+<p>
+Quia fornicata est mater eorum,  confusa est quæ concepit eos ;  quia dixit : Vadam post amatores meos,  qui dant panes mihi, et aquas meas,  lanam meam, et linum meum,  oleum meum, et potum meum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2029a0" class="outline-3">
+<h3 id="orgd2029a0">Hosea 2:6</h3>
+<div class="outline-text-3" id="text-orgd2029a0">
+<p>
+Propter hoc ecce ego sepiam viam tuam spinis,  et sepiam eam maceria, et semitas suas non inveniet. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda84924" class="outline-3">
+<h3 id="orgda84924">Hosea 2:7</h3>
+<div class="outline-text-3" id="text-orgda84924">
+<p>
+Et sequetur amatores suos, et non apprehendet eos ;  et quæret eos, et non inveniet :  et dicet : Vadam, et revertar ad virum meum priorem,  quia bene mihi erat tunc magis quam nunc. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org908ef8c" class="outline-3">
+<h3 id="org908ef8c">Hosea 2:8</h3>
+<div class="outline-text-3" id="text-org908ef8c">
+<p>
+Et hæc nescivit, quia ego dedi ei frumentum, et vinum, et oleum,  et argentum multiplicavi ei, et aurum,  quæ fecerunt Baal. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5bcb48b" class="outline-3">
+<h3 id="org5bcb48b">Hosea 2:9</h3>
+<div class="outline-text-3" id="text-org5bcb48b">
+<p>
+Idcirco convertar, et sumam frumentum meum in tempore suo,  et vinum meum in tempore suo.  Et liberabo lanam meam et linum meum,  quæ operiebant ignominiam ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62bcc14" class="outline-3">
+<h3 id="org62bcc14">Hosea 2:10</h3>
+<div class="outline-text-3" id="text-org62bcc14">
+<p>
+Et nunc revelabo stultitiam ejus in oculis amatorum ejus ;  et vir non eruet eam de manu mea ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3347b3c" class="outline-3">
+<h3 id="org3347b3c">Hosea 2:11</h3>
+<div class="outline-text-3" id="text-org3347b3c">
+<p>
+et cessare faciam omne gaudium ejus,  solemnitatem ejus, neomeniam ejus, sabbatum ejus,  et omnia festa tempora ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org347423a" class="outline-3">
+<h3 id="org347423a">Hosea 2:12</h3>
+<div class="outline-text-3" id="text-org347423a">
+<p>
+Et corrumpam vineam ejus, et ficum ejus,  de quibus dixit : Mercedes hæ meæ sunt,  quas dederunt mihi amatores mei ;  et ponam eam in saltum,  et comedet eam bestia agri. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge23ae1b" class="outline-3">
+<h3 id="orge23ae1b">Hosea 2:13</h3>
+<div class="outline-text-3" id="text-orge23ae1b">
+<p>
+Et visitabo super eam dies Baalim,  quibus accendebat incensum,  et ornabatur in aure sua, et monili suo.  Et ibat post amatores suos,  et mei obliviscebatur, dicit Dominus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06d3102" class="outline-3">
+<h3 id="org06d3102">Hosea 2:14</h3>
+<div class="outline-text-3" id="text-org06d3102">
+<p>
+Propter hoc ecce ego lactabo eam,  et ducam eam in solitudinem,  et loquar ad cor ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org156a510" class="outline-3">
+<h3 id="org156a510">Hosea 2:15</h3>
+<div class="outline-text-3" id="text-org156a510">
+<p>
+Et dabo ei vinitores ejus ex eodem loco,  et vallem Achor, ad aperiendam spem ;  et canet ibi juxta dies juventutis suæ,  et juxta dies ascensionis suæ de terra Ægypti. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3773c3" class="outline-3">
+<h3 id="orgb3773c3">Hosea 2:16</h3>
+<div class="outline-text-3" id="text-orgb3773c3">
+<p>
+Et erit in die illa, ait Dominus :  vocabit me, Vir meus,  et non vocabit me ultra Baali. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org159603b" class="outline-3">
+<h3 id="org159603b">Hosea 2:17</h3>
+<div class="outline-text-3" id="text-org159603b">
+<p>
+Et auferam nomina Baalim de ore ejus,  et non recordabitur ultra nominis eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d58112" class="outline-3">
+<h3 id="org9d58112">Hosea 2:18</h3>
+<div class="outline-text-3" id="text-org9d58112">
+<p>
+Et percutiam cum eis fœdus in die illa, cum bestia agri,  et cum volucre cæli, et cum reptili terræ ;  et arcum, et gladium, et bellum conteram de terra,  et dormire eos faciam fiducialiter. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99979e5" class="outline-3">
+<h3 id="org99979e5">Hosea 2:19</h3>
+<div class="outline-text-3" id="text-org99979e5">
+<p>
+Et sponsabo te mihi in sempiternum ;  et sponsabo te mihi in justitia, et judicio,  et in misericordia, et in miserationibus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org562a317" class="outline-3">
+<h3 id="org562a317">Hosea 2:20</h3>
+<div class="outline-text-3" id="text-org562a317">
+<p>
+Et sponsabo te mihi in fide ;  et scies quia ego Dominus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org379571a" class="outline-3">
+<h3 id="org379571a">Hosea 2:21</h3>
+<div class="outline-text-3" id="text-org379571a">
+<p>
+Et erit in die illa :  exaudiam, dicit Dominus, exaudiam cælos,  et illi exaudient terram. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc975205" class="outline-3">
+<h3 id="orgc975205">Hosea 2:22</h3>
+<div class="outline-text-3" id="text-orgc975205">
+<p>
+Et terra exaudiet triticum, et vinum, et oleum,  et hæc exaudient Jezrahel. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9b63da" class="outline-3">
+<h3 id="orga9b63da">Hosea 2:23</h3>
+<div class="outline-text-3" id="text-orga9b63da">
+<p>
+Et seminabo eam mihi in terra,  et miserebor ejus quæ fuit Absque misericordia. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc4d9f0" class="outline-3">
+<h3 id="orgcc4d9f0">Hosea 2:24</h3>
+<div class="outline-text-3" id="text-orgcc4d9f0">
+<p>
+Et dicam Non populo meo : Populus meus es tu ;  et ipse dicet : Deus meus es tu.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge1228a2" class="outline-2">
+<h2 id="orge1228a2">Hosea 3</h2>
+<div class="outline-text-2" id="text-orge1228a2">
+</div>
+<div id="outline-container-org3dfc0c9" class="outline-3">
+<h3 id="org3dfc0c9">Hosea 3:1</h3>
+<div class="outline-text-3" id="text-org3dfc0c9">
+<p>
+Et dixit Dominus ad me : Adhuc vade, et dilige mulierem dilectam amico et adulteram, sicut diligit Dominus filios Israël, et ipsi respiciunt ad deos alienos, et diligunt vinacia uvarum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org275da6b" class="outline-3">
+<h3 id="org275da6b">Hosea 3:2</h3>
+<div class="outline-text-3" id="text-org275da6b">
+<p>
+Et fodi eam mihi quindecim argenteis, et coro hordei, et dimidio coro hordæi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4cd28d" class="outline-3">
+<h3 id="orgc4cd28d">Hosea 3:3</h3>
+<div class="outline-text-3" id="text-orgc4cd28d">
+<p>
+Et dixi ad eam : Dies multos exspectabis me ; non fornicaberis, et non eris viro ; sed et ego exspectabo te.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org673763d" class="outline-3">
+<h3 id="org673763d">Hosea 3:4</h3>
+<div class="outline-text-3" id="text-org673763d">
+<p>
+Quia dies multos sedebunt filii Israël sine rege, et sine principe, et sine sacrificio, et sine altari, et sine ephod, et sine theraphim.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e95368" class="outline-3">
+<h3 id="org7e95368">Hosea 3:5</h3>
+<div class="outline-text-3" id="text-org7e95368">
+<p>
+Et post hæc revertentur filii Israël, et quærent Dominum Deum suum, et David regem suum : et pavebunt ad Dominum, et ad bonum ejus, in novissimo dierum.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9a81af9" class="outline-2">
+<h2 id="org9a81af9">Hosea 4</h2>
+<div class="outline-text-2" id="text-org9a81af9">
+</div>
+<div id="outline-container-orgdffe47c" class="outline-3">
+<h3 id="orgdffe47c">Hosea 4:1</h3>
+<div class="outline-text-3" id="text-orgdffe47c">
+<p>
+Audite verbum Domini, filii Israël,  quia judicium Domino cum habitatoribus terræ :  non est enim veritas, et non est misericordia,  et non est scientia Dei in terra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd063e1e" class="outline-3">
+<h3 id="orgd063e1e">Hosea 4:2</h3>
+<div class="outline-text-3" id="text-orgd063e1e">
+<p>
+Maledictum, et mendacium,  et homicidium, et furtum, et adulterium inundaverunt,  et sanguis sanguinem tetigit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4863ae" class="outline-3">
+<h3 id="orgd4863ae">Hosea 4:3</h3>
+<div class="outline-text-3" id="text-orgd4863ae">
+<p>
+Propter hoc lugebit terra,  et infirmabitur omnis qui habitat in ea,  in bestia agri, et in volucre cæli ;  sed et pisces maris congregabuntur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd772571" class="outline-3">
+<h3 id="orgd772571">Hosea 4:4</h3>
+<div class="outline-text-3" id="text-orgd772571">
+<p>
+Verumtamen unusquisque non judicet,  et non arguatur vir :  populus enim tuus sicut hi qui contradicunt sacerdoti. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4328d6f" class="outline-3">
+<h3 id="org4328d6f">Hosea 4:5</h3>
+<div class="outline-text-3" id="text-org4328d6f">
+<p>
+Et corrues hodie,  et corruet etiam propheta tecum.  Nocte tacere feci matrem tuam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07c8668" class="outline-3">
+<h3 id="org07c8668">Hosea 4:6</h3>
+<div class="outline-text-3" id="text-org07c8668">
+<p>
+Conticuit populus meus,  eo quod non habuerit scientiam :  quia tu scientiam repulisti,  repellam te, ne sacerdotio fungaris mihi ;  et oblita es legis Dei tui,  obliviscar filiorum tuorum et ego. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd885c48" class="outline-3">
+<h3 id="orgd885c48">Hosea 4:7</h3>
+<div class="outline-text-3" id="text-orgd885c48">
+<p>
+Secundum multitudinem eorum sic peccaverunt mihi :  gloriam eorum in ignominiam commutabo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge085c18" class="outline-3">
+<h3 id="orge085c18">Hosea 4:8</h3>
+<div class="outline-text-3" id="text-orge085c18">
+<p>
+Peccata populi mei comedent,  et ad iniquitatem eorum sublevabunt animas eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8f757f" class="outline-3">
+<h3 id="orgd8f757f">Hosea 4:9</h3>
+<div class="outline-text-3" id="text-orgd8f757f">
+<p>
+Et erit sicut populus, sic sacerdos ;  et visitabo super eum vias ejus,  et cogitationes ejus reddam ei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22a3dd5" class="outline-3">
+<h3 id="org22a3dd5">Hosea 4:10</h3>
+<div class="outline-text-3" id="text-org22a3dd5">
+<p>
+Et comedent, et non saturabuntur ;  fornicati sunt, et non cessaverunt :  quoniam Dominum dereliquerunt in non custodiendo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85b3542" class="outline-3">
+<h3 id="org85b3542">Hosea 4:11</h3>
+<div class="outline-text-3" id="text-org85b3542">
+<p>
+Fornicatio, et vinum, et ebrietas auferunt cor. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2171d87" class="outline-3">
+<h3 id="org2171d87">Hosea 4:12</h3>
+<div class="outline-text-3" id="text-org2171d87">
+<p>
+Populus meus in ligno suo interrogavit,  et baculus ejus annuntiavit ei ;  spiritus enim fornicationum decepit eos,  et fornicati sunt a Deo suo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe1ba9e" class="outline-3">
+<h3 id="orgfe1ba9e">Hosea 4:13</h3>
+<div class="outline-text-3" id="text-orgfe1ba9e">
+<p>
+Super capita montium sacrificabant,  et super colles ascendebant thymiama ;  subtus quercum, et populum, et terebinthum,  quia bona erat umbra ejus ;  ideo fornicabuntur filiæ vestræ,  et sponsæ vestræ adulteræ erunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org093a156" class="outline-3">
+<h3 id="org093a156">Hosea 4:14</h3>
+<div class="outline-text-3" id="text-org093a156">
+<p>
+Non visitabo super filias vestras cum fuerint fornicatæ,  et super sponsas vestras cum adulteraverint,  quoniam ipsi cum meretricibus conversabantur,  et cum effeminatis sacrificabant ;  et populus non intelligens vapulabit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6474bca" class="outline-3">
+<h3 id="org6474bca">Hosea 4:15</h3>
+<div class="outline-text-3" id="text-org6474bca">
+<p>
+Si fornicaris tu, Israël,  non delinquat saltem Juda ;  et nolite ingredi in Galgala,  et ne ascenderitis in Bethaven,  neque juraveritis : Vivit Dominus ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd027fb4" class="outline-3">
+<h3 id="orgd027fb4">Hosea 4:16</h3>
+<div class="outline-text-3" id="text-orgd027fb4">
+<p>
+Quoniam sicut vacca lasciviens declinavit Israël ;  nunc pascet eos Dominus, quasi agnum in latitudine. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdeed284" class="outline-3">
+<h3 id="orgdeed284">Hosea 4:17</h3>
+<div class="outline-text-3" id="text-orgdeed284">
+<p>
+Particeps idolorum Ephraim : dimitte eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b98f06" class="outline-3">
+<h3 id="org7b98f06">Hosea 4:18</h3>
+<div class="outline-text-3" id="text-org7b98f06">
+<p>
+Separatum est convivium eorum ;  fornicatione fornicati sunt :  dilexerunt afferre ignominiam protectores ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf77615" class="outline-3">
+<h3 id="orgdf77615">Hosea 4:19</h3>
+<div class="outline-text-3" id="text-orgdf77615">
+<p>
+Ligavit eum spiritus in alis suis,  et confundentur a sacrificiis suis.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2793f75" class="outline-2">
+<h2 id="org2793f75">Hosea 5</h2>
+<div class="outline-text-2" id="text-org2793f75">
+</div>
+<div id="outline-container-org12202e9" class="outline-3">
+<h3 id="org12202e9">Hosea 5:1</h3>
+<div class="outline-text-3" id="text-org12202e9">
+<p>
+Audite hoc, sacerdotes,  et attendite, domus Israël,  et domus regis, auscultate :  quia vobis judicium est,  quoniam laqueus facti estis speculationi,  et rete expansum super Thabor. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90b734e" class="outline-3">
+<h3 id="org90b734e">Hosea 5:2</h3>
+<div class="outline-text-3" id="text-org90b734e">
+<p>
+Et victimas declinastis in profundum ;  et ego eruditor omnium eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6583ff3" class="outline-3">
+<h3 id="org6583ff3">Hosea 5:3</h3>
+<div class="outline-text-3" id="text-org6583ff3">
+<p>
+Ego scio Ephraim,  et Israël non est absconditus a me :  quia nunc fornicatus est Ephraim ;  contaminatus est Israël. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d23018" class="outline-3">
+<h3 id="org3d23018">Hosea 5:4</h3>
+<div class="outline-text-3" id="text-org3d23018">
+<p>
+Non dabunt cogitationes suas ut revertantur ad Deum suum,  quia spiritus fornicationum in medio eorum,  et Dominum non cognoverunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14209bc" class="outline-3">
+<h3 id="org14209bc">Hosea 5:5</h3>
+<div class="outline-text-3" id="text-org14209bc">
+<p>
+Et respondebit arrogantia Israël in facie ejus,  et Israël et Ephraim ruent in iniquitate sua :  ruet etiam Judas cum eis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9615f8" class="outline-3">
+<h3 id="orge9615f8">Hosea 5:6</h3>
+<div class="outline-text-3" id="text-orge9615f8">
+<p>
+In gregibus suis et in armentis suis vadent ad quærendum Dominum,  et non invenient :  ablatus est ab eis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org857ade8" class="outline-3">
+<h3 id="org857ade8">Hosea 5:7</h3>
+<div class="outline-text-3" id="text-org857ade8">
+<p>
+In Dominum prævaricati sunt,  quia filios alienos genuerunt :  nunc devorabit eos mensis, cum partibus suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb78639a" class="outline-3">
+<h3 id="orgb78639a">Hosea 5:8</h3>
+<div class="outline-text-3" id="text-orgb78639a">
+<p>
+Clangite buccina in Gabaa,  tuba in Rama ;  ululate in Bethaven,  post tergum tuum, Benjamin. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc1208d" class="outline-3">
+<h3 id="orgcc1208d">Hosea 5:9</h3>
+<div class="outline-text-3" id="text-orgcc1208d">
+<p>
+Ephraim in desolatione erit in die correptionis ;  in tribubus Israël ostendi fidem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca923bf" class="outline-3">
+<h3 id="orgca923bf">Hosea 5:10</h3>
+<div class="outline-text-3" id="text-orgca923bf">
+<p>
+Facti sunt principes Juda quasi assumentes terminum ;  super eos effundam quasi aquam iram meam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02b04b5" class="outline-3">
+<h3 id="org02b04b5">Hosea 5:11</h3>
+<div class="outline-text-3" id="text-org02b04b5">
+<p>
+Calumniam patiens est Ephraim, fractus judicio,  quoniam cœpit abire post sordes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org617897e" class="outline-3">
+<h3 id="org617897e">Hosea 5:12</h3>
+<div class="outline-text-3" id="text-org617897e">
+<p>
+Et ego quasi tinea Ephraim,  et quasi putredo domui Juda. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a7c6a6" class="outline-3">
+<h3 id="org7a7c6a6">Hosea 5:13</h3>
+<div class="outline-text-3" id="text-org7a7c6a6">
+<p>
+Et vidit Ephraim languorem suum,  et Juda vinculum suum ;  et abiit Ephraim ad Assur,  et misit ad regem ultorem :  et ipse non poterit sanare vos,  nec solvere poterit a vobis vinculum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcdc560" class="outline-3">
+<h3 id="orgbcdc560">Hosea 5:14</h3>
+<div class="outline-text-3" id="text-orgbcdc560">
+<p>
+Quoniam ego quasi leæna Ephraim,  et quasi catulus leonis domui Juda.  Ego, ego capiam, et vadam ;  tollam, et non est qui eruat. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8146232" class="outline-3">
+<h3 id="org8146232">Hosea 5:15</h3>
+<div class="outline-text-3" id="text-org8146232">
+<p>
+Vadens revertar ad locum meum,  donec deficiatis, et quæratis faciem meam.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcf02655" class="outline-2">
+<h2 id="orgcf02655">Hosea 6</h2>
+<div class="outline-text-2" id="text-orgcf02655">
+</div>
+<div id="outline-container-orgb4fd6ef" class="outline-3">
+<h3 id="orgb4fd6ef">Hosea 6:1</h3>
+<div class="outline-text-3" id="text-orgb4fd6ef">
+<p>
+In tribulatione sua mane consurgent ad me :  Venite, et revertamur ad Dominum, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org640e58d" class="outline-3">
+<h3 id="org640e58d">Hosea 6:2</h3>
+<div class="outline-text-3" id="text-org640e58d">
+<p>
+quia ipse cepit, et sanabit nos ;  percutiet, et curabit nos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge54f289" class="outline-3">
+<h3 id="orge54f289">Hosea 6:3</h3>
+<div class="outline-text-3" id="text-orge54f289">
+<p>
+Vivificabit nos post duos dies ;  in die tertia suscitabit nos,  et vivemus in conspectu ejus.  Sciemus, sequemurque ut cognoscamus Dominum :  quasi diluculum præparatus est egressus ejus,  et veniet quasi imber nobis temporaneus et serotinus terræ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0101e57" class="outline-3">
+<h3 id="org0101e57">Hosea 6:4</h3>
+<div class="outline-text-3" id="text-org0101e57">
+<p>
+Quid faciam tibi, Ephraim ?  quid faciam tibi, Juda ?  misericordia vestra quasi nubes matutina,  et quasi ros mane pertransiens. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d6a316" class="outline-3">
+<h3 id="org8d6a316">Hosea 6:5</h3>
+<div class="outline-text-3" id="text-org8d6a316">
+<p>
+Propter hoc dolavi in prophetis ;  occidi eos in verbis oris mei :  et judicia tua quasi lux egredientur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org495ba66" class="outline-3">
+<h3 id="org495ba66">Hosea 6:6</h3>
+<div class="outline-text-3" id="text-org495ba66">
+<p>
+Quia misericordiam volui, et non sacrificium ;  et scientiam Dei plus quam holocausta. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf652726" class="outline-3">
+<h3 id="orgf652726">Hosea 6:7</h3>
+<div class="outline-text-3" id="text-orgf652726">
+<p>
+Ipsi autem sicut Adam transgressi sunt pactum :  ibi prævaricati sunt in me. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd05825a" class="outline-3">
+<h3 id="orgd05825a">Hosea 6:8</h3>
+<div class="outline-text-3" id="text-orgd05825a">
+<p>
+Galaad civitas operantium idolum,  supplantata sanguine. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org294b05d" class="outline-3">
+<h3 id="org294b05d">Hosea 6:9</h3>
+<div class="outline-text-3" id="text-org294b05d">
+<p>
+Et quasi fauces virorum latronum,  particeps sacerdotum, in via interficientium pergentes de Sichem :  quia scelus operati sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbefa02d" class="outline-3">
+<h3 id="orgbefa02d">Hosea 6:10</h3>
+<div class="outline-text-3" id="text-orgbefa02d">
+<p>
+In domo Israël vidi horrendum :  ibi fornicationes Ephraim,  contaminatus est Israël. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf23258" class="outline-3">
+<h3 id="orgbf23258">Hosea 6:11</h3>
+<div class="outline-text-3" id="text-orgbf23258">
+<p>
+Sed et Juda, pone messem tibi,  cum convertero captivitatem populi mei.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb7e2881" class="outline-2">
+<h2 id="orgb7e2881">Hosea 7</h2>
+<div class="outline-text-2" id="text-orgb7e2881">
+</div>
+<div id="outline-container-orgfe1ed62" class="outline-3">
+<h3 id="orgfe1ed62">Hosea 7:1</h3>
+<div class="outline-text-3" id="text-orgfe1ed62">
+<p>
+Cum sanare vellem Israël,  revelata est iniquitas Ephraim,  et malitia Samariæ,  quia operati sunt mendacium ;  et fur ingressus est spolians,  latrunculus foris. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0059fee" class="outline-3">
+<h3 id="org0059fee">Hosea 7:2</h3>
+<div class="outline-text-3" id="text-org0059fee">
+<p>
+Et ne forte dicant in cordibus suis,  omnem malitiam eorum me recordatum,  nunc circumdederunt eos adinventiones suæ :  coram facie mea factæ sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org833e5bd" class="outline-3">
+<h3 id="org833e5bd">Hosea 7:3</h3>
+<div class="outline-text-3" id="text-org833e5bd">
+<p>
+In malitia sua lætificaverunt regem,  et in mendaciis suis principes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b82f1b" class="outline-3">
+<h3 id="org6b82f1b">Hosea 7:4</h3>
+<div class="outline-text-3" id="text-org6b82f1b">
+<p>
+Omnes adulterantes,  quasi clibanus succensus a coquente ;  quievit paululum civitas a commistione fermenti,  donec fermentaretur totum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6be4012" class="outline-3">
+<h3 id="org6be4012">Hosea 7:5</h3>
+<div class="outline-text-3" id="text-org6be4012">
+<p>
+Dies regis nostri : cœperunt principes furere a vino ;  extendit manum suam cum illusoribus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org943e38e" class="outline-3">
+<h3 id="org943e38e">Hosea 7:6</h3>
+<div class="outline-text-3" id="text-org943e38e">
+<p>
+Quia applicuerunt quasi clibanum cor suum,  cum insidiaretur eis ;  tota nocte dormivit coquens eos :  mane ipse succensus quasi ignis flammæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85b0c28" class="outline-3">
+<h3 id="org85b0c28">Hosea 7:7</h3>
+<div class="outline-text-3" id="text-org85b0c28">
+<p>
+Omnes calefacti sunt quasi clibanus,  et devoraverunt judices suos :  omnes reges eorum ceciderunt ;  non est qui clamat in eis ad me. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f99d91" class="outline-3">
+<h3 id="org1f99d91">Hosea 7:8</h3>
+<div class="outline-text-3" id="text-org1f99d91">
+<p>
+Ephraim in populis ipse commiscebatur ;  Ephraim factus est subcinericius panis, qui non reversatur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b0d9bb" class="outline-3">
+<h3 id="org2b0d9bb">Hosea 7:9</h3>
+<div class="outline-text-3" id="text-org2b0d9bb">
+<p>
+Comederunt alieni robur ejus, et ipse nescivit ;  sed et cani effusi sunt in eo, et ipse ignoravit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38d67db" class="outline-3">
+<h3 id="org38d67db">Hosea 7:10</h3>
+<div class="outline-text-3" id="text-org38d67db">
+<p>
+Et humiliabitur superbia Israël in facie ejus ;  nec reversi sunt ad Dominum Deum suum,  et non quæsierunt eum in omnibus his. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7197d25" class="outline-3">
+<h3 id="org7197d25">Hosea 7:11</h3>
+<div class="outline-text-3" id="text-org7197d25">
+<p>
+Et factus est Ephraim quasi columba seducta non habens cor.  Ægyptum invocabant ; ad Assyrios abierunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4afe5fa" class="outline-3">
+<h3 id="org4afe5fa">Hosea 7:12</h3>
+<div class="outline-text-3" id="text-org4afe5fa">
+<p>
+Et cum profecti fuerint,  expandam super eos rete meum :  quasi volucrem cæli detraham eos ;  cædam eos secundum auditionem cœtus eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1b0b5a" class="outline-3">
+<h3 id="orgf1b0b5a">Hosea 7:13</h3>
+<div class="outline-text-3" id="text-orgf1b0b5a">
+<p>
+Væ eis, quoniam recesserunt a me !  vastabuntur, quia prævaricati sunt in me,  et ego redemi eos,  et ipsi locuti sunt contra me mendacia. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8096946" class="outline-3">
+<h3 id="org8096946">Hosea 7:14</h3>
+<div class="outline-text-3" id="text-org8096946">
+<p>
+Et non clamaverunt ad me in corde suo,  sed ululabant in cubilibus suis :  super triticum et vinum ruminabant ;  recesserunt a me. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd57a4e6" class="outline-3">
+<h3 id="orgd57a4e6">Hosea 7:15</h3>
+<div class="outline-text-3" id="text-orgd57a4e6">
+<p>
+Et ego erudivi eos, et confortavi brachia eorum,  et in me cogitaverunt malitiam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge08229b" class="outline-3">
+<h3 id="orge08229b">Hosea 7:16</h3>
+<div class="outline-text-3" id="text-orge08229b">
+<p>
+Reversi sunt ut essent absque jugo ;  facti sunt quasi arcus dolosus :  cadent in gladio principes eorum, a furore linguæ suæ.  Ista subsannatio eorum in terra Ægypti.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5bacb90" class="outline-2">
+<h2 id="org5bacb90">Hosea 8</h2>
+<div class="outline-text-2" id="text-org5bacb90">
+</div>
+<div id="outline-container-orga8028b8" class="outline-3">
+<h3 id="orga8028b8">Hosea 8:1</h3>
+<div class="outline-text-3" id="text-orga8028b8">
+<p>
+In gutture tuo sit tuba  quasi aquila super domum Domini,  pro eo quod transgressi sunt fœdus meum,  et legem meam prævaricati sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4ab233" class="outline-3">
+<h3 id="orgc4ab233">Hosea 8:2</h3>
+<div class="outline-text-3" id="text-orgc4ab233">
+<p>
+Me invocabunt : Deus meus,  cognovimus te Israël. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc5e313" class="outline-3">
+<h3 id="orgdc5e313">Hosea 8:3</h3>
+<div class="outline-text-3" id="text-orgdc5e313">
+<p>
+Projecit Israël bonum :  inimicus persequetur eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0338879" class="outline-3">
+<h3 id="org0338879">Hosea 8:4</h3>
+<div class="outline-text-3" id="text-org0338879">
+<p>
+Ipsi regnaverunt, et non ex me ;  principes exstiterunt, et non cognovi :  argentum suum et aurum suum fecerunt sibi idola,  ut interirent. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9b4387" class="outline-3">
+<h3 id="orge9b4387">Hosea 8:5</h3>
+<div class="outline-text-3" id="text-orge9b4387">
+<p>
+Projectus est vitulus tuus, Samaria ;  iratus est furor meus in eos.  Usquequo non poterunt emundari ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org639d6cb" class="outline-3">
+<h3 id="org639d6cb">Hosea 8:6</h3>
+<div class="outline-text-3" id="text-org639d6cb">
+<p>
+Quia ex Israël et ipse est :  artifex fecit illum, et non est deus ;  quoniam in aranearum telas erit vitulus Samariæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb93f544" class="outline-3">
+<h3 id="orgb93f544">Hosea 8:7</h3>
+<div class="outline-text-3" id="text-orgb93f544">
+<p>
+Quia ventum seminabunt,  et turbinem metent :  culmus stans non est in eo ;  germen non faciet farinam :  quod etsi fecerit, alieni comedent eam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org797148b" class="outline-3">
+<h3 id="org797148b">Hosea 8:8</h3>
+<div class="outline-text-3" id="text-org797148b">
+<p>
+Devoratus est Israël ;  nunc factus est in nationibus quasi vas immundum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org036084d" class="outline-3">
+<h3 id="org036084d">Hosea 8:9</h3>
+<div class="outline-text-3" id="text-org036084d">
+<p>
+Quia ipsi ascenderunt ad Assur,  onager solitarius sibi ;  Ephraim munera dederunt amatoribus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcda9e12" class="outline-3">
+<h3 id="orgcda9e12">Hosea 8:10</h3>
+<div class="outline-text-3" id="text-orgcda9e12">
+<p>
+Sed et cum mercede conduxerint nationes,  nunc congregabo eos,  et quiescent paulisper ab onere regis et principum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ee1fe3" class="outline-3">
+<h3 id="org0ee1fe3">Hosea 8:11</h3>
+<div class="outline-text-3" id="text-org0ee1fe3">
+<p>
+Quia multiplicavit Ephraim altaria ad peccandum ;  factæ sunt ei aræ in delictum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org506326e" class="outline-3">
+<h3 id="org506326e">Hosea 8:12</h3>
+<div class="outline-text-3" id="text-org506326e">
+<p>
+Scribam ei multiplices leges meas,  quæ velut alienæ computatæ sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaa4ebb" class="outline-3">
+<h3 id="orgfaa4ebb">Hosea 8:13</h3>
+<div class="outline-text-3" id="text-orgfaa4ebb">
+<p>
+Hostias offerent,  immolabunt carnes et comedent,  et Dominus non suscipiet eas :  nunc recordabitur iniquitatis eorum,  et visitabit peccata eorum :  ipsi in Ægyptum convertentur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc98a3c9" class="outline-3">
+<h3 id="orgc98a3c9">Hosea 8:14</h3>
+<div class="outline-text-3" id="text-orgc98a3c9">
+<p>
+Et oblitus est Israël factoris sui,  et ædificavit delubra ;  et Judas multiplicavit urbes munitas ;  et mittam ignem in civitates ejus,  et devorabit ædes illius.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e03cbb" class="outline-2">
+<h2 id="org9e03cbb">Hosea 9</h2>
+<div class="outline-text-2" id="text-org9e03cbb">
+</div>
+<div id="outline-container-org3b9a6f5" class="outline-3">
+<h3 id="org3b9a6f5">Hosea 9:1</h3>
+<div class="outline-text-3" id="text-org3b9a6f5">
+<p>
+Noli lætari, Israël ;  noli exsultare sicut populi :  quia fornicatus es a Deo tuo ;  dilexisti mercedem super omnes areas tritici. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1ef3be" class="outline-3">
+<h3 id="orge1ef3be">Hosea 9:2</h3>
+<div class="outline-text-3" id="text-orge1ef3be">
+<p>
+Area et torcular non pascet eos,  et vinum mentietur eis : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org666609d" class="outline-3">
+<h3 id="org666609d">Hosea 9:3</h3>
+<div class="outline-text-3" id="text-org666609d">
+<p>
+non habitabunt in terra Domini.  Reversus est Ephraim in Ægyptum,  et in Assyriis pollutum comedit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5950284" class="outline-3">
+<h3 id="org5950284">Hosea 9:4</h3>
+<div class="outline-text-3" id="text-org5950284">
+<p>
+Non libabunt Domino vinum,  et non placebunt ei.  Sacrificia eorum quasi panis lugentium ;  omnes qui comedent eum, contaminabuntur :  quia panis eorum animæ ipsorum :  non intrabit in domum Domini. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4cf6f8" class="outline-3">
+<h3 id="orgd4cf6f8">Hosea 9:5</h3>
+<div class="outline-text-3" id="text-orgd4cf6f8">
+<p>
+Quid facietis in die solemni,  in die festivitatis Domini ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge726427" class="outline-3">
+<h3 id="orge726427">Hosea 9:6</h3>
+<div class="outline-text-3" id="text-orge726427">
+<p>
+Ecce enim profecti sunt a vastitate :  Ægyptus congregabit eos ;  Memphis sepeliet eos :  desiderabile argentum eorum urtica hæreditabit,  lappa in tabernaculis eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga343400" class="outline-3">
+<h3 id="orga343400">Hosea 9:7</h3>
+<div class="outline-text-3" id="text-orga343400">
+<p>
+Venerunt dies visitationis,  venerunt dies retributionis.  Scitote, Israël,  stultum prophetam,  insanum virum spiritualem,  propter multitudinem iniquitatis tuæ,  et multitudinem amentiæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba7d748" class="outline-3">
+<h3 id="orgba7d748">Hosea 9:8</h3>
+<div class="outline-text-3" id="text-orgba7d748">
+<p>
+Speculator Ephraim cum Deo meo,  propheta laqueus ruinæ factus est super omnes vias ejus ;  insania in domo Dei ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca6d8df" class="outline-3">
+<h3 id="orgca6d8df">Hosea 9:9</h3>
+<div class="outline-text-3" id="text-orgca6d8df">
+<p>
+Profunde peccaverunt, sicut in diebus Gabaa.  Recordabitur iniquitatis eorum,  et visitabit peccata eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org809de5e" class="outline-3">
+<h3 id="org809de5e">Hosea 9:10</h3>
+<div class="outline-text-3" id="text-org809de5e">
+<p>
+Quasi uvas in deserto inveni Israël,  quasi prima poma ficulneæ in cacumine ejus vidi patres eorum :  ipsi autem intraverunt ad Beelphegor,  et abalienati sunt in confusionem,  et facti sunt abominabiles sicut ea quæ dilexerunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78bc21d" class="outline-3">
+<h3 id="org78bc21d">Hosea 9:11</h3>
+<div class="outline-text-3" id="text-org78bc21d">
+<p>
+Ephraim quasi avis avolavit ;  gloria eorum a partu, et ab utero, et a conceptu. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org827f609" class="outline-3">
+<h3 id="org827f609">Hosea 9:12</h3>
+<div class="outline-text-3" id="text-org827f609">
+<p>
+Quod etsi enutrierint filios suos,  absque liberis eos faciam in hominibus ;  sed et væ eis cum recessero ab eis ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1dde16f" class="outline-3">
+<h3 id="org1dde16f">Hosea 9:13</h3>
+<div class="outline-text-3" id="text-org1dde16f">
+<p>
+Ephraim, ut vidi, Tyrus erat fundata in pulchritudine ;  et Ephraim educet ad interfectorem filios suos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org378ce90" class="outline-3">
+<h3 id="org378ce90">Hosea 9:14</h3>
+<div class="outline-text-3" id="text-org378ce90">
+<p>
+Da eis, Domine. Quid dabis eis ?  da eis vulvam sine liberis, et ubera arentia. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd89dc2" class="outline-3">
+<h3 id="orgcd89dc2">Hosea 9:15</h3>
+<div class="outline-text-3" id="text-orgcd89dc2">
+<p>
+Omnes nequitiæ eorum in Galgal,  quia ibi exosos habui eos.  Propter malitiam adinventionum eorum,  de domo mea ejiciam eos ;  non addam ut diligam eos :  omnes principes eorum recedentes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce946c4" class="outline-3">
+<h3 id="orgce946c4">Hosea 9:16</h3>
+<div class="outline-text-3" id="text-orgce946c4">
+<p>
+Percussus est Ephraim ;  radix eorum exsiccata est :  fructum nequaquam facient,  quod etsi genuerint,  interficiam amantissima uteri eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7b120b" class="outline-3">
+<h3 id="orgb7b120b">Hosea 9:17</h3>
+<div class="outline-text-3" id="text-orgb7b120b">
+<p>
+Abjiciet eos Deus meus, quia non audierunt eum,  et erunt vagi in nationibus.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org89f0148" class="outline-2">
+<h2 id="org89f0148">Hosea 10</h2>
+<div class="outline-text-2" id="text-org89f0148">
+</div>
+<div id="outline-container-org411402e" class="outline-3">
+<h3 id="org411402e">Hosea 10:1</h3>
+<div class="outline-text-3" id="text-org411402e">
+<p>
+Vitis frondosa Israël,  fructus adæquatus est ei :  secundum multitudinem fructus sui multiplicavit altaria,  juxta ubertatem terræ suæ exuberavit simulacris. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90156ce" class="outline-3">
+<h3 id="org90156ce">Hosea 10:2</h3>
+<div class="outline-text-3" id="text-org90156ce">
+<p>
+Divisum est cor eorum, nunc interibunt ;  ipse confringet simulacra eorum,  depopulabitur aras eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87cce7c" class="outline-3">
+<h3 id="org87cce7c">Hosea 10:3</h3>
+<div class="outline-text-3" id="text-org87cce7c">
+<p>
+Quia nunc dicent : Non est rex nobis,  non enim timemus Dominum ;  et rex quid faciet nobis ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b153cd" class="outline-3">
+<h3 id="org8b153cd">Hosea 10:4</h3>
+<div class="outline-text-3" id="text-org8b153cd">
+<p>
+Loquimini verba visionis inutilis, et ferietis fœdus ;  et germinabit quasi amaritudo judicium super sulcos agri. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9c50dc" class="outline-3">
+<h3 id="orgd9c50dc">Hosea 10:5</h3>
+<div class="outline-text-3" id="text-orgd9c50dc">
+<p>
+Vaccas Bethaven coluerunt habitatores Samariæ ;  quia luxit super eum populus ejus,  et æditui ejus super eum exsultaverunt  in gloria ejus, quia migravit ab eo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org076aba9" class="outline-3">
+<h3 id="org076aba9">Hosea 10:6</h3>
+<div class="outline-text-3" id="text-org076aba9">
+<p>
+Siquidem et ipse in Assur delatus est,  munus regi ultori.  Confusio Ephraim capiet,  et confundetur Israël in voluntate sua. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf32f78b" class="outline-3">
+<h3 id="orgf32f78b">Hosea 10:7</h3>
+<div class="outline-text-3" id="text-orgf32f78b">
+<p>
+Transire fecit Samaria regem suum  quasi spumam super faciem aquæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d6d470" class="outline-3">
+<h3 id="org1d6d470">Hosea 10:8</h3>
+<div class="outline-text-3" id="text-org1d6d470">
+<p>
+Et disperdentur excelsa idoli, peccatum Israël ;  lappa et tribulus ascendet super aras eorum :  et dicent montibus : Operite nos,  et collibus : Cadite super nos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f12cfd" class="outline-3">
+<h3 id="org1f12cfd">Hosea 10:9</h3>
+<div class="outline-text-3" id="text-org1f12cfd">
+<p>
+Ex diebus Gabaa peccavit Israël ;  ibi steterunt.  Non comprehendet eos in Gabaa  prælium super filios iniquitatis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1b2dd4" class="outline-3">
+<h3 id="orgb1b2dd4">Hosea 10:10</h3>
+<div class="outline-text-3" id="text-orgb1b2dd4">
+<p>
+Juxta desiderium meum corripiam eos :  congregabuntur super eos populi,  cum corripientur propter duas iniquitates suas. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8a6e1a" class="outline-3">
+<h3 id="orgc8a6e1a">Hosea 10:11</h3>
+<div class="outline-text-3" id="text-orgc8a6e1a">
+<p>
+Ephraim vitula docta diligere trituram,  et ego transivi super pulchritudinem colli ejus :  ascendam super Ephraim,  arabit Judas ;  confringet sibi sulcos Jacob. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge803302" class="outline-3">
+<h3 id="orge803302">Hosea 10:12</h3>
+<div class="outline-text-3" id="text-orge803302">
+<p>
+Seminate vobis in justitia,  et metite in ore misericordiæ.  Innovate vobis novale ;  tempus autem requirendi Dominum,  cum venerit qui docebit vos justitiam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org702c76c" class="outline-3">
+<h3 id="org702c76c">Hosea 10:13</h3>
+<div class="outline-text-3" id="text-org702c76c">
+<p>
+Arastis impietatem,  iniquitatem messuistis :  comedistis frugem mendacii,  quia confisus es in viis tuis,  in multitudine fortium tuorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3245939" class="outline-3">
+<h3 id="org3245939">Hosea 10:14</h3>
+<div class="outline-text-3" id="text-org3245939">
+<p>
+Consurget tumultus in populo tuo ;  et omnes munitiones tuæ vastabuntur,  sicut vastatus est Salmana a domo ejus qui judicavit Baal  in die prælii, matre super filios allisa. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e94d21" class="outline-3">
+<h3 id="org3e94d21">Hosea 10:15</h3>
+<div class="outline-text-3" id="text-org3e94d21">
+<p>
+Sic fecit vobis Bethel,  a facie malitiæ nequitiarum vestrarum.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b9eeb6" class="outline-2">
+<h2 id="org5b9eeb6">Hosea 11</h2>
+<div class="outline-text-2" id="text-org5b9eeb6">
+</div>
+<div id="outline-container-orga3b626a" class="outline-3">
+<h3 id="orga3b626a">Hosea 11:1</h3>
+<div class="outline-text-3" id="text-orga3b626a">
+<p>
+Sicut mane transiit, pertransiit rex Israël.  Quia puer Israël, et dilexi eum ;  et ex Ægypto vocavi filium meum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58d139d" class="outline-3">
+<h3 id="org58d139d">Hosea 11:2</h3>
+<div class="outline-text-3" id="text-org58d139d">
+<p>
+Vocaverunt eos, sic abierunt a facie eorum ;  Baalim immolabant, et simulacris sacrificabant. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fdd147" class="outline-3">
+<h3 id="org4fdd147">Hosea 11:3</h3>
+<div class="outline-text-3" id="text-org4fdd147">
+<p>
+Et ego quasi nutritius Ephraim :  portabam eos in brachiis meis,  et nescierunt quod curarem eos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4679e62" class="outline-3">
+<h3 id="org4679e62">Hosea 11:4</h3>
+<div class="outline-text-3" id="text-org4679e62">
+<p>
+In funiculis Adam traham eos,  in vinculis caritatis ;  et ero eis quasi exaltans jugum super maxillas eorum,  et declinavi ad eum ut vesceretur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org952ebb4" class="outline-3">
+<h3 id="org952ebb4">Hosea 11:5</h3>
+<div class="outline-text-3" id="text-org952ebb4">
+<p>
+Non revertetur in terram Ægypti, et Assur ipse rex ejus,  quoniam noluerunt converti. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae9f991" class="outline-3">
+<h3 id="orgae9f991">Hosea 11:6</h3>
+<div class="outline-text-3" id="text-orgae9f991">
+<p>
+Cœpit gladius in civitatibus ejus,  et consumet electos ejus,  et comedet capita eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4809962" class="outline-3">
+<h3 id="org4809962">Hosea 11:7</h3>
+<div class="outline-text-3" id="text-org4809962">
+<p>
+Et populus meus pendebit ad reditum meum ;  jugum autem imponetur eis simul, quod non auferetur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fe9ea8" class="outline-3">
+<h3 id="org1fe9ea8">Hosea 11:8</h3>
+<div class="outline-text-3" id="text-org1fe9ea8">
+<p>
+Quomodo dabo te, Ephraim ?  protegam te, Israël ?  Quomodo dabo te sicut Adama,  ponam te ut Seboim ?  Conversum est in me cor meum,  pariter conturbata est pœnitudo mea. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc76523f" class="outline-3">
+<h3 id="orgc76523f">Hosea 11:9</h3>
+<div class="outline-text-3" id="text-orgc76523f">
+<p>
+Non faciam furorem iræ meæ ;  non convertar ut disperdam Ephraim,  quoniam Deus ego, et non homo ;  in medio tui sanctus,  et non ingrediar civitatem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d2f2f6" class="outline-3">
+<h3 id="org6d2f2f6">Hosea 11:10</h3>
+<div class="outline-text-3" id="text-org6d2f2f6">
+<p>
+Post Dominum ambulabunt ;  quasi leo rugiet,  quia ipse rugiet,  et formidabunt filii maris. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb31d3c0" class="outline-3">
+<h3 id="orgb31d3c0">Hosea 11:11</h3>
+<div class="outline-text-3" id="text-orgb31d3c0">
+<p>
+Et avolabunt quasi avis ex Ægypto,  et quasi columba de terra Assyriorum :  et collocabo eos in domibus suis, dicit Dominus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org237a7dc" class="outline-3">
+<h3 id="org237a7dc">Hosea 11:12</h3>
+<div class="outline-text-3" id="text-org237a7dc">
+<p>
+Circumdedit me in negatione Ephraim,  et in dolo domus Israël ;  Judas autem testis descendit cum Deo,  et cum sanctis fidelis.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d54ea4" class="outline-2">
+<h2 id="org9d54ea4">Hosea 12</h2>
+<div class="outline-text-2" id="text-org9d54ea4">
+</div>
+<div id="outline-container-org1843690" class="outline-3">
+<h3 id="org1843690">Hosea 12:1</h3>
+<div class="outline-text-3" id="text-org1843690">
+<p>
+Ephraim pascit ventum,  et sequitur æstum ;  tota die mendacium et vastitatem multiplicat :  et fœdus cum Assyriis iniit,  et oleum in Ægyptum ferebat. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43a561a" class="outline-3">
+<h3 id="org43a561a">Hosea 12:2</h3>
+<div class="outline-text-3" id="text-org43a561a">
+<p>
+Judicium ergo Domini cum Juda,  et visitatio super Jacob :  juxta vias ejus, et juxta adinventiones ejus reddet ei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92e6176" class="outline-3">
+<h3 id="org92e6176">Hosea 12:3</h3>
+<div class="outline-text-3" id="text-org92e6176">
+<p>
+In utero supplantavit fratrem suum,  et in fortitudine sua directus est cum angelo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f3a199" class="outline-3">
+<h3 id="org9f3a199">Hosea 12:4</h3>
+<div class="outline-text-3" id="text-org9f3a199">
+<p>
+Et invaluit ad angelum, et confortatus est ;  flevit, et rogavit eum.  In Bethel invenit eum,  et ibi locutus est nobiscum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a3cf82" class="outline-3">
+<h3 id="org0a3cf82">Hosea 12:5</h3>
+<div class="outline-text-3" id="text-org0a3cf82">
+<p>
+Et Dominus Deus exercituum,  Dominus memoriale ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf15205" class="outline-3">
+<h3 id="orgdf15205">Hosea 12:6</h3>
+<div class="outline-text-3" id="text-orgdf15205">
+<p>
+Et tu ad Deum tuum converteris ;  misericordiam et judicium custodi,  et spera in Deo tuo semper. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6450e4" class="outline-3">
+<h3 id="orgd6450e4">Hosea 12:7</h3>
+<div class="outline-text-3" id="text-orgd6450e4">
+<p>
+Chanaan, in manu ejus statera dolosa,  calumniam dilexit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ccd231" class="outline-3">
+<h3 id="org9ccd231">Hosea 12:8</h3>
+<div class="outline-text-3" id="text-org9ccd231">
+<p>
+Et dixit Ephraim : Verumtamen dives effectus sum ;  inveni idolum mihi :  omnes labores mei non invenient mihi iniquitatem quam peccavi. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2a71ff" class="outline-3">
+<h3 id="orgf2a71ff">Hosea 12:9</h3>
+<div class="outline-text-3" id="text-orgf2a71ff">
+<p>
+Et ego Dominus Deus tuus ex terra Ægypti :  adhuc sedere te faciam in tabernaculis, sicut in diebus festivitatis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaae7d79" class="outline-3">
+<h3 id="orgaae7d79">Hosea 12:10</h3>
+<div class="outline-text-3" id="text-orgaae7d79">
+<p>
+Et locutus sum super prophetas,  et ego visionem multiplicavi,  et in manu prophetarum assimilatus sum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e35859" class="outline-3">
+<h3 id="org1e35859">Hosea 12:11</h3>
+<div class="outline-text-3" id="text-org1e35859">
+<p>
+Si Galaad idolum, ergo frustra erant in Galgal bobus immolantes ;  nam et altaria eorum quasi acervi super sulcos agri. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf72e0c9" class="outline-3">
+<h3 id="orgf72e0c9">Hosea 12:12</h3>
+<div class="outline-text-3" id="text-orgf72e0c9">
+<p>
+Fugit Jacob in regionem Syriæ,  et servivit Israël in uxorem,  et in uxorem servavit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4d8b81" class="outline-3">
+<h3 id="orgf4d8b81">Hosea 12:13</h3>
+<div class="outline-text-3" id="text-orgf4d8b81">
+<p>
+In propheta autem eduxit Dominus Israël de Ægypto,  et in propheta servatus est. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0a8c04" class="outline-3">
+<h3 id="orge0a8c04">Hosea 12:14</h3>
+<div class="outline-text-3" id="text-orge0a8c04">
+<p>
+Ad iracundiam me provocavit Ephraim in amaritudinibus suis :  et sanguis ejus super eum veniet,  et opprobrium ejus restituet ei Dominus suus.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org93a3ebd" class="outline-2">
+<h2 id="org93a3ebd">Hosea 13</h2>
+<div class="outline-text-2" id="text-org93a3ebd">
+</div>
+<div id="outline-container-org9c59850" class="outline-3">
+<h3 id="org9c59850">Hosea 13:1</h3>
+<div class="outline-text-3" id="text-org9c59850">
+<p>
+Loquente Ephraim, horror invasit Israël ;  et deliquit in Baal, et mortuus est. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c78430" class="outline-3">
+<h3 id="org6c78430">Hosea 13:2</h3>
+<div class="outline-text-3" id="text-org6c78430">
+<p>
+Et nunc addiderunt ad peccandum ;  feceruntque sibi conflatile de argento suo  quasi similitudinem idolorum :  factura artificum totum est :  his ipsi dicunt : Immolate homines, vitulos adorantes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c2e04f" class="outline-3">
+<h3 id="org0c2e04f">Hosea 13:3</h3>
+<div class="outline-text-3" id="text-org0c2e04f">
+<p>
+Idcirco erunt quasi nubes matutina,  et sicut ros matutinus præteriens ;  sicut pulvis turbine raptus ex area,  et sicut fumus de fumario. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4043ee" class="outline-3">
+<h3 id="orgf4043ee">Hosea 13:4</h3>
+<div class="outline-text-3" id="text-orgf4043ee">
+<p>
+Ego autem Dominus Deus tuus, ex terra Ægypti ;  et Deum absque me nescies,  et salvator non est præter me. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee0b373" class="outline-3">
+<h3 id="orgee0b373">Hosea 13:5</h3>
+<div class="outline-text-3" id="text-orgee0b373">
+<p>
+Ego cognovi te in deserto,  in terra solitudinis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70253d2" class="outline-3">
+<h3 id="org70253d2">Hosea 13:6</h3>
+<div class="outline-text-3" id="text-org70253d2">
+<p>
+Juxta pascua sua adimpleti sunt et saturati sunt ;  et levaverunt cor suum, et obliti sunt mei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca04285" class="outline-3">
+<h3 id="orgca04285">Hosea 13:7</h3>
+<div class="outline-text-3" id="text-orgca04285">
+<p>
+Et ego ero eis quasi leæna,  sicut pardus in via Assyriorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd55a3c" class="outline-3">
+<h3 id="orgdd55a3c">Hosea 13:8</h3>
+<div class="outline-text-3" id="text-orgdd55a3c">
+<p>
+Occurram eis quasi ursa raptis catulis,  et dirumpam interiora jecoris eorum,  et consumam eos ibi quasi leo :  bestia agri scindet eos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82ef73b" class="outline-3">
+<h3 id="org82ef73b">Hosea 13:9</h3>
+<div class="outline-text-3" id="text-org82ef73b">
+<p>
+Perditio tua, Israël : tantummodo in me auxilium tuum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org878cd0f" class="outline-3">
+<h3 id="org878cd0f">Hosea 13:10</h3>
+<div class="outline-text-3" id="text-org878cd0f">
+<p>
+Ubi est rex tuus ?  maxime nunc salvet te in omnibus urbibus tuis ;  et judices tui, de quibus dixisti :  Da mihi regem et principes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92a976b" class="outline-3">
+<h3 id="org92a976b">Hosea 13:11</h3>
+<div class="outline-text-3" id="text-org92a976b">
+<p>
+Dabo tibi regem in furore meo,  et auferam in indignatione mea. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1db6a76" class="outline-3">
+<h3 id="org1db6a76">Hosea 13:12</h3>
+<div class="outline-text-3" id="text-org1db6a76">
+<p>
+Colligata est iniquitas Ephraim ;  absconditum peccatum ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c07549" class="outline-3">
+<h3 id="org8c07549">Hosea 13:13</h3>
+<div class="outline-text-3" id="text-org8c07549">
+<p>
+Dolores parturientis venient ei :  ipse filius non sapiens :  nunc enim non stabit in contritione filiorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org611818e" class="outline-3">
+<h3 id="org611818e">Hosea 13:14</h3>
+<div class="outline-text-3" id="text-org611818e">
+<p>
+De manu mortis liberabo eos ;  de morte redimam eos.  Ero mors tua, o mors !  morsus tuus ero, inferne !  consolatio abscondita est ab oculis meis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1705af6" class="outline-3">
+<h3 id="org1705af6">Hosea 13:15</h3>
+<div class="outline-text-3" id="text-org1705af6">
+<p>
+Quia ipse inter fratres dividet :  adducet urentem ventum Dominus de deserto ascendentem,  et siccabit venas ejus,  et desolabit fontem ejus :  et ipse diripiet thesaurum omnis vasis desiderabilis.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9bf8357" class="outline-2">
+<h2 id="org9bf8357">Hosea 14</h2>
+<div class="outline-text-2" id="text-org9bf8357">
+</div>
+<div id="outline-container-org51946f5" class="outline-3">
+<h3 id="org51946f5">Hosea 14:1</h3>
+<div class="outline-text-3" id="text-org51946f5">
+<p>
+Pereat Samaria, quoniam ad amaritudinem concitavit Deum suum !  in gladio pereant,  parvuli eorum elidantur,  et fœtæ ejus discindantur ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge60efe0" class="outline-3">
+<h3 id="orge60efe0">Hosea 14:2</h3>
+<div class="outline-text-3" id="text-orge60efe0">
+<p>
+Convertere, Israël, ad Dominum Deum tuum,  quoniam corruisti in iniquitate tua. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c51215" class="outline-3">
+<h3 id="org4c51215">Hosea 14:3</h3>
+<div class="outline-text-3" id="text-org4c51215">
+<p>
+Tollite vobiscum verba,  et convertimini ad Dominum ; et dicite ei :  Omnem aufer iniquitatem, accipe bonum,  et reddemus vitulos labiorum nostrorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5112045" class="outline-3">
+<h3 id="org5112045">Hosea 14:4</h3>
+<div class="outline-text-3" id="text-org5112045">
+<p>
+Assur non salvabit nos :  super equum non ascendemus,  nec dicemus ultra, Dii nostri opera manuum nostrarum :  quia ejus, qui in te est, misereberis pupilli. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd866666" class="outline-3">
+<h3 id="orgd866666">Hosea 14:5</h3>
+<div class="outline-text-3" id="text-orgd866666">
+<p>
+Sanabo contritiones eorum ;  diligam eos spontanee :  quia aversus est furor meus ab eis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63f676a" class="outline-3">
+<h3 id="org63f676a">Hosea 14:6</h3>
+<div class="outline-text-3" id="text-org63f676a">
+<p>
+Ero quasi ros ;  Israël germinabit sicut lilium,  et erumpet radix ejus ut Libani. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf12c96" class="outline-3">
+<h3 id="orgdf12c96">Hosea 14:7</h3>
+<div class="outline-text-3" id="text-orgdf12c96">
+<p>
+Ibunt rami ejus,  et erit quasi oliva gloria ejus,  et odor ejus ut Libani. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd16d0dc" class="outline-3">
+<h3 id="orgd16d0dc">Hosea 14:8</h3>
+<div class="outline-text-3" id="text-orgd16d0dc">
+<p>
+Convertentur sedentes in umbra ejus ;  vivent tritico, et germinabunt quasi vinea ;  memoriale ejus sicut vinum Libani. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e9a2ed" class="outline-3">
+<h3 id="org1e9a2ed">Hosea 14:9</h3>
+<div class="outline-text-3" id="text-org1e9a2ed">
+<p>
+Ephraim, quid mihi ultra idola ?  Ego exaudiam, et dirigam eum ego ut abietem virentem ;  ex me fructus tuus inventus est. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6faa0d8" class="outline-3">
+<h3 id="org6faa0d8">Hosea 14:10</h3>
+<div class="outline-text-3" id="text-org6faa0d8">
+<p>
+Quis sapiens, et intelliget ista ? intelligens, et sciet hæc ?  quia rectæ viæ Domini,  et justi ambulabunt in eis ;  prævaricatores vero corruent in eis.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

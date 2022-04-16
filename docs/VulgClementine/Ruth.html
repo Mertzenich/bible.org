@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9eeabcb">Ruth 1</a>
+<ul>
+<li><a href="#org9aad293">Ruth 1:1</a></li>
+<li><a href="#org93ea947">Ruth 1:2</a></li>
+<li><a href="#orga2e734c">Ruth 1:3</a></li>
+<li><a href="#org2425201">Ruth 1:4</a></li>
+<li><a href="#orgdd958d3">Ruth 1:5</a></li>
+<li><a href="#org8cd11fc">Ruth 1:6</a></li>
+<li><a href="#org541210f">Ruth 1:7</a></li>
+<li><a href="#orgb3ba3f1">Ruth 1:8</a></li>
+<li><a href="#org1f6d1ea">Ruth 1:9</a></li>
+<li><a href="#org2315b1c">Ruth 1:10</a></li>
+<li><a href="#orgc344a31">Ruth 1:11</a></li>
+<li><a href="#org9e94a7b">Ruth 1:12</a></li>
+<li><a href="#org1e8f891">Ruth 1:13</a></li>
+<li><a href="#orgc4eb325">Ruth 1:14</a></li>
+<li><a href="#org3411db6">Ruth 1:15</a></li>
+<li><a href="#org9ee587e">Ruth 1:16</a></li>
+<li><a href="#org27b6ccb">Ruth 1:17</a></li>
+<li><a href="#org1673f8d">Ruth 1:18</a></li>
+<li><a href="#org7192879">Ruth 1:19</a></li>
+<li><a href="#orgabffd34">Ruth 1:20</a></li>
+<li><a href="#org2b43d36">Ruth 1:21</a></li>
+<li><a href="#org265deb6">Ruth 1:22</a></li>
+</ul>
+</li>
+<li><a href="#org0649e13">Ruth 2</a>
+<ul>
+<li><a href="#orgc83e810">Ruth 2:1</a></li>
+<li><a href="#orgd8d90ff">Ruth 2:2</a></li>
+<li><a href="#org736844e">Ruth 2:3</a></li>
+<li><a href="#orgf79769a">Ruth 2:4</a></li>
+<li><a href="#org11cbdeb">Ruth 2:5</a></li>
+<li><a href="#orge3ae16b">Ruth 2:6</a></li>
+<li><a href="#org12c4999">Ruth 2:7</a></li>
+<li><a href="#orgfec796f">Ruth 2:8</a></li>
+<li><a href="#org412f9e3">Ruth 2:9</a></li>
+<li><a href="#orgfaa7209">Ruth 2:10</a></li>
+<li><a href="#org908d3a6">Ruth 2:11</a></li>
+<li><a href="#orgb8fd2cf">Ruth 2:12</a></li>
+<li><a href="#orgd0117c9">Ruth 2:13</a></li>
+<li><a href="#org5c94f19">Ruth 2:14</a></li>
+<li><a href="#orge2578e9">Ruth 2:15</a></li>
+<li><a href="#org2ae5642">Ruth 2:16</a></li>
+<li><a href="#org39aced8">Ruth 2:17</a></li>
+<li><a href="#orgb0baf17">Ruth 2:18</a></li>
+<li><a href="#orgcd8ef06">Ruth 2:19</a></li>
+<li><a href="#org5590ffd">Ruth 2:20</a></li>
+<li><a href="#orgfd2415e">Ruth 2:21</a></li>
+<li><a href="#org79c27b3">Ruth 2:22</a></li>
+<li><a href="#org25ac09c">Ruth 2:23</a></li>
+</ul>
+</li>
+<li><a href="#orgf5cca7b">Ruth 3</a>
+<ul>
+<li><a href="#org589adaa">Ruth 3:1</a></li>
+<li><a href="#orgdb427a0">Ruth 3:2</a></li>
+<li><a href="#org2663aed">Ruth 3:3</a></li>
+<li><a href="#org7189783">Ruth 3:4</a></li>
+<li><a href="#org7f4a260">Ruth 3:5</a></li>
+<li><a href="#org2c9b3c8">Ruth 3:6</a></li>
+<li><a href="#org858a593">Ruth 3:7</a></li>
+<li><a href="#org4e43ea2">Ruth 3:8</a></li>
+<li><a href="#org186f7e2">Ruth 3:9</a></li>
+<li><a href="#orge0575c9">Ruth 3:10</a></li>
+<li><a href="#org06a15da">Ruth 3:11</a></li>
+<li><a href="#org9359439">Ruth 3:12</a></li>
+<li><a href="#org27d8a17">Ruth 3:13</a></li>
+<li><a href="#orgeee36f4">Ruth 3:14</a></li>
+<li><a href="#org0f0e7c2">Ruth 3:15</a></li>
+<li><a href="#orge1ae135">Ruth 3:16</a></li>
+<li><a href="#orgb05f192">Ruth 3:17</a></li>
+<li><a href="#orgeeb3ed0">Ruth 3:18</a></li>
+</ul>
+</li>
+<li><a href="#orgc610a1a">Ruth 4</a>
+<ul>
+<li><a href="#orge46f800">Ruth 4:1</a></li>
+<li><a href="#orga13525e">Ruth 4:2</a></li>
+<li><a href="#orgd0bfe61">Ruth 4:3</a></li>
+<li><a href="#org535a6d1">Ruth 4:4</a></li>
+<li><a href="#org968dd0c">Ruth 4:5</a></li>
+<li><a href="#orgb4f8e39">Ruth 4:6</a></li>
+<li><a href="#orgb926412">Ruth 4:7</a></li>
+<li><a href="#org009dcf2">Ruth 4:8</a></li>
+<li><a href="#org35dee80">Ruth 4:9</a></li>
+<li><a href="#org8ccfe93">Ruth 4:10</a></li>
+<li><a href="#orge8e8b89">Ruth 4:11</a></li>
+<li><a href="#orgab5b2a4">Ruth 4:12</a></li>
+<li><a href="#orgd15438d">Ruth 4:13</a></li>
+<li><a href="#orgc6cad87">Ruth 4:14</a></li>
+<li><a href="#orge89096e">Ruth 4:15</a></li>
+<li><a href="#org14a1ebc">Ruth 4:16</a></li>
+<li><a href="#org53fb313">Ruth 4:17</a></li>
+<li><a href="#org3342d3c">Ruth 4:18</a></li>
+<li><a href="#org71d4667">Ruth 4:19</a></li>
+<li><a href="#orga5278b2">Ruth 4:20</a></li>
+<li><a href="#orgf356270">Ruth 4:21</a></li>
+<li><a href="#org8caf183">Ruth 4:22</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9eeabcb" class="outline-2">
+<h2 id="org9eeabcb">Ruth 1</h2>
+<div class="outline-text-2" id="text-org9eeabcb">
+</div>
+<div id="outline-container-org9aad293" class="outline-3">
+<h3 id="org9aad293">Ruth 1:1</h3>
+<div class="outline-text-3" id="text-org9aad293">
+<p>
+In diebus unius judicis, quando judices præerant, facta est fames in terra. Abiitque homo de Bethlehem Juda, ut peregrinaretur in regione Moabitide cum uxore sua ac duobus liberis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93ea947" class="outline-3">
+<h3 id="org93ea947">Ruth 1:2</h3>
+<div class="outline-text-3" id="text-org93ea947">
+<p>
+Ipse vocabatur Elimelech, et uxor ejus Noëmi : et duo filii, alter Mahalon, et alter Chelion, Ephrathæi de Bethlehem Juda. Ingressique regionem Moabitidem, morabantur ibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2e734c" class="outline-3">
+<h3 id="orga2e734c">Ruth 1:3</h3>
+<div class="outline-text-3" id="text-orga2e734c">
+<p>
+Et mortuus est Elimelech maritus Noëmi : remansitque ipsa cum filiis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2425201" class="outline-3">
+<h3 id="org2425201">Ruth 1:4</h3>
+<div class="outline-text-3" id="text-org2425201">
+<p>
+Qui acceperunt uxores Moabitidas, quarum una vocabatur Orpha, altera vero Ruth. Manseruntque ibi decem annis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd958d3" class="outline-3">
+<h3 id="orgdd958d3">Ruth 1:5</h3>
+<div class="outline-text-3" id="text-orgdd958d3">
+<p>
+et ambo mortui sunt, Mahalon videlicet et Chelion : remansitque mulier orbata duobus liberis ac marito.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cd11fc" class="outline-3">
+<h3 id="org8cd11fc">Ruth 1:6</h3>
+<div class="outline-text-3" id="text-org8cd11fc">
+<p>
+Et surrexit ut in patriam pergeret cum utraque nuru sua de regione Moabitide : audierat enim quod respexisset Dominus populum suum, et dedisset eis escas.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org541210f" class="outline-3">
+<h3 id="org541210f">Ruth 1:7</h3>
+<div class="outline-text-3" id="text-org541210f">
+<p>
+Egressa est itaque de loco peregrinationis suæ, cum utraque nuru : et jam in via revertendi posita in terram Juda,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3ba3f1" class="outline-3">
+<h3 id="orgb3ba3f1">Ruth 1:8</h3>
+<div class="outline-text-3" id="text-orgb3ba3f1">
+<p>
+dixit ad eas : Ite in domum matris vestræ : faciat vobiscum Dominus misericordiam, sicut fecistis cum mortuis, et mecum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f6d1ea" class="outline-3">
+<h3 id="org1f6d1ea">Ruth 1:9</h3>
+<div class="outline-text-3" id="text-org1f6d1ea">
+<p>
+Det vobis invenire requiem in domibus virorum quos sortituræ estis. Et osculata est eas. Quæ elevata voce flere cœperunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2315b1c" class="outline-3">
+<h3 id="org2315b1c">Ruth 1:10</h3>
+<div class="outline-text-3" id="text-org2315b1c">
+<p>
+et dicere : Tecum pergemus ad populum tuum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc344a31" class="outline-3">
+<h3 id="orgc344a31">Ruth 1:11</h3>
+<div class="outline-text-3" id="text-orgc344a31">
+<p>
+Quibus illa respondit : Revertimini, filiæ meæ, cur venitis mecum ? num ultra habeo filios in utero meo, ut viros ex me sperare possitis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e94a7b" class="outline-3">
+<h3 id="org9e94a7b">Ruth 1:12</h3>
+<div class="outline-text-3" id="text-org9e94a7b">
+<p>
+Revertimini, filiæ meæ, et abite : jam enim senectute confecta sum, nec apta vinculo conjugali : etiamsi possem hac nocte concipere, et parere filios,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e8f891" class="outline-3">
+<h3 id="org1e8f891">Ruth 1:13</h3>
+<div class="outline-text-3" id="text-org1e8f891">
+<p>
+si eos expectare velitis donec crescant, et annos pubertatis impleant, ante eritis vetulæ quam nubatis. Nolite, quæso, filiæ meæ : quia vestra angustia magis me premit, et egressa est manus Domini contra me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4eb325" class="outline-3">
+<h3 id="orgc4eb325">Ruth 1:14</h3>
+<div class="outline-text-3" id="text-orgc4eb325">
+<p>
+Elevata igitur voce, rursum flere cœperunt : Orpha osculata est socrum, ac reversa est ; Ruth adhæsit socrui suæ :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3411db6" class="outline-3">
+<h3 id="org3411db6">Ruth 1:15</h3>
+<div class="outline-text-3" id="text-org3411db6">
+<p>
+cui dixit Noëmi : En reversa est cognata tua ad populum suum, et ad deos suos, vade cum ea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ee587e" class="outline-3">
+<h3 id="org9ee587e">Ruth 1:16</h3>
+<div class="outline-text-3" id="text-org9ee587e">
+<p>
+Quæ respondit : Ne adverseris mihi ut relinquam te et abeam : quocumque enim perrexeris, pergam, et ubi morata fueris, et ego pariter morabor. Populus tuus populus meus, et Deus tuus Deus meus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27b6ccb" class="outline-3">
+<h3 id="org27b6ccb">Ruth 1:17</h3>
+<div class="outline-text-3" id="text-org27b6ccb">
+<p>
+Quæ te terra morientem susceperit, in ea moriar : ibique locum accipiam sepulturæ. Hæc mihi faciat Dominus, et hæc addat, si non sola mors me et te separaverit.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1673f8d" class="outline-3">
+<h3 id="org1673f8d">Ruth 1:18</h3>
+<div class="outline-text-3" id="text-org1673f8d">
+<p>
+Videns ergo Noëmi quod obstinato animo Ruth decrevisset secum pergere, adversari noluit, nec ad suos ultra reditum persuadere :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7192879" class="outline-3">
+<h3 id="org7192879">Ruth 1:19</h3>
+<div class="outline-text-3" id="text-org7192879">
+<p>
+profectæque sunt simul, et venerunt in Bethlehem. Quibus urbem ingressis, velox apud cunctos fama percrebruit : dicebantque mulieres : Hæc est illa Noëmi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabffd34" class="outline-3">
+<h3 id="orgabffd34">Ruth 1:20</h3>
+<div class="outline-text-3" id="text-orgabffd34">
+<p>
+Quibus ait : Ne vocetis me Noëmi (id est, pulchram), sed vocate me Mara (id est, amaram), quia amaritudine valde replevit me Omnipotens.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b43d36" class="outline-3">
+<h3 id="org2b43d36">Ruth 1:21</h3>
+<div class="outline-text-3" id="text-org2b43d36">
+<p>
+Egressa sum plena, et vacuam reduxit me Dominus. Cur ergo vocatis me Noëmi, quam Dominus humiliavit, et afflixit Omnipotens ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org265deb6" class="outline-3">
+<h3 id="org265deb6">Ruth 1:22</h3>
+<div class="outline-text-3" id="text-org265deb6">
+<p>
+Venit ergo Noëmi cum Ruth Moabitide nuru sua, de terra peregrinationis suæ : ac reversa est in Bethlehem, quando primum hordea metebantur.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0649e13" class="outline-2">
+<h2 id="org0649e13">Ruth 2</h2>
+<div class="outline-text-2" id="text-org0649e13">
+</div>
+<div id="outline-container-orgc83e810" class="outline-3">
+<h3 id="orgc83e810">Ruth 2:1</h3>
+<div class="outline-text-3" id="text-orgc83e810">
+<p>
+Erat autem viro Elimelech consanguineus, homo potens, et magnarum opum, nomine Booz.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8d90ff" class="outline-3">
+<h3 id="orgd8d90ff">Ruth 2:2</h3>
+<div class="outline-text-3" id="text-orgd8d90ff">
+<p>
+Dixitque Ruth Moabitis ad socrum suam : Si jubes, vadam in agrum, et colligam spicas quæ fugerint manus metentium, ubicumque clementis in me patrisfamilias reperero gratiam. Cui illa respondit : Vade, filia mea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org736844e" class="outline-3">
+<h3 id="org736844e">Ruth 2:3</h3>
+<div class="outline-text-3" id="text-org736844e">
+<p>
+Abiit itaque et colligebat spicas post terga metentium. Accidit autem ut ager ille haberet dominum nomine Booz, qui erat de cognatione Elimelech.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf79769a" class="outline-3">
+<h3 id="orgf79769a">Ruth 2:4</h3>
+<div class="outline-text-3" id="text-orgf79769a">
+<p>
+Et ecce, ipse veniebat de Bethlehem, dixitque messoribus : Dominus vobiscum. Qui responderunt ei : Benedicat tibi Dominus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11cbdeb" class="outline-3">
+<h3 id="org11cbdeb">Ruth 2:5</h3>
+<div class="outline-text-3" id="text-org11cbdeb">
+<p>
+Dixitque Booz juveni, qui messoribus præerat : Cujus est hæc puella ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3ae16b" class="outline-3">
+<h3 id="orge3ae16b">Ruth 2:6</h3>
+<div class="outline-text-3" id="text-orge3ae16b">
+<p>
+Cui respondit : Hæc est Moabitis, quæ venit cum Noëmi, de regione Moabitide,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12c4999" class="outline-3">
+<h3 id="org12c4999">Ruth 2:7</h3>
+<div class="outline-text-3" id="text-org12c4999">
+<p>
+et rogavit ut spicas colligeret remanentes, sequens messorum vestigia : et de mane usque nunc stat in agro, et ne ad momentum quidem domum reversa est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfec796f" class="outline-3">
+<h3 id="orgfec796f">Ruth 2:8</h3>
+<div class="outline-text-3" id="text-orgfec796f">
+<p>
+Et ait Booz ad Ruth : Audi, filia, ne vadas in alterum agrum ad colligendum, nec recedas ab hoc loco : sed jungere puellis meis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org412f9e3" class="outline-3">
+<h3 id="org412f9e3">Ruth 2:9</h3>
+<div class="outline-text-3" id="text-org412f9e3">
+<p>
+et ubi messuerint, sequere. Mandavi enim pueris meis, ut nemo molestus sit tibi : sed etiam si sitieris, vade ad sarcinulas, et bibe aquas, de quibus et pueri bibunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaa7209" class="outline-3">
+<h3 id="orgfaa7209">Ruth 2:10</h3>
+<div class="outline-text-3" id="text-orgfaa7209">
+<p>
+Quæ cadens in faciem suam et adorans super terram, dixit ad eum : Unde mihi hoc, ut invenirem gratiam ante oculos tuos, et nosse me dignareris peregrinam mulierem ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org908d3a6" class="outline-3">
+<h3 id="org908d3a6">Ruth 2:11</h3>
+<div class="outline-text-3" id="text-org908d3a6">
+<p>
+Cui ille respondit : Nuntiata sunt mihi omnia quæ feceris socrui tuæ post mortem viri tui : et quod reliqueris parentes tuos, et terram in qua nata es, et veneris ad populum, quem antea nesciebas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8fd2cf" class="outline-3">
+<h3 id="orgb8fd2cf">Ruth 2:12</h3>
+<div class="outline-text-3" id="text-orgb8fd2cf">
+<p>
+Reddat tibi Dominus pro opere tuo, et plenam mercedem recipias a Domino Deo Israël, ad quem venisti, et sub cujus confugisti alas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0117c9" class="outline-3">
+<h3 id="orgd0117c9">Ruth 2:13</h3>
+<div class="outline-text-3" id="text-orgd0117c9">
+<p>
+Quæ ait : Inveni gratiam apud oculos tuos, domine mi, qui consolatus es me, et locutus es ad cor ancillæ tuæ, quæ non sum similis unius puellarum tuarum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c94f19" class="outline-3">
+<h3 id="org5c94f19">Ruth 2:14</h3>
+<div class="outline-text-3" id="text-org5c94f19">
+<p>
+Dixitque ad eam Booz : Quando hora vescendi fuerit, veni huc, et comede panem, et intinge buccellam tuam in aceto. Sedit itaque ad messorum latus, et congessit polentam sibi, comeditque et saturata est, et tulit reliquias.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2578e9" class="outline-3">
+<h3 id="orge2578e9">Ruth 2:15</h3>
+<div class="outline-text-3" id="text-orge2578e9">
+<p>
+Atque inde surrexit, ut spicas ex more colligeret. Præcepit autem Booz pueris suis, dicens : Etiamsi vobiscum metere voluerit, ne prohibeatis eam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ae5642" class="outline-3">
+<h3 id="org2ae5642">Ruth 2:16</h3>
+<div class="outline-text-3" id="text-org2ae5642">
+<p>
+et de vestris quoque manipulis projicite de industria, et remanere permittite, ut absque rubore colligat, et colligentem nemo corripiat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39aced8" class="outline-3">
+<h3 id="org39aced8">Ruth 2:17</h3>
+<div class="outline-text-3" id="text-org39aced8">
+<p>
+Collegit ergo in agro usque ad vesperam : et quæ collegerat virga cædens et excutiens, invenit hordei quasi ephi mensuram, id est, tres modios.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0baf17" class="outline-3">
+<h3 id="orgb0baf17">Ruth 2:18</h3>
+<div class="outline-text-3" id="text-orgb0baf17">
+<p>
+Quos portans reversa est in civitatem, et ostendit socrui suæ : insuper protulit, et dedit ei de reliquiis cibi sui, quo saturata fuerat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd8ef06" class="outline-3">
+<h3 id="orgcd8ef06">Ruth 2:19</h3>
+<div class="outline-text-3" id="text-orgcd8ef06">
+<p>
+Dixitque ei socrus sua : Ubi hodie collegisti, et ubi fecisti opus ? sit benedictus qui misertus est tui. Indicavitque ei apud quem fuisset operata : et nomen dixit viri, quod Booz vocaretur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5590ffd" class="outline-3">
+<h3 id="org5590ffd">Ruth 2:20</h3>
+<div class="outline-text-3" id="text-org5590ffd">
+<p>
+Cui respondit Noëmi : Benedictus sit a Domino : quoniam eamdem gratiam, quam præbuerat vivis, servavit et mortuis. Rursumque ait : Propinquus noster est homo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd2415e" class="outline-3">
+<h3 id="orgfd2415e">Ruth 2:21</h3>
+<div class="outline-text-3" id="text-orgfd2415e">
+<p>
+Et ait Ruth : Hoc quoque, inquit, præcepit mihi, ut tamdiu messoribus ejus jungerer, donec omnes segetes meterentur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79c27b3" class="outline-3">
+<h3 id="org79c27b3">Ruth 2:22</h3>
+<div class="outline-text-3" id="text-org79c27b3">
+<p>
+Cui dixit socrus : Melius est, filia mea, ut cum puellis ejus exeas ad metendum, ne in alieno agro quispiam resistat tibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25ac09c" class="outline-3">
+<h3 id="org25ac09c">Ruth 2:23</h3>
+<div class="outline-text-3" id="text-org25ac09c">
+<p>
+Juncta est itaque puellis Booz : et tamdiu cum eis messuit, donec hordea et triticum in horreis conderentur.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf5cca7b" class="outline-2">
+<h2 id="orgf5cca7b">Ruth 3</h2>
+<div class="outline-text-2" id="text-orgf5cca7b">
+</div>
+<div id="outline-container-org589adaa" class="outline-3">
+<h3 id="org589adaa">Ruth 3:1</h3>
+<div class="outline-text-3" id="text-org589adaa">
+<p>
+Postquam autem reversa est ad socrum suam, audivit ab ea : Filia mea, quæram tibi requiem, et providebo ut bene sit tibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb427a0" class="outline-3">
+<h3 id="orgdb427a0">Ruth 3:2</h3>
+<div class="outline-text-3" id="text-orgdb427a0">
+<p>
+Booz iste, cujus puellis in agro juncta es, propinquus noster est, et hac nocte aream hordei ventilat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2663aed" class="outline-3">
+<h3 id="org2663aed">Ruth 3:3</h3>
+<div class="outline-text-3" id="text-org2663aed">
+<p>
+Lavare igitur, et ungere, et induere cultioribus vestimentis, et descende in aream : non te videat homo, donec esum potumque finierit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7189783" class="outline-3">
+<h3 id="org7189783">Ruth 3:4</h3>
+<div class="outline-text-3" id="text-org7189783">
+<p>
+Quando autem ierit ad dormiendum, nota locum in quo dormiat : veniesque et discooperies pallium, quo operitur a parte pedum, et projicies te, et ibi jacebis : ipse autem dicet quid agere debeas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f4a260" class="outline-3">
+<h3 id="org7f4a260">Ruth 3:5</h3>
+<div class="outline-text-3" id="text-org7f4a260">
+<p>
+Quæ respondit : Quidquid præceperis, faciam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c9b3c8" class="outline-3">
+<h3 id="org2c9b3c8">Ruth 3:6</h3>
+<div class="outline-text-3" id="text-org2c9b3c8">
+<p>
+Descenditque in aream, et fecit omnia quæ sibi imperaverat socrus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org858a593" class="outline-3">
+<h3 id="org858a593">Ruth 3:7</h3>
+<div class="outline-text-3" id="text-org858a593">
+<p>
+Cumque comedisset Booz, et bibisset, et factus esset hilarior, issetque ad dormiendum juxta acervum manipulorum, venit abscondite, et discooperto pallio, a pedibus ejus se projecit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e43ea2" class="outline-3">
+<h3 id="org4e43ea2">Ruth 3:8</h3>
+<div class="outline-text-3" id="text-org4e43ea2">
+<p>
+Et ecce, nocte jam media expavit homo, et conturbatus est : viditque mulierem jacentem ad pedes suos,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org186f7e2" class="outline-3">
+<h3 id="org186f7e2">Ruth 3:9</h3>
+<div class="outline-text-3" id="text-org186f7e2">
+<p>
+et ait illi : Quæ es ? Illaque respondit : Ego sum Ruth ancilla tua : expande pallium tuum super famulam tuam, quia propinquus es.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0575c9" class="outline-3">
+<h3 id="orge0575c9">Ruth 3:10</h3>
+<div class="outline-text-3" id="text-orge0575c9">
+<p>
+Et ille : Benedicta, inquit, es a Domino, filia, et priorem misericordiam posteriore superasti : quia non est secuta juvenes, pauperes sive divites.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06a15da" class="outline-3">
+<h3 id="org06a15da">Ruth 3:11</h3>
+<div class="outline-text-3" id="text-org06a15da">
+<p>
+Noli ergo metuere, sed quidquid dixeris mihi, faciam tibi. Scit enim omnis populus, qui habitat intra portas urbis meæ, mulierem te esse virtutis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9359439" class="outline-3">
+<h3 id="org9359439">Ruth 3:12</h3>
+<div class="outline-text-3" id="text-org9359439">
+<p>
+Nec abnuo me propinquum, sed est alius me propinquior.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27d8a17" class="outline-3">
+<h3 id="org27d8a17">Ruth 3:13</h3>
+<div class="outline-text-3" id="text-org27d8a17">
+<p>
+Quiesce hac nocte : et facto mane, si te voluerit propinquitatis jure retinere, bene res acta est : sin autem ille noluerit, ego te absque ulla dubitatione suscipiam, vivit Dominus. Dormi usque mane.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeee36f4" class="outline-3">
+<h3 id="orgeee36f4">Ruth 3:14</h3>
+<div class="outline-text-3" id="text-orgeee36f4">
+<p>
+Dormivit itaque ad pedes ejus, usque ad noctis abscessum. Surrexit itaque antequam homines se cognoscerent mutuo, et dixit Booz : Cave ne quis noverit quod huc veneris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f0e7c2" class="outline-3">
+<h3 id="org0f0e7c2">Ruth 3:15</h3>
+<div class="outline-text-3" id="text-org0f0e7c2">
+<p>
+Et rursum : Expande, inquit, pallium tuum, quo operiris, et tene utraque manu. Qua extendente, et tenente, mensus est sex modios hordei, et posuit super eam. Quæ portans ingressa est civitatem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1ae135" class="outline-3">
+<h3 id="orge1ae135">Ruth 3:16</h3>
+<div class="outline-text-3" id="text-orge1ae135">
+<p>
+et venit ad socrum suam. Quæ dixit ei : Quid egisti, filia ? Narravitque ei omnia, quæ sibi fecisset homo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb05f192" class="outline-3">
+<h3 id="orgb05f192">Ruth 3:17</h3>
+<div class="outline-text-3" id="text-orgb05f192">
+<p>
+Et ait : Ecce sex modios hordei dedit mihi, et ait : Nolo vacuam te reverti ad socrum tuam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeeb3ed0" class="outline-3">
+<h3 id="orgeeb3ed0">Ruth 3:18</h3>
+<div class="outline-text-3" id="text-orgeeb3ed0">
+<p>
+Dixitque Noëmi : Expecta, filia, donec videamus quem res exitum habeat : neque enim cessabit homo, nisi compleverit quod locutus est.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc610a1a" class="outline-2">
+<h2 id="orgc610a1a">Ruth 4</h2>
+<div class="outline-text-2" id="text-orgc610a1a">
+</div>
+<div id="outline-container-orge46f800" class="outline-3">
+<h3 id="orge46f800">Ruth 4:1</h3>
+<div class="outline-text-3" id="text-orge46f800">
+<p>
+Ascendit ergo Booz ad portam, et sedit ibi. Cumque vidisset propinquum præterire, de quo prius sermo habitus est, dixit ad eum : Declina paulisper, et sede hic : vocans eum nomine suo. Qui divertit, et sedit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga13525e" class="outline-3">
+<h3 id="orga13525e">Ruth 4:2</h3>
+<div class="outline-text-3" id="text-orga13525e">
+<p>
+Tollens autem Booz decem viros de senioribus civitatis, dixit ad eos : Sedete hic.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0bfe61" class="outline-3">
+<h3 id="orgd0bfe61">Ruth 4:3</h3>
+<div class="outline-text-3" id="text-orgd0bfe61">
+<p>
+Quibus sedentibus, locutus est ad propinquum : Partem agri fratris nostri Elimelech vendet Noëmi, quæ reversa est de regione Moabitide :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org535a6d1" class="outline-3">
+<h3 id="org535a6d1">Ruth 4:4</h3>
+<div class="outline-text-3" id="text-org535a6d1">
+<p>
+quod audire te volui, et tibi dicere coram cunctis sedentibus, et majoribus natu de populo meo. Si vis possidere jure propinquitatis, eme, et posside : sin autem displicet tibi, hoc ipsum indica mihi, ut sciam quid facere debeam : nullus enim est propinquus, excepto te, qui prior es, et me, qui secundus sum. At ille respondit : Ego agrum emam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org968dd0c" class="outline-3">
+<h3 id="org968dd0c">Ruth 4:5</h3>
+<div class="outline-text-3" id="text-org968dd0c">
+<p>
+Cui dixit Booz : Quando emeris agrum de manu mulieris, Ruth quoque Moabitidem, quæ uxor defuncti fuit, debes accipere : ut suscites nomen propinqui tui in hæreditate sua.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4f8e39" class="outline-3">
+<h3 id="orgb4f8e39">Ruth 4:6</h3>
+<div class="outline-text-3" id="text-orgb4f8e39">
+<p>
+Qui respondit : Cedo juri propinquitatis : neque enim posteritatem familiæ meæ delere debeo : tu meo utere privilegio, quo me libenter carere profiteor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb926412" class="outline-3">
+<h3 id="orgb926412">Ruth 4:7</h3>
+<div class="outline-text-3" id="text-orgb926412">
+<p>
+Hic autem erat mos antiquitus in Israël inter propinquos, ut siquando alter alteri suo juri cedebat, ut esset firma concessio, solvebat homo calceamentum suum, et dabat proximo suo : hoc erat testimonium cessionis in Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org009dcf2" class="outline-3">
+<h3 id="org009dcf2">Ruth 4:8</h3>
+<div class="outline-text-3" id="text-org009dcf2">
+<p>
+Dixit ergo propinquo suo Booz : Tolle calceamentum tuum. Quod statim solvit de pede suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35dee80" class="outline-3">
+<h3 id="org35dee80">Ruth 4:9</h3>
+<div class="outline-text-3" id="text-org35dee80">
+<p>
+At ille majoribus natu, et universo populo : Testes vos, inquit, estis hodie, quod possederim omnis quæ fuerunt Elimelech, et Chelion, et Mahalon, tradente Noëmi ;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ccfe93" class="outline-3">
+<h3 id="org8ccfe93">Ruth 4:10</h3>
+<div class="outline-text-3" id="text-org8ccfe93">
+<p>
+et Ruth Moabitidem, uxorem Mahalon, in conjugium sumpserim, ut suscitem nomen defuncti in hæreditate sua, ne vocabulum ejus de familia sua ac fratribus et populo deleatur. Vos, inquam, hujus rei testes estis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8e8b89" class="outline-3">
+<h3 id="orge8e8b89">Ruth 4:11</h3>
+<div class="outline-text-3" id="text-orge8e8b89">
+<p>
+Respondit omnis populus, qui erat in porta, et majores natu : Nos testes sumus : faciat Dominus hanc mulierem, quæ ingreditur domum tuam, sicut Rachel et Liam, quæ ædificaverunt domum Israël : ut sit exemplum virtutis in Ephratha, et habeat celebre nomen in Bethlehem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab5b2a4" class="outline-3">
+<h3 id="orgab5b2a4">Ruth 4:12</h3>
+<div class="outline-text-3" id="text-orgab5b2a4">
+<p>
+fiatque domus tua sicut domus Phares, quem Thamar peperit Judæ, de semine quod tibi dederit Dominus ex hac puella.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd15438d" class="outline-3">
+<h3 id="orgd15438d">Ruth 4:13</h3>
+<div class="outline-text-3" id="text-orgd15438d">
+<p>
+Tulit itaque Booz Ruth, et accepit uxorem : ingressusque est ad eam, et dedit illi Dominus ut conciperet, et pareret filium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6cad87" class="outline-3">
+<h3 id="orgc6cad87">Ruth 4:14</h3>
+<div class="outline-text-3" id="text-orgc6cad87">
+<p>
+Dixeruntque mulieres ad Noëmi : Benedictus Dominus, qui non est passus ut deficeret successor familiæ tuæ, et vocaretur nomen ejus in Israël :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge89096e" class="outline-3">
+<h3 id="orge89096e">Ruth 4:15</h3>
+<div class="outline-text-3" id="text-orge89096e">
+<p>
+et habeas qui consoletur animam tuam, et enutriat senectutem : de nuru enim tua natus est, quæ te diligit, et multo tibi melior est, quam si septem haberes filios.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14a1ebc" class="outline-3">
+<h3 id="org14a1ebc">Ruth 4:16</h3>
+<div class="outline-text-3" id="text-org14a1ebc">
+<p>
+Susceptumque Noëmi puerum posuit in sinu suo, et nutricis ac gerulæ fungebatur officio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53fb313" class="outline-3">
+<h3 id="org53fb313">Ruth 4:17</h3>
+<div class="outline-text-3" id="text-org53fb313">
+<p>
+Vicinæ autem mulieris congratulantes ei, et dicentes : Natus est filius Noëmi : vocaverunt nomen ejus Obed : hic est pater Isai, patris David.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3342d3c" class="outline-3">
+<h3 id="org3342d3c">Ruth 4:18</h3>
+<div class="outline-text-3" id="text-org3342d3c">
+<p>
+Hæ sunt generationes Phares : Phares genuit Esron,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71d4667" class="outline-3">
+<h3 id="org71d4667">Ruth 4:19</h3>
+<div class="outline-text-3" id="text-org71d4667">
+<p>
+Esron genuit Aram, Aram genuit Aminadab,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5278b2" class="outline-3">
+<h3 id="orga5278b2">Ruth 4:20</h3>
+<div class="outline-text-3" id="text-orga5278b2">
+<p>
+Aminadab genuit Nahasson, Nahasson genuit Salmon,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf356270" class="outline-3">
+<h3 id="orgf356270">Ruth 4:21</h3>
+<div class="outline-text-3" id="text-orgf356270">
+<p>
+Salmon genuit Booz, Booz genuit Obed,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8caf183" class="outline-3">
+<h3 id="org8caf183">Ruth 4:22</h3>
+<div class="outline-text-3" id="text-org8caf183">
+<p>
+Obed genuit Isai, Isai genuit David.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

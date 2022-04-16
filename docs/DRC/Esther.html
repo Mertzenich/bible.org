@@ -1,0 +1,3109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org00e215c">Esther 1</a>
+<ul>
+<li><a href="#org77b504d">Esther 1:1</a></li>
+<li><a href="#orga190ed4">Esther 1:2</a></li>
+<li><a href="#org3058897">Esther 1:3</a></li>
+<li><a href="#orgc48bfe9">Esther 1:4</a></li>
+<li><a href="#org68437b2">Esther 1:5</a></li>
+<li><a href="#org7718d6b">Esther 1:6</a></li>
+<li><a href="#org71a336b">Esther 1:7</a></li>
+<li><a href="#orgdd69d8d">Esther 1:8</a></li>
+<li><a href="#org058ef70">Esther 1:9</a></li>
+<li><a href="#org5cd3009">Esther 1:10</a></li>
+<li><a href="#org85c7342">Esther 1:11</a></li>
+<li><a href="#orgc337902">Esther 1:12</a></li>
+<li><a href="#org881ede0">Esther 1:13</a></li>
+<li><a href="#org01920f2">Esther 1:14</a></li>
+<li><a href="#orgcc6197d">Esther 1:15</a></li>
+<li><a href="#org84343bf">Esther 1:16</a></li>
+<li><a href="#org9aa082d">Esther 1:17</a></li>
+<li><a href="#org07e0ee2">Esther 1:18</a></li>
+<li><a href="#org441fcee">Esther 1:19</a></li>
+<li><a href="#org1956f0d">Esther 1:20</a></li>
+<li><a href="#org9a5de84">Esther 1:21</a></li>
+<li><a href="#org6e0d769">Esther 1:22</a></li>
+</ul>
+</li>
+<li><a href="#org747ab65">Esther 2</a>
+<ul>
+<li><a href="#org58d357d">Esther 2:1</a></li>
+<li><a href="#org0c26920">Esther 2:2</a></li>
+<li><a href="#orgf139a06">Esther 2:3</a></li>
+<li><a href="#org5cce95a">Esther 2:4</a></li>
+<li><a href="#org03d4422">Esther 2:5</a></li>
+<li><a href="#org8e20842">Esther 2:6</a></li>
+<li><a href="#org08681a4">Esther 2:7</a></li>
+<li><a href="#org005d05b">Esther 2:8</a></li>
+<li><a href="#org03d7fb7">Esther 2:9</a></li>
+<li><a href="#orga19161b">Esther 2:10</a></li>
+<li><a href="#org65d791c">Esther 2:11</a></li>
+<li><a href="#orgd0b5c17">Esther 2:12</a></li>
+<li><a href="#org414b40b">Esther 2:13</a></li>
+<li><a href="#org5ffc8c4">Esther 2:14</a></li>
+<li><a href="#org73b9e1f">Esther 2:15</a></li>
+<li><a href="#org6838643">Esther 2:16</a></li>
+<li><a href="#orgfa6a017">Esther 2:17</a></li>
+<li><a href="#orge28c965">Esther 2:18</a></li>
+<li><a href="#org6c281cd">Esther 2:19</a></li>
+<li><a href="#org19aff02">Esther 2:20</a></li>
+<li><a href="#orge016b50">Esther 2:21</a></li>
+<li><a href="#org6d3ea6d">Esther 2:22</a></li>
+<li><a href="#orgc247d4b">Esther 2:23</a></li>
+</ul>
+</li>
+<li><a href="#org947e1a9">Esther 3</a>
+<ul>
+<li><a href="#org2d081cb">Esther 3:1</a></li>
+<li><a href="#orgd9c68f9">Esther 3:2</a></li>
+<li><a href="#org59f27ba">Esther 3:3</a></li>
+<li><a href="#org4b593f8">Esther 3:4</a></li>
+<li><a href="#orgd314a53">Esther 3:5</a></li>
+<li><a href="#org0163897">Esther 3:6</a></li>
+<li><a href="#org5e2425d">Esther 3:7</a></li>
+<li><a href="#org47f7260">Esther 3:8</a></li>
+<li><a href="#orgb4c851a">Esther 3:9</a></li>
+<li><a href="#orgae99444">Esther 3:10</a></li>
+<li><a href="#org400fc4e">Esther 3:11</a></li>
+<li><a href="#org6cddc80">Esther 3:12</a></li>
+<li><a href="#org1385288">Esther 3:13</a></li>
+<li><a href="#org884ab87">Esther 3:14</a></li>
+<li><a href="#org07bc76d">Esther 3:15</a></li>
+</ul>
+</li>
+<li><a href="#org3f6fb9d">Esther 4</a>
+<ul>
+<li><a href="#org8343c35">Esther 4:1</a></li>
+<li><a href="#org515684c">Esther 4:2</a></li>
+<li><a href="#orgf7b6621">Esther 4:3</a></li>
+<li><a href="#orgf4bc28a">Esther 4:4</a></li>
+<li><a href="#orge00c6c9">Esther 4:5</a></li>
+<li><a href="#org203a392">Esther 4:6</a></li>
+<li><a href="#orgc389366">Esther 4:7</a></li>
+<li><a href="#org979fa6c">Esther 4:8</a></li>
+<li><a href="#org9cc14b9">Esther 4:9</a></li>
+<li><a href="#org1231a32">Esther 4:10</a></li>
+<li><a href="#orgef3d16c">Esther 4:11</a></li>
+<li><a href="#org3ccaf25">Esther 4:12</a></li>
+<li><a href="#org75b46e4">Esther 4:13</a></li>
+<li><a href="#orgda5f16f">Esther 4:14</a></li>
+<li><a href="#org229a3b9">Esther 4:15</a></li>
+<li><a href="#orgecec9f6">Esther 4:16</a></li>
+<li><a href="#org1991639">Esther 4:17</a></li>
+</ul>
+</li>
+<li><a href="#orge33eea2">Esther 5</a>
+<ul>
+<li><a href="#org1100403">Esther 5:1</a></li>
+<li><a href="#orgc24adcf">Esther 5:2</a></li>
+<li><a href="#orgfa83d29">Esther 5:3</a></li>
+<li><a href="#org275c94f">Esther 5:4</a></li>
+<li><a href="#orgc4e5912">Esther 5:5</a></li>
+<li><a href="#org0bd805e">Esther 5:6</a></li>
+<li><a href="#org34469d3">Esther 5:7</a></li>
+<li><a href="#org9558c4a">Esther 5:8</a></li>
+<li><a href="#org5da113b">Esther 5:9</a></li>
+<li><a href="#org15e8d37">Esther 5:10</a></li>
+<li><a href="#org6185d84">Esther 5:11</a></li>
+<li><a href="#org0574f3e">Esther 5:12</a></li>
+<li><a href="#org1ca8dad">Esther 5:13</a></li>
+<li><a href="#org6376da9">Esther 5:14</a></li>
+</ul>
+</li>
+<li><a href="#org708929a">Esther 6</a>
+<ul>
+<li><a href="#org8d3c7f8">Esther 6:1</a></li>
+<li><a href="#orgd2d0d1d">Esther 6:2</a></li>
+<li><a href="#orge12ab2a">Esther 6:3</a></li>
+<li><a href="#org62e24a4">Esther 6:4</a></li>
+<li><a href="#org9c5cc3e">Esther 6:5</a></li>
+<li><a href="#orgf23ae15">Esther 6:6</a></li>
+<li><a href="#org763e713">Esther 6:7</a></li>
+<li><a href="#orga97e6a4">Esther 6:8</a></li>
+<li><a href="#org85f5633">Esther 6:9</a></li>
+<li><a href="#orge9b208a">Esther 6:10</a></li>
+<li><a href="#orgdbf0fb5">Esther 6:11</a></li>
+<li><a href="#org637d135">Esther 6:12</a></li>
+<li><a href="#orgc91480d">Esther 6:13</a></li>
+<li><a href="#org9dcd624">Esther 6:14</a></li>
+</ul>
+</li>
+<li><a href="#org313e3cb">Esther 7</a>
+<ul>
+<li><a href="#org7f964a3">Esther 7:1</a></li>
+<li><a href="#orgf38b52b">Esther 7:2</a></li>
+<li><a href="#orge8b9cf7">Esther 7:3</a></li>
+<li><a href="#org3ed8f20">Esther 7:4</a></li>
+<li><a href="#orgd581def">Esther 7:5</a></li>
+<li><a href="#orgd830c0e">Esther 7:6</a></li>
+<li><a href="#org306a715">Esther 7:7</a></li>
+<li><a href="#org1a3c03e">Esther 7:8</a></li>
+<li><a href="#org39b36b2">Esther 7:9</a></li>
+<li><a href="#org0fc6fa5">Esther 7:10</a></li>
+</ul>
+</li>
+<li><a href="#org397b1dc">Esther 8</a>
+<ul>
+<li><a href="#orgcb3e618">Esther 8:1</a></li>
+<li><a href="#orga2b3ffb">Esther 8:2</a></li>
+<li><a href="#org409b831">Esther 8:3</a></li>
+<li><a href="#org7a797aa">Esther 8:4</a></li>
+<li><a href="#org79d6313">Esther 8:5</a></li>
+<li><a href="#org2b4b60e">Esther 8:6</a></li>
+<li><a href="#org922c11e">Esther 8:7</a></li>
+<li><a href="#org7997818">Esther 8:8</a></li>
+<li><a href="#orgc9f1ed0">Esther 8:9</a></li>
+<li><a href="#orgf3f2337">Esther 8:10</a></li>
+<li><a href="#orgd5a86ed">Esther 8:11</a></li>
+<li><a href="#org8314f97">Esther 8:12</a></li>
+<li><a href="#orgd8542a6">Esther 8:13</a></li>
+<li><a href="#orge6c47d6">Esther 8:14</a></li>
+<li><a href="#orgc669c53">Esther 8:15</a></li>
+<li><a href="#org9a288d8">Esther 8:16</a></li>
+<li><a href="#orgeb1f6ba">Esther 8:17</a></li>
+</ul>
+</li>
+<li><a href="#org2a89abc">Esther 9</a>
+<ul>
+<li><a href="#orgc1b1145">Esther 9:1</a></li>
+<li><a href="#orgfd9d343">Esther 9:2</a></li>
+<li><a href="#org2c10f39">Esther 9:3</a></li>
+<li><a href="#org82565c6">Esther 9:4</a></li>
+<li><a href="#org698c9e3">Esther 9:5</a></li>
+<li><a href="#orgd31022f">Esther 9:6</a></li>
+<li><a href="#orge6ec0f2">Esther 9:7</a></li>
+<li><a href="#org2290854">Esther 9:8</a></li>
+<li><a href="#orgc733f80">Esther 9:9</a></li>
+<li><a href="#org6efba54">Esther 9:10</a></li>
+<li><a href="#org115a16a">Esther 9:11</a></li>
+<li><a href="#org4b3d5a0">Esther 9:12</a></li>
+<li><a href="#orgd5fa791">Esther 9:13</a></li>
+<li><a href="#orgea0e4d0">Esther 9:14</a></li>
+<li><a href="#org8b5fbe9">Esther 9:15</a></li>
+<li><a href="#orgcca8cd4">Esther 9:16</a></li>
+<li><a href="#org0271ef3">Esther 9:17</a></li>
+<li><a href="#org7e9c62d">Esther 9:18</a></li>
+<li><a href="#org96ee853">Esther 9:19</a></li>
+<li><a href="#orgfc5aa50">Esther 9:20</a></li>
+<li><a href="#orga687ff9">Esther 9:21</a></li>
+<li><a href="#org335f8fd">Esther 9:22</a></li>
+<li><a href="#orgaf5d4ac">Esther 9:23</a></li>
+<li><a href="#org71966f1">Esther 9:24</a></li>
+<li><a href="#org6d78597">Esther 9:25</a></li>
+<li><a href="#orgffae84e">Esther 9:26</a></li>
+<li><a href="#org318b683">Esther 9:27</a></li>
+<li><a href="#org3d63992">Esther 9:28</a></li>
+<li><a href="#org7da0bce">Esther 9:29</a></li>
+<li><a href="#org4b5e2da">Esther 9:30</a></li>
+<li><a href="#org58ff1ab">Esther 9:31</a></li>
+<li><a href="#org810dd33">Esther 9:32</a></li>
+</ul>
+</li>
+<li><a href="#org3cff577">Esther 10</a>
+<ul>
+<li><a href="#org184a6d7">Esther 10:1</a></li>
+<li><a href="#orge6db547">Esther 10:2</a></li>
+<li><a href="#orgb5593d1">Esther 10:3</a></li>
+<li><a href="#orgff05d59">Esther 10:4</a></li>
+<li><a href="#org4d7e3ac">Esther 10:5</a></li>
+<li><a href="#org6c0197c">Esther 10:6</a></li>
+<li><a href="#org49a76f1">Esther 10:7</a></li>
+<li><a href="#orgfb53dc9">Esther 10:8</a></li>
+<li><a href="#org49a831f">Esther 10:9</a></li>
+<li><a href="#orgbd929ca">Esther 10:10</a></li>
+<li><a href="#orgc7162ff">Esther 10:11</a></li>
+<li><a href="#orgda7f1d8">Esther 10:12</a></li>
+<li><a href="#org8de3e17">Esther 10:13</a></li>
+</ul>
+</li>
+<li><a href="#org77f4a02">Esther 11</a>
+<ul>
+<li><a href="#org44f036e">Esther 11:1</a></li>
+<li><a href="#orgfd0b27f">Esther 11:2</a></li>
+<li><a href="#orgcce285f">Esther 11:3</a></li>
+<li><a href="#orgeb3e47d">Esther 11:4</a></li>
+<li><a href="#org611a7ee">Esther 11:5</a></li>
+<li><a href="#org650fcee">Esther 11:6</a></li>
+<li><a href="#org1a4c9cf">Esther 11:7</a></li>
+<li><a href="#org2cfc7b7">Esther 11:8</a></li>
+<li><a href="#orgfa28510">Esther 11:9</a></li>
+<li><a href="#org79295d0">Esther 11:10</a></li>
+<li><a href="#org7b209ac">Esther 11:11</a></li>
+<li><a href="#orgd4dd19a">Esther 11:12</a></li>
+</ul>
+</li>
+<li><a href="#orgf099a11">Esther 12</a>
+<ul>
+<li><a href="#org88a2d78">Esther 12:1</a></li>
+<li><a href="#org30da786">Esther 12:2</a></li>
+<li><a href="#org930db7d">Esther 12:3</a></li>
+<li><a href="#orgdf9582a">Esther 12:4</a></li>
+<li><a href="#org5270794">Esther 12:5</a></li>
+<li><a href="#orgc3f0b23">Esther 12:6</a></li>
+</ul>
+</li>
+<li><a href="#org3407741">Esther 13</a>
+<ul>
+<li><a href="#org7338990">Esther 13:1</a></li>
+<li><a href="#org58a6c33">Esther 13:2</a></li>
+<li><a href="#org7bfc6e1">Esther 13:3</a></li>
+<li><a href="#org8e510bf">Esther 13:4</a></li>
+<li><a href="#orgbdcfc08">Esther 13:5</a></li>
+<li><a href="#orgf004cb7">Esther 13:6</a></li>
+<li><a href="#orgfcbc6ff">Esther 13:7</a></li>
+<li><a href="#org6c9e1a5">Esther 13:8</a></li>
+<li><a href="#org85a34d1">Esther 13:9</a></li>
+<li><a href="#orgc15c0dc">Esther 13:10</a></li>
+<li><a href="#org5f19bc3">Esther 13:11</a></li>
+<li><a href="#orga0856a1">Esther 13:12</a></li>
+<li><a href="#org6a10b69">Esther 13:13</a></li>
+<li><a href="#org71a4244">Esther 13:14</a></li>
+<li><a href="#orga3f60ee">Esther 13:15</a></li>
+<li><a href="#orgc98a290">Esther 13:16</a></li>
+<li><a href="#orgdb34bc9">Esther 13:17</a></li>
+<li><a href="#org39c7740">Esther 13:18</a></li>
+</ul>
+</li>
+<li><a href="#orgc92520b">Esther 14</a>
+<ul>
+<li><a href="#orge01420b">Esther 14:1</a></li>
+<li><a href="#orgd639846">Esther 14:2</a></li>
+<li><a href="#org35f8cfb">Esther 14:3</a></li>
+<li><a href="#orgd4dba53">Esther 14:4</a></li>
+<li><a href="#orgaa2225a">Esther 14:5</a></li>
+<li><a href="#org171e8c9">Esther 14:6</a></li>
+<li><a href="#orgba51d35">Esther 14:7</a></li>
+<li><a href="#orgbb9d80e">Esther 14:8</a></li>
+<li><a href="#org76bfde5">Esther 14:9</a></li>
+<li><a href="#org8ecb7e3">Esther 14:10</a></li>
+<li><a href="#orgd6c71ad">Esther 14:11</a></li>
+<li><a href="#org0158195">Esther 14:12</a></li>
+<li><a href="#orgfaf67ba">Esther 14:13</a></li>
+<li><a href="#org8e149a8">Esther 14:14</a></li>
+<li><a href="#org168c981">Esther 14:15</a></li>
+<li><a href="#org0adc1f1">Esther 14:16</a></li>
+<li><a href="#orgfd33915">Esther 14:17</a></li>
+<li><a href="#org66a9e4e">Esther 14:18</a></li>
+<li><a href="#orgf34d52a">Esther 14:19</a></li>
+</ul>
+</li>
+<li><a href="#org17ce9f7">Esther 15</a>
+<ul>
+<li><a href="#orgf148b3f">Esther 15:1</a></li>
+<li><a href="#org6655b81">Esther 15:2</a></li>
+<li><a href="#org7607e74">Esther 15:3</a></li>
+<li><a href="#org066c960">Esther 15:4</a></li>
+<li><a href="#org657e3a1">Esther 15:5</a></li>
+<li><a href="#orgd9b3ef1">Esther 15:6</a></li>
+<li><a href="#orge6f3f84">Esther 15:7</a></li>
+<li><a href="#orgf03a207">Esther 15:8</a></li>
+<li><a href="#org7599c9e">Esther 15:9</a></li>
+<li><a href="#org8a27630">Esther 15:10</a></li>
+<li><a href="#orga03c494">Esther 15:11</a></li>
+<li><a href="#org488f894">Esther 15:12</a></li>
+<li><a href="#orgc7b5831">Esther 15:13</a></li>
+<li><a href="#org0e57a6b">Esther 15:14</a></li>
+<li><a href="#orgc814ad0">Esther 15:15</a></li>
+<li><a href="#org78a1009">Esther 15:16</a></li>
+<li><a href="#org94feab4">Esther 15:17</a></li>
+<li><a href="#orgacd437a">Esther 15:18</a></li>
+<li><a href="#orgdc54902">Esther 15:19</a></li>
+</ul>
+</li>
+<li><a href="#orgb9e1643">Esther 16</a>
+<ul>
+<li><a href="#org347664e">Esther 16:1</a></li>
+<li><a href="#orgfde39de">Esther 16:2</a></li>
+<li><a href="#orgc5f3dc6">Esther 16:3</a></li>
+<li><a href="#orgb766e58">Esther 16:4</a></li>
+<li><a href="#orgd94f473">Esther 16:5</a></li>
+<li><a href="#org3fccda2">Esther 16:6</a></li>
+<li><a href="#org8723ff8">Esther 16:7</a></li>
+<li><a href="#org446244c">Esther 16:8</a></li>
+<li><a href="#org24ddfc4">Esther 16:9</a></li>
+<li><a href="#org69c4e41">Esther 16:10</a></li>
+<li><a href="#orga22590a">Esther 16:11</a></li>
+<li><a href="#org6c1d6c6">Esther 16:12</a></li>
+<li><a href="#orgcc4be57">Esther 16:13</a></li>
+<li><a href="#org61a4564">Esther 16:14</a></li>
+<li><a href="#org337997d">Esther 16:15</a></li>
+<li><a href="#orgd04ac92">Esther 16:16</a></li>
+<li><a href="#org77a2d52">Esther 16:17</a></li>
+<li><a href="#orga88c953">Esther 16:18</a></li>
+<li><a href="#orgd609a52">Esther 16:19</a></li>
+<li><a href="#org5d254cc">Esther 16:20</a></li>
+<li><a href="#org04e6516">Esther 16:21</a></li>
+<li><a href="#orgc8d69e0">Esther 16:22</a></li>
+<li><a href="#org15294bc">Esther 16:23</a></li>
+<li><a href="#org4f47793">Esther 16:24</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org00e215c" class="outline-2">
+<h2 id="org00e215c">Esther 1</h2>
+<div class="outline-text-2" id="text-org00e215c">
+</div>
+<div id="outline-container-org77b504d" class="outline-3">
+<h3 id="org77b504d">Esther 1:1</h3>
+<div class="outline-text-3" id="text-org77b504d">
+<p>
+In the days of Assuerus, who reigned from India to Ethiopia over a hundred and twenty seven provinces:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga190ed4" class="outline-3">
+<h3 id="orga190ed4">Esther 1:2</h3>
+<div class="outline-text-3" id="text-orga190ed4">
+<p>
+When he sat on the throne of his kingdom, the city Susan was the capital of his kingdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3058897" class="outline-3">
+<h3 id="org3058897">Esther 1:3</h3>
+<div class="outline-text-3" id="text-org3058897">
+<p>
+Now in the third year of his reign he made a great feast for all the princes, and for his servants, for the most mighty of the Persians, and the nobles of the Medes, and the governors of the provinces in his sight,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc48bfe9" class="outline-3">
+<h3 id="orgc48bfe9">Esther 1:4</h3>
+<div class="outline-text-3" id="text-orgc48bfe9">
+<p>
+That he might shew the riches of the glory of his kingdom, and the greatness, and boasting of his power, for a long time, to wit, for a hundred and fourscore days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68437b2" class="outline-3">
+<h3 id="org68437b2">Esther 1:5</h3>
+<div class="outline-text-3" id="text-org68437b2">
+<p>
+And when the days of the feast were expired, he invited all the people that were found in Susan, from the greatest to the least: and commanded a feast to be made seven days in the court of the garden, and of the wood, which was planted by the care and the hand of the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7718d6b" class="outline-3">
+<h3 id="org7718d6b">Esther 1:6</h3>
+<div class="outline-text-3" id="text-org7718d6b">
+<p>
+And there were hung up on every side sky coloured, and green, and violet hangings, fastened with cords of silk, and of purple, which were put into rings of ivory, and were held up with marble pillars. The beds also were of gold and silver, placed in order upon a floor paved with porphyry and white marble: which was embellished with painting of wonderful variety.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71a336b" class="outline-3">
+<h3 id="org71a336b">Esther 1:7</h3>
+<div class="outline-text-3" id="text-org71a336b">
+<p>
+And they that were invited, drank in golden cups, and the meats were brought in divers vessels one after another. Wine also in abundance and of the best was presented, as was worthy of a king&rsquo;s magnificence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd69d8d" class="outline-3">
+<h3 id="orgdd69d8d">Esther 1:8</h3>
+<div class="outline-text-3" id="text-orgdd69d8d">
+<p>
+Neither was there any one to compel them to drink that were not willing, but as the king had appointed, who set over every table one of his nobles, that every man might take what he would.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org058ef70" class="outline-3">
+<h3 id="org058ef70">Esther 1:9</h3>
+<div class="outline-text-3" id="text-org058ef70">
+<p>
+Also Vasthi the queen made a feast for the women in the palace, where king Assuerus was used to dwell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5cd3009" class="outline-3">
+<h3 id="org5cd3009">Esther 1:10</h3>
+<div class="outline-text-3" id="text-org5cd3009">
+<p>
+Now on the seventh day, when the king was merry, and after very much drinking was well warmed with wine, he commanded Mauman, and Bazatha, and Harbona, and Bagatha, and Abgatha, and Zethar, and Charcas, the seven eunuchs that served in his presence,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85c7342" class="outline-3">
+<h3 id="org85c7342">Esther 1:11</h3>
+<div class="outline-text-3" id="text-org85c7342">
+<p>
+To bring in queen Vasthi before the king, with the crown set upon her head, to shew her beauty to all the people and the princes: for she was exceeding beautiful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc337902" class="outline-3">
+<h3 id="orgc337902">Esther 1:12</h3>
+<div class="outline-text-3" id="text-orgc337902">
+<p>
+But she refused, and would not come at the king&rsquo;s commandment, which he had signified to her by the eunuchs. Whereupon the king, being angry, and inflamed with a very great fury,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org881ede0" class="outline-3">
+<h3 id="org881ede0">Esther 1:13</h3>
+<div class="outline-text-3" id="text-org881ede0">
+<p>
+Asked the wise men, who according to the custom of the kings, were always near his person, and all he did was by their counsel, who knew the laws, and judgments of their forefathers:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01920f2" class="outline-3">
+<h3 id="org01920f2">Esther 1:14</h3>
+<div class="outline-text-3" id="text-org01920f2">
+<p>
+(Now the chief and nearest him were, Charsena, and Sethar, and Admatha, and Tharsis, and Mares, and Marsana, and Mamuchan, seven princes of the Persians and of the Medes, who saw the face of the king, and were used to sit first after him:)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc6197d" class="outline-3">
+<h3 id="orgcc6197d">Esther 1:15</h3>
+<div class="outline-text-3" id="text-orgcc6197d">
+<p>
+What sentence ought to pass upon Vasthi the queen, who had refused to obey the commandment of king Assuerus, which he had sent to her by the eunuchs?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84343bf" class="outline-3">
+<h3 id="org84343bf">Esther 1:16</h3>
+<div class="outline-text-3" id="text-org84343bf">
+<p>
+And Mamuchan answered, in the hearing of the king and the princes: Queen Vasthi hath not only injured the king, but also all the people and princes that are in all the provinces of king Assuerus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9aa082d" class="outline-3">
+<h3 id="org9aa082d">Esther 1:17</h3>
+<div class="outline-text-3" id="text-org9aa082d">
+<p>
+For this deed of the queen will go abroad to all women, so that they will despise their husbands, and will say: King Assuerus commanded that queen Vasthi should come in to him, and she would not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07e0ee2" class="outline-3">
+<h3 id="org07e0ee2">Esther 1:18</h3>
+<div class="outline-text-3" id="text-org07e0ee2">
+<p>
+And by this example all the wives of the princes of the Persians and the Medes will slight the commandments of their husbands: wherefore the king&rsquo;s indignation is just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org441fcee" class="outline-3">
+<h3 id="org441fcee">Esther 1:19</h3>
+<div class="outline-text-3" id="text-org441fcee">
+<p>
+If it please thee, let an edict go out from thy presence, and let it be written according to the law of the Persians and of the Medes, which must not be altered, that Vasthi come in no more to the king, but another, that is better than her, be made queen in her place.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1956f0d" class="outline-3">
+<h3 id="org1956f0d">Esther 1:20</h3>
+<div class="outline-text-3" id="text-org1956f0d">
+<p>
+And let this be published through all the provinces of thy empire, (which is very wide,) and let all wives, as well of the greater as of the lesser, give honour to their husbands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a5de84" class="outline-3">
+<h3 id="org9a5de84">Esther 1:21</h3>
+<div class="outline-text-3" id="text-org9a5de84">
+<p>
+His counsel pleased the king, and the princes: and the king did according to the counsel of Mamuchan.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e0d769" class="outline-3">
+<h3 id="org6e0d769">Esther 1:22</h3>
+<div class="outline-text-3" id="text-org6e0d769">
+<p>
+And he sent letters to all the provinces of his kingdom, as every nation could hear and read, in divers languages and characters, that the husbands should be rulers and masters in their houses: and that this should be published to every people. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org747ab65" class="outline-2">
+<h2 id="org747ab65">Esther 2</h2>
+<div class="outline-text-2" id="text-org747ab65">
+</div>
+<div id="outline-container-org58d357d" class="outline-3">
+<h3 id="org58d357d">Esther 2:1</h3>
+<div class="outline-text-3" id="text-org58d357d">
+<p>
+After this, when the wrath of king Assuerus was appeased, he remembered Vasthi, and what she had done and what she had suffered:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c26920" class="outline-3">
+<h3 id="org0c26920">Esther 2:2</h3>
+<div class="outline-text-3" id="text-org0c26920">
+<p>
+And the king&rsquo;s servants and his officers said: Let young women be sought for the king, virgins and beautiful,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf139a06" class="outline-3">
+<h3 id="orgf139a06">Esther 2:3</h3>
+<div class="outline-text-3" id="text-orgf139a06">
+<p>
+And let some persons be sent through all the provinces to look for beautiful maidens and virgins: and let them bring them to the city of Susan, and put them into the house of the women under the hand of Egeus the eunuch, who is the overseer and keeper of the king&rsquo;s women: and let them receive women&rsquo;s ornaments, and other things necessary for their use.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5cce95a" class="outline-3">
+<h3 id="org5cce95a">Esther 2:4</h3>
+<div class="outline-text-3" id="text-org5cce95a">
+<p>
+And whosoever among them all shall please the king&rsquo;s eyes, let her be queen instead of Vasthi. The word pleased the king: and he commanded it should be done as they had suggested.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03d4422" class="outline-3">
+<h3 id="org03d4422">Esther 2:5</h3>
+<div class="outline-text-3" id="text-org03d4422">
+<p>
+There was a man in the city of Susan, a Jew, named Mardochai, the son of Jair, the son of Semei, the son of Cis, of the race of Jemini,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e20842" class="outline-3">
+<h3 id="org8e20842">Esther 2:6</h3>
+<div class="outline-text-3" id="text-org8e20842">
+<p>
+Who had been carried away from Jerusalem at the time that Nabuchodonosor king of Babylon carried away Jechonias king of Juda,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08681a4" class="outline-3">
+<h3 id="org08681a4">Esther 2:7</h3>
+<div class="outline-text-3" id="text-org08681a4">
+<p>
+And he had brought up his brother&rsquo;s daughter Edissa, who by another name was called Esther: now she had lost both her parents: and was exceeding fair and beautiful. And her father and mother being dead, Mardochai adopted her for his daughter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org005d05b" class="outline-3">
+<h3 id="org005d05b">Esther 2:8</h3>
+<div class="outline-text-3" id="text-org005d05b">
+<p>
+And when the king&rsquo;s ordinance was noised abroad, and according to his commandment many beautiful virgins were brought to Susan, and were delivered to Egeus the eunuch: Esther also among the rest of the maidens was delivered to him to be kept in the number of the women.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03d7fb7" class="outline-3">
+<h3 id="org03d7fb7">Esther 2:9</h3>
+<div class="outline-text-3" id="text-org03d7fb7">
+<p>
+And she pleased him, and found favour in his sight. And he commanded the eunuch to hasten the women&rsquo;s ornaments, and to deliver to her her part, and seven of the most beautiful maidens of the king&rsquo;s house, and to adorn and deck out both her and her waiting maids.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga19161b" class="outline-3">
+<h3 id="orga19161b">Esther 2:10</h3>
+<div class="outline-text-3" id="text-orga19161b">
+<p>
+And she would not tell him her people nor her country. For Mardochai had charged her to say nothing at all of that:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65d791c" class="outline-3">
+<h3 id="org65d791c">Esther 2:11</h3>
+<div class="outline-text-3" id="text-org65d791c">
+<p>
+And he walked every day before the court of the house, in which the chosen virgins were kept, having a care for Esther&rsquo;s welfare, and desiring to know what would befall her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0b5c17" class="outline-3">
+<h3 id="orgd0b5c17">Esther 2:12</h3>
+<div class="outline-text-3" id="text-orgd0b5c17">
+<p>
+Now when every virgin&rsquo;s turn came to go in to the king, after all had been done for setting them off to advantage, it was the twelfth month: so that for six months they were anointed with oil of myrrh, and for other six months they used certain perfumes and sweet spices.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org414b40b" class="outline-3">
+<h3 id="org414b40b">Esther 2:13</h3>
+<div class="outline-text-3" id="text-org414b40b">
+<p>
+And when they were going in to the king, whatsoever they asked to adorn themselves they received: and being decked out, as it pleased them, they passed from the chamber of the women to the king&rsquo;s chamber.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ffc8c4" class="outline-3">
+<h3 id="org5ffc8c4">Esther 2:14</h3>
+<div class="outline-text-3" id="text-org5ffc8c4">
+<p>
+And she that went in at evening, came out in the morning, and from thence she was conducted to the second house, that was under the hand of Susagaz the eunuch, who had the charge over the king&rsquo;s concubines: neither could she return any more to the king, unless the king desired it, and had ordered her by name to come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73b9e1f" class="outline-3">
+<h3 id="org73b9e1f">Esther 2:15</h3>
+<div class="outline-text-3" id="text-org73b9e1f">
+<p>
+And as the time came orderly about, the day was at hand, when Esther, the daughter of Abihail the brother of Mardochai, whom he had adopted for his daughter, was to go in to the king. But she sought not women&rsquo;s ornaments, but whatsoever Egeus the eunuch the keeper of the virgins had a mind, he gave her to adorn her. For she was exceeding fair, and her incredible beauty made her appear agreeable and amiable in the eyes of all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6838643" class="outline-3">
+<h3 id="org6838643">Esther 2:16</h3>
+<div class="outline-text-3" id="text-org6838643">
+<p>
+So she was brought to the chamber of king Assuerus the tenth month, which is called Tebeth, in the seventh year of his reign.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa6a017" class="outline-3">
+<h3 id="orgfa6a017">Esther 2:17</h3>
+<div class="outline-text-3" id="text-orgfa6a017">
+<p>
+And the king loved her more than all the women, and she had favour and kindness before him above all the women, and he set the royal crown on her head, and made her queen instead of Vasthi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge28c965" class="outline-3">
+<h3 id="orge28c965">Esther 2:18</h3>
+<div class="outline-text-3" id="text-orge28c965">
+<p>
+And he commanded a magnificent feast to be prepared for all the princes, and for his servants, for the marriage and wedding of Esther. And he gave rest to all the provinces, and bestowed gifts according to princely magnificence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c281cd" class="outline-3">
+<h3 id="org6c281cd">Esther 2:19</h3>
+<div class="outline-text-3" id="text-org6c281cd">
+<p>
+And when the virgins were sought the second time, and gathered together, Mardochai stayed at the king&rsquo;s gate,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19aff02" class="outline-3">
+<h3 id="org19aff02">Esther 2:20</h3>
+<div class="outline-text-3" id="text-org19aff02">
+<p>
+Neither had Esther as yet declared her country and people, according to his commandment. For whatsoever he commanded, Esther observed: and she did all things in the same manner as she was wont at that time when he brought her up a little one.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge016b50" class="outline-3">
+<h3 id="orge016b50">Esther 2:21</h3>
+<div class="outline-text-3" id="text-orge016b50">
+<p>
+At that time, therefore, when Mardochai abode at the king&rsquo;s gate, Bagathan and Thares, two of the king&rsquo;s eunuchs, who were porters, and presided in the first entry of the palace, were angry: and they designed to rise up against the king, and to kill him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d3ea6d" class="outline-3">
+<h3 id="org6d3ea6d">Esther 2:22</h3>
+<div class="outline-text-3" id="text-org6d3ea6d">
+<p>
+And Mardochai had notice of it, and immediately he told it to queen Esther: and she to the king in Mardochai&rsquo;s name, who had reported the thing unto her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc247d4b" class="outline-3">
+<h3 id="orgc247d4b">Esther 2:23</h3>
+<div class="outline-text-3" id="text-orgc247d4b">
+<p>
+It was inquired into, and found out: and they were both hanged on a gibbet. And it was put in the histories, and recorded in the chronicles before the king. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org947e1a9" class="outline-2">
+<h2 id="org947e1a9">Esther 3</h2>
+<div class="outline-text-2" id="text-org947e1a9">
+</div>
+<div id="outline-container-org2d081cb" class="outline-3">
+<h3 id="org2d081cb">Esther 3:1</h3>
+<div class="outline-text-3" id="text-org2d081cb">
+<p>
+After these things, king Assuerus advanced Aman, the son of Amadathi, who was of the race of Agag: and he set his throne above all the princes that were with him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9c68f9" class="outline-3">
+<h3 id="orgd9c68f9">Esther 3:2</h3>
+<div class="outline-text-3" id="text-orgd9c68f9">
+<p>
+And all the king&rsquo;s servants, that were at the doors of the palace, bent their knees, and worshipped Aman: for so the emperor had commanded them, only Mardochai did not bend his knee, nor worship him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59f27ba" class="outline-3">
+<h3 id="org59f27ba">Esther 3:3</h3>
+<div class="outline-text-3" id="text-org59f27ba">
+<p>
+And the king&rsquo;s servants that were chief at the doors of the palace, said to him: Why dost thou alone not observe the king&rsquo;s commandment?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b593f8" class="outline-3">
+<h3 id="org4b593f8">Esther 3:4</h3>
+<div class="outline-text-3" id="text-org4b593f8">
+<p>
+And when they were saying this often, and he would not hearken to them, they told Aman, desirous to know whether he would continue in his resolution: for he had told them that he was a Jew.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd314a53" class="outline-3">
+<h3 id="orgd314a53">Esther 3:5</h3>
+<div class="outline-text-3" id="text-orgd314a53">
+<p>
+Now when Aman had heard this, and had proved by experience that Mardochai did not bend his knee to him, nor worship him, he was exceeding angry.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0163897" class="outline-3">
+<h3 id="org0163897">Esther 3:6</h3>
+<div class="outline-text-3" id="text-org0163897">
+<p>
+And he counted it nothing to lay his hands upon Mardochai alone: for he had heard that he was of the nation of the Jews, and he chose rather to destroy all the nation of the Jews that were in the kingdom of Assuerus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e2425d" class="outline-3">
+<h3 id="org5e2425d">Esther 3:7</h3>
+<div class="outline-text-3" id="text-org5e2425d">
+<p>
+In the first month (which is called Nisan) in the twelfth year of the reign of Assuerus, the lot was cast into an urn, which in Hebrew is called Phur, before Aman, on what day and what month the nation of the Jews should be destroyed: and there came out the twelfth month, which is called Adar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47f7260" class="outline-3">
+<h3 id="org47f7260">Esther 3:8</h3>
+<div class="outline-text-3" id="text-org47f7260">
+<p>
+And Aman said to king Assuerus: There is a people scattered through all the provinces of thy kingdom, and separated one from another, that use new laws and ceremonies, and moreover despise the king&rsquo;s ordinances: and thou knowest very well that it is not expedient for thy kingdom that they should grow insolent by impunity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4c851a" class="outline-3">
+<h3 id="orgb4c851a">Esther 3:9</h3>
+<div class="outline-text-3" id="text-orgb4c851a">
+<p>
+If it please thee, decree that they may be destroyed, and I will pay ten thousand talents to thy treasurers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae99444" class="outline-3">
+<h3 id="orgae99444">Esther 3:10</h3>
+<div class="outline-text-3" id="text-orgae99444">
+<p>
+And the king took the ring that he used, from his own hand, and gave it to Aman, the son of Amadathi of the race of Agag, the enemy of the Jews.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org400fc4e" class="outline-3">
+<h3 id="org400fc4e">Esther 3:11</h3>
+<div class="outline-text-3" id="text-org400fc4e">
+<p>
+And he said to him: As to the money which thou promisest, keep it for thyself: and as to the people, do with them as seemeth good to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6cddc80" class="outline-3">
+<h3 id="org6cddc80">Esther 3:12</h3>
+<div class="outline-text-3" id="text-org6cddc80">
+<p>
+And the king&rsquo;s scribes were called in the first month Nisan, on the thirteenth day of the same mouth: and they wrote, as Aman had commanded, to all the king&rsquo;s lieutenants, and to the judges of the provinces, and of divers nations, as every nation could read, and hear according to their different languages, in the name of king Assuerus: and the letters, sealed with his ring,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1385288" class="outline-3">
+<h3 id="org1385288">Esther 3:13</h3>
+<div class="outline-text-3" id="text-org1385288">
+<p>
+Were sent by the king&rsquo;s messengers to all provinces, to kill and destroy all the Jews, both young and old, little children, and women, in one day, that is, on the thirteenth of the twelfth month, which is called Adar, and to make a spoil of their goods.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org884ab87" class="outline-3">
+<h3 id="org884ab87">Esther 3:14</h3>
+<div class="outline-text-3" id="text-org884ab87">
+<p>
+And the contents of the letters were to this effect, that all provinces might know and be ready against that day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07bc76d" class="outline-3">
+<h3 id="org07bc76d">Esther 3:15</h3>
+<div class="outline-text-3" id="text-org07bc76d">
+<p>
+The couriers that were sent made haste to fulfil the king&rsquo;s commandment. And immediately the edict was hung up in Susan, the king and Aman feasting together, and all the Jews that were in the city weeping. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3f6fb9d" class="outline-2">
+<h2 id="org3f6fb9d">Esther 4</h2>
+<div class="outline-text-2" id="text-org3f6fb9d">
+</div>
+<div id="outline-container-org8343c35" class="outline-3">
+<h3 id="org8343c35">Esther 4:1</h3>
+<div class="outline-text-3" id="text-org8343c35">
+<p>
+Now when Mardochai had heard these things, he rent his garments, and put on sackcloth, strewing ashes on his head and he cried with a loud voice in the street in the midst of the city, shewing the anguish of his mind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org515684c" class="outline-3">
+<h3 id="org515684c">Esther 4:2</h3>
+<div class="outline-text-3" id="text-org515684c">
+<p>
+And he came lamenting in this manner even to the gate of the palace: for no one clothed with sackcloth might enter the king&rsquo;s court.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7b6621" class="outline-3">
+<h3 id="orgf7b6621">Esther 4:3</h3>
+<div class="outline-text-3" id="text-orgf7b6621">
+<p>
+And in all provinces, towns, and places, to which the king&rsquo;s cruel edict was come, there was great mourning among the Jews, with fasting, wailing, and weeping, many using sackcloth and ashes for their bed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4bc28a" class="outline-3">
+<h3 id="orgf4bc28a">Esther 4:4</h3>
+<div class="outline-text-3" id="text-orgf4bc28a">
+<p>
+Then Esther&rsquo;s maids and her eunuchs went in, and told her. And when she heard it she was in a consternation and she sent a garment, to clothe him, and to take away the sackcloth: but he would not receive it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge00c6c9" class="outline-3">
+<h3 id="orge00c6c9">Esther 4:5</h3>
+<div class="outline-text-3" id="text-orge00c6c9">
+<p>
+And she called for Athach the eunuch, whom the king had appointed to attend upon her, and she commanded him to go to Mardochai, and learn of him why he did this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org203a392" class="outline-3">
+<h3 id="org203a392">Esther 4:6</h3>
+<div class="outline-text-3" id="text-org203a392">
+<p>
+And Athach going out went to Mardochai, who was standing in the street of the city, before the palace gate:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc389366" class="outline-3">
+<h3 id="orgc389366">Esther 4:7</h3>
+<div class="outline-text-3" id="text-orgc389366">
+<p>
+And Mardochai told him all that had happened, how Aman had promised to pay money into the king&rsquo;s treasures, to have the Jews destroyed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org979fa6c" class="outline-3">
+<h3 id="org979fa6c">Esther 4:8</h3>
+<div class="outline-text-3" id="text-org979fa6c">
+<p>
+He gave him also a copy of the edict which was hanging up in Susan, that he should shew it to the queen, and admonish her to go in to the king, and to entreat him for her people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cc14b9" class="outline-3">
+<h3 id="org9cc14b9">Esther 4:9</h3>
+<div class="outline-text-3" id="text-org9cc14b9">
+<p>
+And Athach went back and told Esther all that Mardochai had said.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1231a32" class="outline-3">
+<h3 id="org1231a32">Esther 4:10</h3>
+<div class="outline-text-3" id="text-org1231a32">
+<p>
+She answered him, and bade him say to Mardochai:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef3d16c" class="outline-3">
+<h3 id="orgef3d16c">Esther 4:11</h3>
+<div class="outline-text-3" id="text-orgef3d16c">
+<p>
+All the king&rsquo;s servants, and all the provinces that are under his dominion, know, that whosoever, whether man or woman, cometh into the king&rsquo;s inner court, who is not called for, is immediately to be put to death without any delay: except the king shall hold out the golden sceptre to him, in token of clemency, that so he may live. How then can I go in to the king, who for these thirty days now have not been called unto him?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ccaf25" class="outline-3">
+<h3 id="org3ccaf25">Esther 4:12</h3>
+<div class="outline-text-3" id="text-org3ccaf25">
+<p>
+And when Mardochai had heard this,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75b46e4" class="outline-3">
+<h3 id="org75b46e4">Esther 4:13</h3>
+<div class="outline-text-3" id="text-org75b46e4">
+<p>
+He sent word to Esther again, saying: Think not that thou mayst save thy life only, because thou art in the king&rsquo;s house, more than all the Jews:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda5f16f" class="outline-3">
+<h3 id="orgda5f16f">Esther 4:14</h3>
+<div class="outline-text-3" id="text-orgda5f16f">
+<p>
+For if thou wilt now hold thy peace, the Jews shall be delivered by some other occasion: and thou, and thy father&rsquo;s house shall perish. And who knoweth whether thou art not therefore come to the kingdom, that thou mightest be ready in such a time as this?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org229a3b9" class="outline-3">
+<h3 id="org229a3b9">Esther 4:15</h3>
+<div class="outline-text-3" id="text-org229a3b9">
+<p>
+And again Esther sent to Mardochai in these words:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecec9f6" class="outline-3">
+<h3 id="orgecec9f6">Esther 4:16</h3>
+<div class="outline-text-3" id="text-orgecec9f6">
+<p>
+Go, and gather together all the Jews whom thou shalt find in Susan, and pray ye for me. Neither eat nor drink for three days and three nights: and I with my handmaids will fast in like manner, and then I will go in to the king, against the law, not being called, and expose myself to death and to danger.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1991639" class="outline-3">
+<h3 id="org1991639">Esther 4:17</h3>
+<div class="outline-text-3" id="text-org1991639">
+<p>
+So Mardochai went, and did all that Esther had commanded him. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge33eea2" class="outline-2">
+<h2 id="orge33eea2">Esther 5</h2>
+<div class="outline-text-2" id="text-orge33eea2">
+</div>
+<div id="outline-container-org1100403" class="outline-3">
+<h3 id="org1100403">Esther 5:1</h3>
+<div class="outline-text-3" id="text-org1100403">
+<p>
+And on the third day Esther put on her royal apparel, and stood in the inner court of the king&rsquo;s house, over against the king&rsquo;s hall: now he sat upon his throne in the hall of the palace, over against the door of the house.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc24adcf" class="outline-3">
+<h3 id="orgc24adcf">Esther 5:2</h3>
+<div class="outline-text-3" id="text-orgc24adcf">
+<p>
+And when he saw Esther the queen standing, she pleased his eyes, and he held out toward her the golden sceptre, which he held in his hand and she drew near, and kissed the top of his sceptre.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa83d29" class="outline-3">
+<h3 id="orgfa83d29">Esther 5:3</h3>
+<div class="outline-text-3" id="text-orgfa83d29">
+<p>
+And the king said to her: What wilt thou, queen Esther? what is thy request? if thou shouldst even ask one half of the kingdom, it shall be given to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org275c94f" class="outline-3">
+<h3 id="org275c94f">Esther 5:4</h3>
+<div class="outline-text-3" id="text-org275c94f">
+<p>
+But she answered: If it please the king, I beseech thee to come to me this day, and Aman with thee to the banquet which I have prepared.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4e5912" class="outline-3">
+<h3 id="orgc4e5912">Esther 5:5</h3>
+<div class="outline-text-3" id="text-orgc4e5912">
+<p>
+And the king said forthwith: Call ye Aman quickly, that he may obey Esther&rsquo;s will. So the king and Aman came to the banquet which the queen had prepared for them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bd805e" class="outline-3">
+<h3 id="org0bd805e">Esther 5:6</h3>
+<div class="outline-text-3" id="text-org0bd805e">
+<p>
+And the king said to her, after he had drunk wine plentifully: What dost thou desire should be given thee? and for what thing askest thou? although thou shouldst ask the half of my kingdom, thou shalt have it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34469d3" class="outline-3">
+<h3 id="org34469d3">Esther 5:7</h3>
+<div class="outline-text-3" id="text-org34469d3">
+<p>
+And Esther answered: My petition and request is this:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9558c4a" class="outline-3">
+<h3 id="org9558c4a">Esther 5:8</h3>
+<div class="outline-text-3" id="text-org9558c4a">
+<p>
+If I have found favour in the king&rsquo;s sight, and if it please the king to give me what I ask, and to fulfil my petition: let the king and Aman come to the banquet which I have prepared them, and to morrow I will open my mind to the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5da113b" class="outline-3">
+<h3 id="org5da113b">Esther 5:9</h3>
+<div class="outline-text-3" id="text-org5da113b">
+<p>
+So Aman went out that day joyful and merry. And when he saw Mardochai sitting before the gate of the palace, and that he not only did not rise up to honour him, but did not so much as move from the place where he sat, he was exceedingly angry:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15e8d37" class="outline-3">
+<h3 id="org15e8d37">Esther 5:10</h3>
+<div class="outline-text-3" id="text-org15e8d37">
+<p>
+But dissembling his anger, and returning into his house, he called together to him his friends, and Zares his wife:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6185d84" class="outline-3">
+<h3 id="org6185d84">Esther 5:11</h3>
+<div class="outline-text-3" id="text-org6185d84">
+<p>
+And he declared to them the greatness of his riches, and the multitude of his children, and with how great glory the king had advanced him above all his princes and servants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0574f3e" class="outline-3">
+<h3 id="org0574f3e">Esther 5:12</h3>
+<div class="outline-text-3" id="text-org0574f3e">
+<p>
+And after this he said: Queen Esther also hath invited no other to the banquet with the king, but me: and with her I am also to dine to morrow with the king:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ca8dad" class="outline-3">
+<h3 id="org1ca8dad">Esther 5:13</h3>
+<div class="outline-text-3" id="text-org1ca8dad">
+<p>
+And whereas I have all these things, I think I have nothing, so long as I see Mardochai the Jew sitting before the king&rsquo;s gate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6376da9" class="outline-3">
+<h3 id="org6376da9">Esther 5:14</h3>
+<div class="outline-text-3" id="text-org6376da9">
+<p>
+Then Zares his wife, and the rest of his friends answered him: Order a great beam to be prepared, fifty cubits high, and in the morning speak to the king, that Mardochai may be hanged upon it, and so thou shalt go full of joy with the king to the banquet. The counsel pleased him, and he commanded a high gibbet to be prepared. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org708929a" class="outline-2">
+<h2 id="org708929a">Esther 6</h2>
+<div class="outline-text-2" id="text-org708929a">
+</div>
+<div id="outline-container-org8d3c7f8" class="outline-3">
+<h3 id="org8d3c7f8">Esther 6:1</h3>
+<div class="outline-text-3" id="text-org8d3c7f8">
+<p>
+That night the king passed without sleep, and he commanded the histories and chronicles of former times to be brought him. And when they were reading them before him,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2d0d1d" class="outline-3">
+<h3 id="orgd2d0d1d">Esther 6:2</h3>
+<div class="outline-text-3" id="text-orgd2d0d1d">
+<p>
+They came to that place where it was written, how Mardochai had discovered the treason of Bagathan and Thares the eunuchs, who sought to kill king Assuerus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge12ab2a" class="outline-3">
+<h3 id="orge12ab2a">Esther 6:3</h3>
+<div class="outline-text-3" id="text-orge12ab2a">
+<p>
+And when the king heard this, he said: What honour and reward hath Mardochai received for this fidelity? His servants and ministers said to him: He hath received no reward at all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62e24a4" class="outline-3">
+<h3 id="org62e24a4">Esther 6:4</h3>
+<div class="outline-text-3" id="text-org62e24a4">
+<p>
+And the king said immediately: Who is in the court? for Aman was coming in to the inner court of the king&rsquo;s house, to speak to the king, that he might order Mardochai to be hanged upon the gibbet, which was prepared for him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c5cc3e" class="outline-3">
+<h3 id="org9c5cc3e">Esther 6:5</h3>
+<div class="outline-text-3" id="text-org9c5cc3e">
+<p>
+The servants answered: Aman standeth in the court, and the king said: Let him come in.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf23ae15" class="outline-3">
+<h3 id="orgf23ae15">Esther 6:6</h3>
+<div class="outline-text-3" id="text-orgf23ae15">
+<p>
+And when he was come in, he said to him: What ought to be done to the man whom the king is desirous to honour? But Aman thinking in his heart, and supposing that the king would honour no other but himself,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org763e713" class="outline-3">
+<h3 id="org763e713">Esther 6:7</h3>
+<div class="outline-text-3" id="text-org763e713">
+<p>
+Answered: The man whom the king desireth to honour,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga97e6a4" class="outline-3">
+<h3 id="orga97e6a4">Esther 6:8</h3>
+<div class="outline-text-3" id="text-orga97e6a4">
+<p>
+Ought to be clothed with the king&rsquo;s apparel, and to be set upon the horse that the king rideth upon, and to have the royal crown upon his head,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85f5633" class="outline-3">
+<h3 id="org85f5633">Esther 6:9</h3>
+<div class="outline-text-3" id="text-org85f5633">
+<p>
+And let the first of the king&rsquo;s princes and nobles hold his horse, and going through the street of the city, proclaim before him and say: Thus shall he be honoured, whom the king hath a mind to honour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9b208a" class="outline-3">
+<h3 id="orge9b208a">Esther 6:10</h3>
+<div class="outline-text-3" id="text-orge9b208a">
+<p>
+And the king said to him: Make haste and take the robe and the horse, and do as thou hast spoken to Mardochai the Jew, who sitteth before the gates of the palace. Beware thou pass over any of those things which thou hast spoken.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbf0fb5" class="outline-3">
+<h3 id="orgdbf0fb5">Esther 6:11</h3>
+<div class="outline-text-3" id="text-orgdbf0fb5">
+<p>
+So Aman took the robe and the horse, and arraying Mardochai in the street of the city, and setting him on the horse, went before him, and proclaimed: This honour is he worthy of, whom the king hath a mind to honour.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org637d135" class="outline-3">
+<h3 id="org637d135">Esther 6:12</h3>
+<div class="outline-text-3" id="text-org637d135">
+<p>
+But Mardochai returned to the palace gate: and Aman made haste to go to his house, mourning and having his head covered:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc91480d" class="outline-3">
+<h3 id="orgc91480d">Esther 6:13</h3>
+<div class="outline-text-3" id="text-orgc91480d">
+<p>
+And he told Zares his wife, and his friends, all that had befallen him. And the wise men whom he had in counsel, and his wife answered him: If Mardochai be of the seed of the Jews, before whom thou hast begun to fall, thou canst not resist him, but thou shalt fall in his sight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9dcd624" class="outline-3">
+<h3 id="org9dcd624">Esther 6:14</h3>
+<div class="outline-text-3" id="text-org9dcd624">
+<p>
+As they were yet speaking, the king&rsquo;s eunuchs came, and compelled him to go quickly to the banquet which the queen had prepared. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org313e3cb" class="outline-2">
+<h2 id="org313e3cb">Esther 7</h2>
+<div class="outline-text-2" id="text-org313e3cb">
+</div>
+<div id="outline-container-org7f964a3" class="outline-3">
+<h3 id="org7f964a3">Esther 7:1</h3>
+<div class="outline-text-3" id="text-org7f964a3">
+<p>
+So the king and Aman went in, to drink with the queen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf38b52b" class="outline-3">
+<h3 id="orgf38b52b">Esther 7:2</h3>
+<div class="outline-text-3" id="text-orgf38b52b">
+<p>
+And the king said to her again the second day, after he was warm with wine: What is thy petition, Esther, that it may be granted thee? and what wilt thou have done: although thou ask the half of my kingdom, thou shalt have it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8b9cf7" class="outline-3">
+<h3 id="orge8b9cf7">Esther 7:3</h3>
+<div class="outline-text-3" id="text-orge8b9cf7">
+<p>
+Then she answered: If I have found favour in thy sight, O king, and if it please thee, give me my life for which I ask, and my people for which I request.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ed8f20" class="outline-3">
+<h3 id="org3ed8f20">Esther 7:4</h3>
+<div class="outline-text-3" id="text-org3ed8f20">
+<p>
+For we are given up, I and my people, to be destroyed, to be slain, and to perish. And would God we were sold for bondmen and bondwomen: the evil might be borne with, and I would have mourned in silence: but now we have an enemy, whose cruelty redoundeth upon the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd581def" class="outline-3">
+<h3 id="orgd581def">Esther 7:5</h3>
+<div class="outline-text-3" id="text-orgd581def">
+<p>
+And king Assuerus answered and said: Who is this, and of what power, that he should do these things?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd830c0e" class="outline-3">
+<h3 id="orgd830c0e">Esther 7:6</h3>
+<div class="outline-text-3" id="text-orgd830c0e">
+<p>
+And Esther said: It is this Aman that is our adversary and most wicked enemy. Aman hearing this was forthwith astonished, not being able to bear the countenance of the king and of the queen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org306a715" class="outline-3">
+<h3 id="org306a715">Esther 7:7</h3>
+<div class="outline-text-3" id="text-org306a715">
+<p>
+But the king being angry rose up, and went from the place of the banquet into the garden set with trees. Aman also rose up to entreat Esther the queen for his life, for he understood that evil was prepared for him by the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a3c03e" class="outline-3">
+<h3 id="org1a3c03e">Esther 7:8</h3>
+<div class="outline-text-3" id="text-org1a3c03e">
+<p>
+And when the king came back out of the garden set with trees, and entered into the place of the banquet, he found Aman was fallen upon the bed on which Esther lay, and he said: He will force the queen also in my presence, in my own house. The word was not yet gone out of the king&rsquo;s mouth, and immediately they covered his face.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39b36b2" class="outline-3">
+<h3 id="org39b36b2">Esther 7:9</h3>
+<div class="outline-text-3" id="text-org39b36b2">
+<p>
+And Harbona, one of the eunuchs that stood waiting on the king, said: Behold the gibbet which he hath prepared for Mardochai, who spoke for the king, standeth in Aman&rsquo;s house, being fifty cubits high. And the king said to him: Hang him upon it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fc6fa5" class="outline-3">
+<h3 id="org0fc6fa5">Esther 7:10</h3>
+<div class="outline-text-3" id="text-org0fc6fa5">
+<p>
+So Aman was hanged on the gibbet, which he had prepared for Mardochai: and the king&rsquo;s wrath ceased. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org397b1dc" class="outline-2">
+<h2 id="org397b1dc">Esther 8</h2>
+<div class="outline-text-2" id="text-org397b1dc">
+</div>
+<div id="outline-container-orgcb3e618" class="outline-3">
+<h3 id="orgcb3e618">Esther 8:1</h3>
+<div class="outline-text-3" id="text-orgcb3e618">
+<p>
+On that day king Assuerus gave the house of Aman, the Jews&rsquo; enemy, to queen Esther, and Mardochai came in before the king. For Esther had confessed to him that he was her uncle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2b3ffb" class="outline-3">
+<h3 id="orga2b3ffb">Esther 8:2</h3>
+<div class="outline-text-3" id="text-orga2b3ffb">
+<p>
+And the king took the ring which he had commanded to be taken again from Aman, and gave it to Mardochai. And Esther set Mardochai over her house.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org409b831" class="outline-3">
+<h3 id="org409b831">Esther 8:3</h3>
+<div class="outline-text-3" id="text-org409b831">
+<p>
+And not content with these things, she fell down at the king&rsquo;s feet and wept, and speaking to him besought him, that he would give orders that the malice of Aman the Agagite, and his most wicked devices which he had invented against the Jews, should be of no effect.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a797aa" class="outline-3">
+<h3 id="org7a797aa">Esther 8:4</h3>
+<div class="outline-text-3" id="text-org7a797aa">
+<p>
+But he, as the manner was, held out the golden sceptre with his hand, which was the sign of clemency: and she arose up and stood before him,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79d6313" class="outline-3">
+<h3 id="org79d6313">Esther 8:5</h3>
+<div class="outline-text-3" id="text-org79d6313">
+<p>
+And said: If it please the king, and if I have found favour in his sight, and my request be not disagreeable to him, I beseech thee, that the former letters of Aman the traitor and enemy of the Jews, by which he commanded that they should be destroyed in all the king&rsquo;s provinces, may be reversed by new letters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b4b60e" class="outline-3">
+<h3 id="org2b4b60e">Esther 8:6</h3>
+<div class="outline-text-3" id="text-org2b4b60e">
+<p>
+For how can I endure the murdering and slaughter of my people?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org922c11e" class="outline-3">
+<h3 id="org922c11e">Esther 8:7</h3>
+<div class="outline-text-3" id="text-org922c11e">
+<p>
+And king Assuerus answered Esther the queen, and Mardochai the Jew: I have given Aman&rsquo;s house to Esther, and I have commanded him to be hanged on a gibbet, because he durst lay hands on the Jews.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7997818" class="outline-3">
+<h3 id="org7997818">Esther 8:8</h3>
+<div class="outline-text-3" id="text-org7997818">
+<p>
+Write ye therefore to the Jews, as it pleaseth you in the king&rsquo;s name, and seal the letters with my ring. For this was the custom, that no man durst gainsay the letters which were sent in the king&rsquo;s name, and were sealed with his ring.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9f1ed0" class="outline-3">
+<h3 id="orgc9f1ed0">Esther 8:9</h3>
+<div class="outline-text-3" id="text-orgc9f1ed0">
+<p>
+Then the king&rsquo;s scribes and secretaries were called for (now it was the time of the third month which is called Siban) the three and twentieth day of the month, and letters were written, as Mardochai had a mind, to the Jews, and to the governors, and to the deputies, and to the judges, who were rulers over the hundred and twenty-seven provinces, from India even to Ethiopia: to province and province, to people and people, according to their languages and characters, and to the Jews, according as they could read and hear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3f2337" class="outline-3">
+<h3 id="orgf3f2337">Esther 8:10</h3>
+<div class="outline-text-3" id="text-orgf3f2337">
+<p>
+And these letters which were sent in the king&rsquo;s name, were sealed with his ring, and sent by posts: who were to run through all the provinces, to prevent the former letters with new messages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5a86ed" class="outline-3">
+<h3 id="orgd5a86ed">Esther 8:11</h3>
+<div class="outline-text-3" id="text-orgd5a86ed">
+<p>
+And the king gave orders to them, to speak to the Jews in every city, and to command them to gather themselves together, and to stand for their lives, and to kill and destroy all their enemies with their wives and children and all their houses, and to take their spoil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8314f97" class="outline-3">
+<h3 id="org8314f97">Esther 8:12</h3>
+<div class="outline-text-3" id="text-org8314f97">
+<p>
+And one day of revenge was appointed through all the provinces, to wit, the thirteenth of the twelfth month Adar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8542a6" class="outline-3">
+<h3 id="orgd8542a6">Esther 8:13</h3>
+<div class="outline-text-3" id="text-orgd8542a6">
+<p>
+And this was the content of the letter, that it should be notified in all lands and peoples that were subject to the empire of king Assuerus, that the Jews were ready to be revenged of their enemies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6c47d6" class="outline-3">
+<h3 id="orge6c47d6">Esther 8:14</h3>
+<div class="outline-text-3" id="text-orge6c47d6">
+<p>
+So the swift posts went out carrying the messages, and the king&rsquo;s edict was hung up in Susan.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc669c53" class="outline-3">
+<h3 id="orgc669c53">Esther 8:15</h3>
+<div class="outline-text-3" id="text-orgc669c53">
+<p>
+And Mardochai going forth out of the palace, and from the king&rsquo;s presence, shone in royal apparel, to wit, of violet and sky colour, wearing a golden crown on his head, and clothed with a cloak of silk and purple. And all the city rejoiced, and was glad.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a288d8" class="outline-3">
+<h3 id="org9a288d8">Esther 8:16</h3>
+<div class="outline-text-3" id="text-org9a288d8">
+<p>
+But to the Jews, a new light seemed to rise, joy, honour, and dancing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb1f6ba" class="outline-3">
+<h3 id="orgeb1f6ba">Esther 8:17</h3>
+<div class="outline-text-3" id="text-orgeb1f6ba">
+<p>
+And in all peoples, cities, and provinces, whithersoever the king&rsquo;s commandments came, there was wonderful rejoicing, feasts and banquets, and keeping holy day: Insomuch that many of other nations and religion, joined themselves to their worship and ceremonies. For a great dread of the name of the Jews had fallen upon all. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2a89abc" class="outline-2">
+<h2 id="org2a89abc">Esther 9</h2>
+<div class="outline-text-2" id="text-org2a89abc">
+</div>
+<div id="outline-container-orgc1b1145" class="outline-3">
+<h3 id="orgc1b1145">Esther 9:1</h3>
+<div class="outline-text-3" id="text-orgc1b1145">
+<p>
+So on the thirteenth day of the twelfth month, which as we have said above is called Adar, when all the Jews were designed to be massacred, and their enemies were greedy after their blood, the case being altered, the Jews began to have the upper hand, and to revenge themselves of their adversaries.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd9d343" class="outline-3">
+<h3 id="orgfd9d343">Esther 9:2</h3>
+<div class="outline-text-3" id="text-orgfd9d343">
+<p>
+And they gathered themselves together in every city, and town, and place, to lay their hands on their enemies, and their persecutors. And no one durst withstand them, for the fear of their power had gone through every people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c10f39" class="outline-3">
+<h3 id="org2c10f39">Esther 9:3</h3>
+<div class="outline-text-3" id="text-org2c10f39">
+<p>
+And the judges of the provinces, and the governors, and lieutenants, and every one in dignity, that presided over every place and work, extolled the Jews for fear of Mardochai:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82565c6" class="outline-3">
+<h3 id="org82565c6">Esther 9:4</h3>
+<div class="outline-text-3" id="text-org82565c6">
+<p>
+For they knew him to be prince of the palace, and to have great power: and the fame of his name increased daily, and was spread abroad through all men&rsquo;s mouths.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org698c9e3" class="outline-3">
+<h3 id="org698c9e3">Esther 9:5</h3>
+<div class="outline-text-3" id="text-org698c9e3">
+<p>
+So the Jews made a great slaughter of their enemies, and killed them, repaying according to what they had prepared to do to them:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd31022f" class="outline-3">
+<h3 id="orgd31022f">Esther 9:6</h3>
+<div class="outline-text-3" id="text-orgd31022f">
+<p>
+Insomuch that even in Susan they killed five hundred men, besides the ten sons of Aman the Agagite, the enemy of the Jews: whose names are these:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6ec0f2" class="outline-3">
+<h3 id="orge6ec0f2">Esther 9:7</h3>
+<div class="outline-text-3" id="text-orge6ec0f2">
+<p>
+Pharsandatha, and Delphon, and Esphatha
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2290854" class="outline-3">
+<h3 id="org2290854">Esther 9:8</h3>
+<div class="outline-text-3" id="text-org2290854">
+<p>
+And Phoratha, and Adalia, and Aridatha,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc733f80" class="outline-3">
+<h3 id="orgc733f80">Esther 9:9</h3>
+<div class="outline-text-3" id="text-orgc733f80">
+<p>
+And Phermesta, and Arisai, and Aridai, and Jezatha.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6efba54" class="outline-3">
+<h3 id="org6efba54">Esther 9:10</h3>
+<div class="outline-text-3" id="text-org6efba54">
+<p>
+And when they had slain them, they would not touch the spoils of their goods.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org115a16a" class="outline-3">
+<h3 id="org115a16a">Esther 9:11</h3>
+<div class="outline-text-3" id="text-org115a16a">
+<p>
+And presently the number of them that were killed in Susan was brought to the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b3d5a0" class="outline-3">
+<h3 id="org4b3d5a0">Esther 9:12</h3>
+<div class="outline-text-3" id="text-org4b3d5a0">
+<p>
+And he said to the queen: The Jews have killed five hundred men in the city of Susan, besides the ten sons of Aman: how many dost thou think they have slain in all the provinces? What askest thou more, and what wilt thou have me to command to be done?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5fa791" class="outline-3">
+<h3 id="orgd5fa791">Esther 9:13</h3>
+<div class="outline-text-3" id="text-orgd5fa791">
+<p>
+And she answered: If it please the king, let it be granted to the Jews, to do to morrow in Susan as they have done to day, and that the ten sons of Aman may be hanged upon gibbets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea0e4d0" class="outline-3">
+<h3 id="orgea0e4d0">Esther 9:14</h3>
+<div class="outline-text-3" id="text-orgea0e4d0">
+<p>
+And the king commanded that it should be so done. And forthwith the edict was hung up in Susan, and the ten sons of Aman were hanged.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b5fbe9" class="outline-3">
+<h3 id="org8b5fbe9">Esther 9:15</h3>
+<div class="outline-text-3" id="text-org8b5fbe9">
+<p>
+And on the fourteenth day of the month Adar the Jews gathered themselves together, and they killed in Susan three hundred men: but they took not their substance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcca8cd4" class="outline-3">
+<h3 id="orgcca8cd4">Esther 9:16</h3>
+<div class="outline-text-3" id="text-orgcca8cd4">
+<p>
+Moreover through all the provinces which were subject to the king&rsquo;s dominion the Jews stood for their lives, and slew their enemies and persecutors: insomuch that the number of them that were killed amounted to seventy-five thousand, and no man took any of their goods.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0271ef3" class="outline-3">
+<h3 id="org0271ef3">Esther 9:17</h3>
+<div class="outline-text-3" id="text-org0271ef3">
+<p>
+Now the thirteenth day of the month Adar was the first day with them all of the slaughter, and on the fourteenth day they left off. Which they ordained to be kept holy day, so that all times hereafter they should celebrate it with feasting, joy, and banquets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e9c62d" class="outline-3">
+<h3 id="org7e9c62d">Esther 9:18</h3>
+<div class="outline-text-3" id="text-org7e9c62d">
+<p>
+But they that were killing in the city of Susan, were employed in the slaughter on the thirteenth and fourteenth day of the same month: and on the fifteenth day they rested. And therefore they appointed that day to be a holy day of feasting and gladness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96ee853" class="outline-3">
+<h3 id="org96ee853">Esther 9:19</h3>
+<div class="outline-text-3" id="text-org96ee853">
+<p>
+But those Jews that dwelt in towns not walled and in villages, appointed the fourteenth day of the month Adar for banquets and gladness, so as to rejoice on that day, and send one another portions of their banquets and meats.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc5aa50" class="outline-3">
+<h3 id="orgfc5aa50">Esther 9:20</h3>
+<div class="outline-text-3" id="text-orgfc5aa50">
+<p>
+And Mardochai wrote all these things, and sent them comprised in letters to the Jews that abode in all the king&rsquo;s provinces, both those that lay near and those afar off,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga687ff9" class="outline-3">
+<h3 id="orga687ff9">Esther 9:21</h3>
+<div class="outline-text-3" id="text-orga687ff9">
+<p>
+That they should receive the fourteenth and fifteenth day of the month Adar for holy days, and always at the return of the year should celebrate them with solemn honour:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org335f8fd" class="outline-3">
+<h3 id="org335f8fd">Esther 9:22</h3>
+<div class="outline-text-3" id="text-org335f8fd">
+<p>
+Because on those days the Jews revenged themselves of their enemies, and their mourning and sorrow were turned into mirth and joy, and that these should be days of feasting and gladness, in which they should send one to another portions of meats, and should give gifts to the poor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf5d4ac" class="outline-3">
+<h3 id="orgaf5d4ac">Esther 9:23</h3>
+<div class="outline-text-3" id="text-orgaf5d4ac">
+<p>
+And the Jews undertook to observe with solemnity all they had begun to do at that time, which Mardochai by letters had commanded to be done.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71966f1" class="outline-3">
+<h3 id="org71966f1">Esther 9:24</h3>
+<div class="outline-text-3" id="text-org71966f1">
+<p>
+For Aman, the son of Amadathi of the race of Agag, the enemy and adversary of the Jews, had devised evil against them, to kill them and destroy them; and had cast Phur, that is, the lot.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d78597" class="outline-3">
+<h3 id="org6d78597">Esther 9:25</h3>
+<div class="outline-text-3" id="text-org6d78597">
+<p>
+And afterwards Esther went in to the king, beseeching him that his endeavors might be made void by the king&rsquo;s letters: and the evil that he had intended against the Jews, might return upon his own head. And so both he and his sons were hanged upon gibbets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffae84e" class="outline-3">
+<h3 id="orgffae84e">Esther 9:26</h3>
+<div class="outline-text-3" id="text-orgffae84e">
+<p>
+And since that time these days are called Phurim, that is, of lots: because Phur, that is, the lot, was cast into the urn. And all things that were done, are contained in the volume of this epistle, that is, of this book:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org318b683" class="outline-3">
+<h3 id="org318b683">Esther 9:27</h3>
+<div class="outline-text-3" id="text-org318b683">
+<p>
+And the things that they suffered, and that were afterwards changed, the Jews took upon themselves and their seed, and upon all that had a mind to be joined to their religion, so that it should be lawful for none to pass these days without solemnity: which the writing testifieth, and certain times require, as the years continually succeed one another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d63992" class="outline-3">
+<h3 id="org3d63992">Esther 9:28</h3>
+<div class="outline-text-3" id="text-org3d63992">
+<p>
+These are the days which shall never be forgot: and which all provinces in the whole world shall celebrate throughout all generations: neither is there any city wherein the days of Phurim, that is, of lots, must not be observed by the Jews, and by their posterity, which is bound to these ceremonies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7da0bce" class="outline-3">
+<h3 id="org7da0bce">Esther 9:29</h3>
+<div class="outline-text-3" id="text-org7da0bce">
+<p>
+And Esther the queen, the daughter of Abihail, and Mardochai the Jew, wrote also a second epistle, that with all diligence this day should be established a festival for the time to come.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b5e2da" class="outline-3">
+<h3 id="org4b5e2da">Esther 9:30</h3>
+<div class="outline-text-3" id="text-org4b5e2da">
+<p>
+And they sent to all the Jews that were in the hundred and twenty-seven provinces of king Assuerus, that they should have peace, and receive truth,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58ff1ab" class="outline-3">
+<h3 id="org58ff1ab">Esther 9:31</h3>
+<div class="outline-text-3" id="text-org58ff1ab">
+<p>
+And observe the days of lots, and celebrate them with joy in their proper time: as Mardochai and Esther had appointed, and they undertook them to be observed by themselves and by their seed, fasts, and cries, and the days of lots,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org810dd33" class="outline-3">
+<h3 id="org810dd33">Esther 9:32</h3>
+<div class="outline-text-3" id="text-org810dd33">
+<p>
+And all things which are contained in the history of this book, which is called Esther. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3cff577" class="outline-2">
+<h2 id="org3cff577">Esther 10</h2>
+<div class="outline-text-2" id="text-org3cff577">
+</div>
+<div id="outline-container-org184a6d7" class="outline-3">
+<h3 id="org184a6d7">Esther 10:1</h3>
+<div class="outline-text-3" id="text-org184a6d7">
+<p>
+And king Assuerus made all the land, and all the islands of the sea tributary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6db547" class="outline-3">
+<h3 id="orge6db547">Esther 10:2</h3>
+<div class="outline-text-3" id="text-orge6db547">
+<p>
+And his strength and his empire, and the dignity and greatness wherewith he exalted Mardochai, are written in the books of the Medes, and of the Persians:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5593d1" class="outline-3">
+<h3 id="orgb5593d1">Esther 10:3</h3>
+<div class="outline-text-3" id="text-orgb5593d1">
+<p>
+And how Mardochai of the race of the Jews, was next after king Assuerus: and great among the Jews, and acceptable to the people of his brethren, seeking the good of his people, and speaking those things which were for the welfare of his seed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff05d59" class="outline-3">
+<h3 id="orgff05d59">Esther 10:4</h3>
+<div class="outline-text-3" id="text-orgff05d59">
+<p>
+Then Mardochai said: God hath done these things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d7e3ac" class="outline-3">
+<h3 id="org4d7e3ac">Esther 10:5</h3>
+<div class="outline-text-3" id="text-org4d7e3ac">
+<p>
+I remember a dream that I saw, which signified these same things: and nothing thereof hath failed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c0197c" class="outline-3">
+<h3 id="org6c0197c">Esther 10:6</h3>
+<div class="outline-text-3" id="text-org6c0197c">
+<p>
+The little fountain which grew into a river, and was turned into a light, and into the sun, and abounded into many waters, is Esther, whom the king married, and made queen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49a76f1" class="outline-3">
+<h3 id="org49a76f1">Esther 10:7</h3>
+<div class="outline-text-3" id="text-org49a76f1">
+<p>
+But the two dragons are I and Aman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb53dc9" class="outline-3">
+<h3 id="orgfb53dc9">Esther 10:8</h3>
+<div class="outline-text-3" id="text-orgfb53dc9">
+<p>
+The nations that were assembled are they that endeavoured to destroy the name of the Jews.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49a831f" class="outline-3">
+<h3 id="org49a831f">Esther 10:9</h3>
+<div class="outline-text-3" id="text-org49a831f">
+<p>
+And my nation is Israel, who cried to the Lord, and the Lord saved his people: and he delivered us from all evils, and hath wrought great signs and wonders among the nations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd929ca" class="outline-3">
+<h3 id="orgbd929ca">Esther 10:10</h3>
+<div class="outline-text-3" id="text-orgbd929ca">
+<p>
+And he commanded that there should be two lots, one of the people of God, and the other of all the nations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7162ff" class="outline-3">
+<h3 id="orgc7162ff">Esther 10:11</h3>
+<div class="outline-text-3" id="text-orgc7162ff">
+<p>
+And both lots came to the day appointed already from that time before God to all nations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda7f1d8" class="outline-3">
+<h3 id="orgda7f1d8">Esther 10:12</h3>
+<div class="outline-text-3" id="text-orgda7f1d8">
+<p>
+And the Lord remembered his people, and had mercy on his inheritance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8de3e17" class="outline-3">
+<h3 id="org8de3e17">Esther 10:13</h3>
+<div class="outline-text-3" id="text-org8de3e17">
+<p>
+And these days shall be observed in the month of Adar on the fourteenth, and fifteenth day of the same month, with all diligence, and joy of the people gathered into one assembly, throughout all the generations hereafter of the people of Israel. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org77f4a02" class="outline-2">
+<h2 id="org77f4a02">Esther 11</h2>
+<div class="outline-text-2" id="text-org77f4a02">
+</div>
+<div id="outline-container-org44f036e" class="outline-3">
+<h3 id="org44f036e">Esther 11:1</h3>
+<div class="outline-text-3" id="text-org44f036e">
+<p>
+In the fourth year of the reign of Ptolemy and Cleopatra, Dositheus, who said he was a priest, and of the Levitical race, and Ptolemy his son brought this epistle of Phurim, which they said Lysimachus the son of Ptolemy had interpreted in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd0b27f" class="outline-3">
+<h3 id="orgfd0b27f">Esther 11:2</h3>
+<div class="outline-text-3" id="text-orgfd0b27f">
+<p>
+In the second year of the reign of Artaxerxes the great, in the first day of the month Nisan, Mardochai the son of Jair, the son of Semei, the son of Cis, of the tribe of Benjamin:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcce285f" class="outline-3">
+<h3 id="orgcce285f">Esther 11:3</h3>
+<div class="outline-text-3" id="text-orgcce285f">
+<p>
+A Jew who dwelt in the city of Susan, a great man and among the first of the king&rsquo;s court, had a dream.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb3e47d" class="outline-3">
+<h3 id="orgeb3e47d">Esther 11:4</h3>
+<div class="outline-text-3" id="text-orgeb3e47d">
+<p>
+Now he was of the number of the captives, whom Nabuchodonosor king of Babylon had carried away from Jerusalem with Jechonias king of Juda:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org611a7ee" class="outline-3">
+<h3 id="org611a7ee">Esther 11:5</h3>
+<div class="outline-text-3" id="text-org611a7ee">
+<p>
+And this was his dream: Behold there were voices, and tumults, and thunders, and earthquakes, and a disturbance upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org650fcee" class="outline-3">
+<h3 id="org650fcee">Esther 11:6</h3>
+<div class="outline-text-3" id="text-org650fcee">
+<p>
+And behold two great dragons came forth ready to fight one against another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a4c9cf" class="outline-3">
+<h3 id="org1a4c9cf">Esther 11:7</h3>
+<div class="outline-text-3" id="text-org1a4c9cf">
+<p>
+And at their cry all nations were stirred up to fight against the nation of the just.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cfc7b7" class="outline-3">
+<h3 id="org2cfc7b7">Esther 11:8</h3>
+<div class="outline-text-3" id="text-org2cfc7b7">
+<p>
+And that was a day of darkness and danger, of tribulation and distress, and great fear upon the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa28510" class="outline-3">
+<h3 id="orgfa28510">Esther 11:9</h3>
+<div class="outline-text-3" id="text-orgfa28510">
+<p>
+And the nation of the just was troubled fearing their own evils, and was prepared for death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79295d0" class="outline-3">
+<h3 id="org79295d0">Esther 11:10</h3>
+<div class="outline-text-3" id="text-org79295d0">
+<p>
+And they cried to God: and as they were crying, a little fountain grew into a very great river, and abounded into many waters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b209ac" class="outline-3">
+<h3 id="org7b209ac">Esther 11:11</h3>
+<div class="outline-text-3" id="text-org7b209ac">
+<p>
+The light and the sun rose up, and the humble were exalted, and they devoured the glorious.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4dd19a" class="outline-3">
+<h3 id="orgd4dd19a">Esther 11:12</h3>
+<div class="outline-text-3" id="text-orgd4dd19a">
+<p>
+And when Mardochai had seen this, and arose out of his bed, he was thinking what God would do: and he kept it fixed in his mind, desirous to know what the dream should signify. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf099a11" class="outline-2">
+<h2 id="orgf099a11">Esther 12</h2>
+<div class="outline-text-2" id="text-orgf099a11">
+</div>
+<div id="outline-container-org88a2d78" class="outline-3">
+<h3 id="org88a2d78">Esther 12:1</h3>
+<div class="outline-text-3" id="text-org88a2d78">
+<p>
+And he abode at that time in the king&rsquo;s court with Bagatha and Thara the king&rsquo;s eunuchs, who were porters of the palace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30da786" class="outline-3">
+<h3 id="org30da786">Esther 12:2</h3>
+<div class="outline-text-3" id="text-org30da786">
+<p>
+And when he understood their designs, and had diligently searched into their projects, he learned that they went about to lay violent hands on king Artaxerxes, and he told the king thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org930db7d" class="outline-3">
+<h3 id="org930db7d">Esther 12:3</h3>
+<div class="outline-text-3" id="text-org930db7d">
+<p>
+Then the king had them both examined, and after they had confessed, commanded them to be put to death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf9582a" class="outline-3">
+<h3 id="orgdf9582a">Esther 12:4</h3>
+<div class="outline-text-3" id="text-orgdf9582a">
+<p>
+But the king made a record of what was done: and Mardochai also committed the memory of the thing to writing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5270794" class="outline-3">
+<h3 id="org5270794">Esther 12:5</h3>
+<div class="outline-text-3" id="text-org5270794">
+<p>
+And the king commanded him, to abide in the court of the palace, and gave him presents for the information.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3f0b23" class="outline-3">
+<h3 id="orgc3f0b23">Esther 12:6</h3>
+<div class="outline-text-3" id="text-orgc3f0b23">
+<p>
+But Aman the son of Amadathi the Bugite was in great honour with the king, and sought to hurt Mardochai and his people, because of the two eunuchs of the king who were put to death. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3407741" class="outline-2">
+<h2 id="org3407741">Esther 13</h2>
+<div class="outline-text-2" id="text-org3407741">
+</div>
+<div id="outline-container-org7338990" class="outline-3">
+<h3 id="org7338990">Esther 13:1</h3>
+<div class="outline-text-3" id="text-org7338990">
+<p>
+And this was the copy of the letter: Artaxerxes the great king who reigneth from India to Ethiopia, to the princes and governors of the hundred and twenty-seven provinces, that are subject to his empire, greeting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58a6c33" class="outline-3">
+<h3 id="org58a6c33">Esther 13:2</h3>
+<div class="outline-text-3" id="text-org58a6c33">
+<p>
+Whereas I reigned over many nations, and had brought all the world under my dominion, I was not willing to abuse the greatness of my power, but to govern my subjects with clemency and that they might live quietly without any terror, and might enjoy peace, which is desired by all men,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bfc6e1" class="outline-3">
+<h3 id="org7bfc6e1">Esther 13:3</h3>
+<div class="outline-text-3" id="text-org7bfc6e1">
+<p>
+But when I asked my counsellors how this might be accomplished, one that excelled the rest in wisdom and fidelity, and was second after the king, Aman by name,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e510bf" class="outline-3">
+<h3 id="org8e510bf">Esther 13:4</h3>
+<div class="outline-text-3" id="text-org8e510bf">
+<p>
+Told me that there was a people scattered through the whole world, which used new laws, and acted against the customs of all nations, despised the commandments of kings, and violated by their opposition the concord of all nations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdcfc08" class="outline-3">
+<h3 id="orgbdcfc08">Esther 13:5</h3>
+<div class="outline-text-3" id="text-orgbdcfc08">
+<p>
+Wherefore having learned this, and seeing one nation in opposition to all mankind using perverse laws, and going against our commandments, and disturbing the peace and concord of the provinces subject to us,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf004cb7" class="outline-3">
+<h3 id="orgf004cb7">Esther 13:6</h3>
+<div class="outline-text-3" id="text-orgf004cb7">
+<p>
+We have commanded that all whom Aman shall mark out, who is chief over all the provinces, and second after the king, and whom we honour as a father, shall be utterly destroyed by their enemies, with their wives and children, and that none shall have pity on them, on the fourteenth day of the twelfth month Adar of this present year:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcbc6ff" class="outline-3">
+<h3 id="orgfcbc6ff">Esther 13:7</h3>
+<div class="outline-text-3" id="text-orgfcbc6ff">
+<p>
+That these wicked men going down to hell in one day, may restore to our empire the peace which they had disturbed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c9e1a5" class="outline-3">
+<h3 id="org6c9e1a5">Esther 13:8</h3>
+<div class="outline-text-3" id="text-org6c9e1a5">
+<p>
+But Mardochai besought the Lord, remembering all his works,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85a34d1" class="outline-3">
+<h3 id="org85a34d1">Esther 13:9</h3>
+<div class="outline-text-3" id="text-org85a34d1">
+<p>
+And said: O Lord, Lord, almighty king, for all things are in thy power, and there is none that can resist thy will, if thou determine to save Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc15c0dc" class="outline-3">
+<h3 id="orgc15c0dc">Esther 13:10</h3>
+<div class="outline-text-3" id="text-orgc15c0dc">
+<p>
+Thou hast made heaven and earth and all things that are under the cope of heaven.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f19bc3" class="outline-3">
+<h3 id="org5f19bc3">Esther 13:11</h3>
+<div class="outline-text-3" id="text-org5f19bc3">
+<p>
+Thou art Lord of all, and there is none that can resist thy majesty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0856a1" class="outline-3">
+<h3 id="orga0856a1">Esther 13:12</h3>
+<div class="outline-text-3" id="text-orga0856a1">
+<p>
+Thou knowest all things, and thou knowest that it was not out of pride and or any desire of glory, that I refused to worship the proud Aman,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a10b69" class="outline-3">
+<h3 id="org6a10b69">Esther 13:13</h3>
+<div class="outline-text-3" id="text-org6a10b69">
+<p>
+(For I would willingly and readily for the salvation of Israel have kissed even the steps of his feet,)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org71a4244" class="outline-3">
+<h3 id="org71a4244">Esther 13:14</h3>
+<div class="outline-text-3" id="text-org71a4244">
+<p>
+But I feared lest I should transfer the honour of my God to a man, and lest I should adore any one except my God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3f60ee" class="outline-3">
+<h3 id="orga3f60ee">Esther 13:15</h3>
+<div class="outline-text-3" id="text-orga3f60ee">
+<p>
+And now, O Lord, O king, O God of Abraham, have mercy on thy people, because our enemies resolve to destroy us, and extinguish thy inheritance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc98a290" class="outline-3">
+<h3 id="orgc98a290">Esther 13:16</h3>
+<div class="outline-text-3" id="text-orgc98a290">
+<p>
+Despise not thy portion, which thou hast redeemed for thyself out of Egypt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb34bc9" class="outline-3">
+<h3 id="orgdb34bc9">Esther 13:17</h3>
+<div class="outline-text-3" id="text-orgdb34bc9">
+<p>
+Hear my supplication, and be merciful to thy lot and inheritance, and turn our mourning into joy, that we may live and praise thy name, O Lord, and shut not the mouths of them that sing to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39c7740" class="outline-3">
+<h3 id="org39c7740">Esther 13:18</h3>
+<div class="outline-text-3" id="text-org39c7740">
+<p>
+And all Israel with like mind and supplication cried to the Lord, because they saw certain death hanging over their heads. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc92520b" class="outline-2">
+<h2 id="orgc92520b">Esther 14</h2>
+<div class="outline-text-2" id="text-orgc92520b">
+</div>
+<div id="outline-container-orge01420b" class="outline-3">
+<h3 id="orge01420b">Esther 14:1</h3>
+<div class="outline-text-3" id="text-orge01420b">
+<p>
+Queen Esther also, fearing the danger that was at hand, had recourse to the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd639846" class="outline-3">
+<h3 id="orgd639846">Esther 14:2</h3>
+<div class="outline-text-3" id="text-orgd639846">
+<p>
+And when she had laid away her royal apparel, she put on garments suitable for weeping and mourning: instead of divers precious ointments, she covered her head with ashes and dung, and she humbled her body with fasts: and all the places in which before she was accustomed to rejoice, she filled with her torn hair.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35f8cfb" class="outline-3">
+<h3 id="org35f8cfb">Esther 14:3</h3>
+<div class="outline-text-3" id="text-org35f8cfb">
+<p>
+And she prayed to the Lord the God of Israel, saying: O my Lord, who alone art our king, help me a desolate woman, and who have no other helper but thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4dba53" class="outline-3">
+<h3 id="orgd4dba53">Esther 14:4</h3>
+<div class="outline-text-3" id="text-orgd4dba53">
+<p>
+My danger is in my hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa2225a" class="outline-3">
+<h3 id="orgaa2225a">Esther 14:5</h3>
+<div class="outline-text-3" id="text-orgaa2225a">
+<p>
+I have heard of my father that thou, O Lord, didst take Israel from among all nations, and our fathers from all their predecessors, to possess them as an everlasting inheritance, and thou hast done to them as thou hast promised.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org171e8c9" class="outline-3">
+<h3 id="org171e8c9">Esther 14:6</h3>
+<div class="outline-text-3" id="text-org171e8c9">
+<p>
+We have sinned in thy sight, and therefore thou hast delivered us into the hands of our enemies:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba51d35" class="outline-3">
+<h3 id="orgba51d35">Esther 14:7</h3>
+<div class="outline-text-3" id="text-orgba51d35">
+<p>
+For we have worshipped their gods. Thou art just, O Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb9d80e" class="outline-3">
+<h3 id="orgbb9d80e">Esther 14:8</h3>
+<div class="outline-text-3" id="text-orgbb9d80e">
+<p>
+And now they are not content to oppress us with most hard bondage, but attributing the strength of their hands to the power of their idols,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76bfde5" class="outline-3">
+<h3 id="org76bfde5">Esther 14:9</h3>
+<div class="outline-text-3" id="text-org76bfde5">
+<p>
+They design to change thy promises, and destroy thy inheritance, and shut the mouths of them that praise thee, and extinguish the glory of thy temple and altar,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ecb7e3" class="outline-3">
+<h3 id="org8ecb7e3">Esther 14:10</h3>
+<div class="outline-text-3" id="text-org8ecb7e3">
+<p>
+That they may open the mouths of Gentiles, and praise the strength of idols, and magnify for ever a carnal king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6c71ad" class="outline-3">
+<h3 id="orgd6c71ad">Esther 14:11</h3>
+<div class="outline-text-3" id="text-orgd6c71ad">
+<p>
+Give not, O Lord, thy sceptre to them that are not, lest they laugh at our ruin: but turn their counsel upon themselves, and destroy him that hath begun to rage against us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0158195" class="outline-3">
+<h3 id="org0158195">Esther 14:12</h3>
+<div class="outline-text-3" id="text-org0158195">
+<p>
+Remember, O Lord, and shew thyself to us in the time of our tribulation, and give me boldness, O Lord, king of gods, and of all power:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaf67ba" class="outline-3">
+<h3 id="orgfaf67ba">Esther 14:13</h3>
+<div class="outline-text-3" id="text-orgfaf67ba">
+<p>
+Give me a well ordered speech in my mouth in the presence of the lion, and turn his heart to the hatred of our enemy, that both he himself may perish, and the rest that consent to him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e149a8" class="outline-3">
+<h3 id="org8e149a8">Esther 14:14</h3>
+<div class="outline-text-3" id="text-org8e149a8">
+<p>
+But deliver us by thy hand, and help me, who have no other helper, but thee, O Lord, who hast the knowledge of all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org168c981" class="outline-3">
+<h3 id="org168c981">Esther 14:15</h3>
+<div class="outline-text-3" id="text-org168c981">
+<p>
+And thou knowest that I hate the glory of the wicked, and abhor the bed of the uncircumcised, and of every stranger.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0adc1f1" class="outline-3">
+<h3 id="org0adc1f1">Esther 14:16</h3>
+<div class="outline-text-3" id="text-org0adc1f1">
+<p>
+Thou knowest my necessity, that I abominate the sign of my pride and glory, which is upon my head in the days of my public appearance, and detest it as a menstruous rag, and wear it not in the days of my silence,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd33915" class="outline-3">
+<h3 id="orgfd33915">Esther 14:17</h3>
+<div class="outline-text-3" id="text-orgfd33915">
+<p>
+And that I have not eaten at Aman&rsquo;s table, nor hath the king&rsquo;s banquet pleased me, and that I have not drunk the wine of the drink offerings:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66a9e4e" class="outline-3">
+<h3 id="org66a9e4e">Esther 14:18</h3>
+<div class="outline-text-3" id="text-org66a9e4e">
+<p>
+And that thy handmaid hath never rejoiced, since I was brought hither unto this day but in thee, O Lord, the God of Abraham.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf34d52a" class="outline-3">
+<h3 id="orgf34d52a">Esther 14:19</h3>
+<div class="outline-text-3" id="text-orgf34d52a">
+<p>
+O God, who art mighty above all, hear the voice of them, that have no other hope, and deliver us from the hand of the wicked, and deliver me from my fear. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org17ce9f7" class="outline-2">
+<h2 id="org17ce9f7">Esther 15</h2>
+<div class="outline-text-2" id="text-org17ce9f7">
+</div>
+<div id="outline-container-orgf148b3f" class="outline-3">
+<h3 id="orgf148b3f">Esther 15:1</h3>
+<div class="outline-text-3" id="text-orgf148b3f">
+<p>
+And he commanded her (no doubt but he was Mardochai) to go to the king, and petition for her people, and for her country.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6655b81" class="outline-3">
+<h3 id="org6655b81">Esther 15:2</h3>
+<div class="outline-text-3" id="text-org6655b81">
+<p>
+Remember, (said he,) the days of thy low estate, how thou wast brought up by my hand, because Aman the second after the king hath spoken against us unto death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7607e74" class="outline-3">
+<h3 id="org7607e74">Esther 15:3</h3>
+<div class="outline-text-3" id="text-org7607e74">
+<p>
+And do thou call upon the Lord, and speak to the king for us, and deliver us from death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org066c960" class="outline-3">
+<h3 id="org066c960">Esther 15:4</h3>
+<div class="outline-text-3" id="text-org066c960">
+<p>
+And on the third day she laid away the garments she wore, and put on her glorious apparel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org657e3a1" class="outline-3">
+<h3 id="org657e3a1">Esther 15:5</h3>
+<div class="outline-text-3" id="text-org657e3a1">
+<p>
+And glittering in royal robes, after she had called upon God the ruler and Saviour of all, she took two maids with her,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9b3ef1" class="outline-3">
+<h3 id="orgd9b3ef1">Esther 15:6</h3>
+<div class="outline-text-3" id="text-orgd9b3ef1">
+<p>
+And upon one of them she leaned, as if for delicateness and overmuch tenderness she were not able to bear up her own body.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6f3f84" class="outline-3">
+<h3 id="orge6f3f84">Esther 15:7</h3>
+<div class="outline-text-3" id="text-orge6f3f84">
+<p>
+And the other maid followed her lady, bearing up her train flowing on the ground.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf03a207" class="outline-3">
+<h3 id="orgf03a207">Esther 15:8</h3>
+<div class="outline-text-3" id="text-orgf03a207">
+<p>
+But she with a rosy colour in her face, and with gracious and bright eyes hid a mind full of anguish, and exceeding great fear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7599c9e" class="outline-3">
+<h3 id="org7599c9e">Esther 15:9</h3>
+<div class="outline-text-3" id="text-org7599c9e">
+<p>
+So going in she passed through all doors in order, and stood before the king, where he sat upon his royal throne, clothed with his royal robes, and glittering with gold, and precious stones, and he was terrible to behold.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a27630" class="outline-3">
+<h3 id="org8a27630">Esther 15:10</h3>
+<div class="outline-text-3" id="text-org8a27630">
+<p>
+And when he had lifted up his countenance, and with burning eyes had shewn the wrath of his heart, the queen sunk down, and her colour turned pale, and she rested her weary head upon her handmaid.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga03c494" class="outline-3">
+<h3 id="orga03c494">Esther 15:11</h3>
+<div class="outline-text-3" id="text-orga03c494">
+<p>
+And God changed the king&rsquo;s spirit into mildness, and all in haste and in fear he leaped from his throne, and holding her up in his arms, till she came to herself, caressed her with these words:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org488f894" class="outline-3">
+<h3 id="org488f894">Esther 15:12</h3>
+<div class="outline-text-3" id="text-org488f894">
+<p>
+What is the matter, Esther? I am thy brother, fear not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7b5831" class="outline-3">
+<h3 id="orgc7b5831">Esther 15:13</h3>
+<div class="outline-text-3" id="text-orgc7b5831">
+<p>
+Thou shalt not die: for this law is not made for thee, but for all others.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e57a6b" class="outline-3">
+<h3 id="org0e57a6b">Esther 15:14</h3>
+<div class="outline-text-3" id="text-org0e57a6b">
+<p>
+Come near then, and touch the sceptre.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc814ad0" class="outline-3">
+<h3 id="orgc814ad0">Esther 15:15</h3>
+<div class="outline-text-3" id="text-orgc814ad0">
+<p>
+And as she held her peace, he took the golden sceptre, and laid it upon her neck, and kissed her, and said: Why dost thou not speak to me?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78a1009" class="outline-3">
+<h3 id="org78a1009">Esther 15:16</h3>
+<div class="outline-text-3" id="text-org78a1009">
+<p>
+She answered: I saw thee, my lord, as an angel of God, and my heart was troubled for fear of thy majesty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94feab4" class="outline-3">
+<h3 id="org94feab4">Esther 15:17</h3>
+<div class="outline-text-3" id="text-org94feab4">
+<p>
+For thou, my lord, art very admirable, and thy face is full of graces.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacd437a" class="outline-3">
+<h3 id="orgacd437a">Esther 15:18</h3>
+<div class="outline-text-3" id="text-orgacd437a">
+<p>
+And while she was speaking, she fell down again, and was almost in a swoon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc54902" class="outline-3">
+<h3 id="orgdc54902">Esther 15:19</h3>
+<div class="outline-text-3" id="text-orgdc54902">
+<p>
+But the king was troubled, and all his servants comforted her. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb9e1643" class="outline-2">
+<h2 id="orgb9e1643">Esther 16</h2>
+<div class="outline-text-2" id="text-orgb9e1643">
+</div>
+<div id="outline-container-org347664e" class="outline-3">
+<h3 id="org347664e">Esther 16:1</h3>
+<div class="outline-text-3" id="text-org347664e">
+<p>
+The great king Artaxerxes, from India to Ethiopia, to the governors and princes of a hundred and twenty-seven provinces, which obey our command, sendeth greeting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfde39de" class="outline-3">
+<h3 id="orgfde39de">Esther 16:2</h3>
+<div class="outline-text-3" id="text-orgfde39de">
+<p>
+Many have abused unto pride the goodness of princes, and the honour that hath been bestowed upon them:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc5f3dc6" class="outline-3">
+<h3 id="orgc5f3dc6">Esther 16:3</h3>
+<div class="outline-text-3" id="text-orgc5f3dc6">
+<p>
+And not only endeavour to oppress the king&rsquo;s subjects, but not bearing the glory that is given them, take in hand, to practise also against them that gave it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb766e58" class="outline-3">
+<h3 id="orgb766e58">Esther 16:4</h3>
+<div class="outline-text-3" id="text-orgb766e58">
+<p>
+Neither are they content not to return thanks for benefits received, and to violate in themselves the laws of humanity, but they think they can also escape the justice of God who seeth all things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd94f473" class="outline-3">
+<h3 id="orgd94f473">Esther 16:5</h3>
+<div class="outline-text-3" id="text-orgd94f473">
+<p>
+And they break out into so great madness, as to endeavour to undermine by lies such as observe diligently the offices committed to them, and do all things in such manner as to be worthy of all men&rsquo;s praise,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fccda2" class="outline-3">
+<h3 id="org3fccda2">Esther 16:6</h3>
+<div class="outline-text-3" id="text-org3fccda2">
+<p>
+While with crafty fraud they deceive the ears of princes that are well meaning, and judge of others by their own nature.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8723ff8" class="outline-3">
+<h3 id="org8723ff8">Esther 16:7</h3>
+<div class="outline-text-3" id="text-org8723ff8">
+<p>
+Now this is proved both from ancient histories, and by the things which are done daily, how the good designs of kings are depraved by the evil suggestions of certain men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org446244c" class="outline-3">
+<h3 id="org446244c">Esther 16:8</h3>
+<div class="outline-text-3" id="text-org446244c">
+<p>
+Wherefore we must provide for the peace of all provinces.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24ddfc4" class="outline-3">
+<h3 id="org24ddfc4">Esther 16:9</h3>
+<div class="outline-text-3" id="text-org24ddfc4">
+<p>
+Neither must you think, if we command different things, that it cometh of the levity of our mind, but that we give sentence according to the quality and necessity of times, as the profit of the commonwealth requireth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69c4e41" class="outline-3">
+<h3 id="org69c4e41">Esther 16:10</h3>
+<div class="outline-text-3" id="text-org69c4e41">
+<p>
+Now that you may more plainly understand what we say, Aman the son of Amadathi, a Macedonian both in mind and country, and having nothing of the Persian blood, but with his cruelty staining our goodness, was received being a stranger by us:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga22590a" class="outline-3">
+<h3 id="orga22590a">Esther 16:11</h3>
+<div class="outline-text-3" id="text-orga22590a">
+<p>
+And found our humanity so great towards him, that he was called our father, and was worshipped by all as the next man after the king:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c1d6c6" class="outline-3">
+<h3 id="org6c1d6c6">Esther 16:12</h3>
+<div class="outline-text-3" id="text-org6c1d6c6">
+<p>
+But he was so far puffed up with arrogancy, as to go about to deprive us of our kingdom and life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc4be57" class="outline-3">
+<h3 id="orgcc4be57">Esther 16:13</h3>
+<div class="outline-text-3" id="text-orgcc4be57">
+<p>
+For with certain new and unheard of devices he hath sought the destruction of Mardochai, by whose fidelity and good services our life was saved, and of Esther the partner of our kingdom with all their nation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61a4564" class="outline-3">
+<h3 id="org61a4564">Esther 16:14</h3>
+<div class="outline-text-3" id="text-org61a4564">
+<p>
+Thinking that after they were slain, he might work treason against us left alone without friends, and might transfer the kingdom of the Persians to the Macedonians.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org337997d" class="outline-3">
+<h3 id="org337997d">Esther 16:15</h3>
+<div class="outline-text-3" id="text-org337997d">
+<p>
+But we have found that the Jews, who were by that most wicked man appointed to be slain, are in no fault at all, but contrariwise, use just laws,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd04ac92" class="outline-3">
+<h3 id="orgd04ac92">Esther 16:16</h3>
+<div class="outline-text-3" id="text-orgd04ac92">
+<p>
+And are the children of the highest and the greatest, and the ever living God, by whose benefit the kingdom was given both to our fathers and to us, and is kept unto this day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77a2d52" class="outline-3">
+<h3 id="org77a2d52">Esther 16:17</h3>
+<div class="outline-text-3" id="text-org77a2d52">
+<p>
+Wherefore know ye that those letters which he sent in our name, are void and of no effect.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga88c953" class="outline-3">
+<h3 id="orga88c953">Esther 16:18</h3>
+<div class="outline-text-3" id="text-orga88c953">
+<p>
+For which crime both he himself that devised it, and all his kindred hang on gibbets, before the gates of this city Susan: not we, but God repaying him as he deserved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd609a52" class="outline-3">
+<h3 id="orgd609a52">Esther 16:19</h3>
+<div class="outline-text-3" id="text-orgd609a52">
+<p>
+But this edict, which we now send, shall be published in all cities, that the Jews may freely follow their own laws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d254cc" class="outline-3">
+<h3 id="org5d254cc">Esther 16:20</h3>
+<div class="outline-text-3" id="text-org5d254cc">
+<p>
+And you shall aid them that they may kill those who had prepared themselves to kill them, on the thirteenth day of the twelfth month, which is called Adar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04e6516" class="outline-3">
+<h3 id="org04e6516">Esther 16:21</h3>
+<div class="outline-text-3" id="text-org04e6516">
+<p>
+For the almighty God hath turned this day of sadness and mourning into joy to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8d69e0" class="outline-3">
+<h3 id="orgc8d69e0">Esther 16:22</h3>
+<div class="outline-text-3" id="text-orgc8d69e0">
+<p>
+Wherefore you shall also count this day among other festival days, and celebrate it with all joy, that it may be known also in times to come,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15294bc" class="outline-3">
+<h3 id="org15294bc">Esther 16:23</h3>
+<div class="outline-text-3" id="text-org15294bc">
+<p>
+That all they who faithfully obey the Persians, receive a worthy reward for their fidelity: but they that are traitors to their kingdom, are destroyed for their wickedness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f47793" class="outline-3">
+<h3 id="org4f47793">Esther 16:24</h3>
+<div class="outline-text-3" id="text-org4f47793">
+<p>
+And let every province and city, that will not be partaker of this solemnity, perish by the sword and by fire, and be destroyed in such manner as to be made unpassable, both to men and beasts, for an example of contempt, and disobedience.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

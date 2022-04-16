@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0bf91a1">Habakkuk 1</a>
+<ul>
+<li><a href="#org764fe27">Habakkuk 1:1</a></li>
+<li><a href="#org88940f7">Habakkuk 1:2</a></li>
+<li><a href="#org7a6c514">Habakkuk 1:3</a></li>
+<li><a href="#org9fc5169">Habakkuk 1:4</a></li>
+<li><a href="#org1aa919e">Habakkuk 1:5</a></li>
+<li><a href="#org0066154">Habakkuk 1:6</a></li>
+<li><a href="#orgea6d7c1">Habakkuk 1:7</a></li>
+<li><a href="#org3d61ef1">Habakkuk 1:8</a></li>
+<li><a href="#orga5d96cb">Habakkuk 1:9</a></li>
+<li><a href="#orgbda7ec3">Habakkuk 1:10</a></li>
+<li><a href="#orgca8bf22">Habakkuk 1:11</a></li>
+<li><a href="#orgcdbf4e4">Habakkuk 1:12</a></li>
+<li><a href="#org069f8c9">Habakkuk 1:13</a></li>
+<li><a href="#org94fe4b9">Habakkuk 1:14</a></li>
+<li><a href="#orga20bbf9">Habakkuk 1:15</a></li>
+<li><a href="#org85f3b70">Habakkuk 1:16</a></li>
+<li><a href="#org6be6255">Habakkuk 1:17</a></li>
+</ul>
+</li>
+<li><a href="#org7d50b4b">Habakkuk 2</a>
+<ul>
+<li><a href="#org51c2f4f">Habakkuk 2:1</a></li>
+<li><a href="#orgd1e26df">Habakkuk 2:2</a></li>
+<li><a href="#org4780d4d">Habakkuk 2:3</a></li>
+<li><a href="#org4e19f3c">Habakkuk 2:4</a></li>
+<li><a href="#orgd7c897e">Habakkuk 2:5</a></li>
+<li><a href="#org7b03b50">Habakkuk 2:6</a></li>
+<li><a href="#orge40b9db">Habakkuk 2:7</a></li>
+<li><a href="#org6b80783">Habakkuk 2:8</a></li>
+<li><a href="#org1942625">Habakkuk 2:9</a></li>
+<li><a href="#org8c99f77">Habakkuk 2:10</a></li>
+<li><a href="#orgfae2f2f">Habakkuk 2:11</a></li>
+<li><a href="#orgb64ad1b">Habakkuk 2:12</a></li>
+<li><a href="#org0277278">Habakkuk 2:13</a></li>
+<li><a href="#org095b7f6">Habakkuk 2:14</a></li>
+<li><a href="#org07ac05c">Habakkuk 2:15</a></li>
+<li><a href="#orgffc8c92">Habakkuk 2:16</a></li>
+<li><a href="#org8414e3a">Habakkuk 2:17</a></li>
+<li><a href="#orgde80e20">Habakkuk 2:18</a></li>
+<li><a href="#org5e62001">Habakkuk 2:19</a></li>
+<li><a href="#org397aa21">Habakkuk 2:20</a></li>
+</ul>
+</li>
+<li><a href="#org83f6211">Habakkuk 3</a>
+<ul>
+<li><a href="#org5454971">Habakkuk 3:1</a></li>
+<li><a href="#org87b3285">Habakkuk 3:2</a></li>
+<li><a href="#org3fb4f5f">Habakkuk 3:3</a></li>
+<li><a href="#org4246f86">Habakkuk 3:4</a></li>
+<li><a href="#orgd963d30">Habakkuk 3:5</a></li>
+<li><a href="#org8289789">Habakkuk 3:6</a></li>
+<li><a href="#org3106de9">Habakkuk 3:7</a></li>
+<li><a href="#org6ae1ef7">Habakkuk 3:8</a></li>
+<li><a href="#orga45be3f">Habakkuk 3:9</a></li>
+<li><a href="#org1ac9390">Habakkuk 3:10</a></li>
+<li><a href="#orgfe6f8c6">Habakkuk 3:11</a></li>
+<li><a href="#org6a3c0fa">Habakkuk 3:12</a></li>
+<li><a href="#org5030882">Habakkuk 3:13</a></li>
+<li><a href="#org6eeff68">Habakkuk 3:14</a></li>
+<li><a href="#orgd5219d6">Habakkuk 3:15</a></li>
+<li><a href="#orga8462f0">Habakkuk 3:16</a></li>
+<li><a href="#org7079bca">Habakkuk 3:17</a></li>
+<li><a href="#org46f8d3e">Habakkuk 3:18</a></li>
+<li><a href="#org89ea6b9">Habakkuk 3:19</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0bf91a1" class="outline-2">
+<h2 id="org0bf91a1">Habakkuk 1</h2>
+<div class="outline-text-2" id="text-org0bf91a1">
+</div>
+<div id="outline-container-org764fe27" class="outline-3">
+<h3 id="org764fe27">Habakkuk 1:1</h3>
+<div class="outline-text-3" id="text-org764fe27">
+<p>
+Onus quod vidit Habacuc propheta.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88940f7" class="outline-3">
+<h3 id="org88940f7">Habakkuk 1:2</h3>
+<div class="outline-text-3" id="text-org88940f7">
+<p>
+Usquequo, Domine, clamabo,  et non exaudies ?  vociferabor ad te, vim patiens,  et non salvabis ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a6c514" class="outline-3">
+<h3 id="org7a6c514">Habakkuk 1:3</h3>
+<div class="outline-text-3" id="text-org7a6c514">
+<p>
+Quare ostendisti mihi iniquitatem et laborem,  videre prædam et injustitiam contra me ?  Et factum est judicium, et contradictio potentior. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fc5169" class="outline-3">
+<h3 id="org9fc5169">Habakkuk 1:4</h3>
+<div class="outline-text-3" id="text-org9fc5169">
+<p>
+Propter hoc lacerata est lex,  et non pervenit usque ad finem judicium ;  quia impius prævalet adversus justum,  propterea egreditur judicium perversum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1aa919e" class="outline-3">
+<h3 id="org1aa919e">Habakkuk 1:5</h3>
+<div class="outline-text-3" id="text-org1aa919e">
+<p>
+Aspicite in gentibus, et videte ;  admiramini, et obstupescite :  quia opus factum est in diebus vestris,  quod nemo credet cum narrabitur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0066154" class="outline-3">
+<h3 id="org0066154">Habakkuk 1:6</h3>
+<div class="outline-text-3" id="text-org0066154">
+<p>
+Quia ecce ego suscitabo Chaldæos,  gentem amaram et velocem,  ambulantem super latitudinem terræ,  ut possideat tabernacula non sua. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea6d7c1" class="outline-3">
+<h3 id="orgea6d7c1">Habakkuk 1:7</h3>
+<div class="outline-text-3" id="text-orgea6d7c1">
+<p>
+Horribilis et terribilis est :  ex semetipsa judicium et onus ejus egredietur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d61ef1" class="outline-3">
+<h3 id="org3d61ef1">Habakkuk 1:8</h3>
+<div class="outline-text-3" id="text-org3d61ef1">
+<p>
+Leviores pardis equi ejus,  et velociores lupis vespertinis :  et diffundentur equites ejus :  equites namque ejus de longe venient ;  volabunt quasi aquila festinans ad comedendum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5d96cb" class="outline-3">
+<h3 id="orga5d96cb">Habakkuk 1:9</h3>
+<div class="outline-text-3" id="text-orga5d96cb">
+<p>
+Omnes ad prædam venient,  facies eorum ventus urens ;  et congregabit quasi arenam captivitatem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbda7ec3" class="outline-3">
+<h3 id="orgbda7ec3">Habakkuk 1:10</h3>
+<div class="outline-text-3" id="text-orgbda7ec3">
+<p>
+Et ipse de regibus triumphabit,  et tyranni ridiculi ejus erunt ;  ipse super omnem munitionem ridebit,  et comportabit aggerem, et capiet eam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca8bf22" class="outline-3">
+<h3 id="orgca8bf22">Habakkuk 1:11</h3>
+<div class="outline-text-3" id="text-orgca8bf22">
+<p>
+Tunc mutabitur spiritus, et pertransibit, et corruet :  hæc est fortitudo ejus dei sui. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdbf4e4" class="outline-3">
+<h3 id="orgcdbf4e4">Habakkuk 1:12</h3>
+<div class="outline-text-3" id="text-orgcdbf4e4">
+<p>
+Numquid non tu a principio,  Domine, Deus meus, sancte meus,  et non moriemur ?  Domine, in judicium posuisti eum,  et fortem, ut corriperes, fundasti eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org069f8c9" class="outline-3">
+<h3 id="org069f8c9">Habakkuk 1:13</h3>
+<div class="outline-text-3" id="text-org069f8c9">
+<p>
+Mundi sunt oculi tui, ne videas malum,  et respicere ad iniquitatem non poteris.  Quare respicis super iniqua agentes,  et taces devorante impio justiorem se ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94fe4b9" class="outline-3">
+<h3 id="org94fe4b9">Habakkuk 1:14</h3>
+<div class="outline-text-3" id="text-org94fe4b9">
+<p>
+Et facies homines quasi pisces maris,  et quasi reptile non habens principem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga20bbf9" class="outline-3">
+<h3 id="orga20bbf9">Habakkuk 1:15</h3>
+<div class="outline-text-3" id="text-orga20bbf9">
+<p>
+Totum in hamo sublevavit,  traxit illud in sagena sua,  et congregavit in rete suum.  Super hoc lætabitur, et exsultabit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85f3b70" class="outline-3">
+<h3 id="org85f3b70">Habakkuk 1:16</h3>
+<div class="outline-text-3" id="text-org85f3b70">
+<p>
+Propterea immolabit sagenæ suæ,  et sacrificabit reti suo,  quia in ipsis incrassata est pars ejus,  et cibus ejus electus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6be6255" class="outline-3">
+<h3 id="org6be6255">Habakkuk 1:17</h3>
+<div class="outline-text-3" id="text-org6be6255">
+<p>
+Propter hoc ergo expandit sagenam suam,  et semper interficere gentes non parcet.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7d50b4b" class="outline-2">
+<h2 id="org7d50b4b">Habakkuk 2</h2>
+<div class="outline-text-2" id="text-org7d50b4b">
+</div>
+<div id="outline-container-org51c2f4f" class="outline-3">
+<h3 id="org51c2f4f">Habakkuk 2:1</h3>
+<div class="outline-text-3" id="text-org51c2f4f">
+<p>
+Super custodiam meam stabo,  et figam gradum super munitionem :  et contemplabor ut videam quid dicatur mihi,  et quid respondeam ad arguentem me.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1e26df" class="outline-3">
+<h3 id="orgd1e26df">Habakkuk 2:2</h3>
+<div class="outline-text-3" id="text-orgd1e26df">
+<p>
+Et respondit mihi Dominus, et dixit :   Scribe visum, et explana eum super tabulas,  ut percurrat qui legerit eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4780d4d" class="outline-3">
+<h3 id="org4780d4d">Habakkuk 2:3</h3>
+<div class="outline-text-3" id="text-org4780d4d">
+<p>
+Quia adhuc visus procul ;  et apparebit in finem, et non mentietur :  si moram fecerit, exspecta illum,  quia veniens veniet, et non tardabit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e19f3c" class="outline-3">
+<h3 id="org4e19f3c">Habakkuk 2:4</h3>
+<div class="outline-text-3" id="text-org4e19f3c">
+<p>
+Ecce qui incredulus est, non erit recta anima ejus in semetipso ;  justus autem in fide sua vivet. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7c897e" class="outline-3">
+<h3 id="orgd7c897e">Habakkuk 2:5</h3>
+<div class="outline-text-3" id="text-orgd7c897e">
+<p>
+Et quomodo vinum potantem decipit,  sic erit vir superbus, et non decorabitur :  qui dilatavit quasi infernus animam suam,  et ipse quasi mors, et non adimpletur :  et congregabit ad se omnes gentes,  et coacervabit ad se omnes populos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b03b50" class="outline-3">
+<h3 id="org7b03b50">Habakkuk 2:6</h3>
+<div class="outline-text-3" id="text-org7b03b50">
+<p>
+Numquid non omnes isti super eum parabolam sument,  et loquelam ænigmatum ejus, et dicetur :  Væ ei qui multiplicat non sua ?  usquequo et aggravat contra se densum lutum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge40b9db" class="outline-3">
+<h3 id="orge40b9db">Habakkuk 2:7</h3>
+<div class="outline-text-3" id="text-orge40b9db">
+<p>
+Numquid non repente consurgent qui mordeant te,  et suscitabuntur lacerantes te,  et eris in rapinam eis ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b80783" class="outline-3">
+<h3 id="org6b80783">Habakkuk 2:8</h3>
+<div class="outline-text-3" id="text-org6b80783">
+<p>
+Quia tu spoliasti gentes multas,  spoliabunt te omnes qui reliqui fuerint de populis,  propter sanguinem hominis,  et iniquitatem terræ, civitatis, et omnium habitantium in ea. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1942625" class="outline-3">
+<h3 id="org1942625">Habakkuk 2:9</h3>
+<div class="outline-text-3" id="text-org1942625">
+<p>
+Væ qui congregat avaritiam malam domui suæ,  ut sit in excelso nidus ejus,  et liberari se putat de manu mali ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c99f77" class="outline-3">
+<h3 id="org8c99f77">Habakkuk 2:10</h3>
+<div class="outline-text-3" id="text-org8c99f77">
+<p>
+Cogitasti confusionem domui tuæ ;  concidisti populos multos,  et peccavit anima tua. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfae2f2f" class="outline-3">
+<h3 id="orgfae2f2f">Habakkuk 2:11</h3>
+<div class="outline-text-3" id="text-orgfae2f2f">
+<p>
+Quia lapis de pariete clamabit,  et lignum, quod inter juncturas ædificiorum est, respondebit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb64ad1b" class="outline-3">
+<h3 id="orgb64ad1b">Habakkuk 2:12</h3>
+<div class="outline-text-3" id="text-orgb64ad1b">
+<p>
+Væ qui ædificat civitatem in sanguinibus,  et præparat urbem in iniquitate ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0277278" class="outline-3">
+<h3 id="org0277278">Habakkuk 2:13</h3>
+<div class="outline-text-3" id="text-org0277278">
+<p>
+Numquid non hæc sunt a Domino exercituum ?  laborabunt enim populi in multo igne,  et gentes in vacuum, et deficient. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org095b7f6" class="outline-3">
+<h3 id="org095b7f6">Habakkuk 2:14</h3>
+<div class="outline-text-3" id="text-org095b7f6">
+<p>
+Quia replebitur terra, ut cognoscant gloriam Domini,  quasi aquæ operientes mare. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07ac05c" class="outline-3">
+<h3 id="org07ac05c">Habakkuk 2:15</h3>
+<div class="outline-text-3" id="text-org07ac05c">
+<p>
+Væ qui potum dat amico suo mittens fel suum,  et inebrians ut aspiciat nuditatem ejus ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffc8c92" class="outline-3">
+<h3 id="orgffc8c92">Habakkuk 2:16</h3>
+<div class="outline-text-3" id="text-orgffc8c92">
+<p>
+Repletus es ignominia pro gloria ;  bibe tu quoque, et consopire.  Circumdabit te calix dexteræ Domini,  et vomitus ignominiæ super gloriam tuam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8414e3a" class="outline-3">
+<h3 id="org8414e3a">Habakkuk 2:17</h3>
+<div class="outline-text-3" id="text-org8414e3a">
+<p>
+Quia iniquitas Libani operiet te,  et vastitas animalium deterrebit eos  de sanguinibus hominum,  et iniquitate terræ, et civitatis, et omnium habitantium in ea. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde80e20" class="outline-3">
+<h3 id="orgde80e20">Habakkuk 2:18</h3>
+<div class="outline-text-3" id="text-orgde80e20">
+<p>
+Quid prodest sculptile, quia sculpsit illud fictor suus,  conflatile, et imaginem falsam ?  quia speravit in figmento fictor ejus, ut faceret simulacra muta. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e62001" class="outline-3">
+<h3 id="org5e62001">Habakkuk 2:19</h3>
+<div class="outline-text-3" id="text-org5e62001">
+<p>
+Væ qui dicit ligno : Expergiscere ;  Surge, lapidi tacenti !  Numquid ipse docere poterit ?  ecce iste coopertus est auro et argento,  et omnis spiritus non est in visceribus ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org397aa21" class="outline-3">
+<h3 id="org397aa21">Habakkuk 2:20</h3>
+<div class="outline-text-3" id="text-org397aa21">
+<p>
+Dominus autem in templo sancto suo :  sileat a facie ejus omnis terra !  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org83f6211" class="outline-2">
+<h2 id="org83f6211">Habakkuk 3</h2>
+<div class="outline-text-2" id="text-org83f6211">
+</div>
+<div id="outline-container-org5454971" class="outline-3">
+<h3 id="org5454971">Habakkuk 3:1</h3>
+<div class="outline-text-3" id="text-org5454971">
+<p>
+Oratio Habacuc prophetæ, pro ignorantiis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87b3285" class="outline-3">
+<h3 id="org87b3285">Habakkuk 3:2</h3>
+<div class="outline-text-3" id="text-org87b3285">
+<p>
+Domine, audivi auditionem tuam, et timui.  Domine, opus tuum, in medio annorum vivifica illud ;  in medio annorum notum facies :  cum iratus fueris, misericordiæ recordaberis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fb4f5f" class="outline-3">
+<h3 id="org3fb4f5f">Habakkuk 3:3</h3>
+<div class="outline-text-3" id="text-org3fb4f5f">
+<p>
+Deus ab austro veniet,  et Sanctus de monte Pharan :  operuit cælos gloria ejus,  et laudis ejus plena est terra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4246f86" class="outline-3">
+<h3 id="org4246f86">Habakkuk 3:4</h3>
+<div class="outline-text-3" id="text-org4246f86">
+<p>
+Splendor ejus ut lux erit,  cornua in manibus ejus :  ibi abscondita est fortitudo ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd963d30" class="outline-3">
+<h3 id="orgd963d30">Habakkuk 3:5</h3>
+<div class="outline-text-3" id="text-orgd963d30">
+<p>
+Ante faciem ejus ibit mors,  et egredietur diabolus ante pedes ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8289789" class="outline-3">
+<h3 id="org8289789">Habakkuk 3:6</h3>
+<div class="outline-text-3" id="text-org8289789">
+<p>
+Stetit, et mensus est terram ;  aspexit, et dissolvit gentes,  et contriti sunt montes sæculi :  incurvati sunt colles mundi ab itineribus æternitatis ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3106de9" class="outline-3">
+<h3 id="org3106de9">Habakkuk 3:7</h3>
+<div class="outline-text-3" id="text-org3106de9">
+<p>
+Pro iniquitate vidi tentoria Æthiopiæ ;  turbabuntur pelles terræ Madian. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ae1ef7" class="outline-3">
+<h3 id="org6ae1ef7">Habakkuk 3:8</h3>
+<div class="outline-text-3" id="text-org6ae1ef7">
+<p>
+Numquid in fluminibus iratus es, Domine ?  aut in fluminibus furor tuus ?  vel in mari indignatio tua ?  Qui ascendes super equos tuos, et quadrigæ tuæ salvatio. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga45be3f" class="outline-3">
+<h3 id="orga45be3f">Habakkuk 3:9</h3>
+<div class="outline-text-3" id="text-orga45be3f">
+<p>
+Suscitans suscitabis arcum tuum,  juramenta tribubus quæ locutus es ;  fluvios scindes terræ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ac9390" class="outline-3">
+<h3 id="org1ac9390">Habakkuk 3:10</h3>
+<div class="outline-text-3" id="text-org1ac9390">
+<p>
+Viderunt te, et doluerunt montes ;  gurges aquarum transiit :  dedit abyssus vocem suam ;  altitudo manus suas levavit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe6f8c6" class="outline-3">
+<h3 id="orgfe6f8c6">Habakkuk 3:11</h3>
+<div class="outline-text-3" id="text-orgfe6f8c6">
+<p>
+Sol et luna steterunt in habitaculo suo :  in luce sagittarum tuarum ibunt,  in splendore fulgurantis hastæ tuæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a3c0fa" class="outline-3">
+<h3 id="org6a3c0fa">Habakkuk 3:12</h3>
+<div class="outline-text-3" id="text-org6a3c0fa">
+<p>
+In fremitu conculcabis terram ;  in furore obstupefacies gentes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5030882" class="outline-3">
+<h3 id="org5030882">Habakkuk 3:13</h3>
+<div class="outline-text-3" id="text-org5030882">
+<p>
+Egressus es in salutem populi tui,  in salutem cum christo tuo :  percussisti caput de domo impii,  denudasti fundamentum ejus usque ad collum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6eeff68" class="outline-3">
+<h3 id="org6eeff68">Habakkuk 3:14</h3>
+<div class="outline-text-3" id="text-org6eeff68">
+<p>
+Maledixisti sceptris ejus,  capiti bellatorum ejus,  venientibus ut turbo ad dispergendum me :  exsultatio eorum, sicut ejus qui devorat pauperem in abscondito. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5219d6" class="outline-3">
+<h3 id="orgd5219d6">Habakkuk 3:15</h3>
+<div class="outline-text-3" id="text-orgd5219d6">
+<p>
+Viam fecisti in mari equis tuis,  in luto aquarum multarum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8462f0" class="outline-3">
+<h3 id="orga8462f0">Habakkuk 3:16</h3>
+<div class="outline-text-3" id="text-orga8462f0">
+<p>
+Audivi, et conturbatus est venter meus ;  a voce contremuerunt labia mea.  Ingrediatur putredo in ossibus meis,  et subter me scateat :  ut requiescam in die tribulationis,  ut ascendam ad populum accinctum nostrum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7079bca" class="outline-3">
+<h3 id="org7079bca">Habakkuk 3:17</h3>
+<div class="outline-text-3" id="text-org7079bca">
+<p>
+Ficus enim non florebit,  et non erit germen in vineis ;  mentietur opus olivæ,  et arva non afferent cibum :  abscindetur de ovili pecus,  et non erit armentum in præsepibus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46f8d3e" class="outline-3">
+<h3 id="org46f8d3e">Habakkuk 3:18</h3>
+<div class="outline-text-3" id="text-org46f8d3e">
+<p>
+Ego autem in Domino gaudebo ;  et exsultabo in Deo Jesu meo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89ea6b9" class="outline-3">
+<h3 id="org89ea6b9">Habakkuk 3:19</h3>
+<div class="outline-text-3" id="text-org89ea6b9">
+<p>
+Deus Dominus fortitudo mea,  et ponet pedes meos quasi cervorum :  et super excelsa mea deducet me  victor in psalmis canentem.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,3105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgab88d6d">Ezra 1</a>
+<ul>
+<li><a href="#org1855fc0">Ezra 1:1</a></li>
+<li><a href="#orgfd4896a">Ezra 1:2</a></li>
+<li><a href="#org84532a1">Ezra 1:3</a></li>
+<li><a href="#orgccad199">Ezra 1:4</a></li>
+<li><a href="#org1b62446">Ezra 1:5</a></li>
+<li><a href="#org708dab3">Ezra 1:6</a></li>
+<li><a href="#orgfca875e">Ezra 1:7</a></li>
+<li><a href="#orge257c6b">Ezra 1:8</a></li>
+<li><a href="#orgfd15e42">Ezra 1:9</a></li>
+<li><a href="#org34ae9d2">Ezra 1:10</a></li>
+<li><a href="#org531d99b">Ezra 1:11</a></li>
+</ul>
+</li>
+<li><a href="#orgbe6bd08">Ezra 2</a>
+<ul>
+<li><a href="#org21d22f0">Ezra 2:1</a></li>
+<li><a href="#orgdf8be4a">Ezra 2:2</a></li>
+<li><a href="#orga984ca6">Ezra 2:3</a></li>
+<li><a href="#org3927339">Ezra 2:4</a></li>
+<li><a href="#org63846aa">Ezra 2:5</a></li>
+<li><a href="#orgdd94219">Ezra 2:6</a></li>
+<li><a href="#orgeee7c33">Ezra 2:7</a></li>
+<li><a href="#org3e13e4e">Ezra 2:8</a></li>
+<li><a href="#orgcae51de">Ezra 2:9</a></li>
+<li><a href="#org994c981">Ezra 2:10</a></li>
+<li><a href="#org91987c8">Ezra 2:11</a></li>
+<li><a href="#org222deb3">Ezra 2:12</a></li>
+<li><a href="#orgc975c35">Ezra 2:13</a></li>
+<li><a href="#orgccc092b">Ezra 2:14</a></li>
+<li><a href="#org6157c79">Ezra 2:15</a></li>
+<li><a href="#org8087076">Ezra 2:16</a></li>
+<li><a href="#orge8d67f3">Ezra 2:17</a></li>
+<li><a href="#org5df3c5e">Ezra 2:18</a></li>
+<li><a href="#org98c8482">Ezra 2:19</a></li>
+<li><a href="#orge2e2ea1">Ezra 2:20</a></li>
+<li><a href="#org866cd3f">Ezra 2:21</a></li>
+<li><a href="#org4bb11b2">Ezra 2:22</a></li>
+<li><a href="#org08bde3f">Ezra 2:23</a></li>
+<li><a href="#org5acc90c">Ezra 2:24</a></li>
+<li><a href="#org621ed69">Ezra 2:25</a></li>
+<li><a href="#org19392a1">Ezra 2:26</a></li>
+<li><a href="#org8aa2653">Ezra 2:27</a></li>
+<li><a href="#orgd20f316">Ezra 2:28</a></li>
+<li><a href="#org595b0f2">Ezra 2:29</a></li>
+<li><a href="#org6c06fa3">Ezra 2:30</a></li>
+<li><a href="#orgda0521e">Ezra 2:31</a></li>
+<li><a href="#orge616af0">Ezra 2:32</a></li>
+<li><a href="#org9a92377">Ezra 2:33</a></li>
+<li><a href="#org506468b">Ezra 2:34</a></li>
+<li><a href="#org9404e77">Ezra 2:35</a></li>
+<li><a href="#orgc8e59de">Ezra 2:36</a></li>
+<li><a href="#orgbf1cf4d">Ezra 2:37</a></li>
+<li><a href="#orgabf803c">Ezra 2:38</a></li>
+<li><a href="#org99d7ed4">Ezra 2:39</a></li>
+<li><a href="#org1075633">Ezra 2:40</a></li>
+<li><a href="#orgd4c6862">Ezra 2:41</a></li>
+<li><a href="#org353222c">Ezra 2:42</a></li>
+<li><a href="#org003403c">Ezra 2:43</a></li>
+<li><a href="#org103781e">Ezra 2:44</a></li>
+<li><a href="#org742b92f">Ezra 2:45</a></li>
+<li><a href="#orgdeb34b1">Ezra 2:46</a></li>
+<li><a href="#org58ee12f">Ezra 2:47</a></li>
+<li><a href="#orgd1a0ae7">Ezra 2:48</a></li>
+<li><a href="#org6b0630d">Ezra 2:49</a></li>
+<li><a href="#org26dad3e">Ezra 2:50</a></li>
+<li><a href="#orgbe4b0c9">Ezra 2:51</a></li>
+<li><a href="#org8d634b3">Ezra 2:52</a></li>
+<li><a href="#orgd677750">Ezra 2:53</a></li>
+<li><a href="#org2fc8b0b">Ezra 2:54</a></li>
+<li><a href="#org8f44dd3">Ezra 2:55</a></li>
+<li><a href="#orgc795b90">Ezra 2:56</a></li>
+<li><a href="#org3eba13c">Ezra 2:57</a></li>
+<li><a href="#orgace083f">Ezra 2:58</a></li>
+<li><a href="#org744c333">Ezra 2:59</a></li>
+<li><a href="#orge2fd289">Ezra 2:60</a></li>
+<li><a href="#org39cc7a1">Ezra 2:61</a></li>
+<li><a href="#org62ae307">Ezra 2:62</a></li>
+<li><a href="#org268d39a">Ezra 2:63</a></li>
+<li><a href="#org11aaf8f">Ezra 2:64</a></li>
+<li><a href="#orgf5c3bc2">Ezra 2:65</a></li>
+<li><a href="#org20858bd">Ezra 2:66</a></li>
+<li><a href="#org9e5a96b">Ezra 2:67</a></li>
+<li><a href="#org31e292d">Ezra 2:68</a></li>
+<li><a href="#org9369087">Ezra 2:69</a></li>
+<li><a href="#orgf2bdc1c">Ezra 2:70</a></li>
+</ul>
+</li>
+<li><a href="#orgc8621bc">Ezra 3</a>
+<ul>
+<li><a href="#org6865f95">Ezra 3:1</a></li>
+<li><a href="#orge4d9749">Ezra 3:2</a></li>
+<li><a href="#org66c25fb">Ezra 3:3</a></li>
+<li><a href="#org67537f8">Ezra 3:4</a></li>
+<li><a href="#org714840c">Ezra 3:5</a></li>
+<li><a href="#orgcd7b4d4">Ezra 3:6</a></li>
+<li><a href="#org99e8121">Ezra 3:7</a></li>
+<li><a href="#org6573096">Ezra 3:8</a></li>
+<li><a href="#orgd71f777">Ezra 3:9</a></li>
+<li><a href="#org9fbc315">Ezra 3:10</a></li>
+<li><a href="#org0b3f7b0">Ezra 3:11</a></li>
+<li><a href="#org01e1150">Ezra 3:12</a></li>
+<li><a href="#orgfa7cf5c">Ezra 3:13</a></li>
+</ul>
+</li>
+<li><a href="#orgfdfc217">Ezra 4</a>
+<ul>
+<li><a href="#orgb56cb36">Ezra 4:1</a></li>
+<li><a href="#org971add5">Ezra 4:2</a></li>
+<li><a href="#org37c588e">Ezra 4:3</a></li>
+<li><a href="#org5853a53">Ezra 4:4</a></li>
+<li><a href="#orgc04980e">Ezra 4:5</a></li>
+<li><a href="#org4b3c58f">Ezra 4:6</a></li>
+<li><a href="#orgf5208a3">Ezra 4:7</a></li>
+<li><a href="#org407433d">Ezra 4:8</a></li>
+<li><a href="#org0e5f38b">Ezra 4:9</a></li>
+<li><a href="#org9a4e060">Ezra 4:10</a></li>
+<li><a href="#orgbf5eab2">Ezra 4:11</a></li>
+<li><a href="#orgc9d3ddc">Ezra 4:12</a></li>
+<li><a href="#org256c522">Ezra 4:13</a></li>
+<li><a href="#org60ccb9a">Ezra 4:14</a></li>
+<li><a href="#org6dcaab6">Ezra 4:15</a></li>
+<li><a href="#orgad299fb">Ezra 4:16</a></li>
+<li><a href="#orgee6649c">Ezra 4:17</a></li>
+<li><a href="#org951580d">Ezra 4:18</a></li>
+<li><a href="#orge12d45c">Ezra 4:19</a></li>
+<li><a href="#org15af046">Ezra 4:20</a></li>
+<li><a href="#org5ce636f">Ezra 4:21</a></li>
+<li><a href="#orgf16f9cc">Ezra 4:22</a></li>
+<li><a href="#org2f42495">Ezra 4:23</a></li>
+<li><a href="#orgf48931f">Ezra 4:24</a></li>
+</ul>
+</li>
+<li><a href="#orgb43c0c4">Ezra 5</a>
+<ul>
+<li><a href="#orgb4d99b4">Ezra 5:1</a></li>
+<li><a href="#orgac43274">Ezra 5:2</a></li>
+<li><a href="#org227e561">Ezra 5:3</a></li>
+<li><a href="#orge779025">Ezra 5:4</a></li>
+<li><a href="#orgc4cf74c">Ezra 5:5</a></li>
+<li><a href="#orgebb9406">Ezra 5:6</a></li>
+<li><a href="#org8f58c10">Ezra 5:7</a></li>
+<li><a href="#orgab012ae">Ezra 5:8</a></li>
+<li><a href="#org42ebb8d">Ezra 5:9</a></li>
+<li><a href="#org9b13a29">Ezra 5:10</a></li>
+<li><a href="#org9933201">Ezra 5:11</a></li>
+<li><a href="#orge2cf695">Ezra 5:12</a></li>
+<li><a href="#org17350c1">Ezra 5:13</a></li>
+<li><a href="#org56ce0dd">Ezra 5:14</a></li>
+<li><a href="#org2b16671">Ezra 5:15</a></li>
+<li><a href="#org5207f74">Ezra 5:16</a></li>
+<li><a href="#org9548ee3">Ezra 5:17</a></li>
+</ul>
+</li>
+<li><a href="#org96fed1d">Ezra 6</a>
+<ul>
+<li><a href="#org2e61eba">Ezra 6:1</a></li>
+<li><a href="#orgd398fbb">Ezra 6:2</a></li>
+<li><a href="#org8a09ff1">Ezra 6:3</a></li>
+<li><a href="#org0d06654">Ezra 6:4</a></li>
+<li><a href="#orgbbabe0c">Ezra 6:5</a></li>
+<li><a href="#org29bd99e">Ezra 6:6</a></li>
+<li><a href="#org2423753">Ezra 6:7</a></li>
+<li><a href="#org1f9cf3d">Ezra 6:8</a></li>
+<li><a href="#org36fcf43">Ezra 6:9</a></li>
+<li><a href="#orgc9bbe9c">Ezra 6:10</a></li>
+<li><a href="#orgf5456fb">Ezra 6:11</a></li>
+<li><a href="#org8cc6f4c">Ezra 6:12</a></li>
+<li><a href="#orgb19910c">Ezra 6:13</a></li>
+<li><a href="#org965a3a7">Ezra 6:14</a></li>
+<li><a href="#org7512e90">Ezra 6:15</a></li>
+<li><a href="#org94ac9a0">Ezra 6:16</a></li>
+<li><a href="#orgbba9500">Ezra 6:17</a></li>
+<li><a href="#org5c975e0">Ezra 6:18</a></li>
+<li><a href="#org451d398">Ezra 6:19</a></li>
+<li><a href="#org3796636">Ezra 6:20</a></li>
+<li><a href="#orge78e2ae">Ezra 6:21</a></li>
+<li><a href="#org7ab6374">Ezra 6:22</a></li>
+</ul>
+</li>
+<li><a href="#orge1955dc">Ezra 7</a>
+<ul>
+<li><a href="#org36ed60a">Ezra 7:1</a></li>
+<li><a href="#org287c469">Ezra 7:2</a></li>
+<li><a href="#orgee45ac3">Ezra 7:3</a></li>
+<li><a href="#org33a50dd">Ezra 7:4</a></li>
+<li><a href="#orgd920f28">Ezra 7:5</a></li>
+<li><a href="#orgb7df2cf">Ezra 7:6</a></li>
+<li><a href="#org3d1395e">Ezra 7:7</a></li>
+<li><a href="#orgc16b2f3">Ezra 7:8</a></li>
+<li><a href="#org1b56416">Ezra 7:9</a></li>
+<li><a href="#orga7d318a">Ezra 7:10</a></li>
+<li><a href="#org182366f">Ezra 7:11</a></li>
+<li><a href="#orgb52e786">Ezra 7:12</a></li>
+<li><a href="#org7eb2882">Ezra 7:13</a></li>
+<li><a href="#org6d9bc7a">Ezra 7:14</a></li>
+<li><a href="#org00e15e7">Ezra 7:15</a></li>
+<li><a href="#orgebf618b">Ezra 7:16</a></li>
+<li><a href="#org4a99880">Ezra 7:17</a></li>
+<li><a href="#orgb341cd6">Ezra 7:18</a></li>
+<li><a href="#org8db97a3">Ezra 7:19</a></li>
+<li><a href="#orge74edcf">Ezra 7:20</a></li>
+<li><a href="#org6586faf">Ezra 7:21</a></li>
+<li><a href="#orgc4804fa">Ezra 7:22</a></li>
+<li><a href="#orgdd1a138">Ezra 7:23</a></li>
+<li><a href="#orge64dd59">Ezra 7:24</a></li>
+<li><a href="#orgf3ab4b3">Ezra 7:25</a></li>
+<li><a href="#org7a1b77c">Ezra 7:26</a></li>
+<li><a href="#orgbcd81c5">Ezra 7:27</a></li>
+<li><a href="#org5bab229">Ezra 7:28</a></li>
+</ul>
+</li>
+<li><a href="#orgc08a94b">Ezra 8</a>
+<ul>
+<li><a href="#org200935a">Ezra 8:1</a></li>
+<li><a href="#org0744c6a">Ezra 8:2</a></li>
+<li><a href="#org56bf3a4">Ezra 8:3</a></li>
+<li><a href="#orgcad3458">Ezra 8:4</a></li>
+<li><a href="#orgc85f2e4">Ezra 8:5</a></li>
+<li><a href="#orgdd9ebad">Ezra 8:6</a></li>
+<li><a href="#orge9a73bd">Ezra 8:7</a></li>
+<li><a href="#orgb392629">Ezra 8:8</a></li>
+<li><a href="#orgea9adaa">Ezra 8:9</a></li>
+<li><a href="#org270683e">Ezra 8:10</a></li>
+<li><a href="#org135404b">Ezra 8:11</a></li>
+<li><a href="#orgd890ca6">Ezra 8:12</a></li>
+<li><a href="#org75cc354">Ezra 8:13</a></li>
+<li><a href="#org50db8b1">Ezra 8:14</a></li>
+<li><a href="#orgd576767">Ezra 8:15</a></li>
+<li><a href="#org0bdc4c7">Ezra 8:16</a></li>
+<li><a href="#org9312eef">Ezra 8:17</a></li>
+<li><a href="#org541a095">Ezra 8:18</a></li>
+<li><a href="#org4ff9631">Ezra 8:19</a></li>
+<li><a href="#orgf3ab6bd">Ezra 8:20</a></li>
+<li><a href="#org4a509ab">Ezra 8:21</a></li>
+<li><a href="#org3875093">Ezra 8:22</a></li>
+<li><a href="#orgdd40d88">Ezra 8:23</a></li>
+<li><a href="#org709f12c">Ezra 8:24</a></li>
+<li><a href="#org1660bfb">Ezra 8:25</a></li>
+<li><a href="#orgea66bbf">Ezra 8:26</a></li>
+<li><a href="#orge0e1ef0">Ezra 8:27</a></li>
+<li><a href="#orgcae6a68">Ezra 8:28</a></li>
+<li><a href="#org4ab7609">Ezra 8:29</a></li>
+<li><a href="#org7022723">Ezra 8:30</a></li>
+<li><a href="#org48622d5">Ezra 8:31</a></li>
+<li><a href="#org40d84ac">Ezra 8:32</a></li>
+<li><a href="#org4a4bfd2">Ezra 8:33</a></li>
+<li><a href="#orge17d56c">Ezra 8:34</a></li>
+<li><a href="#orgb647729">Ezra 8:35</a></li>
+<li><a href="#org8438933">Ezra 8:36</a></li>
+</ul>
+</li>
+<li><a href="#org0e3af5b">Ezra 9</a>
+<ul>
+<li><a href="#orga185769">Ezra 9:1</a></li>
+<li><a href="#orgbd4040a">Ezra 9:2</a></li>
+<li><a href="#orgc685bcf">Ezra 9:3</a></li>
+<li><a href="#org67a37f4">Ezra 9:4</a></li>
+<li><a href="#orgf6fd136">Ezra 9:5</a></li>
+<li><a href="#orgdef7bd6">Ezra 9:6</a></li>
+<li><a href="#orgd7ec93b">Ezra 9:7</a></li>
+<li><a href="#orgf1cbddf">Ezra 9:8</a></li>
+<li><a href="#orgf59f220">Ezra 9:9</a></li>
+<li><a href="#orgd1357e9">Ezra 9:10</a></li>
+<li><a href="#org7016c7d">Ezra 9:11</a></li>
+<li><a href="#orgcb677ee">Ezra 9:12</a></li>
+<li><a href="#org66d3906">Ezra 9:13</a></li>
+<li><a href="#org0408007">Ezra 9:14</a></li>
+<li><a href="#orgaf39f47">Ezra 9:15</a></li>
+</ul>
+</li>
+<li><a href="#orgffca9a6">Ezra 10</a>
+<ul>
+<li><a href="#orgf0ece77">Ezra 10:1</a></li>
+<li><a href="#org1fcc674">Ezra 10:2</a></li>
+<li><a href="#orgdbb8f3f">Ezra 10:3</a></li>
+<li><a href="#org0b70325">Ezra 10:4</a></li>
+<li><a href="#org3b3067c">Ezra 10:5</a></li>
+<li><a href="#orgc083725">Ezra 10:6</a></li>
+<li><a href="#orgc00e3b0">Ezra 10:7</a></li>
+<li><a href="#org6687329">Ezra 10:8</a></li>
+<li><a href="#org289e729">Ezra 10:9</a></li>
+<li><a href="#org6b486ad">Ezra 10:10</a></li>
+<li><a href="#org4a2c329">Ezra 10:11</a></li>
+<li><a href="#org3f150bd">Ezra 10:12</a></li>
+<li><a href="#orga5cbd39">Ezra 10:13</a></li>
+<li><a href="#org9e8f8cb">Ezra 10:14</a></li>
+<li><a href="#org27b99e0">Ezra 10:15</a></li>
+<li><a href="#org2e92465">Ezra 10:16</a></li>
+<li><a href="#org3e3925f">Ezra 10:17</a></li>
+<li><a href="#orgc3b1498">Ezra 10:18</a></li>
+<li><a href="#org68a847a">Ezra 10:19</a></li>
+<li><a href="#orgef26dea">Ezra 10:20</a></li>
+<li><a href="#org1c23f88">Ezra 10:21</a></li>
+<li><a href="#org212f944">Ezra 10:22</a></li>
+<li><a href="#org7431c40">Ezra 10:23</a></li>
+<li><a href="#org186e9d9">Ezra 10:24</a></li>
+<li><a href="#org1500973">Ezra 10:25</a></li>
+<li><a href="#org9501a5c">Ezra 10:26</a></li>
+<li><a href="#orgb464069">Ezra 10:27</a></li>
+<li><a href="#orge5762cf">Ezra 10:28</a></li>
+<li><a href="#org4f37b11">Ezra 10:29</a></li>
+<li><a href="#orgeb51087">Ezra 10:30</a></li>
+<li><a href="#orgea5cb8d">Ezra 10:31</a></li>
+<li><a href="#orgda3a0cb">Ezra 10:32</a></li>
+<li><a href="#org81e9ef7">Ezra 10:33</a></li>
+<li><a href="#org494be50">Ezra 10:34</a></li>
+<li><a href="#org462db8c">Ezra 10:35</a></li>
+<li><a href="#orgea7f864">Ezra 10:36</a></li>
+<li><a href="#org5635e60">Ezra 10:37</a></li>
+<li><a href="#org06a4117">Ezra 10:38</a></li>
+<li><a href="#org0756bbc">Ezra 10:39</a></li>
+<li><a href="#org632604b">Ezra 10:40</a></li>
+<li><a href="#orge88b156">Ezra 10:41</a></li>
+<li><a href="#orge929373">Ezra 10:42</a></li>
+<li><a href="#orgae2e53d">Ezra 10:43</a></li>
+<li><a href="#org5f8f591">Ezra 10:44</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgab88d6d" class="outline-2">
+<h2 id="orgab88d6d">Ezra 1</h2>
+<div class="outline-text-2" id="text-orgab88d6d">
+</div>
+<div id="outline-container-org1855fc0" class="outline-3">
+<h3 id="org1855fc0">Ezra 1:1</h3>
+<div class="outline-text-3" id="text-org1855fc0">
+<p>
+In anno primo Cyri regis Persarum, ut compleretur verbum Domini ex ore Jeremiæ, suscitavit Dominus spiritum Cyri regis Persarum : et traduxit vocem in omni regno suo, etiam per scripturam, dicens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd4896a" class="outline-3">
+<h3 id="orgfd4896a">Ezra 1:2</h3>
+<div class="outline-text-3" id="text-orgfd4896a">
+<p>
+Hæc dicit Cyrus rex Persarum : Omnia regna terræ dedit mihi Dominus Deus cæli, et ipse præcepit mihi ut ædificarem ei domum in Jerusalem, quæ est in Judæa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84532a1" class="outline-3">
+<h3 id="org84532a1">Ezra 1:3</h3>
+<div class="outline-text-3" id="text-org84532a1">
+<p>
+Quis est in vobis de universo populo ejus ? Sit Deus illius cum ipso. Ascendat in Jerusalem, quæ est in Judæa, et ædificet domum Domini Dei Israël : ipse est Deus qui est in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccad199" class="outline-3">
+<h3 id="orgccad199">Ezra 1:4</h3>
+<div class="outline-text-3" id="text-orgccad199">
+<p>
+Et omnes reliqui in cunctis locis ubicumque habitant, adjuvent eum viri de loco suo argento et auro, et substantia, et pecoribus, excepto quod voluntarie offerunt templo Dei, quod est in Jerusalem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b62446" class="outline-3">
+<h3 id="org1b62446">Ezra 1:5</h3>
+<div class="outline-text-3" id="text-org1b62446">
+<p>
+Et surrexerunt principes patrum de Juda et Benjamin, et sacerdotes, et Levitæ, et omnis cujus Deus suscitavit spiritum, ut ascenderent ad ædificandum templum Domini, quod erat in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org708dab3" class="outline-3">
+<h3 id="org708dab3">Ezra 1:6</h3>
+<div class="outline-text-3" id="text-org708dab3">
+<p>
+Universique qui erant in circuitu, adjuverunt manus eorum in vasis argenteis et aureis, in substantia et jumentis, in supellectili, exceptis his quæ sponte obtulerant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfca875e" class="outline-3">
+<h3 id="orgfca875e">Ezra 1:7</h3>
+<div class="outline-text-3" id="text-orgfca875e">
+<p>
+Rex quoque Cyrus protulit vasa templi Domini, quæ tulerat Nabuchodonosor de Jerusalem, et posuerat ea in templo dei sui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge257c6b" class="outline-3">
+<h3 id="orge257c6b">Ezra 1:8</h3>
+<div class="outline-text-3" id="text-orge257c6b">
+<p>
+Protulit autem ea Cyrus rex Persarum per manum Mithridatis filii Gazabar, et annumeravit ea Sassabasar principi Juda.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd15e42" class="outline-3">
+<h3 id="orgfd15e42">Ezra 1:9</h3>
+<div class="outline-text-3" id="text-orgfd15e42">
+<p>
+Et hic est numerus eorum : phialæ aureæ triginta, phialæ argenteæ mille, cultri viginti novem, scyphi aurei triginta,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34ae9d2" class="outline-3">
+<h3 id="org34ae9d2">Ezra 1:10</h3>
+<div class="outline-text-3" id="text-org34ae9d2">
+<p>
+scyphi argentei secundi quadringenti decem, vasa alia mille.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org531d99b" class="outline-3">
+<h3 id="org531d99b">Ezra 1:11</h3>
+<div class="outline-text-3" id="text-org531d99b">
+<p>
+Omnia vasa aurea et argentea quinque millia quadringenta : universa tulit Sassabasar cum his qui ascendebant de transmigratione Babylonis in Jerusalem.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe6bd08" class="outline-2">
+<h2 id="orgbe6bd08">Ezra 2</h2>
+<div class="outline-text-2" id="text-orgbe6bd08">
+</div>
+<div id="outline-container-org21d22f0" class="outline-3">
+<h3 id="org21d22f0">Ezra 2:1</h3>
+<div class="outline-text-3" id="text-org21d22f0">
+<p>
+Hi sunt autem provinciæ filii, qui ascenderunt de captivitate, quam transtulerat Nabuchodonosor rex Babylonis in Babylonem, et reversi sunt in Jerusalem et Judam, unusquisque in civitatem suam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf8be4a" class="outline-3">
+<h3 id="orgdf8be4a">Ezra 2:2</h3>
+<div class="outline-text-3" id="text-orgdf8be4a">
+<p>
+Qui venerunt cum Zorobabel, Josue, Nehemia, Saraia, Rahelaia, Mardochai, Belsan, Mesphar, Beguai, Rehum, Baana. Numerus virorum populi Israël :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga984ca6" class="outline-3">
+<h3 id="orga984ca6">Ezra 2:3</h3>
+<div class="outline-text-3" id="text-orga984ca6">
+<p>
+filii Pharos duo millia centum septuaginta duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3927339" class="outline-3">
+<h3 id="org3927339">Ezra 2:4</h3>
+<div class="outline-text-3" id="text-org3927339">
+<p>
+Filii Sephatia, trecenti septuaginta duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63846aa" class="outline-3">
+<h3 id="org63846aa">Ezra 2:5</h3>
+<div class="outline-text-3" id="text-org63846aa">
+<p>
+Filii Area, septingenti septuaginta quinque.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd94219" class="outline-3">
+<h3 id="orgdd94219">Ezra 2:6</h3>
+<div class="outline-text-3" id="text-orgdd94219">
+<p>
+Filii Phahath Moab, filiorum Josue : Joab, duo millia octingenti duodecim.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeee7c33" class="outline-3">
+<h3 id="orgeee7c33">Ezra 2:7</h3>
+<div class="outline-text-3" id="text-orgeee7c33">
+<p>
+Filii Ælam, mille ducenti quinquaginta quatuor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e13e4e" class="outline-3">
+<h3 id="org3e13e4e">Ezra 2:8</h3>
+<div class="outline-text-3" id="text-org3e13e4e">
+<p>
+Filii Zethua, nongenti quadraginta quinque.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcae51de" class="outline-3">
+<h3 id="orgcae51de">Ezra 2:9</h3>
+<div class="outline-text-3" id="text-orgcae51de">
+<p>
+Filii Zachai, septingenti sexaginta.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org994c981" class="outline-3">
+<h3 id="org994c981">Ezra 2:10</h3>
+<div class="outline-text-3" id="text-org994c981">
+<p>
+Filii Bani, sexcenti quadraginta duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91987c8" class="outline-3">
+<h3 id="org91987c8">Ezra 2:11</h3>
+<div class="outline-text-3" id="text-org91987c8">
+<p>
+Filii Bebai, sexcenti viginti tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org222deb3" class="outline-3">
+<h3 id="org222deb3">Ezra 2:12</h3>
+<div class="outline-text-3" id="text-org222deb3">
+<p>
+Filii Azgad, mille ducenti viginti duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc975c35" class="outline-3">
+<h3 id="orgc975c35">Ezra 2:13</h3>
+<div class="outline-text-3" id="text-orgc975c35">
+<p>
+Filii Adonicam, sexcenti sexaginta sex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccc092b" class="outline-3">
+<h3 id="orgccc092b">Ezra 2:14</h3>
+<div class="outline-text-3" id="text-orgccc092b">
+<p>
+Filii Beguai, duo millia quinquaginta sex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6157c79" class="outline-3">
+<h3 id="org6157c79">Ezra 2:15</h3>
+<div class="outline-text-3" id="text-org6157c79">
+<p>
+Filii Adin, quadringenti quinquaginta quatuor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8087076" class="outline-3">
+<h3 id="org8087076">Ezra 2:16</h3>
+<div class="outline-text-3" id="text-org8087076">
+<p>
+Filii Ather, qui erant ex Ezechia, nonaginta octo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8d67f3" class="outline-3">
+<h3 id="orge8d67f3">Ezra 2:17</h3>
+<div class="outline-text-3" id="text-orge8d67f3">
+<p>
+Filii Besai, trecenti viginti tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5df3c5e" class="outline-3">
+<h3 id="org5df3c5e">Ezra 2:18</h3>
+<div class="outline-text-3" id="text-org5df3c5e">
+<p>
+Filii Jora, centum duodecim.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98c8482" class="outline-3">
+<h3 id="org98c8482">Ezra 2:19</h3>
+<div class="outline-text-3" id="text-org98c8482">
+<p>
+Filii Hasum, ducenti viginti tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2e2ea1" class="outline-3">
+<h3 id="orge2e2ea1">Ezra 2:20</h3>
+<div class="outline-text-3" id="text-orge2e2ea1">
+<p>
+Filii Gebbar, nonaginta quinque.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org866cd3f" class="outline-3">
+<h3 id="org866cd3f">Ezra 2:21</h3>
+<div class="outline-text-3" id="text-org866cd3f">
+<p>
+Filii Bethlehem, centum viginti tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bb11b2" class="outline-3">
+<h3 id="org4bb11b2">Ezra 2:22</h3>
+<div class="outline-text-3" id="text-org4bb11b2">
+<p>
+Viri Netupha, quinquaginta sex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08bde3f" class="outline-3">
+<h3 id="org08bde3f">Ezra 2:23</h3>
+<div class="outline-text-3" id="text-org08bde3f">
+<p>
+Viri Anathoth, centum viginti octo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5acc90c" class="outline-3">
+<h3 id="org5acc90c">Ezra 2:24</h3>
+<div class="outline-text-3" id="text-org5acc90c">
+<p>
+Filii Azmaveth, quadraginta duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org621ed69" class="outline-3">
+<h3 id="org621ed69">Ezra 2:25</h3>
+<div class="outline-text-3" id="text-org621ed69">
+<p>
+Filii Cariathiarim, Cephira et Beroth, septingenti quadraginta tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19392a1" class="outline-3">
+<h3 id="org19392a1">Ezra 2:26</h3>
+<div class="outline-text-3" id="text-org19392a1">
+<p>
+Filii Rama et Gabaa, sexcenti viginti unus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8aa2653" class="outline-3">
+<h3 id="org8aa2653">Ezra 2:27</h3>
+<div class="outline-text-3" id="text-org8aa2653">
+<p>
+Viri Machmas, centum viginti duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd20f316" class="outline-3">
+<h3 id="orgd20f316">Ezra 2:28</h3>
+<div class="outline-text-3" id="text-orgd20f316">
+<p>
+Viri Bethel et Hai, ducenti viginti tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org595b0f2" class="outline-3">
+<h3 id="org595b0f2">Ezra 2:29</h3>
+<div class="outline-text-3" id="text-org595b0f2">
+<p>
+Filii Nebo, quinquaginta duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c06fa3" class="outline-3">
+<h3 id="org6c06fa3">Ezra 2:30</h3>
+<div class="outline-text-3" id="text-org6c06fa3">
+<p>
+Filii Megbis, centum quinquaginta sex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda0521e" class="outline-3">
+<h3 id="orgda0521e">Ezra 2:31</h3>
+<div class="outline-text-3" id="text-orgda0521e">
+<p>
+Filii Ælam alterius, mille ducenti quinquaginta quatuor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge616af0" class="outline-3">
+<h3 id="orge616af0">Ezra 2:32</h3>
+<div class="outline-text-3" id="text-orge616af0">
+<p>
+Filii Harim, trecenti viginti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a92377" class="outline-3">
+<h3 id="org9a92377">Ezra 2:33</h3>
+<div class="outline-text-3" id="text-org9a92377">
+<p>
+Filii Lod Hadid, et Ono, septingenti viginti quinque.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org506468b" class="outline-3">
+<h3 id="org506468b">Ezra 2:34</h3>
+<div class="outline-text-3" id="text-org506468b">
+<p>
+Filii Jericho, trecenti quadraginta quinque.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9404e77" class="outline-3">
+<h3 id="org9404e77">Ezra 2:35</h3>
+<div class="outline-text-3" id="text-org9404e77">
+<p>
+Filii Senaa, tria millia sexcenti triginta.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8e59de" class="outline-3">
+<h3 id="orgc8e59de">Ezra 2:36</h3>
+<div class="outline-text-3" id="text-orgc8e59de">
+<p>
+Sacerdotes : filii Jadaia in domo Josue, nongenti septuaginta tres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf1cf4d" class="outline-3">
+<h3 id="orgbf1cf4d">Ezra 2:37</h3>
+<div class="outline-text-3" id="text-orgbf1cf4d">
+<p>
+Filii Emmer, mille quinquaginta duo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabf803c" class="outline-3">
+<h3 id="orgabf803c">Ezra 2:38</h3>
+<div class="outline-text-3" id="text-orgabf803c">
+<p>
+Filii Pheshur, mille ducenti quadraginta septem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99d7ed4" class="outline-3">
+<h3 id="org99d7ed4">Ezra 2:39</h3>
+<div class="outline-text-3" id="text-org99d7ed4">
+<p>
+Filii Harim, mille decem et septem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1075633" class="outline-3">
+<h3 id="org1075633">Ezra 2:40</h3>
+<div class="outline-text-3" id="text-org1075633">
+<p>
+Levitæ : filii Josue et Cedmihel filiorum Odoviæ, septuaginta quatuor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4c6862" class="outline-3">
+<h3 id="orgd4c6862">Ezra 2:41</h3>
+<div class="outline-text-3" id="text-orgd4c6862">
+<p>
+Cantores : filii Asaph, centum viginti octo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org353222c" class="outline-3">
+<h3 id="org353222c">Ezra 2:42</h3>
+<div class="outline-text-3" id="text-org353222c">
+<p>
+Filii janitorum : filii Sellum, filii Ater, filii Telmon, filii Accub, filii Hatitha, filii Sobai : universi centum triginta novem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org003403c" class="outline-3">
+<h3 id="org003403c">Ezra 2:43</h3>
+<div class="outline-text-3" id="text-org003403c">
+<p>
+Nathinæi : filii Siha, filii Hasupha, filii Tabbaoth,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org103781e" class="outline-3">
+<h3 id="org103781e">Ezra 2:44</h3>
+<div class="outline-text-3" id="text-org103781e">
+<p>
+filii Ceros, filii Siaa, filii Phadon,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org742b92f" class="outline-3">
+<h3 id="org742b92f">Ezra 2:45</h3>
+<div class="outline-text-3" id="text-org742b92f">
+<p>
+filii Lebana, filii Hagaba, filii Accub,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdeb34b1" class="outline-3">
+<h3 id="orgdeb34b1">Ezra 2:46</h3>
+<div class="outline-text-3" id="text-orgdeb34b1">
+<p>
+filii Hagab, filii Semlai, filii Hanan,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58ee12f" class="outline-3">
+<h3 id="org58ee12f">Ezra 2:47</h3>
+<div class="outline-text-3" id="text-org58ee12f">
+<p>
+filii Gaddel, filii Gaher, filii Raaia,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1a0ae7" class="outline-3">
+<h3 id="orgd1a0ae7">Ezra 2:48</h3>
+<div class="outline-text-3" id="text-orgd1a0ae7">
+<p>
+filii Rasin, filii Necoda, filii Gazam,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b0630d" class="outline-3">
+<h3 id="org6b0630d">Ezra 2:49</h3>
+<div class="outline-text-3" id="text-org6b0630d">
+<p>
+filii Aza, filii Phasea, filii Besee,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26dad3e" class="outline-3">
+<h3 id="org26dad3e">Ezra 2:50</h3>
+<div class="outline-text-3" id="text-org26dad3e">
+<p>
+filii Asena, filii Munim, filii Nephusim,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe4b0c9" class="outline-3">
+<h3 id="orgbe4b0c9">Ezra 2:51</h3>
+<div class="outline-text-3" id="text-orgbe4b0c9">
+<p>
+filii Bacbuc, filii Hacupha, filii Harhur,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d634b3" class="outline-3">
+<h3 id="org8d634b3">Ezra 2:52</h3>
+<div class="outline-text-3" id="text-org8d634b3">
+<p>
+filii Besluth, filii Mahida, filii Harsa,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd677750" class="outline-3">
+<h3 id="orgd677750">Ezra 2:53</h3>
+<div class="outline-text-3" id="text-orgd677750">
+<p>
+filii Bercos, filii Sisara, filii Thema,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fc8b0b" class="outline-3">
+<h3 id="org2fc8b0b">Ezra 2:54</h3>
+<div class="outline-text-3" id="text-org2fc8b0b">
+<p>
+filii Nasia, filii Hatipha,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f44dd3" class="outline-3">
+<h3 id="org8f44dd3">Ezra 2:55</h3>
+<div class="outline-text-3" id="text-org8f44dd3">
+<p>
+filii servorum Salomonis, filii Sotai, filii Sophereth, filii Pharuda,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc795b90" class="outline-3">
+<h3 id="orgc795b90">Ezra 2:56</h3>
+<div class="outline-text-3" id="text-orgc795b90">
+<p>
+filii Jala, filii Dercon, filii Geddel,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3eba13c" class="outline-3">
+<h3 id="org3eba13c">Ezra 2:57</h3>
+<div class="outline-text-3" id="text-org3eba13c">
+<p>
+filii Saphatia, filii Hatil, filii Phochereth, qui erant de Asebaim, filii Ami :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgace083f" class="outline-3">
+<h3 id="orgace083f">Ezra 2:58</h3>
+<div class="outline-text-3" id="text-orgace083f">
+<p>
+omnes Nathinæi, et filii servorum Salomonis, trecenti nonaginta duo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org744c333" class="outline-3">
+<h3 id="org744c333">Ezra 2:59</h3>
+<div class="outline-text-3" id="text-org744c333">
+<p>
+Et hi qui ascenderunt de Thelmala, Thelharsa, Cherub, et Adon, et Emer : et non potuerunt indicare domum patrum suorum et semen suum, utrum ex Israël essent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2fd289" class="outline-3">
+<h3 id="orge2fd289">Ezra 2:60</h3>
+<div class="outline-text-3" id="text-orge2fd289">
+<p>
+Filii Dalaia, filii Tobia, filii Necoda, sexcenti quinquaginta duo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39cc7a1" class="outline-3">
+<h3 id="org39cc7a1">Ezra 2:61</h3>
+<div class="outline-text-3" id="text-org39cc7a1">
+<p>
+Et de filiis sacerdotum : filii Hobia, filii Accos, filii Berzellai, qui accepit de filiabus Berzellai Galaaditis, uxorem, et vocatus est nomine eorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62ae307" class="outline-3">
+<h3 id="org62ae307">Ezra 2:62</h3>
+<div class="outline-text-3" id="text-org62ae307">
+<p>
+hi quæsierunt scripturam genealogiæ suæ, et non invenerunt, et ejecti sunt de sacerdotio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org268d39a" class="outline-3">
+<h3 id="org268d39a">Ezra 2:63</h3>
+<div class="outline-text-3" id="text-org268d39a">
+<p>
+Et dixit Athersatha eis ut non comederent de Sancto sanctorum, donec surgeret sacerdos doctus atque perfectus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11aaf8f" class="outline-3">
+<h3 id="org11aaf8f">Ezra 2:64</h3>
+<div class="outline-text-3" id="text-org11aaf8f">
+<p>
+Omnis multitudo quasi unus, quadraginta duo millia trecenti sexaginta :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5c3bc2" class="outline-3">
+<h3 id="orgf5c3bc2">Ezra 2:65</h3>
+<div class="outline-text-3" id="text-orgf5c3bc2">
+<p>
+exceptis servis eorum, et ancillis, qui erant septem millia trecenti triginta septem : et in ipsis cantores atque cantatrices ducenti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20858bd" class="outline-3">
+<h3 id="org20858bd">Ezra 2:66</h3>
+<div class="outline-text-3" id="text-org20858bd">
+<p>
+Equi eorum septingenti triginta sex, muli eorum, ducenti quadraginta quinque,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e5a96b" class="outline-3">
+<h3 id="org9e5a96b">Ezra 2:67</h3>
+<div class="outline-text-3" id="text-org9e5a96b">
+<p>
+cameli eorum, quadringenti triginta quinque, asini eorum, sex millia septingenti viginti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31e292d" class="outline-3">
+<h3 id="org31e292d">Ezra 2:68</h3>
+<div class="outline-text-3" id="text-org31e292d">
+<p>
+Et de principibus patrum, cum ingrederentur templum Domini, quod est in Jerusalem, sponte obtulerunt in domum Dei ad exstruendam eam in loco suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9369087" class="outline-3">
+<h3 id="org9369087">Ezra 2:69</h3>
+<div class="outline-text-3" id="text-org9369087">
+<p>
+Secundum vires suas dederunt impensas operis, auri solidos sexaginta millia et mille, argenti mnas quinque millia, et vestes sacerdotales centum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2bdc1c" class="outline-3">
+<h3 id="orgf2bdc1c">Ezra 2:70</h3>
+<div class="outline-text-3" id="text-orgf2bdc1c">
+<p>
+Habitaverunt ergo sacerdotes, et Levitæ, et de populo, et cantores, et janitores, et Nathinæi, in urbibus suis, universusque Israël in civitatibus suis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc8621bc" class="outline-2">
+<h2 id="orgc8621bc">Ezra 3</h2>
+<div class="outline-text-2" id="text-orgc8621bc">
+</div>
+<div id="outline-container-org6865f95" class="outline-3">
+<h3 id="org6865f95">Ezra 3:1</h3>
+<div class="outline-text-3" id="text-org6865f95">
+<p>
+Jamque venerat mensis septimus, et erant filii Israël in civitatibus suis : congregatus est ergo populus quasi vir unus in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4d9749" class="outline-3">
+<h3 id="orge4d9749">Ezra 3:2</h3>
+<div class="outline-text-3" id="text-orge4d9749">
+<p>
+Et surrexit Josue filius Josedec, et fratres ejus sacerdotes, et Zorobabel filius Salathiel, et fratres ejus, et ædificaverunt altare Dei Israël ut offerrent in eo holocautomata, sicut scriptum est in lege Moysi viri Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66c25fb" class="outline-3">
+<h3 id="org66c25fb">Ezra 3:3</h3>
+<div class="outline-text-3" id="text-org66c25fb">
+<p>
+Collocaverunt autem altare Dei super bases suas, deterrentibus eos per circuitum populis terrarum : et obtulerunt super illud holocaustum Domino mane et vespere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67537f8" class="outline-3">
+<h3 id="org67537f8">Ezra 3:4</h3>
+<div class="outline-text-3" id="text-org67537f8">
+<p>
+Feceruntque solemnitatem tabernaculorum, sicut scriptum est, et holocaustum diebus singulis per ordinem secundum præceptum opus diei in die suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org714840c" class="outline-3">
+<h3 id="org714840c">Ezra 3:5</h3>
+<div class="outline-text-3" id="text-org714840c">
+<p>
+Et post hæc holocaustum juge, tam in calendis quam in universis solemnitatibus Domini quæ erant consecratæ, et in omnibus in quibus ultro offerebatur munus Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd7b4d4" class="outline-3">
+<h3 id="orgcd7b4d4">Ezra 3:6</h3>
+<div class="outline-text-3" id="text-orgcd7b4d4">
+<p>
+A primo die mensis septimi cœperunt offerre holocaustum Domino : porro templum Dei nondum fundatum erat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99e8121" class="outline-3">
+<h3 id="org99e8121">Ezra 3:7</h3>
+<div class="outline-text-3" id="text-org99e8121">
+<p>
+Dederunt autem pecunias latomis et cæmentariis : cibum quoque, et potum, et oleum Sidoniis Tyriisque, ut deferrent ligna cedrina de Libano ad mare Joppe, juxta quod præceperat Cyrus rex Persarum eis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6573096" class="outline-3">
+<h3 id="org6573096">Ezra 3:8</h3>
+<div class="outline-text-3" id="text-org6573096">
+<p>
+Anno autem secundo adventus eorum ad templum Dei in Jerusalem, mense secundo, cœperunt Zorobabel filius Salathiel, et Josue filius Josedec, et reliqui de fratribus eorum sacerdotes, et Levitæ, et omnes qui venerant de captivitate in Jerusalem, et constituerunt Levitas a viginti annis et supra, ut urgerent opus Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd71f777" class="outline-3">
+<h3 id="orgd71f777">Ezra 3:9</h3>
+<div class="outline-text-3" id="text-orgd71f777">
+<p>
+Stetitque Josue et filii ejus et fratres ejus, Cedmihel et filii ejus, et filii Juda, quasi vir unus, ut instarent super eos qui faciebant opus in templo Dei : filii Henadad, et filii eorum, et fratres eorum Levitæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fbc315" class="outline-3">
+<h3 id="org9fbc315">Ezra 3:10</h3>
+<div class="outline-text-3" id="text-org9fbc315">
+<p>
+Fundato igitur a cæmentariis templo Domini, steterunt sacerdotes in ornatu suo cum tubis, et Levitæ filii Asaph in cymbalis, ut laudarent Deum per manus David regis Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b3f7b0" class="outline-3">
+<h3 id="org0b3f7b0">Ezra 3:11</h3>
+<div class="outline-text-3" id="text-org0b3f7b0">
+<p>
+Et concinebant in hymnis, et confessione Domino : Quoniam bonus, quoniam in æternum misericordia ejus super Israël. Omnis quoque populus vociferabatur clamore magno in laudando Dominum, eo quod fundatum esset templum Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01e1150" class="outline-3">
+<h3 id="org01e1150">Ezra 3:12</h3>
+<div class="outline-text-3" id="text-org01e1150">
+<p>
+Plurimi etiam de sacerdotibus et Levitis, et principes patrum, et seniores, qui viderant templum prius cum fundatum esset, et hoc templum, in oculis eorum, flebant voce magna : et multi vociferantes in lætitia, elevabant vocem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa7cf5c" class="outline-3">
+<h3 id="orgfa7cf5c">Ezra 3:13</h3>
+<div class="outline-text-3" id="text-orgfa7cf5c">
+<p>
+Nec poterat quisquam agnoscere vocem clamoris lætantium, et vocem fletus populi : commistim enim populus vociferabatur clamore magno, et vox audiebatur procul.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfdfc217" class="outline-2">
+<h2 id="orgfdfc217">Ezra 4</h2>
+<div class="outline-text-2" id="text-orgfdfc217">
+</div>
+<div id="outline-container-orgb56cb36" class="outline-3">
+<h3 id="orgb56cb36">Ezra 4:1</h3>
+<div class="outline-text-3" id="text-orgb56cb36">
+<p>
+Audierunt autem hostes Judæ et Benjamin, quia filii captivitatis ædificarent templum Domino Deo Israël :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org971add5" class="outline-3">
+<h3 id="org971add5">Ezra 4:2</h3>
+<div class="outline-text-3" id="text-org971add5">
+<p>
+et accedentes ad Zorobabel, et ad principes patrum, dixerunt eis : Ædificemus vobiscum, quia ita ut vos, quærimus Deum vestrum : ecce nos immolavimus victimas a diebus Asor Haddan regis Assur, qui adduxit nos huc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37c588e" class="outline-3">
+<h3 id="org37c588e">Ezra 4:3</h3>
+<div class="outline-text-3" id="text-org37c588e">
+<p>
+Et dixit eis Zorobabel, et Josue, et reliqui principes patrum Israël : Non est vobis et nobis ut ædificemus domum Deo nostro, sed nos ipsi soli ædificabimus Domino Deo nostro, sicut præcepit nobis Cyrus rex Persarum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5853a53" class="outline-3">
+<h3 id="org5853a53">Ezra 4:4</h3>
+<div class="outline-text-3" id="text-org5853a53">
+<p>
+Factum est igitur ut populus terræ impediret manus populi Judæ, et turbaret eos in ædificando.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc04980e" class="outline-3">
+<h3 id="orgc04980e">Ezra 4:5</h3>
+<div class="outline-text-3" id="text-orgc04980e">
+<p>
+Conduxerunt autem adversus eos consiliatores, ut destruerent consilium eorum omnibus diebus Cyri regis Persarum, et usque ad regnum Darii regis Persarum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b3c58f" class="outline-3">
+<h3 id="org4b3c58f">Ezra 4:6</h3>
+<div class="outline-text-3" id="text-org4b3c58f">
+<p>
+In regno autem Assueri, in principio regni ejus, scripserunt accusationem adversus habitatores Judæ et Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5208a3" class="outline-3">
+<h3 id="orgf5208a3">Ezra 4:7</h3>
+<div class="outline-text-3" id="text-orgf5208a3">
+<p>
+Et in diebus Artaxerxis scripsit Beselam, Mithridates, et Thabeel, et reliqui qui erant in consilio eorum, ad Artaxerxem regem Persarum : epistola autem accusationis scripta erat syriace, et legebatur sermone syro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org407433d" class="outline-3">
+<h3 id="org407433d">Ezra 4:8</h3>
+<div class="outline-text-3" id="text-org407433d">
+<p>
+Reum Beelteem, et Samsai scriba, scripserunt epistolam unam de Jerusalem Artaxerxi regi, hujuscemodi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e5f38b" class="outline-3">
+<h3 id="org0e5f38b">Ezra 4:9</h3>
+<div class="outline-text-3" id="text-org0e5f38b">
+<p>
+Reum Beelteem, et Samsai scriba, et reliqui consiliatores eorum, Dinæi, et Apharsathachæi, Terphalæi, Apharsæi, Erchuæi, Babylonii, Susanechæi, Dievi, et Ælamitæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a4e060" class="outline-3">
+<h3 id="org9a4e060">Ezra 4:10</h3>
+<div class="outline-text-3" id="text-org9a4e060">
+<p>
+et ceteri de gentibus, quas transtulit Asenaphar magnus et gloriosus, et habitare eas fecit in civitatibus Samariæ, et in reliquis regionibus trans flumen in pace
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf5eab2" class="outline-3">
+<h3 id="orgbf5eab2">Ezra 4:11</h3>
+<div class="outline-text-3" id="text-orgbf5eab2">
+<p>
+(hoc est exemplar epistolæ, quam miserunt ad eum), Artaxerxi regi, servi tui, viri qui sunt trans fluvium, salutem dicunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9d3ddc" class="outline-3">
+<h3 id="orgc9d3ddc">Ezra 4:12</h3>
+<div class="outline-text-3" id="text-orgc9d3ddc">
+<p>
+Notum sit regi quia Judæi, qui ascenderunt a te ad nos, venerunt in Jerusalem civitatem rebellem et pessimam, quam ædificant exstruentes muros ejus, et parietes componentes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org256c522" class="outline-3">
+<h3 id="org256c522">Ezra 4:13</h3>
+<div class="outline-text-3" id="text-org256c522">
+<p>
+Nunc igitur notum sit regi, quia si civitas illa ædificata fuerit, et muri ejus instaurati, tributum, et vectigal, et annuos reditus non dabunt, et usque ad reges hæc noxa perveniet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60ccb9a" class="outline-3">
+<h3 id="org60ccb9a">Ezra 4:14</h3>
+<div class="outline-text-3" id="text-org60ccb9a">
+<p>
+Nos autem memores salis, quod in palatio comedimus, et quia læsiones regis videre nefas ducimus, idcirco misimus et nuntiavimus regi,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6dcaab6" class="outline-3">
+<h3 id="org6dcaab6">Ezra 4:15</h3>
+<div class="outline-text-3" id="text-org6dcaab6">
+<p>
+ut recenseas in libris historiarum patrum tuorum, et invenies scriptum in commentariis : et scies quoniam urbs illa, urbs rebellis est, et nocens regibus et provinciis, et bella concitantur in ea ex diebus antiquis : quam ob rem et civitas ipsa destructa est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad299fb" class="outline-3">
+<h3 id="orgad299fb">Ezra 4:16</h3>
+<div class="outline-text-3" id="text-orgad299fb">
+<p>
+Nuntiamus nos regi, quoniam si civitas illa ædificata fuerit, et muri ipsius instaurati, possessionem trans fluvium non habebis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee6649c" class="outline-3">
+<h3 id="orgee6649c">Ezra 4:17</h3>
+<div class="outline-text-3" id="text-orgee6649c">
+<p>
+Verbum misit rex ad Reum Beelteem, et Samsai scribam, et ad reliquos, qui erant in consilio eorum habitatores Samariæ, et ceteris trans fluvium, salutem dicens et pacem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org951580d" class="outline-3">
+<h3 id="org951580d">Ezra 4:18</h3>
+<div class="outline-text-3" id="text-org951580d">
+<p>
+Accusatio, quam misistis ad nos, manifeste lecta est coram me,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge12d45c" class="outline-3">
+<h3 id="orge12d45c">Ezra 4:19</h3>
+<div class="outline-text-3" id="text-orge12d45c">
+<p>
+et a me præceptum est : et recensuerunt, inveneruntque quoniam civitas illa a diebus antiquis adversum reges rebellat, et seditiones, et prælia concitantur in ea :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15af046" class="outline-3">
+<h3 id="org15af046">Ezra 4:20</h3>
+<div class="outline-text-3" id="text-org15af046">
+<p>
+nam et reges fortissimi fuerunt in Jerusalem, qui et dominati sunt omni regioni quæ trans fluvium est : tributum quoque et vectigal, et reditus accipiebant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ce636f" class="outline-3">
+<h3 id="org5ce636f">Ezra 4:21</h3>
+<div class="outline-text-3" id="text-org5ce636f">
+<p>
+Nunc ergo audite sententiam : prohibeatis viros illos, ut urbs illa non ædificetur donec si forte a me jussum fuerit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf16f9cc" class="outline-3">
+<h3 id="orgf16f9cc">Ezra 4:22</h3>
+<div class="outline-text-3" id="text-orgf16f9cc">
+<p>
+Videte ne negligenter hoc impleatis, et paulatim crescat malum contra reges.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f42495" class="outline-3">
+<h3 id="org2f42495">Ezra 4:23</h3>
+<div class="outline-text-3" id="text-org2f42495">
+<p>
+Itaque exemplum edicti Artaxerxis regis lectum est coram Reum Beelteem, et Samsai scriba, et consiliariis eorum : et abierunt festini in Jerusalem ad Judæos, et prohibuerunt eos in brachio et robore.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf48931f" class="outline-3">
+<h3 id="orgf48931f">Ezra 4:24</h3>
+<div class="outline-text-3" id="text-orgf48931f">
+<p>
+Tunc intermissum est opus domus Domini in Jerusalem, et non fiebat usque ad annum secundum regni Darii regis Persarum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb43c0c4" class="outline-2">
+<h2 id="orgb43c0c4">Ezra 5</h2>
+<div class="outline-text-2" id="text-orgb43c0c4">
+</div>
+<div id="outline-container-orgb4d99b4" class="outline-3">
+<h3 id="orgb4d99b4">Ezra 5:1</h3>
+<div class="outline-text-3" id="text-orgb4d99b4">
+<p>
+Prophetaverunt autem Aggæus propheta, et Zacharias filius Addo, prophetantes ad Judæos qui erant in Judæa et Jerusalem, in nomine Dei Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac43274" class="outline-3">
+<h3 id="orgac43274">Ezra 5:2</h3>
+<div class="outline-text-3" id="text-orgac43274">
+<p>
+Tunc surrexerunt Zorobabel filius Salathiel, et Josue filius Josedec, et cœperunt ædificare templum Dei in Jerusalem, et cum eis prophetæ Dei adjuvantes eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org227e561" class="outline-3">
+<h3 id="org227e561">Ezra 5:3</h3>
+<div class="outline-text-3" id="text-org227e561">
+<p>
+In ipso autem tempore venit ad eos Thathanai, qui erat dux trans flumen, et Stharbuzanai, et consiliarii eorum : sicque dixerunt eis : Quis dedit vobis consilium ut domum hanc ædificaretis, et muros ejus instauraretis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge779025" class="outline-3">
+<h3 id="orge779025">Ezra 5:4</h3>
+<div class="outline-text-3" id="text-orge779025">
+<p>
+Ad quod respondimus eis, quæ essent nomina hominum auctorum ædificationis illius.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4cf74c" class="outline-3">
+<h3 id="orgc4cf74c">Ezra 5:5</h3>
+<div class="outline-text-3" id="text-orgc4cf74c">
+<p>
+Oculus autem Dei eorum factus est super senes Judæorum, et non potuerunt inhibere eos. Placuitque ut res ad Darium referretur, et tunc satisfacerent adversus accusationem illam.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgebb9406" class="outline-3">
+<h3 id="orgebb9406">Ezra 5:6</h3>
+<div class="outline-text-3" id="text-orgebb9406">
+<p>
+Exemplar epistolæ, quam misit Thathanai dux regionis trans flumen, et Stharbuzanai, et consiliatores ejus Arphasachæi, qui erant trans flumen, ad Darium regem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f58c10" class="outline-3">
+<h3 id="org8f58c10">Ezra 5:7</h3>
+<div class="outline-text-3" id="text-org8f58c10">
+<p>
+Sermo, quem miserant ei, sic scriptus erat : Dario regi pax omnis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab012ae" class="outline-3">
+<h3 id="orgab012ae">Ezra 5:8</h3>
+<div class="outline-text-3" id="text-orgab012ae">
+<p>
+Notum sit regi, isse nos ad Judæam provinciam, ad domum Dei magni, quæ ædificatur lapide impolito, et ligna ponuntur in parietibus : opusque illud diligenter exstruitur, et crescit in manibus eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42ebb8d" class="outline-3">
+<h3 id="org42ebb8d">Ezra 5:9</h3>
+<div class="outline-text-3" id="text-org42ebb8d">
+<p>
+Interrogavimus ergo senes illos, et ita diximus eis : Quis dedit vobis potestatem ut domum hanc ædificaretis, et muros hos instauraretis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b13a29" class="outline-3">
+<h3 id="org9b13a29">Ezra 5:10</h3>
+<div class="outline-text-3" id="text-org9b13a29">
+<p>
+Sed et nomina eorum quæsivimus ab eis, ut nuntiaremus tibi : scripsimusque nomina eorum virorum, qui sunt principes in eis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9933201" class="outline-3">
+<h3 id="org9933201">Ezra 5:11</h3>
+<div class="outline-text-3" id="text-org9933201">
+<p>
+Hujuscemodi autem sermonem responderunt nobis dicentes : Nos sumus servi Dei cæli et terræ, et ædificamus templum, quod erat exstructum ante hos annos multos, quodque rex Israël magnus ædificaverat, et exstruxerat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2cf695" class="outline-3">
+<h3 id="orge2cf695">Ezra 5:12</h3>
+<div class="outline-text-3" id="text-orge2cf695">
+<p>
+Postquam autem ad iracundiam provocaverunt patres nostri Deum cæli, tradidit eos in manus Nabuchodonosor regis Babylonis Chaldæi, domum quoque hanc destruxit, et populum ejus transtulit in Babylonem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17350c1" class="outline-3">
+<h3 id="org17350c1">Ezra 5:13</h3>
+<div class="outline-text-3" id="text-org17350c1">
+<p>
+Anno autem primo Cyri regis Babylonis, Cyrus rex proposuit edictum ut domus Dei hæc ædificaretur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56ce0dd" class="outline-3">
+<h3 id="org56ce0dd">Ezra 5:14</h3>
+<div class="outline-text-3" id="text-org56ce0dd">
+<p>
+Nam et vasa templi Dei aurea et argentea, quæ Nabuchodonosor tulerat de templo, quod erat in Jerusalem, et asportaverat ea in templum Babylonis, protulit Cyrus rex de templo Babylonis, et data sunt Sassabasar vocabulo, quem et principem constituit,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b16671" class="outline-3">
+<h3 id="org2b16671">Ezra 5:15</h3>
+<div class="outline-text-3" id="text-org2b16671">
+<p>
+dixitque ei : Hæc vasa tolle, et vade, et pone ea in templo, quod est in Jerusalem, et domus Dei ædificetur in loco suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5207f74" class="outline-3">
+<h3 id="org5207f74">Ezra 5:16</h3>
+<div class="outline-text-3" id="text-org5207f74">
+<p>
+Tunc itaque Sassabasar ille venit et posuit fundamenta templi Dei in Jerusalem, et ex eo tempore usque nunc ædificatur, et necdum completum est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9548ee3" class="outline-3">
+<h3 id="org9548ee3">Ezra 5:17</h3>
+<div class="outline-text-3" id="text-org9548ee3">
+<p>
+Nunc ergo si videtur regi bonum, recenseat in bibliotheca regis, quæ est in Babylone, utrumnam a Cyro rege jussum fuerit ut ædificaretur domus Dei in Jerusalem, et voluntatem regis super hac re mittat ad nos.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96fed1d" class="outline-2">
+<h2 id="org96fed1d">Ezra 6</h2>
+<div class="outline-text-2" id="text-org96fed1d">
+</div>
+<div id="outline-container-org2e61eba" class="outline-3">
+<h3 id="org2e61eba">Ezra 6:1</h3>
+<div class="outline-text-3" id="text-org2e61eba">
+<p>
+Tunc Darius rex præcepit : et recensuerunt in bibliotheca librorum, qui erant repositi in Babylone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd398fbb" class="outline-3">
+<h3 id="orgd398fbb">Ezra 6:2</h3>
+<div class="outline-text-3" id="text-orgd398fbb">
+<p>
+Et inventum est in Ecbatanis, quod est castrum in Medena provincia, volumen unum : talisque scriptus erat in eo commentarius :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a09ff1" class="outline-3">
+<h3 id="org8a09ff1">Ezra 6:3</h3>
+<div class="outline-text-3" id="text-org8a09ff1">
+<p>
+Anno primo Cyri regis, Cyrus rex decrevit ut domus Dei ædificaretur, quæ est in Jerusalem, in loco ubi immolent hostias, et ut ponant fundamenta supportantia altitudinem cubitorum sexaginta, et latitudinem cubitorum sexaginta,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d06654" class="outline-3">
+<h3 id="org0d06654">Ezra 6:4</h3>
+<div class="outline-text-3" id="text-org0d06654">
+<p>
+ordines de lapidibus impolitis tres, et sic ordines de lignis novis : sumptus autem de domo regis dabuntur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbabe0c" class="outline-3">
+<h3 id="orgbbabe0c">Ezra 6:5</h3>
+<div class="outline-text-3" id="text-orgbbabe0c">
+<p>
+Sed et vasa templi Dei aurea et argentea, quæ Nabuchodonosor tulerat de templo Jerusalem, et attulerat ea in Babylonem, reddantur, et referantur in templum in Jerusalem in locum suum, quæ et posita sunt in templo Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29bd99e" class="outline-3">
+<h3 id="org29bd99e">Ezra 6:6</h3>
+<div class="outline-text-3" id="text-org29bd99e">
+<p>
+Nunc ergo Thathanai dux regionis, quæ est trans flumen, Stharbuzanai, et consiliarii vestri Apharsachæi, qui estis trans flumen, procul recedite ab illis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2423753" class="outline-3">
+<h3 id="org2423753">Ezra 6:7</h3>
+<div class="outline-text-3" id="text-org2423753">
+<p>
+et dimittite fieri templum Dei illud a duce Judæorum, et a senioribus eorum, ut domum Dei illam ædificent in loco suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f9cf3d" class="outline-3">
+<h3 id="org1f9cf3d">Ezra 6:8</h3>
+<div class="outline-text-3" id="text-org1f9cf3d">
+<p>
+Sed et a me præceptum est quid oporteat fieri a presbyteris Judæorum illis ut ædificetur domus Dei, scilicet ut de arca regis, id est, de tributis quæ dantur de regione trans flumen, studiose sumptus dentur viris illis, ne impediatur opus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36fcf43" class="outline-3">
+<h3 id="org36fcf43">Ezra 6:9</h3>
+<div class="outline-text-3" id="text-org36fcf43">
+<p>
+Quod si necesse fuerit, et vitulos, et agnos, et hædos in holocaustum Deo cæli, frumentum, sal, vinum, et oleum, secundum ritum sacerdotum, qui sunt in Jerusalem, detur eis per singulos dies, ne sit in aliquo querimonia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9bbe9c" class="outline-3">
+<h3 id="orgc9bbe9c">Ezra 6:10</h3>
+<div class="outline-text-3" id="text-orgc9bbe9c">
+<p>
+Et offerant oblationes Deo cæli, orentque pro vita regis, et filiorum ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5456fb" class="outline-3">
+<h3 id="orgf5456fb">Ezra 6:11</h3>
+<div class="outline-text-3" id="text-orgf5456fb">
+<p>
+A me ergo positum est decretum : ut omnis homo qui hanc mutaverit jussionem, tollatur lignum de domum ipsius, et erigatur, et configatur in eo, domus autem ejus publicetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cc6f4c" class="outline-3">
+<h3 id="org8cc6f4c">Ezra 6:12</h3>
+<div class="outline-text-3" id="text-org8cc6f4c">
+<p>
+Deus autem, qui habitare fecit nomen suum ibi, dissipet omnia regna, et populum qui extenderit manum suam ut repugnet, et dissipet domum Dei illam, quæ est in Jerusalem. Ego Darius statui decretum, quod studiose impleri volo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb19910c" class="outline-3">
+<h3 id="orgb19910c">Ezra 6:13</h3>
+<div class="outline-text-3" id="text-orgb19910c">
+<p>
+Igitur Thathanai dux regionis trans flumen, et Stharbuzanai, et consiliarii ejus, secundum quod præceperat Darius rex, sic diligenter executi sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org965a3a7" class="outline-3">
+<h3 id="org965a3a7">Ezra 6:14</h3>
+<div class="outline-text-3" id="text-org965a3a7">
+<p>
+Seniores autem Judæorum ædificabant, et prosperabantur juxta prophetiam Aggæi prophetæ, et Zachariæ filii Addo : et ædificaverunt et construxerunt, jubente Deo Israël, et jubente Cyro, et Dario, et Artaxerxe regibus Persarum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7512e90" class="outline-3">
+<h3 id="org7512e90">Ezra 6:15</h3>
+<div class="outline-text-3" id="text-org7512e90">
+<p>
+et compleverunt domum Dei istam, usque ad diem tertium mensis Adar, qui est annus sextus regni Darii regis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94ac9a0" class="outline-3">
+<h3 id="org94ac9a0">Ezra 6:16</h3>
+<div class="outline-text-3" id="text-org94ac9a0">
+<p>
+Fecerunt autem filii Israël sacerdotes et Levitæ, et reliqui filiorum transmigrationis, dedicationem domus Dei in gaudio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbba9500" class="outline-3">
+<h3 id="orgbba9500">Ezra 6:17</h3>
+<div class="outline-text-3" id="text-orgbba9500">
+<p>
+Et obtulerunt in dedicationem domus Dei, vitulos centum, arietes ducentos, agnos quadringentos, hircos caprarum pro peccato totius Israël duodecim, juxta numerum tribuum Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c975e0" class="outline-3">
+<h3 id="org5c975e0">Ezra 6:18</h3>
+<div class="outline-text-3" id="text-org5c975e0">
+<p>
+Et statuerunt sacerdotes in ordinibus suis, et Levitas in vicibus suis, super opera Dei in Jerusalem, sicut scriptum est in libro Moysi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org451d398" class="outline-3">
+<h3 id="org451d398">Ezra 6:19</h3>
+<div class="outline-text-3" id="text-org451d398">
+<p>
+Fecerunt autem filii Israël transmigrationis Pascha, quartadecima die mensis primi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3796636" class="outline-3">
+<h3 id="org3796636">Ezra 6:20</h3>
+<div class="outline-text-3" id="text-org3796636">
+<p>
+Purificati enim fuerant sacerdotes et Levitæ quasi unus : omnes mundi ad immolandum Pascha universis filiis transmigrationis, et fratribus suis sacerdotibus, et sibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge78e2ae" class="outline-3">
+<h3 id="orge78e2ae">Ezra 6:21</h3>
+<div class="outline-text-3" id="text-orge78e2ae">
+<p>
+Et comederunt filii Israël, qui reversi fuerant de transmigratione, et omnes qui se separaverant a coinquinatione gentium terræ ad eos, ut quærerent Dominum Deum Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ab6374" class="outline-3">
+<h3 id="org7ab6374">Ezra 6:22</h3>
+<div class="outline-text-3" id="text-org7ab6374">
+<p>
+Et fecerunt solemnitatem azymorum septem diebus in lætitia, quoniam lætificaverat eos Dominus, et converterat cor regis Assur ad eos, ut adjuvaret manus eorum in opere domus Domini Dei Israël.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge1955dc" class="outline-2">
+<h2 id="orge1955dc">Ezra 7</h2>
+<div class="outline-text-2" id="text-orge1955dc">
+</div>
+<div id="outline-container-org36ed60a" class="outline-3">
+<h3 id="org36ed60a">Ezra 7:1</h3>
+<div class="outline-text-3" id="text-org36ed60a">
+<p>
+Post hæc autem verba in regno Artaxerxis regis Persarum, Esdras filius Saraiæ, filii Azariæ, filii Helciæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org287c469" class="outline-3">
+<h3 id="org287c469">Ezra 7:2</h3>
+<div class="outline-text-3" id="text-org287c469">
+<p>
+filii Sellum, filii Sadoc, filii Achitob,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee45ac3" class="outline-3">
+<h3 id="orgee45ac3">Ezra 7:3</h3>
+<div class="outline-text-3" id="text-orgee45ac3">
+<p>
+filii Amariæ, filii Azariæ, filii Maraioth,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33a50dd" class="outline-3">
+<h3 id="org33a50dd">Ezra 7:4</h3>
+<div class="outline-text-3" id="text-org33a50dd">
+<p>
+filii Zarahiæ, filii Ozi, filii Bocci,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd920f28" class="outline-3">
+<h3 id="orgd920f28">Ezra 7:5</h3>
+<div class="outline-text-3" id="text-orgd920f28">
+<p>
+filii Abisue, filii Phinees, filii Eleazar, filii Aaron sacerdotis ab initio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7df2cf" class="outline-3">
+<h3 id="orgb7df2cf">Ezra 7:6</h3>
+<div class="outline-text-3" id="text-orgb7df2cf">
+<p>
+Ipse Esdras ascendit de Babylone, et ipse scriba velox in lege Moysi, quam Dominus Deus dedit Israël : et dedit ei rex secundum manum Domini Dei ejus super eum, omnem petitionem ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d1395e" class="outline-3">
+<h3 id="org3d1395e">Ezra 7:7</h3>
+<div class="outline-text-3" id="text-org3d1395e">
+<p>
+Et ascenderunt de filiis Israël, et de filiis sacerdotum, et de filiis Levitarum, et de cantoribus, et de janitoribus, et de Nathinæis, in Jerusalem, anno septimo Artaxerxis regis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc16b2f3" class="outline-3">
+<h3 id="orgc16b2f3">Ezra 7:8</h3>
+<div class="outline-text-3" id="text-orgc16b2f3">
+<p>
+Et venerunt in Jerusalem mense quinto, ipse est annus septimus regis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b56416" class="outline-3">
+<h3 id="org1b56416">Ezra 7:9</h3>
+<div class="outline-text-3" id="text-org1b56416">
+<p>
+Quia in primo die mensis primi cœpit ascendere de Babylone, et in primo die mensis quinti venit in Jerusalem, juxta manum Dei sui bonam super se.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7d318a" class="outline-3">
+<h3 id="orga7d318a">Ezra 7:10</h3>
+<div class="outline-text-3" id="text-orga7d318a">
+<p>
+Esdras enim paravit cor suum, ut investigaret legem Domini, et faceret et doceret in Israël præceptum et judicium.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org182366f" class="outline-3">
+<h3 id="org182366f">Ezra 7:11</h3>
+<div class="outline-text-3" id="text-org182366f">
+<p>
+Hoc est autem exemplar epistolæ edicti, quod dedit rex Artaxerxes Esdræ sacerdoti, scribæ erudito in sermonibus et præceptis Domini, et cæremoniis ejus in Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb52e786" class="outline-3">
+<h3 id="orgb52e786">Ezra 7:12</h3>
+<div class="outline-text-3" id="text-orgb52e786">
+<p>
+Artaxerxes rex regum Esdræ sacerdoti scribæ legis Dei cæli doctissimo, salutem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7eb2882" class="outline-3">
+<h3 id="org7eb2882">Ezra 7:13</h3>
+<div class="outline-text-3" id="text-org7eb2882">
+<p>
+A me decretum est, ut cuicumque placuerit in regno meo de populo Israël, et de sacerdotibus ejus, et de Levitis, ire in Jerusalem, tecum vadat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d9bc7a" class="outline-3">
+<h3 id="org6d9bc7a">Ezra 7:14</h3>
+<div class="outline-text-3" id="text-org6d9bc7a">
+<p>
+A facie enim regis, et septem consiliatorum ejus, missus es, ut visites Judæam et Jerusalem in lege Dei tui, quæ est in manu tua :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00e15e7" class="outline-3">
+<h3 id="org00e15e7">Ezra 7:15</h3>
+<div class="outline-text-3" id="text-org00e15e7">
+<p>
+et ut feras argentum et aurum quod rex, et consiliatores ejus, sponte obtulerunt Deo Israël, cujus in Jerusalem tabernaculum est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgebf618b" class="outline-3">
+<h3 id="orgebf618b">Ezra 7:16</h3>
+<div class="outline-text-3" id="text-orgebf618b">
+<p>
+Et omne argentum et aurum quodcumque inveneris in universa provincia Babylonis, et populus offerre voluerit, et de sacerdotibus quæ sponte obtulerint domui Dei sui, quæ est in Jerusalem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a99880" class="outline-3">
+<h3 id="org4a99880">Ezra 7:17</h3>
+<div class="outline-text-3" id="text-org4a99880">
+<p>
+libere accipe, et studiose eme de hac pecunia vitulos, arietes, agnos, et sacrificia, et libamina eorum, et offer ea super altare templi Dei vestri, quod est in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb341cd6" class="outline-3">
+<h3 id="orgb341cd6">Ezra 7:18</h3>
+<div class="outline-text-3" id="text-orgb341cd6">
+<p>
+Sed et si quid tibi et fratribus tuis placuerit de reliquo argento et auro ut faciatis, juxta voluntatem Dei vestri facite.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8db97a3" class="outline-3">
+<h3 id="org8db97a3">Ezra 7:19</h3>
+<div class="outline-text-3" id="text-org8db97a3">
+<p>
+Vasa quoque, quæ dantur tibi in ministerium domus Dei tui, trade in conspectu Dei in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge74edcf" class="outline-3">
+<h3 id="orge74edcf">Ezra 7:20</h3>
+<div class="outline-text-3" id="text-orge74edcf">
+<p>
+Sed et cetera, quibus opus fuerit in domum Dei tui, quantumcumque necesse est ut expendas, dabitur de thesauro, et de fisco regis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6586faf" class="outline-3">
+<h3 id="org6586faf">Ezra 7:21</h3>
+<div class="outline-text-3" id="text-org6586faf">
+<p>
+et a me. Ego Artaxerxes rex, statui atque decrevi omnibus custodibus arcæ publicæ, qui sunt trans flumen, ut quodcumque petierit a vobis Esdras sacerdos, scriba legis Dei cæli, absque mora detis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4804fa" class="outline-3">
+<h3 id="orgc4804fa">Ezra 7:22</h3>
+<div class="outline-text-3" id="text-orgc4804fa">
+<p>
+usque ad argenti talenta centum, et usque ad frumenti coros centum, et usque ad vini batos centum, et usque ad batos olei centum, sal vero absque mensura.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd1a138" class="outline-3">
+<h3 id="orgdd1a138">Ezra 7:23</h3>
+<div class="outline-text-3" id="text-orgdd1a138">
+<p>
+Omne quod ad ritum Dei cæli pertinet, tribuatur diligenter in domo Dei cæli : ne forte irascatur contra regnum regis, et filiorum ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge64dd59" class="outline-3">
+<h3 id="orge64dd59">Ezra 7:24</h3>
+<div class="outline-text-3" id="text-orge64dd59">
+<p>
+Vobis quoque notum facimus de universis sacerdotibus, et Levitis, et cantoribus, et janitoribus, Nathinæis, et ministris domus Dei hujus, ut vectigal, et tributum, et annonas non habeatis potestatem imponendi super eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3ab4b3" class="outline-3">
+<h3 id="orgf3ab4b3">Ezra 7:25</h3>
+<div class="outline-text-3" id="text-orgf3ab4b3">
+<p>
+Tu autem Esdra, secundum sapientiam Dei tui, quæ est in manu tua, constitue judices et præsides, ut judicent omni populo qui est trans flumen, his videlicet qui noverunt legem Dei tui : sed et imperitos docete libere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a1b77c" class="outline-3">
+<h3 id="org7a1b77c">Ezra 7:26</h3>
+<div class="outline-text-3" id="text-org7a1b77c">
+<p>
+Et omnis qui non fecerit legem Dei tui, et legem regis, diligenter, judicium erit de eo sive in mortem, sive in exilium, sive in condemnationem substantiæ ejus, vel certe in carcerem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcd81c5" class="outline-3">
+<h3 id="orgbcd81c5">Ezra 7:27</h3>
+<div class="outline-text-3" id="text-orgbcd81c5">
+<p>
+Benedictus Dominus Deus patrum nostrorum, qui dedit hoc in corde regis ut glorificaret domum Domini quæ est in Jerusalem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5bab229" class="outline-3">
+<h3 id="org5bab229">Ezra 7:28</h3>
+<div class="outline-text-3" id="text-org5bab229">
+<p>
+et in me inclinavit misericordiam suam coram rege et consiliatoribus ejus, et universis principibus regis potentibus : et ego confortatus manu Domini Dei mei, quæ erat in me, congregavi de Israël principes qui ascenderent mecum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc08a94b" class="outline-2">
+<h2 id="orgc08a94b">Ezra 8</h2>
+<div class="outline-text-2" id="text-orgc08a94b">
+</div>
+<div id="outline-container-org200935a" class="outline-3">
+<h3 id="org200935a">Ezra 8:1</h3>
+<div class="outline-text-3" id="text-org200935a">
+<p>
+Hi sunt ergo principes familiarum, et genealogia eorum, qui ascenderunt mecum in regno Artaxerxis regis de Babylone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0744c6a" class="outline-3">
+<h3 id="org0744c6a">Ezra 8:2</h3>
+<div class="outline-text-3" id="text-org0744c6a">
+<p>
+De filiis Phinees, Gersom. De filiis Ithamar, Daniel. De filiis David, Hattus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56bf3a4" class="outline-3">
+<h3 id="org56bf3a4">Ezra 8:3</h3>
+<div class="outline-text-3" id="text-org56bf3a4">
+<p>
+De filiis Secheniæ, filiis Pharos, Zacharias : et cum eo numerati sunt viri centum quinquaginta.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcad3458" class="outline-3">
+<h3 id="orgcad3458">Ezra 8:4</h3>
+<div class="outline-text-3" id="text-orgcad3458">
+<p>
+De filiis Phahath Moab, Elioënai filius Zarehe, et cum eo ducenti viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc85f2e4" class="outline-3">
+<h3 id="orgc85f2e4">Ezra 8:5</h3>
+<div class="outline-text-3" id="text-orgc85f2e4">
+<p>
+De filiis Secheniæ, filius Ezechiel, et cum eo trecenti viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd9ebad" class="outline-3">
+<h3 id="orgdd9ebad">Ezra 8:6</h3>
+<div class="outline-text-3" id="text-orgdd9ebad">
+<p>
+De filiis Adan, Abed filius Jonathan, et cum eo quinquaginta viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9a73bd" class="outline-3">
+<h3 id="orge9a73bd">Ezra 8:7</h3>
+<div class="outline-text-3" id="text-orge9a73bd">
+<p>
+De filiis Alam, Isaias filius Athaliæ, et cum eo septuaginta viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb392629" class="outline-3">
+<h3 id="orgb392629">Ezra 8:8</h3>
+<div class="outline-text-3" id="text-orgb392629">
+<p>
+De filiis Saphatiæ, Zebedia filius Michaël, et cum eo octoginta viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea9adaa" class="outline-3">
+<h3 id="orgea9adaa">Ezra 8:9</h3>
+<div class="outline-text-3" id="text-orgea9adaa">
+<p>
+De filiis Joab, Obedia filius Jahiel, et cum eo ducenti decem et octo viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org270683e" class="outline-3">
+<h3 id="org270683e">Ezra 8:10</h3>
+<div class="outline-text-3" id="text-org270683e">
+<p>
+De filiis Selomith, filius Josphiæ, et cum eo centum sexaginta viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org135404b" class="outline-3">
+<h3 id="org135404b">Ezra 8:11</h3>
+<div class="outline-text-3" id="text-org135404b">
+<p>
+De filiis Bebai, Zacharias filius Bebai, et cum eo viginti octo viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd890ca6" class="outline-3">
+<h3 id="orgd890ca6">Ezra 8:12</h3>
+<div class="outline-text-3" id="text-orgd890ca6">
+<p>
+De filiis Azgad, Johanan filius Eccetan, et cum eo centum et decem viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75cc354" class="outline-3">
+<h3 id="org75cc354">Ezra 8:13</h3>
+<div class="outline-text-3" id="text-org75cc354">
+<p>
+De filiis Adonicam, qui erant novissimi : et hæc nomina eorum : Elipheleth, et Jehiel, et Samaias, et cum eis sexaginta viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50db8b1" class="outline-3">
+<h3 id="org50db8b1">Ezra 8:14</h3>
+<div class="outline-text-3" id="text-org50db8b1">
+<p>
+De filii Begui, Uthai et Zachur, et cum eis septuaginta viri.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd576767" class="outline-3">
+<h3 id="orgd576767">Ezra 8:15</h3>
+<div class="outline-text-3" id="text-orgd576767">
+<p>
+Congregavi autem eos ad fluvium qui decurrit ad Ahava, et mansimus ibi tribus diebus : quæsivique in populo et in sacerdotibus de filiis Levi, et non inveni ibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bdc4c7" class="outline-3">
+<h3 id="org0bdc4c7">Ezra 8:16</h3>
+<div class="outline-text-3" id="text-org0bdc4c7">
+<p>
+Itaque misi Eliezer, et Ariel, et Semeiam, et Elnathan, et Jarib, et alterum Elnathan, et Nathan, et Zachariam, et Mosollam principes : et Jojarib, et Elnathan sapientes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9312eef" class="outline-3">
+<h3 id="org9312eef">Ezra 8:17</h3>
+<div class="outline-text-3" id="text-org9312eef">
+<p>
+Et misi eos ad Eddo, qui est primus in Chasphiæ loco, et posui in ore eorum verba, quæ loquerentur ad Eddo, et fratres ejus Nathinæos in loco Chasphiæ, ut adducerent nobis ministros domus Dei nostri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org541a095" class="outline-3">
+<h3 id="org541a095">Ezra 8:18</h3>
+<div class="outline-text-3" id="text-org541a095">
+<p>
+Et adduxerunt nobis per manum Dei nostri bonam super nos, virum doctissimum de filiis Moholi filii Levi, filii Israël, et Sarabiam et filios ejus et fratres ejus decem et octo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ff9631" class="outline-3">
+<h3 id="org4ff9631">Ezra 8:19</h3>
+<div class="outline-text-3" id="text-org4ff9631">
+<p>
+et Hasabiam, et cum eo Isaiam de filiis Merari, fratresque ejus, et filios ejus viginti :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3ab6bd" class="outline-3">
+<h3 id="orgf3ab6bd">Ezra 8:20</h3>
+<div class="outline-text-3" id="text-orgf3ab6bd">
+<p>
+et de Nathinæis, quos dederat David et principes ad ministeria Levitarum, Nathinæos ducentos viginti : omnes hi suis nominibus vocabantur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a509ab" class="outline-3">
+<h3 id="org4a509ab">Ezra 8:21</h3>
+<div class="outline-text-3" id="text-org4a509ab">
+<p>
+Et prædicavi ibi jejunium juxta fluvium Ahava, ut affligeremur coram Domino Deo nostro, et peteremus ab eo viam rectam nobis et filiis nostris, universæque substantiæ nostræ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3875093" class="outline-3">
+<h3 id="org3875093">Ezra 8:22</h3>
+<div class="outline-text-3" id="text-org3875093">
+<p>
+Erubui enim petere a rege auxilium et equites, qui defenderent nos ab inimico in via : quia dixeramus regi : Manus Dei nostri est super omnes qui quærunt eum in bonitate : et imperium ejus, et fortitudo ejus, et furor, super omnes qui derelinquunt eum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd40d88" class="outline-3">
+<h3 id="orgdd40d88">Ezra 8:23</h3>
+<div class="outline-text-3" id="text-orgdd40d88">
+<p>
+Jejunavimus autem, et rogavimus Deum nostrum per hoc : et evenit nobis prospere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org709f12c" class="outline-3">
+<h3 id="org709f12c">Ezra 8:24</h3>
+<div class="outline-text-3" id="text-org709f12c">
+<p>
+Et separavi de principibus sacerdotum duodecim, Sarabiam, et Hasabiam, et cum eis de fratribus eorum decem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1660bfb" class="outline-3">
+<h3 id="org1660bfb">Ezra 8:25</h3>
+<div class="outline-text-3" id="text-org1660bfb">
+<p>
+appendique eis argentum et aurum, et vasa consecrata domus Dei nostri, quæ obtulerat rex et consiliatores ejus, et principes ejus, universusque Israël eorum qui inventi fuerant :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea66bbf" class="outline-3">
+<h3 id="orgea66bbf">Ezra 8:26</h3>
+<div class="outline-text-3" id="text-orgea66bbf">
+<p>
+et appendi in manibus eorum argenti talenta sexcenta quinquaginta, et vasa argentea centum, auri centum talenta :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0e1ef0" class="outline-3">
+<h3 id="orge0e1ef0">Ezra 8:27</h3>
+<div class="outline-text-3" id="text-orge0e1ef0">
+<p>
+et crateres aureos viginti, qui habebant solidos millenos, et vasa æris fulgentis optimi duo, pulchra ut aurum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcae6a68" class="outline-3">
+<h3 id="orgcae6a68">Ezra 8:28</h3>
+<div class="outline-text-3" id="text-orgcae6a68">
+<p>
+Et dixi eis : Vos sancti Domini, et vasa sancta, et argentum et aurum, quod sponte oblatum est Domino Deo patrum nostrorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ab7609" class="outline-3">
+<h3 id="org4ab7609">Ezra 8:29</h3>
+<div class="outline-text-3" id="text-org4ab7609">
+<p>
+vigilate et custodite, donec appendatis coram principibus sacerdotum, et Levitarum, et ducibus familiarum Israël in Jerusalem, in thesaurum domus Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7022723" class="outline-3">
+<h3 id="org7022723">Ezra 8:30</h3>
+<div class="outline-text-3" id="text-org7022723">
+<p>
+Susceperunt autem sacerdotes et Levitæ pondus argenti, et auri, et vasorum, ut deferrent Jerusalem in domum Dei nostri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48622d5" class="outline-3">
+<h3 id="org48622d5">Ezra 8:31</h3>
+<div class="outline-text-3" id="text-org48622d5">
+<p>
+Promovimus ergo a flumine Ahava duodecimo die mensis primi ut pergeremus Jerusalem : et manus Dei nostri fuit super nos, et liberavit nos de manu inimici et insidiatoris in via.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40d84ac" class="outline-3">
+<h3 id="org40d84ac">Ezra 8:32</h3>
+<div class="outline-text-3" id="text-org40d84ac">
+<p>
+Et venimus Jerusalem, et mansimus ibi tribus diebus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a4bfd2" class="outline-3">
+<h3 id="org4a4bfd2">Ezra 8:33</h3>
+<div class="outline-text-3" id="text-org4a4bfd2">
+<p>
+Die autem quarta appensum est argentum, et aurum, et vasa in domo Dei nostri per manum Meremoth filii Uriæ sacerdotis, et cum eo Eleazar filius Phinees, cumque eis Jozabed filius Josue, et Noadaia filius Bennoi Levitæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge17d56c" class="outline-3">
+<h3 id="orge17d56c">Ezra 8:34</h3>
+<div class="outline-text-3" id="text-orge17d56c">
+<p>
+juxta numerum et pondus omnium : descriptumque est omne pondus in tempore illo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb647729" class="outline-3">
+<h3 id="orgb647729">Ezra 8:35</h3>
+<div class="outline-text-3" id="text-orgb647729">
+<p>
+Sed et qui venerant de captivitate filii transmigrationis, obtulerunt holocautomata Deo Israël, vitulos duodecim pro omni populo Israël, arietes nonaginta sex, agnos septuaginta septem, hircos pro peccato duodecim : omnia in holocaustum Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8438933" class="outline-3">
+<h3 id="org8438933">Ezra 8:36</h3>
+<div class="outline-text-3" id="text-org8438933">
+<p>
+Dederunt autem edicta regis satrapis qui erant de conspectu regis, et ducibus trans flumen, et elevaverunt populum et domum Dei.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e3af5b" class="outline-2">
+<h2 id="org0e3af5b">Ezra 9</h2>
+<div class="outline-text-2" id="text-org0e3af5b">
+</div>
+<div id="outline-container-orga185769" class="outline-3">
+<h3 id="orga185769">Ezra 9:1</h3>
+<div class="outline-text-3" id="text-orga185769">
+<p>
+Postquam autem hæc completa sunt, accesserunt ad me principes, dicentes : Non est separatus populus Israël, sacerdotes et Levitæ, a populis terrarum et abominationibus eorum : Chananæi videlicet, et Hethæi, et Pherezæi, et Jebusæi, et Ammonitarum, et Moabitarum, et Ægyptiorum, et Amorrhæorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd4040a" class="outline-3">
+<h3 id="orgbd4040a">Ezra 9:2</h3>
+<div class="outline-text-3" id="text-orgbd4040a">
+<p>
+tulerunt enim de filiabus eorum sibi et filiis suis, et commiscuerunt semen sanctum cum populis terrarum : manus etiam principum et magistratuum fuit in transgressione hac prima.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc685bcf" class="outline-3">
+<h3 id="orgc685bcf">Ezra 9:3</h3>
+<div class="outline-text-3" id="text-orgc685bcf">
+<p>
+Cumque audissem sermonem istum, scidi pallium meum et tunicam, et evelli capillos capitis mei et barbæ, et sedi mœrens.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67a37f4" class="outline-3">
+<h3 id="org67a37f4">Ezra 9:4</h3>
+<div class="outline-text-3" id="text-org67a37f4">
+<p>
+Convenerunt autem ad me omnes qui timebant verbum Dei Israël, pro transgressione eorum qui de captivitate venerant, et ego sedebam tristis usque ad sacrificium vespertinum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6fd136" class="outline-3">
+<h3 id="orgf6fd136">Ezra 9:5</h3>
+<div class="outline-text-3" id="text-orgf6fd136">
+<p>
+et in sacrificio vespertino, surrexi de afflictione mea, et scisso pallio et tunica, curvavi genua mea, et expandi manus meas ad Dominum Deum meum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdef7bd6" class="outline-3">
+<h3 id="orgdef7bd6">Ezra 9:6</h3>
+<div class="outline-text-3" id="text-orgdef7bd6">
+<p>
+Et dixi : Deus meus, confundor et erubesco levare faciem meam ad te : quoniam iniquitates nostræ multiplicatæ sunt super caput nostrum, et delicta nostra creverunt usque ad cælum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7ec93b" class="outline-3">
+<h3 id="orgd7ec93b">Ezra 9:7</h3>
+<div class="outline-text-3" id="text-orgd7ec93b">
+<p>
+a diebus patrum nostrorum : sed et nos ipsi peccavimus graviter usque ad diem hanc, et in iniquitatibus nostris traditi sumus ipsi, et reges nostri, et sacerdotes nostri, in manum regum terrarum, et in gladium, et in captivitatem, et in rapinam, et in confusionem vultus, sicut et die hac.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1cbddf" class="outline-3">
+<h3 id="orgf1cbddf">Ezra 9:8</h3>
+<div class="outline-text-3" id="text-orgf1cbddf">
+<p>
+Et nunc quasi parum et ad momentum facta est deprecatio nostra apud Dominum Deum nostrum, ut dimitterentur nobis reliquiæ, et daretur nobis paxillus in loco sancto ejus, et illuminaret oculos nostros Deus noster, et daret nobis vitam modicam in servitute nostra :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf59f220" class="outline-3">
+<h3 id="orgf59f220">Ezra 9:9</h3>
+<div class="outline-text-3" id="text-orgf59f220">
+<p>
+quia servi sumus, et in servitute nostra non dereliquit nos Deus noster, sed inclinavit super nos misericordiam coram rege Persarum, ut daret nobis vitam, et sublimaret domum Dei nostri, et exstrueret solitudines ejus, et daret nobis sepem in Juda et Jerusalem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1357e9" class="outline-3">
+<h3 id="orgd1357e9">Ezra 9:10</h3>
+<div class="outline-text-3" id="text-orgd1357e9">
+<p>
+Et nunc quid dicemus, Deus noster, post hæc ? Quia dereliquimus mandata tua,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7016c7d" class="outline-3">
+<h3 id="org7016c7d">Ezra 9:11</h3>
+<div class="outline-text-3" id="text-org7016c7d">
+<p>
+quæ præcepisti in manu servorum tuorum prophetarum, dicens : Terra, ad quam vos ingredimini ut possideatis eam, terra immunda est juxta immunditiam populorum, ceterarumque terrarum, abominationibus eorum qui repleverunt eam ab ore usque ad os in coinquinatione sua.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb677ee" class="outline-3">
+<h3 id="orgcb677ee">Ezra 9:12</h3>
+<div class="outline-text-3" id="text-orgcb677ee">
+<p>
+Nunc ergo filias vestras ne detis filiis eorum, et filias eorum ne accipiatis filiis vestris, et non quæratis pacem eorum et prosperitatem eorum usque in æternum : ut confortemini, et comedatis quæ bona sunt terræ, et hæredes habeatis filios vestros usque in sæculum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66d3906" class="outline-3">
+<h3 id="org66d3906">Ezra 9:13</h3>
+<div class="outline-text-3" id="text-org66d3906">
+<p>
+Et post omnia quæ venerunt super nos in operibus nostris pessimis, et in delicto nostro magno, quia tu, Deus noster, liberasti nos de iniquitate nostra, et dedisti nobis salutem sicut est hodie,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0408007" class="outline-3">
+<h3 id="org0408007">Ezra 9:14</h3>
+<div class="outline-text-3" id="text-org0408007">
+<p>
+ut non converteremur, et irrita faceremus mandata tua, neque matrimonia jungeremus cum populis abominationum istarum. Numquid iratus es nobis usque ad consummationem, ne dimitteres nobis reliquias ad salutem ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf39f47" class="outline-3">
+<h3 id="orgaf39f47">Ezra 9:15</h3>
+<div class="outline-text-3" id="text-orgaf39f47">
+<p>
+Domine Deus Israël, justus es tu : quoniam derelicti sumus, qui salvaremur sicut die hac. Ecce coram te sumus in delicto nostro : non enim stari potest coram te super hoc.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgffca9a6" class="outline-2">
+<h2 id="orgffca9a6">Ezra 10</h2>
+<div class="outline-text-2" id="text-orgffca9a6">
+</div>
+<div id="outline-container-orgf0ece77" class="outline-3">
+<h3 id="orgf0ece77">Ezra 10:1</h3>
+<div class="outline-text-3" id="text-orgf0ece77">
+<p>
+Sic ergo orante Esdra, et implorante eo et flente, et jacente ante templum Dei, collectus est ad eum de Israël cœtus grandis nimis virorum et mulierum et puerorum, et flevit populus fletu multo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fcc674" class="outline-3">
+<h3 id="org1fcc674">Ezra 10:2</h3>
+<div class="outline-text-3" id="text-org1fcc674">
+<p>
+Et respondit Sechenias filius Jehiel de filiis Ælam, et dixit Esdræ : Nos prævaricati sumus in Deum nostrum, et duximus uxores alienigenas de populis terræ : et nunc, si est pœnitentia in Israël super hoc,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbb8f3f" class="outline-3">
+<h3 id="orgdbb8f3f">Ezra 10:3</h3>
+<div class="outline-text-3" id="text-orgdbb8f3f">
+<p>
+percutiamus fœdus cum Domino Deo nostro, ut projiciamus universas uxores, et eos qui de his nati sunt, juxta voluntatem Domini, et eorum qui timent præceptum Domini Dei nostri : secundum legem fiat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b70325" class="outline-3">
+<h3 id="org0b70325">Ezra 10:4</h3>
+<div class="outline-text-3" id="text-org0b70325">
+<p>
+Surge, tuum est decernere, nosque erimus tecum : confortare, et fac.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b3067c" class="outline-3">
+<h3 id="org3b3067c">Ezra 10:5</h3>
+<div class="outline-text-3" id="text-org3b3067c">
+<p>
+Surrexit ergo Esdras, et adjuravit principes sacerdotum et Levitarum, et omnem Israël, ut facerent secundum verbum hoc : et juraverunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc083725" class="outline-3">
+<h3 id="orgc083725">Ezra 10:6</h3>
+<div class="outline-text-3" id="text-orgc083725">
+<p>
+Et surrexit Esdras ante domum Dei, et abiit ad cubiculum Johanan filii Eliasib, et ingressus est illuc : panem non comedit, et aquam non bibit : lugebat enim transgressionem eorum, qui venerant de captivitate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc00e3b0" class="outline-3">
+<h3 id="orgc00e3b0">Ezra 10:7</h3>
+<div class="outline-text-3" id="text-orgc00e3b0">
+<p>
+Et missa est vox in Juda et in Jerusalem omnibus filiis transmigrationis, ut congregarentur in Jerusalem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6687329" class="outline-3">
+<h3 id="org6687329">Ezra 10:8</h3>
+<div class="outline-text-3" id="text-org6687329">
+<p>
+et omnis qui non venerit in tribus diebus juxta consilium principum et seniorum, auferetur universa substantia ejus, et ipse abjicietur de cœtu transmigrationis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org289e729" class="outline-3">
+<h3 id="org289e729">Ezra 10:9</h3>
+<div class="outline-text-3" id="text-org289e729">
+<p>
+Convenerunt igitur omnes viri Juda et Benjamin in Jerusalem tribus diebus : ipse est mensis nonus, vigesimo die mensis : et sedit omnis populus in platea domus Dei, trementes pro peccato, et pluviis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b486ad" class="outline-3">
+<h3 id="org6b486ad">Ezra 10:10</h3>
+<div class="outline-text-3" id="text-org6b486ad">
+<p>
+Et surrexit Esdras sacerdos, et dixit ad eos : Vos transgressi estis, et duxistis uxores alienigenas, ut adderetis super delictum Israël.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a2c329" class="outline-3">
+<h3 id="org4a2c329">Ezra 10:11</h3>
+<div class="outline-text-3" id="text-org4a2c329">
+<p>
+Et nunc date confessionem Domino Deo patrum vestrorum, et facite placitum ejus, et separamini a populis terræ, et ab uxoribus alienigenis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f150bd" class="outline-3">
+<h3 id="org3f150bd">Ezra 10:12</h3>
+<div class="outline-text-3" id="text-org3f150bd">
+<p>
+Et respondit universa multitudo, dixitque voce magna : Juxta verbum tuum ad nos, sic fiat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5cbd39" class="outline-3">
+<h3 id="orga5cbd39">Ezra 10:13</h3>
+<div class="outline-text-3" id="text-orga5cbd39">
+<p>
+Verumtamen quia populus multus est, et tempus pluviæ, et non sustinemus stare foris, et opus non est diei unius vel duorum (vehementer quippe peccavimus in sermone isto),
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e8f8cb" class="outline-3">
+<h3 id="org9e8f8cb">Ezra 10:14</h3>
+<div class="outline-text-3" id="text-org9e8f8cb">
+<p>
+constituantur principes in universa multitudine : et omnes in civitatibus nostris qui duxerunt uxores alienigenas veniant in temporibus statutis, et cum his seniores per civitatem et civitatem, et judices ejus, donec avertatur ira Dei nostri a nobis super peccato hoc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27b99e0" class="outline-3">
+<h3 id="org27b99e0">Ezra 10:15</h3>
+<div class="outline-text-3" id="text-org27b99e0">
+<p>
+Igitur Jonathan filius Azahel, et Jaasia filius Thecue, steterunt super hoc, et Messollam et Sebethai Levites adjuverunt eos :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e92465" class="outline-3">
+<h3 id="org2e92465">Ezra 10:16</h3>
+<div class="outline-text-3" id="text-org2e92465">
+<p>
+feceruntque sic filii transmigrationis. Et abierunt Esdras sacerdos, et viri principes familiarum, in domos patrum suorum, et omnes per nomina sua, et sederunt in die primo mensis decimi ut quærerent rem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e3925f" class="outline-3">
+<h3 id="org3e3925f">Ezra 10:17</h3>
+<div class="outline-text-3" id="text-org3e3925f">
+<p>
+Et consummati sunt omnes viri, qui duxerant uxores alienigenas, usque ad diem primam mensis primi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3b1498" class="outline-3">
+<h3 id="orgc3b1498">Ezra 10:18</h3>
+<div class="outline-text-3" id="text-orgc3b1498">
+<p>
+Et inventi sunt de filiis sacerdotum qui duxerant uxores alienigenas. De filiis Josue filii Josedec, et fratres ejus, Maasia, et Eliezer, et Jarib, et Godolia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68a847a" class="outline-3">
+<h3 id="org68a847a">Ezra 10:19</h3>
+<div class="outline-text-3" id="text-org68a847a">
+<p>
+Et dederunt manus suas ut ejicerent uxores suas, et pro delicto suo arietem de ovibus offerrent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef26dea" class="outline-3">
+<h3 id="orgef26dea">Ezra 10:20</h3>
+<div class="outline-text-3" id="text-orgef26dea">
+<p>
+Et de filiis Emmer, Hanani, et Zebedia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c23f88" class="outline-3">
+<h3 id="org1c23f88">Ezra 10:21</h3>
+<div class="outline-text-3" id="text-org1c23f88">
+<p>
+Et de filiis Harim, Maasia, et Elia, et Semeia, et Jehiel, et Ozias.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org212f944" class="outline-3">
+<h3 id="org212f944">Ezra 10:22</h3>
+<div class="outline-text-3" id="text-org212f944">
+<p>
+Et de filiis Pheshur, Elioënai, Maasia, Ismaël, Nathanaël, Jozabed, et Elasa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7431c40" class="outline-3">
+<h3 id="org7431c40">Ezra 10:23</h3>
+<div class="outline-text-3" id="text-org7431c40">
+<p>
+Et de filiis Levitarum, Jozabed, et Semei, et Celaia, ipse est Calita, Phataia, Juda, et Eliezer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org186e9d9" class="outline-3">
+<h3 id="org186e9d9">Ezra 10:24</h3>
+<div class="outline-text-3" id="text-org186e9d9">
+<p>
+Et de cantoribus, Eliasib. Et de janitoribus, Sellum, et Telem, et Uri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1500973" class="outline-3">
+<h3 id="org1500973">Ezra 10:25</h3>
+<div class="outline-text-3" id="text-org1500973">
+<p>
+Et ex Israël, de filiis Pharos, Remeia, et Jesia, et Melchia, et Miamin, et Eliezer, et Melchia, et Banea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9501a5c" class="outline-3">
+<h3 id="org9501a5c">Ezra 10:26</h3>
+<div class="outline-text-3" id="text-org9501a5c">
+<p>
+Et de filiis Ælam, Mathania, Zacharias, et Jehiel, et Abdi, et Jerimoth, et Elia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb464069" class="outline-3">
+<h3 id="orgb464069">Ezra 10:27</h3>
+<div class="outline-text-3" id="text-orgb464069">
+<p>
+Et de filiis Zethua, Elioënai, Eliasib, Mathania, et Jerimuth, et Zabad, et Aziza.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5762cf" class="outline-3">
+<h3 id="orge5762cf">Ezra 10:28</h3>
+<div class="outline-text-3" id="text-orge5762cf">
+<p>
+Et de filiis Bebai, Johanan, Hanania, Zabbai, Athalai.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f37b11" class="outline-3">
+<h3 id="org4f37b11">Ezra 10:29</h3>
+<div class="outline-text-3" id="text-org4f37b11">
+<p>
+Et de filiis Bani, Mosollam, et Melluch, et Adaia, Jasub, et Saal, et Ramoth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb51087" class="outline-3">
+<h3 id="orgeb51087">Ezra 10:30</h3>
+<div class="outline-text-3" id="text-orgeb51087">
+<p>
+Et de filiis Phahath Moab, Edna, et Chalal, Banaias, et Maasias, Mathanias, Beseleel, Bennui, et Manasse.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea5cb8d" class="outline-3">
+<h3 id="orgea5cb8d">Ezra 10:31</h3>
+<div class="outline-text-3" id="text-orgea5cb8d">
+<p>
+Et de filiis Herem, Eliezer, Josue, Melchias, Semeias, Simeon,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda3a0cb" class="outline-3">
+<h3 id="orgda3a0cb">Ezra 10:32</h3>
+<div class="outline-text-3" id="text-orgda3a0cb">
+<p>
+Benjamin, Maloch, Samarias.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81e9ef7" class="outline-3">
+<h3 id="org81e9ef7">Ezra 10:33</h3>
+<div class="outline-text-3" id="text-org81e9ef7">
+<p>
+Et de filiis Hasom, Mathanai, Mathatha, Zabad, Eliphelet, Jermai, Manasse, Semei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org494be50" class="outline-3">
+<h3 id="org494be50">Ezra 10:34</h3>
+<div class="outline-text-3" id="text-org494be50">
+<p>
+De filiis Bani, Maadi, Amram, et Vel,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org462db8c" class="outline-3">
+<h3 id="org462db8c">Ezra 10:35</h3>
+<div class="outline-text-3" id="text-org462db8c">
+<p>
+Baneas, et Badaias, Cheliau,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea7f864" class="outline-3">
+<h3 id="orgea7f864">Ezra 10:36</h3>
+<div class="outline-text-3" id="text-orgea7f864">
+<p>
+Vania, Marimuth, et Eliasib,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5635e60" class="outline-3">
+<h3 id="org5635e60">Ezra 10:37</h3>
+<div class="outline-text-3" id="text-org5635e60">
+<p>
+Mathanias, Mathanai, et Jasi,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06a4117" class="outline-3">
+<h3 id="org06a4117">Ezra 10:38</h3>
+<div class="outline-text-3" id="text-org06a4117">
+<p>
+et Bani, et Bennui, Semei,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0756bbc" class="outline-3">
+<h3 id="org0756bbc">Ezra 10:39</h3>
+<div class="outline-text-3" id="text-org0756bbc">
+<p>
+et Salmias, et Nathan, et Adaias,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org632604b" class="outline-3">
+<h3 id="org632604b">Ezra 10:40</h3>
+<div class="outline-text-3" id="text-org632604b">
+<p>
+et Mechnedebai, Sisai, Sarai,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge88b156" class="outline-3">
+<h3 id="orge88b156">Ezra 10:41</h3>
+<div class="outline-text-3" id="text-orge88b156">
+<p>
+Ezrel, et Selemiau, Semeria,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge929373" class="outline-3">
+<h3 id="orge929373">Ezra 10:42</h3>
+<div class="outline-text-3" id="text-orge929373">
+<p>
+Sellum, Amaria, Joseph.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae2e53d" class="outline-3">
+<h3 id="orgae2e53d">Ezra 10:43</h3>
+<div class="outline-text-3" id="text-orgae2e53d">
+<p>
+De filiis Nebo, Jehiel, Mathathias, Zabad, Zabina, Jeddu, et Joël, et Banaia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f8f591" class="outline-3">
+<h3 id="org5f8f591">Ezra 10:44</h3>
+<div class="outline-text-3" id="text-org5f8f591">
+<p>
+Omnes hi acceperant uxores alienigenas, et fuerunt ex eis mulieres, quæ pepererant filios.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:40</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,458 @@
+#+TITLE: bible.org project
+#+OPTIONS: num:nil ^:{}
+
+* Welcome
+:PROPERTIES:
+:CUSTOM_ID: Welcome
+:END:
+
+This is a project designed to bring the Holy Bible to Emacs org-mode. This site contains each of the 73 books of the Bible converted to HTML. You can visit the GitHub project page here:
+
+[[https://github.com/Mertzenich/bible.org]]
+
+* Old Testament
+:PROPERTIES:
+:CUSTOM_ID: Old Testament
+:END:
+** Genesis
+:PROPERTIES:
+:CUSTOM_ID: Genesis
+:END:
+- [[file:DRC/Genesis.org][English]]
+- [[file:VulgClementine/Genesis.org][Latin]]
+** Exodus
+:PROPERTIES:
+:CUSTOM_ID: Exodus
+:END:
+- [[file:DRC/Exodus.org][English]]
+- [[file:VulgClementine/Exodus.org][Latin]]
+** Leviticus
+:PROPERTIES:
+:CUSTOM_ID: Leviticus
+:END:
+- [[file:DRC/Leviticus.org][English]]
+- [[file:VulgClementine/Leviticus.org][Latin]]
+** Numbers
+:PROPERTIES:
+:CUSTOM_ID: Numbers
+:END:
+- [[file:DRC/Numbers.org][English]]
+- [[file:VulgClementine/Numbers.org][Latin]]
+** Deuteronomy
+:PROPERTIES:
+:CUSTOM_ID: Deuteronomy
+:END:
+- [[file:DRC/Deuteronomy.org][English]]
+- [[file:VulgClementine/Deuteronomy.org][Latin]]
+** Joshua
+:PROPERTIES:
+:CUSTOM_ID: Joshua
+:END:
+- [[file:DRC/Joshua.org][English]]
+- [[file:VulgClementine/Joshua.org][Latin]]
+** Judges
+:PROPERTIES:
+:CUSTOM_ID: Judges
+:END:
+- [[file:DRC/Judges.org][English]]
+- [[file:VulgClementine/Judges.org][Latin]]
+** Ruth
+:PROPERTIES:
+:CUSTOM_ID: Ruth
+:END:
+- [[file:DRC/Ruth.org][English]]
+- [[file:VulgClementine/Ruth.org][Latin]]
+** 1 Samuel
+:PROPERTIES:
+:CUSTOM_ID: 1 Samuel
+:END:
+- [[file:DRC/1 Samuel.org][English]]
+- [[file:VulgClementine/1 Samuel.org][Latin]]
+** 2 Samuel
+:PROPERTIES:
+:CUSTOM_ID: 2 Samuel
+:END:
+- [[file:DRC/2 Samuel.org][English]]
+- [[file:VulgClementine/2 Samuel.org][Latin]]
+** 1 Kings
+:PROPERTIES:
+:CUSTOM_ID: 1 Kings
+:END:
+- [[file:DRC/1 Kings.org][English]]
+- [[file:VulgClementine/1 Kings.org][Latin]]
+** 2 Kings
+:PROPERTIES:
+:CUSTOM_ID: 2 Kings
+:END:
+- [[file:DRC/2 Kings.org][English]]
+- [[file:VulgClementine/2 Kings.org][Latin]]
+** 1 Chronicles
+:PROPERTIES:
+:CUSTOM_ID: 1 Chronicles
+:END:
+- [[file:DRC/1 Chronicles.org][English]]
+- [[file:VulgClementine/1 Chronicles.org][Latin]]
+** 2 Chronicles
+:PROPERTIES:
+:CUSTOM_ID: 2 Chronicles
+:END:
+- [[file:DRC/2 Chronicles.org][English]]
+- [[file:VulgClementine/2 Chronicles.org][Latin]]
+** Ezra
+:PROPERTIES:
+:CUSTOM_ID: Ezra
+:END:
+- [[file:DRC/Ezra.org][English]]
+- [[file:VulgClementine/Ezra.org][Latin]]
+** Nehemiah
+:PROPERTIES:
+:CUSTOM_ID: Nehemiah
+:END:
+- [[file:DRC/Nehemiah.org][English]]
+- [[file:VulgClementine/Nehemiah.org][Latin]]
+** Tobit
+:PROPERTIES:
+:CUSTOM_ID: Tobit
+:END:
+- [[file:DRC/Tobit.org][English]]
+- [[file:VulgClementine/Tobit.org][Latin]]
+** Judith
+:PROPERTIES:
+:CUSTOM_ID: Judith
+:END:
+- [[file:DRC/Judith.org][English]]
+- [[file:VulgClementine/Judith.org][Latin]]
+** Esther
+:PROPERTIES:
+:CUSTOM_ID: Esther
+:END:
+- [[file:DRC/Esther.org][English]]
+- [[file:VulgClementine/Esther.org][Latin]]
+** 1 Maccabees
+:PROPERTIES:
+:CUSTOM_ID: 1 Maccabees
+:END:
+- [[file:DRC/1 Maccabees.org][English]]
+- [[file:VulgClementine/1 Maccabees.org][Latin]]
+** 2 Maccabees
+:PROPERTIES:
+:CUSTOM_ID: 2 Maccabees
+:END:
+- [[file:DRC/2 Maccabees.org][English]]
+- [[file:VulgClementine/2 Maccabees.org][Latin]]
+** Job
+:PROPERTIES:
+:CUSTOM_ID: Job
+:END:
+- [[file:DRC/Job.org][English]]
+- [[file:VulgClementine/Job.org][Latin]]
+** Psalms
+:PROPERTIES:
+:CUSTOM_ID: Psalms
+:END:
+- [[file:DRC/Psalms.org][English]]
+- [[file:VulgClementine/Psalms.org][Latin]]
+** Proverbs
+:PROPERTIES:
+:CUSTOM_ID: Proverbs
+:END:
+- [[file:DRC/Proverbs.org][English]]
+- [[file:VulgClementine/Proverbs.org][Latin]]
+** Ecclesiastes
+:PROPERTIES:
+:CUSTOM_ID: Ecclesiastes
+:END:
+- [[file:DRC/Ecclesiastes.org][English]]
+- [[file:VulgClementine/Ecclesiastes.org][Latin]]
+** Song of Songs
+:PROPERTIES:
+:CUSTOM_ID: Song of Songs
+:END:
+- [[file:DRC/Song of Songs.org][English]]
+- [[file:VulgClementine/Song of Songs.org][Latin]]
+** Wisdom
+:PROPERTIES:
+:CUSTOM_ID: Wisdom
+:END:
+- [[file:DRC/Wisdom.org][English]]
+- [[file:VulgClementine/Wisdom.org][Latin]]
+** Sirach
+:PROPERTIES:
+:CUSTOM_ID: Sirach
+:END:
+- [[file:DRC/Sirach.org][English]]
+- [[file:VulgClementine/Sirach.org][Latin]]
+** Isaiah
+:PROPERTIES:
+:CUSTOM_ID: Isaiah
+:END:
+- [[file:DRC/Isaiah.org][English]]
+- [[file:VulgClementine/Isaiah.org][Latin]]
+** Jeremiah
+:PROPERTIES:
+:CUSTOM_ID: Jeremiah
+:END:
+- [[file:DRC/Jeremiah.org][English]]
+- [[file:VulgClementine/Jeremiah.org][Latin]]
+** Lamentations
+:PROPERTIES:
+:CUSTOM_ID: Lamentations
+:END:
+- [[file:DRC/Lamentations.org][English]]
+- [[file:VulgClementine/Lamentations.org][Latin]]
+** Baruch
+:PROPERTIES:
+:CUSTOM_ID: Baruch
+:END:
+- [[file:DRC/Baruch.org][English]]
+- [[file:VulgClementine/Baruch.org][Latin]]
+** Ezekiel
+:PROPERTIES:
+:CUSTOM_ID: Ezekiel
+:END:
+- [[file:DRC/Ezekiel.org][English]]
+- [[file:VulgClementine/Ezekiel.org][Latin]]
+** Daniel
+:PROPERTIES:
+:CUSTOM_ID: Daniel
+:END:
+- [[file:DRC/Daniel.org][English]]
+- [[file:VulgClementine/Daniel.org][Latin]]
+** Hosea
+:PROPERTIES:
+:CUSTOM_ID: Hosea
+:END:
+- [[file:DRC/Hosea.org][English]]
+- [[file:VulgClementine/Hosea.org][Latin]]
+** Joel
+:PROPERTIES:
+:CUSTOM_ID: Joel
+:END:
+- [[file:DRC/Joel.org][English]]
+- [[file:VulgClementine/Joel.org][Latin]]
+** Amos
+:PROPERTIES:
+:CUSTOM_ID: Amos
+:END:
+- [[file:DRC/Amos.org][English]]
+- [[file:VulgClementine/Amos.org][Latin]]
+** Obadiah
+:PROPERTIES:
+:CUSTOM_ID: Obadiah
+:END:
+- [[file:DRC/Obadiah.org][English]]
+- [[file:VulgClementine/Obadiah.org][Latin]]
+** Jonah
+:PROPERTIES:
+:CUSTOM_ID: Jonah
+:END:
+- [[file:DRC/Jonah.org][English]]
+- [[file:VulgClementine/Jonah.org][Latin]]
+** Micah
+:PROPERTIES:
+:CUSTOM_ID: Micah
+:END:
+- [[file:DRC/Micah.org][English]]
+- [[file:VulgClementine/Micah.org][Latin]]
+** Nahum
+:PROPERTIES:
+:CUSTOM_ID: Nahum
+:END:
+- [[file:DRC/Nahum.org][English]]
+- [[file:VulgClementine/Nahum.org][Latin]]
+** Habakkuk
+:PROPERTIES:
+:CUSTOM_ID: Habakkuk
+:END:
+- [[file:DRC/Habakkuk.org][English]]
+- [[file:VulgClementine/Habakkuk.org][Latin]]
+** Zephaniah
+:PROPERTIES:
+:CUSTOM_ID: Zephaniah
+:END:
+- [[file:DRC/Zephaniah.org][English]]
+- [[file:VulgClementine/Zephaniah.org][Latin]]
+** Haggai
+:PROPERTIES:
+:CUSTOM_ID: Haggai
+:END:
+- [[file:DRC/Haggai.org][English]]
+- [[file:VulgClementine/Haggai.org][Latin]]
+** Zechariah
+:PROPERTIES:
+:CUSTOM_ID: Zechariah
+:END:
+- [[file:DRC/Zechariah.org][English]]
+- [[file:VulgClementine/Zechariah.org][Latin]]
+** Malachi
+:PROPERTIES:
+:CUSTOM_ID: Malachi
+:END:
+- [[file:DRC/Malachi.org][English]]
+- [[file:VulgClementine/Malachi.org][Latin]]
+* New Testament
+:PROPERTIES:
+:CUSTOM_ID: New Testament
+:END:
+** Matthew
+:PROPERTIES:
+:CUSTOM_ID: Matthew
+:END:
+- [[file:DRC/Matthew.org][English]]
+- [[file:VulgClementine/Matthew.org][Latin]]
+** Mark
+:PROPERTIES:
+:CUSTOM_ID: Mark
+:END:
+- [[file:DRC/Mark.org][English]]
+- [[file:VulgClementine/Mark.org][Latin]]
+** Luke
+:PROPERTIES:
+:CUSTOM_ID: Luke
+:END:
+- [[file:DRC/Luke.org][English]]
+- [[file:VulgClementine/Luke.org][Latin]]
+** John
+:PROPERTIES:
+:CUSTOM_ID: John
+:END:
+- [[file:DRC/John.org][English]]
+- [[file:VulgClementine/John.org][Latin]]
+** Acts of the Apostles
+:PROPERTIES:
+:CUSTOM_ID: Acts of the Apostles
+:END:
+- [[file:DRC/Acts.org][English]]
+- [[file:VulgClementine/Acts.org][Latin]]
+** Romans
+:PROPERTIES:
+:CUSTOM_ID: Romans
+:END:
+- [[file:DRC/Romans.org][English]]
+- [[file:VulgClementine/Romans.org][Latin]]
+** 1 Corinthians
+:PROPERTIES:
+:CUSTOM_ID: 1 Corinthians
+:END:
+- [[file:DRC/1 Corinthians.org][English]]
+- [[file:VulgClementine/1 Corinthians.org][Latin]]
+** 2 Corinthians
+:PROPERTIES:
+:CUSTOM_ID: 2 Corinthians
+:END:
+- [[file:DRC/2 Corinthians.org][English]]
+- [[file:VulgClementine/2 Corinthians.org][Latin]]
+** Galatians
+:PROPERTIES:
+:CUSTOM_ID: Galatians
+:END:
+- [[file:DRC/Galatians.org][English]]
+- [[file:VulgClementine/Galatians.org][Latin]]
+** Ephesians
+:PROPERTIES:
+:CUSTOM_ID: Ephesians
+:END:
+- [[file:DRC/Ephesians.org][English]]
+- [[file:VulgClementine/Ephesians.org][Latin]]
+** Philippians
+:PROPERTIES:
+:CUSTOM_ID: Philippians
+:END:
+- [[file:DRC/Philippians.org][English]]
+- [[file:VulgClementine/Philippians.org][Latin]]
+** Colossians
+:PROPERTIES:
+:CUSTOM_ID: Colossians
+:END:
+- [[file:DRC/Colossians.org][English]]
+- [[file:VulgClementine/Colossians.org][Latin]]
+** 1 Thessalonians
+:PROPERTIES:
+:CUSTOM_ID: 1 Thessalonians
+:END:
+- [[file:DRC/1 Thessalonians.org][English]]
+- [[file:VulgClementine/1 Thessalonians.org][Latin]]
+** 2 Thessalonians
+:PROPERTIES:
+:CUSTOM_ID: 2 Thessalonians
+:END:
+- [[file:DRC/2 Thessalonians.org][English]]
+- [[file:VulgClementine/2 Thessalonians.org][Latin]]
+** 1 Timothy
+:PROPERTIES:
+:CUSTOM_ID: 1 Timothy
+:END:
+- [[file:DRC/1 Timothy.org][English]]
+- [[file:VulgClementine/1 Timothy.org][Latin]]
+** 2 Timothy
+:PROPERTIES:
+:CUSTOM_ID: 2 Timothy
+:END:
+- [[file:DRC/2 Timothy.org][English]]
+- [[file:VulgClementine/2 Timothy.org][Latin]]
+** Titus
+:PROPERTIES:
+:CUSTOM_ID: Titus
+:END:
+- [[file:DRC/Titus.org][English]]
+- [[file:VulgClementine/Titus.org][Latin]]
+** Philemon
+:PROPERTIES:
+:CUSTOM_ID: Philemon
+:END:
+- [[file:DRC/Philemon.org][English]]
+- [[file:VulgClementine/Philemon.org][Latin]]
+** Hebrews
+:PROPERTIES:
+:CUSTOM_ID: Hebrews
+:END:
+- [[file:DRC/Hebrews.org][English]]
+- [[file:VulgClementine/Hebrews.org][Latin]]
+** James
+:PROPERTIES:
+:CUSTOM_ID: James
+:END:
+- [[file:DRC/James.org][English]]
+- [[file:VulgClementine/James.org][Latin]]
+** 1 Peter
+:PROPERTIES:
+:CUSTOM_ID: 1 Peter
+:END:
+- [[file:DRC/1 Peter.org][English]]
+- [[file:VulgClementine/1 Peter.org][Latin]]
+** 2 Peter
+:PROPERTIES:
+:CUSTOM_ID: 2 Peter
+:END:
+- [[file:DRC/2 Peter.org][English]]
+- [[file:VulgClementine/2 Peter.org][Latin]]
+** 1 John
+:PROPERTIES:
+:CUSTOM_ID: 1 John
+:END:
+- [[file:DRC/1 John.org][English]]
+- [[file:VulgClementine/1 John.org][Latin]]
+** 2 John
+:PROPERTIES:
+:CUSTOM_ID: 2 John
+:END:
+- [[file:DRC/2 John.org][English]]
+- [[file:VulgClementine/2 John.org][Latin]]
+** 3 John
+:PROPERTIES:
+:CUSTOM_ID: 3 John
+:END:
+- [[file:DRC/3 John.org][English]]
+- [[file:VulgClementine/3 John.org][Latin]]
+** Jude
+:PROPERTIES:
+:CUSTOM_ID: Jude
+:END:
+- [[file:DRC/Jude.org][English]]
+- [[file:VulgClementine/Jude.org][Latin]]
+** Revelation
+:PROPERTIES:
+:CUSTOM_ID: Revelation
+:END:
+- [[file:DRC/Revelation.org][English]]
+- [[file:VulgClementine/Revelation.org][Latin]]

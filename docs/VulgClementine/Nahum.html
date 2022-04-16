@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgdc367a2">Nahum 1</a>
+<ul>
+<li><a href="#org74bf40c">Nahum 1:1</a></li>
+<li><a href="#org7811108">Nahum 1:2</a></li>
+<li><a href="#orgd59deaa">Nahum 1:3</a></li>
+<li><a href="#org8a75bc0">Nahum 1:4</a></li>
+<li><a href="#orgee63066">Nahum 1:5</a></li>
+<li><a href="#orge42f4ff">Nahum 1:6</a></li>
+<li><a href="#orgca868a5">Nahum 1:7</a></li>
+<li><a href="#org5f11fe1">Nahum 1:8</a></li>
+<li><a href="#org5a22301">Nahum 1:9</a></li>
+<li><a href="#org89515f6">Nahum 1:10</a></li>
+<li><a href="#org31f48f7">Nahum 1:11</a></li>
+<li><a href="#orga29cf3d">Nahum 1:12</a></li>
+<li><a href="#org6d7c4c9">Nahum 1:13</a></li>
+<li><a href="#org9a03dfe">Nahum 1:14</a></li>
+<li><a href="#org3906673">Nahum 1:15</a></li>
+</ul>
+</li>
+<li><a href="#org46dd9b6">Nahum 2</a>
+<ul>
+<li><a href="#org100ec52">Nahum 2:1</a></li>
+<li><a href="#org1100fbb">Nahum 2:2</a></li>
+<li><a href="#org9783afb">Nahum 2:3</a></li>
+<li><a href="#org67cfc1c">Nahum 2:4</a></li>
+<li><a href="#org6946e5c">Nahum 2:5</a></li>
+<li><a href="#orga1e2551">Nahum 2:6</a></li>
+<li><a href="#orgd1d556d">Nahum 2:7</a></li>
+<li><a href="#org2d1b7c1">Nahum 2:8</a></li>
+<li><a href="#org6ad0b1a">Nahum 2:9</a></li>
+<li><a href="#org95b952d">Nahum 2:10</a></li>
+<li><a href="#org6ee1000">Nahum 2:11</a></li>
+<li><a href="#orga1104d4">Nahum 2:12</a></li>
+<li><a href="#org902c7ea">Nahum 2:13</a></li>
+</ul>
+</li>
+<li><a href="#org49c782d">Nahum 3</a>
+<ul>
+<li><a href="#org4c9c398">Nahum 3:1</a></li>
+<li><a href="#org9bfa4f1">Nahum 3:2</a></li>
+<li><a href="#org87113c9">Nahum 3:3</a></li>
+<li><a href="#orga11f997">Nahum 3:4</a></li>
+<li><a href="#org0682a04">Nahum 3:5</a></li>
+<li><a href="#orgc4fb259">Nahum 3:6</a></li>
+<li><a href="#org448e459">Nahum 3:7</a></li>
+<li><a href="#org0694a3e">Nahum 3:8</a></li>
+<li><a href="#org45b86ff">Nahum 3:9</a></li>
+<li><a href="#org0f5e222">Nahum 3:10</a></li>
+<li><a href="#orga378e3a">Nahum 3:11</a></li>
+<li><a href="#org41dbbad">Nahum 3:12</a></li>
+<li><a href="#orgb835742">Nahum 3:13</a></li>
+<li><a href="#org0c26a52">Nahum 3:14</a></li>
+<li><a href="#org9454bfb">Nahum 3:15</a></li>
+<li><a href="#org82d1ee7">Nahum 3:16</a></li>
+<li><a href="#org5da7011">Nahum 3:17</a></li>
+<li><a href="#org555e06e">Nahum 3:18</a></li>
+<li><a href="#orga38df15">Nahum 3:19</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdc367a2" class="outline-2">
+<h2 id="orgdc367a2">Nahum 1</h2>
+<div class="outline-text-2" id="text-orgdc367a2">
+</div>
+<div id="outline-container-org74bf40c" class="outline-3">
+<h3 id="org74bf40c">Nahum 1:1</h3>
+<div class="outline-text-3" id="text-org74bf40c">
+<p>
+Onus Ninive. Liber visionis Nahum Elcesæi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7811108" class="outline-3">
+<h3 id="org7811108">Nahum 1:2</h3>
+<div class="outline-text-3" id="text-org7811108">
+<p>
+Deus æmulator, et ulciscens Dominus :  ulciscens Dominus, et habens furorem :  ulciscens Dominus in hostes suos,  et irascens ipse inimicis suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd59deaa" class="outline-3">
+<h3 id="orgd59deaa">Nahum 1:3</h3>
+<div class="outline-text-3" id="text-orgd59deaa">
+<p>
+Dominus patiens, et magnus fortitudine,  et mundans non faciet innocentem.  Dominus in tempestate et turbine viæ ejus,  et nebulæ pulvis pedum ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a75bc0" class="outline-3">
+<h3 id="org8a75bc0">Nahum 1:4</h3>
+<div class="outline-text-3" id="text-org8a75bc0">
+<p>
+Increpans mare, et exsiccans illud,  et omnia flumina ad desertum deducens.  Infirmatus est Basan et Carmelus,  et flos Libani elanguit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee63066" class="outline-3">
+<h3 id="orgee63066">Nahum 1:5</h3>
+<div class="outline-text-3" id="text-orgee63066">
+<p>
+Montes commoti sunt ab eo,  et colles desolati sunt :  et contremuit terra a facie ejus,  et orbis, et omnes habitantes in eo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge42f4ff" class="outline-3">
+<h3 id="orge42f4ff">Nahum 1:6</h3>
+<div class="outline-text-3" id="text-orge42f4ff">
+<p>
+Ante faciem indignationis ejus quis stabit ?  et quis resistet in ira furoris ejus ?  Indignatio ejus effusa est ut ignis,  et petræ dissolutæ sunt ab eo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca868a5" class="outline-3">
+<h3 id="orgca868a5">Nahum 1:7</h3>
+<div class="outline-text-3" id="text-orgca868a5">
+<p>
+Bonus Dominus,  et confortans in die tribulationis,  et sciens sperantes in se. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f11fe1" class="outline-3">
+<h3 id="org5f11fe1">Nahum 1:8</h3>
+<div class="outline-text-3" id="text-org5f11fe1">
+<p>
+Et in diluvio prætereunte consummationem faciet loci ejus,  et inimicos ejus persequentur tenebræ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a22301" class="outline-3">
+<h3 id="org5a22301">Nahum 1:9</h3>
+<div class="outline-text-3" id="text-org5a22301">
+<p>
+Quid cogitatis contra Dominum ?  Consummationem ipse faciet :  non consurget duplex tribulatio, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89515f6" class="outline-3">
+<h3 id="org89515f6">Nahum 1:10</h3>
+<div class="outline-text-3" id="text-org89515f6">
+<p>
+quia sicut spinæ se invicem complectuntur,  sic convivium eorum pariter potantium ;  consumentur quasi stipula ariditate plena. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31f48f7" class="outline-3">
+<h3 id="org31f48f7">Nahum 1:11</h3>
+<div class="outline-text-3" id="text-org31f48f7">
+<p>
+Ex te exibit cogitans contra Dominum malitiam,  mente pertractans prævaricationem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga29cf3d" class="outline-3">
+<h3 id="orga29cf3d">Nahum 1:12</h3>
+<div class="outline-text-3" id="text-orga29cf3d">
+<p>
+Hæc dicit Dominus :  Si perfecti fuerint, et ita plures,  sic quoque attondentur, et pertransibit :  afflixi te, et non affligam te ultra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d7c4c9" class="outline-3">
+<h3 id="org6d7c4c9">Nahum 1:13</h3>
+<div class="outline-text-3" id="text-org6d7c4c9">
+<p>
+Et nunc conteram virgam ejus de dorso tuo,  et vincula tua disrumpam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a03dfe" class="outline-3">
+<h3 id="org9a03dfe">Nahum 1:14</h3>
+<div class="outline-text-3" id="text-org9a03dfe">
+<p>
+Et præcipiet super te Dominus ;  non seminabitur ex nomine tuo amplius :  de domo Dei tui interficiam sculptile, et conflatile ;  ponam sepulchrum tuum, quia inhonoratus es. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3906673" class="outline-3">
+<h3 id="org3906673">Nahum 1:15</h3>
+<div class="outline-text-3" id="text-org3906673">
+<p>
+Ecce super montes pedes evangelizantis,  et annuntiantis pacem.  Celebra, Juda, festivitates tuas,  et redde vota tua,  quia non adjiciet ultra ut pertranseat in te Belial :  universus interiit.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org46dd9b6" class="outline-2">
+<h2 id="org46dd9b6">Nahum 2</h2>
+<div class="outline-text-2" id="text-org46dd9b6">
+</div>
+<div id="outline-container-org100ec52" class="outline-3">
+<h3 id="org100ec52">Nahum 2:1</h3>
+<div class="outline-text-3" id="text-org100ec52">
+<p>
+Ascendit qui dispergat coram te,  qui custodiat obsidionem :  contemplare viam, conforta lumbos,  robora virtutem valde. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1100fbb" class="outline-3">
+<h3 id="org1100fbb">Nahum 2:2</h3>
+<div class="outline-text-3" id="text-org1100fbb">
+<p>
+Quia reddidit Dominus superbiam Jacob,  sicut superbiam Israël ;  quia vastatores dissipaverunt eos,  et propagines eorum corruperunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9783afb" class="outline-3">
+<h3 id="org9783afb">Nahum 2:3</h3>
+<div class="outline-text-3" id="text-org9783afb">
+<p>
+Clypeus fortium ejus ignitus,  viri exercitus in coccineis ;  igneæ habenæ currus in die præparationis ejus,  et agitatores consopiti sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67cfc1c" class="outline-3">
+<h3 id="org67cfc1c">Nahum 2:4</h3>
+<div class="outline-text-3" id="text-org67cfc1c">
+<p>
+In itineribus conturbati sunt ;  quadrigæ collisæ sunt in plateis :  aspectus eorum quasi lampades,  quasi fulgura discurrentia. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6946e5c" class="outline-3">
+<h3 id="org6946e5c">Nahum 2:5</h3>
+<div class="outline-text-3" id="text-org6946e5c">
+<p>
+Recordabitur fortium suorum ;  ruent in itineribus suis :  velociter ascendent muros ejus,  et præparabitur umbraculum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1e2551" class="outline-3">
+<h3 id="orga1e2551">Nahum 2:6</h3>
+<div class="outline-text-3" id="text-orga1e2551">
+<p>
+Portæ fluviorum apertæ sunt,  et templum ad solum dirutum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1d556d" class="outline-3">
+<h3 id="orgd1d556d">Nahum 2:7</h3>
+<div class="outline-text-3" id="text-orgd1d556d">
+<p>
+Et miles captivus abductus est,  et ancillæ ejus minabantur gementes ut columbæ,  murmurantes in cordibus suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d1b7c1" class="outline-3">
+<h3 id="org2d1b7c1">Nahum 2:8</h3>
+<div class="outline-text-3" id="text-org2d1b7c1">
+<p>
+Et Ninive quasi piscina aquarum aquæ ejus ;  ipsi vero fugerunt. State, state !  et non est qui revertatur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ad0b1a" class="outline-3">
+<h3 id="org6ad0b1a">Nahum 2:9</h3>
+<div class="outline-text-3" id="text-org6ad0b1a">
+<p>
+Diripite argentum, diripite aurum :  et non est finis divitiarum ex omnibus vasis desiderabilibus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95b952d" class="outline-3">
+<h3 id="org95b952d">Nahum 2:10</h3>
+<div class="outline-text-3" id="text-org95b952d">
+<p>
+Dissipata est, et scissa, et dilacerata ;  et cor tabescens, et dissolutio geniculorum,  et defectio in cunctis renibus,  et facies omnium eorum sicut nigredo ollæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ee1000" class="outline-3">
+<h3 id="org6ee1000">Nahum 2:11</h3>
+<div class="outline-text-3" id="text-org6ee1000">
+<p>
+Ubi est habitaculum leonum,  et pascua catulorum leonum,  ad quam ivit leo ut ingrederetur illuc catulus leonis,  et non est qui exterreat ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1104d4" class="outline-3">
+<h3 id="orga1104d4">Nahum 2:12</h3>
+<div class="outline-text-3" id="text-orga1104d4">
+<p>
+Leo cepit sufficienter catulis suis,  et necavit leænis suis,  et implevit præda speluncas suas,  et cubile suum rapina. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org902c7ea" class="outline-3">
+<h3 id="org902c7ea">Nahum 2:13</h3>
+<div class="outline-text-3" id="text-org902c7ea">
+<p>
+Ecce ego ad te, dicit Dominus exercituum,  et succendam usque ad fumum quadrigas tuas,  et leunculos tuos comedet gladius,  et exterminabo de terra prædam tuam,  et non audietur ultra vox nuntiorum tuorum.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org49c782d" class="outline-2">
+<h2 id="org49c782d">Nahum 3</h2>
+<div class="outline-text-2" id="text-org49c782d">
+</div>
+<div id="outline-container-org4c9c398" class="outline-3">
+<h3 id="org4c9c398">Nahum 3:1</h3>
+<div class="outline-text-3" id="text-org4c9c398">
+<p>
+Væ civitas sanguinum,  universa mendacii dilaceratione plena !  non recedet a te rapina. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bfa4f1" class="outline-3">
+<h3 id="org9bfa4f1">Nahum 3:2</h3>
+<div class="outline-text-3" id="text-org9bfa4f1">
+<p>
+Vox flagelli, et vox impetus rotæ, et equi frementis,  et quadrigæ ferventis, et equitis ascendentis, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87113c9" class="outline-3">
+<h3 id="org87113c9">Nahum 3:3</h3>
+<div class="outline-text-3" id="text-org87113c9">
+<p>
+et micantis gladii, et fulgurantis hastæ,  et multitudinis interfectæ, et gravis ruinæ ;  nec est finis cadaverum,  et corruent in corporibus suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga11f997" class="outline-3">
+<h3 id="orga11f997">Nahum 3:4</h3>
+<div class="outline-text-3" id="text-orga11f997">
+<p>
+Propter multitudinem fornicationum meretricis  speciosæ, et gratæ, et habentis maleficia,  quæ vendidit gentes in fornicationibus suis,  et familias in maleficiis suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0682a04" class="outline-3">
+<h3 id="org0682a04">Nahum 3:5</h3>
+<div class="outline-text-3" id="text-org0682a04">
+<p>
+Ecce ego ad te, dicit Dominus exercituum,  et revelabo pudenda tua in facie tua ;  et ostendam gentibus nuditatem tuam,  et regnis ignominiam tuam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4fb259" class="outline-3">
+<h3 id="orgc4fb259">Nahum 3:6</h3>
+<div class="outline-text-3" id="text-orgc4fb259">
+<p>
+Et projiciam super te abominationes,  et contumeliis te afficiam,  et ponam te in exemplum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org448e459" class="outline-3">
+<h3 id="org448e459">Nahum 3:7</h3>
+<div class="outline-text-3" id="text-org448e459">
+<p>
+Et erit : omnis qui viderit te resiliet a te,  et dicet : Vastata est Ninive.  Quis commovebit super te caput ?  unde quæram consolatorem tibi ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0694a3e" class="outline-3">
+<h3 id="org0694a3e">Nahum 3:8</h3>
+<div class="outline-text-3" id="text-org0694a3e">
+<p>
+Numquid melior es Alexandria populorum,  quæ habitat in fluminibus ?  aquæ in circuitu ejus ;  cujus divitiæ, mare ;  aquæ, muri ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45b86ff" class="outline-3">
+<h3 id="org45b86ff">Nahum 3:9</h3>
+<div class="outline-text-3" id="text-org45b86ff">
+<p>
+Æthiopia fortitudo ejus, et Ægyptus, et non est finis ;  Africa et Libyes fuerunt in auxilio tuo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f5e222" class="outline-3">
+<h3 id="org0f5e222">Nahum 3:10</h3>
+<div class="outline-text-3" id="text-org0f5e222">
+<p>
+Sed et ipsa in transmigrationem ducta est in captivitatem :  parvuli ejus elisi sunt in capite omnium viarum,  et super inclytos ejus miserunt sortem,  et omnes optimates ejus confixi sunt in compedibus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga378e3a" class="outline-3">
+<h3 id="orga378e3a">Nahum 3:11</h3>
+<div class="outline-text-3" id="text-orga378e3a">
+<p>
+Et tu ergo inebriaberis, et eris despecta :  et tu quæres auxilium ab inimico. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org41dbbad" class="outline-3">
+<h3 id="org41dbbad">Nahum 3:12</h3>
+<div class="outline-text-3" id="text-org41dbbad">
+<p>
+Omnes munitiones tuæ sicut ficus cum grossis suis :  si concussæ fuerint, cadent in os comedentis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb835742" class="outline-3">
+<h3 id="orgb835742">Nahum 3:13</h3>
+<div class="outline-text-3" id="text-orgb835742">
+<p>
+Ecce populus tuus mulieres in medio tui :  inimicis tuis adapertione pandentur portæ terræ tuæ,  devorabit ignis vectes tuos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c26a52" class="outline-3">
+<h3 id="org0c26a52">Nahum 3:14</h3>
+<div class="outline-text-3" id="text-org0c26a52">
+<p>
+Aquam propter obsidionem hauri tibi :  exstrue munitiones tuas,  intra in lutum, et calca,  subigens tene laterem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9454bfb" class="outline-3">
+<h3 id="org9454bfb">Nahum 3:15</h3>
+<div class="outline-text-3" id="text-org9454bfb">
+<p>
+Ibi comedet te ignis,  peribis gladio, devorabit te ut bruchus :  congregare ut bruchus,  multiplicare ut locusta. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82d1ee7" class="outline-3">
+<h3 id="org82d1ee7">Nahum 3:16</h3>
+<div class="outline-text-3" id="text-org82d1ee7">
+<p>
+Plures fecisti negotiationes tuas quam stellæ sint cæli ;  bruchus expansus est, et avolavit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5da7011" class="outline-3">
+<h3 id="org5da7011">Nahum 3:17</h3>
+<div class="outline-text-3" id="text-org5da7011">
+<p>
+Custodes tui quasi locustæ,  et parvuli tui quasi locustæ locustarum,  quæ considunt in sepibus in die frigoris :  sol ortus est, et avolaverunt,  et non est cognitus locus earum ubi fuerint. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org555e06e" class="outline-3">
+<h3 id="org555e06e">Nahum 3:18</h3>
+<div class="outline-text-3" id="text-org555e06e">
+<p>
+Dormitaverunt pastores tui, rex Assur,  sepelientur principes tui :  latitavit populus tuus in montibus,  et non est qui congreget. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga38df15" class="outline-3">
+<h3 id="orga38df15">Nahum 3:19</h3>
+<div class="outline-text-3" id="text-orga38df15">
+<p>
+Non est obscura contritio tua ;  pessima est plaga tua.  Omnes qui audierunt auditionem tuam compresserunt manum super te :  quia super quem non transiit malitia tua semper ?    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

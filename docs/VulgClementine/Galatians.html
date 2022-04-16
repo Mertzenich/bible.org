@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8a88cac">Galatians 1</a>
+<ul>
+<li><a href="#org28655c4">Galatians 1:1</a></li>
+<li><a href="#org77c7e1d">Galatians 1:2</a></li>
+<li><a href="#orgf8605f7">Galatians 1:3</a></li>
+<li><a href="#org42ea8bf">Galatians 1:4</a></li>
+<li><a href="#orgd0f091d">Galatians 1:5</a></li>
+<li><a href="#org25ab109">Galatians 1:6</a></li>
+<li><a href="#org48a09d4">Galatians 1:7</a></li>
+<li><a href="#org6191f67">Galatians 1:8</a></li>
+<li><a href="#orgc85f2f3">Galatians 1:9</a></li>
+<li><a href="#orgabc27b5">Galatians 1:10</a></li>
+<li><a href="#org22bb97a">Galatians 1:11</a></li>
+<li><a href="#orgbd4f4a9">Galatians 1:12</a></li>
+<li><a href="#orge32a60a">Galatians 1:13</a></li>
+<li><a href="#org4db3bb1">Galatians 1:14</a></li>
+<li><a href="#orgf74a783">Galatians 1:15</a></li>
+<li><a href="#org32dc067">Galatians 1:16</a></li>
+<li><a href="#orgde79ad1">Galatians 1:17</a></li>
+<li><a href="#org5fa7d84">Galatians 1:18</a></li>
+<li><a href="#org219a555">Galatians 1:19</a></li>
+<li><a href="#org9d12b95">Galatians 1:20</a></li>
+<li><a href="#orgbe69af1">Galatians 1:21</a></li>
+<li><a href="#org764e637">Galatians 1:22</a></li>
+<li><a href="#org1d79dec">Galatians 1:23</a></li>
+<li><a href="#org0de62d4">Galatians 1:24</a></li>
+</ul>
+</li>
+<li><a href="#org64b110d">Galatians 2</a>
+<ul>
+<li><a href="#org308c279">Galatians 2:1</a></li>
+<li><a href="#org1f724d8">Galatians 2:2</a></li>
+<li><a href="#org7bc3fbb">Galatians 2:3</a></li>
+<li><a href="#org05416d1">Galatians 2:4</a></li>
+<li><a href="#org54606a1">Galatians 2:5</a></li>
+<li><a href="#orgb93edab">Galatians 2:6</a></li>
+<li><a href="#orgd8baf0e">Galatians 2:7</a></li>
+<li><a href="#org341a871">Galatians 2:8</a></li>
+<li><a href="#org6ea2df2">Galatians 2:9</a></li>
+<li><a href="#org50b54bb">Galatians 2:10</a></li>
+<li><a href="#org64dda4c">Galatians 2:11</a></li>
+<li><a href="#orgf1ebf87">Galatians 2:12</a></li>
+<li><a href="#orgdc6aae6">Galatians 2:13</a></li>
+<li><a href="#orge3c7578">Galatians 2:14</a></li>
+<li><a href="#org82a66c4">Galatians 2:15</a></li>
+<li><a href="#org2a638d7">Galatians 2:16</a></li>
+<li><a href="#org969628a">Galatians 2:17</a></li>
+<li><a href="#org340ca14">Galatians 2:18</a></li>
+<li><a href="#orgf75d6ea">Galatians 2:19</a></li>
+<li><a href="#org40d5c42">Galatians 2:20</a></li>
+<li><a href="#orge757c37">Galatians 2:21</a></li>
+</ul>
+</li>
+<li><a href="#org3cdc604">Galatians 3</a>
+<ul>
+<li><a href="#org2b2603d">Galatians 3:1</a></li>
+<li><a href="#org5dc0461">Galatians 3:2</a></li>
+<li><a href="#org6419d49">Galatians 3:3</a></li>
+<li><a href="#orgc3fc74c">Galatians 3:4</a></li>
+<li><a href="#orgfcc1fef">Galatians 3:5</a></li>
+<li><a href="#orgab49eb3">Galatians 3:6</a></li>
+<li><a href="#org3d075b5">Galatians 3:7</a></li>
+<li><a href="#orge9b66b6">Galatians 3:8</a></li>
+<li><a href="#orge07dcf6">Galatians 3:9</a></li>
+<li><a href="#orgf852a14">Galatians 3:10</a></li>
+<li><a href="#org480e67c">Galatians 3:11</a></li>
+<li><a href="#org6d8a128">Galatians 3:12</a></li>
+<li><a href="#orgf50a4ed">Galatians 3:13</a></li>
+<li><a href="#orgc794ee1">Galatians 3:14</a></li>
+<li><a href="#orgcd19203">Galatians 3:15</a></li>
+<li><a href="#orge6cab68">Galatians 3:16</a></li>
+<li><a href="#org9a4c569">Galatians 3:17</a></li>
+<li><a href="#org44afe3c">Galatians 3:18</a></li>
+<li><a href="#org6bd5f10">Galatians 3:19</a></li>
+<li><a href="#org9616456">Galatians 3:20</a></li>
+<li><a href="#org753ed37">Galatians 3:21</a></li>
+<li><a href="#org4e963f4">Galatians 3:22</a></li>
+<li><a href="#org16eb4a0">Galatians 3:23</a></li>
+<li><a href="#org488adc8">Galatians 3:24</a></li>
+<li><a href="#org56797b8">Galatians 3:25</a></li>
+<li><a href="#org6cf8337">Galatians 3:26</a></li>
+<li><a href="#orgdc733f7">Galatians 3:27</a></li>
+<li><a href="#orgbb3e1a9">Galatians 3:28</a></li>
+<li><a href="#orgaebb50f">Galatians 3:29</a></li>
+</ul>
+</li>
+<li><a href="#org11f54b6">Galatians 4</a>
+<ul>
+<li><a href="#org50bdd54">Galatians 4:1</a></li>
+<li><a href="#org1f52927">Galatians 4:2</a></li>
+<li><a href="#org6ce10d2">Galatians 4:3</a></li>
+<li><a href="#org29774ca">Galatians 4:4</a></li>
+<li><a href="#org7b3b2ac">Galatians 4:5</a></li>
+<li><a href="#org6a5b954">Galatians 4:6</a></li>
+<li><a href="#orgb6d2226">Galatians 4:7</a></li>
+<li><a href="#orgcf968f6">Galatians 4:8</a></li>
+<li><a href="#org22ca7f4">Galatians 4:9</a></li>
+<li><a href="#orga373db8">Galatians 4:10</a></li>
+<li><a href="#org16d5df8">Galatians 4:11</a></li>
+<li><a href="#org3eb6e08">Galatians 4:12</a></li>
+<li><a href="#orgcfff6d6">Galatians 4:13</a></li>
+<li><a href="#org5e99c95">Galatians 4:14</a></li>
+<li><a href="#org9ee2669">Galatians 4:15</a></li>
+<li><a href="#orgc015ec8">Galatians 4:16</a></li>
+<li><a href="#org8229e26">Galatians 4:17</a></li>
+<li><a href="#orgafe98da">Galatians 4:18</a></li>
+<li><a href="#org2753aff">Galatians 4:19</a></li>
+<li><a href="#org9f6c8bd">Galatians 4:20</a></li>
+<li><a href="#orge8c7d0c">Galatians 4:21</a></li>
+<li><a href="#orga44d1ab">Galatians 4:22</a></li>
+<li><a href="#org840d9d3">Galatians 4:23</a></li>
+<li><a href="#org937e4b0">Galatians 4:24</a></li>
+<li><a href="#org13da545">Galatians 4:25</a></li>
+<li><a href="#org8a989f7">Galatians 4:26</a></li>
+<li><a href="#orgb9497d3">Galatians 4:27</a></li>
+<li><a href="#org680dd5f">Galatians 4:28</a></li>
+<li><a href="#org2c6fc38">Galatians 4:29</a></li>
+<li><a href="#org82acc1b">Galatians 4:30</a></li>
+<li><a href="#org62ca0e5">Galatians 4:31</a></li>
+</ul>
+</li>
+<li><a href="#org8d62fde">Galatians 5</a>
+<ul>
+<li><a href="#org2c7c6ac">Galatians 5:1</a></li>
+<li><a href="#org4658c28">Galatians 5:2</a></li>
+<li><a href="#org4f0a831">Galatians 5:3</a></li>
+<li><a href="#orga798202">Galatians 5:4</a></li>
+<li><a href="#orgc3da454">Galatians 5:5</a></li>
+<li><a href="#org8b4d4a8">Galatians 5:6</a></li>
+<li><a href="#orgfe9bfad">Galatians 5:7</a></li>
+<li><a href="#orgf43ce06">Galatians 5:8</a></li>
+<li><a href="#org0f833ce">Galatians 5:9</a></li>
+<li><a href="#org0f98ce9">Galatians 5:10</a></li>
+<li><a href="#org5fbe2a3">Galatians 5:11</a></li>
+<li><a href="#org1c9637e">Galatians 5:12</a></li>
+<li><a href="#org814ca95">Galatians 5:13</a></li>
+<li><a href="#org867c877">Galatians 5:14</a></li>
+<li><a href="#orgc86a8f0">Galatians 5:15</a></li>
+<li><a href="#orgc13f90c">Galatians 5:16</a></li>
+<li><a href="#org009bbe0">Galatians 5:17</a></li>
+<li><a href="#org37b3c90">Galatians 5:18</a></li>
+<li><a href="#org57ddff9">Galatians 5:19</a></li>
+<li><a href="#orge2a6dc9">Galatians 5:20</a></li>
+<li><a href="#org08cc232">Galatians 5:21</a></li>
+<li><a href="#org4664ab0">Galatians 5:22</a></li>
+<li><a href="#orga76abc9">Galatians 5:23</a></li>
+<li><a href="#orgd4fb855">Galatians 5:24</a></li>
+<li><a href="#org142c9eb">Galatians 5:25</a></li>
+<li><a href="#org5663b33">Galatians 5:26</a></li>
+</ul>
+</li>
+<li><a href="#org0b60a17">Galatians 6</a>
+<ul>
+<li><a href="#org7712096">Galatians 6:1</a></li>
+<li><a href="#org6d09860">Galatians 6:2</a></li>
+<li><a href="#org6d30e16">Galatians 6:3</a></li>
+<li><a href="#orgefe4461">Galatians 6:4</a></li>
+<li><a href="#org08e16a5">Galatians 6:5</a></li>
+<li><a href="#org9867016">Galatians 6:6</a></li>
+<li><a href="#org26db391">Galatians 6:7</a></li>
+<li><a href="#org4f1b19d">Galatians 6:8</a></li>
+<li><a href="#org12080eb">Galatians 6:9</a></li>
+<li><a href="#orge93c388">Galatians 6:10</a></li>
+<li><a href="#org60160c7">Galatians 6:11</a></li>
+<li><a href="#orgb1244cf">Galatians 6:12</a></li>
+<li><a href="#org7068fb3">Galatians 6:13</a></li>
+<li><a href="#org8fa7c75">Galatians 6:14</a></li>
+<li><a href="#org1443bfb">Galatians 6:15</a></li>
+<li><a href="#orgb975383">Galatians 6:16</a></li>
+<li><a href="#org0c3a4b5">Galatians 6:17</a></li>
+<li><a href="#org2c020a1">Galatians 6:18</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8a88cac" class="outline-2">
+<h2 id="org8a88cac">Galatians 1</h2>
+<div class="outline-text-2" id="text-org8a88cac">
+</div>
+<div id="outline-container-org28655c4" class="outline-3">
+<h3 id="org28655c4">Galatians 1:1</h3>
+<div class="outline-text-3" id="text-org28655c4">
+<p>
+Paulus, Apostolus non ab hominibus, neque per hominem, sed per Jesum Christum, et Deum Patrem, qui suscitavit eum a mortuis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77c7e1d" class="outline-3">
+<h3 id="org77c7e1d">Galatians 1:2</h3>
+<div class="outline-text-3" id="text-org77c7e1d">
+<p>
+et qui mecum sunt omnes fratres, ecclesiis Galatiæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8605f7" class="outline-3">
+<h3 id="orgf8605f7">Galatians 1:3</h3>
+<div class="outline-text-3" id="text-orgf8605f7">
+<p>
+Gratia vobis, et pax a Deo Patre, et Domino nostro Jesu Christo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42ea8bf" class="outline-3">
+<h3 id="org42ea8bf">Galatians 1:4</h3>
+<div class="outline-text-3" id="text-org42ea8bf">
+<p>
+qui dedit semetipsum pro peccatis nostris, ut eriperet nos de præsenti sæculo nequam, secundum voluntatem Dei et Patris nostri,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0f091d" class="outline-3">
+<h3 id="orgd0f091d">Galatians 1:5</h3>
+<div class="outline-text-3" id="text-orgd0f091d">
+<p>
+cui est gloria in sæcula sæculorum. Amen.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25ab109" class="outline-3">
+<h3 id="org25ab109">Galatians 1:6</h3>
+<div class="outline-text-3" id="text-org25ab109">
+<p>
+Miror quod sic tam cito transferimini ab eo qui vos vocavit in gratiam Christi in aliud Evangelium :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48a09d4" class="outline-3">
+<h3 id="org48a09d4">Galatians 1:7</h3>
+<div class="outline-text-3" id="text-org48a09d4">
+<p>
+quod non est aliud, nisi sunt aliqui qui vos conturbant, et volunt convertere Evangelium Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6191f67" class="outline-3">
+<h3 id="org6191f67">Galatians 1:8</h3>
+<div class="outline-text-3" id="text-org6191f67">
+<p>
+Sed licet nos aut angelus de cælo evangelizet vobis præterquam quod evangelizavimus vobis, anathema sit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc85f2f3" class="outline-3">
+<h3 id="orgc85f2f3">Galatians 1:9</h3>
+<div class="outline-text-3" id="text-orgc85f2f3">
+<p>
+Sicut prædiximus, et nunc iterum dico : si quis vobis evangelizaverit præter id quod accepistis, anathema sit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabc27b5" class="outline-3">
+<h3 id="orgabc27b5">Galatians 1:10</h3>
+<div class="outline-text-3" id="text-orgabc27b5">
+<p>
+Modo enim hominibus suadeo, an Deo ? an quæro hominibus placere ? si adhuc hominibus placerem, Christi servus non essem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22bb97a" class="outline-3">
+<h3 id="org22bb97a">Galatians 1:11</h3>
+<div class="outline-text-3" id="text-org22bb97a">
+<p>
+Notum enim vobis facio, fratres, Evangelium, quod evangelizatum est a me, quia non est secundum hominem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd4f4a9" class="outline-3">
+<h3 id="orgbd4f4a9">Galatians 1:12</h3>
+<div class="outline-text-3" id="text-orgbd4f4a9">
+<p>
+neque enim ego ab homine accepi illud, neque didici, sed per revelationem Jesu Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge32a60a" class="outline-3">
+<h3 id="orge32a60a">Galatians 1:13</h3>
+<div class="outline-text-3" id="text-orge32a60a">
+<p>
+Audistis enim conversationem meam aliquando in Judaismo : quoniam supra modum persequebar Ecclesiam Dei, et expugnabam illam,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4db3bb1" class="outline-3">
+<h3 id="org4db3bb1">Galatians 1:14</h3>
+<div class="outline-text-3" id="text-org4db3bb1">
+<p>
+et proficiebam in Judaismo supra multos coætaneos meos in genere meo, abundantius æmulator existens paternarum mearum traditionum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf74a783" class="outline-3">
+<h3 id="orgf74a783">Galatians 1:15</h3>
+<div class="outline-text-3" id="text-orgf74a783">
+<p>
+Cum autem placuit ei, qui me segregavit ex utero matris meæ, et vocavit per gratiam suam,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32dc067" class="outline-3">
+<h3 id="org32dc067">Galatians 1:16</h3>
+<div class="outline-text-3" id="text-org32dc067">
+<p>
+ut revelaret Filium suum in me, ut evangelizarem illum in gentibus : continuo non acquievi carni et sanguini,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde79ad1" class="outline-3">
+<h3 id="orgde79ad1">Galatians 1:17</h3>
+<div class="outline-text-3" id="text-orgde79ad1">
+<p>
+neque veni Jerosolymam ad antecessores meos Apostolos : sed abii in Arabiam, et iterum reversus sum Damascum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5fa7d84" class="outline-3">
+<h3 id="org5fa7d84">Galatians 1:18</h3>
+<div class="outline-text-3" id="text-org5fa7d84">
+<p>
+deinde post annos tres veni Jerosolymam videre Petrum, et mansi apud eum diebus quindecim :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org219a555" class="outline-3">
+<h3 id="org219a555">Galatians 1:19</h3>
+<div class="outline-text-3" id="text-org219a555">
+<p>
+alium autem Apostolorum vidi neminem, nisi Jacobum fratrem Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d12b95" class="outline-3">
+<h3 id="org9d12b95">Galatians 1:20</h3>
+<div class="outline-text-3" id="text-org9d12b95">
+<p>
+Quæ autem scribo vobis, ecce coram Deo, quia non mentior.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe69af1" class="outline-3">
+<h3 id="orgbe69af1">Galatians 1:21</h3>
+<div class="outline-text-3" id="text-orgbe69af1">
+<p>
+Deinde veni in partes Syriæ, et Ciliciæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org764e637" class="outline-3">
+<h3 id="org764e637">Galatians 1:22</h3>
+<div class="outline-text-3" id="text-org764e637">
+<p>
+Eram autem ignotus facie ecclesiis Judææ, quæ erant in Christo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d79dec" class="outline-3">
+<h3 id="org1d79dec">Galatians 1:23</h3>
+<div class="outline-text-3" id="text-org1d79dec">
+<p>
+tantum autem auditum habebant quoniam qui persequebatur nos aliquando, nunc evangelizat fidem, quam aliquando expugnabat :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0de62d4" class="outline-3">
+<h3 id="org0de62d4">Galatians 1:24</h3>
+<div class="outline-text-3" id="text-org0de62d4">
+<p>
+et in me clarificabant Deum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org64b110d" class="outline-2">
+<h2 id="org64b110d">Galatians 2</h2>
+<div class="outline-text-2" id="text-org64b110d">
+</div>
+<div id="outline-container-org308c279" class="outline-3">
+<h3 id="org308c279">Galatians 2:1</h3>
+<div class="outline-text-3" id="text-org308c279">
+<p>
+Deinde post annos quatuordecim, iterum ascendi Jerosolymam cum Barnaba, assumpto et Tito.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f724d8" class="outline-3">
+<h3 id="org1f724d8">Galatians 2:2</h3>
+<div class="outline-text-3" id="text-org1f724d8">
+<p>
+Ascendi autem secundum revelationem : et contuli cum illis Evangelium, quod prædico in gentibus, seorsum autem iis qui videbantur aliquid esse : ne forte in vacuum currerem, aut cucurrissem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7bc3fbb" class="outline-3">
+<h3 id="org7bc3fbb">Galatians 2:3</h3>
+<div class="outline-text-3" id="text-org7bc3fbb">
+<p>
+Sed neque Titus, qui mecum erat, cum esset gentilis, compulsus est circumcidi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05416d1" class="outline-3">
+<h3 id="org05416d1">Galatians 2:4</h3>
+<div class="outline-text-3" id="text-org05416d1">
+<p>
+sed propter subintroductos falsos fratres, qui subintroierunt explorare libertatem nostram, quam habemus in Christo Jesu, ut nos in servitutem redigerent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54606a1" class="outline-3">
+<h3 id="org54606a1">Galatians 2:5</h3>
+<div class="outline-text-3" id="text-org54606a1">
+<p>
+Quibus neque ad horam cessimus subjectione, ut veritas Evangelii permaneat apud vos :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb93edab" class="outline-3">
+<h3 id="orgb93edab">Galatians 2:6</h3>
+<div class="outline-text-3" id="text-orgb93edab">
+<p>
+ab iis autem, qui videbantur esse aliquid (quales aliquando fuerint, nihil mea interest : Deus personam hominis non accipit) : mihi enim qui videbantur esse aliquid, nihil contulerunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8baf0e" class="outline-3">
+<h3 id="orgd8baf0e">Galatians 2:7</h3>
+<div class="outline-text-3" id="text-orgd8baf0e">
+<p>
+Sed e contra cum vidissent quod creditum est mihi Evangelium præputii, sicut et Petro circumcisionis
+</p>
+</div>
+</div>
+
+<div id="outline-container-org341a871" class="outline-3">
+<h3 id="org341a871">Galatians 2:8</h3>
+<div class="outline-text-3" id="text-org341a871">
+<p>
+(qui enim operatus est Petro in apostolatum circumcisionis, operatus est et mihi inter gentes) :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ea2df2" class="outline-3">
+<h3 id="org6ea2df2">Galatians 2:9</h3>
+<div class="outline-text-3" id="text-org6ea2df2">
+<p>
+et cum cognovissent gratiam, quæ data est mihi, Jacobus, et Cephas, et Joannes, qui videbantur columnæ esse, dextras dederunt mihi, et Barnabæ societatis : ut nos in gentes, ipsi autem in circumcisionem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50b54bb" class="outline-3">
+<h3 id="org50b54bb">Galatians 2:10</h3>
+<div class="outline-text-3" id="text-org50b54bb">
+<p>
+tantum ut pauperum memores essemus, quod etiam sollicitus fui hoc ipsum facere.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64dda4c" class="outline-3">
+<h3 id="org64dda4c">Galatians 2:11</h3>
+<div class="outline-text-3" id="text-org64dda4c">
+<p>
+Cum autem venisset Cephas Antiochiam, in faciem ei restiti, quia reprehensibilis erat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1ebf87" class="outline-3">
+<h3 id="orgf1ebf87">Galatians 2:12</h3>
+<div class="outline-text-3" id="text-orgf1ebf87">
+<p>
+Prius enim quam venirent quidam a Jacobo, cum gentibus edebat : cum autem venissent, subtrahebat, et segregabat se, timens eos qui ex circumcisione erant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc6aae6" class="outline-3">
+<h3 id="orgdc6aae6">Galatians 2:13</h3>
+<div class="outline-text-3" id="text-orgdc6aae6">
+<p>
+Et simulationi ejus consenserunt ceteri Judæi, ita ut et Barnabas duceretur ab eis in illam simulationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3c7578" class="outline-3">
+<h3 id="orge3c7578">Galatians 2:14</h3>
+<div class="outline-text-3" id="text-orge3c7578">
+<p>
+Sed cum vidissem quod non recte ambularent ad veritatem Evangelii, dixi Cephæ coram omnibus : Si tu, cum Judæus sis, gentiliter vivis, et non judaice : quomodo gentes cogis judaizare ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82a66c4" class="outline-3">
+<h3 id="org82a66c4">Galatians 2:15</h3>
+<div class="outline-text-3" id="text-org82a66c4">
+<p>
+Nos natura Judæi, et non ex gentibus peccatores.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a638d7" class="outline-3">
+<h3 id="org2a638d7">Galatians 2:16</h3>
+<div class="outline-text-3" id="text-org2a638d7">
+<p>
+Scientes autem quod non justificatur homo ex operibus legis, nisi per fidem Jesu Christi : et nos in Christo Jesu credimus, ut justificemur ex fide Christi, et non ex operibus legis : propter quod ex operibus legis non justificabitur omnis caro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org969628a" class="outline-3">
+<h3 id="org969628a">Galatians 2:17</h3>
+<div class="outline-text-3" id="text-org969628a">
+<p>
+Quod si quærentes justificari in Christo, inventi sumus et ipsi peccatores, numquid Christus peccati minister est ? Absit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org340ca14" class="outline-3">
+<h3 id="org340ca14">Galatians 2:18</h3>
+<div class="outline-text-3" id="text-org340ca14">
+<p>
+Si enim quæ destruxi, iterum hæc ædifico : prævaricatorem me constituo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf75d6ea" class="outline-3">
+<h3 id="orgf75d6ea">Galatians 2:19</h3>
+<div class="outline-text-3" id="text-orgf75d6ea">
+<p>
+Ego enim per legem, legi mortuus sum, ut Deo vivam : Christo confixus sum cruci.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40d5c42" class="outline-3">
+<h3 id="org40d5c42">Galatians 2:20</h3>
+<div class="outline-text-3" id="text-org40d5c42">
+<p>
+Vivo autem, jam non ego : vivit vero in me Christus. Quod autem nunc vivo in carne : in fide vivo Filii Dei, qui dilexit me, et tradidit semetipsum pro me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge757c37" class="outline-3">
+<h3 id="orge757c37">Galatians 2:21</h3>
+<div class="outline-text-3" id="text-orge757c37">
+<p>
+Non abjicio gratiam Dei. Si enim per legem justitia, ergo gratis Christus mortuus est.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3cdc604" class="outline-2">
+<h2 id="org3cdc604">Galatians 3</h2>
+<div class="outline-text-2" id="text-org3cdc604">
+</div>
+<div id="outline-container-org2b2603d" class="outline-3">
+<h3 id="org2b2603d">Galatians 3:1</h3>
+<div class="outline-text-3" id="text-org2b2603d">
+<p>
+O insensati Galatæ, quis vos fascinavit non obedire veritati, ante quorum oculos Jesus Christus præscriptus est, in vobis crucifixus ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5dc0461" class="outline-3">
+<h3 id="org5dc0461">Galatians 3:2</h3>
+<div class="outline-text-3" id="text-org5dc0461">
+<p>
+Hoc solum a vobis volo discere : ex operibus legis Spiritum accepistis, an ex auditu fidei ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6419d49" class="outline-3">
+<h3 id="org6419d49">Galatians 3:3</h3>
+<div class="outline-text-3" id="text-org6419d49">
+<p>
+sic stulti estis, ut cum Spiritu cœperitis, nunc carne consummemini ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3fc74c" class="outline-3">
+<h3 id="orgc3fc74c">Galatians 3:4</h3>
+<div class="outline-text-3" id="text-orgc3fc74c">
+<p>
+tanta passi estis sine causa ? si tamen sine causa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcc1fef" class="outline-3">
+<h3 id="orgfcc1fef">Galatians 3:5</h3>
+<div class="outline-text-3" id="text-orgfcc1fef">
+<p>
+Qui ergo tribuit vobis Spiritum, et operatur virtutes in vobis : ex operibus legis, an ex auditu fidei ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab49eb3" class="outline-3">
+<h3 id="orgab49eb3">Galatians 3:6</h3>
+<div class="outline-text-3" id="text-orgab49eb3">
+<p>
+Sicut scriptum est : Abraham credidit Deo, et reputatum est illi ad justitiam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d075b5" class="outline-3">
+<h3 id="org3d075b5">Galatians 3:7</h3>
+<div class="outline-text-3" id="text-org3d075b5">
+<p>
+cognoscite ergo quia qui ex fide sunt, ii sunt filii Abrahæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9b66b6" class="outline-3">
+<h3 id="orge9b66b6">Galatians 3:8</h3>
+<div class="outline-text-3" id="text-orge9b66b6">
+<p>
+Providens autem Scriptura quia ex fide justificat gentes Deus, prænuntiavit Abrahæ : Quia benedicentur in te omnes gentes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge07dcf6" class="outline-3">
+<h3 id="orge07dcf6">Galatians 3:9</h3>
+<div class="outline-text-3" id="text-orge07dcf6">
+<p>
+Igitur qui ex fide sunt, benedicentur cum fideli Abraham.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf852a14" class="outline-3">
+<h3 id="orgf852a14">Galatians 3:10</h3>
+<div class="outline-text-3" id="text-orgf852a14">
+<p>
+Quicumque enim ex operibus legis sunt, sub maledicto sunt. Scriptum est enim : Maledictus omnis qui non permanserit in omnibus quæ scripta sunt in libro legis ut faciat ea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org480e67c" class="outline-3">
+<h3 id="org480e67c">Galatians 3:11</h3>
+<div class="outline-text-3" id="text-org480e67c">
+<p>
+Quoniam autem in lege nemo justificatur apud Deum, manifestum est : quia justus ex fide vivit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d8a128" class="outline-3">
+<h3 id="org6d8a128">Galatians 3:12</h3>
+<div class="outline-text-3" id="text-org6d8a128">
+<p>
+Lex autem non est ex fide, sed : Qui fecerit ea, vivet in illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf50a4ed" class="outline-3">
+<h3 id="orgf50a4ed">Galatians 3:13</h3>
+<div class="outline-text-3" id="text-orgf50a4ed">
+<p>
+Christus nos redemit de maledicto legis, factus pro nobis maledictum : quia scriptum est : Maledictus omnis qui pendet in ligno :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc794ee1" class="outline-3">
+<h3 id="orgc794ee1">Galatians 3:14</h3>
+<div class="outline-text-3" id="text-orgc794ee1">
+<p>
+ut in gentibus benedictio Abrahæ fieret in Christo Jesu, ut pollicitationem Spiritus accipiamus per fidem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd19203" class="outline-3">
+<h3 id="orgcd19203">Galatians 3:15</h3>
+<div class="outline-text-3" id="text-orgcd19203">
+<p>
+Fratres (secundum hominem dico) tamen hominis confirmatum testamentum nemo spernit, aut superordinat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6cab68" class="outline-3">
+<h3 id="orge6cab68">Galatians 3:16</h3>
+<div class="outline-text-3" id="text-orge6cab68">
+<p>
+Abrahæ dictæ sunt promissiones, et semini ejus. Non dicit : Et seminibus, quasi in multis : sed quasi in uno : Et semini tuo, qui est Christus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a4c569" class="outline-3">
+<h3 id="org9a4c569">Galatians 3:17</h3>
+<div class="outline-text-3" id="text-org9a4c569">
+<p>
+Hoc autem dico, testamentum confirmatum a Deo : quæ post quadringentos et triginta annos facta est lex, non irritum facit ad evacuandam promissionem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44afe3c" class="outline-3">
+<h3 id="org44afe3c">Galatians 3:18</h3>
+<div class="outline-text-3" id="text-org44afe3c">
+<p>
+Nam si ex lege hæreditas, jam non ex promissione. Abrahæ autem per repromissionem donavit Deus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bd5f10" class="outline-3">
+<h3 id="org6bd5f10">Galatians 3:19</h3>
+<div class="outline-text-3" id="text-org6bd5f10">
+<p>
+Quid igitur lex ? Propter transgressiones posita est donec veniret semen, cui promiserat, ordinata per angelos in manu mediatoris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9616456" class="outline-3">
+<h3 id="org9616456">Galatians 3:20</h3>
+<div class="outline-text-3" id="text-org9616456">
+<p>
+Mediator autem unius non est : Deus autem unus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org753ed37" class="outline-3">
+<h3 id="org753ed37">Galatians 3:21</h3>
+<div class="outline-text-3" id="text-org753ed37">
+<p>
+Lex ergo adversus promissa Dei ? Absit. Si enim data esset lex, quæ posset vivificare, vere ex lege esset justitia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e963f4" class="outline-3">
+<h3 id="org4e963f4">Galatians 3:22</h3>
+<div class="outline-text-3" id="text-org4e963f4">
+<p>
+Sed conclusit Scriptura omnia sub peccato, ut promissio ex fide Jesu Christi daretur credentibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16eb4a0" class="outline-3">
+<h3 id="org16eb4a0">Galatians 3:23</h3>
+<div class="outline-text-3" id="text-org16eb4a0">
+<p>
+Prius autem quam veniret fides, sub lege custodiebamur conclusi in eam fidem quæ revelanda erat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org488adc8" class="outline-3">
+<h3 id="org488adc8">Galatians 3:24</h3>
+<div class="outline-text-3" id="text-org488adc8">
+<p>
+Itaque lex pædagogus noster fuit in Christo, ut ex fide justificemur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56797b8" class="outline-3">
+<h3 id="org56797b8">Galatians 3:25</h3>
+<div class="outline-text-3" id="text-org56797b8">
+<p>
+At ubi venit fides, jam non sumus sub pædagogo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6cf8337" class="outline-3">
+<h3 id="org6cf8337">Galatians 3:26</h3>
+<div class="outline-text-3" id="text-org6cf8337">
+<p>
+Omnes enim filii Dei estis per fidem, quæ est in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc733f7" class="outline-3">
+<h3 id="orgdc733f7">Galatians 3:27</h3>
+<div class="outline-text-3" id="text-orgdc733f7">
+<p>
+Quicumque enim in Christo baptizati estis, Christum induistis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb3e1a9" class="outline-3">
+<h3 id="orgbb3e1a9">Galatians 3:28</h3>
+<div class="outline-text-3" id="text-orgbb3e1a9">
+<p>
+Non est Judæus, neque Græcus : non est servus, neque liber : non est masculus, neque femina. Omnes enim vos unum estis in Christo Jesu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaebb50f" class="outline-3">
+<h3 id="orgaebb50f">Galatians 3:29</h3>
+<div class="outline-text-3" id="text-orgaebb50f">
+<p>
+Si autem vos Christi, ergo semen Abrahæ estis, secundum promissionem hæredes.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org11f54b6" class="outline-2">
+<h2 id="org11f54b6">Galatians 4</h2>
+<div class="outline-text-2" id="text-org11f54b6">
+</div>
+<div id="outline-container-org50bdd54" class="outline-3">
+<h3 id="org50bdd54">Galatians 4:1</h3>
+<div class="outline-text-3" id="text-org50bdd54">
+<p>
+Dico autem : quanto tempore hæres parvulus est, nihil differt a servo, cum sit dominus omnium :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f52927" class="outline-3">
+<h3 id="org1f52927">Galatians 4:2</h3>
+<div class="outline-text-3" id="text-org1f52927">
+<p>
+sed sub tutoribus et actoribus est usque ad præfinitum tempus a patre :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ce10d2" class="outline-3">
+<h3 id="org6ce10d2">Galatians 4:3</h3>
+<div class="outline-text-3" id="text-org6ce10d2">
+<p>
+ita et nos cum essemus parvuli, sub elementis mundi eramus servientes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29774ca" class="outline-3">
+<h3 id="org29774ca">Galatians 4:4</h3>
+<div class="outline-text-3" id="text-org29774ca">
+<p>
+At ubi venit plenitudo temporis, misit Deus Filium suum factum ex muliere, factum sub lege,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b3b2ac" class="outline-3">
+<h3 id="org7b3b2ac">Galatians 4:5</h3>
+<div class="outline-text-3" id="text-org7b3b2ac">
+<p>
+ut eos, qui sub lege erant, redimeret, ut adoptionem filiorum reciperemus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a5b954" class="outline-3">
+<h3 id="org6a5b954">Galatians 4:6</h3>
+<div class="outline-text-3" id="text-org6a5b954">
+<p>
+Quoniam autem estis filii, misit Deus Spiritum Filii sui in corda vestra, clamantem : Abba, Pater.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6d2226" class="outline-3">
+<h3 id="orgb6d2226">Galatians 4:7</h3>
+<div class="outline-text-3" id="text-orgb6d2226">
+<p>
+Itaque jam non est servus, sed filius : quod si filius, et hæres per Deum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf968f6" class="outline-3">
+<h3 id="orgcf968f6">Galatians 4:8</h3>
+<div class="outline-text-3" id="text-orgcf968f6">
+<p>
+Sed tunc quidem ignorantes Deum, iis, qui natura non sunt dii, serviebatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22ca7f4" class="outline-3">
+<h3 id="org22ca7f4">Galatians 4:9</h3>
+<div class="outline-text-3" id="text-org22ca7f4">
+<p>
+Nunc autem cum cognoveritis Deum, immo cogniti sitis a Deo : quomodo convertimini iterum ad infirma et egena elementa, quibus denuo servire vultis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga373db8" class="outline-3">
+<h3 id="orga373db8">Galatians 4:10</h3>
+<div class="outline-text-3" id="text-orga373db8">
+<p>
+Dies observatis, et menses, et tempora, et annos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16d5df8" class="outline-3">
+<h3 id="org16d5df8">Galatians 4:11</h3>
+<div class="outline-text-3" id="text-org16d5df8">
+<p>
+Timeo vos, ne forte sine causa laboraverim in vobis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3eb6e08" class="outline-3">
+<h3 id="org3eb6e08">Galatians 4:12</h3>
+<div class="outline-text-3" id="text-org3eb6e08">
+<p>
+Estote sicut ego, quia et ego sicut vos : fratres, obsecro vos. Nihil me læsistis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcfff6d6" class="outline-3">
+<h3 id="orgcfff6d6">Galatians 4:13</h3>
+<div class="outline-text-3" id="text-orgcfff6d6">
+<p>
+Scitis autem quia per infirmitatem carnis evangelizavi vobis jampridem : et tentationem vestram in carne mea
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e99c95" class="outline-3">
+<h3 id="org5e99c95">Galatians 4:14</h3>
+<div class="outline-text-3" id="text-org5e99c95">
+<p>
+non sprevistis, neque respuistis : sed sicut angelum Dei excepistis me, sicut Christum Jesum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ee2669" class="outline-3">
+<h3 id="org9ee2669">Galatians 4:15</h3>
+<div class="outline-text-3" id="text-org9ee2669">
+<p>
+Ubi est ergo beatitudo vestra ? testimonium enim perhibeo vobis, quia, si fieri posset, oculos vestros eruissetis, et dedissetis mihi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc015ec8" class="outline-3">
+<h3 id="orgc015ec8">Galatians 4:16</h3>
+<div class="outline-text-3" id="text-orgc015ec8">
+<p>
+Ergo inimicus vobis factus sum, verum dicens vobis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8229e26" class="outline-3">
+<h3 id="org8229e26">Galatians 4:17</h3>
+<div class="outline-text-3" id="text-org8229e26">
+<p>
+Æmulantur vos non bene : sed excludere vos volunt, ut illos æmulemini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafe98da" class="outline-3">
+<h3 id="orgafe98da">Galatians 4:18</h3>
+<div class="outline-text-3" id="text-orgafe98da">
+<p>
+Bonum autem æmulamini in bono semper : et non tantum cum præsens sum apud vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2753aff" class="outline-3">
+<h3 id="org2753aff">Galatians 4:19</h3>
+<div class="outline-text-3" id="text-org2753aff">
+<p>
+Filioli mei, quos iterum parturio, donec formetur Christus in vobis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f6c8bd" class="outline-3">
+<h3 id="org9f6c8bd">Galatians 4:20</h3>
+<div class="outline-text-3" id="text-org9f6c8bd">
+<p>
+vellem autem esse apud vos modo, et mutare vocem meam : quoniam confundor in vobis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8c7d0c" class="outline-3">
+<h3 id="orge8c7d0c">Galatians 4:21</h3>
+<div class="outline-text-3" id="text-orge8c7d0c">
+<p>
+Dicite mihi qui sub lege vultis esse : legem non legistis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga44d1ab" class="outline-3">
+<h3 id="orga44d1ab">Galatians 4:22</h3>
+<div class="outline-text-3" id="text-orga44d1ab">
+<p>
+Scriptum est enim : Quoniam Abraham duos filios habuit : unum de ancilla, et unum de libera.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org840d9d3" class="outline-3">
+<h3 id="org840d9d3">Galatians 4:23</h3>
+<div class="outline-text-3" id="text-org840d9d3">
+<p>
+Sed qui de ancilla, secundum carnem natus est : qui autem de libera, per repromissionem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org937e4b0" class="outline-3">
+<h3 id="org937e4b0">Galatians 4:24</h3>
+<div class="outline-text-3" id="text-org937e4b0">
+<p>
+quæ sunt per allegoriam dicta. Hæc enim sunt duo testamenta. Unum quidem in monte Sina, in servitutem generans, quæ est Agar :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13da545" class="outline-3">
+<h3 id="org13da545">Galatians 4:25</h3>
+<div class="outline-text-3" id="text-org13da545">
+<p>
+Sina enim mons est in Arabia, qui conjunctus est ei quæ nunc est Jerusalem, et servit cum filiis suis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a989f7" class="outline-3">
+<h3 id="org8a989f7">Galatians 4:26</h3>
+<div class="outline-text-3" id="text-org8a989f7">
+<p>
+Illa autem, quæ sursum est Jerusalem, libera est, quæ est mater nostra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9497d3" class="outline-3">
+<h3 id="orgb9497d3">Galatians 4:27</h3>
+<div class="outline-text-3" id="text-orgb9497d3">
+<p>
+Scriptum est enim :   Lætare, sterilis, quæ non paris ;  erumpe et clama, quæ non parturis :  quia multi filii desertæ,  magis quam ejus quæ habet virum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org680dd5f" class="outline-3">
+<h3 id="org680dd5f">Galatians 4:28</h3>
+<div class="outline-text-3" id="text-org680dd5f">
+<p>
+Nos autem, fratres, secundum Isaac promissionis filii sumus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c6fc38" class="outline-3">
+<h3 id="org2c6fc38">Galatians 4:29</h3>
+<div class="outline-text-3" id="text-org2c6fc38">
+<p>
+Sed quomodo tunc is, qui secundum carnem natus fuerat, persequebatur eum qui secundum spiritum : ita et nunc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82acc1b" class="outline-3">
+<h3 id="org82acc1b">Galatians 4:30</h3>
+<div class="outline-text-3" id="text-org82acc1b">
+<p>
+Sed quid dicit Scriptura ? Ejice ancillam, et filium ejus : non enim hæres erit filius ancillæ cum filio liberæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62ca0e5" class="outline-3">
+<h3 id="org62ca0e5">Galatians 4:31</h3>
+<div class="outline-text-3" id="text-org62ca0e5">
+<p>
+Itaque, fratres, non sumus ancillæ filii, sed liberæ : qua libertate Christus nos liberavit.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d62fde" class="outline-2">
+<h2 id="org8d62fde">Galatians 5</h2>
+<div class="outline-text-2" id="text-org8d62fde">
+</div>
+<div id="outline-container-org2c7c6ac" class="outline-3">
+<h3 id="org2c7c6ac">Galatians 5:1</h3>
+<div class="outline-text-3" id="text-org2c7c6ac">
+<p>
+State, et nolite iterum jugo servitutis contineri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4658c28" class="outline-3">
+<h3 id="org4658c28">Galatians 5:2</h3>
+<div class="outline-text-3" id="text-org4658c28">
+<p>
+Ecce ego Paulus dico vobis : quoniam si circumcidamini, Christus vobis nihil proderit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f0a831" class="outline-3">
+<h3 id="org4f0a831">Galatians 5:3</h3>
+<div class="outline-text-3" id="text-org4f0a831">
+<p>
+Testificor autem rursus omni homini circumcidenti se, quoniam debitor est universæ legis faciendæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga798202" class="outline-3">
+<h3 id="orga798202">Galatians 5:4</h3>
+<div class="outline-text-3" id="text-orga798202">
+<p>
+Evacuati estis a Christo, qui in lege justificamini : a gratia excidistis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3da454" class="outline-3">
+<h3 id="orgc3da454">Galatians 5:5</h3>
+<div class="outline-text-3" id="text-orgc3da454">
+<p>
+Nos enim spiritu ex fide, spem justitiæ exspectamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b4d4a8" class="outline-3">
+<h3 id="org8b4d4a8">Galatians 5:6</h3>
+<div class="outline-text-3" id="text-org8b4d4a8">
+<p>
+Nam in Christo Jesu neque circumcisio aliquid valet, neque præputium : sed fides, quæ per caritatem operatur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe9bfad" class="outline-3">
+<h3 id="orgfe9bfad">Galatians 5:7</h3>
+<div class="outline-text-3" id="text-orgfe9bfad">
+<p>
+Currebatis bene : quis vos impedivit veritati non obedire ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf43ce06" class="outline-3">
+<h3 id="orgf43ce06">Galatians 5:8</h3>
+<div class="outline-text-3" id="text-orgf43ce06">
+<p>
+persuasio hæc non est ex eo, qui vocat vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f833ce" class="outline-3">
+<h3 id="org0f833ce">Galatians 5:9</h3>
+<div class="outline-text-3" id="text-org0f833ce">
+<p>
+Modicum fermentum totam massam corrumpit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f98ce9" class="outline-3">
+<h3 id="org0f98ce9">Galatians 5:10</h3>
+<div class="outline-text-3" id="text-org0f98ce9">
+<p>
+Ego confido in vobis in Domino, quod nihil aliud sapietis : qui autem conturbat vos, portabit judicium, quicumque est ille.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5fbe2a3" class="outline-3">
+<h3 id="org5fbe2a3">Galatians 5:11</h3>
+<div class="outline-text-3" id="text-org5fbe2a3">
+<p>
+Ego autem, fratres, si circumcisionem adhuc prædico : quid adhuc persecutionem patior ? ergo evacuatum est scandalum crucis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c9637e" class="outline-3">
+<h3 id="org1c9637e">Galatians 5:12</h3>
+<div class="outline-text-3" id="text-org1c9637e">
+<p>
+Utinam et abscindantur qui vos conturbant.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org814ca95" class="outline-3">
+<h3 id="org814ca95">Galatians 5:13</h3>
+<div class="outline-text-3" id="text-org814ca95">
+<p>
+Vos enim in libertatem vocati estis, fratres : tantum ne libertatem in occasionem detis carnis, sed per caritatem Spiritus servite invicem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org867c877" class="outline-3">
+<h3 id="org867c877">Galatians 5:14</h3>
+<div class="outline-text-3" id="text-org867c877">
+<p>
+Omnis enim lex in uno sermone impletur : Diliges proximum tuum sicut teipsum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc86a8f0" class="outline-3">
+<h3 id="orgc86a8f0">Galatians 5:15</h3>
+<div class="outline-text-3" id="text-orgc86a8f0">
+<p>
+Quod si invicem mordetis, et comeditis : videte ne ab invicem consumamini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc13f90c" class="outline-3">
+<h3 id="orgc13f90c">Galatians 5:16</h3>
+<div class="outline-text-3" id="text-orgc13f90c">
+<p>
+Dico autem : Spiritu ambulate, et desideria carnis non perficietis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org009bbe0" class="outline-3">
+<h3 id="org009bbe0">Galatians 5:17</h3>
+<div class="outline-text-3" id="text-org009bbe0">
+<p>
+Caro enim concupiscit adversus spiritum, spiritus autem adversus carnem : hæc enim sibi invicem adversantur, ut non quæcumque vultis, illa faciatis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37b3c90" class="outline-3">
+<h3 id="org37b3c90">Galatians 5:18</h3>
+<div class="outline-text-3" id="text-org37b3c90">
+<p>
+Quod si Spiritu ducimini, non estis sub lege.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57ddff9" class="outline-3">
+<h3 id="org57ddff9">Galatians 5:19</h3>
+<div class="outline-text-3" id="text-org57ddff9">
+<p>
+Manifesta sunt autem opera carnis, quæ sunt fornicatio, immunditia, impudicitia, luxuria,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2a6dc9" class="outline-3">
+<h3 id="orge2a6dc9">Galatians 5:20</h3>
+<div class="outline-text-3" id="text-orge2a6dc9">
+<p>
+idolorum servitus, veneficia, inimicitiæ, contentiones, æmulationes, iræ, rixæ, dissensiones, sectæ,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08cc232" class="outline-3">
+<h3 id="org08cc232">Galatians 5:21</h3>
+<div class="outline-text-3" id="text-org08cc232">
+<p>
+invidiæ, homicidia, ebrietates, comessationes, et his similia, quæ prædico vobis, sicut prædixi : quoniam qui talia agunt, regnum Dei non consequentur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4664ab0" class="outline-3">
+<h3 id="org4664ab0">Galatians 5:22</h3>
+<div class="outline-text-3" id="text-org4664ab0">
+<p>
+Fructus autem Spiritus est caritas, gaudium, pax, patientia, benignitas, bonitas, longanimitas,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga76abc9" class="outline-3">
+<h3 id="orga76abc9">Galatians 5:23</h3>
+<div class="outline-text-3" id="text-orga76abc9">
+<p>
+mansuetudo, fides, modestia, continentia, castitas. Adversus hujusmodi non est lex.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4fb855" class="outline-3">
+<h3 id="orgd4fb855">Galatians 5:24</h3>
+<div class="outline-text-3" id="text-orgd4fb855">
+<p>
+Qui autem sunt Christi, carnem suam crucifixerunt cum vitiis et concupiscentiis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org142c9eb" class="outline-3">
+<h3 id="org142c9eb">Galatians 5:25</h3>
+<div class="outline-text-3" id="text-org142c9eb">
+<p>
+Si Spiritu vivimus, Spiritu et ambulemus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5663b33" class="outline-3">
+<h3 id="org5663b33">Galatians 5:26</h3>
+<div class="outline-text-3" id="text-org5663b33">
+<p>
+Non efficiamur inanis gloriæ cupidi, invicem provocantes, invicem invidentes.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0b60a17" class="outline-2">
+<h2 id="org0b60a17">Galatians 6</h2>
+<div class="outline-text-2" id="text-org0b60a17">
+</div>
+<div id="outline-container-org7712096" class="outline-3">
+<h3 id="org7712096">Galatians 6:1</h3>
+<div class="outline-text-3" id="text-org7712096">
+<p>
+Fratres, etsi præoccupatus fuerit homo in aliquo delicto, vos, qui spirituales estis, hujusmodi instruite in spiritu lenitatis, considerans teipsum, ne et tu tenteris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d09860" class="outline-3">
+<h3 id="org6d09860">Galatians 6:2</h3>
+<div class="outline-text-3" id="text-org6d09860">
+<p>
+Alter alterius onera portate, et sic adimplebitis legem Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d30e16" class="outline-3">
+<h3 id="org6d30e16">Galatians 6:3</h3>
+<div class="outline-text-3" id="text-org6d30e16">
+<p>
+Nam si quis existimat se aliquid esse, cum nihil sit, ipse se seducit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefe4461" class="outline-3">
+<h3 id="orgefe4461">Galatians 6:4</h3>
+<div class="outline-text-3" id="text-orgefe4461">
+<p>
+Opus autem suum probet unusquisque, et sic in semetipso tantum gloriam habebit, et non in altero.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08e16a5" class="outline-3">
+<h3 id="org08e16a5">Galatians 6:5</h3>
+<div class="outline-text-3" id="text-org08e16a5">
+<p>
+Unusquisque enim onus suum portabit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9867016" class="outline-3">
+<h3 id="org9867016">Galatians 6:6</h3>
+<div class="outline-text-3" id="text-org9867016">
+<p>
+Communicet autem is qui catechizatur verbo, ei qui se catechizat, in omnibus bonis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26db391" class="outline-3">
+<h3 id="org26db391">Galatians 6:7</h3>
+<div class="outline-text-3" id="text-org26db391">
+<p>
+Nolite errare : Deus non irridetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f1b19d" class="outline-3">
+<h3 id="org4f1b19d">Galatians 6:8</h3>
+<div class="outline-text-3" id="text-org4f1b19d">
+<p>
+Quæ enim seminaverit homo, hæc et metet. Quoniam qui seminat in carne sua, de carne et metet corruptionem : qui autem seminat in spiritu, de spiritu metet vitam æternam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12080eb" class="outline-3">
+<h3 id="org12080eb">Galatians 6:9</h3>
+<div class="outline-text-3" id="text-org12080eb">
+<p>
+Bonum autem facientes, non deficiamus : tempore enim suo metemus non deficientes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge93c388" class="outline-3">
+<h3 id="orge93c388">Galatians 6:10</h3>
+<div class="outline-text-3" id="text-orge93c388">
+<p>
+Ergo dum tempus habemus, operemur bonum ad omnes, maxime autem ad domesticos fidei.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60160c7" class="outline-3">
+<h3 id="org60160c7">Galatians 6:11</h3>
+<div class="outline-text-3" id="text-org60160c7">
+<p>
+Videte qualibus litteris scripsi vobis mea manu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1244cf" class="outline-3">
+<h3 id="orgb1244cf">Galatians 6:12</h3>
+<div class="outline-text-3" id="text-orgb1244cf">
+<p>
+Quicumque enim volunt placere in carne, hi cogunt vos circumcidi, tantum ut crucis Christi persecutionem non patiantur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7068fb3" class="outline-3">
+<h3 id="org7068fb3">Galatians 6:13</h3>
+<div class="outline-text-3" id="text-org7068fb3">
+<p>
+Neque enim qui circumciduntur, legem custodiunt : sed volunt vos circumcidi, ut in carne vestra glorientur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8fa7c75" class="outline-3">
+<h3 id="org8fa7c75">Galatians 6:14</h3>
+<div class="outline-text-3" id="text-org8fa7c75">
+<p>
+Mihi autem absit gloriari, nisi in cruce Domini nostri Jesu Christi : per quem mihi mundus crucifixus est, et ego mundo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1443bfb" class="outline-3">
+<h3 id="org1443bfb">Galatians 6:15</h3>
+<div class="outline-text-3" id="text-org1443bfb">
+<p>
+In Christo enim Jesu neque circumcisio aliquid valet, neque præputium, sed nova creatura.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb975383" class="outline-3">
+<h3 id="orgb975383">Galatians 6:16</h3>
+<div class="outline-text-3" id="text-orgb975383">
+<p>
+Et quicumque hanc regulam secuti fuerint, pax super illos, et misericordia, et super Israël Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c3a4b5" class="outline-3">
+<h3 id="org0c3a4b5">Galatians 6:17</h3>
+<div class="outline-text-3" id="text-org0c3a4b5">
+<p>
+De cetero, nemo mihi molestus sit : ego enim stigmata Domini Jesu in corpore meo porto.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c020a1" class="outline-3">
+<h3 id="org2c020a1">Galatians 6:18</h3>
+<div class="outline-text-3" id="text-org2c020a1">
+<p>
+Gratia Domini nostri Jesu Christi cum spiritu vestro, fratres. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

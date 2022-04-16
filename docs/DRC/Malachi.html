@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8ffaf09">Malachi 1</a>
+<ul>
+<li><a href="#orga69f99b">Malachi 1:1</a></li>
+<li><a href="#org74dee66">Malachi 1:2</a></li>
+<li><a href="#org9a17f89">Malachi 1:3</a></li>
+<li><a href="#org91d4c16">Malachi 1:4</a></li>
+<li><a href="#org0316650">Malachi 1:5</a></li>
+<li><a href="#org2d376a8">Malachi 1:6</a></li>
+<li><a href="#orgab8e02c">Malachi 1:7</a></li>
+<li><a href="#org161046f">Malachi 1:8</a></li>
+<li><a href="#orgf291b83">Malachi 1:9</a></li>
+<li><a href="#org4d47ea7">Malachi 1:10</a></li>
+<li><a href="#org6f56490">Malachi 1:11</a></li>
+<li><a href="#org93dcd28">Malachi 1:12</a></li>
+<li><a href="#org1de8a46">Malachi 1:13</a></li>
+<li><a href="#org3f2f88a">Malachi 1:14</a></li>
+</ul>
+</li>
+<li><a href="#orgd04646d">Malachi 2</a>
+<ul>
+<li><a href="#org8854090">Malachi 2:1</a></li>
+<li><a href="#orgac3c1cd">Malachi 2:2</a></li>
+<li><a href="#org57f58b4">Malachi 2:3</a></li>
+<li><a href="#org38a4b27">Malachi 2:4</a></li>
+<li><a href="#org9d65269">Malachi 2:5</a></li>
+<li><a href="#org3da671c">Malachi 2:6</a></li>
+<li><a href="#org1ef11fb">Malachi 2:7</a></li>
+<li><a href="#orgc8b9945">Malachi 2:8</a></li>
+<li><a href="#orga63aeb6">Malachi 2:9</a></li>
+<li><a href="#org4dff517">Malachi 2:10</a></li>
+<li><a href="#orgbfa81d9">Malachi 2:11</a></li>
+<li><a href="#orgfb093bc">Malachi 2:12</a></li>
+<li><a href="#org2177798">Malachi 2:13</a></li>
+<li><a href="#org27d6a23">Malachi 2:14</a></li>
+<li><a href="#org3424190">Malachi 2:15</a></li>
+<li><a href="#org0f10a2f">Malachi 2:16</a></li>
+<li><a href="#orgcc6fbfa">Malachi 2:17</a></li>
+</ul>
+</li>
+<li><a href="#org0353725">Malachi 3</a>
+<ul>
+<li><a href="#org9b4af7e">Malachi 3:1</a></li>
+<li><a href="#org1a57954">Malachi 3:2</a></li>
+<li><a href="#org62871ed">Malachi 3:3</a></li>
+<li><a href="#orgd9872a7">Malachi 3:4</a></li>
+<li><a href="#orgfc871e1">Malachi 3:5</a></li>
+<li><a href="#orgf179c63">Malachi 3:6</a></li>
+<li><a href="#orgaecd9a1">Malachi 3:7</a></li>
+<li><a href="#orge4b4de7">Malachi 3:8</a></li>
+<li><a href="#orga2d4ff4">Malachi 3:9</a></li>
+<li><a href="#org2c3904b">Malachi 3:10</a></li>
+<li><a href="#orgb4bea8e">Malachi 3:11</a></li>
+<li><a href="#org88f5761">Malachi 3:12</a></li>
+<li><a href="#org521208e">Malachi 3:13</a></li>
+<li><a href="#org9527857">Malachi 3:14</a></li>
+<li><a href="#org1af001e">Malachi 3:15</a></li>
+<li><a href="#org27aa3cd">Malachi 3:16</a></li>
+<li><a href="#org470281a">Malachi 3:17</a></li>
+<li><a href="#org49a0860">Malachi 3:18</a></li>
+</ul>
+</li>
+<li><a href="#org3c17260">Malachi 4</a>
+<ul>
+<li><a href="#org93af84f">Malachi 4:1</a></li>
+<li><a href="#orgafcf439">Malachi 4:2</a></li>
+<li><a href="#org6a4f635">Malachi 4:3</a></li>
+<li><a href="#org36a5570">Malachi 4:4</a></li>
+<li><a href="#orgcdd4a63">Malachi 4:5</a></li>
+<li><a href="#orgb8281e6">Malachi 4:6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8ffaf09" class="outline-2">
+<h2 id="org8ffaf09">Malachi 1</h2>
+<div class="outline-text-2" id="text-org8ffaf09">
+</div>
+<div id="outline-container-orga69f99b" class="outline-3">
+<h3 id="orga69f99b">Malachi 1:1</h3>
+<div class="outline-text-3" id="text-orga69f99b">
+<p>
+The burden of the word of the Lord to Israel by the hand of Malachi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74dee66" class="outline-3">
+<h3 id="org74dee66">Malachi 1:2</h3>
+<div class="outline-text-3" id="text-org74dee66">
+<p>
+I have loved you, saith the Lord: and you have said: Wherein hast thou loved us? Was not Esau brother to Jacob, saith the Lord, and I have loved Jacob,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a17f89" class="outline-3">
+<h3 id="org9a17f89">Malachi 1:3</h3>
+<div class="outline-text-3" id="text-org9a17f89">
+<p>
+But have hated Esau? and I have made his mountains a wilderness, and given his inheritance to the dragons of the desert.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91d4c16" class="outline-3">
+<h3 id="org91d4c16">Malachi 1:4</h3>
+<div class="outline-text-3" id="text-org91d4c16">
+<p>
+But if Edom shall say: We are destroyed, but we will return and build up what hath been destroyed: thus saith the Lord of hosts: They shall build up, and I will throw down: and they shall be called the borders of wickedness, and the people with whom the Lord is angry for ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0316650" class="outline-3">
+<h3 id="org0316650">Malachi 1:5</h3>
+<div class="outline-text-3" id="text-org0316650">
+<p>
+And your eyes shall see: and you shall say: The Lord be magnified upon the border of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d376a8" class="outline-3">
+<h3 id="org2d376a8">Malachi 1:6</h3>
+<div class="outline-text-3" id="text-org2d376a8">
+<p>
+The son honoureth the father, and the servant his master: if then I be a father, where is my honour? and if I be a master, where is my fear: saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab8e02c" class="outline-3">
+<h3 id="orgab8e02c">Malachi 1:7</h3>
+<div class="outline-text-3" id="text-orgab8e02c">
+<p>
+To you, O priests, that despise my name, and have said: Wherein have we despised thy name? You offer polluted bread upon my altar, and you say: Wherein have we polluted thee? In that you say: The table of the Lord is contemptible.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org161046f" class="outline-3">
+<h3 id="org161046f">Malachi 1:8</h3>
+<div class="outline-text-3" id="text-org161046f">
+<p>
+If you offer the blind for sacrifice, is it not evil? and if you offer the lame and the sick, is it not evil? offer it to thy prince, if he will be pleased with it, or if he will regard thy face, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf291b83" class="outline-3">
+<h3 id="orgf291b83">Malachi 1:9</h3>
+<div class="outline-text-3" id="text-orgf291b83">
+<p>
+And now beseech ye the face of God, that he may have mercy on you, (for by your hand hath this been done,) if by any means he will receive your faces, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d47ea7" class="outline-3">
+<h3 id="org4d47ea7">Malachi 1:10</h3>
+<div class="outline-text-3" id="text-org4d47ea7">
+<p>
+Who is there among you, that will shut the doors, and will kindle the fire on my altar gratis? I have no pleasure in you, saith the Lord of hosts: and I will not receive a gift of your hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f56490" class="outline-3">
+<h3 id="org6f56490">Malachi 1:11</h3>
+<div class="outline-text-3" id="text-org6f56490">
+<p>
+For from the rising of the sun even to the going down, my name is great among the Gentiles, and in every place there is sacrifice, and there is offered to my name a clean oblation: for my name is great among the Gentiles, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93dcd28" class="outline-3">
+<h3 id="org93dcd28">Malachi 1:12</h3>
+<div class="outline-text-3" id="text-org93dcd28">
+<p>
+And you have profaned it in that you say: The table of the Lord is defiled: and that which is laid thereupon is contemptible with the fire that devoureth it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1de8a46" class="outline-3">
+<h3 id="org1de8a46">Malachi 1:13</h3>
+<div class="outline-text-3" id="text-org1de8a46">
+<p>
+And you have said: Behold of our labour, and you puffed it away, saith the Lord of hosts, and you brought in of rapine the lame, and the sick, and brought in an offering: shall I accept it at your hands, saith the Lord?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f2f88a" class="outline-3">
+<h3 id="org3f2f88a">Malachi 1:14</h3>
+<div class="outline-text-3" id="text-org3f2f88a">
+<p>
+Cursed is the deceitful man that hath in his flock a male, and making a vow offereth in sacrifice that which is feeble to the Lord: for I am a great King, saith the Lord of hosts, and my name is dreadful among the Gentiles. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd04646d" class="outline-2">
+<h2 id="orgd04646d">Malachi 2</h2>
+<div class="outline-text-2" id="text-orgd04646d">
+</div>
+<div id="outline-container-org8854090" class="outline-3">
+<h3 id="org8854090">Malachi 2:1</h3>
+<div class="outline-text-3" id="text-org8854090">
+<p>
+And now, O ye priests, this commandment is to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac3c1cd" class="outline-3">
+<h3 id="orgac3c1cd">Malachi 2:2</h3>
+<div class="outline-text-3" id="text-orgac3c1cd">
+<p>
+If you will not hear, and if you will not lay it to heart, to give glory to my name, saith the Lord of hosts: I will send poverty upon you, and will curse your blessings, yea I will curse them, because you have not laid it to heart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57f58b4" class="outline-3">
+<h3 id="org57f58b4">Malachi 2:3</h3>
+<div class="outline-text-3" id="text-org57f58b4">
+<p>
+Behold, I will cast the shoulder to you, and will scatter upon your face the dung of your solemnities, and it shall take you away with it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38a4b27" class="outline-3">
+<h3 id="org38a4b27">Malachi 2:4</h3>
+<div class="outline-text-3" id="text-org38a4b27">
+<p>
+And you shall know that I sent you this commandment, that my covenant might be with Levi, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d65269" class="outline-3">
+<h3 id="org9d65269">Malachi 2:5</h3>
+<div class="outline-text-3" id="text-org9d65269">
+<p>
+My covenant was with him of life and peace: and I gave him fear: and he feared me, and he was afraid before my name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3da671c" class="outline-3">
+<h3 id="org3da671c">Malachi 2:6</h3>
+<div class="outline-text-3" id="text-org3da671c">
+<p>
+The law of truth was in his mouth, and iniquity was not found in his lips: he walked with me in peace, and in equity, and turned many away from iniquity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ef11fb" class="outline-3">
+<h3 id="org1ef11fb">Malachi 2:7</h3>
+<div class="outline-text-3" id="text-org1ef11fb">
+<p>
+For the lips of the priests shall keep knowledge, and they shall seek the law at his mouth: because he is the angel of the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8b9945" class="outline-3">
+<h3 id="orgc8b9945">Malachi 2:8</h3>
+<div class="outline-text-3" id="text-orgc8b9945">
+<p>
+But you have departed out of the way, and have caused many to stumble at the law: you have made void the covenant of Levi, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga63aeb6" class="outline-3">
+<h3 id="orga63aeb6">Malachi 2:9</h3>
+<div class="outline-text-3" id="text-orga63aeb6">
+<p>
+Therefore have I also made you contemptible, and base before all people, as you have not kept my ways, and have accepted persons in the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4dff517" class="outline-3">
+<h3 id="org4dff517">Malachi 2:10</h3>
+<div class="outline-text-3" id="text-org4dff517">
+<p>
+Have we not all one father? hath not one God created us? why then doth every one of us despise his brother, violating the covenant of our fathers?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfa81d9" class="outline-3">
+<h3 id="orgbfa81d9">Malachi 2:11</h3>
+<div class="outline-text-3" id="text-orgbfa81d9">
+<p>
+Juda hath transgressed, and abomination hath been committed in Israel, and in Jerusalem: for Juda hath profaned the holiness of the Lord, which he loved, and hath married the daughter of a strange god.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb093bc" class="outline-3">
+<h3 id="orgfb093bc">Malachi 2:12</h3>
+<div class="outline-text-3" id="text-orgfb093bc">
+<p>
+The Lord will cut off the man that hath done this, both the master, and the scholar, out of the tabernacles of Jacob, and him that offereth an offering to the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2177798" class="outline-3">
+<h3 id="org2177798">Malachi 2:13</h3>
+<div class="outline-text-3" id="text-org2177798">
+<p>
+And this again have you done, you have covered the altar of the Lord with tears, with weeping, and bellowing, so that I have no more a regard to sacrifice, neither do I accept any atonement at your hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27d6a23" class="outline-3">
+<h3 id="org27d6a23">Malachi 2:14</h3>
+<div class="outline-text-3" id="text-org27d6a23">
+<p>
+And you have said: For what cause? Because the Lord hath been witness between thee, and the wife of thy youth, whom thou hast despised: yet she was thy partner, and the wife of thy covenant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3424190" class="outline-3">
+<h3 id="org3424190">Malachi 2:15</h3>
+<div class="outline-text-3" id="text-org3424190">
+<p>
+Did not one make her, and she is the residue of his spirit? And what doth one seek, but the seed of God? Keep then your spirit, and despise not the wife of thy youth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f10a2f" class="outline-3">
+<h3 id="org0f10a2f">Malachi 2:16</h3>
+<div class="outline-text-3" id="text-org0f10a2f">
+<p>
+When thou shalt hate her put her away, saith the Lord, the God of Israel: but iniquity shalt cover his garment, saith the Lord of hosts, keep your spirit, and despise not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc6fbfa" class="outline-3">
+<h3 id="orgcc6fbfa">Malachi 2:17</h3>
+<div class="outline-text-3" id="text-orgcc6fbfa">
+<p>
+You have wearied the Lord with your words, and you said: Wherein have we wearied him? In that you say: Every one that doth evil, is good in the sight of the Lord, and such please him: or surely where is the God of judgment? 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0353725" class="outline-2">
+<h2 id="org0353725">Malachi 3</h2>
+<div class="outline-text-2" id="text-org0353725">
+</div>
+<div id="outline-container-org9b4af7e" class="outline-3">
+<h3 id="org9b4af7e">Malachi 3:1</h3>
+<div class="outline-text-3" id="text-org9b4af7e">
+<p>
+Behold I send my angel, and he shall prepare the way before my face. And presently the Lord, whom you seek, and the angel of the testament, whom you desire, shall come to his temple. Behold, he cometh, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a57954" class="outline-3">
+<h3 id="org1a57954">Malachi 3:2</h3>
+<div class="outline-text-3" id="text-org1a57954">
+<p>
+And who shall be able to think of the day of his coming? and who shall stand to see him? for he is like a refining fire, and like the fuller&rsquo;s herb:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62871ed" class="outline-3">
+<h3 id="org62871ed">Malachi 3:3</h3>
+<div class="outline-text-3" id="text-org62871ed">
+<p>
+And he shall sit refining and cleansing the silver, and he shall purify the sons of Levi, and shall refine them as gold, and as silver, and they shall offer sacrifices to the Lord in justice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9872a7" class="outline-3">
+<h3 id="orgd9872a7">Malachi 3:4</h3>
+<div class="outline-text-3" id="text-orgd9872a7">
+<p>
+And the sacrifice of Juda and of Jerusalem shall please the Lord, as in the days of old, and in the ancient years.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc871e1" class="outline-3">
+<h3 id="orgfc871e1">Malachi 3:5</h3>
+<div class="outline-text-3" id="text-orgfc871e1">
+<p>
+And I will come to you in judgment, and will be a speedy witness against sorcerers, and adulterers, and false swearers, and them that oppress the hireling in his wages, the widows, and the fatherless: and oppress the stranger, and have not feared me, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf179c63" class="outline-3">
+<h3 id="orgf179c63">Malachi 3:6</h3>
+<div class="outline-text-3" id="text-orgf179c63">
+<p>
+For I am the Lord, and I change not: and you the sons of Jacob are not consumed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaecd9a1" class="outline-3">
+<h3 id="orgaecd9a1">Malachi 3:7</h3>
+<div class="outline-text-3" id="text-orgaecd9a1">
+<p>
+For from the days of your fathers you have departed from my ordinances, and have not kept them: Return to me, and I will return to you, saith the Lord of hosts. And you have said: Wherein shall we return?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4b4de7" class="outline-3">
+<h3 id="orge4b4de7">Malachi 3:8</h3>
+<div class="outline-text-3" id="text-orge4b4de7">
+<p>
+Shall a man afflict God, for you afflict me. And you have said: Wherein do we afflict thee? in tithes and in firstfruits.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2d4ff4" class="outline-3">
+<h3 id="orga2d4ff4">Malachi 3:9</h3>
+<div class="outline-text-3" id="text-orga2d4ff4">
+<p>
+And you are cursed with want, and you afflict me, even the whole nation of you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c3904b" class="outline-3">
+<h3 id="org2c3904b">Malachi 3:10</h3>
+<div class="outline-text-3" id="text-org2c3904b">
+<p>
+Bring all the tithes into the storehouse, that there may be meat in my house, and try me in this, saith the Lord: if I open not unto you the flood-gates of heaven, and pour you out a blessing even to abundance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4bea8e" class="outline-3">
+<h3 id="orgb4bea8e">Malachi 3:11</h3>
+<div class="outline-text-3" id="text-orgb4bea8e">
+<p>
+And I will rebuke for your sakes the devourer, and he shall not spoil the fruit of your land: neither shall the vine in the field be barren, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88f5761" class="outline-3">
+<h3 id="org88f5761">Malachi 3:12</h3>
+<div class="outline-text-3" id="text-org88f5761">
+<p>
+And all nations shall call you blessed: for you shall be a delightful land, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org521208e" class="outline-3">
+<h3 id="org521208e">Malachi 3:13</h3>
+<div class="outline-text-3" id="text-org521208e">
+<p>
+Your words have been unsufferable to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9527857" class="outline-3">
+<h3 id="org9527857">Malachi 3:14</h3>
+<div class="outline-text-3" id="text-org9527857">
+<p>
+And you have said: What have we spoken against thee? You have said: He laboureth in vain that serveth God, and what profit is it that we have kept his ordinances, and that we have walked sorrowful before the Lord of hosts?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1af001e" class="outline-3">
+<h3 id="org1af001e">Malachi 3:15</h3>
+<div class="outline-text-3" id="text-org1af001e">
+<p>
+Wherefore now we call the proud people happy, for they that work wickedness are built up, and they have tempted God and are preserved.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27aa3cd" class="outline-3">
+<h3 id="org27aa3cd">Malachi 3:16</h3>
+<div class="outline-text-3" id="text-org27aa3cd">
+<p>
+Then they that feared the Lord, spoke every one with his neighbour: and the Lord gave ear, and heard it: and a book of remembrance was written before him for them that fear the Lord, and think on his name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org470281a" class="outline-3">
+<h3 id="org470281a">Malachi 3:17</h3>
+<div class="outline-text-3" id="text-org470281a">
+<p>
+And they shall be my special possession, saith the Lord of hosts, in the day that I do judgment: and I will spare them, as a man spareth his son that serveth him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49a0860" class="outline-3">
+<h3 id="org49a0860">Malachi 3:18</h3>
+<div class="outline-text-3" id="text-org49a0860">
+<p>
+And you shall return, and shall see the difference between the just and the wicked: and between him that serveth God, and him that serveth him not. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c17260" class="outline-2">
+<h2 id="org3c17260">Malachi 4</h2>
+<div class="outline-text-2" id="text-org3c17260">
+</div>
+<div id="outline-container-org93af84f" class="outline-3">
+<h3 id="org93af84f">Malachi 4:1</h3>
+<div class="outline-text-3" id="text-org93af84f">
+<p>
+For behold the day shall come kindled as a furnace: and all the proud, and all that do wickedly shall be stubble: and the day that cometh shall set them on fire, saith the Lord of hosts, it shall not leave them root, nor branch.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafcf439" class="outline-3">
+<h3 id="orgafcf439">Malachi 4:2</h3>
+<div class="outline-text-3" id="text-orgafcf439">
+<p>
+But unto you that fear my name, the Sun of justice shall arise, and health in his wings: and you shall go forth, and shall leap like calves of the herd.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a4f635" class="outline-3">
+<h3 id="org6a4f635">Malachi 4:3</h3>
+<div class="outline-text-3" id="text-org6a4f635">
+<p>
+And you shall tread down the wicked when they shall be ashes under the sole of your feet in the day that I do this, saith the Lord of hosts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36a5570" class="outline-3">
+<h3 id="org36a5570">Malachi 4:4</h3>
+<div class="outline-text-3" id="text-org36a5570">
+<p>
+Remember the law of Moses my servant, which I commanded him in Horeb for all Israel, the precepts, and judgments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdd4a63" class="outline-3">
+<h3 id="orgcdd4a63">Malachi 4:5</h3>
+<div class="outline-text-3" id="text-orgcdd4a63">
+<p>
+Behold, I will send you Elias the prophet, before the coming of the great and dreadful day of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8281e6" class="outline-3">
+<h3 id="orgb8281e6">Malachi 4:6</h3>
+<div class="outline-text-3" id="text-orgb8281e6">
+<p>
+And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers: lest I come, and strike the earth with anathema.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

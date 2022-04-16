@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga0e2625">James 1</a>
+<ul>
+<li><a href="#org965fb2f">James 1:1</a></li>
+<li><a href="#org338796d">James 1:2</a></li>
+<li><a href="#org93c0e70">James 1:3</a></li>
+<li><a href="#org9ec61aa">James 1:4</a></li>
+<li><a href="#orgd3a3f50">James 1:5</a></li>
+<li><a href="#orgc399f6f">James 1:6</a></li>
+<li><a href="#orgff29a01">James 1:7</a></li>
+<li><a href="#orgf72f8f8">James 1:8</a></li>
+<li><a href="#org3b4e4b0">James 1:9</a></li>
+<li><a href="#orgacc095a">James 1:10</a></li>
+<li><a href="#org9df305b">James 1:11</a></li>
+<li><a href="#org626497b">James 1:12</a></li>
+<li><a href="#org2874686">James 1:13</a></li>
+<li><a href="#orga7af8b8">James 1:14</a></li>
+<li><a href="#org59d1466">James 1:15</a></li>
+<li><a href="#org970e245">James 1:16</a></li>
+<li><a href="#org2a8795d">James 1:17</a></li>
+<li><a href="#org4ae9bae">James 1:18</a></li>
+<li><a href="#orgba347ef">James 1:19</a></li>
+<li><a href="#orgb5f3efd">James 1:20</a></li>
+<li><a href="#org0b00ca8">James 1:21</a></li>
+<li><a href="#org8b55c6d">James 1:22</a></li>
+<li><a href="#org2a0a03b">James 1:23</a></li>
+<li><a href="#org54ef290">James 1:24</a></li>
+<li><a href="#org379a91f">James 1:25</a></li>
+<li><a href="#org3dae962">James 1:26</a></li>
+<li><a href="#orgf260571">James 1:27</a></li>
+</ul>
+</li>
+<li><a href="#orgda47667">James 2</a>
+<ul>
+<li><a href="#orgd870b99">James 2:1</a></li>
+<li><a href="#org027070b">James 2:2</a></li>
+<li><a href="#org6219f59">James 2:3</a></li>
+<li><a href="#org91d7d3d">James 2:4</a></li>
+<li><a href="#org34dbd6a">James 2:5</a></li>
+<li><a href="#orge5cce40">James 2:6</a></li>
+<li><a href="#orgb775db5">James 2:7</a></li>
+<li><a href="#orgc9408ef">James 2:8</a></li>
+<li><a href="#org0e4cbde">James 2:9</a></li>
+<li><a href="#org1258246">James 2:10</a></li>
+<li><a href="#org9742888">James 2:11</a></li>
+<li><a href="#org45f2314">James 2:12</a></li>
+<li><a href="#org173e428">James 2:13</a></li>
+<li><a href="#org5506f56">James 2:14</a></li>
+<li><a href="#org30078d7">James 2:15</a></li>
+<li><a href="#orgbef6041">James 2:16</a></li>
+<li><a href="#org50b976e">James 2:17</a></li>
+<li><a href="#orgd91a063">James 2:18</a></li>
+<li><a href="#orgf2f803f">James 2:19</a></li>
+<li><a href="#orgf62a78d">James 2:20</a></li>
+<li><a href="#org1074c34">James 2:21</a></li>
+<li><a href="#org0376785">James 2:22</a></li>
+<li><a href="#orga0e73b0">James 2:23</a></li>
+<li><a href="#org1218392">James 2:24</a></li>
+<li><a href="#org09ac3d3">James 2:25</a></li>
+<li><a href="#org9a12ba5">James 2:26</a></li>
+</ul>
+</li>
+<li><a href="#org810124d">James 3</a>
+<ul>
+<li><a href="#org33d8978">James 3:1</a></li>
+<li><a href="#org4f97e2a">James 3:2</a></li>
+<li><a href="#orgab7773e">James 3:3</a></li>
+<li><a href="#org551245b">James 3:4</a></li>
+<li><a href="#org474db1d">James 3:5</a></li>
+<li><a href="#org73e13ac">James 3:6</a></li>
+<li><a href="#org8efb721">James 3:7</a></li>
+<li><a href="#orgc3dc3e1">James 3:8</a></li>
+<li><a href="#org40ffc3d">James 3:9</a></li>
+<li><a href="#org54bd617">James 3:10</a></li>
+<li><a href="#org537b1ad">James 3:11</a></li>
+<li><a href="#org1c8bdba">James 3:12</a></li>
+<li><a href="#org14db38f">James 3:13</a></li>
+<li><a href="#orgcfe5180">James 3:14</a></li>
+<li><a href="#orgac9414c">James 3:15</a></li>
+<li><a href="#org242a7ee">James 3:16</a></li>
+<li><a href="#orgab80967">James 3:17</a></li>
+<li><a href="#org5b56b92">James 3:18</a></li>
+</ul>
+</li>
+<li><a href="#orgc921e79">James 4</a>
+<ul>
+<li><a href="#org3238dac">James 4:1</a></li>
+<li><a href="#orga1df6e3">James 4:2</a></li>
+<li><a href="#org78e0cbd">James 4:3</a></li>
+<li><a href="#orga7725ae">James 4:4</a></li>
+<li><a href="#org8743d9a">James 4:5</a></li>
+<li><a href="#orgde9d510">James 4:6</a></li>
+<li><a href="#org6107048">James 4:7</a></li>
+<li><a href="#orgc429b44">James 4:8</a></li>
+<li><a href="#orgf6fedd8">James 4:9</a></li>
+<li><a href="#orgf7aedf8">James 4:10</a></li>
+<li><a href="#orga135492">James 4:11</a></li>
+<li><a href="#orgee5efa4">James 4:12</a></li>
+<li><a href="#org9b3e5d8">James 4:13</a></li>
+<li><a href="#orga6ed04c">James 4:14</a></li>
+<li><a href="#org0a72a4d">James 4:15</a></li>
+<li><a href="#org2e553c0">James 4:16</a></li>
+<li><a href="#orga1964d7">James 4:17</a></li>
+</ul>
+</li>
+<li><a href="#org66ec6d7">James 5</a>
+<ul>
+<li><a href="#orgdae7221">James 5:1</a></li>
+<li><a href="#org7f922ad">James 5:2</a></li>
+<li><a href="#orgdb245c4">James 5:3</a></li>
+<li><a href="#org800d77a">James 5:4</a></li>
+<li><a href="#org671ff21">James 5:5</a></li>
+<li><a href="#org8cf8f3b">James 5:6</a></li>
+<li><a href="#org1cb8d3b">James 5:7</a></li>
+<li><a href="#org15b36f3">James 5:8</a></li>
+<li><a href="#org8b08993">James 5:9</a></li>
+<li><a href="#orge92e8d8">James 5:10</a></li>
+<li><a href="#orgda85ef8">James 5:11</a></li>
+<li><a href="#orge622a7e">James 5:12</a></li>
+<li><a href="#org64b4dfe">James 5:13</a></li>
+<li><a href="#orgcd1bb64">James 5:14</a></li>
+<li><a href="#org9b075f2">James 5:15</a></li>
+<li><a href="#org38108ee">James 5:16</a></li>
+<li><a href="#org8629ee2">James 5:17</a></li>
+<li><a href="#orga23b226">James 5:18</a></li>
+<li><a href="#orgdb48665">James 5:19</a></li>
+<li><a href="#org377eee7">James 5:20</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga0e2625" class="outline-2">
+<h2 id="orga0e2625">James 1</h2>
+<div class="outline-text-2" id="text-orga0e2625">
+</div>
+<div id="outline-container-org965fb2f" class="outline-3">
+<h3 id="org965fb2f">James 1:1</h3>
+<div class="outline-text-3" id="text-org965fb2f">
+<p>
+James, the servant of God and of our Lord Jesus Christ, to the twelve tribes which are scattered abroad, greeting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org338796d" class="outline-3">
+<h3 id="org338796d">James 1:2</h3>
+<div class="outline-text-3" id="text-org338796d">
+<p>
+My brethren, count it all joy, when you shall fall into divers temptations:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93c0e70" class="outline-3">
+<h3 id="org93c0e70">James 1:3</h3>
+<div class="outline-text-3" id="text-org93c0e70">
+<p>
+Knowing that the trying of your faith worketh patience
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ec61aa" class="outline-3">
+<h3 id="org9ec61aa">James 1:4</h3>
+<div class="outline-text-3" id="text-org9ec61aa">
+<p>
+And patience hath a perfect work: that you may be perfect and entire, failing in nothing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3a3f50" class="outline-3">
+<h3 id="orgd3a3f50">James 1:5</h3>
+<div class="outline-text-3" id="text-orgd3a3f50">
+<p>
+But if any of you want wisdom, let him ask of God who giveth to all men abundantly and upbraideth not. And it shall be given him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc399f6f" class="outline-3">
+<h3 id="orgc399f6f">James 1:6</h3>
+<div class="outline-text-3" id="text-orgc399f6f">
+<p>
+But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea, which is moved and carried about by the wind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff29a01" class="outline-3">
+<h3 id="orgff29a01">James 1:7</h3>
+<div class="outline-text-3" id="text-orgff29a01">
+<p>
+Therefore let not that man think that he shall receive any thing of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf72f8f8" class="outline-3">
+<h3 id="orgf72f8f8">James 1:8</h3>
+<div class="outline-text-3" id="text-orgf72f8f8">
+<p>
+A double minded man is inconstant in all his ways.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b4e4b0" class="outline-3">
+<h3 id="org3b4e4b0">James 1:9</h3>
+<div class="outline-text-3" id="text-org3b4e4b0">
+<p>
+But let the brother of low condition glory in his exaltation:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacc095a" class="outline-3">
+<h3 id="orgacc095a">James 1:10</h3>
+<div class="outline-text-3" id="text-orgacc095a">
+<p>
+And the rich, in his being low: because as the flower of the grass shall he pass away.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9df305b" class="outline-3">
+<h3 id="org9df305b">James 1:11</h3>
+<div class="outline-text-3" id="text-org9df305b">
+<p>
+For the sun rose with a burning heat and parched the grass: and the flower thereof fell off, and the beauty of the shape thereof perished. So also shall the rich man fade away in his ways.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org626497b" class="outline-3">
+<h3 id="org626497b">James 1:12</h3>
+<div class="outline-text-3" id="text-org626497b">
+<p>
+Blessed is the man that endureth temptation: for, when he hath been proved, he shall receive the crown of life which God hath promised to them that love him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2874686" class="outline-3">
+<h3 id="org2874686">James 1:13</h3>
+<div class="outline-text-3" id="text-org2874686">
+<p>
+Let no man, when he is tempted, say that he is tempted by God. For God is not a tempter of evils: and he tempteth no man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7af8b8" class="outline-3">
+<h3 id="orga7af8b8">James 1:14</h3>
+<div class="outline-text-3" id="text-orga7af8b8">
+<p>
+But every man is tempted by his own concupiscence, being drawn away and allured.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59d1466" class="outline-3">
+<h3 id="org59d1466">James 1:15</h3>
+<div class="outline-text-3" id="text-org59d1466">
+<p>
+Then, when concupiscence hath conceived, it bringeth forth sin. But sin, when it is completed, begetteth death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org970e245" class="outline-3">
+<h3 id="org970e245">James 1:16</h3>
+<div class="outline-text-3" id="text-org970e245">
+<p>
+Do not err, therefore, my dearest brethren.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a8795d" class="outline-3">
+<h3 id="org2a8795d">James 1:17</h3>
+<div class="outline-text-3" id="text-org2a8795d">
+<p>
+Every best gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no change nor shadow of alteration.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ae9bae" class="outline-3">
+<h3 id="org4ae9bae">James 1:18</h3>
+<div class="outline-text-3" id="text-org4ae9bae">
+<p>
+For of his own will hath he begotten us by the word of truth, that we might be some beginning of his creature.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba347ef" class="outline-3">
+<h3 id="orgba347ef">James 1:19</h3>
+<div class="outline-text-3" id="text-orgba347ef">
+<p>
+You know, my dearest brethren. And let every man be swift to hear, but slow to speak and slow to anger.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5f3efd" class="outline-3">
+<h3 id="orgb5f3efd">James 1:20</h3>
+<div class="outline-text-3" id="text-orgb5f3efd">
+<p>
+For the anger of man worketh not the justice of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b00ca8" class="outline-3">
+<h3 id="org0b00ca8">James 1:21</h3>
+<div class="outline-text-3" id="text-org0b00ca8">
+<p>
+Wherefore, casting away all uncleanness and abundance of naughtiness, with meekness receive the ingrafted word, which is able to save your souls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b55c6d" class="outline-3">
+<h3 id="org8b55c6d">James 1:22</h3>
+<div class="outline-text-3" id="text-org8b55c6d">
+<p>
+But be ye doers of the word and not hearers only, deceiving your own selves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a0a03b" class="outline-3">
+<h3 id="org2a0a03b">James 1:23</h3>
+<div class="outline-text-3" id="text-org2a0a03b">
+<p>
+For if a man be a hearer of the word and not a doer, he shall be compared to a man beholding his own countenance in a glass.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54ef290" class="outline-3">
+<h3 id="org54ef290">James 1:24</h3>
+<div class="outline-text-3" id="text-org54ef290">
+<p>
+For he beheld himself and went his way and presently forgot what manner of man he was.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org379a91f" class="outline-3">
+<h3 id="org379a91f">James 1:25</h3>
+<div class="outline-text-3" id="text-org379a91f">
+<p>
+But he that hath looked into the perfect law of liberty and hath continued therein, not becoming a forgetful hearer but a doer of the work: this man shall be blessed in his deed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dae962" class="outline-3">
+<h3 id="org3dae962">James 1:26</h3>
+<div class="outline-text-3" id="text-org3dae962">
+<p>
+And if any man think himself to be religious, not bridling his tongue but deceiving his own heart, this man&rsquo;s religion is vain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf260571" class="outline-3">
+<h3 id="orgf260571">James 1:27</h3>
+<div class="outline-text-3" id="text-orgf260571">
+<p>
+Religion clean and undefiled before God and the Father is this: to visit the fatherless and widows in their tribulation and to keep one&rsquo;s self unspotted from this world. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgda47667" class="outline-2">
+<h2 id="orgda47667">James 2</h2>
+<div class="outline-text-2" id="text-orgda47667">
+</div>
+<div id="outline-container-orgd870b99" class="outline-3">
+<h3 id="orgd870b99">James 2:1</h3>
+<div class="outline-text-3" id="text-orgd870b99">
+<p>
+My brethren, have not the faith of our Lord Jesus Christ of glory, with respect of persons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org027070b" class="outline-3">
+<h3 id="org027070b">James 2:2</h3>
+<div class="outline-text-3" id="text-org027070b">
+<p>
+For if there shall come into your assembly a man having a golden ring, in fine apparel; and there shall come in also a poor man in mean attire:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6219f59" class="outline-3">
+<h3 id="org6219f59">James 2:3</h3>
+<div class="outline-text-3" id="text-org6219f59">
+<p>
+And you have respect to him that is clothed with the fine apparel and shall say to him: Sit thou here well: but say to the poor man: Stand thou there, or: Sit under my footstool:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91d7d3d" class="outline-3">
+<h3 id="org91d7d3d">James 2:4</h3>
+<div class="outline-text-3" id="text-org91d7d3d">
+<p>
+Do you not judge within yourselves, and are become judges of unjust thoughts?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34dbd6a" class="outline-3">
+<h3 id="org34dbd6a">James 2:5</h3>
+<div class="outline-text-3" id="text-org34dbd6a">
+<p>
+Hearken, my dearest brethren: Hath not God chosen the poor in this world, rich in faith and heirs of the kingdom which God hath promised to them that love him?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5cce40" class="outline-3">
+<h3 id="orge5cce40">James 2:6</h3>
+<div class="outline-text-3" id="text-orge5cce40">
+<p>
+But you have dishonoured the poor man. Do not the rich oppress you by might? And do not they draw you before the judgment seats?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb775db5" class="outline-3">
+<h3 id="orgb775db5">James 2:7</h3>
+<div class="outline-text-3" id="text-orgb775db5">
+<p>
+Do not they blaspheme the good name that is invoked upon you?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9408ef" class="outline-3">
+<h3 id="orgc9408ef">James 2:8</h3>
+<div class="outline-text-3" id="text-orgc9408ef">
+<p>
+If then you fulfil the royal law, according to the scriptures: Thou shalt love thy neighbour as thyself; you do well.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e4cbde" class="outline-3">
+<h3 id="org0e4cbde">James 2:9</h3>
+<div class="outline-text-3" id="text-org0e4cbde">
+<p>
+But if you have respect to persons, you commit sin, being reproved by the law as transgressors.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1258246" class="outline-3">
+<h3 id="org1258246">James 2:10</h3>
+<div class="outline-text-3" id="text-org1258246">
+<p>
+And whosoever shall keep the whole law, but offend in one point, is become guilty of all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9742888" class="outline-3">
+<h3 id="org9742888">James 2:11</h3>
+<div class="outline-text-3" id="text-org9742888">
+<p>
+For he that said: Thou shalt not commit adultery, said also: Thou shalt not kill. Now if thou do not commit adultery, but shalt kill, thou art become a transgressor of the law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45f2314" class="outline-3">
+<h3 id="org45f2314">James 2:12</h3>
+<div class="outline-text-3" id="text-org45f2314">
+<p>
+So speak ye and so do, as being to be judged by the law of liberty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org173e428" class="outline-3">
+<h3 id="org173e428">James 2:13</h3>
+<div class="outline-text-3" id="text-org173e428">
+<p>
+For judgment without mercy to him that hath not done mercy. And mercy exalteth itself above judgment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5506f56" class="outline-3">
+<h3 id="org5506f56">James 2:14</h3>
+<div class="outline-text-3" id="text-org5506f56">
+<p>
+What shall it profit, my brethren, if a man say he hath faith, but hath not works? Shall faith be able to save him?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30078d7" class="outline-3">
+<h3 id="org30078d7">James 2:15</h3>
+<div class="outline-text-3" id="text-org30078d7">
+<p>
+And if a brother or sister be naked and want daily food:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbef6041" class="outline-3">
+<h3 id="orgbef6041">James 2:16</h3>
+<div class="outline-text-3" id="text-orgbef6041">
+<p>
+And one of you say to them: Go in peace, be ye warmed and filled; yet give them not those things that are necessary for the body, what shall it profit?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50b976e" class="outline-3">
+<h3 id="org50b976e">James 2:17</h3>
+<div class="outline-text-3" id="text-org50b976e">
+<p>
+So faith also, if it have not works, is dead in itself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd91a063" class="outline-3">
+<h3 id="orgd91a063">James 2:18</h3>
+<div class="outline-text-3" id="text-orgd91a063">
+<p>
+But some man will say: Thou hast faith, and I have works. Shew me thy faith without works; and I will shew thee, by works, my faith.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2f803f" class="outline-3">
+<h3 id="orgf2f803f">James 2:19</h3>
+<div class="outline-text-3" id="text-orgf2f803f">
+<p>
+Thou believest that there is one God. Thou dost well: the devils also believe and tremble.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf62a78d" class="outline-3">
+<h3 id="orgf62a78d">James 2:20</h3>
+<div class="outline-text-3" id="text-orgf62a78d">
+<p>
+But wilt thou know, O vain man, that faith without works is dead?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1074c34" class="outline-3">
+<h3 id="org1074c34">James 2:21</h3>
+<div class="outline-text-3" id="text-org1074c34">
+<p>
+Was not Abraham our father justified by works, offering up Isaac his son upon the altar?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0376785" class="outline-3">
+<h3 id="org0376785">James 2:22</h3>
+<div class="outline-text-3" id="text-org0376785">
+<p>
+Seest thou that faith did cooperate with his works and by works faith was made perfect?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0e73b0" class="outline-3">
+<h3 id="orga0e73b0">James 2:23</h3>
+<div class="outline-text-3" id="text-orga0e73b0">
+<p>
+And the scripture was fulfilled, saying: Abraham believed God, and it was reputed to him to justice, and he was called the friend of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1218392" class="outline-3">
+<h3 id="org1218392">James 2:24</h3>
+<div class="outline-text-3" id="text-org1218392">
+<p>
+Do you see that by works a man is justified, and not by faith only?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09ac3d3" class="outline-3">
+<h3 id="org09ac3d3">James 2:25</h3>
+<div class="outline-text-3" id="text-org09ac3d3">
+<p>
+And in like manner also Rahab the harlot, was not she justified by works, receiving the messengers and sending them out another way?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a12ba5" class="outline-3">
+<h3 id="org9a12ba5">James 2:26</h3>
+<div class="outline-text-3" id="text-org9a12ba5">
+<p>
+For even as the body without the spirit is dead: so also faith without works is dead. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org810124d" class="outline-2">
+<h2 id="org810124d">James 3</h2>
+<div class="outline-text-2" id="text-org810124d">
+</div>
+<div id="outline-container-org33d8978" class="outline-3">
+<h3 id="org33d8978">James 3:1</h3>
+<div class="outline-text-3" id="text-org33d8978">
+<p>
+Be ye not many masters, my brethren, knowing that you receive the greater judgment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f97e2a" class="outline-3">
+<h3 id="org4f97e2a">James 3:2</h3>
+<div class="outline-text-3" id="text-org4f97e2a">
+<p>
+For in many things we all offend. If any man offend not in word, the same is a perfect man. He is able also with a bridle to lead about the whole body.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab7773e" class="outline-3">
+<h3 id="orgab7773e">James 3:3</h3>
+<div class="outline-text-3" id="text-orgab7773e">
+<p>
+For if we put bits into the mouths of horses, that they may obey us: and we turn about their whole body.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org551245b" class="outline-3">
+<h3 id="org551245b">James 3:4</h3>
+<div class="outline-text-3" id="text-org551245b">
+<p>
+Behold also ships, whereas they are great and are driven by strong winds, yet are they turned about with a small helm, whithersoever the force of the governor willeth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org474db1d" class="outline-3">
+<h3 id="org474db1d">James 3:5</h3>
+<div class="outline-text-3" id="text-org474db1d">
+<p>
+Even so the tongue is indeed a little member and boasteth great things. Behold how small a fire kindleth a great wood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73e13ac" class="outline-3">
+<h3 id="org73e13ac">James 3:6</h3>
+<div class="outline-text-3" id="text-org73e13ac">
+<p>
+And the tongue is a fire, a world of iniquity. The tongue is placed among our members, which defileth the whole body and inflameth the wheel of our nativity, being set on fire by hell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8efb721" class="outline-3">
+<h3 id="org8efb721">James 3:7</h3>
+<div class="outline-text-3" id="text-org8efb721">
+<p>
+For every nature of beasts and of birds and of serpents and of the rest is tamed and hath been tamed, by the nature of man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3dc3e1" class="outline-3">
+<h3 id="orgc3dc3e1">James 3:8</h3>
+<div class="outline-text-3" id="text-orgc3dc3e1">
+<p>
+But the tongue no man can tame, an unquiet evil, full of deadly poison.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40ffc3d" class="outline-3">
+<h3 id="org40ffc3d">James 3:9</h3>
+<div class="outline-text-3" id="text-org40ffc3d">
+<p>
+By it we bless God and the Father: and by it we curse men who are made after the likeness of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54bd617" class="outline-3">
+<h3 id="org54bd617">James 3:10</h3>
+<div class="outline-text-3" id="text-org54bd617">
+<p>
+Out of the same mouth proceedeth blessing and cursing. My brethren, these things ought not so to be.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org537b1ad" class="outline-3">
+<h3 id="org537b1ad">James 3:11</h3>
+<div class="outline-text-3" id="text-org537b1ad">
+<p>
+Doth a fountain send forth, out of the same hole, sweet and bitter water?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c8bdba" class="outline-3">
+<h3 id="org1c8bdba">James 3:12</h3>
+<div class="outline-text-3" id="text-org1c8bdba">
+<p>
+Can the fig tree, my brethren, bear grapes? Or the vine, figs? So neither can the salt water yield sweet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14db38f" class="outline-3">
+<h3 id="org14db38f">James 3:13</h3>
+<div class="outline-text-3" id="text-org14db38f">
+<p>
+Who is a wise man and endued with knowledge, among you? Let him shew, by a good contestation, his work in the meekness of wisdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcfe5180" class="outline-3">
+<h3 id="orgcfe5180">James 3:14</h3>
+<div class="outline-text-3" id="text-orgcfe5180">
+<p>
+But if you have bitter zeal, and there be contention in your hearts: glory not and be not liars against the truth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac9414c" class="outline-3">
+<h3 id="orgac9414c">James 3:15</h3>
+<div class="outline-text-3" id="text-orgac9414c">
+<p>
+For this is not wisdom, descending from above: but earthly, sensual, devilish.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org242a7ee" class="outline-3">
+<h3 id="org242a7ee">James 3:16</h3>
+<div class="outline-text-3" id="text-org242a7ee">
+<p>
+For where envying and contention is: there is inconstancy and every evil work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab80967" class="outline-3">
+<h3 id="orgab80967">James 3:17</h3>
+<div class="outline-text-3" id="text-orgab80967">
+<p>
+But the wisdom that is from above, first indeed is chaste, then peaceable, modest, easy to be persuaded, consenting to the good, full of mercy and good fruits, without judging, without dissimulation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b56b92" class="outline-3">
+<h3 id="org5b56b92">James 3:18</h3>
+<div class="outline-text-3" id="text-org5b56b92">
+<p>
+And the fruit of justice is sown in peace, to them that make peace. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc921e79" class="outline-2">
+<h2 id="orgc921e79">James 4</h2>
+<div class="outline-text-2" id="text-orgc921e79">
+</div>
+<div id="outline-container-org3238dac" class="outline-3">
+<h3 id="org3238dac">James 4:1</h3>
+<div class="outline-text-3" id="text-org3238dac">
+<p>
+From whence are wars and contentions among you? Are they not hence, from your concupiscences, which war in your members?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1df6e3" class="outline-3">
+<h3 id="orga1df6e3">James 4:2</h3>
+<div class="outline-text-3" id="text-orga1df6e3">
+<p>
+You covet, and have not: you kill and envy and cannot obtain. You contend and war, and you have not: because you ask not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78e0cbd" class="outline-3">
+<h3 id="org78e0cbd">James 4:3</h3>
+<div class="outline-text-3" id="text-org78e0cbd">
+<p>
+You ask and receive not: because you ask amiss, that you may consume it on your concupiscences.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7725ae" class="outline-3">
+<h3 id="orga7725ae">James 4:4</h3>
+<div class="outline-text-3" id="text-orga7725ae">
+<p>
+Adulterers, know you not that the friendship of this world is the enemy of God? Whosoever therefore will be a friend of this world becometh an enemy of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8743d9a" class="outline-3">
+<h3 id="org8743d9a">James 4:5</h3>
+<div class="outline-text-3" id="text-org8743d9a">
+<p>
+Or do you think that the scripture saith in vain: To envy doth the spirit covet which dwelleth in you?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde9d510" class="outline-3">
+<h3 id="orgde9d510">James 4:6</h3>
+<div class="outline-text-3" id="text-orgde9d510">
+<p>
+But he giveth greater grace. Wherefore he saith: God resisteth the proud and giveth grace to the humble.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6107048" class="outline-3">
+<h3 id="org6107048">James 4:7</h3>
+<div class="outline-text-3" id="text-org6107048">
+<p>
+Be subject therefore to God. But resist the devil: and he will fly from you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc429b44" class="outline-3">
+<h3 id="orgc429b44">James 4:8</h3>
+<div class="outline-text-3" id="text-orgc429b44">
+<p>
+Draw nigh to God: and he will draw nigh to you. Cleanse your hands, ye sinners, and purify your hearts, ye double minded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6fedd8" class="outline-3">
+<h3 id="orgf6fedd8">James 4:9</h3>
+<div class="outline-text-3" id="text-orgf6fedd8">
+<p>
+Be afflicted and mourn and weep: let your laughter be turned into mourning and your joy into sorrow.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7aedf8" class="outline-3">
+<h3 id="orgf7aedf8">James 4:10</h3>
+<div class="outline-text-3" id="text-orgf7aedf8">
+<p>
+Be humbled in the sight of the Lord: and he will exalt you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga135492" class="outline-3">
+<h3 id="orga135492">James 4:11</h3>
+<div class="outline-text-3" id="text-orga135492">
+<p>
+Detract not one another, my brethren. He that detracteth his brother, or he that judgeth his brother, detracteth the law and judgeth the law. But if thou judge the law, thou art not a doer of the law, but a judge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee5efa4" class="outline-3">
+<h3 id="orgee5efa4">James 4:12</h3>
+<div class="outline-text-3" id="text-orgee5efa4">
+<p>
+There is one lawgiver and judge, that is able to destroy and to deliver.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b3e5d8" class="outline-3">
+<h3 id="org9b3e5d8">James 4:13</h3>
+<div class="outline-text-3" id="text-org9b3e5d8">
+<p>
+But who art thou that judgest thy neighbour? Behold, now you that say: To-day or to-morrow we will go into such a city, and there we will spend a year and will traffic and make our gain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6ed04c" class="outline-3">
+<h3 id="orga6ed04c">James 4:14</h3>
+<div class="outline-text-3" id="text-orga6ed04c">
+<p>
+Whereas you know not what shall be on the morrow.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a72a4d" class="outline-3">
+<h3 id="org0a72a4d">James 4:15</h3>
+<div class="outline-text-3" id="text-org0a72a4d">
+<p>
+For what is your life? It is a vapour which appeareth for a little while and afterwards shall vanish away. For that you should say: If the Lord will, and, If we shall live, we will do this or that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e553c0" class="outline-3">
+<h3 id="org2e553c0">James 4:16</h3>
+<div class="outline-text-3" id="text-org2e553c0">
+<p>
+But now you rejoice in your arrogancies. All such rejoicing is wicked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1964d7" class="outline-3">
+<h3 id="orga1964d7">James 4:17</h3>
+<div class="outline-text-3" id="text-orga1964d7">
+<p>
+To him therefore who knoweth to do good and doth it not, to him it is sin. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org66ec6d7" class="outline-2">
+<h2 id="org66ec6d7">James 5</h2>
+<div class="outline-text-2" id="text-org66ec6d7">
+</div>
+<div id="outline-container-orgdae7221" class="outline-3">
+<h3 id="orgdae7221">James 5:1</h3>
+<div class="outline-text-3" id="text-orgdae7221">
+<p>
+Go to now, ye rich men: weep and howl in your miseries, which shall come upon you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f922ad" class="outline-3">
+<h3 id="org7f922ad">James 5:2</h3>
+<div class="outline-text-3" id="text-org7f922ad">
+<p>
+Your riches are corrupted: and your garments are motheaten.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb245c4" class="outline-3">
+<h3 id="orgdb245c4">James 5:3</h3>
+<div class="outline-text-3" id="text-orgdb245c4">
+<p>
+Your gold and silver is cankered: and the rust of them shall be for a testimony against you and shall eat your flesh like fire. You have stored up to yourselves wrath against the last days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org800d77a" class="outline-3">
+<h3 id="org800d77a">James 5:4</h3>
+<div class="outline-text-3" id="text-org800d77a">
+<p>
+Behold the hire of the labourers who have reaped down your fields, which by fraud has been kept back by you, crieth: and the cry of them hath entered into the ears of the Lord of Sabaoth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org671ff21" class="outline-3">
+<h3 id="org671ff21">James 5:5</h3>
+<div class="outline-text-3" id="text-org671ff21">
+<p>
+You have feasted upon earth: and in riotousness you have nourished your hearts, in the day of slaughter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cf8f3b" class="outline-3">
+<h3 id="org8cf8f3b">James 5:6</h3>
+<div class="outline-text-3" id="text-org8cf8f3b">
+<p>
+You have condemned and put to death the Just One: and he resisted you not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1cb8d3b" class="outline-3">
+<h3 id="org1cb8d3b">James 5:7</h3>
+<div class="outline-text-3" id="text-org1cb8d3b">
+<p>
+Be patient therefore, brethren, until the coming of the Lord. Behold, the husbandman waiteth for the precious fruit of the earth: patiently bearing till he receive the early and latter rain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15b36f3" class="outline-3">
+<h3 id="org15b36f3">James 5:8</h3>
+<div class="outline-text-3" id="text-org15b36f3">
+<p>
+Be you therefore also patient and strengthen your hearts: for the coming of the Lord is at hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b08993" class="outline-3">
+<h3 id="org8b08993">James 5:9</h3>
+<div class="outline-text-3" id="text-org8b08993">
+<p>
+Grudge not, brethren, one against another, that you may not be judged. Behold the judge standeth before the door.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge92e8d8" class="outline-3">
+<h3 id="orge92e8d8">James 5:10</h3>
+<div class="outline-text-3" id="text-orge92e8d8">
+<p>
+Take, my brethren, for example of suffering evil, of labour and patience, the prophets who spoke in the name of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda85ef8" class="outline-3">
+<h3 id="orgda85ef8">James 5:11</h3>
+<div class="outline-text-3" id="text-orgda85ef8">
+<p>
+Behold, we account them blessed who have endured. You have heard of the patience of Job and you have seen the end of the Lord, that the Lord is merciful and compassionate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge622a7e" class="outline-3">
+<h3 id="orge622a7e">James 5:12</h3>
+<div class="outline-text-3" id="text-orge622a7e">
+<p>
+But above all things, my brethren, swear not, neither by heaven, nor by the earth, nor by any other oath. But let your speech be: Yea, Yea: No, No: that you fall not under judgment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64b4dfe" class="outline-3">
+<h3 id="org64b4dfe">James 5:13</h3>
+<div class="outline-text-3" id="text-org64b4dfe">
+<p>
+Is any of you sad? Let him pray: Is he cheerful in mind? Let him sing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd1bb64" class="outline-3">
+<h3 id="orgcd1bb64">James 5:14</h3>
+<div class="outline-text-3" id="text-orgcd1bb64">
+<p>
+Is any man sick among you? Let him bring in the priests of the church and let them pray over him, anointing him with oil in the name of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b075f2" class="outline-3">
+<h3 id="org9b075f2">James 5:15</h3>
+<div class="outline-text-3" id="text-org9b075f2">
+<p>
+And the prayer of faith shall save the sick man. And the Lord shall raise him up: and if he be in sins, they shall be forgiven him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38108ee" class="outline-3">
+<h3 id="org38108ee">James 5:16</h3>
+<div class="outline-text-3" id="text-org38108ee">
+<p>
+Confess therefore your sins one to another: and pray one for another, that you may be saved. For the continual prayer of a just man availeth much.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8629ee2" class="outline-3">
+<h3 id="org8629ee2">James 5:17</h3>
+<div class="outline-text-3" id="text-org8629ee2">
+<p>
+Elias was a man passible like unto us: and with prayer he prayed that it might not rain upon the earth. And it rained not for three years and six months.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga23b226" class="outline-3">
+<h3 id="orga23b226">James 5:18</h3>
+<div class="outline-text-3" id="text-orga23b226">
+<p>
+And he prayed again. And the heaven gave rain: and the earth brought forth her fruit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb48665" class="outline-3">
+<h3 id="orgdb48665">James 5:19</h3>
+<div class="outline-text-3" id="text-orgdb48665">
+<p>
+My brethren, if any of you err from the truth and one convert him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org377eee7" class="outline-3">
+<h3 id="org377eee7">James 5:20</h3>
+<div class="outline-text-3" id="text-org377eee7">
+<p>
+He must know that he who causeth a sinner to be converted from the error of his way shall save his soul from death and shall cover a multitude of sins.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

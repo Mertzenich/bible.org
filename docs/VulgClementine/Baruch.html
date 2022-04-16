@@ -1,0 +1,2399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8484d50">Baruch 1</a>
+<ul>
+<li><a href="#org4773180">Baruch 1:1</a></li>
+<li><a href="#orgd6bb294">Baruch 1:2</a></li>
+<li><a href="#org81017ce">Baruch 1:3</a></li>
+<li><a href="#orgf430a04">Baruch 1:4</a></li>
+<li><a href="#orgdeedbfa">Baruch 1:5</a></li>
+<li><a href="#orga495db4">Baruch 1:6</a></li>
+<li><a href="#orgf05baa4">Baruch 1:7</a></li>
+<li><a href="#org4c5b5c2">Baruch 1:8</a></li>
+<li><a href="#org075dcb6">Baruch 1:9</a></li>
+<li><a href="#org24d1fd7">Baruch 1:10</a></li>
+<li><a href="#org923909d">Baruch 1:11</a></li>
+<li><a href="#orgdf9f9b0">Baruch 1:12</a></li>
+<li><a href="#org9be10f0">Baruch 1:13</a></li>
+<li><a href="#orgb1188f0">Baruch 1:14</a></li>
+<li><a href="#orgf54bbe9">Baruch 1:15</a></li>
+<li><a href="#org26c72e7">Baruch 1:16</a></li>
+<li><a href="#orgbafcded">Baruch 1:17</a></li>
+<li><a href="#org291fdaa">Baruch 1:18</a></li>
+<li><a href="#orgd390fca">Baruch 1:19</a></li>
+<li><a href="#org80c7632">Baruch 1:20</a></li>
+<li><a href="#org575d29e">Baruch 1:21</a></li>
+<li><a href="#orge878917">Baruch 1:22</a></li>
+</ul>
+</li>
+<li><a href="#org99018af">Baruch 2</a>
+<ul>
+<li><a href="#org20aa45f">Baruch 2:1</a></li>
+<li><a href="#org5dada2d">Baruch 2:2</a></li>
+<li><a href="#orgfb28f58">Baruch 2:3</a></li>
+<li><a href="#orgf38bf4c">Baruch 2:4</a></li>
+<li><a href="#org77a22d6">Baruch 2:5</a></li>
+<li><a href="#orgdc6bdd9">Baruch 2:6</a></li>
+<li><a href="#org3d6441c">Baruch 2:7</a></li>
+<li><a href="#org5b12687">Baruch 2:8</a></li>
+<li><a href="#org6587269">Baruch 2:9</a></li>
+<li><a href="#org06fae76">Baruch 2:10</a></li>
+<li><a href="#orgc398483">Baruch 2:11</a></li>
+<li><a href="#org0258dba">Baruch 2:12</a></li>
+<li><a href="#org6d97416">Baruch 2:13</a></li>
+<li><a href="#org79a2a70">Baruch 2:14</a></li>
+<li><a href="#org24489bf">Baruch 2:15</a></li>
+<li><a href="#orgf16dff2">Baruch 2:16</a></li>
+<li><a href="#org168d41c">Baruch 2:17</a></li>
+<li><a href="#org47548d7">Baruch 2:18</a></li>
+<li><a href="#org5833aea">Baruch 2:19</a></li>
+<li><a href="#org30789fc">Baruch 2:20</a></li>
+<li><a href="#orgfb8973f">Baruch 2:21</a></li>
+<li><a href="#orgbac5776">Baruch 2:22</a></li>
+<li><a href="#orgcbcc9b2">Baruch 2:23</a></li>
+<li><a href="#org0c80deb">Baruch 2:24</a></li>
+<li><a href="#orgb61c3ba">Baruch 2:25</a></li>
+<li><a href="#orga8a10b9">Baruch 2:26</a></li>
+<li><a href="#org415c0c3">Baruch 2:27</a></li>
+<li><a href="#orgb043dce">Baruch 2:28</a></li>
+<li><a href="#orga72da92">Baruch 2:29</a></li>
+<li><a href="#orga2397f2">Baruch 2:30</a></li>
+<li><a href="#org05025e4">Baruch 2:31</a></li>
+<li><a href="#org8ac79cb">Baruch 2:32</a></li>
+<li><a href="#orge84cb5a">Baruch 2:33</a></li>
+<li><a href="#org8760786">Baruch 2:34</a></li>
+<li><a href="#org39a33ae">Baruch 2:35</a></li>
+</ul>
+</li>
+<li><a href="#orgf6592ab">Baruch 3</a>
+<ul>
+<li><a href="#orgf60fd30">Baruch 3:1</a></li>
+<li><a href="#org8b19952">Baruch 3:2</a></li>
+<li><a href="#orgb28d387">Baruch 3:3</a></li>
+<li><a href="#org7612a2b">Baruch 3:4</a></li>
+<li><a href="#org9d96dad">Baruch 3:5</a></li>
+<li><a href="#org78ed7d8">Baruch 3:6</a></li>
+<li><a href="#org24e8460">Baruch 3:7</a></li>
+<li><a href="#org5db1e03">Baruch 3:8</a></li>
+<li><a href="#org533d4d3">Baruch 3:9</a></li>
+<li><a href="#org423a9f1">Baruch 3:10</a></li>
+<li><a href="#org804af7b">Baruch 3:11</a></li>
+<li><a href="#orged9488d">Baruch 3:12</a></li>
+<li><a href="#orgbfed4af">Baruch 3:13</a></li>
+<li><a href="#org0950eb6">Baruch 3:14</a></li>
+<li><a href="#org0b1d51d">Baruch 3:15</a></li>
+<li><a href="#org38fa34d">Baruch 3:16</a></li>
+<li><a href="#orga31dc9e">Baruch 3:17</a></li>
+<li><a href="#orga36fd67">Baruch 3:18</a></li>
+<li><a href="#org023e3f0">Baruch 3:19</a></li>
+<li><a href="#orgd01be4a">Baruch 3:20</a></li>
+<li><a href="#orgdbe3731">Baruch 3:21</a></li>
+<li><a href="#org5a51929">Baruch 3:22</a></li>
+<li><a href="#org505d1ae">Baruch 3:23</a></li>
+<li><a href="#orgb6edf67">Baruch 3:24</a></li>
+<li><a href="#org83672db">Baruch 3:25</a></li>
+<li><a href="#orgb7406aa">Baruch 3:26</a></li>
+<li><a href="#org912c948">Baruch 3:27</a></li>
+<li><a href="#orge7bcf27">Baruch 3:28</a></li>
+<li><a href="#orgac997f7">Baruch 3:29</a></li>
+<li><a href="#orga5364f1">Baruch 3:30</a></li>
+<li><a href="#orgac0cc66">Baruch 3:31</a></li>
+<li><a href="#orge06c00f">Baruch 3:32</a></li>
+<li><a href="#org7362ebc">Baruch 3:33</a></li>
+<li><a href="#orgd4fe6b2">Baruch 3:34</a></li>
+<li><a href="#orgf0d91ac">Baruch 3:35</a></li>
+<li><a href="#orgf1646fb">Baruch 3:36</a></li>
+<li><a href="#org0dc5998">Baruch 3:37</a></li>
+<li><a href="#org79b5e19">Baruch 3:38</a></li>
+</ul>
+</li>
+<li><a href="#org726423d">Baruch 4</a>
+<ul>
+<li><a href="#orgbd2e1ab">Baruch 4:1</a></li>
+<li><a href="#org7eaad44">Baruch 4:2</a></li>
+<li><a href="#orgd5dcbef">Baruch 4:3</a></li>
+<li><a href="#org385a766">Baruch 4:4</a></li>
+<li><a href="#org63059fc">Baruch 4:5</a></li>
+<li><a href="#orgafffa57">Baruch 4:6</a></li>
+<li><a href="#orgd4f0d65">Baruch 4:7</a></li>
+<li><a href="#org701ec7e">Baruch 4:8</a></li>
+<li><a href="#org49c03b3">Baruch 4:9</a></li>
+<li><a href="#org36ad01c">Baruch 4:10</a></li>
+<li><a href="#orgf9519fd">Baruch 4:11</a></li>
+<li><a href="#orgd762c6d">Baruch 4:12</a></li>
+<li><a href="#orgfc9202a">Baruch 4:13</a></li>
+<li><a href="#orgb3ef5d6">Baruch 4:14</a></li>
+<li><a href="#org9a4a47e">Baruch 4:15</a></li>
+<li><a href="#org0c891ff">Baruch 4:16</a></li>
+<li><a href="#orgd05265a">Baruch 4:17</a></li>
+<li><a href="#org2241965">Baruch 4:18</a></li>
+<li><a href="#orgeb4a23c">Baruch 4:19</a></li>
+<li><a href="#orgf38e072">Baruch 4:20</a></li>
+<li><a href="#orgca97d03">Baruch 4:21</a></li>
+<li><a href="#org82af7a5">Baruch 4:22</a></li>
+<li><a href="#orgc57d038">Baruch 4:23</a></li>
+<li><a href="#org87fd246">Baruch 4:24</a></li>
+<li><a href="#org7de2072">Baruch 4:25</a></li>
+<li><a href="#orgaa015ed">Baruch 4:26</a></li>
+<li><a href="#org764c76d">Baruch 4:27</a></li>
+<li><a href="#org7ca5a7c">Baruch 4:28</a></li>
+<li><a href="#org01014ae">Baruch 4:29</a></li>
+<li><a href="#orgfc13090">Baruch 4:30</a></li>
+<li><a href="#orgecfc079">Baruch 4:31</a></li>
+<li><a href="#org9ada460">Baruch 4:32</a></li>
+<li><a href="#org9d9d9c6">Baruch 4:33</a></li>
+<li><a href="#orgd384632">Baruch 4:34</a></li>
+<li><a href="#org8ebbffa">Baruch 4:35</a></li>
+<li><a href="#org6b22eb1">Baruch 4:36</a></li>
+<li><a href="#org58d599f">Baruch 4:37</a></li>
+</ul>
+</li>
+<li><a href="#org7884f64">Baruch 5</a>
+<ul>
+<li><a href="#orgc662d3c">Baruch 5:1</a></li>
+<li><a href="#org8a4e72a">Baruch 5:2</a></li>
+<li><a href="#orgc94124c">Baruch 5:3</a></li>
+<li><a href="#orgbed7534">Baruch 5:4</a></li>
+<li><a href="#orga12bd79">Baruch 5:5</a></li>
+<li><a href="#org92e9481">Baruch 5:6</a></li>
+<li><a href="#org7149d02">Baruch 5:7</a></li>
+<li><a href="#org1b3305d">Baruch 5:8</a></li>
+<li><a href="#org3eca25c">Baruch 5:9</a></li>
+</ul>
+</li>
+<li><a href="#orgf9bd8de">Baruch 6</a>
+<ul>
+<li><a href="#org21c31aa">Baruch 6:1</a></li>
+<li><a href="#org11bb3ce">Baruch 6:2</a></li>
+<li><a href="#orgbb39e59">Baruch 6:3</a></li>
+<li><a href="#org9280a1f">Baruch 6:4</a></li>
+<li><a href="#org628c189">Baruch 6:5</a></li>
+<li><a href="#org5b4f746">Baruch 6:6</a></li>
+<li><a href="#orgb5a340d">Baruch 6:7</a></li>
+<li><a href="#org19faf80">Baruch 6:8</a></li>
+<li><a href="#orga34e84f">Baruch 6:9</a></li>
+<li><a href="#org18ac952">Baruch 6:10</a></li>
+<li><a href="#org90f36cc">Baruch 6:11</a></li>
+<li><a href="#org6217752">Baruch 6:12</a></li>
+<li><a href="#org4807741">Baruch 6:13</a></li>
+<li><a href="#org7b15868">Baruch 6:14</a></li>
+<li><a href="#org8335378">Baruch 6:15</a></li>
+<li><a href="#orgd80526f">Baruch 6:16</a></li>
+<li><a href="#orgafa8f67">Baruch 6:17</a></li>
+<li><a href="#orgce700de">Baruch 6:18</a></li>
+<li><a href="#org9c95513">Baruch 6:19</a></li>
+<li><a href="#org150f1e6">Baruch 6:20</a></li>
+<li><a href="#orgeb9fb5c">Baruch 6:21</a></li>
+<li><a href="#org645af24">Baruch 6:22</a></li>
+<li><a href="#org297facf">Baruch 6:23</a></li>
+<li><a href="#org499878f">Baruch 6:24</a></li>
+<li><a href="#org7ec1930">Baruch 6:25</a></li>
+<li><a href="#org5c222ce">Baruch 6:26</a></li>
+<li><a href="#org440adb6">Baruch 6:27</a></li>
+<li><a href="#org8ea889a">Baruch 6:28</a></li>
+<li><a href="#org9ba99e2">Baruch 6:29</a></li>
+<li><a href="#orgcad93b6">Baruch 6:30</a></li>
+<li><a href="#org505b59a">Baruch 6:31</a></li>
+<li><a href="#org7cf743c">Baruch 6:32</a></li>
+<li><a href="#org66e84f7">Baruch 6:33</a></li>
+<li><a href="#orgccb0baa">Baruch 6:34</a></li>
+<li><a href="#org7af3fd8">Baruch 6:35</a></li>
+<li><a href="#org654ba44">Baruch 6:36</a></li>
+<li><a href="#org1f2d4bf">Baruch 6:37</a></li>
+<li><a href="#orgdddefed">Baruch 6:38</a></li>
+<li><a href="#orgec2c105">Baruch 6:39</a></li>
+<li><a href="#orga85cf0f">Baruch 6:40</a></li>
+<li><a href="#org419e748">Baruch 6:41</a></li>
+<li><a href="#org5a56562">Baruch 6:42</a></li>
+<li><a href="#orgf211ba3">Baruch 6:43</a></li>
+<li><a href="#org11bcb7c">Baruch 6:44</a></li>
+<li><a href="#org7f94ffa">Baruch 6:45</a></li>
+<li><a href="#org983fb95">Baruch 6:46</a></li>
+<li><a href="#orgc7f965c">Baruch 6:47</a></li>
+<li><a href="#org6e9e334">Baruch 6:48</a></li>
+<li><a href="#orgef9ef08">Baruch 6:49</a></li>
+<li><a href="#org0434ffb">Baruch 6:50</a></li>
+<li><a href="#orgb577d9d">Baruch 6:51</a></li>
+<li><a href="#orgf286c64">Baruch 6:52</a></li>
+<li><a href="#orga9ed407">Baruch 6:53</a></li>
+<li><a href="#org525ca8c">Baruch 6:54</a></li>
+<li><a href="#org369f3b2">Baruch 6:55</a></li>
+<li><a href="#orgc257f26">Baruch 6:56</a></li>
+<li><a href="#orgc22f5be">Baruch 6:57</a></li>
+<li><a href="#orgb6946d8">Baruch 6:58</a></li>
+<li><a href="#org58593e0">Baruch 6:59</a></li>
+<li><a href="#org15aecc7">Baruch 6:60</a></li>
+<li><a href="#org352fdae">Baruch 6:61</a></li>
+<li><a href="#orge6e8189">Baruch 6:62</a></li>
+<li><a href="#orga926f7d">Baruch 6:63</a></li>
+<li><a href="#org0e0ac17">Baruch 6:64</a></li>
+<li><a href="#orgf7c4978">Baruch 6:65</a></li>
+<li><a href="#orga1e2f92">Baruch 6:66</a></li>
+<li><a href="#orgbafd97c">Baruch 6:67</a></li>
+<li><a href="#orgfd9d6ca">Baruch 6:68</a></li>
+<li><a href="#org483240e">Baruch 6:69</a></li>
+<li><a href="#org7d37668">Baruch 6:70</a></li>
+<li><a href="#org197927c">Baruch 6:71</a></li>
+<li><a href="#org5562052">Baruch 6:72</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8484d50" class="outline-2">
+<h2 id="org8484d50">Baruch 1</h2>
+<div class="outline-text-2" id="text-org8484d50">
+</div>
+<div id="outline-container-org4773180" class="outline-3">
+<h3 id="org4773180">Baruch 1:1</h3>
+<div class="outline-text-3" id="text-org4773180">
+<p>
+Et hæc verba libri quæ scripsit Baruch filius Neriæ, filii Maasiæ, filii Sedeciæ, filii Sedei, filii Helciæ, in Babylonia,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6bb294" class="outline-3">
+<h3 id="orgd6bb294">Baruch 1:2</h3>
+<div class="outline-text-3" id="text-orgd6bb294">
+<p>
+in anno quinto, in septimo die mensis, in tempore quo ceperunt Chaldæi Jerusalem, et succenderunt eam igni.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81017ce" class="outline-3">
+<h3 id="org81017ce">Baruch 1:3</h3>
+<div class="outline-text-3" id="text-org81017ce">
+<p>
+Et legit Baruch verba libri hujus ad aures Jechoniæ filii Joakim regis Juda, et ad aures universi populi venientis ad librum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf430a04" class="outline-3">
+<h3 id="orgf430a04">Baruch 1:4</h3>
+<div class="outline-text-3" id="text-orgf430a04">
+<p>
+et ad aures potentium, filiorum regum, et ad aures presbyterorum, et ad aures populi, a minimo usque ad maximum eorum, omnium habitantium in Babylonia, ad flumen Sodi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdeedbfa" class="outline-3">
+<h3 id="orgdeedbfa">Baruch 1:5</h3>
+<div class="outline-text-3" id="text-orgdeedbfa">
+<p>
+Qui audientes plorabant, et jejunabant, et orabant in conspectu Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga495db4" class="outline-3">
+<h3 id="orga495db4">Baruch 1:6</h3>
+<div class="outline-text-3" id="text-orga495db4">
+<p>
+Et collegerunt pecuniam, secundum quod potuit uniuscujusque manus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf05baa4" class="outline-3">
+<h3 id="orgf05baa4">Baruch 1:7</h3>
+<div class="outline-text-3" id="text-orgf05baa4">
+<p>
+et miserunt in Jerusalem ad Joakim filium Helciæ filii Salom sacerdotem, et ad sacerdotes, et ad omnem populum qui inventi sunt cum eo in Jerusalem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c5b5c2" class="outline-3">
+<h3 id="org4c5b5c2">Baruch 1:8</h3>
+<div class="outline-text-3" id="text-org4c5b5c2">
+<p>
+cum acciperet vasa templi Domini, quæ ablata fuerant de templo, revocare in terram Juda, decima die mensis Sivan, vasa argentea quæ fecit Sedecias filius Josiæ rex Juda,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org075dcb6" class="outline-3">
+<h3 id="org075dcb6">Baruch 1:9</h3>
+<div class="outline-text-3" id="text-org075dcb6">
+<p>
+posteaquam cepisset Nabuchodonosor rex Babylonis Jechoniam, et principes, et cunctos potentes, et populum terræ, ab Jerusalem, et duxit eos vinctos in Babylonem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24d1fd7" class="outline-3">
+<h3 id="org24d1fd7">Baruch 1:10</h3>
+<div class="outline-text-3" id="text-org24d1fd7">
+<p>
+Et dixerunt : Ecce misimus ad vos pecunias, de quibus emite holocautomata et thus : et facite manna, et offerte pro peccato, ad aram Domini Dei nostri :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org923909d" class="outline-3">
+<h3 id="org923909d">Baruch 1:11</h3>
+<div class="outline-text-3" id="text-org923909d">
+<p>
+et orate pro vita Nabuchodonosor regis Babylonis, et pro vita Baltassar filii ejus, ut sint dies eorum sicut dies cæli super terram :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf9f9b0" class="outline-3">
+<h3 id="orgdf9f9b0">Baruch 1:12</h3>
+<div class="outline-text-3" id="text-orgdf9f9b0">
+<p>
+et ut det Dominus virtutem nobis, et illuminet oculos nostros, ut vivamus sub umbra Nabuchodonosor regis Babylonis, et sub umbra Baltassar filii ejus, et serviamus eis multis diebus, et inveniamus gratiam in conspectu eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9be10f0" class="outline-3">
+<h3 id="org9be10f0">Baruch 1:13</h3>
+<div class="outline-text-3" id="text-org9be10f0">
+<p>
+Et pro nobis ipsis orate ad Dominum Deum nostrum, quia peccavimus Domino Deo nostro, et non est aversus furor ejus a nobis usque in hunc diem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1188f0" class="outline-3">
+<h3 id="orgb1188f0">Baruch 1:14</h3>
+<div class="outline-text-3" id="text-orgb1188f0">
+<p>
+Et legite librum istum quem misimus ad vos recitari in templo Domini, in die solemni et in die opportuno :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf54bbe9" class="outline-3">
+<h3 id="orgf54bbe9">Baruch 1:15</h3>
+<div class="outline-text-3" id="text-orgf54bbe9">
+<p>
+et dicetis :   Domino Deo nostro justitia,  nobis autem confusio faciei nostræ,  sicut est dies hæc omni Juda,  et habitantibus in Jerusalem : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26c72e7" class="outline-3">
+<h3 id="org26c72e7">Baruch 1:16</h3>
+<div class="outline-text-3" id="text-org26c72e7">
+<p>
+regibus nostris, et principibus nostris,  et sacerdotibus nostris, et prophetis nostris,  et patribus nostris. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbafcded" class="outline-3">
+<h3 id="orgbafcded">Baruch 1:17</h3>
+<div class="outline-text-3" id="text-orgbafcded">
+<p>
+Peccavimus ante Dominum Deum nostrum,  et non credidimus, diffidentes in eum : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org291fdaa" class="outline-3">
+<h3 id="org291fdaa">Baruch 1:18</h3>
+<div class="outline-text-3" id="text-org291fdaa">
+<p>
+et non fuimus subjectibiles illi,  et non audivimus vocem Domini Dei nostri,  ut ambularemus in mandatis ejus, quæ dedit nobis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd390fca" class="outline-3">
+<h3 id="orgd390fca">Baruch 1:19</h3>
+<div class="outline-text-3" id="text-orgd390fca">
+<p>
+A die qua eduxit patres nostros de terra Ægypti,  usque ad diem hanc,  eramus incredibiles ad Dominum Deum nostrum :  et dissipati recessimus, ne audiremus vocem ipsius : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80c7632" class="outline-3">
+<h3 id="org80c7632">Baruch 1:20</h3>
+<div class="outline-text-3" id="text-org80c7632">
+<p>
+et adhæserunt nobis multa mala et maledictiones  quæ constituit Dominus Moysi servo suo,  qui eduxit patres nostros de terra Ægypti,  dare nobis terram fluentem lac et mel, sicut hodierna die. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org575d29e" class="outline-3">
+<h3 id="org575d29e">Baruch 1:21</h3>
+<div class="outline-text-3" id="text-org575d29e">
+<p>
+Et non audivimus vocem Domini Dei nostri,  secundum omnia verba prophetarum quos misit ad nos : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge878917" class="outline-3">
+<h3 id="orge878917">Baruch 1:22</h3>
+<div class="outline-text-3" id="text-orge878917">
+<p>
+et abivimus unusquisque in sensum cordis nostri maligni,  operari diis alienis,  facientes mala ante oculos Domini Dei nostri.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org99018af" class="outline-2">
+<h2 id="org99018af">Baruch 2</h2>
+<div class="outline-text-2" id="text-org99018af">
+</div>
+<div id="outline-container-org20aa45f" class="outline-3">
+<h3 id="org20aa45f">Baruch 2:1</h3>
+<div class="outline-text-3" id="text-org20aa45f">
+<p>
+Propter quod statuit Dominus Deus noster verbum suum,  quod locutus est ad nos,  et ad judices nostros qui judicaverunt Israël,  et ad reges nostros, et ad principes nostros,  et ad omnem Israël et Juda : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5dada2d" class="outline-3">
+<h3 id="org5dada2d">Baruch 2:2</h3>
+<div class="outline-text-3" id="text-org5dada2d">
+<p>
+ut adduceret Dominus super nos mala magna,  quæ non sunt facta sub cælo  quemadmodum facta sunt in Jerusalem,  secundum quæ scripta sunt in lege Moysi, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb28f58" class="outline-3">
+<h3 id="orgfb28f58">Baruch 2:3</h3>
+<div class="outline-text-3" id="text-orgfb28f58">
+<p>
+et manducaret homo carnes filii sui et carnes filiæ suæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf38bf4c" class="outline-3">
+<h3 id="orgf38bf4c">Baruch 2:4</h3>
+<div class="outline-text-3" id="text-orgf38bf4c">
+<p>
+Et dedit eos sub manu regum omnium qui sunt in circuitu nostro,  in improperium et in desolationem in omnibus populis  in quibus nos dispersit Dominus : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77a22d6" class="outline-3">
+<h3 id="org77a22d6">Baruch 2:5</h3>
+<div class="outline-text-3" id="text-org77a22d6">
+<p>
+et facti sumus subtus, et non supra,  quia peccavimus Domino Deo nostro,  non obaudiendo voci ipsius. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc6bdd9" class="outline-3">
+<h3 id="orgdc6bdd9">Baruch 2:6</h3>
+<div class="outline-text-3" id="text-orgdc6bdd9">
+<p>
+Domino Deo nostro justitia,  nobis autem et patribus nostris confusio faciei,  sicut est dies hæc : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d6441c" class="outline-3">
+<h3 id="org3d6441c">Baruch 2:7</h3>
+<div class="outline-text-3" id="text-org3d6441c">
+<p>
+quia locutus est Dominus super nos omnia mala hæc  quæ venerunt super nos : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b12687" class="outline-3">
+<h3 id="org5b12687">Baruch 2:8</h3>
+<div class="outline-text-3" id="text-org5b12687">
+<p>
+et non sumus deprecati faciem Domini Dei nostri,  ut reverteremur unusquisque nostrum a viis nostris pessimis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6587269" class="outline-3">
+<h3 id="org6587269">Baruch 2:9</h3>
+<div class="outline-text-3" id="text-org6587269">
+<p>
+Et vigilavit Dominus in malis,  et adduxit ea super nos :  quia justus est Dominus in omnibus operibus suis  quæ mandavit nobis, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06fae76" class="outline-3">
+<h3 id="org06fae76">Baruch 2:10</h3>
+<div class="outline-text-3" id="text-org06fae76">
+<p>
+et non audivimus vocem ipsius  ut iremus in præceptis Domini,  quæ dedit ante faciem nostram. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc398483" class="outline-3">
+<h3 id="orgc398483">Baruch 2:11</h3>
+<div class="outline-text-3" id="text-orgc398483">
+<p>
+Et nunc, Domine Deus Israël,  qui eduxisti populum tuum de terra Ægypti  in manu valida, et in signis, et in prodigiis,  et in virtute tua magna, et in brachio excelso,  et fecisti tibi nomen sicut est dies iste : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0258dba" class="outline-3">
+<h3 id="org0258dba">Baruch 2:12</h3>
+<div class="outline-text-3" id="text-org0258dba">
+<p>
+peccavimus, impie egimus,  inique gessimus, Domine Deus noster,  in omnibus justitiis tuis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d97416" class="outline-3">
+<h3 id="org6d97416">Baruch 2:13</h3>
+<div class="outline-text-3" id="text-org6d97416">
+<p>
+Avertatur ira tua a nobis,  quia derelicti sumus pauci inter gentes ubi dispersisti nos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79a2a70" class="outline-3">
+<h3 id="org79a2a70">Baruch 2:14</h3>
+<div class="outline-text-3" id="text-org79a2a70">
+<p>
+Exaudi, Domine, preces nostras et orationes nostras,  et educ nos propter te,  et da nobis invenire gratiam ante faciem eorum qui nos abduxerunt : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24489bf" class="outline-3">
+<h3 id="org24489bf">Baruch 2:15</h3>
+<div class="outline-text-3" id="text-org24489bf">
+<p>
+ut sciat omnis terra quia tu es Dominus Deus noster,  et quia nomen tuum invocatum est super Israël,  et super genus ipsius. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf16dff2" class="outline-3">
+<h3 id="orgf16dff2">Baruch 2:16</h3>
+<div class="outline-text-3" id="text-orgf16dff2">
+<p>
+Respice, Domine, de domo sancta tua in nos,  et inclina aurem tuam, et exaudi nos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org168d41c" class="outline-3">
+<h3 id="org168d41c">Baruch 2:17</h3>
+<div class="outline-text-3" id="text-org168d41c">
+<p>
+Aperi oculos tuos et vide :  quia non mortui qui sunt in inferno,  quorum spiritus acceptus est a visceribus suis,  dabunt honorem et justificationem Domino : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47548d7" class="outline-3">
+<h3 id="org47548d7">Baruch 2:18</h3>
+<div class="outline-text-3" id="text-org47548d7">
+<p>
+sed anima quæ tristis est super magnitudine mali,  et incedit curva et infirma,  et oculi deficientes, et anima esuriens,  dat tibi gloriam et justitiam Domino. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5833aea" class="outline-3">
+<h3 id="org5833aea">Baruch 2:19</h3>
+<div class="outline-text-3" id="text-org5833aea">
+<p>
+Quia non secundum justitias patrum nostrorum  nos fundimus preces et petimus misericordiam  ante conspectum tuum, Domine Deus noster : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30789fc" class="outline-3">
+<h3 id="org30789fc">Baruch 2:20</h3>
+<div class="outline-text-3" id="text-org30789fc">
+<p>
+sed quia misisti iram tuam et furorem tuum super nos,  sicut locutus es in manu puerorum tuorum prophetarum,  dicens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb8973f" class="outline-3">
+<h3 id="orgfb8973f">Baruch 2:21</h3>
+<div class="outline-text-3" id="text-orgfb8973f">
+<p>
+Sic dicit Dominus :  Inclinate humerum vestrum et cervicem vestram,  et opera facite regi Babylonis,  et sedebitis in terra quam dedi patribus vestris. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbac5776" class="outline-3">
+<h3 id="orgbac5776">Baruch 2:22</h3>
+<div class="outline-text-3" id="text-orgbac5776">
+<p>
+Quod si non audieritis vocem Domini Dei vestri,  operari regi Babyloniæ,  defectionem vestram faciam de civitatibus Juda,  et a foris Jerusalem, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcbcc9b2" class="outline-3">
+<h3 id="orgcbcc9b2">Baruch 2:23</h3>
+<div class="outline-text-3" id="text-orgcbcc9b2">
+<p>
+et auferam a vobis vocem jucunditatis et vocem gaudii,  et vocem sponsi et vocem sponsæ,  et erit omnis terra sine vestigio ab inhabitantibus eam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c80deb" class="outline-3">
+<h3 id="org0c80deb">Baruch 2:24</h3>
+<div class="outline-text-3" id="text-org0c80deb">
+<p>
+Et non audierunt vocem tuam,  ut operarentur regi Babylonis :  et statuisti verba tua,  quæ locutus es in manibus puerorum tuorum prophetarum,  ut transferrentur ossa regum nostrorum  et ossa patrum nostrorum de loco suo : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb61c3ba" class="outline-3">
+<h3 id="orgb61c3ba">Baruch 2:25</h3>
+<div class="outline-text-3" id="text-orgb61c3ba">
+<p>
+et ecce projecta sunt in calore solis et in gelu noctis,  et mortui sunt in doloribus pessimis,  in fame et in gladio, et in emissione. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8a10b9" class="outline-3">
+<h3 id="orga8a10b9">Baruch 2:26</h3>
+<div class="outline-text-3" id="text-orga8a10b9">
+<p>
+Et posuisti templum in quo invocatum est nomen tuum in ipso  sicut hæc dies,  propter iniquitatem domus Israël et domus Juda. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org415c0c3" class="outline-3">
+<h3 id="org415c0c3">Baruch 2:27</h3>
+<div class="outline-text-3" id="text-org415c0c3">
+<p>
+Et fecisti in nobis, Domine Deus noster,  secundum omnem bonitatem tuam  et secundum omnem miserationem tuam illam magnam : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb043dce" class="outline-3">
+<h3 id="orgb043dce">Baruch 2:28</h3>
+<div class="outline-text-3" id="text-orgb043dce">
+<p>
+sicut locutus es in manu pueri tui Moysi,  in die qua præcepisti ei scribere legem tuam coram filiis Israël, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga72da92" class="outline-3">
+<h3 id="orga72da92">Baruch 2:29</h3>
+<div class="outline-text-3" id="text-orga72da92">
+<p>
+dicens : Si non audieritis vocem meam,  multitudo hæc magna convertetur in minimam inter gentes,  quo ego eos dispergam : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2397f2" class="outline-3">
+<h3 id="orga2397f2">Baruch 2:30</h3>
+<div class="outline-text-3" id="text-orga2397f2">
+<p>
+quia scio quod me non audiet populus :  populus est enim dura cervice.  Et convertetur ad cor suum in terra captivitatis suæ, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05025e4" class="outline-3">
+<h3 id="org05025e4">Baruch 2:31</h3>
+<div class="outline-text-3" id="text-org05025e4">
+<p>
+et scient quia ego sum Dominus Deus eorum :  et dabo eis cor, et intelligent ;  aures, et audient : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ac79cb" class="outline-3">
+<h3 id="org8ac79cb">Baruch 2:32</h3>
+<div class="outline-text-3" id="text-org8ac79cb">
+<p>
+et laudabunt me in terra captivitatis suæ,  et memores erunt nominis mei, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge84cb5a" class="outline-3">
+<h3 id="orge84cb5a">Baruch 2:33</h3>
+<div class="outline-text-3" id="text-orge84cb5a">
+<p>
+et avertent se a dorso suo duro,  et a malignitatibus suis :  quia reminiscentur viam patrum suorum,  qui peccaverunt in me. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8760786" class="outline-3">
+<h3 id="org8760786">Baruch 2:34</h3>
+<div class="outline-text-3" id="text-org8760786">
+<p>
+Et revocabo illos in terram quam juravi patribus eorum,  Abraham, Isaac, et Jacob :  et dominabuntur ejus, et multiplicabo eos,  et non minorabuntur : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39a33ae" class="outline-3">
+<h3 id="org39a33ae">Baruch 2:35</h3>
+<div class="outline-text-3" id="text-org39a33ae">
+<p>
+et statuam illis testamentum alterum sempiternum,  ut sim illis in Deum,  et ipsi erunt mihi in populum :  et non movebo amplius populum meum, filios Israël,  a terra quam dedi illis.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf6592ab" class="outline-2">
+<h2 id="orgf6592ab">Baruch 3</h2>
+<div class="outline-text-2" id="text-orgf6592ab">
+</div>
+<div id="outline-container-orgf60fd30" class="outline-3">
+<h3 id="orgf60fd30">Baruch 3:1</h3>
+<div class="outline-text-3" id="text-orgf60fd30">
+<p>
+Et nunc, Domine omnipotens, Deus Israël,  anima in angustiis, et spiritus anxius clamat ad te. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b19952" class="outline-3">
+<h3 id="org8b19952">Baruch 3:2</h3>
+<div class="outline-text-3" id="text-org8b19952">
+<p>
+Audi, Domine, et miserere,  quia Deus es misericors :  et miserere nostri, quia peccavimus ante te : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb28d387" class="outline-3">
+<h3 id="orgb28d387">Baruch 3:3</h3>
+<div class="outline-text-3" id="text-orgb28d387">
+<p>
+quia tu sedes in sempiternum,  et nos, peribimus in ævum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7612a2b" class="outline-3">
+<h3 id="org7612a2b">Baruch 3:4</h3>
+<div class="outline-text-3" id="text-org7612a2b">
+<p>
+Domine omnipotens, Deus Israël,  audi nunc orationem mortuorum Israël,  et filiorum ipsorum qui peccaverunt ante te,  et non audierunt vocem Domini Dei sui,  et agglutinata sunt nobis mala. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d96dad" class="outline-3">
+<h3 id="org9d96dad">Baruch 3:5</h3>
+<div class="outline-text-3" id="text-org9d96dad">
+<p>
+Noli meminisse iniquitatum patrum nostrorum,  sed memento manus tuæ et nominis tui in tempore isto : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78ed7d8" class="outline-3">
+<h3 id="org78ed7d8">Baruch 3:6</h3>
+<div class="outline-text-3" id="text-org78ed7d8">
+<p>
+quia tu es Dominus Deus noster,  et laudabimus te, Domine : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24e8460" class="outline-3">
+<h3 id="org24e8460">Baruch 3:7</h3>
+<div class="outline-text-3" id="text-org24e8460">
+<p>
+quia propter hoc dedisti timorem tuum in cordibus nostris,  et ut invocemus nomen tuum,  et laudemus te in captivitate nostra,  quia convertimur ab iniquitate patrum nostrorum,  qui peccaverunt ante te. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5db1e03" class="outline-3">
+<h3 id="org5db1e03">Baruch 3:8</h3>
+<div class="outline-text-3" id="text-org5db1e03">
+<p>
+Et ecce nos in captivitate nostra sumus hodie,  qua nos dispersisti in improperium,  et in maledictum, et in peccatum,  secundum omnes iniquitates patrum nostrorum,  qui recesserunt a te, Domine Deus noster. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org533d4d3" class="outline-3">
+<h3 id="org533d4d3">Baruch 3:9</h3>
+<div class="outline-text-3" id="text-org533d4d3">
+<p>
+Audi, Israël, mandata vitæ :  auribus percipe, ut scias prudentiam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org423a9f1" class="outline-3">
+<h3 id="org423a9f1">Baruch 3:10</h3>
+<div class="outline-text-3" id="text-org423a9f1">
+<p>
+Quid est, Israël, quod in terra inimicorum es, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org804af7b" class="outline-3">
+<h3 id="org804af7b">Baruch 3:11</h3>
+<div class="outline-text-3" id="text-org804af7b">
+<p>
+inveterasti in terra aliena,  coinquinatus es cum mortuis,  deputatus es cum descendentibus in infernum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged9488d" class="outline-3">
+<h3 id="orged9488d">Baruch 3:12</h3>
+<div class="outline-text-3" id="text-orged9488d">
+<p>
+Dereliquisti fontem sapientiæ : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfed4af" class="outline-3">
+<h3 id="orgbfed4af">Baruch 3:13</h3>
+<div class="outline-text-3" id="text-orgbfed4af">
+<p>
+nam si in via Dei ambulasses,  habitasses utique in pace sempiterna. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0950eb6" class="outline-3">
+<h3 id="org0950eb6">Baruch 3:14</h3>
+<div class="outline-text-3" id="text-org0950eb6">
+<p>
+Disce ubi sit prudentia,  ubi sit virtus, ubi sit intellectus,  ut scias simul ubi sit longiturnitas vitæ et victus,  ubi sit lumen oculorum, et pax. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b1d51d" class="outline-3">
+<h3 id="org0b1d51d">Baruch 3:15</h3>
+<div class="outline-text-3" id="text-org0b1d51d">
+<p>
+Quis invenit locum ejus ?  et quis intravit in thesauros ejus ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38fa34d" class="outline-3">
+<h3 id="org38fa34d">Baruch 3:16</h3>
+<div class="outline-text-3" id="text-org38fa34d">
+<p>
+Ubi sunt principes gentium,  et qui dominantur super bestias quæ sunt super terram ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga31dc9e" class="outline-3">
+<h3 id="orga31dc9e">Baruch 3:17</h3>
+<div class="outline-text-3" id="text-orga31dc9e">
+<p>
+qui in avibus cæli ludunt, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga36fd67" class="outline-3">
+<h3 id="orga36fd67">Baruch 3:18</h3>
+<div class="outline-text-3" id="text-orga36fd67">
+<p>
+qui argentum thesaurizant, et aurum,  in quo confidunt homines,  et non est finis acquisitionis eorum ?  qui argentum fabricant, et solliciti sunt,  nec est inventio operum illorum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org023e3f0" class="outline-3">
+<h3 id="org023e3f0">Baruch 3:19</h3>
+<div class="outline-text-3" id="text-org023e3f0">
+<p>
+Exterminati sunt, et ad inferos descenderunt,  et alii loco eorum surrexerunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd01be4a" class="outline-3">
+<h3 id="orgd01be4a">Baruch 3:20</h3>
+<div class="outline-text-3" id="text-orgd01be4a">
+<p>
+Juvenes viderunt lumen, et habitaverunt super terram,  viam autem disciplinæ ignoraverunt, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbe3731" class="outline-3">
+<h3 id="orgdbe3731">Baruch 3:21</h3>
+<div class="outline-text-3" id="text-orgdbe3731">
+<p>
+neque intellexerunt semitas ejus,  neque filii eorum susceperunt eam :  a facie ipsorum longe facta est ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a51929" class="outline-3">
+<h3 id="org5a51929">Baruch 3:22</h3>
+<div class="outline-text-3" id="text-org5a51929">
+<p>
+non est audita in terra Chanaan,  neque visa est in Theman. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org505d1ae" class="outline-3">
+<h3 id="org505d1ae">Baruch 3:23</h3>
+<div class="outline-text-3" id="text-org505d1ae">
+<p>
+Filii quoque Agar, qui exquirunt prudentiam quæ de terra est,  negotiatores Merrhæ et Theman,  et fabulatores, et exquisitores prudentiæ et intelligentiæ :  viam autem sapientiæ nescierunt,  neque commemorati sunt semitas ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6edf67" class="outline-3">
+<h3 id="orgb6edf67">Baruch 3:24</h3>
+<div class="outline-text-3" id="text-orgb6edf67">
+<p>
+O Israël, quam magna est domus Dei,  et ingens locus possessionis ejus ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83672db" class="outline-3">
+<h3 id="org83672db">Baruch 3:25</h3>
+<div class="outline-text-3" id="text-org83672db">
+<p>
+magnus est, et non habet finem :  excelsus, et immensus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7406aa" class="outline-3">
+<h3 id="orgb7406aa">Baruch 3:26</h3>
+<div class="outline-text-3" id="text-orgb7406aa">
+<p>
+Ibi fuerunt gigantes nominati illi, qui ab initio fuerunt,  statura magna, scientes bellum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org912c948" class="outline-3">
+<h3 id="org912c948">Baruch 3:27</h3>
+<div class="outline-text-3" id="text-org912c948">
+<p>
+Non hos elegit Dominus,  neque viam disciplinæ invenerunt :  propterea perierunt, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7bcf27" class="outline-3">
+<h3 id="orge7bcf27">Baruch 3:28</h3>
+<div class="outline-text-3" id="text-orge7bcf27">
+<p>
+et quoniam non habuerunt sapientiam,  interierunt propter suam insipientiam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac997f7" class="outline-3">
+<h3 id="orgac997f7">Baruch 3:29</h3>
+<div class="outline-text-3" id="text-orgac997f7">
+<p>
+Quis ascendit in cælum, et accepit eam,  et eduxit eam de nubibus ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5364f1" class="outline-3">
+<h3 id="orga5364f1">Baruch 3:30</h3>
+<div class="outline-text-3" id="text-orga5364f1">
+<p>
+Quis transfretavit mare, et invenit illam, et attulit illam super aurum electum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac0cc66" class="outline-3">
+<h3 id="orgac0cc66">Baruch 3:31</h3>
+<div class="outline-text-3" id="text-orgac0cc66">
+<p>
+Non est qui possit scire vias ejus,  neque qui exquirat semitas ejus : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge06c00f" class="outline-3">
+<h3 id="orge06c00f">Baruch 3:32</h3>
+<div class="outline-text-3" id="text-orge06c00f">
+<p>
+sed qui scit universa novit eam,  et adinvenit eam prudentia sua  qui præparavit terram in æterno tempore :  et replevit eam pecudibus et quadrupedibus 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7362ebc" class="outline-3">
+<h3 id="org7362ebc">Baruch 3:33</h3>
+<div class="outline-text-3" id="text-org7362ebc">
+<p>
+qui emittit lumen, et vadit,  et vocavit illud, et obedit illi in tremore. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4fe6b2" class="outline-3">
+<h3 id="orgd4fe6b2">Baruch 3:34</h3>
+<div class="outline-text-3" id="text-orgd4fe6b2">
+<p>
+Stellæ autem dederunt lumen in custodiis suis,  et lætatæ sunt : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0d91ac" class="outline-3">
+<h3 id="orgf0d91ac">Baruch 3:35</h3>
+<div class="outline-text-3" id="text-orgf0d91ac">
+<p>
+vocatæ sunt, et dixerunt : Adsumus,  et luxerunt ei cum jucunditate, qui fecit illas. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1646fb" class="outline-3">
+<h3 id="orgf1646fb">Baruch 3:36</h3>
+<div class="outline-text-3" id="text-orgf1646fb">
+<p>
+Hic est Deus noster,  et non æstimabitur alius adversus eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0dc5998" class="outline-3">
+<h3 id="org0dc5998">Baruch 3:37</h3>
+<div class="outline-text-3" id="text-org0dc5998">
+<p>
+Hic adinvenit omnem viam disciplinæ,  et tradidit illam Jacob puero suo,  et Israël dilecto suo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79b5e19" class="outline-3">
+<h3 id="org79b5e19">Baruch 3:38</h3>
+<div class="outline-text-3" id="text-org79b5e19">
+<p>
+Post hæc in terris visus est,  et cum hominibus conversatus est.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org726423d" class="outline-2">
+<h2 id="org726423d">Baruch 4</h2>
+<div class="outline-text-2" id="text-org726423d">
+</div>
+<div id="outline-container-orgbd2e1ab" class="outline-3">
+<h3 id="orgbd2e1ab">Baruch 4:1</h3>
+<div class="outline-text-3" id="text-orgbd2e1ab">
+<p>
+Hic liber mandatorum Dei,  et lex quæ est in æternum :  omnes qui tenent eam pervenient ad vitam :  qui autem dereliquerunt eam, in mortem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7eaad44" class="outline-3">
+<h3 id="org7eaad44">Baruch 4:2</h3>
+<div class="outline-text-3" id="text-org7eaad44">
+<p>
+Convertere, Jacob, et apprehende eam :  ambula per viam ad splendorem ejus contra lumen ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5dcbef" class="outline-3">
+<h3 id="orgd5dcbef">Baruch 4:3</h3>
+<div class="outline-text-3" id="text-orgd5dcbef">
+<p>
+Ne tradas alteri gloriam tuam,  et dignitatem tuam genti alienæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org385a766" class="outline-3">
+<h3 id="org385a766">Baruch 4:4</h3>
+<div class="outline-text-3" id="text-org385a766">
+<p>
+Beati sumus, Israël,  quia quæ Deo placent manifesta sunt nobis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63059fc" class="outline-3">
+<h3 id="org63059fc">Baruch 4:5</h3>
+<div class="outline-text-3" id="text-org63059fc">
+<p>
+Animæquior esto, populus Dei, memorabilis Israël : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafffa57" class="outline-3">
+<h3 id="orgafffa57">Baruch 4:6</h3>
+<div class="outline-text-3" id="text-orgafffa57">
+<p>
+venundati estis gentibus non in perditionem :  sed propter quod in ira ad iracundiam provocastis Deum,  traditi estis adversariis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4f0d65" class="outline-3">
+<h3 id="orgd4f0d65">Baruch 4:7</h3>
+<div class="outline-text-3" id="text-orgd4f0d65">
+<p>
+Exacerbastis enim eum qui fecit vos, Deum æternum,  immolantes dæmoniis, et non Deo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org701ec7e" class="outline-3">
+<h3 id="org701ec7e">Baruch 4:8</h3>
+<div class="outline-text-3" id="text-org701ec7e">
+<p>
+Obliti enim estis Deum qui nutrivit vos,  et contristastis nutricem vestram Jerusalem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49c03b3" class="outline-3">
+<h3 id="org49c03b3">Baruch 4:9</h3>
+<div class="outline-text-3" id="text-org49c03b3">
+<p>
+Vidit enim iracundiam a Deo venientem vobis, et dixit :  Audite, confines Sion :  adduxit enim mihi Deus luctum magnum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36ad01c" class="outline-3">
+<h3 id="org36ad01c">Baruch 4:10</h3>
+<div class="outline-text-3" id="text-org36ad01c">
+<p>
+Vidi enim captivitatem populi mei,  filiorum meorum et filiarum,  quam superduxit illis Æternus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9519fd" class="outline-3">
+<h3 id="orgf9519fd">Baruch 4:11</h3>
+<div class="outline-text-3" id="text-orgf9519fd">
+<p>
+Nutrivi enim illos cum jucunditate ;  dimisi autem illos cum fletu et luctu. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd762c6d" class="outline-3">
+<h3 id="orgd762c6d">Baruch 4:12</h3>
+<div class="outline-text-3" id="text-orgd762c6d">
+<p>
+Nemo gaudeat super me viduam et desolatam :  a multis derelicta sum propter peccata filiorum meorum,  quia declinaverunt a lege Dei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc9202a" class="outline-3">
+<h3 id="orgfc9202a">Baruch 4:13</h3>
+<div class="outline-text-3" id="text-orgfc9202a">
+<p>
+Justitias autem ipsius nescierunt,  nec ambulaverunt per vias mandatorum Dei,  neque per semitas veritatis ejus cum justitia ingressi sunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3ef5d6" class="outline-3">
+<h3 id="orgb3ef5d6">Baruch 4:14</h3>
+<div class="outline-text-3" id="text-orgb3ef5d6">
+<p>
+Veniant confines Sion,  et memorentur captivitatem filiorum et filiarum mearum,  quam superduxit illis Æternus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a4a47e" class="outline-3">
+<h3 id="org9a4a47e">Baruch 4:15</h3>
+<div class="outline-text-3" id="text-org9a4a47e">
+<p>
+Adduxit enim super illos gentem de longinquo,  gentem improbam, et alterius linguæ, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c891ff" class="outline-3">
+<h3 id="org0c891ff">Baruch 4:16</h3>
+<div class="outline-text-3" id="text-org0c891ff">
+<p>
+qui non sunt reveriti senem,  neque puerorum miserti sunt,  et abduxerunt dilectos viduæ,  et a filiis unicam desolaverunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd05265a" class="outline-3">
+<h3 id="orgd05265a">Baruch 4:17</h3>
+<div class="outline-text-3" id="text-orgd05265a">
+<p>
+Ego autem, quid possum adjuvare vos ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2241965" class="outline-3">
+<h3 id="org2241965">Baruch 4:18</h3>
+<div class="outline-text-3" id="text-org2241965">
+<p>
+qui enim adduxit super vos mala,  ipse vos eripiet de manibus inimicorum vestrorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb4a23c" class="outline-3">
+<h3 id="orgeb4a23c">Baruch 4:19</h3>
+<div class="outline-text-3" id="text-orgeb4a23c">
+<p>
+Ambulate, filii, ambulate :  ego enim derelicta sum sola. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf38e072" class="outline-3">
+<h3 id="orgf38e072">Baruch 4:20</h3>
+<div class="outline-text-3" id="text-orgf38e072">
+<p>
+Exui me stola pacis,  indui autem me sacco obsecrationis,  et clamabo ad Altissimum in diebus meis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca97d03" class="outline-3">
+<h3 id="orgca97d03">Baruch 4:21</h3>
+<div class="outline-text-3" id="text-orgca97d03">
+<p>
+Animæquiores estote, filii ; clamate ad Dominum,  et eripiet vos de manu principum inimicorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82af7a5" class="outline-3">
+<h3 id="org82af7a5">Baruch 4:22</h3>
+<div class="outline-text-3" id="text-org82af7a5">
+<p>
+Ego enim speravi in æternum salutem vestram,  et venit mihi gaudium a Sancto, super misericordia  quæ veniet vobis ab æterno salutari nostro. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc57d038" class="outline-3">
+<h3 id="orgc57d038">Baruch 4:23</h3>
+<div class="outline-text-3" id="text-orgc57d038">
+<p>
+Emisi enim vos cum luctu et ploratu :  reducet autem vos mihi Dominus  cum gaudio et jucunditate in sempiternum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87fd246" class="outline-3">
+<h3 id="org87fd246">Baruch 4:24</h3>
+<div class="outline-text-3" id="text-org87fd246">
+<p>
+Sicut enim viderunt vicinæ Sion captivitatem vestram a Deo,  sic videbunt et in celeritate salutem vestram a Deo,  quæ superveniet vobis cum honore magno et splendore æterno. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7de2072" class="outline-3">
+<h3 id="org7de2072">Baruch 4:25</h3>
+<div class="outline-text-3" id="text-org7de2072">
+<p>
+Filii, patienter sustinete iram quæ supervenit vobis :  persecutus est enim te inimicus tuus :  sed cito videbis perditionem ipsius,  et super cervices ipsius ascendes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa015ed" class="outline-3">
+<h3 id="orgaa015ed">Baruch 4:26</h3>
+<div class="outline-text-3" id="text-orgaa015ed">
+<p>
+Delicati mei ambulaverunt vias asperas :  ducti sunt enim ut grex direptus ab inimicis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org764c76d" class="outline-3">
+<h3 id="org764c76d">Baruch 4:27</h3>
+<div class="outline-text-3" id="text-org764c76d">
+<p>
+Animæquiores estote, filii, et proclamate ad Dominum :  erit enim memoria vestra ab eo qui duxit vos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ca5a7c" class="outline-3">
+<h3 id="org7ca5a7c">Baruch 4:28</h3>
+<div class="outline-text-3" id="text-org7ca5a7c">
+<p>
+Sicut enim fuit sensus vester ut erraretis a Deo,  decies tantum iterum convertentes requiretis eum : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01014ae" class="outline-3">
+<h3 id="org01014ae">Baruch 4:29</h3>
+<div class="outline-text-3" id="text-org01014ae">
+<p>
+qui enim induxit vobis mala,  ipse rursum adducet vobis sempiternam jucunditatem cum salute vestra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc13090" class="outline-3">
+<h3 id="orgfc13090">Baruch 4:30</h3>
+<div class="outline-text-3" id="text-orgfc13090">
+<p>
+Animæquior esto, Jerusalem :  exhortatur enim te, qui te nominavit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecfc079" class="outline-3">
+<h3 id="orgecfc079">Baruch 4:31</h3>
+<div class="outline-text-3" id="text-orgecfc079">
+<p>
+Nocentes peribunt, qui te vexaverunt :  et qui gratulati sunt in tua ruina, punientur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ada460" class="outline-3">
+<h3 id="org9ada460">Baruch 4:32</h3>
+<div class="outline-text-3" id="text-org9ada460">
+<p>
+Civitates quibus servierunt filii tui, punientur,  et quæ accepit filios tuos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d9d9c6" class="outline-3">
+<h3 id="org9d9d9c6">Baruch 4:33</h3>
+<div class="outline-text-3" id="text-org9d9d9c6">
+<p>
+Sicut enim gavisa est in tua ruina, et lætata est in casu tuo,  sic contristabitur in sua desolatione, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd384632" class="outline-3">
+<h3 id="orgd384632">Baruch 4:34</h3>
+<div class="outline-text-3" id="text-orgd384632">
+<p>
+et amputabitur exsultatio multitudinis ejus,  et gaudimonium ejus erit in luctum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ebbffa" class="outline-3">
+<h3 id="org8ebbffa">Baruch 4:35</h3>
+<div class="outline-text-3" id="text-org8ebbffa">
+<p>
+Ignis enim superveniet ei ab Æterno in longiturnis diebus,  et habitabitur a dæmoniis in multitudine temporis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b22eb1" class="outline-3">
+<h3 id="org6b22eb1">Baruch 4:36</h3>
+<div class="outline-text-3" id="text-org6b22eb1">
+<p>
+Circumspice, Jerusalem, ad orientem,  et vide jucunditatem a Deo tibi venientem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58d599f" class="outline-3">
+<h3 id="org58d599f">Baruch 4:37</h3>
+<div class="outline-text-3" id="text-org58d599f">
+<p>
+Ecce enim veniunt filii tui, quos dimisisti dispersos :  veniunt collecti ab oriente usque ad occidentem, in verbo Sancti,  gaudentes in honorem Dei.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7884f64" class="outline-2">
+<h2 id="org7884f64">Baruch 5</h2>
+<div class="outline-text-2" id="text-org7884f64">
+</div>
+<div id="outline-container-orgc662d3c" class="outline-3">
+<h3 id="orgc662d3c">Baruch 5:1</h3>
+<div class="outline-text-3" id="text-orgc662d3c">
+<p>
+Exue te, Jerusalem, stola luctus et vexationis tuæ,  et indue te decore, et honore ejus,  quæ a Deo tibi est, sempiternæ gloriæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a4e72a" class="outline-3">
+<h3 id="org8a4e72a">Baruch 5:2</h3>
+<div class="outline-text-3" id="text-org8a4e72a">
+<p>
+Circumdabit te Deus diploide justitiæ,  et imponet mitram capiti honoris æterni. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc94124c" class="outline-3">
+<h3 id="orgc94124c">Baruch 5:3</h3>
+<div class="outline-text-3" id="text-orgc94124c">
+<p>
+Deus enim ostendet splendorem suum in te,  omni qui sub cælo est. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbed7534" class="outline-3">
+<h3 id="orgbed7534">Baruch 5:4</h3>
+<div class="outline-text-3" id="text-orgbed7534">
+<p>
+Nominabitur enim tibi nomen tuum a Deo in sempiternum :  pax justitiæ, et honor pietatis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga12bd79" class="outline-3">
+<h3 id="orga12bd79">Baruch 5:5</h3>
+<div class="outline-text-3" id="text-orga12bd79">
+<p>
+Exsurge, Jerusalem, et sta in excelso :  et circumspice ad orientem,  et vide collectos filios tuos ab oriente sole usque ad occidentem,  in verbo Sancti,  gaudentes Dei memoria. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92e9481" class="outline-3">
+<h3 id="org92e9481">Baruch 5:6</h3>
+<div class="outline-text-3" id="text-org92e9481">
+<p>
+Exierunt enim abs te pedibus ducti ab inimicis :  adducet autem illos Dominus ad te portatos in honore  sicut filios regni : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7149d02" class="outline-3">
+<h3 id="org7149d02">Baruch 5:7</h3>
+<div class="outline-text-3" id="text-org7149d02">
+<p>
+constituit enim Deus  humiliare omnem montem excelsum et rupes perennes,  et convalles replere in æqualitatem terræ,  ut ambulet Israël diligenter in honorem Dei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b3305d" class="outline-3">
+<h3 id="org1b3305d">Baruch 5:8</h3>
+<div class="outline-text-3" id="text-org1b3305d">
+<p>
+Obumbraverunt autem et silvæ,  et omne lignum suavitatis Israël  ex mandato Dei. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3eca25c" class="outline-3">
+<h3 id="org3eca25c">Baruch 5:9</h3>
+<div class="outline-text-3" id="text-org3eca25c">
+<p>
+Adducet enim Deus Israël cum jucunditate in lumine majestatis suæ,  cum misericordia et justitia quæ est ex ipso.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf9bd8de" class="outline-2">
+<h2 id="orgf9bd8de">Baruch 6</h2>
+<div class="outline-text-2" id="text-orgf9bd8de">
+</div>
+<div id="outline-container-org21c31aa" class="outline-3">
+<h3 id="org21c31aa">Baruch 6:1</h3>
+<div class="outline-text-3" id="text-org21c31aa">
+<p>
+Propter peccata quæ peccastis ante Deum, abducemini in Babyloniam captivi a Nabuchodonosor rege Babylonis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11bb3ce" class="outline-3">
+<h3 id="org11bb3ce">Baruch 6:2</h3>
+<div class="outline-text-3" id="text-org11bb3ce">
+<p>
+Ingressi itaque in Babylonem, eritis ibi annis plurimis, et temporibus longis, usque ad generationes septem : post hoc autem educam vos inde cum pace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb39e59" class="outline-3">
+<h3 id="orgbb39e59">Baruch 6:3</h3>
+<div class="outline-text-3" id="text-orgbb39e59">
+<p>
+Nunc autem videbitis in Babylonia deos aureos et argenteos, et lapideos et ligneos, in humeris portari, ostentantes metum gentibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9280a1f" class="outline-3">
+<h3 id="org9280a1f">Baruch 6:4</h3>
+<div class="outline-text-3" id="text-org9280a1f">
+<p>
+Videte ergo ne et vos similes efficiamini factis alienis, et metuatis, et metus vos capiat in ipsis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org628c189" class="outline-3">
+<h3 id="org628c189">Baruch 6:5</h3>
+<div class="outline-text-3" id="text-org628c189">
+<p>
+Visa itaque turba de retro et ab ante, adorantes dicite in cordibus vestris : Te oportet adorari, Domine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b4f746" class="outline-3">
+<h3 id="org5b4f746">Baruch 6:6</h3>
+<div class="outline-text-3" id="text-org5b4f746">
+<p>
+Angelus enim meus vobiscum est : ipse autem exquiram animas vestras.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5a340d" class="outline-3">
+<h3 id="orgb5a340d">Baruch 6:7</h3>
+<div class="outline-text-3" id="text-orgb5a340d">
+<p>
+Nam lingua ipsorum polita a fabro ; ipsa etiam inaurata et inargentata : falsa sunt, et non possunt loqui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19faf80" class="outline-3">
+<h3 id="org19faf80">Baruch 6:8</h3>
+<div class="outline-text-3" id="text-org19faf80">
+<p>
+Et sicut virgini amanti ornamenta, ita accepto auro fabricati sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga34e84f" class="outline-3">
+<h3 id="orga34e84f">Baruch 6:9</h3>
+<div class="outline-text-3" id="text-orga34e84f">
+<p>
+Coronas certe aureas habent super capita sua dii illorum : unde subtrahunt sacerdotes ab eis aurum et argentum, et erogant illud in semetipsos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18ac952" class="outline-3">
+<h3 id="org18ac952">Baruch 6:10</h3>
+<div class="outline-text-3" id="text-org18ac952">
+<p>
+Dant autem et ex ipso prostitutis, et meretrices ornant : et iterum cum receperint illud a meretricibus, ornant deos suos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90f36cc" class="outline-3">
+<h3 id="org90f36cc">Baruch 6:11</h3>
+<div class="outline-text-3" id="text-org90f36cc">
+<p>
+Hi autem non liberantur ab ærugine et tinea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6217752" class="outline-3">
+<h3 id="org6217752">Baruch 6:12</h3>
+<div class="outline-text-3" id="text-org6217752">
+<p>
+Opertis autem illis veste purpurea, extergunt faciem ipsorum propter pulverem domus qui est plurimus inter eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4807741" class="outline-3">
+<h3 id="org4807741">Baruch 6:13</h3>
+<div class="outline-text-3" id="text-org4807741">
+<p>
+Sceptrum autem habet ut homo, sicut judex regionis, qui in se peccantem non interficit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b15868" class="outline-3">
+<h3 id="org7b15868">Baruch 6:14</h3>
+<div class="outline-text-3" id="text-org7b15868">
+<p>
+Habet etiam in manu gladium et securim, se autem de bello et a latronibus non liberat. Unde vobis notum sit quia non sunt dii :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8335378" class="outline-3">
+<h3 id="org8335378">Baruch 6:15</h3>
+<div class="outline-text-3" id="text-org8335378">
+<p>
+non ergo timueritis eos. Sicut enim vas hominis confractum inutile efficitur, tales sunt et dii illorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd80526f" class="outline-3">
+<h3 id="orgd80526f">Baruch 6:16</h3>
+<div class="outline-text-3" id="text-orgd80526f">
+<p>
+Constitutis illis in domo, oculi eorum pleni sunt pulvere a pedibus introëuntium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafa8f67" class="outline-3">
+<h3 id="orgafa8f67">Baruch 6:17</h3>
+<div class="outline-text-3" id="text-orgafa8f67">
+<p>
+Et sicut alicui qui regem offendit circumseptæ sunt januæ, aut sicut ad sepulchrum adductum mortuum : ita tutantur sacerdotes ostia clausuris et seris, ne a latronibus expolientur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce700de" class="outline-3">
+<h3 id="orgce700de">Baruch 6:18</h3>
+<div class="outline-text-3" id="text-orgce700de">
+<p>
+Lucernas accendunt illis, et quidem multas, ex quibus nullam videre possunt : sunt autem sicut trabes in domo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c95513" class="outline-3">
+<h3 id="org9c95513">Baruch 6:19</h3>
+<div class="outline-text-3" id="text-org9c95513">
+<p>
+Corda vero eorum dicunt elingere serpentes qui de terra sunt, dum comedunt eos, et vestimentum ipsorum, et non sentiunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org150f1e6" class="outline-3">
+<h3 id="org150f1e6">Baruch 6:20</h3>
+<div class="outline-text-3" id="text-org150f1e6">
+<p>
+Nigræ fiunt facies eorum a fumo qui in domo fit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb9fb5c" class="outline-3">
+<h3 id="orgeb9fb5c">Baruch 6:21</h3>
+<div class="outline-text-3" id="text-orgeb9fb5c">
+<p>
+Supra corpus eorum et supra caput eorum volant noctuæ, et hirundines, et aves etiam, similiter et cattæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org645af24" class="outline-3">
+<h3 id="org645af24">Baruch 6:22</h3>
+<div class="outline-text-3" id="text-org645af24">
+<p>
+Unde sciatis quia non sunt dii : ne ergo timueritis eos.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org297facf" class="outline-3">
+<h3 id="org297facf">Baruch 6:23</h3>
+<div class="outline-text-3" id="text-org297facf">
+<p>
+Aurum etiam quod habent ad speciem est : nisi aliquis exterserit æruginem, non fulgebunt : neque enim dum conflarentur, sentiebant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org499878f" class="outline-3">
+<h3 id="org499878f">Baruch 6:24</h3>
+<div class="outline-text-3" id="text-org499878f">
+<p>
+Ex omni pretio empta sunt, in quibus spiritus non inest ipsis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ec1930" class="outline-3">
+<h3 id="org7ec1930">Baruch 6:25</h3>
+<div class="outline-text-3" id="text-org7ec1930">
+<p>
+Sine pedibus, in humeris portantur, ostentantes ignobilitatem suam hominibus : confundantur etiam qui colunt ea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c222ce" class="outline-3">
+<h3 id="org5c222ce">Baruch 6:26</h3>
+<div class="outline-text-3" id="text-org5c222ce">
+<p>
+Propterea si ceciderint in terram, a semetipsis non consurgunt : neque si quis eum statuerit rectum, per semetipsum stabit : sed sicut mortuis munera eorum illis apponentur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org440adb6" class="outline-3">
+<h3 id="org440adb6">Baruch 6:27</h3>
+<div class="outline-text-3" id="text-org440adb6">
+<p>
+Hostias illorum vendunt sacerdotes ipsorum, et abutuntur : similiter et mulieres eorum decerpentes, neque infirmo, neque mendicanti, aliquid impertiunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ea889a" class="outline-3">
+<h3 id="org8ea889a">Baruch 6:28</h3>
+<div class="outline-text-3" id="text-org8ea889a">
+<p>
+De sacrificiis eorum fœtæ et menstruatæ contingunt. Sciens itaque ex his quia non sunt dii, ne timeatis eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ba99e2" class="outline-3">
+<h3 id="org9ba99e2">Baruch 6:29</h3>
+<div class="outline-text-3" id="text-org9ba99e2">
+<p>
+Unde enim vocantur dii ? quia mulieres apponunt diis argenteis, et aureis, et ligneis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcad93b6" class="outline-3">
+<h3 id="orgcad93b6">Baruch 6:30</h3>
+<div class="outline-text-3" id="text-orgcad93b6">
+<p>
+et in domibus eorum sacerdotes sedent habentes tunicas scissas, et capita et barbam rasam, quorum capita nuda sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org505b59a" class="outline-3">
+<h3 id="org505b59a">Baruch 6:31</h3>
+<div class="outline-text-3" id="text-org505b59a">
+<p>
+Rugiunt autem clamantes contra deos suos sicut in cœna mortui.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7cf743c" class="outline-3">
+<h3 id="org7cf743c">Baruch 6:32</h3>
+<div class="outline-text-3" id="text-org7cf743c">
+<p>
+Vestimenta eorum auferunt sacerdotes, et vestiunt uxores suas et filios suos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66e84f7" class="outline-3">
+<h3 id="org66e84f7">Baruch 6:33</h3>
+<div class="outline-text-3" id="text-org66e84f7">
+<p>
+Neque si quid mali patiuntur ab aliquo, neque si quid boni, poterunt retribuere : neque regem constituere possunt, neque auferre.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgccb0baa" class="outline-3">
+<h3 id="orgccb0baa">Baruch 6:34</h3>
+<div class="outline-text-3" id="text-orgccb0baa">
+<p>
+Similiter neque dare divitias possunt, neque malum retribuere. Si quis illis votum voverit et non reddiderit, neque hoc requirunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7af3fd8" class="outline-3">
+<h3 id="org7af3fd8">Baruch 6:35</h3>
+<div class="outline-text-3" id="text-org7af3fd8">
+<p>
+Hominem a morte non liberant, neque infirmum a potentiori eripiunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org654ba44" class="outline-3">
+<h3 id="org654ba44">Baruch 6:36</h3>
+<div class="outline-text-3" id="text-org654ba44">
+<p>
+Hominem cæcum ad visum non restituunt ; de necessitate hominem non liberabunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f2d4bf" class="outline-3">
+<h3 id="org1f2d4bf">Baruch 6:37</h3>
+<div class="outline-text-3" id="text-org1f2d4bf">
+<p>
+Viduæ non miserebuntur, neque orphanis benefacient.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdddefed" class="outline-3">
+<h3 id="orgdddefed">Baruch 6:38</h3>
+<div class="outline-text-3" id="text-orgdddefed">
+<p>
+Lapidibus de monte similes sunt dii illorum, lignei, et lapidei, et aurei, et argentei : qui autem colunt ea, confundentur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec2c105" class="outline-3">
+<h3 id="orgec2c105">Baruch 6:39</h3>
+<div class="outline-text-3" id="text-orgec2c105">
+<p>
+Quomodo ergo æstimandum est aut dicendum illos esse deos ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga85cf0f" class="outline-3">
+<h3 id="orga85cf0f">Baruch 6:40</h3>
+<div class="outline-text-3" id="text-orga85cf0f">
+<p>
+Adhuc enim ipsis Chaldæis non honorantibus ea : qui cum audierint mutum non posse loqui, offerunt illud ad Bel, postulantes ab eo loqui :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org419e748" class="outline-3">
+<h3 id="org419e748">Baruch 6:41</h3>
+<div class="outline-text-3" id="text-org419e748">
+<p>
+quasi possint sentire qui non habent motum ! Et ipsi, cum intellexerint, relinquent ea : sensum enim non habent ipsi dii illorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a56562" class="outline-3">
+<h3 id="org5a56562">Baruch 6:42</h3>
+<div class="outline-text-3" id="text-org5a56562">
+<p>
+Mulieres autem circumdatæ funibus in viis sedent, succendentes ossa olivarum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf211ba3" class="outline-3">
+<h3 id="orgf211ba3">Baruch 6:43</h3>
+<div class="outline-text-3" id="text-orgf211ba3">
+<p>
+cum autem aliqua ex ipsis, attracta ab aliquo transeunte, dormierit cum eo, proximæ suæ exprobrat quod ea non sit digna habita, sicut ipsa, neque funis ejus diruptus sit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11bcb7c" class="outline-3">
+<h3 id="org11bcb7c">Baruch 6:44</h3>
+<div class="outline-text-3" id="text-org11bcb7c">
+<p>
+Omnia autem quæ illi fiunt, falsa sunt : quomodo æstimandum aut dicendum est illos esse deos ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f94ffa" class="outline-3">
+<h3 id="org7f94ffa">Baruch 6:45</h3>
+<div class="outline-text-3" id="text-org7f94ffa">
+<p>
+A fabris autem et ab aurificibus facta sunt : nihil aliud erunt, nisi id quod volunt esse sacerdotes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org983fb95" class="outline-3">
+<h3 id="org983fb95">Baruch 6:46</h3>
+<div class="outline-text-3" id="text-org983fb95">
+<p>
+Artifices etiam ipsi, qui ea faciunt, non sunt multi temporis : numquid ergo possunt ea, quæ fabricata sunt ab ipsis, esse dii ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7f965c" class="outline-3">
+<h3 id="orgc7f965c">Baruch 6:47</h3>
+<div class="outline-text-3" id="text-orgc7f965c">
+<p>
+Reliquerunt autem falsa et opprobrium postea futuris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e9e334" class="outline-3">
+<h3 id="org6e9e334">Baruch 6:48</h3>
+<div class="outline-text-3" id="text-org6e9e334">
+<p>
+Nam cum supervenerit illis prælium et mala, cogitant sacerdotes apud se ubi se abscondant cum illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef9ef08" class="outline-3">
+<h3 id="orgef9ef08">Baruch 6:49</h3>
+<div class="outline-text-3" id="text-orgef9ef08">
+<p>
+Quomodo ergo sentiri debeant quoniam dii sunt, qui nec de bello se liberant, neque de malis se eripiunt ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0434ffb" class="outline-3">
+<h3 id="org0434ffb">Baruch 6:50</h3>
+<div class="outline-text-3" id="text-org0434ffb">
+<p>
+Nam cum sint lignea, inaurata et inargentata, scietur postea quia falsa sunt ab universis gentibus et regibus : quæ manifesta sunt quia non sunt dii, sed opera manuum hominum, et nullum Dei opus cum illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb577d9d" class="outline-3">
+<h3 id="orgb577d9d">Baruch 6:51</h3>
+<div class="outline-text-3" id="text-orgb577d9d">
+<p>
+Unde ergo notum est quia non sunt dii, sed opera manuum hominum, et nullum Dei opus in ipsis est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf286c64" class="outline-3">
+<h3 id="orgf286c64">Baruch 6:52</h3>
+<div class="outline-text-3" id="text-orgf286c64">
+<p>
+Regem regioni non suscitant, neque pluviam hominibus dabunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9ed407" class="outline-3">
+<h3 id="orga9ed407">Baruch 6:53</h3>
+<div class="outline-text-3" id="text-orga9ed407">
+<p>
+Judicium quoque non discernent, neque regiones liberabunt ab injuria, quia nihil possunt, sicut corniculæ inter medium cæli et terræ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org525ca8c" class="outline-3">
+<h3 id="org525ca8c">Baruch 6:54</h3>
+<div class="outline-text-3" id="text-org525ca8c">
+<p>
+Etenim cum inciderit ignis in domum deorum ligneorum, argenteorum et aureorum, sacerdotes quidem ipsorum fugient, et liberabuntur : ipsi vero sicut trabes in medio comburentur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org369f3b2" class="outline-3">
+<h3 id="org369f3b2">Baruch 6:55</h3>
+<div class="outline-text-3" id="text-org369f3b2">
+<p>
+Regi autem et bello non resistent. Quomodo ergo æstimandum est aut recipiendum quia dii sunt ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc257f26" class="outline-3">
+<h3 id="orgc257f26">Baruch 6:56</h3>
+<div class="outline-text-3" id="text-orgc257f26">
+<p>
+Non a furibus, neque a latronibus se liberabunt dii lignei, et lapidei, et inaurati, et inargentati : quibus hi qui fortiores sunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc22f5be" class="outline-3">
+<h3 id="orgc22f5be">Baruch 6:57</h3>
+<div class="outline-text-3" id="text-orgc22f5be">
+<p>
+aurum et argentum, et vestimentum quo operti sunt, auferent illis, et abibunt, nec sibi auxilium ferent.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6946d8" class="outline-3">
+<h3 id="orgb6946d8">Baruch 6:58</h3>
+<div class="outline-text-3" id="text-orgb6946d8">
+<p>
+Itaque melius est esse regem ostentantem virtutem suam, aut vas in domo utile, in quo gloriabitur qui possidet illud, vel ostium in domo, quod custodit quæ in ipsa sunt, quam falsi dii.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58593e0" class="outline-3">
+<h3 id="org58593e0">Baruch 6:59</h3>
+<div class="outline-text-3" id="text-org58593e0">
+<p>
+Sol quidem et luna ac sidera, cum sint splendida et emissa ad utilitates, obaudiunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15aecc7" class="outline-3">
+<h3 id="org15aecc7">Baruch 6:60</h3>
+<div class="outline-text-3" id="text-org15aecc7">
+<p>
+similiter et fulgur cum apparuerit, perspicuum est : idipsum autem et spiritus in omni regione spirat :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org352fdae" class="outline-3">
+<h3 id="org352fdae">Baruch 6:61</h3>
+<div class="outline-text-3" id="text-org352fdae">
+<p>
+et nubes, quibus cum imperatum fuerit a Deo perambulare universum orbem, perficiunt quod imperatum est eis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6e8189" class="outline-3">
+<h3 id="orge6e8189">Baruch 6:62</h3>
+<div class="outline-text-3" id="text-orge6e8189">
+<p>
+ignis etiam missus desuper, ut consumat montes et silvas, facit quod præceptum est ei : hæc autem neque speciebus, neque virtutibus, uni eorum similia sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga926f7d" class="outline-3">
+<h3 id="orga926f7d">Baruch 6:63</h3>
+<div class="outline-text-3" id="text-orga926f7d">
+<p>
+Unde neque existimandum est, neque dicendum illos esse deos, quando non possunt neque judicium judicare, neque quidquam facere hominibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e0ac17" class="outline-3">
+<h3 id="org0e0ac17">Baruch 6:64</h3>
+<div class="outline-text-3" id="text-org0e0ac17">
+<p>
+Scientes itaque quia non sunt dii, ne ergo timueritis eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7c4978" class="outline-3">
+<h3 id="orgf7c4978">Baruch 6:65</h3>
+<div class="outline-text-3" id="text-orgf7c4978">
+<p>
+Neque enim regibus maledicent, neque benedicent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1e2f92" class="outline-3">
+<h3 id="orga1e2f92">Baruch 6:66</h3>
+<div class="outline-text-3" id="text-orga1e2f92">
+<p>
+Signa etiam in cælo gentibus non ostendunt : neque ut sol lucebunt, neque illuminabunt ut luna.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbafd97c" class="outline-3">
+<h3 id="orgbafd97c">Baruch 6:67</h3>
+<div class="outline-text-3" id="text-orgbafd97c">
+<p>
+Bestiæ meliores sunt illis, quæ possunt fugere sub tectum ac prodesse sibi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd9d6ca" class="outline-3">
+<h3 id="orgfd9d6ca">Baruch 6:68</h3>
+<div class="outline-text-3" id="text-orgfd9d6ca">
+<p>
+Nullo itaque modo nobis est manifestum quia sunt dii : propter quod ne timeatis eos.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org483240e" class="outline-3">
+<h3 id="org483240e">Baruch 6:69</h3>
+<div class="outline-text-3" id="text-org483240e">
+<p>
+Nam sicut in cucumerario formido nihil custodit, ita sunt dii illorum lignei, et argentei, et inaurati.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d37668" class="outline-3">
+<h3 id="org7d37668">Baruch 6:70</h3>
+<div class="outline-text-3" id="text-org7d37668">
+<p>
+Eodem modo et in horto spina alba, supra quam omnis avis sedet, similiter et mortuo projecto in tenebris, similes sunt dii illorum lignei, et inaurati, et inargentati.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org197927c" class="outline-3">
+<h3 id="org197927c">Baruch 6:71</h3>
+<div class="outline-text-3" id="text-org197927c">
+<p>
+A purpura quoque et murice, quæ supra illos tineant, scietis itaque quia non sunt dii : ipsi etiam postremo comeduntur, et erunt opprobrium in regione.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5562052" class="outline-3">
+<h3 id="org5562052">Baruch 6:72</h3>
+<div class="outline-text-3" id="text-org5562052">
+<p>
+Melior est homo justus qui non habet simulacra, nam erit longe ab opprobriis.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

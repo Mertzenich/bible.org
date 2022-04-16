@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5babf85">Ruth 1</a>
+<ul>
+<li><a href="#org385c442">Ruth 1:1</a></li>
+<li><a href="#orgc0f016c">Ruth 1:2</a></li>
+<li><a href="#org2c00272">Ruth 1:3</a></li>
+<li><a href="#orgfecc8c3">Ruth 1:4</a></li>
+<li><a href="#org2ea9807">Ruth 1:5</a></li>
+<li><a href="#org19f75fc">Ruth 1:6</a></li>
+<li><a href="#org5f87791">Ruth 1:7</a></li>
+<li><a href="#org06cb71a">Ruth 1:8</a></li>
+<li><a href="#org3d142da">Ruth 1:9</a></li>
+<li><a href="#org6986a31">Ruth 1:10</a></li>
+<li><a href="#org3dc01f1">Ruth 1:11</a></li>
+<li><a href="#org3258c06">Ruth 1:12</a></li>
+<li><a href="#orge605bf5">Ruth 1:13</a></li>
+<li><a href="#org4a792a4">Ruth 1:14</a></li>
+<li><a href="#orgb5ce1f7">Ruth 1:15</a></li>
+<li><a href="#orga223a58">Ruth 1:16</a></li>
+<li><a href="#orgd658de9">Ruth 1:17</a></li>
+<li><a href="#orgf7a019b">Ruth 1:18</a></li>
+<li><a href="#orgfeb0c9e">Ruth 1:19</a></li>
+<li><a href="#orgec53f6e">Ruth 1:20</a></li>
+<li><a href="#org66a8789">Ruth 1:21</a></li>
+<li><a href="#org68b2f5a">Ruth 1:22</a></li>
+</ul>
+</li>
+<li><a href="#org7683a31">Ruth 2</a>
+<ul>
+<li><a href="#orge13b08f">Ruth 2:1</a></li>
+<li><a href="#orgb62de11">Ruth 2:2</a></li>
+<li><a href="#orgc453453">Ruth 2:3</a></li>
+<li><a href="#orge5164ef">Ruth 2:4</a></li>
+<li><a href="#org646bfcb">Ruth 2:5</a></li>
+<li><a href="#org55f4418">Ruth 2:6</a></li>
+<li><a href="#org3b3bf8a">Ruth 2:7</a></li>
+<li><a href="#orgd0cf7f7">Ruth 2:8</a></li>
+<li><a href="#org8c2c105">Ruth 2:9</a></li>
+<li><a href="#org6ba4d87">Ruth 2:10</a></li>
+<li><a href="#org01fdf93">Ruth 2:11</a></li>
+<li><a href="#org1f70bb2">Ruth 2:12</a></li>
+<li><a href="#orgb86ccbe">Ruth 2:13</a></li>
+<li><a href="#orgd0614b0">Ruth 2:14</a></li>
+<li><a href="#org88a7a73">Ruth 2:15</a></li>
+<li><a href="#org620a0e4">Ruth 2:16</a></li>
+<li><a href="#org0b8d767">Ruth 2:17</a></li>
+<li><a href="#orgf2910d0">Ruth 2:18</a></li>
+<li><a href="#orgc60f5e9">Ruth 2:19</a></li>
+<li><a href="#orgb00ffb8">Ruth 2:20</a></li>
+<li><a href="#org3d8e724">Ruth 2:21</a></li>
+<li><a href="#orgd4a931a">Ruth 2:22</a></li>
+<li><a href="#orga58d1cb">Ruth 2:23</a></li>
+</ul>
+</li>
+<li><a href="#org4ada2c8">Ruth 3</a>
+<ul>
+<li><a href="#orge36e5b1">Ruth 3:1</a></li>
+<li><a href="#org00150db">Ruth 3:2</a></li>
+<li><a href="#org9ecaf81">Ruth 3:3</a></li>
+<li><a href="#org543da7f">Ruth 3:4</a></li>
+<li><a href="#orgc5aebfc">Ruth 3:5</a></li>
+<li><a href="#org4b2fdad">Ruth 3:6</a></li>
+<li><a href="#orgc152e4e">Ruth 3:7</a></li>
+<li><a href="#org165a246">Ruth 3:8</a></li>
+<li><a href="#org6317751">Ruth 3:9</a></li>
+<li><a href="#org18188d3">Ruth 3:10</a></li>
+<li><a href="#org164a5c1">Ruth 3:11</a></li>
+<li><a href="#orgc160b5d">Ruth 3:12</a></li>
+<li><a href="#orge4a28d7">Ruth 3:13</a></li>
+<li><a href="#org8624803">Ruth 3:14</a></li>
+<li><a href="#org9bf8819">Ruth 3:15</a></li>
+<li><a href="#org6980f35">Ruth 3:16</a></li>
+<li><a href="#org5e87060">Ruth 3:17</a></li>
+<li><a href="#orgdf19da8">Ruth 3:18</a></li>
+</ul>
+</li>
+<li><a href="#org7fe5aed">Ruth 4</a>
+<ul>
+<li><a href="#orga03010d">Ruth 4:1</a></li>
+<li><a href="#orga702467">Ruth 4:2</a></li>
+<li><a href="#orgc8fcf56">Ruth 4:3</a></li>
+<li><a href="#org95e4eb3">Ruth 4:4</a></li>
+<li><a href="#org582aec9">Ruth 4:5</a></li>
+<li><a href="#orgaa2f662">Ruth 4:6</a></li>
+<li><a href="#org95d0b58">Ruth 4:7</a></li>
+<li><a href="#org8873823">Ruth 4:8</a></li>
+<li><a href="#orgb800c1c">Ruth 4:9</a></li>
+<li><a href="#orgc1381a5">Ruth 4:10</a></li>
+<li><a href="#org6356941">Ruth 4:11</a></li>
+<li><a href="#orgc27821f">Ruth 4:12</a></li>
+<li><a href="#org729b60f">Ruth 4:13</a></li>
+<li><a href="#org7042df0">Ruth 4:14</a></li>
+<li><a href="#org0994dc8">Ruth 4:15</a></li>
+<li><a href="#org956c749">Ruth 4:16</a></li>
+<li><a href="#orgbeedf1c">Ruth 4:17</a></li>
+<li><a href="#org141ac3b">Ruth 4:18</a></li>
+<li><a href="#org11d29c6">Ruth 4:19</a></li>
+<li><a href="#org394cbe9">Ruth 4:20</a></li>
+<li><a href="#org0ccb0cc">Ruth 4:21</a></li>
+<li><a href="#orga8ea487">Ruth 4:22</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5babf85" class="outline-2">
+<h2 id="org5babf85">Ruth 1</h2>
+<div class="outline-text-2" id="text-org5babf85">
+</div>
+<div id="outline-container-org385c442" class="outline-3">
+<h3 id="org385c442">Ruth 1:1</h3>
+<div class="outline-text-3" id="text-org385c442">
+<p>
+In the days of the judges, when the judges ruled, there came a famine in the land. And a certain man of Bethlehem Juda, went to sojourn in the land of Moab with his wife and his two sons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0f016c" class="outline-3">
+<h3 id="orgc0f016c">Ruth 1:2</h3>
+<div class="outline-text-3" id="text-orgc0f016c">
+<p>
+He was named Elimelech, and his wife Noemi: and his two sons, the one Mahalon, and the other Chelion, Ephrathites of Bethlehem Juda. And entering into the country of Moab, they abode there.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c00272" class="outline-3">
+<h3 id="org2c00272">Ruth 1:3</h3>
+<div class="outline-text-3" id="text-org2c00272">
+<p>
+And Elimelech the husband of Noemi died: and she remained with her sons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfecc8c3" class="outline-3">
+<h3 id="orgfecc8c3">Ruth 1:4</h3>
+<div class="outline-text-3" id="text-orgfecc8c3">
+<p>
+And they took wives of the women of Moab, of which one was called Orpha, and the other Ruth. And they dwelt their ten years,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ea9807" class="outline-3">
+<h3 id="org2ea9807">Ruth 1:5</h3>
+<div class="outline-text-3" id="text-org2ea9807">
+<p>
+And they both died, to wit, Mahalon and Chelion: and the woman was left alone, having lost both her sons and her husband.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19f75fc" class="outline-3">
+<h3 id="org19f75fc">Ruth 1:6</h3>
+<div class="outline-text-3" id="text-org19f75fc">
+<p>
+And she arose to go from the land of Moab to her own country, with both her daughters in law: for she had heard that the Lord had looked upon his people, and had given them food.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f87791" class="outline-3">
+<h3 id="org5f87791">Ruth 1:7</h3>
+<div class="outline-text-3" id="text-org5f87791">
+<p>
+Wherefore she went forth out of the place of her sojournment, with both her daughters in law: and being now in the way to return into the land of Juda,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06cb71a" class="outline-3">
+<h3 id="org06cb71a">Ruth 1:8</h3>
+<div class="outline-text-3" id="text-org06cb71a">
+<p>
+She said to them: Go ye home to your mothers, the Lord deal mercifully with you, as you have dealt with the dead and with me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d142da" class="outline-3">
+<h3 id="org3d142da">Ruth 1:9</h3>
+<div class="outline-text-3" id="text-org3d142da">
+<p>
+May he grant you to find rest in the houses of the husbands whom you shall take. And she kissed them. And they lifted up their voice, and began to weep,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6986a31" class="outline-3">
+<h3 id="org6986a31">Ruth 1:10</h3>
+<div class="outline-text-3" id="text-org6986a31">
+<p>
+And to say: We will go on with thee to thy people.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dc01f1" class="outline-3">
+<h3 id="org3dc01f1">Ruth 1:11</h3>
+<div class="outline-text-3" id="text-org3dc01f1">
+<p>
+But she answered them: Return, my daughters: why come ye with me? have I any more sons in my womb, that you may hope for husbands of me?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3258c06" class="outline-3">
+<h3 id="org3258c06">Ruth 1:12</h3>
+<div class="outline-text-3" id="text-org3258c06">
+<p>
+Return again, my daughters, and go your ways: for I am now spent with age, and not fit for wedlock. Although I might conceive this night, and bear children,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge605bf5" class="outline-3">
+<h3 id="orge605bf5">Ruth 1:13</h3>
+<div class="outline-text-3" id="text-orge605bf5">
+<p>
+If you would wait till they were grown up, and come to man&rsquo;s estate, you would be old women before you marry. Do not so, my daughters, I beseech you: for I am grieved the more for your distress, and the hand of the Lord is gone out against me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a792a4" class="outline-3">
+<h3 id="org4a792a4">Ruth 1:14</h3>
+<div class="outline-text-3" id="text-org4a792a4">
+<p>
+And they lifted up their voice, and began to weep again: Orpha kissed her mother in law, and returned: Ruth stuck close to her mother in law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5ce1f7" class="outline-3">
+<h3 id="orgb5ce1f7">Ruth 1:15</h3>
+<div class="outline-text-3" id="text-orgb5ce1f7">
+<p>
+And Noemi said to her: Behold thy kinswoman is returned to her people, and to her gods, go thou with her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga223a58" class="outline-3">
+<h3 id="orga223a58">Ruth 1:16</h3>
+<div class="outline-text-3" id="text-orga223a58">
+<p>
+She answered: Be not against me, to desire that I should leave thee and depart: for whithersoever thou shalt go, I will go: and where thou shalt dwell, I also will dwell. Thy people shall be my people, and thy God my God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd658de9" class="outline-3">
+<h3 id="orgd658de9">Ruth 1:17</h3>
+<div class="outline-text-3" id="text-orgd658de9">
+<p>
+The land that shall receive thee dying, in the same will I die: and there will I be buried. The Lord do so and so to me, and add more also, if aught but death part me and thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7a019b" class="outline-3">
+<h3 id="orgf7a019b">Ruth 1:18</h3>
+<div class="outline-text-3" id="text-orgf7a019b">
+<p>
+Then Noemi seeing that Ruth was steadfastly determined to go with her, would not be against it, nor persuade her any more to return to her friends:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfeb0c9e" class="outline-3">
+<h3 id="orgfeb0c9e">Ruth 1:19</h3>
+<div class="outline-text-3" id="text-orgfeb0c9e">
+<p>
+So they went together, and came to Bethlehem. And when they were come into the city, the report was quickly spread among all: and the women said: This is that Noemi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec53f6e" class="outline-3">
+<h3 id="orgec53f6e">Ruth 1:20</h3>
+<div class="outline-text-3" id="text-orgec53f6e">
+<p>
+But she said to them: Call me not Noemi (that is, beautiful,) but call me Mara (that is, bitter), for the Almighty hath quite filled me with bitterness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66a8789" class="outline-3">
+<h3 id="org66a8789">Ruth 1:21</h3>
+<div class="outline-text-3" id="text-org66a8789">
+<p>
+I went out full and the Lord hath brought me back empty. Why then do you call me Noemi, whom the Lord hath humbled, and the Almighty hath afflicted?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org68b2f5a" class="outline-3">
+<h3 id="org68b2f5a">Ruth 1:22</h3>
+<div class="outline-text-3" id="text-org68b2f5a">
+<p>
+So Noemi came with Ruth, the Moabitess, her daughter in law, from the land of her sojournment: and returned into Bethlehem, in the beginning of the barley harvest. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7683a31" class="outline-2">
+<h2 id="org7683a31">Ruth 2</h2>
+<div class="outline-text-2" id="text-org7683a31">
+</div>
+<div id="outline-container-orge13b08f" class="outline-3">
+<h3 id="orge13b08f">Ruth 2:1</h3>
+<div class="outline-text-3" id="text-orge13b08f">
+<p>
+Now her husband Elimelech had a kinsman, a powerful man, and very rich, whose name was Booz.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb62de11" class="outline-3">
+<h3 id="orgb62de11">Ruth 2:2</h3>
+<div class="outline-text-3" id="text-orgb62de11">
+<p>
+And Ruth, the Moabitess, said to her mother in law: If thou wilt, I will go into the field, and glean the ears of corn that escape the hands of the reapers, wheresoever I shall find grace with a householder, that will be favourable to me. And she answered her: Go, my daughter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc453453" class="outline-3">
+<h3 id="orgc453453">Ruth 2:3</h3>
+<div class="outline-text-3" id="text-orgc453453">
+<p>
+She went, therefore, and gleaned the ears of corn after the reapers. And it happened that the owner of that field was Booz, who was of the kindred of Elimelech.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5164ef" class="outline-3">
+<h3 id="orge5164ef">Ruth 2:4</h3>
+<div class="outline-text-3" id="text-orge5164ef">
+<p>
+And behold, he came out of Bethlehem, and said to the reapers: The Lord be with you. And they answered him: The Lord bless thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org646bfcb" class="outline-3">
+<h3 id="org646bfcb">Ruth 2:5</h3>
+<div class="outline-text-3" id="text-org646bfcb">
+<p>
+And Booz said to the young man that was set over the reapers: Whose maid is this ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55f4418" class="outline-3">
+<h3 id="org55f4418">Ruth 2:6</h3>
+<div class="outline-text-3" id="text-org55f4418">
+<p>
+And he answered him: This is the Moabitess, who came with Noemi, from the land of Moab,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b3bf8a" class="outline-3">
+<h3 id="org3b3bf8a">Ruth 2:7</h3>
+<div class="outline-text-3" id="text-org3b3bf8a">
+<p>
+And she desired leave to glean the ears of corn that remain, following the steps of the reapers: and she hath been in the field from morning till now, and hath not gone home for one moment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0cf7f7" class="outline-3">
+<h3 id="orgd0cf7f7">Ruth 2:8</h3>
+<div class="outline-text-3" id="text-orgd0cf7f7">
+<p>
+And Booz said to Ruth: Hear me, daughter, do not go to glean in any other field, and do not depart from this place: but keep with my maids,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c2c105" class="outline-3">
+<h3 id="org8c2c105">Ruth 2:9</h3>
+<div class="outline-text-3" id="text-org8c2c105">
+<p>
+And follow where they reap. For I have charged my young men, not to molest thee: and if thou art thirsty, go to the vessels, and drink of the waters whereof the servants drink.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ba4d87" class="outline-3">
+<h3 id="org6ba4d87">Ruth 2:10</h3>
+<div class="outline-text-3" id="text-org6ba4d87">
+<p>
+She fell on her face, and worshipping upon the ground, said to him: Whence cometh this to me, that I should find grace before thy eyes, and that thou shouldst vouchsafe to take notice of me, a woman of another country?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01fdf93" class="outline-3">
+<h3 id="org01fdf93">Ruth 2:11</h3>
+<div class="outline-text-3" id="text-org01fdf93">
+<p>
+And he answered her: All hath been told me, that thou hast done to thy mother in law after the death of thy husband: and how thou hast left thy parents, and the land wherein thou wast born, and art come to a people which thou knewest not heretofore.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f70bb2" class="outline-3">
+<h3 id="org1f70bb2">Ruth 2:12</h3>
+<div class="outline-text-3" id="text-org1f70bb2">
+<p>
+The Lord render unto thee for thy work, and mayst thou receive a full reward of the Lord the God of Israel, to whom thou art come, and under whose wings thou art fled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb86ccbe" class="outline-3">
+<h3 id="orgb86ccbe">Ruth 2:13</h3>
+<div class="outline-text-3" id="text-orgb86ccbe">
+<p>
+And she said: I have found grace in thy eyes, my lord, who hast comforted me, and hast spoken to the heart of thy handmaid, who am not like to one of thy maids.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0614b0" class="outline-3">
+<h3 id="orgd0614b0">Ruth 2:14</h3>
+<div class="outline-text-3" id="text-orgd0614b0">
+<p>
+And Booz said to her: At mealtime come thou hither, and eat of the bread, and dip thy morsel in the vinegar. So she sat at the side of the reapers, and she heaped to herself frumenty, and ate and was filled, and took the leavings.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88a7a73" class="outline-3">
+<h3 id="org88a7a73">Ruth 2:15</h3>
+<div class="outline-text-3" id="text-org88a7a73">
+<p>
+And she arose from thence, to glean the ears of corn as before. And Booz commanded his servants, saying: If she would even reap with you, hinder her not:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org620a0e4" class="outline-3">
+<h3 id="org620a0e4">Ruth 2:16</h3>
+<div class="outline-text-3" id="text-org620a0e4">
+<p>
+And let fall some of your handfuls of purpose, and leave them, that she may gather them without shame, and let no man rebuke her when she gathereth them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b8d767" class="outline-3">
+<h3 id="org0b8d767">Ruth 2:17</h3>
+<div class="outline-text-3" id="text-org0b8d767">
+<p>
+She gleaned therefore in the field till evening: and beating out with a rod, and threshing what she had gleaned, she found about the measure of an ephi of barley, that is, three bushels:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2910d0" class="outline-3">
+<h3 id="orgf2910d0">Ruth 2:18</h3>
+<div class="outline-text-3" id="text-orgf2910d0">
+<p>
+Which she took up, and returned into the city, and shewed it to her mother in law: moreover, she brought out, and gave her of the remains of her meat, wherewith she had been filled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc60f5e9" class="outline-3">
+<h3 id="orgc60f5e9">Ruth 2:19</h3>
+<div class="outline-text-3" id="text-orgc60f5e9">
+<p>
+And her mother in law said to her: Where hast thou gleaned today, and where hast thou wrought? blessed be he that hath had pity on thee. And she told her with whom she had wrought: and she told the man&rsquo;s name, that he was called Booz.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb00ffb8" class="outline-3">
+<h3 id="orgb00ffb8">Ruth 2:20</h3>
+<div class="outline-text-3" id="text-orgb00ffb8">
+<p>
+And Noemi answered her: Blessed be he of the Lord: because the same kindness which he shewed to the living, he hath kept also to the dead. And again she said: The man is our kinsman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d8e724" class="outline-3">
+<h3 id="org3d8e724">Ruth 2:21</h3>
+<div class="outline-text-3" id="text-org3d8e724">
+<p>
+And Ruth said: He also charged me, that I should keep close to his reapers, till all the corn should be reaped.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4a931a" class="outline-3">
+<h3 id="orgd4a931a">Ruth 2:22</h3>
+<div class="outline-text-3" id="text-orgd4a931a">
+<p>
+And her mother in law said to her: It is better for thee, my daughter, to go out to reap with his maids, lest in another man&rsquo;s field some one may resist thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga58d1cb" class="outline-3">
+<h3 id="orga58d1cb">Ruth 2:23</h3>
+<div class="outline-text-3" id="text-orga58d1cb">
+<p>
+So she kept close to the maids of Booz: and continued to glean with them, till all the barley and the wheat were laid up in the barns. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4ada2c8" class="outline-2">
+<h2 id="org4ada2c8">Ruth 3</h2>
+<div class="outline-text-2" id="text-org4ada2c8">
+</div>
+<div id="outline-container-orge36e5b1" class="outline-3">
+<h3 id="orge36e5b1">Ruth 3:1</h3>
+<div class="outline-text-3" id="text-orge36e5b1">
+<p>
+After she was returned to her mother in law, Noemi said to her: My daughter, I will seek rest for thee, and will provide that it may be well with thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00150db" class="outline-3">
+<h3 id="org00150db">Ruth 3:2</h3>
+<div class="outline-text-3" id="text-org00150db">
+<p>
+This Booz, with whose maids thou wast joined in the field, is our near kinsman, and behold this night he winnoweth barley in the threshingfloor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ecaf81" class="outline-3">
+<h3 id="org9ecaf81">Ruth 3:3</h3>
+<div class="outline-text-3" id="text-org9ecaf81">
+<p>
+Wash thyself therefore and anoint thee, and put on thy best garments, and go down to the barnfloor: but let not the man see thee, till he shall have done eating and drinking.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org543da7f" class="outline-3">
+<h3 id="org543da7f">Ruth 3:4</h3>
+<div class="outline-text-3" id="text-org543da7f">
+<p>
+And when he shall go to sleep, mark the place wherein he sleepeth: and thou shalt go in, and lift up the clothes wherewith he is covered towards his feet, and shalt lay thyself down there: and he will tell thee what thou must do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc5aebfc" class="outline-3">
+<h3 id="orgc5aebfc">Ruth 3:5</h3>
+<div class="outline-text-3" id="text-orgc5aebfc">
+<p>
+She answered: Whatsoever thou shalt command, I will do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b2fdad" class="outline-3">
+<h3 id="org4b2fdad">Ruth 3:6</h3>
+<div class="outline-text-3" id="text-org4b2fdad">
+<p>
+And she went down to the barnfloor, and did all that her mother in law had bid her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc152e4e" class="outline-3">
+<h3 id="orgc152e4e">Ruth 3:7</h3>
+<div class="outline-text-3" id="text-orgc152e4e">
+<p>
+And when Booz had eaten, and drunk, and was merry, he went to sleep by the heap of sheaves, and she came softly, and uncovering his feet, laid herself down.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org165a246" class="outline-3">
+<h3 id="org165a246">Ruth 3:8</h3>
+<div class="outline-text-3" id="text-org165a246">
+<p>
+And behold, when it was now midnight the man was afraid, and troubled: and he saw a woman lying at his feet,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6317751" class="outline-3">
+<h3 id="org6317751">Ruth 3:9</h3>
+<div class="outline-text-3" id="text-org6317751">
+<p>
+And he said to her: Who art thou ? And she answered: I am Ruth, thy handmaid: spread thy coverlet over thy servant, for thou art a near kinsman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18188d3" class="outline-3">
+<h3 id="org18188d3">Ruth 3:10</h3>
+<div class="outline-text-3" id="text-org18188d3">
+<p>
+And he said: Blessed art thou of the Lord, my daughter, and thy latter kindness has surpassed the former: because thou hast not followed young men either poor or rich.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org164a5c1" class="outline-3">
+<h3 id="org164a5c1">Ruth 3:11</h3>
+<div class="outline-text-3" id="text-org164a5c1">
+<p>
+Fear not therefore, but whatsoever thou shalt say to me I will do to thee. For all the people that dwell within the gates of my city, know that thou art a virtuous woman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc160b5d" class="outline-3">
+<h3 id="orgc160b5d">Ruth 3:12</h3>
+<div class="outline-text-3" id="text-orgc160b5d">
+<p>
+Neither do I deny myself to be near of kin, but there is another nearer than I.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4a28d7" class="outline-3">
+<h3 id="orge4a28d7">Ruth 3:13</h3>
+<div class="outline-text-3" id="text-orge4a28d7">
+<p>
+Rest thou this night: and when morning is come, if he will take thee by the right of kindred, all is well: but if he will not, I will undoubtedly take thee, so the Lord liveth: sleep till the morning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8624803" class="outline-3">
+<h3 id="org8624803">Ruth 3:14</h3>
+<div class="outline-text-3" id="text-org8624803">
+<p>
+So she slept at his feet till the night was going off. And she arose before men could know one another, and Booz said: Beware lest any man know that thou camest hither.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bf8819" class="outline-3">
+<h3 id="org9bf8819">Ruth 3:15</h3>
+<div class="outline-text-3" id="text-org9bf8819">
+<p>
+And again he said: Spread thy mantle, wherewith thou art covered, and hold it with both hands. And when she spread it and held it, he measured six measures of barley, and laid it upon her. And she carried it, and went into the city,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6980f35" class="outline-3">
+<h3 id="org6980f35">Ruth 3:16</h3>
+<div class="outline-text-3" id="text-org6980f35">
+<p>
+And came to her mother in law; who said to her: What hast thou done, daughter? And she told her all that the man had done to her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e87060" class="outline-3">
+<h3 id="org5e87060">Ruth 3:17</h3>
+<div class="outline-text-3" id="text-org5e87060">
+<p>
+And she said: Behold he hath given me six measures of barley: for he said: I will not have thee return empty to thy mother in law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf19da8" class="outline-3">
+<h3 id="orgdf19da8">Ruth 3:18</h3>
+<div class="outline-text-3" id="text-orgdf19da8">
+<p>
+And Noemi said: Wait, my daughter, till we see what end the thing will have. For the man will not rest until he have accomplished what he hath said. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7fe5aed" class="outline-2">
+<h2 id="org7fe5aed">Ruth 4</h2>
+<div class="outline-text-2" id="text-org7fe5aed">
+</div>
+<div id="outline-container-orga03010d" class="outline-3">
+<h3 id="orga03010d">Ruth 4:1</h3>
+<div class="outline-text-3" id="text-orga03010d">
+<p>
+Then Booz went up to the gate, and sat there. And when he had seen the kinsman going by, of whom he had spoken before, he said to him, calling him by his name: Turn aside for a little while, and sit down here. He turned aside, and sat down.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga702467" class="outline-3">
+<h3 id="orga702467">Ruth 4:2</h3>
+<div class="outline-text-3" id="text-orga702467">
+<p>
+And Booz, taking ten men of the ancients of the city, said to them: Sit ye down here.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8fcf56" class="outline-3">
+<h3 id="orgc8fcf56">Ruth 4:3</h3>
+<div class="outline-text-3" id="text-orgc8fcf56">
+<p>
+They sat down, and he spoke to the kinsman: Noemi, who is returned from the country of Moab will sell a parcel of land that belonged to our brother Elimelech.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95e4eb3" class="outline-3">
+<h3 id="org95e4eb3">Ruth 4:4</h3>
+<div class="outline-text-3" id="text-org95e4eb3">
+<p>
+I would have thee to understand this, and would tell thee before all that sit here, and before the ancients of my people. If thou wilt take possession of it by the right of kindred: buy it, and possess it: but if it please thee not, tell me so, that I may know what I have to do. For there is no near kinsman besides thee, who art first, and me, who am second. But he answered: I will buy the field.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org582aec9" class="outline-3">
+<h3 id="org582aec9">Ruth 4:5</h3>
+<div class="outline-text-3" id="text-org582aec9">
+<p>
+And Booz said to him: When thou shalt buy the field at the woman&rsquo;s hand, thou must take also Ruth, the Moabitess, who was the wife of the deceased: to raise up the name of thy kinsman in his inheritance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa2f662" class="outline-3">
+<h3 id="orgaa2f662">Ruth 4:6</h3>
+<div class="outline-text-3" id="text-orgaa2f662">
+<p>
+He answered: I yield up my right of next akin: for I must not cut off the posterity of my own family. Do thou make use of my privilege, which I profess I do willingly forego.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95d0b58" class="outline-3">
+<h3 id="org95d0b58">Ruth 4:7</h3>
+<div class="outline-text-3" id="text-org95d0b58">
+<p>
+Now this in former times was the manner in Israel between kinsmen, that if at any time one yielded his right to another: that the grant might be sure, the man put off his shoe and gave it to his neighbour; this was a testimony of cession of right in Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8873823" class="outline-3">
+<h3 id="org8873823">Ruth 4:8</h3>
+<div class="outline-text-3" id="text-org8873823">
+<p>
+So Booz said to his kinsman: Put off thy shoe. And immediately he took it off from his foot.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb800c1c" class="outline-3">
+<h3 id="orgb800c1c">Ruth 4:9</h3>
+<div class="outline-text-3" id="text-orgb800c1c">
+<p>
+And he said to the ancients, and to all the people: You are witnesses this day, that I have bought all that was Elimelech&rsquo;s, and Chelion&rsquo;s, and Mahalon&rsquo;s, of the hand of Noemi:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1381a5" class="outline-3">
+<h3 id="orgc1381a5">Ruth 4:10</h3>
+<div class="outline-text-3" id="text-orgc1381a5">
+<p>
+And have taken to wife Ruth, the Moabitess, the wife of Mahalon, to raise up the name of the deceased in his inheritance lest his name be cut off, from among his family and his brethren and his people. You, I say, are witnesses of this thing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6356941" class="outline-3">
+<h3 id="org6356941">Ruth 4:11</h3>
+<div class="outline-text-3" id="text-org6356941">
+<p>
+Then all the people that were in the gate, and the ancients, answered: We are witnesses: The Lord make this woman who cometh into thy house, like Rachel, and Lia, who built up the house of Israel: that she may be an example of virtue in Ephrata, and may have a famous name in Bethlehem:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc27821f" class="outline-3">
+<h3 id="orgc27821f">Ruth 4:12</h3>
+<div class="outline-text-3" id="text-orgc27821f">
+<p>
+And that the house may be, as the house of Phares, whom Thamar bore unto Juda, of the seed which the Lord shall give thee of this young woman.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org729b60f" class="outline-3">
+<h3 id="org729b60f">Ruth 4:13</h3>
+<div class="outline-text-3" id="text-org729b60f">
+<p>
+Booz therefore took Ruth, and married her: and went in unto her, and the Lord gave her to conceive, and to bear a son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7042df0" class="outline-3">
+<h3 id="org7042df0">Ruth 4:14</h3>
+<div class="outline-text-3" id="text-org7042df0">
+<p>
+And the women said to Noemi: Blessed be the Lord, who hath not suffered thy family to want a successor: that his name should be preserved in Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0994dc8" class="outline-3">
+<h3 id="org0994dc8">Ruth 4:15</h3>
+<div class="outline-text-3" id="text-org0994dc8">
+<p>
+And thou shouldst have one to comfort thy soul, and cherish thy old age. For he is born of thy daughter in law: who loveth thee: and is much better to thee, than if thou hadst seven sons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org956c749" class="outline-3">
+<h3 id="org956c749">Ruth 4:16</h3>
+<div class="outline-text-3" id="text-org956c749">
+<p>
+And Noemi taking the child, laid it in her bosom, and she carried it, and was a nurse unto it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbeedf1c" class="outline-3">
+<h3 id="orgbeedf1c">Ruth 4:17</h3>
+<div class="outline-text-3" id="text-orgbeedf1c">
+<p>
+And the women, her neighbours, congratulating with her, and saying, There is a son born to Noemi, called his name Obed: he is the father of Isai, the father of David.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org141ac3b" class="outline-3">
+<h3 id="org141ac3b">Ruth 4:18</h3>
+<div class="outline-text-3" id="text-org141ac3b">
+<p>
+These are the generations of Phares: Phares begot Esron,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11d29c6" class="outline-3">
+<h3 id="org11d29c6">Ruth 4:19</h3>
+<div class="outline-text-3" id="text-org11d29c6">
+<p>
+Esron begot Aram, Aram begot Aminadab,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org394cbe9" class="outline-3">
+<h3 id="org394cbe9">Ruth 4:20</h3>
+<div class="outline-text-3" id="text-org394cbe9">
+<p>
+Aminadab begot Nahasson, Nahasson begot Salmon,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ccb0cc" class="outline-3">
+<h3 id="org0ccb0cc">Ruth 4:21</h3>
+<div class="outline-text-3" id="text-org0ccb0cc">
+<p>
+Salmon begot Booz, Booz begot Obed,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8ea487" class="outline-3">
+<h3 id="orga8ea487">Ruth 4:22</h3>
+<div class="outline-text-3" id="text-orga8ea487">
+<p>
+Obed begot Isai, Isai begot David.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:42</p>
+</div>
+</body>
+</html>

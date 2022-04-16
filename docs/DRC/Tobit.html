@@ -1,0 +1,3321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8eca9fc">Tobit 1</a>
+<ul>
+<li><a href="#org1635759">Tobit 1:1</a></li>
+<li><a href="#org911d732">Tobit 1:2</a></li>
+<li><a href="#orgc7c6897">Tobit 1:3</a></li>
+<li><a href="#org92b6d88">Tobit 1:4</a></li>
+<li><a href="#org80d8a72">Tobit 1:5</a></li>
+<li><a href="#orgc9cd206">Tobit 1:6</a></li>
+<li><a href="#orgc4c427f">Tobit 1:7</a></li>
+<li><a href="#orge31d23d">Tobit 1:8</a></li>
+<li><a href="#org8aa5d5e">Tobit 1:9</a></li>
+<li><a href="#orgd52480d">Tobit 1:10</a></li>
+<li><a href="#orgfbbba1c">Tobit 1:11</a></li>
+<li><a href="#orga6fd312">Tobit 1:12</a></li>
+<li><a href="#org7371056">Tobit 1:13</a></li>
+<li><a href="#org48badda">Tobit 1:14</a></li>
+<li><a href="#org768ee96">Tobit 1:15</a></li>
+<li><a href="#orga4de4fa">Tobit 1:16</a></li>
+<li><a href="#orgd621889">Tobit 1:17</a></li>
+<li><a href="#orga744174">Tobit 1:18</a></li>
+<li><a href="#org0e3ab54">Tobit 1:19</a></li>
+<li><a href="#orgbc2feb0">Tobit 1:20</a></li>
+<li><a href="#org6247459">Tobit 1:21</a></li>
+<li><a href="#org4ac5619">Tobit 1:22</a></li>
+<li><a href="#org07f6e47">Tobit 1:23</a></li>
+<li><a href="#orgdaa994d">Tobit 1:24</a></li>
+<li><a href="#org3e1447e">Tobit 1:25</a></li>
+</ul>
+</li>
+<li><a href="#org57918dd">Tobit 2</a>
+<ul>
+<li><a href="#orge96b264">Tobit 2:1</a></li>
+<li><a href="#org7b38397">Tobit 2:2</a></li>
+<li><a href="#org6ed8f01">Tobit 2:3</a></li>
+<li><a href="#org942d453">Tobit 2:4</a></li>
+<li><a href="#orgff6f37c">Tobit 2:5</a></li>
+<li><a href="#org4ab976a">Tobit 2:6</a></li>
+<li><a href="#org76acc55">Tobit 2:7</a></li>
+<li><a href="#orgeae2bad">Tobit 2:8</a></li>
+<li><a href="#org368cc09">Tobit 2:9</a></li>
+<li><a href="#org51d907d">Tobit 2:10</a></li>
+<li><a href="#org8775415">Tobit 2:11</a></li>
+<li><a href="#org75eaece">Tobit 2:12</a></li>
+<li><a href="#orge0cba74">Tobit 2:13</a></li>
+<li><a href="#org0220c67">Tobit 2:14</a></li>
+<li><a href="#org7e04f3d">Tobit 2:15</a></li>
+<li><a href="#org8ff8864">Tobit 2:16</a></li>
+<li><a href="#orgea4b3a4">Tobit 2:17</a></li>
+<li><a href="#org27e7762">Tobit 2:18</a></li>
+<li><a href="#org0157910">Tobit 2:19</a></li>
+<li><a href="#org120035d">Tobit 2:20</a></li>
+<li><a href="#orgf232adc">Tobit 2:21</a></li>
+<li><a href="#org25f84a2">Tobit 2:22</a></li>
+<li><a href="#org4d8dafe">Tobit 2:23</a></li>
+</ul>
+</li>
+<li><a href="#org1329cc5">Tobit 3</a>
+<ul>
+<li><a href="#org4c12289">Tobit 3:1</a></li>
+<li><a href="#orgb7d363d">Tobit 3:2</a></li>
+<li><a href="#org17dd532">Tobit 3:3</a></li>
+<li><a href="#orgc876fac">Tobit 3:4</a></li>
+<li><a href="#orgaef7bae">Tobit 3:5</a></li>
+<li><a href="#org3eb24cd">Tobit 3:6</a></li>
+<li><a href="#orgc97a47b">Tobit 3:7</a></li>
+<li><a href="#org31a9745">Tobit 3:8</a></li>
+<li><a href="#orgd07d065">Tobit 3:9</a></li>
+<li><a href="#org20f1c06">Tobit 3:10</a></li>
+<li><a href="#org482fbed">Tobit 3:11</a></li>
+<li><a href="#org279d326">Tobit 3:12</a></li>
+<li><a href="#orgc589b5b">Tobit 3:13</a></li>
+<li><a href="#orgd263bd7">Tobit 3:14</a></li>
+<li><a href="#orgb8c37d0">Tobit 3:15</a></li>
+<li><a href="#orgab01a98">Tobit 3:16</a></li>
+<li><a href="#org7e4da8f">Tobit 3:17</a></li>
+<li><a href="#org9ed4bfb">Tobit 3:18</a></li>
+<li><a href="#orga41db08">Tobit 3:19</a></li>
+<li><a href="#orga50a640">Tobit 3:20</a></li>
+<li><a href="#org2f116bb">Tobit 3:21</a></li>
+<li><a href="#org87ed4e9">Tobit 3:22</a></li>
+<li><a href="#org9675419">Tobit 3:23</a></li>
+<li><a href="#org059b3f8">Tobit 3:24</a></li>
+<li><a href="#org48a6203">Tobit 3:25</a></li>
+</ul>
+</li>
+<li><a href="#orgf4bddfe">Tobit 4</a>
+<ul>
+<li><a href="#org54fbf78">Tobit 4:1</a></li>
+<li><a href="#orgcb84f02">Tobit 4:2</a></li>
+<li><a href="#orgecd9218">Tobit 4:3</a></li>
+<li><a href="#org8a71141">Tobit 4:4</a></li>
+<li><a href="#org54c93b5">Tobit 4:5</a></li>
+<li><a href="#org0bcfa13">Tobit 4:6</a></li>
+<li><a href="#org5ba0c89">Tobit 4:7</a></li>
+<li><a href="#orgef8fad7">Tobit 4:8</a></li>
+<li><a href="#org54ea3c2">Tobit 4:9</a></li>
+<li><a href="#org900005e">Tobit 4:10</a></li>
+<li><a href="#org051869c">Tobit 4:11</a></li>
+<li><a href="#orgc69113c">Tobit 4:12</a></li>
+<li><a href="#org6ec12a4">Tobit 4:13</a></li>
+<li><a href="#org4f3a39a">Tobit 4:14</a></li>
+<li><a href="#orgf9ac84e">Tobit 4:15</a></li>
+<li><a href="#org07b7a82">Tobit 4:16</a></li>
+<li><a href="#orgbc72357">Tobit 4:17</a></li>
+<li><a href="#org95d2351">Tobit 4:18</a></li>
+<li><a href="#orge2280ff">Tobit 4:19</a></li>
+<li><a href="#orgdf85071">Tobit 4:20</a></li>
+<li><a href="#org2bdeb7c">Tobit 4:21</a></li>
+<li><a href="#orga0b7d1b">Tobit 4:22</a></li>
+<li><a href="#org56c835f">Tobit 4:23</a></li>
+</ul>
+</li>
+<li><a href="#org6f843a6">Tobit 5</a>
+<ul>
+<li><a href="#org8c9e2f8">Tobit 5:1</a></li>
+<li><a href="#org89a4b21">Tobit 5:2</a></li>
+<li><a href="#org88a0b2b">Tobit 5:3</a></li>
+<li><a href="#org1c765ea">Tobit 5:4</a></li>
+<li><a href="#org0135b90">Tobit 5:5</a></li>
+<li><a href="#orgf784a51">Tobit 5:6</a></li>
+<li><a href="#org9ec5f85">Tobit 5:7</a></li>
+<li><a href="#org0c2007c">Tobit 5:8</a></li>
+<li><a href="#org652d030">Tobit 5:9</a></li>
+<li><a href="#org96c6859">Tobit 5:10</a></li>
+<li><a href="#orga8ed4f1">Tobit 5:11</a></li>
+<li><a href="#orgd372165">Tobit 5:12</a></li>
+<li><a href="#org338b396">Tobit 5:13</a></li>
+<li><a href="#org5929732">Tobit 5:14</a></li>
+<li><a href="#orgad816c7">Tobit 5:15</a></li>
+<li><a href="#orgb347e63">Tobit 5:16</a></li>
+<li><a href="#org02504c2">Tobit 5:17</a></li>
+<li><a href="#orga0dd1d8">Tobit 5:18</a></li>
+<li><a href="#orgcc3775b">Tobit 5:19</a></li>
+<li><a href="#orgab563ff">Tobit 5:20</a></li>
+<li><a href="#org5273982">Tobit 5:21</a></li>
+<li><a href="#org5f07181">Tobit 5:22</a></li>
+<li><a href="#org446f61c">Tobit 5:23</a></li>
+<li><a href="#org4f8b06f">Tobit 5:24</a></li>
+<li><a href="#org4633fdb">Tobit 5:25</a></li>
+<li><a href="#orged97bc0">Tobit 5:26</a></li>
+<li><a href="#orgbd830b8">Tobit 5:27</a></li>
+<li><a href="#orge8354c5">Tobit 5:28</a></li>
+</ul>
+</li>
+<li><a href="#org81e88b2">Tobit 6</a>
+<ul>
+<li><a href="#orgfd374cb">Tobit 6:1</a></li>
+<li><a href="#orgbab675f">Tobit 6:2</a></li>
+<li><a href="#orgb874cd2">Tobit 6:3</a></li>
+<li><a href="#orgae13323">Tobit 6:4</a></li>
+<li><a href="#org07f7d45">Tobit 6:5</a></li>
+<li><a href="#orgb548944">Tobit 6:6</a></li>
+<li><a href="#org7742cc8">Tobit 6:7</a></li>
+<li><a href="#org46dcced">Tobit 6:8</a></li>
+<li><a href="#orgbadad46">Tobit 6:9</a></li>
+<li><a href="#org78ec085">Tobit 6:10</a></li>
+<li><a href="#orgda8c85f">Tobit 6:11</a></li>
+<li><a href="#orgbc2e3d9">Tobit 6:12</a></li>
+<li><a href="#orgfd73f9c">Tobit 6:13</a></li>
+<li><a href="#orgde11c57">Tobit 6:14</a></li>
+<li><a href="#org64f346e">Tobit 6:15</a></li>
+<li><a href="#org7e0734a">Tobit 6:16</a></li>
+<li><a href="#orgcbafbeb">Tobit 6:17</a></li>
+<li><a href="#orgc2b3558">Tobit 6:18</a></li>
+<li><a href="#org459a361">Tobit 6:19</a></li>
+<li><a href="#orgbb9e39b">Tobit 6:20</a></li>
+<li><a href="#org4fc2478">Tobit 6:21</a></li>
+<li><a href="#orgea9e8d0">Tobit 6:22</a></li>
+</ul>
+</li>
+<li><a href="#org651df2c">Tobit 7</a>
+<ul>
+<li><a href="#orgfcc6ac8">Tobit 7:1</a></li>
+<li><a href="#orge82fa11">Tobit 7:2</a></li>
+<li><a href="#org380e2f6">Tobit 7:3</a></li>
+<li><a href="#org61ff9b8">Tobit 7:4</a></li>
+<li><a href="#orgba9ed69">Tobit 7:5</a></li>
+<li><a href="#org0ecf5fd">Tobit 7:6</a></li>
+<li><a href="#org4798734">Tobit 7:7</a></li>
+<li><a href="#org092ea67">Tobit 7:8</a></li>
+<li><a href="#org061fe55">Tobit 7:9</a></li>
+<li><a href="#org5cf447d">Tobit 7:10</a></li>
+<li><a href="#org44a711b">Tobit 7:11</a></li>
+<li><a href="#org21828c3">Tobit 7:12</a></li>
+<li><a href="#orgd2b7fad">Tobit 7:13</a></li>
+<li><a href="#orgf5bdb90">Tobit 7:14</a></li>
+<li><a href="#orgee4c496">Tobit 7:15</a></li>
+<li><a href="#orgeee4713">Tobit 7:16</a></li>
+<li><a href="#org34b5d70">Tobit 7:17</a></li>
+<li><a href="#org472d880">Tobit 7:18</a></li>
+<li><a href="#org249a367">Tobit 7:19</a></li>
+<li><a href="#orgc85cc52">Tobit 7:20</a></li>
+</ul>
+</li>
+<li><a href="#orgf9c5d5c">Tobit 8</a>
+<ul>
+<li><a href="#org82b2399">Tobit 8:1</a></li>
+<li><a href="#org506f6be">Tobit 8:2</a></li>
+<li><a href="#orgcc10209">Tobit 8:3</a></li>
+<li><a href="#orgdbe02fc">Tobit 8:4</a></li>
+<li><a href="#org0673a09">Tobit 8:5</a></li>
+<li><a href="#orga832557">Tobit 8:6</a></li>
+<li><a href="#orgc69834c">Tobit 8:7</a></li>
+<li><a href="#org929d644">Tobit 8:8</a></li>
+<li><a href="#orge7dd7db">Tobit 8:9</a></li>
+<li><a href="#org768947e">Tobit 8:10</a></li>
+<li><a href="#org2e6b772">Tobit 8:11</a></li>
+<li><a href="#orge17fd86">Tobit 8:12</a></li>
+<li><a href="#orgc7dac4f">Tobit 8:13</a></li>
+<li><a href="#orgd4881a9">Tobit 8:14</a></li>
+<li><a href="#org4268a26">Tobit 8:15</a></li>
+<li><a href="#org5605092">Tobit 8:16</a></li>
+<li><a href="#org47265fb">Tobit 8:17</a></li>
+<li><a href="#org442288c">Tobit 8:18</a></li>
+<li><a href="#orgacf19b9">Tobit 8:19</a></li>
+<li><a href="#org8916461">Tobit 8:20</a></li>
+<li><a href="#orgb701cc3">Tobit 8:21</a></li>
+<li><a href="#orgd1d053a">Tobit 8:22</a></li>
+<li><a href="#org0ec7a3f">Tobit 8:23</a></li>
+<li><a href="#orgcfdcf7b">Tobit 8:24</a></li>
+</ul>
+</li>
+<li><a href="#orgdd8bfae">Tobit 9</a>
+<ul>
+<li><a href="#org8e3c89b">Tobit 9:1</a></li>
+<li><a href="#org8d65afa">Tobit 9:2</a></li>
+<li><a href="#orgfd92e21">Tobit 9:3</a></li>
+<li><a href="#org2f22a0f">Tobit 9:4</a></li>
+<li><a href="#org5491fd2">Tobit 9:5</a></li>
+<li><a href="#org829f2eb">Tobit 9:6</a></li>
+<li><a href="#org27c11c1">Tobit 9:7</a></li>
+<li><a href="#orgf0960ef">Tobit 9:8</a></li>
+<li><a href="#org69578d5">Tobit 9:9</a></li>
+<li><a href="#orgc46605a">Tobit 9:10</a></li>
+<li><a href="#org06cc931">Tobit 9:11</a></li>
+<li><a href="#orgf11bce2">Tobit 9:12</a></li>
+</ul>
+</li>
+<li><a href="#orgd15b6a2">Tobit 10</a>
+<ul>
+<li><a href="#orgef90de8">Tobit 10:1</a></li>
+<li><a href="#org0ee85a9">Tobit 10:2</a></li>
+<li><a href="#org46888d3">Tobit 10:3</a></li>
+<li><a href="#org32460d6">Tobit 10:4</a></li>
+<li><a href="#org69cb918">Tobit 10:5</a></li>
+<li><a href="#org9618a4c">Tobit 10:6</a></li>
+<li><a href="#org12ebd16">Tobit 10:7</a></li>
+<li><a href="#orgb7bdd09">Tobit 10:8</a></li>
+<li><a href="#org69390f9">Tobit 10:9</a></li>
+<li><a href="#org3f53d30">Tobit 10:10</a></li>
+<li><a href="#org5c1d639">Tobit 10:11</a></li>
+<li><a href="#orgae4e803">Tobit 10:12</a></li>
+<li><a href="#org7093334">Tobit 10:13</a></li>
+</ul>
+</li>
+<li><a href="#org3be7ab3">Tobit 11</a>
+<ul>
+<li><a href="#org283d37c">Tobit 11:1</a></li>
+<li><a href="#org4fa56ce">Tobit 11:2</a></li>
+<li><a href="#org4d9fa4f">Tobit 11:3</a></li>
+<li><a href="#org04ba339">Tobit 11:4</a></li>
+<li><a href="#org735703f">Tobit 11:5</a></li>
+<li><a href="#org4d4b11f">Tobit 11:6</a></li>
+<li><a href="#org6f44625">Tobit 11:7</a></li>
+<li><a href="#org80999df">Tobit 11:8</a></li>
+<li><a href="#org35ea9d5">Tobit 11:9</a></li>
+<li><a href="#orgc932a68">Tobit 11:10</a></li>
+<li><a href="#orgd493584">Tobit 11:11</a></li>
+<li><a href="#orgf0b692d">Tobit 11:12</a></li>
+<li><a href="#orgf1bb59e">Tobit 11:13</a></li>
+<li><a href="#org498f279">Tobit 11:14</a></li>
+<li><a href="#org0919209">Tobit 11:15</a></li>
+<li><a href="#orgce90f45">Tobit 11:16</a></li>
+<li><a href="#orgdc9aa65">Tobit 11:17</a></li>
+<li><a href="#org06ae2d9">Tobit 11:18</a></li>
+<li><a href="#orgde0e25a">Tobit 11:19</a></li>
+<li><a href="#org080d6e5">Tobit 11:20</a></li>
+<li><a href="#orge378865">Tobit 11:21</a></li>
+</ul>
+</li>
+<li><a href="#orgc59292f">Tobit 12</a>
+<ul>
+<li><a href="#org2b9d3ca">Tobit 12:1</a></li>
+<li><a href="#org9fff9a0">Tobit 12:2</a></li>
+<li><a href="#org7d753f6">Tobit 12:3</a></li>
+<li><a href="#orgfdc3578">Tobit 12:4</a></li>
+<li><a href="#org23b1102">Tobit 12:5</a></li>
+<li><a href="#orgcf9ee32">Tobit 12:6</a></li>
+<li><a href="#org38f452e">Tobit 12:7</a></li>
+<li><a href="#orgb6b2fcb">Tobit 12:8</a></li>
+<li><a href="#org3a4536f">Tobit 12:9</a></li>
+<li><a href="#orgf7fd222">Tobit 12:10</a></li>
+<li><a href="#org34345b8">Tobit 12:11</a></li>
+<li><a href="#org644fdb5">Tobit 12:12</a></li>
+<li><a href="#org3dd6caf">Tobit 12:13</a></li>
+<li><a href="#org7727832">Tobit 12:14</a></li>
+<li><a href="#org788669f">Tobit 12:15</a></li>
+<li><a href="#org9583f40">Tobit 12:16</a></li>
+<li><a href="#org4f2a5a5">Tobit 12:17</a></li>
+<li><a href="#orged9be74">Tobit 12:18</a></li>
+<li><a href="#orgc8a6c6a">Tobit 12:19</a></li>
+<li><a href="#orga3234c4">Tobit 12:20</a></li>
+<li><a href="#orgdabc198">Tobit 12:21</a></li>
+<li><a href="#org6a8d5ac">Tobit 12:22</a></li>
+</ul>
+</li>
+<li><a href="#org952b5b6">Tobit 13</a>
+<ul>
+<li><a href="#orga24d5e7">Tobit 13:1</a></li>
+<li><a href="#orgc3c652f">Tobit 13:2</a></li>
+<li><a href="#org579e335">Tobit 13:3</a></li>
+<li><a href="#org08ffd2b">Tobit 13:4</a></li>
+<li><a href="#org772caf1">Tobit 13:5</a></li>
+<li><a href="#org9c2be1a">Tobit 13:6</a></li>
+<li><a href="#orgab8040e">Tobit 13:7</a></li>
+<li><a href="#org19060a5">Tobit 13:8</a></li>
+<li><a href="#orgcc8654f">Tobit 13:9</a></li>
+<li><a href="#org1e2d11d">Tobit 13:10</a></li>
+<li><a href="#org7665bf8">Tobit 13:11</a></li>
+<li><a href="#org205ad05">Tobit 13:12</a></li>
+<li><a href="#orgf6098a6">Tobit 13:13</a></li>
+<li><a href="#orgef5e072">Tobit 13:14</a></li>
+<li><a href="#orgd7deb7a">Tobit 13:15</a></li>
+<li><a href="#orgd391667">Tobit 13:16</a></li>
+<li><a href="#org005c14d">Tobit 13:17</a></li>
+<li><a href="#org677a567">Tobit 13:18</a></li>
+<li><a href="#org0b014ce">Tobit 13:19</a></li>
+<li><a href="#org132a0a8">Tobit 13:20</a></li>
+<li><a href="#org4cabe4f">Tobit 13:21</a></li>
+<li><a href="#org126a9fc">Tobit 13:22</a></li>
+<li><a href="#org06f936a">Tobit 13:23</a></li>
+</ul>
+</li>
+<li><a href="#org2095712">Tobit 14</a>
+<ul>
+<li><a href="#org85cdedd">Tobit 14:1</a></li>
+<li><a href="#org27fd601">Tobit 14:2</a></li>
+<li><a href="#orgf8d764c">Tobit 14:3</a></li>
+<li><a href="#org88f5fca">Tobit 14:4</a></li>
+<li><a href="#org1df4190">Tobit 14:5</a></li>
+<li><a href="#org8fd6934">Tobit 14:6</a></li>
+<li><a href="#org025e740">Tobit 14:7</a></li>
+<li><a href="#org0e1cc06">Tobit 14:8</a></li>
+<li><a href="#org9a730d6">Tobit 14:9</a></li>
+<li><a href="#org4f70ee5">Tobit 14:10</a></li>
+<li><a href="#org49d5b6a">Tobit 14:11</a></li>
+<li><a href="#org735e472">Tobit 14:12</a></li>
+<li><a href="#org5d02839">Tobit 14:13</a></li>
+<li><a href="#org1e07527">Tobit 14:14</a></li>
+<li><a href="#org9b62d2c">Tobit 14:15</a></li>
+<li><a href="#org3f17598">Tobit 14:16</a></li>
+<li><a href="#org2a23931">Tobit 14:17</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8eca9fc" class="outline-2">
+<h2 id="org8eca9fc">Tobit 1</h2>
+<div class="outline-text-2" id="text-org8eca9fc">
+</div>
+<div id="outline-container-org1635759" class="outline-3">
+<h3 id="org1635759">Tobit 1:1</h3>
+<div class="outline-text-3" id="text-org1635759">
+<p>
+Tobias of the tribe and city of Nephtali, (which is in the upper parts of Galilee above Naasson, beyond the way that leadeth to the west, having on the right hand the city of Sephet,)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org911d732" class="outline-3">
+<h3 id="org911d732">Tobit 1:2</h3>
+<div class="outline-text-3" id="text-org911d732">
+<p>
+When he was made captive in the days of Salmanasar king of the Assyrians, even in his captivity, forsook not the way of truth,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7c6897" class="outline-3">
+<h3 id="orgc7c6897">Tobit 1:3</h3>
+<div class="outline-text-3" id="text-orgc7c6897">
+<p>
+But every day gave all he could get to his brethren his fellow captives, that were of his kindred.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92b6d88" class="outline-3">
+<h3 id="org92b6d88">Tobit 1:4</h3>
+<div class="outline-text-3" id="text-org92b6d88">
+<p>
+And when he was younger than any of the tribe of Nephtali, yet did he no childish thing in his work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80d8a72" class="outline-3">
+<h3 id="org80d8a72">Tobit 1:5</h3>
+<div class="outline-text-3" id="text-org80d8a72">
+<p>
+Moreover when all went to the golden calves which Jeroboam king of Israel had made, he alone fled the company of all,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9cd206" class="outline-3">
+<h3 id="orgc9cd206">Tobit 1:6</h3>
+<div class="outline-text-3" id="text-orgc9cd206">
+<p>
+And went to Jerusalem to the temple of the Lord, and there adored the Lord God of Israel, offering faithfully all his firstfruits, and his tithes,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4c427f" class="outline-3">
+<h3 id="orgc4c427f">Tobit 1:7</h3>
+<div class="outline-text-3" id="text-orgc4c427f">
+<p>
+So that in the third year he gave all his tithes to the proselytes, and strangers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge31d23d" class="outline-3">
+<h3 id="orge31d23d">Tobit 1:8</h3>
+<div class="outline-text-3" id="text-orge31d23d">
+<p>
+These and such like things did he observe when but a boy according to the law of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8aa5d5e" class="outline-3">
+<h3 id="org8aa5d5e">Tobit 1:9</h3>
+<div class="outline-text-3" id="text-org8aa5d5e">
+<p>
+But when he was a man, he took to wife Anna of his own tribe, and had a son by her, whom he called after his own name,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd52480d" class="outline-3">
+<h3 id="orgd52480d">Tobit 1:10</h3>
+<div class="outline-text-3" id="text-orgd52480d">
+<p>
+And from his infancy he taught him to fear God, and to abstain from all sin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbbba1c" class="outline-3">
+<h3 id="orgfbbba1c">Tobit 1:11</h3>
+<div class="outline-text-3" id="text-orgfbbba1c">
+<p>
+And when by the captivity he with his wife and his son and all his tribe was come to the city of Ninive,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6fd312" class="outline-3">
+<h3 id="orga6fd312">Tobit 1:12</h3>
+<div class="outline-text-3" id="text-orga6fd312">
+<p>
+(When all ate of the meats of the Gentiles) he kept his soul and never was defiled with their meats.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7371056" class="outline-3">
+<h3 id="org7371056">Tobit 1:13</h3>
+<div class="outline-text-3" id="text-org7371056">
+<p>
+And because he was mindful of the Lord with all his heart, God gave him favour in the sight of Salmanasar the king.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48badda" class="outline-3">
+<h3 id="org48badda">Tobit 1:14</h3>
+<div class="outline-text-3" id="text-org48badda">
+<p>
+And he gave him leave to go whithersoever he would, with liberty to do whatever he had a mind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org768ee96" class="outline-3">
+<h3 id="org768ee96">Tobit 1:15</h3>
+<div class="outline-text-3" id="text-org768ee96">
+<p>
+He therefore went to all that were in captivity, and gave them wholesome admonitions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4de4fa" class="outline-3">
+<h3 id="orga4de4fa">Tobit 1:16</h3>
+<div class="outline-text-3" id="text-orga4de4fa">
+<p>
+And when he was come to Rages a city of the Medes, and had ten talents of silver of that with which he had been honoured by the king:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd621889" class="outline-3">
+<h3 id="orgd621889">Tobit 1:17</h3>
+<div class="outline-text-3" id="text-orgd621889">
+<p>
+And when amongst a great multitude of his kindred, he saw Gabelus in want, who was one of his tribe, taking a note of his hand he gave him the aforesaid sum of money.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga744174" class="outline-3">
+<h3 id="orga744174">Tobit 1:18</h3>
+<div class="outline-text-3" id="text-orga744174">
+<p>
+But after a long time, Salmanasar the king being dead, when Sennacherib his son, who reigned in his place, had a hatred for the children of Israel:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e3ab54" class="outline-3">
+<h3 id="org0e3ab54">Tobit 1:19</h3>
+<div class="outline-text-3" id="text-org0e3ab54">
+<p>
+Tobias daily went among all his kindred and comforted them, and distributed to every one as he was able, out of his goods:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc2feb0" class="outline-3">
+<h3 id="orgbc2feb0">Tobit 1:20</h3>
+<div class="outline-text-3" id="text-orgbc2feb0">
+<p>
+He fed the hungry, and gave clothes to the naked, and was careful to bury the dead, and they that were slain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6247459" class="outline-3">
+<h3 id="org6247459">Tobit 1:21</h3>
+<div class="outline-text-3" id="text-org6247459">
+<p>
+And when king Sennacherib was come back, fleeing from Judea by reason of the slaughter that God had made about him for his blasphemy, and being angry slew many of the children of Israel, Tobias buried their bodies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ac5619" class="outline-3">
+<h3 id="org4ac5619">Tobit 1:22</h3>
+<div class="outline-text-3" id="text-org4ac5619">
+<p>
+But when it was told the king, he commanded him to be slain, and took away all his substance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07f6e47" class="outline-3">
+<h3 id="org07f6e47">Tobit 1:23</h3>
+<div class="outline-text-3" id="text-org07f6e47">
+<p>
+But Tobias fleeing naked away with his son and with his wife, lay concealed, for many loved him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaa994d" class="outline-3">
+<h3 id="orgdaa994d">Tobit 1:24</h3>
+<div class="outline-text-3" id="text-orgdaa994d">
+<p>
+But after forty-five days, the king was killed by his own sons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e1447e" class="outline-3">
+<h3 id="org3e1447e">Tobit 1:25</h3>
+<div class="outline-text-3" id="text-org3e1447e">
+<p>
+And Tobias returned to his house, and all his substance was restored to him. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org57918dd" class="outline-2">
+<h2 id="org57918dd">Tobit 2</h2>
+<div class="outline-text-2" id="text-org57918dd">
+</div>
+<div id="outline-container-orge96b264" class="outline-3">
+<h3 id="orge96b264">Tobit 2:1</h3>
+<div class="outline-text-3" id="text-orge96b264">
+<p>
+But after this, when there was a festival of the Lord, and a good dinner was prepared in Tobias&rsquo;s house,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b38397" class="outline-3">
+<h3 id="org7b38397">Tobit 2:2</h3>
+<div class="outline-text-3" id="text-org7b38397">
+<p>
+He said to his son: Go, and bring some of our tribe that fear God, to feast with us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ed8f01" class="outline-3">
+<h3 id="org6ed8f01">Tobit 2:3</h3>
+<div class="outline-text-3" id="text-org6ed8f01">
+<p>
+And when he had gone, returning he told him, that one of the children of Israel lay slain in the street. And he forthwith leaped up from his place at the table, and left his dinner, and came fasting to the body.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org942d453" class="outline-3">
+<h3 id="org942d453">Tobit 2:4</h3>
+<div class="outline-text-3" id="text-org942d453">
+<p>
+And taking it up carried it privately to his house, that after the sun was down, he might bury him cautiously.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff6f37c" class="outline-3">
+<h3 id="orgff6f37c">Tobit 2:5</h3>
+<div class="outline-text-3" id="text-orgff6f37c">
+<p>
+And when he had hid the body, he ate bread with mourning and fear,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ab976a" class="outline-3">
+<h3 id="org4ab976a">Tobit 2:6</h3>
+<div class="outline-text-3" id="text-org4ab976a">
+<p>
+Remembering the word which the Lord spoke by Amos the prophet: Your festival days shall be turned into lamentation and mourning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76acc55" class="outline-3">
+<h3 id="org76acc55">Tobit 2:7</h3>
+<div class="outline-text-3" id="text-org76acc55">
+<p>
+So when the sun was down, he went and buried him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeae2bad" class="outline-3">
+<h3 id="orgeae2bad">Tobit 2:8</h3>
+<div class="outline-text-3" id="text-orgeae2bad">
+<p>
+Now all his neighbours blamed him, saying: once already commandment was given for thee to be slain because of this matter, and thou didst scarce escape the sentence of death, and dost thou again bury the dead?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org368cc09" class="outline-3">
+<h3 id="org368cc09">Tobit 2:9</h3>
+<div class="outline-text-3" id="text-org368cc09">
+<p>
+But Tobias fearing God more than the king, carried off the bodies of them that were slain, and hid them in his house, and at midnight buried them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51d907d" class="outline-3">
+<h3 id="org51d907d">Tobit 2:10</h3>
+<div class="outline-text-3" id="text-org51d907d">
+<p>
+Now it happened one day that being wearied with burying, he came to his house, and cast himself down by the wall and slept,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8775415" class="outline-3">
+<h3 id="org8775415">Tobit 2:11</h3>
+<div class="outline-text-3" id="text-org8775415">
+<p>
+And as he was sleeping, hot dung out of a swallow&rsquo;s nest fell upon his eyes, and he was made blind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75eaece" class="outline-3">
+<h3 id="org75eaece">Tobit 2:12</h3>
+<div class="outline-text-3" id="text-org75eaece">
+<p>
+Now this trial the Lord therefore permitted to happen to him, that an example might be given to posterity of his patience, as also of holy Job.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0cba74" class="outline-3">
+<h3 id="orge0cba74">Tobit 2:13</h3>
+<div class="outline-text-3" id="text-orge0cba74">
+<p>
+For whereas he had always feared God from his infancy, and kept his commandments, he repined not against God because the evil of blindness had befallen him,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0220c67" class="outline-3">
+<h3 id="org0220c67">Tobit 2:14</h3>
+<div class="outline-text-3" id="text-org0220c67">
+<p>
+But continued immoveable in the fear of God, giving thanks to God all the days of his life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e04f3d" class="outline-3">
+<h3 id="org7e04f3d">Tobit 2:15</h3>
+<div class="outline-text-3" id="text-org7e04f3d">
+<p>
+For as the kings insulted over holy Job: so his relations and kinsmen mocked at his life, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ff8864" class="outline-3">
+<h3 id="org8ff8864">Tobit 2:16</h3>
+<div class="outline-text-3" id="text-org8ff8864">
+<p>
+Where is thy hope, for which thou gavest alms, and buriedst the dead?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea4b3a4" class="outline-3">
+<h3 id="orgea4b3a4">Tobit 2:17</h3>
+<div class="outline-text-3" id="text-orgea4b3a4">
+<p>
+But Tobias rebuked them, saying: Speak not so:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27e7762" class="outline-3">
+<h3 id="org27e7762">Tobit 2:18</h3>
+<div class="outline-text-3" id="text-org27e7762">
+<p>
+For we are the children of saints, and look for that life which God will give to those that never change their faith from him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0157910" class="outline-3">
+<h3 id="org0157910">Tobit 2:19</h3>
+<div class="outline-text-3" id="text-org0157910">
+<p>
+Now Anna his wife went daily to weaving work, and she brought home what she could get for their living by the labour of her hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org120035d" class="outline-3">
+<h3 id="org120035d">Tobit 2:20</h3>
+<div class="outline-text-3" id="text-org120035d">
+<p>
+Whereby it came to pass, that she received a young kid, and brought it home:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf232adc" class="outline-3">
+<h3 id="orgf232adc">Tobit 2:21</h3>
+<div class="outline-text-3" id="text-orgf232adc">
+<p>
+And when her husband heard it bleating, he said: Take heed, lest perhaps it be stolen: restore ye it to its owners, for it is not lawful for us either to eat or to touch any thing that cometh by theft.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25f84a2" class="outline-3">
+<h3 id="org25f84a2">Tobit 2:22</h3>
+<div class="outline-text-3" id="text-org25f84a2">
+<p>
+At these words his wife being angry answered: It is evident the hope is come to nothing, and thy alms now appear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d8dafe" class="outline-3">
+<h3 id="org4d8dafe">Tobit 2:23</h3>
+<div class="outline-text-3" id="text-org4d8dafe">
+<p>
+And with these and other such like words, she upbraided him. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1329cc5" class="outline-2">
+<h2 id="org1329cc5">Tobit 3</h2>
+<div class="outline-text-2" id="text-org1329cc5">
+</div>
+<div id="outline-container-org4c12289" class="outline-3">
+<h3 id="org4c12289">Tobit 3:1</h3>
+<div class="outline-text-3" id="text-org4c12289">
+<p>
+Then Tobias sighed, and began to pray with tears,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7d363d" class="outline-3">
+<h3 id="orgb7d363d">Tobit 3:2</h3>
+<div class="outline-text-3" id="text-orgb7d363d">
+<p>
+Saying, Thou art just, O Lord, and all thy judgments are just, and all thy ways mercy, and truth, and judgment:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17dd532" class="outline-3">
+<h3 id="org17dd532">Tobit 3:3</h3>
+<div class="outline-text-3" id="text-org17dd532">
+<p>
+And now, O Lord, think of me, and take not revenge of my sins, neither remember my offences, nor those of my parents.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc876fac" class="outline-3">
+<h3 id="orgc876fac">Tobit 3:4</h3>
+<div class="outline-text-3" id="text-orgc876fac">
+<p>
+For we have not obeyed thy commandments, therefore are we delivered to spoil and to captivity, and death, and are made a fable, and a reproach to all nations, amongst which thou hast scattered us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaef7bae" class="outline-3">
+<h3 id="orgaef7bae">Tobit 3:5</h3>
+<div class="outline-text-3" id="text-orgaef7bae">
+<p>
+And now, O Lord, great are thy judgments, because we have not done according to thy precepts, and have not walked sincerely before thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3eb24cd" class="outline-3">
+<h3 id="org3eb24cd">Tobit 3:6</h3>
+<div class="outline-text-3" id="text-org3eb24cd">
+<p>
+And now, O Lord, do with me according to thy will, and command my spirit to be received in peace: for it is better for me to die, than to live.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc97a47b" class="outline-3">
+<h3 id="orgc97a47b">Tobit 3:7</h3>
+<div class="outline-text-3" id="text-orgc97a47b">
+<p>
+Now it happened on the same day, that Sara daughter of Raguel, in Rages a city of the Medes, received a reproach from one of her father&rsquo;s servant maids,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31a9745" class="outline-3">
+<h3 id="org31a9745">Tobit 3:8</h3>
+<div class="outline-text-3" id="text-org31a9745">
+<p>
+Because she had been given to seven husbands and a devil named Asmodeus had killed them, at their first going in unto her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd07d065" class="outline-3">
+<h3 id="orgd07d065">Tobit 3:9</h3>
+<div class="outline-text-3" id="text-orgd07d065">
+<p>
+So when she reproved the maid for her fault, she answered her, saying: May we never see son, or daughter of thee upon the earth, thou murderer of thy husbands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20f1c06" class="outline-3">
+<h3 id="org20f1c06">Tobit 3:10</h3>
+<div class="outline-text-3" id="text-org20f1c06">
+<p>
+Wilt thou kill me also, as thou hast already killed seven husbands? At these words, she went into an upper chamber of her house: and for three days and three nights did neither eat nor drink:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org482fbed" class="outline-3">
+<h3 id="org482fbed">Tobit 3:11</h3>
+<div class="outline-text-3" id="text-org482fbed">
+<p>
+But continuing in prayer with tears besought God, that he would deliver her from this reproach.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org279d326" class="outline-3">
+<h3 id="org279d326">Tobit 3:12</h3>
+<div class="outline-text-3" id="text-org279d326">
+<p>
+And it came to pass on the third day when she was making an end of her prayer, blessing the Lord,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc589b5b" class="outline-3">
+<h3 id="orgc589b5b">Tobit 3:13</h3>
+<div class="outline-text-3" id="text-orgc589b5b">
+<p>
+She said: Blessed is thy name, O God of our fathers, who when thou hast been angry, wilt shew mercy, and in the time of tribulation forgivest the sins of them that call upon thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd263bd7" class="outline-3">
+<h3 id="orgd263bd7">Tobit 3:14</h3>
+<div class="outline-text-3" id="text-orgd263bd7">
+<p>
+To thee, O Lord, I turn my face, to thee I direct my eyes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8c37d0" class="outline-3">
+<h3 id="orgb8c37d0">Tobit 3:15</h3>
+<div class="outline-text-3" id="text-orgb8c37d0">
+<p>
+I beg, O Lord, that thou loose me from the bond of this reproach, or else take me away from the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab01a98" class="outline-3">
+<h3 id="orgab01a98">Tobit 3:16</h3>
+<div class="outline-text-3" id="text-orgab01a98">
+<p>
+Thou knowest, O Lord, that I never coveted a husband, and have kept my soul clean from all lust.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e4da8f" class="outline-3">
+<h3 id="org7e4da8f">Tobit 3:17</h3>
+<div class="outline-text-3" id="text-org7e4da8f">
+<p>
+Never have I joined myself with them that play: neither have I made myself partaker with them that walk in lightness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ed4bfb" class="outline-3">
+<h3 id="org9ed4bfb">Tobit 3:18</h3>
+<div class="outline-text-3" id="text-org9ed4bfb">
+<p>
+But a husband I consented to take, with thy fear, not with my lust.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga41db08" class="outline-3">
+<h3 id="orga41db08">Tobit 3:19</h3>
+<div class="outline-text-3" id="text-orga41db08">
+<p>
+And either I was unworthy of them, or they perhaps were not worthy of me: because perhaps thou hast kept me for another man,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga50a640" class="outline-3">
+<h3 id="orga50a640">Tobit 3:20</h3>
+<div class="outline-text-3" id="text-orga50a640">
+<p>
+For thy counsel is not in man&rsquo;s power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f116bb" class="outline-3">
+<h3 id="org2f116bb">Tobit 3:21</h3>
+<div class="outline-text-3" id="text-org2f116bb">
+<p>
+But this every one is sure of that worshippeth thee, that his life, if it be under trial, shall be crowned and if it be under tribulation, it shall be delivered: and if it be under correction, it shall be allowed to come to thy mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87ed4e9" class="outline-3">
+<h3 id="org87ed4e9">Tobit 3:22</h3>
+<div class="outline-text-3" id="text-org87ed4e9">
+<p>
+For thou art not delighted in our being lost, because after a storm thou makest a calm, and after tears and weeping thou pourest in joyfulness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9675419" class="outline-3">
+<h3 id="org9675419">Tobit 3:23</h3>
+<div class="outline-text-3" id="text-org9675419">
+<p>
+Be thy name, O God of Israel, blessed for ever,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org059b3f8" class="outline-3">
+<h3 id="org059b3f8">Tobit 3:24</h3>
+<div class="outline-text-3" id="text-org059b3f8">
+<p>
+At that time the prayers of them both were heard in the sight of the glory of the most high God:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48a6203" class="outline-3">
+<h3 id="org48a6203">Tobit 3:25</h3>
+<div class="outline-text-3" id="text-org48a6203">
+<p>
+And the holy angel of the Lord, Raphael was sent to heal them both, whose prayers at one time were rehearsed in the sight of the Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4bddfe" class="outline-2">
+<h2 id="orgf4bddfe">Tobit 4</h2>
+<div class="outline-text-2" id="text-orgf4bddfe">
+</div>
+<div id="outline-container-org54fbf78" class="outline-3">
+<h3 id="org54fbf78">Tobit 4:1</h3>
+<div class="outline-text-3" id="text-org54fbf78">
+<p>
+Therefore when Tobias thought that his prayer was heard that he might die, he called to him Tobias his son,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb84f02" class="outline-3">
+<h3 id="orgcb84f02">Tobit 4:2</h3>
+<div class="outline-text-3" id="text-orgcb84f02">
+<p>
+And said to him: Hear, my son, the words of my mouth, and lay them as a foundation in thy heart.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecd9218" class="outline-3">
+<h3 id="orgecd9218">Tobit 4:3</h3>
+<div class="outline-text-3" id="text-orgecd9218">
+<p>
+When God shall take my soul, thou shalt bury my body: and thou shalt honour thy mother all the days of her life:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a71141" class="outline-3">
+<h3 id="org8a71141">Tobit 4:4</h3>
+<div class="outline-text-3" id="text-org8a71141">
+<p>
+For thou must be mindful what and how great perils she suffered for thee in her womb.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54c93b5" class="outline-3">
+<h3 id="org54c93b5">Tobit 4:5</h3>
+<div class="outline-text-3" id="text-org54c93b5">
+<p>
+And when she also shall have ended the time of her life, bury her by me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bcfa13" class="outline-3">
+<h3 id="org0bcfa13">Tobit 4:6</h3>
+<div class="outline-text-3" id="text-org0bcfa13">
+<p>
+And all the days of thy life have God in thy mind: and take heed thou never consent to sin, nor transgress the commandments of the Lord our God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ba0c89" class="outline-3">
+<h3 id="org5ba0c89">Tobit 4:7</h3>
+<div class="outline-text-3" id="text-org5ba0c89">
+<p>
+Give alms out of thy substance, and turn not away thy face from any poor person: for so it shall come to pass that the face of the Lord shall not be turned from thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef8fad7" class="outline-3">
+<h3 id="orgef8fad7">Tobit 4:8</h3>
+<div class="outline-text-3" id="text-orgef8fad7">
+<p>
+According to thy ability be merciful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54ea3c2" class="outline-3">
+<h3 id="org54ea3c2">Tobit 4:9</h3>
+<div class="outline-text-3" id="text-org54ea3c2">
+<p>
+If thou have much give abundantly: if thou have little, take care even so to bestow willingly a little.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org900005e" class="outline-3">
+<h3 id="org900005e">Tobit 4:10</h3>
+<div class="outline-text-3" id="text-org900005e">
+<p>
+For thus thou storest up to thyself a good reward for the day of necessity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org051869c" class="outline-3">
+<h3 id="org051869c">Tobit 4:11</h3>
+<div class="outline-text-3" id="text-org051869c">
+<p>
+For alms deliver from all sin, and from death, and will not suffer the soul to go into darkness.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc69113c" class="outline-3">
+<h3 id="orgc69113c">Tobit 4:12</h3>
+<div class="outline-text-3" id="text-orgc69113c">
+<p>
+Alms shall be a great confidence before the most high God, to all them that give it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ec12a4" class="outline-3">
+<h3 id="org6ec12a4">Tobit 4:13</h3>
+<div class="outline-text-3" id="text-org6ec12a4">
+<p>
+Take heed to keep thyself, my son, from all fornication, and beside thy wife never endure to know a crime.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f3a39a" class="outline-3">
+<h3 id="org4f3a39a">Tobit 4:14</h3>
+<div class="outline-text-3" id="text-org4f3a39a">
+<p>
+Never suffer pride to reign in thy mind, or in thy words: for from it all perdition took its beginning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9ac84e" class="outline-3">
+<h3 id="orgf9ac84e">Tobit 4:15</h3>
+<div class="outline-text-3" id="text-orgf9ac84e">
+<p>
+If any man hath done any work for thee, immediately pay him his hire, and let not the wages of thy hired servant stay with thee at all.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07b7a82" class="outline-3">
+<h3 id="org07b7a82">Tobit 4:16</h3>
+<div class="outline-text-3" id="text-org07b7a82">
+<p>
+See thou never do to another what thou wouldst hate to have done to thee by another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc72357" class="outline-3">
+<h3 id="orgbc72357">Tobit 4:17</h3>
+<div class="outline-text-3" id="text-orgbc72357">
+<p>
+Eat thy bread with the hungry and the needy, and with thy garments cover the naked,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95d2351" class="outline-3">
+<h3 id="org95d2351">Tobit 4:18</h3>
+<div class="outline-text-3" id="text-org95d2351">
+<p>
+Lay out thy bread, and thy wine upon the burial of a just man, and do not eat and drink thereof with the wicked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2280ff" class="outline-3">
+<h3 id="orge2280ff">Tobit 4:19</h3>
+<div class="outline-text-3" id="text-orge2280ff">
+<p>
+Seek counsel always of a wise man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf85071" class="outline-3">
+<h3 id="orgdf85071">Tobit 4:20</h3>
+<div class="outline-text-3" id="text-orgdf85071">
+<p>
+Bless God at all times: and desire of him to direct thy ways, and that all thy counsels may abide in him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bdeb7c" class="outline-3">
+<h3 id="org2bdeb7c">Tobit 4:21</h3>
+<div class="outline-text-3" id="text-org2bdeb7c">
+<p>
+I tell thee also, my son, that I lent ten talents of silver, while thou wast yet a child, to Gabelus, in Rages a city of the Medes, and I have a note of his hand with me:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0b7d1b" class="outline-3">
+<h3 id="orga0b7d1b">Tobit 4:22</h3>
+<div class="outline-text-3" id="text-orga0b7d1b">
+<p>
+Now therefore inquire how thou mayst go to him, and receive of him the foresaid sum of money, and restore to him the note of his hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56c835f" class="outline-3">
+<h3 id="org56c835f">Tobit 4:23</h3>
+<div class="outline-text-3" id="text-org56c835f">
+<p>
+Fear not, my son: we lead indeed a poor life, but we shall have many good things if we fear God, and depart from all sin, and do that which is good. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6f843a6" class="outline-2">
+<h2 id="org6f843a6">Tobit 5</h2>
+<div class="outline-text-2" id="text-org6f843a6">
+</div>
+<div id="outline-container-org8c9e2f8" class="outline-3">
+<h3 id="org8c9e2f8">Tobit 5:1</h3>
+<div class="outline-text-3" id="text-org8c9e2f8">
+<p>
+Then Tobias answered his father, and said: I will do all things, father, which thou hast commanded me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89a4b21" class="outline-3">
+<h3 id="org89a4b21">Tobit 5:2</h3>
+<div class="outline-text-3" id="text-org89a4b21">
+<p>
+But how I shall get this money, I cannot tell; he knoweth not me, and I know not him: what token shall I give him? nor did I ever know the way which leadeth thither.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88a0b2b" class="outline-3">
+<h3 id="org88a0b2b">Tobit 5:3</h3>
+<div class="outline-text-3" id="text-org88a0b2b">
+<p>
+Then his father answered him, and said: I have a note of his hand with me, which when thou shalt shew him, he will presently pay it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c765ea" class="outline-3">
+<h3 id="org1c765ea">Tobit 5:4</h3>
+<div class="outline-text-3" id="text-org1c765ea">
+<p>
+But go now, and seek thee out some faithful man, to go with thee for his hire: that thou mayst receive it, while I yet live.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0135b90" class="outline-3">
+<h3 id="org0135b90">Tobit 5:5</h3>
+<div class="outline-text-3" id="text-org0135b90">
+<p>
+Then Tobias going forth, found a beautiful young man, standing girded, and as it were ready to walk.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf784a51" class="outline-3">
+<h3 id="orgf784a51">Tobit 5:6</h3>
+<div class="outline-text-3" id="text-orgf784a51">
+<p>
+And not knowing that he was an angel of God, he saluted him, and said: From whence art thou, good young man?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ec5f85" class="outline-3">
+<h3 id="org9ec5f85">Tobit 5:7</h3>
+<div class="outline-text-3" id="text-org9ec5f85">
+<p>
+But he answered: Of the children of Israel. And Tobias said to him: Knowest thou the way that leadeth to the country of the Medes?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c2007c" class="outline-3">
+<h3 id="org0c2007c">Tobit 5:8</h3>
+<div class="outline-text-3" id="text-org0c2007c">
+<p>
+And he answered: I know it: and I have often walked through all the ways thereof, and I have abode with Gabelus our brother, who dwelleth at Rages a city of the Medes, which is situate in the mount of Ecbatana.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org652d030" class="outline-3">
+<h3 id="org652d030">Tobit 5:9</h3>
+<div class="outline-text-3" id="text-org652d030">
+<p>
+And Tobias said to him: Stay for me, I beseech thee, till I tell these same things to my father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96c6859" class="outline-3">
+<h3 id="org96c6859">Tobit 5:10</h3>
+<div class="outline-text-3" id="text-org96c6859">
+<p>
+Then Tobias going in told all these things to his father. Upon which his father being in admiration, desired that he would come in unto him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8ed4f1" class="outline-3">
+<h3 id="orga8ed4f1">Tobit 5:11</h3>
+<div class="outline-text-3" id="text-orga8ed4f1">
+<p>
+So going in he saluted him, and said: Joy be to thee always.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd372165" class="outline-3">
+<h3 id="orgd372165">Tobit 5:12</h3>
+<div class="outline-text-3" id="text-orgd372165">
+<p>
+And Tobias said: What manner of joy shall be to me, who sit in darkness and see not the light of heaven?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org338b396" class="outline-3">
+<h3 id="org338b396">Tobit 5:13</h3>
+<div class="outline-text-3" id="text-org338b396">
+<p>
+And the young man said to him: Be of good courage, thy cure from God is at hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5929732" class="outline-3">
+<h3 id="org5929732">Tobit 5:14</h3>
+<div class="outline-text-3" id="text-org5929732">
+<p>
+And Tobias said to him: Canst thou conduct my son to Gabelus at Rages, a city of the Medes? and when thou shalt return, I will pay thee thy hire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad816c7" class="outline-3">
+<h3 id="orgad816c7">Tobit 5:15</h3>
+<div class="outline-text-3" id="text-orgad816c7">
+<p>
+And the angel said to him: I will conduct him thither, and bring him back to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb347e63" class="outline-3">
+<h3 id="orgb347e63">Tobit 5:16</h3>
+<div class="outline-text-3" id="text-orgb347e63">
+<p>
+And Tobias said to him: I pray thee, tell me, of what family, or what tribe art thou?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02504c2" class="outline-3">
+<h3 id="org02504c2">Tobit 5:17</h3>
+<div class="outline-text-3" id="text-org02504c2">
+<p>
+And Raphael the angel answered: Dost thou seek the family of him thou hirest, or the hired servant himself to go with thy son?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0dd1d8" class="outline-3">
+<h3 id="orga0dd1d8">Tobit 5:18</h3>
+<div class="outline-text-3" id="text-orga0dd1d8">
+<p>
+But lest I should make thee uneasy, I am Azarias the son of the great Ananias.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc3775b" class="outline-3">
+<h3 id="orgcc3775b">Tobit 5:19</h3>
+<div class="outline-text-3" id="text-orgcc3775b">
+<p>
+And Tobias answered: Thou art of a great family. But I pray thee be not angry that I desired to know thy family.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab563ff" class="outline-3">
+<h3 id="orgab563ff">Tobit 5:20</h3>
+<div class="outline-text-3" id="text-orgab563ff">
+<p>
+And the angel said to him: I will lead thy son safe, and bring him to thee again safe.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5273982" class="outline-3">
+<h3 id="org5273982">Tobit 5:21</h3>
+<div class="outline-text-3" id="text-org5273982">
+<p>
+And Tobias answering, said: May you have a good journey, and God be with you in your way, and his angel accompany you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f07181" class="outline-3">
+<h3 id="org5f07181">Tobit 5:22</h3>
+<div class="outline-text-3" id="text-org5f07181">
+<p>
+Then all things being ready, that were to be carried in their journey, Tobias bade his father and his mother farewell, and they set out both together.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org446f61c" class="outline-3">
+<h3 id="org446f61c">Tobit 5:23</h3>
+<div class="outline-text-3" id="text-org446f61c">
+<p>
+And when they were departed, his mother began to weep, and to say: Thou hast taken the staff of our old age, and sent him away from us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f8b06f" class="outline-3">
+<h3 id="org4f8b06f">Tobit 5:24</h3>
+<div class="outline-text-3" id="text-org4f8b06f">
+<p>
+I wish the money for which thou hast sent him, had never been.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4633fdb" class="outline-3">
+<h3 id="org4633fdb">Tobit 5:25</h3>
+<div class="outline-text-3" id="text-org4633fdb">
+<p>
+For our poverty was sufficient for us, that we might account it as riches, that we saw our son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged97bc0" class="outline-3">
+<h3 id="orged97bc0">Tobit 5:26</h3>
+<div class="outline-text-3" id="text-orged97bc0">
+<p>
+And Tobias said to her: Weep not, our son will arrive thither safe, and will return safe to us, and thy eyes shall see him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd830b8" class="outline-3">
+<h3 id="orgbd830b8">Tobit 5:27</h3>
+<div class="outline-text-3" id="text-orgbd830b8">
+<p>
+For I believe that the good angel of God doth accompany him, and doth order all things well that are done about him, so that he shall return to us with joy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8354c5" class="outline-3">
+<h3 id="orge8354c5">Tobit 5:28</h3>
+<div class="outline-text-3" id="text-orge8354c5">
+<p>
+At these words his mother ceased weeping, and held her peace. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org81e88b2" class="outline-2">
+<h2 id="org81e88b2">Tobit 6</h2>
+<div class="outline-text-2" id="text-org81e88b2">
+</div>
+<div id="outline-container-orgfd374cb" class="outline-3">
+<h3 id="orgfd374cb">Tobit 6:1</h3>
+<div class="outline-text-3" id="text-orgfd374cb">
+<p>
+And Tobias went forward, and the dog followed him, and he lodged the first night by the river of Tigris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbab675f" class="outline-3">
+<h3 id="orgbab675f">Tobit 6:2</h3>
+<div class="outline-text-3" id="text-orgbab675f">
+<p>
+And he went out to wash his feet, and behold a monstrous fish came up to devour him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb874cd2" class="outline-3">
+<h3 id="orgb874cd2">Tobit 6:3</h3>
+<div class="outline-text-3" id="text-orgb874cd2">
+<p>
+And Tobias being afraid of him, cried out with a loud voice, saying: Sir, he cometh upon me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae13323" class="outline-3">
+<h3 id="orgae13323">Tobit 6:4</h3>
+<div class="outline-text-3" id="text-orgae13323">
+<p>
+And the angel said to him: Take him by the gill, and draw him to thee. And when he had done so, he drew him out upon the land, and he began to pant before his feet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07f7d45" class="outline-3">
+<h3 id="org07f7d45">Tobit 6:5</h3>
+<div class="outline-text-3" id="text-org07f7d45">
+<p>
+Then the angel said to him: Take out the entrails of this fish, and lay up his heart, and his gall, and his liver for thee: for these are necessary for useful medicines.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb548944" class="outline-3">
+<h3 id="orgb548944">Tobit 6:6</h3>
+<div class="outline-text-3" id="text-orgb548944">
+<p>
+And when he had done so, he roasted the flesh thereof, and they took it with them in the way: the rest they salted as much as might serve them, till they came to Rages the city of the Medes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7742cc8" class="outline-3">
+<h3 id="org7742cc8">Tobit 6:7</h3>
+<div class="outline-text-3" id="text-org7742cc8">
+<p>
+Then Tobias asked the angel, and said to him: I beseech thee, brother Azarias, tell me what remedies are these things good for, which thou hast bid me keep of the fish?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46dcced" class="outline-3">
+<h3 id="org46dcced">Tobit 6:8</h3>
+<div class="outline-text-3" id="text-org46dcced">
+<p>
+And the angel, answering, said to him: If thou put a little piece of its heart upon coals, the smoke thereof driveth away all kind of devils, either from man or from woman, so that they come no more to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbadad46" class="outline-3">
+<h3 id="orgbadad46">Tobit 6:9</h3>
+<div class="outline-text-3" id="text-orgbadad46">
+<p>
+And the gall is good for anointing the eyes, in which there is a white speck, and they shall be cured.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78ec085" class="outline-3">
+<h3 id="org78ec085">Tobit 6:10</h3>
+<div class="outline-text-3" id="text-org78ec085">
+<p>
+And Tobias said to him: Where wilt thou that we lodge?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda8c85f" class="outline-3">
+<h3 id="orgda8c85f">Tobit 6:11</h3>
+<div class="outline-text-3" id="text-orgda8c85f">
+<p>
+And the angel answering, said: Here is one whose name is Raguel, a near kinsman of thy tribe, and he hath a daughter named Sara, but he hath no son nor any other daughter beside her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc2e3d9" class="outline-3">
+<h3 id="orgbc2e3d9">Tobit 6:12</h3>
+<div class="outline-text-3" id="text-orgbc2e3d9">
+<p>
+All his substance is due to thee, and thou must take her to wife.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd73f9c" class="outline-3">
+<h3 id="orgfd73f9c">Tobit 6:13</h3>
+<div class="outline-text-3" id="text-orgfd73f9c">
+<p>
+Ask her therefore of her father, and he will give her thee to wife.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde11c57" class="outline-3">
+<h3 id="orgde11c57">Tobit 6:14</h3>
+<div class="outline-text-3" id="text-orgde11c57">
+<p>
+Then Tobias answered, and said: I hear that she hath been given to seven husbands, and they all died: moreover I have heard, that a devil killed them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64f346e" class="outline-3">
+<h3 id="org64f346e">Tobit 6:15</h3>
+<div class="outline-text-3" id="text-org64f346e">
+<p>
+Now I am afraid, lest the same thing should happen to me also: and whereas I am the only child of my parents, I should bring down their old age with sorrow to hell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e0734a" class="outline-3">
+<h3 id="org7e0734a">Tobit 6:16</h3>
+<div class="outline-text-3" id="text-org7e0734a">
+<p>
+Then the angel Raphael said to him: Hear me, and I will shew thee who they are, over whom the devil can prevail.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcbafbeb" class="outline-3">
+<h3 id="orgcbafbeb">Tobit 6:17</h3>
+<div class="outline-text-3" id="text-orgcbafbeb">
+<p>
+For they who in such manner receive matrimony, as to shut out God from themselves, and from their mind, and to give themselves to their lust, as the horse and mule, which have not understanding, over them the devil hath power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2b3558" class="outline-3">
+<h3 id="orgc2b3558">Tobit 6:18</h3>
+<div class="outline-text-3" id="text-orgc2b3558">
+<p>
+But thou when thou shalt take her, go into the chamber, and for three days keep thyself continent from her, and give thyself to nothing else but to prayers with her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org459a361" class="outline-3">
+<h3 id="org459a361">Tobit 6:19</h3>
+<div class="outline-text-3" id="text-org459a361">
+<p>
+And on that night lay the liver of the fish on the fire, and the devil shall be driven away.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb9e39b" class="outline-3">
+<h3 id="orgbb9e39b">Tobit 6:20</h3>
+<div class="outline-text-3" id="text-orgbb9e39b">
+<p>
+But the second night thou shalt be admitted into the society of the holy Patriarchs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fc2478" class="outline-3">
+<h3 id="org4fc2478">Tobit 6:21</h3>
+<div class="outline-text-3" id="text-org4fc2478">
+<p>
+And the third night thou shalt obtain a blessing that sound children may be born of you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea9e8d0" class="outline-3">
+<h3 id="orgea9e8d0">Tobit 6:22</h3>
+<div class="outline-text-3" id="text-orgea9e8d0">
+<p>
+And when the third night is past, thou shalt take the virgin with the fear of the Lord, moved rather for love of children than for lust, that in the seed of Abraham thou mayst obtain a blessing in children. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org651df2c" class="outline-2">
+<h2 id="org651df2c">Tobit 7</h2>
+<div class="outline-text-2" id="text-org651df2c">
+</div>
+<div id="outline-container-orgfcc6ac8" class="outline-3">
+<h3 id="orgfcc6ac8">Tobit 7:1</h3>
+<div class="outline-text-3" id="text-orgfcc6ac8">
+<p>
+And they went in to Raguel, and Raguel received them with joy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge82fa11" class="outline-3">
+<h3 id="orge82fa11">Tobit 7:2</h3>
+<div class="outline-text-3" id="text-orge82fa11">
+<p>
+And Raguel looking upon Tobias, said to Anna his wife: How like is this young man to my cousin?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org380e2f6" class="outline-3">
+<h3 id="org380e2f6">Tobit 7:3</h3>
+<div class="outline-text-3" id="text-org380e2f6">
+<p>
+And when he had spoken these words, he said: Whence are ye young men our brethren?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61ff9b8" class="outline-3">
+<h3 id="org61ff9b8">Tobit 7:4</h3>
+<div class="outline-text-3" id="text-org61ff9b8">
+<p>
+But they said: We are of the tribe of Nephtali, of the captivity of Ninive.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba9ed69" class="outline-3">
+<h3 id="orgba9ed69">Tobit 7:5</h3>
+<div class="outline-text-3" id="text-orgba9ed69">
+<p>
+And Raguel said to them: Do you know Tobias my brother? And they said: We know him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ecf5fd" class="outline-3">
+<h3 id="org0ecf5fd">Tobit 7:6</h3>
+<div class="outline-text-3" id="text-org0ecf5fd">
+<p>
+And when he was speaking many good things of him, the angel said to Raguel: Tobias concerning whom thou inquirest is this young man&rsquo;s father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4798734" class="outline-3">
+<h3 id="org4798734">Tobit 7:7</h3>
+<div class="outline-text-3" id="text-org4798734">
+<p>
+And Raguel went to him, and kissed him with tears and weeping upon his neck, said: A blessing be upon thee, my son, because thou art the son of a good and most virtuous man.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org092ea67" class="outline-3">
+<h3 id="org092ea67">Tobit 7:8</h3>
+<div class="outline-text-3" id="text-org092ea67">
+<p>
+And Anna his wife, and Sara their daughter wept.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org061fe55" class="outline-3">
+<h3 id="org061fe55">Tobit 7:9</h3>
+<div class="outline-text-3" id="text-org061fe55">
+<p>
+And after they had spoken, Raguel commanded a sheep to be killed, and a feast to be prepared. And when he desired them to sit down to dinner,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5cf447d" class="outline-3">
+<h3 id="org5cf447d">Tobit 7:10</h3>
+<div class="outline-text-3" id="text-org5cf447d">
+<p>
+Tobias said: I will not eat nor drink here this day, unless thou first grant me my petition, and promise to give me Sara thy daughter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44a711b" class="outline-3">
+<h3 id="org44a711b">Tobit 7:11</h3>
+<div class="outline-text-3" id="text-org44a711b">
+<p>
+Now when Raguel heard this he was afraid, knowing what had happened to those seven husbands, that went in unto her: and he began to fear lest it might happen to him also in like manner: and as he was in suspense, and gave no answer to his petition,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21828c3" class="outline-3">
+<h3 id="org21828c3">Tobit 7:12</h3>
+<div class="outline-text-3" id="text-org21828c3">
+<p>
+The angel said to him: Be not afraid to give her to this man, for to him who feareth God is thy daughter due to be his wife: therefore another could not have her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2b7fad" class="outline-3">
+<h3 id="orgd2b7fad">Tobit 7:13</h3>
+<div class="outline-text-3" id="text-orgd2b7fad">
+<p>
+Then Raguel said: I doubt not but God hath regarded my prayers and tears in his sight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5bdb90" class="outline-3">
+<h3 id="orgf5bdb90">Tobit 7:14</h3>
+<div class="outline-text-3" id="text-orgf5bdb90">
+<p>
+And I believe he hath therefore made you come to me, that this maid might be married to one of her own kindred, according to the law of Moses: and now doubt not but I will give her to thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee4c496" class="outline-3">
+<h3 id="orgee4c496">Tobit 7:15</h3>
+<div class="outline-text-3" id="text-orgee4c496">
+<p>
+And taking the right hand of his daughter, he gave it into the right hand of Tobias, saying: The God of Abraham, and the God of Isaac, and the God of Jacob be with you, and may he join you together, and fulfil his blessing in you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeee4713" class="outline-3">
+<h3 id="orgeee4713">Tobit 7:16</h3>
+<div class="outline-text-3" id="text-orgeee4713">
+<p>
+And taking paper they made a writing of the marriage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34b5d70" class="outline-3">
+<h3 id="org34b5d70">Tobit 7:17</h3>
+<div class="outline-text-3" id="text-org34b5d70">
+<p>
+And afterwards they made merry, blessing God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org472d880" class="outline-3">
+<h3 id="org472d880">Tobit 7:18</h3>
+<div class="outline-text-3" id="text-org472d880">
+<p>
+And Raguel called to him Anna his wife, and bade her to prepare another chamber.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org249a367" class="outline-3">
+<h3 id="org249a367">Tobit 7:19</h3>
+<div class="outline-text-3" id="text-org249a367">
+<p>
+And she brought Sara her daughter in thither, and she wept.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc85cc52" class="outline-3">
+<h3 id="orgc85cc52">Tobit 7:20</h3>
+<div class="outline-text-3" id="text-orgc85cc52">
+<p>
+And she said to her: Be of good cheer, my daughter: the Lord of heaven give thee joy for the trouble thou hast undergone. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf9c5d5c" class="outline-2">
+<h2 id="orgf9c5d5c">Tobit 8</h2>
+<div class="outline-text-2" id="text-orgf9c5d5c">
+</div>
+<div id="outline-container-org82b2399" class="outline-3">
+<h3 id="org82b2399">Tobit 8:1</h3>
+<div class="outline-text-3" id="text-org82b2399">
+<p>
+And after they had supped, they brought in the young man to her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org506f6be" class="outline-3">
+<h3 id="org506f6be">Tobit 8:2</h3>
+<div class="outline-text-3" id="text-org506f6be">
+<p>
+And Tobias remembering the angel&rsquo;s word, took out of his bag part of the liver, and laid it upon burning coals.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc10209" class="outline-3">
+<h3 id="orgcc10209">Tobit 8:3</h3>
+<div class="outline-text-3" id="text-orgcc10209">
+<p>
+Then the angel Raphael took the devil, and bound him in the desert of upper Egypt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbe02fc" class="outline-3">
+<h3 id="orgdbe02fc">Tobit 8:4</h3>
+<div class="outline-text-3" id="text-orgdbe02fc">
+<p>
+Then Tobias exhorted the virgin, and said to her: Sara, arise, and let us pray to God to day, and to morrow, and the next day: because for these three nights we are joined to God: and when the third night is over, we will be in our own wedlock.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0673a09" class="outline-3">
+<h3 id="org0673a09">Tobit 8:5</h3>
+<div class="outline-text-3" id="text-org0673a09">
+<p>
+For we are the children of saints, and we must not be joined together like heathens that know not God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga832557" class="outline-3">
+<h3 id="orga832557">Tobit 8:6</h3>
+<div class="outline-text-3" id="text-orga832557">
+<p>
+So they both arose, and prayed earnestly both together that health might be given them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc69834c" class="outline-3">
+<h3 id="orgc69834c">Tobit 8:7</h3>
+<div class="outline-text-3" id="text-orgc69834c">
+<p>
+And Tobias said: Lord God of our fathers, may the heavens and the earth, and the sea, and the fountains, and the rivers, and all thy creatures that are in them, bless thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org929d644" class="outline-3">
+<h3 id="org929d644">Tobit 8:8</h3>
+<div class="outline-text-3" id="text-org929d644">
+<p>
+Thou madest Adam of the slime of the earth, and gavest him Eve for a helper.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7dd7db" class="outline-3">
+<h3 id="orge7dd7db">Tobit 8:9</h3>
+<div class="outline-text-3" id="text-orge7dd7db">
+<p>
+And now, Lord, thou knowest, that not for fleshly lust do I take my sister to wife, but only for the love of posterity, in which thy name may be blessed for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org768947e" class="outline-3">
+<h3 id="org768947e">Tobit 8:10</h3>
+<div class="outline-text-3" id="text-org768947e">
+<p>
+Sara also said: Have mercy on us, O Lord, have mercy on us, and let us grow old both together in health.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e6b772" class="outline-3">
+<h3 id="org2e6b772">Tobit 8:11</h3>
+<div class="outline-text-3" id="text-org2e6b772">
+<p>
+And it came to pass about the cockcrowing, Raguel ordered his servants to be called for, and they went with him together to dig a grave.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge17fd86" class="outline-3">
+<h3 id="orge17fd86">Tobit 8:12</h3>
+<div class="outline-text-3" id="text-orge17fd86">
+<p>
+For he said: Lest perhaps it may have happened to him, in like manner as it did to the other seven husbands, that went in unto her.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7dac4f" class="outline-3">
+<h3 id="orgc7dac4f">Tobit 8:13</h3>
+<div class="outline-text-3" id="text-orgc7dac4f">
+<p>
+And when they had prepared the pit, Raguel went back to his wife, and said to her:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4881a9" class="outline-3">
+<h3 id="orgd4881a9">Tobit 8:14</h3>
+<div class="outline-text-3" id="text-orgd4881a9">
+<p>
+Send one of thy maids, and let her see if he be dead, that I may bury him before it be day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4268a26" class="outline-3">
+<h3 id="org4268a26">Tobit 8:15</h3>
+<div class="outline-text-3" id="text-org4268a26">
+<p>
+So she sent one of her maidservants, who went into the chamber, and found them safe and sound, sleeping both together.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5605092" class="outline-3">
+<h3 id="org5605092">Tobit 8:16</h3>
+<div class="outline-text-3" id="text-org5605092">
+<p>
+And returning she brought the good news: and Raguel and Anna his wife blessed the Lord,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47265fb" class="outline-3">
+<h3 id="org47265fb">Tobit 8:17</h3>
+<div class="outline-text-3" id="text-org47265fb">
+<p>
+And said: We bless thee, O Lord God of Israel, because it hath not happened as we suspected.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org442288c" class="outline-3">
+<h3 id="org442288c">Tobit 8:18</h3>
+<div class="outline-text-3" id="text-org442288c">
+<p>
+For thou hast shewn thy mercy to us, and hast shut out from us the enemy that persecuted us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgacf19b9" class="outline-3">
+<h3 id="orgacf19b9">Tobit 8:19</h3>
+<div class="outline-text-3" id="text-orgacf19b9">
+<p>
+And thou hast taken pity upon two only children. Make them, O Lord, bless thee more fully: and to offer up to thee a sacrifice of thy praise, and of their health, that all nations may know, that thou alone art God in all the earth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8916461" class="outline-3">
+<h3 id="org8916461">Tobit 8:20</h3>
+<div class="outline-text-3" id="text-org8916461">
+<p>
+And immediately Raguel commanded his servants, to fill up the pit they had made, before it was day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb701cc3" class="outline-3">
+<h3 id="orgb701cc3">Tobit 8:21</h3>
+<div class="outline-text-3" id="text-orgb701cc3">
+<p>
+And he spoke to his wife to make ready a feast, and prepare all kind of provisions that are necessary for such as go a journey.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1d053a" class="outline-3">
+<h3 id="orgd1d053a">Tobit 8:22</h3>
+<div class="outline-text-3" id="text-orgd1d053a">
+<p>
+He caused also two fat kine, and four wethers to be killed, and a banquet to be prepared for all his neighbours, and all his friends.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ec7a3f" class="outline-3">
+<h3 id="org0ec7a3f">Tobit 8:23</h3>
+<div class="outline-text-3" id="text-org0ec7a3f">
+<p>
+And Raguel adjured Tobias, to abide with him two weeks.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcfdcf7b" class="outline-3">
+<h3 id="orgcfdcf7b">Tobit 8:24</h3>
+<div class="outline-text-3" id="text-orgcfdcf7b">
+<p>
+And of all things which Raguel possessed, he gave one half to Tobias, and made a writing, that the half that remained should after their decease come also to Tobias. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd8bfae" class="outline-2">
+<h2 id="orgdd8bfae">Tobit 9</h2>
+<div class="outline-text-2" id="text-orgdd8bfae">
+</div>
+<div id="outline-container-org8e3c89b" class="outline-3">
+<h3 id="org8e3c89b">Tobit 9:1</h3>
+<div class="outline-text-3" id="text-org8e3c89b">
+<p>
+Then Tobias called the angel to him, whom he took to be a man, and said to him: Brother Azarias, I pray thee hearken to my words:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d65afa" class="outline-3">
+<h3 id="org8d65afa">Tobit 9:2</h3>
+<div class="outline-text-3" id="text-org8d65afa">
+<p>
+If I should give myself to be thy servant I should not make a worthy return for thy care.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd92e21" class="outline-3">
+<h3 id="orgfd92e21">Tobit 9:3</h3>
+<div class="outline-text-3" id="text-orgfd92e21">
+<p>
+However, I beseech thee, to take with thee beasts and servants, and to go to Gabelus to Rages the city of the Medes: and to restore to him his note of hand, and receive of him the money, and desire him to come to my wedding.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f22a0f" class="outline-3">
+<h3 id="org2f22a0f">Tobit 9:4</h3>
+<div class="outline-text-3" id="text-org2f22a0f">
+<p>
+For thou knowest that my father numbereth the days: and if I stay one day more, his soul will be afflicted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5491fd2" class="outline-3">
+<h3 id="org5491fd2">Tobit 9:5</h3>
+<div class="outline-text-3" id="text-org5491fd2">
+<p>
+And indeed thou seest how Raguel hath adjured me, whose adjuring I cannot despise.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org829f2eb" class="outline-3">
+<h3 id="org829f2eb">Tobit 9:6</h3>
+<div class="outline-text-3" id="text-org829f2eb">
+<p>
+Then Raphael took four of Raguel&rsquo;s servants, and two camels, and went to Rages the city of the Medes: and finding Gabelus, gave him his note of hand, and received of him all the money.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27c11c1" class="outline-3">
+<h3 id="org27c11c1">Tobit 9:7</h3>
+<div class="outline-text-3" id="text-org27c11c1">
+<p>
+And he told him concerning Tobias the son of Tobias, all that had been done: and made him come with him to the wedding.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0960ef" class="outline-3">
+<h3 id="orgf0960ef">Tobit 9:8</h3>
+<div class="outline-text-3" id="text-orgf0960ef">
+<p>
+And when he was come into Raguel&rsquo;s house he found Tobias sitting at the table: and he leaped up, and they kissed each other: and Gabelus wept, and blessed God,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69578d5" class="outline-3">
+<h3 id="org69578d5">Tobit 9:9</h3>
+<div class="outline-text-3" id="text-org69578d5">
+<p>
+And said: The God of Israel bless thee, because thou art the son of a very good and just man, and that feareth God, and doth almsdeeds:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc46605a" class="outline-3">
+<h3 id="orgc46605a">Tobit 9:10</h3>
+<div class="outline-text-3" id="text-orgc46605a">
+<p>
+And may a blessing come upon thy wife and upon your parents.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06cc931" class="outline-3">
+<h3 id="org06cc931">Tobit 9:11</h3>
+<div class="outline-text-3" id="text-org06cc931">
+<p>
+And may you see your children, and your children&rsquo;s children, unto the third and fourth generation: and may your seed be blessed by the God of Israel, who reigneth for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf11bce2" class="outline-3">
+<h3 id="orgf11bce2">Tobit 9:12</h3>
+<div class="outline-text-3" id="text-orgf11bce2">
+<p>
+And when all had said, Amen, they went to the feast: but the marriage feast they celebrated also with the fear of the Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd15b6a2" class="outline-2">
+<h2 id="orgd15b6a2">Tobit 10</h2>
+<div class="outline-text-2" id="text-orgd15b6a2">
+</div>
+<div id="outline-container-orgef90de8" class="outline-3">
+<h3 id="orgef90de8">Tobit 10:1</h3>
+<div class="outline-text-3" id="text-orgef90de8">
+<p>
+But as Tobias made longer stay upon occasion of the marriage, Tobias his father was solicitous, saying: Why thinkest thou doth my son tarry, or why is he detained there?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ee85a9" class="outline-3">
+<h3 id="org0ee85a9">Tobit 10:2</h3>
+<div class="outline-text-3" id="text-org0ee85a9">
+<p>
+Is Gabelus dead, thinkest thou, and no man will pay him the money?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46888d3" class="outline-3">
+<h3 id="org46888d3">Tobit 10:3</h3>
+<div class="outline-text-3" id="text-org46888d3">
+<p>
+And he began to be exceeding sad, both he and Anna his wife with him: and they began both to weep together, because their son did not return to them on the day appointed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32460d6" class="outline-3">
+<h3 id="org32460d6">Tobit 10:4</h3>
+<div class="outline-text-3" id="text-org32460d6">
+<p>
+But his mother wept and was quite disconsolate, and said: Woe, woe is me, my son; why did we send thee to go to a strange country, the light of our eyes, the staff of our old age, the comfort of our life, the hope of our posterity?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69cb918" class="outline-3">
+<h3 id="org69cb918">Tobit 10:5</h3>
+<div class="outline-text-3" id="text-org69cb918">
+<p>
+We having all things together in thee alone, ought not to have let thee go from us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9618a4c" class="outline-3">
+<h3 id="org9618a4c">Tobit 10:6</h3>
+<div class="outline-text-3" id="text-org9618a4c">
+<p>
+And Tobias said to her: Hold thy peace, and be not troubled, our son is safe: that man with whom we sent him is very trusty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12ebd16" class="outline-3">
+<h3 id="org12ebd16">Tobit 10:7</h3>
+<div class="outline-text-3" id="text-org12ebd16">
+<p>
+But she could by no means be comforted, but daily running out looked round about, and went into all the ways by which there seemed any hope he might return, that she might if possible see him coming afar off.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7bdd09" class="outline-3">
+<h3 id="orgb7bdd09">Tobit 10:8</h3>
+<div class="outline-text-3" id="text-orgb7bdd09">
+<p>
+But Raguel said to his son in law: Stay here, and I will send a messenger to Tobias thy father, that thou art in health.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69390f9" class="outline-3">
+<h3 id="org69390f9">Tobit 10:9</h3>
+<div class="outline-text-3" id="text-org69390f9">
+<p>
+And Tobias said to him: I know that my father and mother now count the days, and their spirit is grievously afflicted within them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f53d30" class="outline-3">
+<h3 id="org3f53d30">Tobit 10:10</h3>
+<div class="outline-text-3" id="text-org3f53d30">
+<p>
+And when Raguel had pressed Tobias with many words, and he by no means would hearken to him, he delivered Sara unto him, and half of all his substance in menservants, and womenservants, in cattle, in camels, and in kine, and in much money, and sent him away safe and joyful from him,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c1d639" class="outline-3">
+<h3 id="org5c1d639">Tobit 10:11</h3>
+<div class="outline-text-3" id="text-org5c1d639">
+<p>
+Saying: The holy angel of the Lord be with you in your journey, and bring you through safe, and that you may find all things well about your parents, and my eyes may see your children before I die.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae4e803" class="outline-3">
+<h3 id="orgae4e803">Tobit 10:12</h3>
+<div class="outline-text-3" id="text-orgae4e803">
+<p>
+And the parents taking their daughter kissed her, and let her go:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7093334" class="outline-3">
+<h3 id="org7093334">Tobit 10:13</h3>
+<div class="outline-text-3" id="text-org7093334">
+<p>
+Admonishing her to honour her father and mother in law, to love her husband, to take care of the family, to govern the house, and to behave herself irreprehensibly. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3be7ab3" class="outline-2">
+<h2 id="org3be7ab3">Tobit 11</h2>
+<div class="outline-text-2" id="text-org3be7ab3">
+</div>
+<div id="outline-container-org283d37c" class="outline-3">
+<h3 id="org283d37c">Tobit 11:1</h3>
+<div class="outline-text-3" id="text-org283d37c">
+<p>
+And as they were returning they came to Charan, which is in the midway to Ninive, the eleventh day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fa56ce" class="outline-3">
+<h3 id="org4fa56ce">Tobit 11:2</h3>
+<div class="outline-text-3" id="text-org4fa56ce">
+<p>
+And the angel said: Brother Tobias, thou knowest how thou didst leave thy father.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d9fa4f" class="outline-3">
+<h3 id="org4d9fa4f">Tobit 11:3</h3>
+<div class="outline-text-3" id="text-org4d9fa4f">
+<p>
+If it please thee therefore, let us go before, and let the family follow softly after us, together with thy wife, and with the beasts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04ba339" class="outline-3">
+<h3 id="org04ba339">Tobit 11:4</h3>
+<div class="outline-text-3" id="text-org04ba339">
+<p>
+And as this their going pleased him, Raphael said to Tobias: Take with thee of the gall of the fish, for it will be necessary. So Tobias took some of that gall and departed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org735703f" class="outline-3">
+<h3 id="org735703f">Tobit 11:5</h3>
+<div class="outline-text-3" id="text-org735703f">
+<p>
+But Anna sat beside the way daily, on the top of a hill, from whence she might see afar off.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d4b11f" class="outline-3">
+<h3 id="org4d4b11f">Tobit 11:6</h3>
+<div class="outline-text-3" id="text-org4d4b11f">
+<p>
+And while she watched his coming from that place, she saw him afar off, and presently perceived it was her son coming: and returning she told her husband, saying: Behold thy son cometh.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f44625" class="outline-3">
+<h3 id="org6f44625">Tobit 11:7</h3>
+<div class="outline-text-3" id="text-org6f44625">
+<p>
+And Raphael said to Tobias: As soon as thou shalt come into thy house, forthwith adore the Lord thy God: and giving thanks to him, go to thy father, and kiss him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80999df" class="outline-3">
+<h3 id="org80999df">Tobit 11:8</h3>
+<div class="outline-text-3" id="text-org80999df">
+<p>
+And immediately anoint his eyes with this gall of the fish, which thou carriest with thee. For be assured that his eyes shall be presently opened, and thy father shall see the light of heaven, and shall rejoice in the sight of thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35ea9d5" class="outline-3">
+<h3 id="org35ea9d5">Tobit 11:9</h3>
+<div class="outline-text-3" id="text-org35ea9d5">
+<p>
+Then the dog, which had been with them in the way, ran before, and coming as if he had brought the news, shewed his joy by his fawning and wagging his tail.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc932a68" class="outline-3">
+<h3 id="orgc932a68">Tobit 11:10</h3>
+<div class="outline-text-3" id="text-orgc932a68">
+<p>
+And his father that was blind, rising up, began to run stumbling with his feet: and giving a servant his hand, went to meet his son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd493584" class="outline-3">
+<h3 id="orgd493584">Tobit 11:11</h3>
+<div class="outline-text-3" id="text-orgd493584">
+<p>
+And receiving him kissed him, as did also his wife, and they began to weep for joy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0b692d" class="outline-3">
+<h3 id="orgf0b692d">Tobit 11:12</h3>
+<div class="outline-text-3" id="text-orgf0b692d">
+<p>
+And when they had adored God, and given him thanks, they sat down together.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1bb59e" class="outline-3">
+<h3 id="orgf1bb59e">Tobit 11:13</h3>
+<div class="outline-text-3" id="text-orgf1bb59e">
+<p>
+Then Tobias taking of the gall of the fish, anointed his father&rsquo;s eyes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org498f279" class="outline-3">
+<h3 id="org498f279">Tobit 11:14</h3>
+<div class="outline-text-3" id="text-org498f279">
+<p>
+And he stayed about half an hour: and a white skin began to come out of his eyes, like the skin of an egg.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0919209" class="outline-3">
+<h3 id="org0919209">Tobit 11:15</h3>
+<div class="outline-text-3" id="text-org0919209">
+<p>
+And Tobias took hold of it, and drew it from his eyes, and recovered his sight.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce90f45" class="outline-3">
+<h3 id="orgce90f45">Tobit 11:16</h3>
+<div class="outline-text-3" id="text-orgce90f45">
+<p>
+And they glorified God, both he and his wife and all that knew him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc9aa65" class="outline-3">
+<h3 id="orgdc9aa65">Tobit 11:17</h3>
+<div class="outline-text-3" id="text-orgdc9aa65">
+<p>
+And Tobias said: I bless thee, O Lord God of Israel, because thou hast chastised me, and thou hast saved me and behold I see Tobias my son.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06ae2d9" class="outline-3">
+<h3 id="org06ae2d9">Tobit 11:18</h3>
+<div class="outline-text-3" id="text-org06ae2d9">
+<p>
+And after seven days Sara his son&rsquo;s wife and all the family arrived safe, and the cattle, and the camels, and an abundance of money of his wife&rsquo;s: and that money also which he had received of Gabelus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde0e25a" class="outline-3">
+<h3 id="orgde0e25a">Tobit 11:19</h3>
+<div class="outline-text-3" id="text-orgde0e25a">
+<p>
+And he told his parents all the benefits of God, which he had done to him by the man that conducted him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org080d6e5" class="outline-3">
+<h3 id="org080d6e5">Tobit 11:20</h3>
+<div class="outline-text-3" id="text-org080d6e5">
+<p>
+And Achior and Nabath the kinsmen of Tobias came, rejoicing for Tobias, and congratulating with him for all the good things that God had done for him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge378865" class="outline-3">
+<h3 id="orge378865">Tobit 11:21</h3>
+<div class="outline-text-3" id="text-orge378865">
+<p>
+And for seven days they feasted and rejoiced all with great joy. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc59292f" class="outline-2">
+<h2 id="orgc59292f">Tobit 12</h2>
+<div class="outline-text-2" id="text-orgc59292f">
+</div>
+<div id="outline-container-org2b9d3ca" class="outline-3">
+<h3 id="org2b9d3ca">Tobit 12:1</h3>
+<div class="outline-text-3" id="text-org2b9d3ca">
+<p>
+Then Tobias called to him his son and said to him: What can we give to this holy man, that is come with thee?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fff9a0" class="outline-3">
+<h3 id="org9fff9a0">Tobit 12:2</h3>
+<div class="outline-text-3" id="text-org9fff9a0">
+<p>
+Tobias answering, said to his father: Father, what wages shall we give him? or what can be worthy of his benefits?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d753f6" class="outline-3">
+<h3 id="org7d753f6">Tobit 12:3</h3>
+<div class="outline-text-3" id="text-org7d753f6">
+<p>
+He conducted me and brought me safe again, he received the money of Gabelus, he caused me to have my wife, and he chased from her the evil spirit, he gave joy to her parents, myself he delivered from being devoured by the fish, thee also he hath made to see the light of heaven, and we are filled with all good things through him. What can we give him sufficient for these things?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdc3578" class="outline-3">
+<h3 id="orgfdc3578">Tobit 12:4</h3>
+<div class="outline-text-3" id="text-orgfdc3578">
+<p>
+But I beseech thee, my father, to desire him, that he would vouchsafe to accept of one half of all things that have been brought.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23b1102" class="outline-3">
+<h3 id="org23b1102">Tobit 12:5</h3>
+<div class="outline-text-3" id="text-org23b1102">
+<p>
+So the father and the son calling him, took him aside: and began to desire him that he would vouchsafe to accept of half of all things that they had brought,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf9ee32" class="outline-3">
+<h3 id="orgcf9ee32">Tobit 12:6</h3>
+<div class="outline-text-3" id="text-orgcf9ee32">
+<p>
+Then he said to them secretly, Bless ye the God of heaven, give glory to him in the sight of all that live, because he hath shewn his mercy to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38f452e" class="outline-3">
+<h3 id="org38f452e">Tobit 12:7</h3>
+<div class="outline-text-3" id="text-org38f452e">
+<p>
+For it is good to hide the secret of a king: to reveal and confess the works of God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6b2fcb" class="outline-3">
+<h3 id="orgb6b2fcb">Tobit 12:8</h3>
+<div class="outline-text-3" id="text-orgb6b2fcb">
+<p>
+Prayer is good with fasting and alms more than to lay up treasures of gold.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a4536f" class="outline-3">
+<h3 id="org3a4536f">Tobit 12:9</h3>
+<div class="outline-text-3" id="text-org3a4536f">
+<p>
+For alms delivereth from death, and the same is that which purgeth away sins, and maketh to find mercy and life everlasting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7fd222" class="outline-3">
+<h3 id="orgf7fd222">Tobit 12:10</h3>
+<div class="outline-text-3" id="text-orgf7fd222">
+<p>
+But they that commit sin and iniquity, are enemies to their own soul.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34345b8" class="outline-3">
+<h3 id="org34345b8">Tobit 12:11</h3>
+<div class="outline-text-3" id="text-org34345b8">
+<p>
+I discover then the truth unto you, and I will not hide the secret from you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org644fdb5" class="outline-3">
+<h3 id="org644fdb5">Tobit 12:12</h3>
+<div class="outline-text-3" id="text-org644fdb5">
+<p>
+When thou didst pray with tears, and didst bury the dead, and didst leave thy dinner, and hide the dead by day in thy house, and bury them by night, I offered thy prayer to the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dd6caf" class="outline-3">
+<h3 id="org3dd6caf">Tobit 12:13</h3>
+<div class="outline-text-3" id="text-org3dd6caf">
+<p>
+And because thou wast acceptable to God, it was necessary that temptation should prove thee.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7727832" class="outline-3">
+<h3 id="org7727832">Tobit 12:14</h3>
+<div class="outline-text-3" id="text-org7727832">
+<p>
+And now the Lord hath sent me to heal thee, and to deliver Sara thy son&rsquo;s wife from the devil.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org788669f" class="outline-3">
+<h3 id="org788669f">Tobit 12:15</h3>
+<div class="outline-text-3" id="text-org788669f">
+<p>
+For I am the angel Raphael, one of the seven, who stand before the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9583f40" class="outline-3">
+<h3 id="org9583f40">Tobit 12:16</h3>
+<div class="outline-text-3" id="text-org9583f40">
+<p>
+And when they had heard these things, they were troubled, and being seized with fear they fell upon the ground on their face.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f2a5a5" class="outline-3">
+<h3 id="org4f2a5a5">Tobit 12:17</h3>
+<div class="outline-text-3" id="text-org4f2a5a5">
+<p>
+And the angel said to them: Peace be to you, fear not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged9be74" class="outline-3">
+<h3 id="orged9be74">Tobit 12:18</h3>
+<div class="outline-text-3" id="text-orged9be74">
+<p>
+For when I was with you, I was there by the will of God: bless ye him, and sing praises to him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8a6c6a" class="outline-3">
+<h3 id="orgc8a6c6a">Tobit 12:19</h3>
+<div class="outline-text-3" id="text-orgc8a6c6a">
+<p>
+I seemed indeed to eat and to drink with you but I use an invisible meat and drink, which cannot be seen by men.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3234c4" class="outline-3">
+<h3 id="orga3234c4">Tobit 12:20</h3>
+<div class="outline-text-3" id="text-orga3234c4">
+<p>
+It is time therefore that I return to him that sent me: but bless ye God, and publish all his wonderful works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdabc198" class="outline-3">
+<h3 id="orgdabc198">Tobit 12:21</h3>
+<div class="outline-text-3" id="text-orgdabc198">
+<p>
+And when he had said these things, he was taken from their sight, and they could see him no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a8d5ac" class="outline-3">
+<h3 id="org6a8d5ac">Tobit 12:22</h3>
+<div class="outline-text-3" id="text-org6a8d5ac">
+<p>
+Then they lying prostrate for three hours upon their face, blessed God, and rising up, they told all his wonderful works. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org952b5b6" class="outline-2">
+<h2 id="org952b5b6">Tobit 13</h2>
+<div class="outline-text-2" id="text-org952b5b6">
+</div>
+<div id="outline-container-orga24d5e7" class="outline-3">
+<h3 id="orga24d5e7">Tobit 13:1</h3>
+<div class="outline-text-3" id="text-orga24d5e7">
+<p>
+And Tobias the elder opening his mouth, blessed the Lord, and said: Thou art great O Lord, for ever, and thy kingdom is unto all ages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3c652f" class="outline-3">
+<h3 id="orgc3c652f">Tobit 13:2</h3>
+<div class="outline-text-3" id="text-orgc3c652f">
+<p>
+For thou scourgest, and thou savest: thou leadest down to hell, and bringest up again: and there is none that can escape thy hand.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org579e335" class="outline-3">
+<h3 id="org579e335">Tobit 13:3</h3>
+<div class="outline-text-3" id="text-org579e335">
+<p>
+Give glory to the Lord, ye children of Israel, and praise him in the sight of the Gentiles:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08ffd2b" class="outline-3">
+<h3 id="org08ffd2b">Tobit 13:4</h3>
+<div class="outline-text-3" id="text-org08ffd2b">
+<p>
+Because he hath therefore scattered you among the Gentiles, who know not him, that you may declare his wonderful works, and make them know that there is no other almighty God besides him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org772caf1" class="outline-3">
+<h3 id="org772caf1">Tobit 13:5</h3>
+<div class="outline-text-3" id="text-org772caf1">
+<p>
+He hath chastised us for our iniquities: and he will save us for his own mercy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c2be1a" class="outline-3">
+<h3 id="org9c2be1a">Tobit 13:6</h3>
+<div class="outline-text-3" id="text-org9c2be1a">
+<p>
+See then what he hath done with us, and with fear and trembling give ye glory to him: and extol the eternal King of worlds in your works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab8040e" class="outline-3">
+<h3 id="orgab8040e">Tobit 13:7</h3>
+<div class="outline-text-3" id="text-orgab8040e">
+<p>
+As for me, I will praise him in the land of my captivity: because he hath shewn his majesty toward a sinful nation,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19060a5" class="outline-3">
+<h3 id="org19060a5">Tobit 13:8</h3>
+<div class="outline-text-3" id="text-org19060a5">
+<p>
+Be converted therefore, ye sinners, and do justice before God, believing that he will shew his mercy to you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc8654f" class="outline-3">
+<h3 id="orgcc8654f">Tobit 13:9</h3>
+<div class="outline-text-3" id="text-orgcc8654f">
+<p>
+And I and my soul will rejoice in him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e2d11d" class="outline-3">
+<h3 id="org1e2d11d">Tobit 13:10</h3>
+<div class="outline-text-3" id="text-org1e2d11d">
+<p>
+Bless ye the Lord, all his elect, keep days of joy, and give glory to him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7665bf8" class="outline-3">
+<h3 id="org7665bf8">Tobit 13:11</h3>
+<div class="outline-text-3" id="text-org7665bf8">
+<p>
+Jerusalem, city of God, the Lord hath chastised thee for the works of thy hands.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org205ad05" class="outline-3">
+<h3 id="org205ad05">Tobit 13:12</h3>
+<div class="outline-text-3" id="text-org205ad05">
+<p>
+Give glory to the Lord for thy good things, and bless the God eternal that he may rebuild his tabernacle in thee, and may call back all the captives to thee, and thou mayst rejoice for ever and ever.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6098a6" class="outline-3">
+<h3 id="orgf6098a6">Tobit 13:13</h3>
+<div class="outline-text-3" id="text-orgf6098a6">
+<p>
+Thou shalt shine with a glorious light: and all the ends of the earth shall worship thee,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef5e072" class="outline-3">
+<h3 id="orgef5e072">Tobit 13:14</h3>
+<div class="outline-text-3" id="text-orgef5e072">
+<p>
+Nations from afar shall come to thee: and shall bring gifts, and shall adore the Lord in thee, and shall esteem thy land as holy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7deb7a" class="outline-3">
+<h3 id="orgd7deb7a">Tobit 13:15</h3>
+<div class="outline-text-3" id="text-orgd7deb7a">
+<p>
+For they shall call upon the great name in thee,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd391667" class="outline-3">
+<h3 id="orgd391667">Tobit 13:16</h3>
+<div class="outline-text-3" id="text-orgd391667">
+<p>
+They shall be cursed that shall despise thee: and they shall be condemned that shall blaspheme thee: and blessed shall they be that shall build thee up,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org005c14d" class="outline-3">
+<h3 id="org005c14d">Tobit 13:17</h3>
+<div class="outline-text-3" id="text-org005c14d">
+<p>
+But thou shalt rejoice in thy children, because they shall all be blessed, and shall be gathered together to the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org677a567" class="outline-3">
+<h3 id="org677a567">Tobit 13:18</h3>
+<div class="outline-text-3" id="text-org677a567">
+<p>
+Blessed are all they that love thee, and that rejoice in thy peace,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b014ce" class="outline-3">
+<h3 id="org0b014ce">Tobit 13:19</h3>
+<div class="outline-text-3" id="text-org0b014ce">
+<p>
+My soul, bless thou the Lord, because the Lord our God hath delivered Jerusalem his city from all her troubles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org132a0a8" class="outline-3">
+<h3 id="org132a0a8">Tobit 13:20</h3>
+<div class="outline-text-3" id="text-org132a0a8">
+<p>
+Happy shall I be if there shall remain of my seed, to see the glory of Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4cabe4f" class="outline-3">
+<h3 id="org4cabe4f">Tobit 13:21</h3>
+<div class="outline-text-3" id="text-org4cabe4f">
+<p>
+The gates of Jerusalem shall be built of sapphire, and of emerald, and all the walls thereof round about of precious stones.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org126a9fc" class="outline-3">
+<h3 id="org126a9fc">Tobit 13:22</h3>
+<div class="outline-text-3" id="text-org126a9fc">
+<p>
+All its streets shall be paved with white and clean stones: and Alleluia shall be sung in its streets,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06f936a" class="outline-3">
+<h3 id="org06f936a">Tobit 13:23</h3>
+<div class="outline-text-3" id="text-org06f936a">
+<p>
+Blessed be the Lord, who hath exalted it, and may he reign over it for ever and ever, Amen. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2095712" class="outline-2">
+<h2 id="org2095712">Tobit 14</h2>
+<div class="outline-text-2" id="text-org2095712">
+</div>
+<div id="outline-container-org85cdedd" class="outline-3">
+<h3 id="org85cdedd">Tobit 14:1</h3>
+<div class="outline-text-3" id="text-org85cdedd">
+<p>
+And the words of Tobias were ended. And after Tobias was restored to his sight, he lived two and forty years, and saw the children of his grandchildren.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27fd601" class="outline-3">
+<h3 id="org27fd601">Tobit 14:2</h3>
+<div class="outline-text-3" id="text-org27fd601">
+<p>
+And after he had lived a hundred and two years, he was buried honorably in Ninive.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8d764c" class="outline-3">
+<h3 id="orgf8d764c">Tobit 14:3</h3>
+<div class="outline-text-3" id="text-orgf8d764c">
+<p>
+For he was six and fifty years old when he lost the sight of his eyes, and sixty when he recovered it again.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88f5fca" class="outline-3">
+<h3 id="org88f5fca">Tobit 14:4</h3>
+<div class="outline-text-3" id="text-org88f5fca">
+<p>
+And the rest of his life was in joy, and with great increase of the fear of God he departed in peace.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1df4190" class="outline-3">
+<h3 id="org1df4190">Tobit 14:5</h3>
+<div class="outline-text-3" id="text-org1df4190">
+<p>
+And at the hour of his death he called unto him his son Tobias and his children, seven young men, his grandsons, and said to them:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8fd6934" class="outline-3">
+<h3 id="org8fd6934">Tobit 14:6</h3>
+<div class="outline-text-3" id="text-org8fd6934">
+<p>
+The destruction of Ninive is at hand: for the word of the Lord must be fulfilled: and our brethren, that are scattered abroad from the land of Israel, shall return to it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org025e740" class="outline-3">
+<h3 id="org025e740">Tobit 14:7</h3>
+<div class="outline-text-3" id="text-org025e740">
+<p>
+And all the land thereof that is desert shall be filled with people, and the house of God which is burnt in it, shall again be rebuilt: and all that fear God shall return thither.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e1cc06" class="outline-3">
+<h3 id="org0e1cc06">Tobit 14:8</h3>
+<div class="outline-text-3" id="text-org0e1cc06">
+<p>
+And the Gentiles shall leave their idols, and shall come into Jerusalem, and shall dwell in it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a730d6" class="outline-3">
+<h3 id="org9a730d6">Tobit 14:9</h3>
+<div class="outline-text-3" id="text-org9a730d6">
+<p>
+And all the kings of the earth shall rejoice in it, adoring the King of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f70ee5" class="outline-3">
+<h3 id="org4f70ee5">Tobit 14:10</h3>
+<div class="outline-text-3" id="text-org4f70ee5">
+<p>
+Hearken therefore, my children, to your father: serve the Lord in truth, and seek to do the things that please him:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49d5b6a" class="outline-3">
+<h3 id="org49d5b6a">Tobit 14:11</h3>
+<div class="outline-text-3" id="text-org49d5b6a">
+<p>
+And command your children that they do justice and almsdeeds, and that they be mindful of God, and bless him at all times in truth, and with all their power.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org735e472" class="outline-3">
+<h3 id="org735e472">Tobit 14:12</h3>
+<div class="outline-text-3" id="text-org735e472">
+<p>
+And now, children, hear me, and do not stay here: but as soon as you shall bury your mother by me in one sepulchre, without delay direct your steps to depart hence:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d02839" class="outline-3">
+<h3 id="org5d02839">Tobit 14:13</h3>
+<div class="outline-text-3" id="text-org5d02839">
+<p>
+For I see that its iniquity will bring it to destruction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e07527" class="outline-3">
+<h3 id="org1e07527">Tobit 14:14</h3>
+<div class="outline-text-3" id="text-org1e07527">
+<p>
+And it came to pass that after the death of his mother, Tobias departed out of Ninive with his wife, and children, and children&rsquo;s children, and returned to his father and mother in law.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b62d2c" class="outline-3">
+<h3 id="org9b62d2c">Tobit 14:15</h3>
+<div class="outline-text-3" id="text-org9b62d2c">
+<p>
+And he found them in health in a good old age: and he took care of them, and he closed their eyes: and all the inheritance of Raguel&rsquo;s house came to him: and he saw his children&rsquo;s children to the fifth generation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f17598" class="outline-3">
+<h3 id="org3f17598">Tobit 14:16</h3>
+<div class="outline-text-3" id="text-org3f17598">
+<p>
+And after he had lived ninety-nine years in the fear of the Lord, with joy they buried him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a23931" class="outline-3">
+<h3 id="org2a23931">Tobit 14:17</h3>
+<div class="outline-text-3" id="text-org2a23931">
+<p>
+And all his kindred, and all his generation continued in good life, and in holy conversation, so that they were acceptable both to God, and to men, and to all that dwelt in the land.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

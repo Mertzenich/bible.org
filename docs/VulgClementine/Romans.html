@@ -1,0 +1,4689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org490f3d3">Romans 1</a>
+<ul>
+<li><a href="#orgbe40f64">Romans 1:1</a></li>
+<li><a href="#orgc06149a">Romans 1:2</a></li>
+<li><a href="#orgd1ae95a">Romans 1:3</a></li>
+<li><a href="#org474dedc">Romans 1:4</a></li>
+<li><a href="#org666b43d">Romans 1:5</a></li>
+<li><a href="#org45f6a6e">Romans 1:6</a></li>
+<li><a href="#org5fa9ba4">Romans 1:7</a></li>
+<li><a href="#orga6da5f1">Romans 1:8</a></li>
+<li><a href="#org09ff9d4">Romans 1:9</a></li>
+<li><a href="#org6a2beab">Romans 1:10</a></li>
+<li><a href="#org344fe54">Romans 1:11</a></li>
+<li><a href="#orgf1e888c">Romans 1:12</a></li>
+<li><a href="#org744c12b">Romans 1:13</a></li>
+<li><a href="#orgfc3c4d9">Romans 1:14</a></li>
+<li><a href="#org87bb153">Romans 1:15</a></li>
+<li><a href="#orgae21484">Romans 1:16</a></li>
+<li><a href="#org445e4d2">Romans 1:17</a></li>
+<li><a href="#org6561ce5">Romans 1:18</a></li>
+<li><a href="#org0a99f54">Romans 1:19</a></li>
+<li><a href="#org65a9786">Romans 1:20</a></li>
+<li><a href="#org3f44f45">Romans 1:21</a></li>
+<li><a href="#orgd3116e9">Romans 1:22</a></li>
+<li><a href="#org2ff56b7">Romans 1:23</a></li>
+<li><a href="#org37abc7c">Romans 1:24</a></li>
+<li><a href="#org83fc146">Romans 1:25</a></li>
+<li><a href="#orgc1cf28c">Romans 1:26</a></li>
+<li><a href="#org09176ca">Romans 1:27</a></li>
+<li><a href="#org3d6d728">Romans 1:28</a></li>
+<li><a href="#orgf7527b9">Romans 1:29</a></li>
+<li><a href="#org64aba4c">Romans 1:30</a></li>
+<li><a href="#orge67e4fd">Romans 1:31</a></li>
+<li><a href="#orgb6a0508">Romans 1:32</a></li>
+</ul>
+</li>
+<li><a href="#org90a105b">Romans 2</a>
+<ul>
+<li><a href="#orge909419">Romans 2:1</a></li>
+<li><a href="#org6cf6be2">Romans 2:2</a></li>
+<li><a href="#org9257647">Romans 2:3</a></li>
+<li><a href="#orgdf3ab10">Romans 2:4</a></li>
+<li><a href="#org03d6ec3">Romans 2:5</a></li>
+<li><a href="#org93efe20">Romans 2:6</a></li>
+<li><a href="#org892ff80">Romans 2:7</a></li>
+<li><a href="#org7852070">Romans 2:8</a></li>
+<li><a href="#orgd9c2aef">Romans 2:9</a></li>
+<li><a href="#org8fddc2c">Romans 2:10</a></li>
+<li><a href="#org6e0cb78">Romans 2:11</a></li>
+<li><a href="#org9e65971">Romans 2:12</a></li>
+<li><a href="#orge8ff20c">Romans 2:13</a></li>
+<li><a href="#org092ab7c">Romans 2:14</a></li>
+<li><a href="#orgf3e5b5a">Romans 2:15</a></li>
+<li><a href="#orgf089f92">Romans 2:16</a></li>
+<li><a href="#org94ad38c">Romans 2:17</a></li>
+<li><a href="#org884a256">Romans 2:18</a></li>
+<li><a href="#org178e713">Romans 2:19</a></li>
+<li><a href="#org2371c62">Romans 2:20</a></li>
+<li><a href="#org57cae18">Romans 2:21</a></li>
+<li><a href="#org078a88e">Romans 2:22</a></li>
+<li><a href="#org848cb6f">Romans 2:23</a></li>
+<li><a href="#org29ba397">Romans 2:24</a></li>
+<li><a href="#orgac16d96">Romans 2:25</a></li>
+<li><a href="#org614ae18">Romans 2:26</a></li>
+<li><a href="#orgfd55b49">Romans 2:27</a></li>
+<li><a href="#orgd498ce6">Romans 2:28</a></li>
+<li><a href="#orgbe26c22">Romans 2:29</a></li>
+</ul>
+</li>
+<li><a href="#orgdf4a80d">Romans 3</a>
+<ul>
+<li><a href="#org81489b4">Romans 3:1</a></li>
+<li><a href="#org15e23db">Romans 3:2</a></li>
+<li><a href="#orgefdc2f9">Romans 3:3</a></li>
+<li><a href="#org1630c2e">Romans 3:4</a></li>
+<li><a href="#orgd0143eb">Romans 3:5</a></li>
+<li><a href="#org4b2bfdb">Romans 3:6</a></li>
+<li><a href="#orgde9aade">Romans 3:7</a></li>
+<li><a href="#org53af48b">Romans 3:8</a></li>
+<li><a href="#orgfa6ad87">Romans 3:9</a></li>
+<li><a href="#org0d716ae">Romans 3:10</a></li>
+<li><a href="#org8ffa380">Romans 3:11</a></li>
+<li><a href="#org8848729">Romans 3:12</a></li>
+<li><a href="#org3c0ab65">Romans 3:13</a></li>
+<li><a href="#org59a4677">Romans 3:14</a></li>
+<li><a href="#org0a90118">Romans 3:15</a></li>
+<li><a href="#orgc63f46c">Romans 3:16</a></li>
+<li><a href="#org7a3565b">Romans 3:17</a></li>
+<li><a href="#orgf5c64fd">Romans 3:18</a></li>
+<li><a href="#org59e4bd0">Romans 3:19</a></li>
+<li><a href="#orgf8ed36a">Romans 3:20</a></li>
+<li><a href="#orgc9199d7">Romans 3:21</a></li>
+<li><a href="#org6cba228">Romans 3:22</a></li>
+<li><a href="#orgeaf06ed">Romans 3:23</a></li>
+<li><a href="#org4073ee0">Romans 3:24</a></li>
+<li><a href="#org09a1ed1">Romans 3:25</a></li>
+<li><a href="#org7148a45">Romans 3:26</a></li>
+<li><a href="#org0edb015">Romans 3:27</a></li>
+<li><a href="#orgeec3288">Romans 3:28</a></li>
+<li><a href="#org37a10f0">Romans 3:29</a></li>
+<li><a href="#orgb590fd4">Romans 3:30</a></li>
+<li><a href="#org34efe9b">Romans 3:31</a></li>
+</ul>
+</li>
+<li><a href="#org6af280b">Romans 4</a>
+<ul>
+<li><a href="#orgc781cc0">Romans 4:1</a></li>
+<li><a href="#orga4590ee">Romans 4:2</a></li>
+<li><a href="#org2d2ed85">Romans 4:3</a></li>
+<li><a href="#org4e35b48">Romans 4:4</a></li>
+<li><a href="#org3105800">Romans 4:5</a></li>
+<li><a href="#orgffaf737">Romans 4:6</a></li>
+<li><a href="#org54e9171">Romans 4:7</a></li>
+<li><a href="#org7d98851">Romans 4:8</a></li>
+<li><a href="#org433627f">Romans 4:9</a></li>
+<li><a href="#orgdc30bf3">Romans 4:10</a></li>
+<li><a href="#org17f0730">Romans 4:11</a></li>
+<li><a href="#org8a8a6c9">Romans 4:12</a></li>
+<li><a href="#orgdb2dcec">Romans 4:13</a></li>
+<li><a href="#orgf88270a">Romans 4:14</a></li>
+<li><a href="#org2843f8d">Romans 4:15</a></li>
+<li><a href="#orgbbf7521">Romans 4:16</a></li>
+<li><a href="#orgb75df2a">Romans 4:17</a></li>
+<li><a href="#org98672be">Romans 4:18</a></li>
+<li><a href="#org3dd2f07">Romans 4:19</a></li>
+<li><a href="#org0c61de5">Romans 4:20</a></li>
+<li><a href="#org6806722">Romans 4:21</a></li>
+<li><a href="#orgefcf6bc">Romans 4:22</a></li>
+<li><a href="#org537ad75">Romans 4:23</a></li>
+<li><a href="#org49134f1">Romans 4:24</a></li>
+<li><a href="#org1cfc98e">Romans 4:25</a></li>
+</ul>
+</li>
+<li><a href="#org0f5b782">Romans 5</a>
+<ul>
+<li><a href="#orgf75759c">Romans 5:1</a></li>
+<li><a href="#org4324f7c">Romans 5:2</a></li>
+<li><a href="#org0b2c445">Romans 5:3</a></li>
+<li><a href="#org588b6a8">Romans 5:4</a></li>
+<li><a href="#org59a65a3">Romans 5:5</a></li>
+<li><a href="#orgf271937">Romans 5:6</a></li>
+<li><a href="#orgaab9c1c">Romans 5:7</a></li>
+<li><a href="#orgb0e6bd1">Romans 5:8</a></li>
+<li><a href="#orga1e9705">Romans 5:9</a></li>
+<li><a href="#org6076a0b">Romans 5:10</a></li>
+<li><a href="#org6b80719">Romans 5:11</a></li>
+<li><a href="#orgc4543de">Romans 5:12</a></li>
+<li><a href="#org2b24311">Romans 5:13</a></li>
+<li><a href="#org0701a39">Romans 5:14</a></li>
+<li><a href="#orgb78a5bf">Romans 5:15</a></li>
+<li><a href="#org25375ca">Romans 5:16</a></li>
+<li><a href="#org33a7d4e">Romans 5:17</a></li>
+<li><a href="#org700e8fa">Romans 5:18</a></li>
+<li><a href="#org00aa3e9">Romans 5:19</a></li>
+<li><a href="#org5b8304b">Romans 5:20</a></li>
+<li><a href="#org97aefca">Romans 5:21</a></li>
+</ul>
+</li>
+<li><a href="#orgbe8212a">Romans 6</a>
+<ul>
+<li><a href="#org8c9f141">Romans 6:1</a></li>
+<li><a href="#orgab69344">Romans 6:2</a></li>
+<li><a href="#orge983283">Romans 6:3</a></li>
+<li><a href="#org8c353fd">Romans 6:4</a></li>
+<li><a href="#org844bf52">Romans 6:5</a></li>
+<li><a href="#org10f9101">Romans 6:6</a></li>
+<li><a href="#org6cbecac">Romans 6:7</a></li>
+<li><a href="#org75b649e">Romans 6:8</a></li>
+<li><a href="#orgd7ca517">Romans 6:9</a></li>
+<li><a href="#orgf62edaa">Romans 6:10</a></li>
+<li><a href="#orge4e58f4">Romans 6:11</a></li>
+<li><a href="#orga370efd">Romans 6:12</a></li>
+<li><a href="#org13a50e6">Romans 6:13</a></li>
+<li><a href="#org2dc5f45">Romans 6:14</a></li>
+<li><a href="#org84e81aa">Romans 6:15</a></li>
+<li><a href="#orga52cf3e">Romans 6:16</a></li>
+<li><a href="#org9735310">Romans 6:17</a></li>
+<li><a href="#org5525024">Romans 6:18</a></li>
+<li><a href="#org0de5e9a">Romans 6:19</a></li>
+<li><a href="#org60b7509">Romans 6:20</a></li>
+<li><a href="#org587394a">Romans 6:21</a></li>
+<li><a href="#org0991848">Romans 6:22</a></li>
+<li><a href="#orgc03cb35">Romans 6:23</a></li>
+</ul>
+</li>
+<li><a href="#org99a6eea">Romans 7</a>
+<ul>
+<li><a href="#org803e2bc">Romans 7:1</a></li>
+<li><a href="#org04039f6">Romans 7:2</a></li>
+<li><a href="#org39dd470">Romans 7:3</a></li>
+<li><a href="#orgc8350bb">Romans 7:4</a></li>
+<li><a href="#org9f6ac4b">Romans 7:5</a></li>
+<li><a href="#orga8d845e">Romans 7:6</a></li>
+<li><a href="#orgab9878d">Romans 7:7</a></li>
+<li><a href="#org0486cf6">Romans 7:8</a></li>
+<li><a href="#orgdfdb96a">Romans 7:9</a></li>
+<li><a href="#orgb53527f">Romans 7:10</a></li>
+<li><a href="#org3b17754">Romans 7:11</a></li>
+<li><a href="#org755bdba">Romans 7:12</a></li>
+<li><a href="#org0628f19">Romans 7:13</a></li>
+<li><a href="#orgda0c124">Romans 7:14</a></li>
+<li><a href="#orgf732675">Romans 7:15</a></li>
+<li><a href="#orgfea7c59">Romans 7:16</a></li>
+<li><a href="#org67668ba">Romans 7:17</a></li>
+<li><a href="#org911a3fa">Romans 7:18</a></li>
+<li><a href="#org8c9eb5b">Romans 7:19</a></li>
+<li><a href="#org875114b">Romans 7:20</a></li>
+<li><a href="#org398ac88">Romans 7:21</a></li>
+<li><a href="#org2510eca">Romans 7:22</a></li>
+<li><a href="#org0f542b7">Romans 7:23</a></li>
+<li><a href="#orgd4d9883">Romans 7:24</a></li>
+<li><a href="#org33f8642">Romans 7:25</a></li>
+</ul>
+</li>
+<li><a href="#orgdfbb3bf">Romans 8</a>
+<ul>
+<li><a href="#orgdef4aba">Romans 8:1</a></li>
+<li><a href="#org9d33d90">Romans 8:2</a></li>
+<li><a href="#orge6c9bff">Romans 8:3</a></li>
+<li><a href="#orgaf19fbf">Romans 8:4</a></li>
+<li><a href="#org9a7cee5">Romans 8:5</a></li>
+<li><a href="#orgf3cac56">Romans 8:6</a></li>
+<li><a href="#org4e65c76">Romans 8:7</a></li>
+<li><a href="#orgfb6ee00">Romans 8:8</a></li>
+<li><a href="#org19cba44">Romans 8:9</a></li>
+<li><a href="#orga88662c">Romans 8:10</a></li>
+<li><a href="#org44a44e0">Romans 8:11</a></li>
+<li><a href="#org44f03bb">Romans 8:12</a></li>
+<li><a href="#org67e4951">Romans 8:13</a></li>
+<li><a href="#org91d36e7">Romans 8:14</a></li>
+<li><a href="#org5870cc3">Romans 8:15</a></li>
+<li><a href="#orgd389529">Romans 8:16</a></li>
+<li><a href="#org17ec364">Romans 8:17</a></li>
+<li><a href="#org50b1425">Romans 8:18</a></li>
+<li><a href="#org3c3af1a">Romans 8:19</a></li>
+<li><a href="#org31eadf0">Romans 8:20</a></li>
+<li><a href="#org4d02ac1">Romans 8:21</a></li>
+<li><a href="#orgf4bc5df">Romans 8:22</a></li>
+<li><a href="#org209c2a1">Romans 8:23</a></li>
+<li><a href="#orgddc1ad2">Romans 8:24</a></li>
+<li><a href="#org7723095">Romans 8:25</a></li>
+<li><a href="#orgda800d3">Romans 8:26</a></li>
+<li><a href="#org40f584e">Romans 8:27</a></li>
+<li><a href="#org22bd944">Romans 8:28</a></li>
+<li><a href="#org9e5af26">Romans 8:29</a></li>
+<li><a href="#org86df324">Romans 8:30</a></li>
+<li><a href="#org98d1bdf">Romans 8:31</a></li>
+<li><a href="#org7105bd7">Romans 8:32</a></li>
+<li><a href="#orgdd49027">Romans 8:33</a></li>
+<li><a href="#org93e1128">Romans 8:34</a></li>
+<li><a href="#orgd908130">Romans 8:35</a></li>
+<li><a href="#org8a3a0f1">Romans 8:36</a></li>
+<li><a href="#org03fe6b7">Romans 8:37</a></li>
+<li><a href="#org7526ea3">Romans 8:38</a></li>
+<li><a href="#org8abde2f">Romans 8:39</a></li>
+</ul>
+</li>
+<li><a href="#orge40241b">Romans 9</a>
+<ul>
+<li><a href="#org0563472">Romans 9:1</a></li>
+<li><a href="#org3472ef1">Romans 9:2</a></li>
+<li><a href="#orgcd89032">Romans 9:3</a></li>
+<li><a href="#orge276cfe">Romans 9:4</a></li>
+<li><a href="#org411dab7">Romans 9:5</a></li>
+<li><a href="#org4164a18">Romans 9:6</a></li>
+<li><a href="#orgc92a61c">Romans 9:7</a></li>
+<li><a href="#orgc76ef7c">Romans 9:8</a></li>
+<li><a href="#orgf32b2d5">Romans 9:9</a></li>
+<li><a href="#orgf473741">Romans 9:10</a></li>
+<li><a href="#orgfc46fca">Romans 9:11</a></li>
+<li><a href="#org8e16a74">Romans 9:12</a></li>
+<li><a href="#orgff02e13">Romans 9:13</a></li>
+<li><a href="#org2a8d004">Romans 9:14</a></li>
+<li><a href="#org640886f">Romans 9:15</a></li>
+<li><a href="#org931b6b5">Romans 9:16</a></li>
+<li><a href="#org64650fd">Romans 9:17</a></li>
+<li><a href="#orge2138c8">Romans 9:18</a></li>
+<li><a href="#orgcd561bd">Romans 9:19</a></li>
+<li><a href="#org0128aa1">Romans 9:20</a></li>
+<li><a href="#orga55609a">Romans 9:21</a></li>
+<li><a href="#org77daf2d">Romans 9:22</a></li>
+<li><a href="#orgb153021">Romans 9:23</a></li>
+<li><a href="#org93a0443">Romans 9:24</a></li>
+<li><a href="#orgab57809">Romans 9:25</a></li>
+<li><a href="#org5fefc8c">Romans 9:26</a></li>
+<li><a href="#orgd668b57">Romans 9:27</a></li>
+<li><a href="#org5030e30">Romans 9:28</a></li>
+<li><a href="#orge1739df">Romans 9:29</a></li>
+<li><a href="#orga27095f">Romans 9:30</a></li>
+<li><a href="#orgb051f50">Romans 9:31</a></li>
+<li><a href="#org7c45f42">Romans 9:32</a></li>
+<li><a href="#orgdfd08b8">Romans 9:33</a></li>
+</ul>
+</li>
+<li><a href="#org440e5cd">Romans 10</a>
+<ul>
+<li><a href="#org46f8855">Romans 10:1</a></li>
+<li><a href="#org8e3b06e">Romans 10:2</a></li>
+<li><a href="#orgab92f51">Romans 10:3</a></li>
+<li><a href="#org43721fc">Romans 10:4</a></li>
+<li><a href="#orga9f6973">Romans 10:5</a></li>
+<li><a href="#orgd810c62">Romans 10:6</a></li>
+<li><a href="#orgfe41e11">Romans 10:7</a></li>
+<li><a href="#orgfd8e125">Romans 10:8</a></li>
+<li><a href="#orgcdd7b21">Romans 10:9</a></li>
+<li><a href="#org49166ac">Romans 10:10</a></li>
+<li><a href="#org2163f80">Romans 10:11</a></li>
+<li><a href="#org33670f7">Romans 10:12</a></li>
+<li><a href="#orgafa629d">Romans 10:13</a></li>
+<li><a href="#orgfd7cfc7">Romans 10:14</a></li>
+<li><a href="#org5cc8277">Romans 10:15</a></li>
+<li><a href="#org5d5f1e8">Romans 10:16</a></li>
+<li><a href="#org2c497d6">Romans 10:17</a></li>
+<li><a href="#org0d03217">Romans 10:18</a></li>
+<li><a href="#orgb73be88">Romans 10:19</a></li>
+<li><a href="#orgc0216bd">Romans 10:20</a></li>
+<li><a href="#org1acd87b">Romans 10:21</a></li>
+</ul>
+</li>
+<li><a href="#org076b2f1">Romans 11</a>
+<ul>
+<li><a href="#org1a23f4d">Romans 11:1</a></li>
+<li><a href="#org35b55f8">Romans 11:2</a></li>
+<li><a href="#org6102547">Romans 11:3</a></li>
+<li><a href="#orgcdefec4">Romans 11:4</a></li>
+<li><a href="#org655ff33">Romans 11:5</a></li>
+<li><a href="#orgd317af1">Romans 11:6</a></li>
+<li><a href="#org9a5abe5">Romans 11:7</a></li>
+<li><a href="#org5add2a5">Romans 11:8</a></li>
+<li><a href="#orge8cbe01">Romans 11:9</a></li>
+<li><a href="#org3c93c80">Romans 11:10</a></li>
+<li><a href="#org3152396">Romans 11:11</a></li>
+<li><a href="#orgedc42cb">Romans 11:12</a></li>
+<li><a href="#org604d9ae">Romans 11:13</a></li>
+<li><a href="#orgc8b3cf8">Romans 11:14</a></li>
+<li><a href="#org13f4882">Romans 11:15</a></li>
+<li><a href="#orgc7925d7">Romans 11:16</a></li>
+<li><a href="#orgbefffe1">Romans 11:17</a></li>
+<li><a href="#orgaf67a7f">Romans 11:18</a></li>
+<li><a href="#org238ea61">Romans 11:19</a></li>
+<li><a href="#org852e06c">Romans 11:20</a></li>
+<li><a href="#org5caf2b3">Romans 11:21</a></li>
+<li><a href="#org50d777f">Romans 11:22</a></li>
+<li><a href="#orgc8e3b0e">Romans 11:23</a></li>
+<li><a href="#org34421fc">Romans 11:24</a></li>
+<li><a href="#org69fdbdb">Romans 11:25</a></li>
+<li><a href="#org2d287cc">Romans 11:26</a></li>
+<li><a href="#org30618c5">Romans 11:27</a></li>
+<li><a href="#org494ad3a">Romans 11:28</a></li>
+<li><a href="#orgee938e7">Romans 11:29</a></li>
+<li><a href="#org2632100">Romans 11:30</a></li>
+<li><a href="#org03a0812">Romans 11:31</a></li>
+<li><a href="#org3dac7ef">Romans 11:32</a></li>
+<li><a href="#orgb3dab57">Romans 11:33</a></li>
+<li><a href="#orge808b0f">Romans 11:34</a></li>
+<li><a href="#org4f11ff6">Romans 11:35</a></li>
+<li><a href="#org75e7c47">Romans 11:36</a></li>
+</ul>
+</li>
+<li><a href="#org5682e67">Romans 12</a>
+<ul>
+<li><a href="#org6b81159">Romans 12:1</a></li>
+<li><a href="#org4b539fe">Romans 12:2</a></li>
+<li><a href="#org73f925d">Romans 12:3</a></li>
+<li><a href="#org4396213">Romans 12:4</a></li>
+<li><a href="#org69fad8f">Romans 12:5</a></li>
+<li><a href="#orgc587cf3">Romans 12:6</a></li>
+<li><a href="#org40f5a01">Romans 12:7</a></li>
+<li><a href="#org91b3aa8">Romans 12:8</a></li>
+<li><a href="#org8e515bf">Romans 12:9</a></li>
+<li><a href="#orgfa831d2">Romans 12:10</a></li>
+<li><a href="#org1365fa2">Romans 12:11</a></li>
+<li><a href="#org4213560">Romans 12:12</a></li>
+<li><a href="#org4960b17">Romans 12:13</a></li>
+<li><a href="#org2418ed0">Romans 12:14</a></li>
+<li><a href="#org30c878c">Romans 12:15</a></li>
+<li><a href="#org74a7c99">Romans 12:16</a></li>
+<li><a href="#orgb650edf">Romans 12:17</a></li>
+<li><a href="#orgd108436">Romans 12:18</a></li>
+<li><a href="#orgdbfd481">Romans 12:19</a></li>
+<li><a href="#org628a978">Romans 12:20</a></li>
+<li><a href="#orgc00c998">Romans 12:21</a></li>
+</ul>
+</li>
+<li><a href="#org9096420">Romans 13</a>
+<ul>
+<li><a href="#org3e16915">Romans 13:1</a></li>
+<li><a href="#org67db49c">Romans 13:2</a></li>
+<li><a href="#orgdc03582">Romans 13:3</a></li>
+<li><a href="#orgdf0d1f6">Romans 13:4</a></li>
+<li><a href="#org590a529">Romans 13:5</a></li>
+<li><a href="#org8e542d2">Romans 13:6</a></li>
+<li><a href="#org0654c0d">Romans 13:7</a></li>
+<li><a href="#org0bac55f">Romans 13:8</a></li>
+<li><a href="#org4b02b22">Romans 13:9</a></li>
+<li><a href="#org0c4ec4b">Romans 13:10</a></li>
+<li><a href="#org3237d92">Romans 13:11</a></li>
+<li><a href="#orgb1061a6">Romans 13:12</a></li>
+<li><a href="#org1a44b9c">Romans 13:13</a></li>
+<li><a href="#org8b0823e">Romans 13:14</a></li>
+</ul>
+</li>
+<li><a href="#org91c5f3b">Romans 14</a>
+<ul>
+<li><a href="#org5b4819f">Romans 14:1</a></li>
+<li><a href="#org9efd0c6">Romans 14:2</a></li>
+<li><a href="#org4e6a6b4">Romans 14:3</a></li>
+<li><a href="#org2848ad2">Romans 14:4</a></li>
+<li><a href="#org04dd825">Romans 14:5</a></li>
+<li><a href="#org0e03a99">Romans 14:6</a></li>
+<li><a href="#org4127497">Romans 14:7</a></li>
+<li><a href="#orgfc26211">Romans 14:8</a></li>
+<li><a href="#org025ea15">Romans 14:9</a></li>
+<li><a href="#orgaee80f9">Romans 14:10</a></li>
+<li><a href="#org5029539">Romans 14:11</a></li>
+<li><a href="#orgadc75b6">Romans 14:12</a></li>
+<li><a href="#orgc85a55a">Romans 14:13</a></li>
+<li><a href="#org738ab3f">Romans 14:14</a></li>
+<li><a href="#org08d702a">Romans 14:15</a></li>
+<li><a href="#org7448f3b">Romans 14:16</a></li>
+<li><a href="#org63a4a6a">Romans 14:17</a></li>
+<li><a href="#orgd99bff1">Romans 14:18</a></li>
+<li><a href="#org2d01313">Romans 14:19</a></li>
+<li><a href="#orgf3a31d8">Romans 14:20</a></li>
+<li><a href="#org1214f4b">Romans 14:21</a></li>
+<li><a href="#orgb368e8b">Romans 14:22</a></li>
+<li><a href="#orga5f20ce">Romans 14:23</a></li>
+</ul>
+</li>
+<li><a href="#orgcb6a020">Romans 15</a>
+<ul>
+<li><a href="#orge46bbc3">Romans 15:1</a></li>
+<li><a href="#org64503a2">Romans 15:2</a></li>
+<li><a href="#orgae59fcc">Romans 15:3</a></li>
+<li><a href="#orgfed35b1">Romans 15:4</a></li>
+<li><a href="#orgd99a093">Romans 15:5</a></li>
+<li><a href="#orgadcc65e">Romans 15:6</a></li>
+<li><a href="#org435057a">Romans 15:7</a></li>
+<li><a href="#org9370e10">Romans 15:8</a></li>
+<li><a href="#orgd1aa8ee">Romans 15:9</a></li>
+<li><a href="#orgd477979">Romans 15:10</a></li>
+<li><a href="#orge37f8e3">Romans 15:11</a></li>
+<li><a href="#org776726f">Romans 15:12</a></li>
+<li><a href="#org3d2d4d2">Romans 15:13</a></li>
+<li><a href="#org46d2ee2">Romans 15:14</a></li>
+<li><a href="#org9fb8d3a">Romans 15:15</a></li>
+<li><a href="#org72aaae7">Romans 15:16</a></li>
+<li><a href="#orgc390867">Romans 15:17</a></li>
+<li><a href="#orga2e7393">Romans 15:18</a></li>
+<li><a href="#org4e87243">Romans 15:19</a></li>
+<li><a href="#org576d780">Romans 15:20</a></li>
+<li><a href="#orgdf04505">Romans 15:21</a></li>
+<li><a href="#orga5642c4">Romans 15:22</a></li>
+<li><a href="#orgb1f4830">Romans 15:23</a></li>
+<li><a href="#org3a00f5a">Romans 15:24</a></li>
+<li><a href="#org16eaf7d">Romans 15:25</a></li>
+<li><a href="#org3fa0a9e">Romans 15:26</a></li>
+<li><a href="#org041e50c">Romans 15:27</a></li>
+<li><a href="#orgc1d51d9">Romans 15:28</a></li>
+<li><a href="#org91c606c">Romans 15:29</a></li>
+<li><a href="#orgdac247e">Romans 15:30</a></li>
+<li><a href="#org5e14ff6">Romans 15:31</a></li>
+<li><a href="#orge3567e9">Romans 15:32</a></li>
+<li><a href="#org2ec285c">Romans 15:33</a></li>
+</ul>
+</li>
+<li><a href="#orgbc8ec1c">Romans 16</a>
+<ul>
+<li><a href="#org305b699">Romans 16:1</a></li>
+<li><a href="#org3736c51">Romans 16:2</a></li>
+<li><a href="#org4740d16">Romans 16:3</a></li>
+<li><a href="#org0975465">Romans 16:4</a></li>
+<li><a href="#org5845cd9">Romans 16:5</a></li>
+<li><a href="#orgb5d1585">Romans 16:6</a></li>
+<li><a href="#org3067609">Romans 16:7</a></li>
+<li><a href="#org7a3b711">Romans 16:8</a></li>
+<li><a href="#orgaf31f46">Romans 16:9</a></li>
+<li><a href="#org7fcad74">Romans 16:10</a></li>
+<li><a href="#org5a8cc27">Romans 16:11</a></li>
+<li><a href="#org50c4999">Romans 16:12</a></li>
+<li><a href="#orgb2d051c">Romans 16:13</a></li>
+<li><a href="#org102d1b4">Romans 16:14</a></li>
+<li><a href="#orgd1545e8">Romans 16:15</a></li>
+<li><a href="#orgaf77d4e">Romans 16:16</a></li>
+<li><a href="#orgd314734">Romans 16:17</a></li>
+<li><a href="#org3c2e4d9">Romans 16:18</a></li>
+<li><a href="#orgb668e6c">Romans 16:19</a></li>
+<li><a href="#orgac08543">Romans 16:20</a></li>
+<li><a href="#org1bcdeee">Romans 16:21</a></li>
+<li><a href="#org1f09f37">Romans 16:22</a></li>
+<li><a href="#org9a1f8fe">Romans 16:23</a></li>
+<li><a href="#orgfc1d527">Romans 16:24</a></li>
+<li><a href="#org8166246">Romans 16:25</a></li>
+<li><a href="#orgdfb63d2">Romans 16:26</a></li>
+<li><a href="#orge8e56b0">Romans 16:27</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org490f3d3" class="outline-2">
+<h2 id="org490f3d3">Romans 1</h2>
+<div class="outline-text-2" id="text-org490f3d3">
+</div>
+<div id="outline-container-orgbe40f64" class="outline-3">
+<h3 id="orgbe40f64">Romans 1:1</h3>
+<div class="outline-text-3" id="text-orgbe40f64">
+<p>
+Paulus, servus Jesu Christi, vocatus Apostolus, segregatus in Evangelium Dei,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc06149a" class="outline-3">
+<h3 id="orgc06149a">Romans 1:2</h3>
+<div class="outline-text-3" id="text-orgc06149a">
+<p>
+quod ante promiserat per prophetas suos in Scripturis sanctis
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1ae95a" class="outline-3">
+<h3 id="orgd1ae95a">Romans 1:3</h3>
+<div class="outline-text-3" id="text-orgd1ae95a">
+<p>
+de Filio suo, qui factus est ei ex semine David secundum carnem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org474dedc" class="outline-3">
+<h3 id="org474dedc">Romans 1:4</h3>
+<div class="outline-text-3" id="text-org474dedc">
+<p>
+qui prædestinatus est Filius Dei in virtute secundum spiritum sanctificationis ex resurrectione mortuorum Jesu Christi Domini nostri :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org666b43d" class="outline-3">
+<h3 id="org666b43d">Romans 1:5</h3>
+<div class="outline-text-3" id="text-org666b43d">
+<p>
+per quem accepimus gratiam, et apostolatum ad obediendum fidei in omnibus gentibus pro nomine ejus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45f6a6e" class="outline-3">
+<h3 id="org45f6a6e">Romans 1:6</h3>
+<div class="outline-text-3" id="text-org45f6a6e">
+<p>
+in quibus estis et vos vocati Jesu Christi :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5fa9ba4" class="outline-3">
+<h3 id="org5fa9ba4">Romans 1:7</h3>
+<div class="outline-text-3" id="text-org5fa9ba4">
+<p>
+omnibus qui sunt Romæ, dilectis Dei, vocatis sanctis. Gratia vobis, et pax a Deo Patre nostro, et Domino Jesu Christo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6da5f1" class="outline-3">
+<h3 id="orga6da5f1">Romans 1:8</h3>
+<div class="outline-text-3" id="text-orga6da5f1">
+<p>
+Primum quidem gratias ago Deo meo per Jesum Christum pro omnibus vobis : quia fides vestra annuntiatur in universo mundo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09ff9d4" class="outline-3">
+<h3 id="org09ff9d4">Romans 1:9</h3>
+<div class="outline-text-3" id="text-org09ff9d4">
+<p>
+Testis enim mihi est Deus, cui servio in spiritu meo in Evangelio Filii ejus, quod sine intermissione memoriam vestri facio
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a2beab" class="outline-3">
+<h3 id="org6a2beab">Romans 1:10</h3>
+<div class="outline-text-3" id="text-org6a2beab">
+<p>
+semper in orationibus meis : obsecrans, si quomodo tandem aliquando prosperum iter habeam in voluntate Dei veniendi ad vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org344fe54" class="outline-3">
+<h3 id="org344fe54">Romans 1:11</h3>
+<div class="outline-text-3" id="text-org344fe54">
+<p>
+Desidero enim videre vos, ut aliquid impertiar vobis gratiæ spiritualis ad confirmandos vos :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1e888c" class="outline-3">
+<h3 id="orgf1e888c">Romans 1:12</h3>
+<div class="outline-text-3" id="text-orgf1e888c">
+<p>
+id est, simul consolari in vobis per eam quæ invicem est, fidem vestram atque meam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org744c12b" class="outline-3">
+<h3 id="org744c12b">Romans 1:13</h3>
+<div class="outline-text-3" id="text-org744c12b">
+<p>
+Nolo autem vos ignorare fratres : quia sæpe proposui venire ad vos (et prohibitus sum usque adhuc) ut aliquem fructum habeam et in vobis, sicut et in ceteris gentibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc3c4d9" class="outline-3">
+<h3 id="orgfc3c4d9">Romans 1:14</h3>
+<div class="outline-text-3" id="text-orgfc3c4d9">
+<p>
+Græcis ac barbaris, sapientibus, et insipientibus debitor sum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87bb153" class="outline-3">
+<h3 id="org87bb153">Romans 1:15</h3>
+<div class="outline-text-3" id="text-org87bb153">
+<p>
+ita (quod in me) promptum est et vobis, qui Romæ estis, evangelizare.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae21484" class="outline-3">
+<h3 id="orgae21484">Romans 1:16</h3>
+<div class="outline-text-3" id="text-orgae21484">
+<p>
+Non enim erubesco Evangelium. Virtus enim Dei est in salutem omni credenti, Judæo primum, et Græco.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org445e4d2" class="outline-3">
+<h3 id="org445e4d2">Romans 1:17</h3>
+<div class="outline-text-3" id="text-org445e4d2">
+<p>
+Justitia enim Dei in eo revelatur ex fide in fidem : sicut scriptum est : Justus autem ex fide vivit.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6561ce5" class="outline-3">
+<h3 id="org6561ce5">Romans 1:18</h3>
+<div class="outline-text-3" id="text-org6561ce5">
+<p>
+Revelatur enim ira Dei de cælo super omnem impietatem, et injustitiam hominum eorum, qui veritatem Dei in injustitia detinent :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a99f54" class="outline-3">
+<h3 id="org0a99f54">Romans 1:19</h3>
+<div class="outline-text-3" id="text-org0a99f54">
+<p>
+quia quod notum est Dei, manifestum est in illis. Deus enim illis manifestavit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65a9786" class="outline-3">
+<h3 id="org65a9786">Romans 1:20</h3>
+<div class="outline-text-3" id="text-org65a9786">
+<p>
+Invisibilia enim ipsius, a creatura mundi, per ea quæ facta sunt, intellecta, conspiciuntur : sempiterna quoque ejus virtus, et divinitas : ita ut sint inexcusabiles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f44f45" class="outline-3">
+<h3 id="org3f44f45">Romans 1:21</h3>
+<div class="outline-text-3" id="text-org3f44f45">
+<p>
+Quia cum cognovissent Deum, non sicut Deum glorificaverunt, aut gratias egerunt : sed evanuerunt in cogitationibus suis, et obscuratum est insipiens cor eorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3116e9" class="outline-3">
+<h3 id="orgd3116e9">Romans 1:22</h3>
+<div class="outline-text-3" id="text-orgd3116e9">
+<p>
+dicentes enim se esse sapientes, stulti facti sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ff56b7" class="outline-3">
+<h3 id="org2ff56b7">Romans 1:23</h3>
+<div class="outline-text-3" id="text-org2ff56b7">
+<p>
+Et mutaverunt gloriam incorruptibilis Dei in similitudinem imaginis corruptibilis hominis, et volucrum, et quadrupedum, et serpentium.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37abc7c" class="outline-3">
+<h3 id="org37abc7c">Romans 1:24</h3>
+<div class="outline-text-3" id="text-org37abc7c">
+<p>
+Propter quod tradidit illos Deus in desideria cordis eorum, in immunditiam, ut contumeliis afficiant corpora sua in semetipsis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83fc146" class="outline-3">
+<h3 id="org83fc146">Romans 1:25</h3>
+<div class="outline-text-3" id="text-org83fc146">
+<p>
+qui commutaverunt veritatem Dei in mendacium : et coluerunt, et servierunt creaturæ potius quam Creatori, qui est benedictus in sæcula. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1cf28c" class="outline-3">
+<h3 id="orgc1cf28c">Romans 1:26</h3>
+<div class="outline-text-3" id="text-orgc1cf28c">
+<p>
+Propterea tradidit illos Deus in passiones ignominiæ : nam feminæ eorum immutaverunt naturalem usum in eum usum qui est contra naturam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09176ca" class="outline-3">
+<h3 id="org09176ca">Romans 1:27</h3>
+<div class="outline-text-3" id="text-org09176ca">
+<p>
+Similiter autem et masculi, relicto naturali usu feminæ, exarserunt in desideriis suis in invicem, masculi in masculos turpitudinem operantes, et mercedem, quam oportuit, erroris sui in semetipsis recipientes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d6d728" class="outline-3">
+<h3 id="org3d6d728">Romans 1:28</h3>
+<div class="outline-text-3" id="text-org3d6d728">
+<p>
+Et sicut non probaverunt Deum habere in notitia, tradidit illos Deus in reprobum sensum, ut faciant ea quæ non conveniunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7527b9" class="outline-3">
+<h3 id="orgf7527b9">Romans 1:29</h3>
+<div class="outline-text-3" id="text-orgf7527b9">
+<p>
+repletos omni iniquitate, malitia, fornicatione, avaritia, nequitia, plenos invidia, homicidio, contentione, dolo, malignitate : susurrones,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64aba4c" class="outline-3">
+<h3 id="org64aba4c">Romans 1:30</h3>
+<div class="outline-text-3" id="text-org64aba4c">
+<p>
+detractores, Deo odibiles, contumeliosos, superbos, elatos, inventores malorum, parentibus non obedientes,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge67e4fd" class="outline-3">
+<h3 id="orge67e4fd">Romans 1:31</h3>
+<div class="outline-text-3" id="text-orge67e4fd">
+<p>
+insipientes, incompositos, sine affectione, absque fœdere, sine misericordia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6a0508" class="outline-3">
+<h3 id="orgb6a0508">Romans 1:32</h3>
+<div class="outline-text-3" id="text-orgb6a0508">
+<p>
+Qui cum justitiam Dei cognovissent, non intellexerunt quoniam qui talia agunt, digni sunt morte : et non solum qui ea faciunt, sed etiam qui consentiunt facientibus.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org90a105b" class="outline-2">
+<h2 id="org90a105b">Romans 2</h2>
+<div class="outline-text-2" id="text-org90a105b">
+</div>
+<div id="outline-container-orge909419" class="outline-3">
+<h3 id="orge909419">Romans 2:1</h3>
+<div class="outline-text-3" id="text-orge909419">
+<p>
+Propter quod inexcusabilis es, o homo omnis qui judicas. In quo enim judicas alterum, teipsum condemnas : eadem enim agis quæ judicas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6cf6be2" class="outline-3">
+<h3 id="org6cf6be2">Romans 2:2</h3>
+<div class="outline-text-3" id="text-org6cf6be2">
+<p>
+Scimus enim quoniam judicium Dei est secundum veritatem in eos qui talia agunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9257647" class="outline-3">
+<h3 id="org9257647">Romans 2:3</h3>
+<div class="outline-text-3" id="text-org9257647">
+<p>
+Existimas autem hoc, o homo, qui judicas eos qui talia agunt, et facis ea, quia tu effugies judicium Dei ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf3ab10" class="outline-3">
+<h3 id="orgdf3ab10">Romans 2:4</h3>
+<div class="outline-text-3" id="text-orgdf3ab10">
+<p>
+an divitias bonitatis ejus, et patientiæ, et longanimitatis contemnis ? ignoras quoniam benignitas Dei ad pœnitentiam te adducit ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03d6ec3" class="outline-3">
+<h3 id="org03d6ec3">Romans 2:5</h3>
+<div class="outline-text-3" id="text-org03d6ec3">
+<p>
+Secundum autem duritiam tuam, et impœnitens cor, thesaurizas tibi iram in die iræ, et revelationis justi judicii Dei,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93efe20" class="outline-3">
+<h3 id="org93efe20">Romans 2:6</h3>
+<div class="outline-text-3" id="text-org93efe20">
+<p>
+qui reddet unicuique secundum opera ejus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org892ff80" class="outline-3">
+<h3 id="org892ff80">Romans 2:7</h3>
+<div class="outline-text-3" id="text-org892ff80">
+<p>
+iis quidem qui secundum patientiam boni operis, gloriam, et honorem, et incorruptionem quærunt, vitam æternam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7852070" class="outline-3">
+<h3 id="org7852070">Romans 2:8</h3>
+<div class="outline-text-3" id="text-org7852070">
+<p>
+iis autem qui sunt ex contentione, et qui non acquiescunt veritati, credunt autem iniquitati, ira et indignatio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd9c2aef" class="outline-3">
+<h3 id="orgd9c2aef">Romans 2:9</h3>
+<div class="outline-text-3" id="text-orgd9c2aef">
+<p>
+Tribulatio et angustia in omnem animam hominis operantis malum, Judæi primum, et Græci :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8fddc2c" class="outline-3">
+<h3 id="org8fddc2c">Romans 2:10</h3>
+<div class="outline-text-3" id="text-org8fddc2c">
+<p>
+gloria autem, et honor, et pax omni operanti bonum, Judæo primum, et Græco :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e0cb78" class="outline-3">
+<h3 id="org6e0cb78">Romans 2:11</h3>
+<div class="outline-text-3" id="text-org6e0cb78">
+<p>
+non enim est acceptio personarum apud Deum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e65971" class="outline-3">
+<h3 id="org9e65971">Romans 2:12</h3>
+<div class="outline-text-3" id="text-org9e65971">
+<p>
+Quicumque enim sine lege peccaverunt, sine lege peribunt : et quicumque in lege peccaverunt, per legem judicabuntur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8ff20c" class="outline-3">
+<h3 id="orge8ff20c">Romans 2:13</h3>
+<div class="outline-text-3" id="text-orge8ff20c">
+<p>
+Non enim auditores legis justi sunt apud Deum, sed factores legis justificabuntur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org092ab7c" class="outline-3">
+<h3 id="org092ab7c">Romans 2:14</h3>
+<div class="outline-text-3" id="text-org092ab7c">
+<p>
+Cum autem gentes, quæ legem non habent, naturaliter ea, quæ legis sunt, faciunt, ejusmodi legem non habentes, ipsi sibi sunt lex :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3e5b5a" class="outline-3">
+<h3 id="orgf3e5b5a">Romans 2:15</h3>
+<div class="outline-text-3" id="text-orgf3e5b5a">
+<p>
+qui ostendunt opus legis scriptum in cordibus suis, testimonium reddente illis conscientia ipsorum, et inter se invicem cogitationibus accusantibus, aut etiam defendentibus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf089f92" class="outline-3">
+<h3 id="orgf089f92">Romans 2:16</h3>
+<div class="outline-text-3" id="text-orgf089f92">
+<p>
+in die, cum judicabit Deus occulta hominum, secundum Evangelium meum per Jesum Christum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94ad38c" class="outline-3">
+<h3 id="org94ad38c">Romans 2:17</h3>
+<div class="outline-text-3" id="text-org94ad38c">
+<p>
+Si autem tu Judæus cognominaris, et requiescis in lege, et gloriaris in Deo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org884a256" class="outline-3">
+<h3 id="org884a256">Romans 2:18</h3>
+<div class="outline-text-3" id="text-org884a256">
+<p>
+et nosti voluntatem ejus, et probas utiliora, instructus per legem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org178e713" class="outline-3">
+<h3 id="org178e713">Romans 2:19</h3>
+<div class="outline-text-3" id="text-org178e713">
+<p>
+confidis teipsum esse ducem cæcorum, lumen eorum qui in tenebris sunt,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2371c62" class="outline-3">
+<h3 id="org2371c62">Romans 2:20</h3>
+<div class="outline-text-3" id="text-org2371c62">
+<p>
+eruditorem insipientium, magistrum infantium, habentem formam scientiæ, et veritatis in lege.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57cae18" class="outline-3">
+<h3 id="org57cae18">Romans 2:21</h3>
+<div class="outline-text-3" id="text-org57cae18">
+<p>
+Qui ergo alium doces, teipsum non doces : qui prædicas non furandum, furaris :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org078a88e" class="outline-3">
+<h3 id="org078a88e">Romans 2:22</h3>
+<div class="outline-text-3" id="text-org078a88e">
+<p>
+qui dicis non mœchandum, mœcharis : qui abominaris idola, sacrilegium facis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org848cb6f" class="outline-3">
+<h3 id="org848cb6f">Romans 2:23</h3>
+<div class="outline-text-3" id="text-org848cb6f">
+<p>
+qui in lege gloriaris, per prævaricationem legis Deum inhonoras.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29ba397" class="outline-3">
+<h3 id="org29ba397">Romans 2:24</h3>
+<div class="outline-text-3" id="text-org29ba397">
+<p>
+(Nomen enim Dei per vos blasphematur inter gentes, sicut scriptum est.)  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac16d96" class="outline-3">
+<h3 id="orgac16d96">Romans 2:25</h3>
+<div class="outline-text-3" id="text-orgac16d96">
+<p>
+Circumcisio quidem prodest, si legem observes : si autem prævaricator legis sis, circumcisio tua præputium facta est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org614ae18" class="outline-3">
+<h3 id="org614ae18">Romans 2:26</h3>
+<div class="outline-text-3" id="text-org614ae18">
+<p>
+Si igitur præputium justitias legis custodiat, nonne præputium illius in circumcisionem reputabitur ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd55b49" class="outline-3">
+<h3 id="orgfd55b49">Romans 2:27</h3>
+<div class="outline-text-3" id="text-orgfd55b49">
+<p>
+et judicabit id quod ex natura est præputium, legem consummans, te, qui per litteram et circumcisionem prævaricator legis es ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd498ce6" class="outline-3">
+<h3 id="orgd498ce6">Romans 2:28</h3>
+<div class="outline-text-3" id="text-orgd498ce6">
+<p>
+Non enim qui in manifesto, Judæus est : neque quæ in manifesto, in carne, est circumcisio :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe26c22" class="outline-3">
+<h3 id="orgbe26c22">Romans 2:29</h3>
+<div class="outline-text-3" id="text-orgbe26c22">
+<p>
+sed qui in abscondito, Judæus est : et circumcisio cordis in spiritu, non littera : cujus laus non ex hominibus, sed ex Deo est.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdf4a80d" class="outline-2">
+<h2 id="orgdf4a80d">Romans 3</h2>
+<div class="outline-text-2" id="text-orgdf4a80d">
+</div>
+<div id="outline-container-org81489b4" class="outline-3">
+<h3 id="org81489b4">Romans 3:1</h3>
+<div class="outline-text-3" id="text-org81489b4">
+<p>
+Quid ergo amplius Judæo est ? aut quæ utilitas circumcisionis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15e23db" class="outline-3">
+<h3 id="org15e23db">Romans 3:2</h3>
+<div class="outline-text-3" id="text-org15e23db">
+<p>
+Multum per omnem modum. Primum quidem quia credita sunt illis eloquia Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefdc2f9" class="outline-3">
+<h3 id="orgefdc2f9">Romans 3:3</h3>
+<div class="outline-text-3" id="text-orgefdc2f9">
+<p>
+Quid enim si quidam illorum non crediderunt ? numquid incredulitas illorum fidem Dei evacuabit ? Absit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1630c2e" class="outline-3">
+<h3 id="org1630c2e">Romans 3:4</h3>
+<div class="outline-text-3" id="text-org1630c2e">
+<p>
+Est autem Deus verax : omnis autem homo mendax, sicut scriptum est :   Ut justificeris in sermonibus tuis :  et vincas cum judicaris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0143eb" class="outline-3">
+<h3 id="orgd0143eb">Romans 3:5</h3>
+<div class="outline-text-3" id="text-orgd0143eb">
+<p>
+Si autem iniquitas nostra justitiam Dei commendat, quid dicemus ? Numquid iniquus est Deus, qui infert iram ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b2bfdb" class="outline-3">
+<h3 id="org4b2bfdb">Romans 3:6</h3>
+<div class="outline-text-3" id="text-org4b2bfdb">
+<p>
+secundum hominem dico. Absit. Alioquin quomodo judicabit Deus hunc mundum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde9aade" class="outline-3">
+<h3 id="orgde9aade">Romans 3:7</h3>
+<div class="outline-text-3" id="text-orgde9aade">
+<p>
+Si enim veritas Dei in meo mendacio abundavit in gloriam ipsius : quid adhuc et ego tamquam peccator judicor ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53af48b" class="outline-3">
+<h3 id="org53af48b">Romans 3:8</h3>
+<div class="outline-text-3" id="text-org53af48b">
+<p>
+et non (sicut blasphemamur, et sicut aiunt quidam nos dicere) faciamus mala ut veniant bona : quorum damnatio justa est.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa6ad87" class="outline-3">
+<h3 id="orgfa6ad87">Romans 3:9</h3>
+<div class="outline-text-3" id="text-orgfa6ad87">
+<p>
+Quid ergo ? præcellimus eos ? Nequaquam. Causati enim sumus Judæos et Græcos omnes sub peccato esse,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d716ae" class="outline-3">
+<h3 id="org0d716ae">Romans 3:10</h3>
+<div class="outline-text-3" id="text-org0d716ae">
+<p>
+sicut scriptum est :   Quia non est justus quisquam : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ffa380" class="outline-3">
+<h3 id="org8ffa380">Romans 3:11</h3>
+<div class="outline-text-3" id="text-org8ffa380">
+<p>
+non est intelligens, non est requirens Deum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8848729" class="outline-3">
+<h3 id="org8848729">Romans 3:12</h3>
+<div class="outline-text-3" id="text-org8848729">
+<p>
+Omnes declinaverunt, simul inutiles facti sunt :  non est qui faciat bonum, non est usque ad unum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c0ab65" class="outline-3">
+<h3 id="org3c0ab65">Romans 3:13</h3>
+<div class="outline-text-3" id="text-org3c0ab65">
+<p>
+Sepulchrum patens est guttur eorum,  linguis suis dolose agebant :  venenum aspidum sub labiis eorum : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59a4677" class="outline-3">
+<h3 id="org59a4677">Romans 3:14</h3>
+<div class="outline-text-3" id="text-org59a4677">
+<p>
+quorum os maledictione, et amaritudine plenum est : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a90118" class="outline-3">
+<h3 id="org0a90118">Romans 3:15</h3>
+<div class="outline-text-3" id="text-org0a90118">
+<p>
+veloces pedes eorum ad effundendum sanguinem : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc63f46c" class="outline-3">
+<h3 id="orgc63f46c">Romans 3:16</h3>
+<div class="outline-text-3" id="text-orgc63f46c">
+<p>
+contritio et infelicitas in viis eorum : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a3565b" class="outline-3">
+<h3 id="org7a3565b">Romans 3:17</h3>
+<div class="outline-text-3" id="text-org7a3565b">
+<p>
+et viam pacis non cognoverunt : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5c64fd" class="outline-3">
+<h3 id="orgf5c64fd">Romans 3:18</h3>
+<div class="outline-text-3" id="text-orgf5c64fd">
+<p>
+non est timor Dei ante oculos eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59e4bd0" class="outline-3">
+<h3 id="org59e4bd0">Romans 3:19</h3>
+<div class="outline-text-3" id="text-org59e4bd0">
+<p>
+Scimus autem quoniam quæcumque lex loquitur, iis, qui in lege sunt, loquitur : ut omne os obstruatur, et subditus fiat omnis mundus Deo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8ed36a" class="outline-3">
+<h3 id="orgf8ed36a">Romans 3:20</h3>
+<div class="outline-text-3" id="text-orgf8ed36a">
+<p>
+quia ex operibus legis non justificabitur omnis caro coram illo. Per legem enim cognitio peccati.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9199d7" class="outline-3">
+<h3 id="orgc9199d7">Romans 3:21</h3>
+<div class="outline-text-3" id="text-orgc9199d7">
+<p>
+Nunc autem sine lege justitia Dei manifestata est : testificata a lege et prophetis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6cba228" class="outline-3">
+<h3 id="org6cba228">Romans 3:22</h3>
+<div class="outline-text-3" id="text-org6cba228">
+<p>
+Justitia autem Dei per fidem Jesu Christi in omnes et super omnes qui credunt in eum : non enim est distinctio :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeaf06ed" class="outline-3">
+<h3 id="orgeaf06ed">Romans 3:23</h3>
+<div class="outline-text-3" id="text-orgeaf06ed">
+<p>
+omnes enim peccaverunt, et egent gloria Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4073ee0" class="outline-3">
+<h3 id="org4073ee0">Romans 3:24</h3>
+<div class="outline-text-3" id="text-org4073ee0">
+<p>
+Justificati gratis per gratiam ipsius, per redemptionem quæ est in Christo Jesu,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09a1ed1" class="outline-3">
+<h3 id="org09a1ed1">Romans 3:25</h3>
+<div class="outline-text-3" id="text-org09a1ed1">
+<p>
+quem proposuit Deus propitiationem per fidem in sanguine ipsius, ad ostensionem justitiæ suæ propter remissionem præcedentium delictorum
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7148a45" class="outline-3">
+<h3 id="org7148a45">Romans 3:26</h3>
+<div class="outline-text-3" id="text-org7148a45">
+<p>
+in sustentatione Dei, ad ostensionem justitiæ ejus in hoc tempore : ut sit ipse justus, et justificans eum, qui est ex fide Jesu Christi.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0edb015" class="outline-3">
+<h3 id="org0edb015">Romans 3:27</h3>
+<div class="outline-text-3" id="text-org0edb015">
+<p>
+Ubi est ergo gloriatio tua ? Exclusa est. Per quam legem ? Factorum ? Non : sed per legem fidei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeec3288" class="outline-3">
+<h3 id="orgeec3288">Romans 3:28</h3>
+<div class="outline-text-3" id="text-orgeec3288">
+<p>
+Arbitramur enim justificari hominem per fidem sine operibus legis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37a10f0" class="outline-3">
+<h3 id="org37a10f0">Romans 3:29</h3>
+<div class="outline-text-3" id="text-org37a10f0">
+<p>
+An Judæorum Deus tantum ? nonne et gentium ? Immo et gentium :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb590fd4" class="outline-3">
+<h3 id="orgb590fd4">Romans 3:30</h3>
+<div class="outline-text-3" id="text-orgb590fd4">
+<p>
+quoniam quidem unus est Deus, qui justificat circumcisionem ex fide, et præputium per fidem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34efe9b" class="outline-3">
+<h3 id="org34efe9b">Romans 3:31</h3>
+<div class="outline-text-3" id="text-org34efe9b">
+<p>
+Legem ergo destruimus per fidem ? Absit : sed legem statuimus.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6af280b" class="outline-2">
+<h2 id="org6af280b">Romans 4</h2>
+<div class="outline-text-2" id="text-org6af280b">
+</div>
+<div id="outline-container-orgc781cc0" class="outline-3">
+<h3 id="orgc781cc0">Romans 4:1</h3>
+<div class="outline-text-3" id="text-orgc781cc0">
+<p>
+Quid ergo dicemus invenisse Abraham patrem nostrum secundum carnem ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4590ee" class="outline-3">
+<h3 id="orga4590ee">Romans 4:2</h3>
+<div class="outline-text-3" id="text-orga4590ee">
+<p>
+Si enim Abraham ex operibus justificatus est, habet gloriam, sed non apud Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d2ed85" class="outline-3">
+<h3 id="org2d2ed85">Romans 4:3</h3>
+<div class="outline-text-3" id="text-org2d2ed85">
+<p>
+Quid enim dicit Scriptura ? Credidit Abraham Deo, et reputatum est illi ad justitiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e35b48" class="outline-3">
+<h3 id="org4e35b48">Romans 4:4</h3>
+<div class="outline-text-3" id="text-org4e35b48">
+<p>
+Ei autem qui operatur, merces non imputatur secundum gratiam, sed secundum debitum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3105800" class="outline-3">
+<h3 id="org3105800">Romans 4:5</h3>
+<div class="outline-text-3" id="text-org3105800">
+<p>
+Ei vero qui non operatur, credenti autem in eum, qui justificat impium, reputatur fides ejus ad justitiam secundum propositum gratiæ Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffaf737" class="outline-3">
+<h3 id="orgffaf737">Romans 4:6</h3>
+<div class="outline-text-3" id="text-orgffaf737">
+<p>
+Sicut et David dicit beatitudinem hominis, cui Deus accepto fert justitiam sine operibus :  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54e9171" class="outline-3">
+<h3 id="org54e9171">Romans 4:7</h3>
+<div class="outline-text-3" id="text-org54e9171">
+<p>
+Beati, quorum remissæ sunt iniquitates,  et quorum tecta sunt peccata. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d98851" class="outline-3">
+<h3 id="org7d98851">Romans 4:8</h3>
+<div class="outline-text-3" id="text-org7d98851">
+<p>
+Beatus vir, cui non imputavit Dominus peccatum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org433627f" class="outline-3">
+<h3 id="org433627f">Romans 4:9</h3>
+<div class="outline-text-3" id="text-org433627f">
+<p>
+Beatitudo ergo hæc in circumcisione tantum manet, an etiam in præputio ? Dicimus enim quia reputata est Abrahæ fides ad justitiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc30bf3" class="outline-3">
+<h3 id="orgdc30bf3">Romans 4:10</h3>
+<div class="outline-text-3" id="text-orgdc30bf3">
+<p>
+Quomodo ergo reputata est ? in circumcisione, an in præputio ? Non in circumcisione, sed in præputio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17f0730" class="outline-3">
+<h3 id="org17f0730">Romans 4:11</h3>
+<div class="outline-text-3" id="text-org17f0730">
+<p>
+Et signum accepit circumcisionis, signaculum justitiæ fidei, quæ est in præputio : ut sit pater omnium credentium per præputium, ut reputetur et illis ad justitiam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a8a6c9" class="outline-3">
+<h3 id="org8a8a6c9">Romans 4:12</h3>
+<div class="outline-text-3" id="text-org8a8a6c9">
+<p>
+et sit pater circumcisionis non iis tantum, qui sunt ex circumcisione, sed et iis qui sectantur vestigia fidei, quæ est in præputio patris nostri Abrahæ.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb2dcec" class="outline-3">
+<h3 id="orgdb2dcec">Romans 4:13</h3>
+<div class="outline-text-3" id="text-orgdb2dcec">
+<p>
+Non enim per legem promissio Abrahæ, aut semini ejus ut hæres esset mundi : sed per justitiam fidei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf88270a" class="outline-3">
+<h3 id="orgf88270a">Romans 4:14</h3>
+<div class="outline-text-3" id="text-orgf88270a">
+<p>
+Si enim qui ex lege, hæredes sunt : exinanita est fides, abolita est promissio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2843f8d" class="outline-3">
+<h3 id="org2843f8d">Romans 4:15</h3>
+<div class="outline-text-3" id="text-org2843f8d">
+<p>
+Lex enim iram operatur. Ubi enim non est lex, nec prævaricatio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbf7521" class="outline-3">
+<h3 id="orgbbf7521">Romans 4:16</h3>
+<div class="outline-text-3" id="text-orgbbf7521">
+<p>
+Ideo ex fide, ut secundum gratiam firma sit promissio omni semini, non ei qui ex lege est solum, sed et ei qui ex fide est Abrahæ, qui pater est omnium nostrum
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb75df2a" class="outline-3">
+<h3 id="orgb75df2a">Romans 4:17</h3>
+<div class="outline-text-3" id="text-orgb75df2a">
+<p>
+(sicut scriptum est : Quia patrem multarum gentium posui te) ante Deum, cui credidit, qui vivificat mortuos, et vocat ea quæ non sunt, tamquam ea quæ sunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98672be" class="outline-3">
+<h3 id="org98672be">Romans 4:18</h3>
+<div class="outline-text-3" id="text-org98672be">
+<p>
+qui contra spem in spem credidit, ut fieret pater multarum gentium secundum quod dictum est ei : Sic erit semen tuum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dd2f07" class="outline-3">
+<h3 id="org3dd2f07">Romans 4:19</h3>
+<div class="outline-text-3" id="text-org3dd2f07">
+<p>
+Et non infirmatus est fide, nec consideravit corpus suum emortuum, cum jam fere centum esset annorum, et emortuam vulvam Saræ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c61de5" class="outline-3">
+<h3 id="org0c61de5">Romans 4:20</h3>
+<div class="outline-text-3" id="text-org0c61de5">
+<p>
+In repromissione etiam Dei non hæsitavit diffidentia, sed confortatus est fide, dans gloriam Deo :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6806722" class="outline-3">
+<h3 id="org6806722">Romans 4:21</h3>
+<div class="outline-text-3" id="text-org6806722">
+<p>
+plenissime sciens, quia quæcumque promisit, potens est et facere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefcf6bc" class="outline-3">
+<h3 id="orgefcf6bc">Romans 4:22</h3>
+<div class="outline-text-3" id="text-orgefcf6bc">
+<p>
+Ideo et reputatum est illi ad justitiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org537ad75" class="outline-3">
+<h3 id="org537ad75">Romans 4:23</h3>
+<div class="outline-text-3" id="text-org537ad75">
+<p>
+Non est autem scriptum tantum propter ipsum quia reputatum est illi ad justitiam :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49134f1" class="outline-3">
+<h3 id="org49134f1">Romans 4:24</h3>
+<div class="outline-text-3" id="text-org49134f1">
+<p>
+sed et propter nos, quibus reputabitur credentibus in eum, qui suscitavit Jesum Christum Dominum nostrum a mortuis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1cfc98e" class="outline-3">
+<h3 id="org1cfc98e">Romans 4:25</h3>
+<div class="outline-text-3" id="text-org1cfc98e">
+<p>
+qui traditus est propter delicta nostra, et resurrexit propter justificationem nostram.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0f5b782" class="outline-2">
+<h2 id="org0f5b782">Romans 5</h2>
+<div class="outline-text-2" id="text-org0f5b782">
+</div>
+<div id="outline-container-orgf75759c" class="outline-3">
+<h3 id="orgf75759c">Romans 5:1</h3>
+<div class="outline-text-3" id="text-orgf75759c">
+<p>
+Justificati ergo ex fide, pacem habeamus ad Deum per Dominum nostrum Jesum Christum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4324f7c" class="outline-3">
+<h3 id="org4324f7c">Romans 5:2</h3>
+<div class="outline-text-3" id="text-org4324f7c">
+<p>
+per quem et habemus accessum per fidem in gratiam istam, in qua stamus, et gloriamur in spe gloriæ filiorum Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b2c445" class="outline-3">
+<h3 id="org0b2c445">Romans 5:3</h3>
+<div class="outline-text-3" id="text-org0b2c445">
+<p>
+Non solum autem, sed et gloriamur in tribulationibus : scientes quod tribulatio patientiam operatur :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org588b6a8" class="outline-3">
+<h3 id="org588b6a8">Romans 5:4</h3>
+<div class="outline-text-3" id="text-org588b6a8">
+<p>
+patientia autem probationem, probatio vero spem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org59a65a3" class="outline-3">
+<h3 id="org59a65a3">Romans 5:5</h3>
+<div class="outline-text-3" id="text-org59a65a3">
+<p>
+spes autem non confundit : quia caritas Dei diffusa est in cordibus nostris per Spiritum Sanctum, qui datus est nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf271937" class="outline-3">
+<h3 id="orgf271937">Romans 5:6</h3>
+<div class="outline-text-3" id="text-orgf271937">
+<p>
+Ut quid enim Christus, cum adhuc infirmi essemus, secundum tempus, pro impiis mortuus est ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaab9c1c" class="outline-3">
+<h3 id="orgaab9c1c">Romans 5:7</h3>
+<div class="outline-text-3" id="text-orgaab9c1c">
+<p>
+vix enim pro justo quis moritur : nam pro bono forsitan quis audeat mori.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0e6bd1" class="outline-3">
+<h3 id="orgb0e6bd1">Romans 5:8</h3>
+<div class="outline-text-3" id="text-orgb0e6bd1">
+<p>
+Commendat autem caritatem suam Deus in nobis : quoniam cum adhuc peccatores essemus, secundum tempus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1e9705" class="outline-3">
+<h3 id="orga1e9705">Romans 5:9</h3>
+<div class="outline-text-3" id="text-orga1e9705">
+<p>
+Christus pro nobis mortuus est : multo igitur magis nunc justificati in sanguine ipsius, salvi erimus ab ira per ipsum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6076a0b" class="outline-3">
+<h3 id="org6076a0b">Romans 5:10</h3>
+<div class="outline-text-3" id="text-org6076a0b">
+<p>
+Si enim cum inimici essemus, reconciliati sumus Deo per mortem filii ejus : multo magis reconciliati, salvi erimus in vita ipsius.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b80719" class="outline-3">
+<h3 id="org6b80719">Romans 5:11</h3>
+<div class="outline-text-3" id="text-org6b80719">
+<p>
+Non solum autem : sed et gloriamur in Deo per Dominum nostrum Jesum Christum, per quem nunc reconciliationem accepimus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4543de" class="outline-3">
+<h3 id="orgc4543de">Romans 5:12</h3>
+<div class="outline-text-3" id="text-orgc4543de">
+<p>
+Propterea sicut per unum hominem peccatum in hunc mundum intravit, et per peccatum mors, et ita in omnes homines mors pertransiit, in quo omnes peccaverunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b24311" class="outline-3">
+<h3 id="org2b24311">Romans 5:13</h3>
+<div class="outline-text-3" id="text-org2b24311">
+<p>
+Usque ad legem enim peccatum erat in mundo : peccatum autem non imputabatur, cum lex non esset.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0701a39" class="outline-3">
+<h3 id="org0701a39">Romans 5:14</h3>
+<div class="outline-text-3" id="text-org0701a39">
+<p>
+Sed regnavit mors ab Adam usque ad Moysen etiam in eos qui non peccaverunt in similitudinem prævaricationis Adæ, qui est forma futuri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb78a5bf" class="outline-3">
+<h3 id="orgb78a5bf">Romans 5:15</h3>
+<div class="outline-text-3" id="text-orgb78a5bf">
+<p>
+Sed non sicut delictum, ita et donum : si enim unius delicto multi mortui sunt : multo magis gratia Dei et donum in gratia unius hominis Jesu Christi in plures abundavit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org25375ca" class="outline-3">
+<h3 id="org25375ca">Romans 5:16</h3>
+<div class="outline-text-3" id="text-org25375ca">
+<p>
+Et non sicut per unum peccatum, ita et donum. Nam judicium quidem ex uno in condemnationem : gratia autem ex multis delictis in justificationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33a7d4e" class="outline-3">
+<h3 id="org33a7d4e">Romans 5:17</h3>
+<div class="outline-text-3" id="text-org33a7d4e">
+<p>
+Si enim unius delicto mors regnavit per unum : multo magis abundantiam gratiæ, et donationis, et justitiæ accipientes, in vita regnabunt per unum Jesum Christum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org700e8fa" class="outline-3">
+<h3 id="org700e8fa">Romans 5:18</h3>
+<div class="outline-text-3" id="text-org700e8fa">
+<p>
+Igitur sicut per unius delictum in omnes homines in condemnationem : sic et per unius justitiam in omnes homines in justificationem vitæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00aa3e9" class="outline-3">
+<h3 id="org00aa3e9">Romans 5:19</h3>
+<div class="outline-text-3" id="text-org00aa3e9">
+<p>
+Sicut enim per inobedientiam unius hominis, peccatores constituti sunt multi : ita et per unius obeditionem, justi constituentur multi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b8304b" class="outline-3">
+<h3 id="org5b8304b">Romans 5:20</h3>
+<div class="outline-text-3" id="text-org5b8304b">
+<p>
+Lex autem subintravit ut abundaret delictum. Ubi autem abundavit delictum, superabundavit gratia :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97aefca" class="outline-3">
+<h3 id="org97aefca">Romans 5:21</h3>
+<div class="outline-text-3" id="text-org97aefca">
+<p>
+ut sicut regnavit peccatum in mortem : ita et gratia regnet per justitiam in vitam æternam, per Jesum Christum Dominum nostrum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe8212a" class="outline-2">
+<h2 id="orgbe8212a">Romans 6</h2>
+<div class="outline-text-2" id="text-orgbe8212a">
+</div>
+<div id="outline-container-org8c9f141" class="outline-3">
+<h3 id="org8c9f141">Romans 6:1</h3>
+<div class="outline-text-3" id="text-org8c9f141">
+<p>
+Quid ergo dicemus ? permanebimus in peccato ut gratia abundet ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab69344" class="outline-3">
+<h3 id="orgab69344">Romans 6:2</h3>
+<div class="outline-text-3" id="text-orgab69344">
+<p>
+Absit. Qui enim mortui sumus peccato, quomodo adhuc vivemus in illo ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge983283" class="outline-3">
+<h3 id="orge983283">Romans 6:3</h3>
+<div class="outline-text-3" id="text-orge983283">
+<p>
+an ignoratis quia quicumque baptizati sumus in Christo Jesu, in morte ipsius baptizati sumus ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c353fd" class="outline-3">
+<h3 id="org8c353fd">Romans 6:4</h3>
+<div class="outline-text-3" id="text-org8c353fd">
+<p>
+Consepulti enim sumus cum illo per baptismum in mortem : ut quomodo Christus surrexit a mortuis per gloriam Patris, ita et nos in novitate vitæ ambulemus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org844bf52" class="outline-3">
+<h3 id="org844bf52">Romans 6:5</h3>
+<div class="outline-text-3" id="text-org844bf52">
+<p>
+Si enim complantati facti sumus similitudini mortis ejus : simul et resurrectionis erimus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10f9101" class="outline-3">
+<h3 id="org10f9101">Romans 6:6</h3>
+<div class="outline-text-3" id="text-org10f9101">
+<p>
+Hoc scientes, quia vetus homo noster simul crucifixus est, ut destruatur corpus peccati, et ultra non serviamus peccato.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6cbecac" class="outline-3">
+<h3 id="org6cbecac">Romans 6:7</h3>
+<div class="outline-text-3" id="text-org6cbecac">
+<p>
+Qui enim mortuus est, justificatus est a peccato.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75b649e" class="outline-3">
+<h3 id="org75b649e">Romans 6:8</h3>
+<div class="outline-text-3" id="text-org75b649e">
+<p>
+Si autem mortui sumus cum Christo, credimus quia simul etiam vivemus cum Christo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7ca517" class="outline-3">
+<h3 id="orgd7ca517">Romans 6:9</h3>
+<div class="outline-text-3" id="text-orgd7ca517">
+<p>
+scientes quod Christus resurgens ex mortuis jam non moritur : mors illi ultra non dominabitur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf62edaa" class="outline-3">
+<h3 id="orgf62edaa">Romans 6:10</h3>
+<div class="outline-text-3" id="text-orgf62edaa">
+<p>
+Quod enim mortuus est peccato, mortuus est semel : quod autem vivit, vivit Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge4e58f4" class="outline-3">
+<h3 id="orge4e58f4">Romans 6:11</h3>
+<div class="outline-text-3" id="text-orge4e58f4">
+<p>
+Ita et vos existimate vos mortuos quidem esse peccato, viventes autem Deo, in Christo Jesu Domino nostro.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga370efd" class="outline-3">
+<h3 id="orga370efd">Romans 6:12</h3>
+<div class="outline-text-3" id="text-orga370efd">
+<p>
+Non ergo regnet peccatum in vestro mortali corpore ut obediatis concupiscentiis ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13a50e6" class="outline-3">
+<h3 id="org13a50e6">Romans 6:13</h3>
+<div class="outline-text-3" id="text-org13a50e6">
+<p>
+Sed neque exhibeatis membra vestra arma iniquitatis peccato : sed exhibete vos Deo, tamquam ex mortuis viventes : et membra vestra arma justitiæ Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2dc5f45" class="outline-3">
+<h3 id="org2dc5f45">Romans 6:14</h3>
+<div class="outline-text-3" id="text-org2dc5f45">
+<p>
+Peccatum enim vobis non dominabitur : non enim sub lege estis, sed sub gratia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84e81aa" class="outline-3">
+<h3 id="org84e81aa">Romans 6:15</h3>
+<div class="outline-text-3" id="text-org84e81aa">
+<p>
+Quid ergo ? peccabimus, quoniam non sumus sub lege, sed sub gratia ? Absit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga52cf3e" class="outline-3">
+<h3 id="orga52cf3e">Romans 6:16</h3>
+<div class="outline-text-3" id="text-orga52cf3e">
+<p>
+Nescitis quoniam cui exhibetis vos servos ad obediendum, servi estis ejus, cui obeditis, sive peccati ad mortem, sive obeditionis ad justitiam ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9735310" class="outline-3">
+<h3 id="org9735310">Romans 6:17</h3>
+<div class="outline-text-3" id="text-org9735310">
+<p>
+Gratias autem Deo quod fuistis servi peccati, obedistis autem ex corde in eam formam doctrinæ, in quam traditi estis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5525024" class="outline-3">
+<h3 id="org5525024">Romans 6:18</h3>
+<div class="outline-text-3" id="text-org5525024">
+<p>
+Liberati autem a peccato, servi facti estis justitiæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0de5e9a" class="outline-3">
+<h3 id="org0de5e9a">Romans 6:19</h3>
+<div class="outline-text-3" id="text-org0de5e9a">
+<p>
+Humanum dico, propter infirmitatem carnis vestræ : sicut enim exhibuistis membra vestra servire immunditiæ, et iniquitati ad iniquitatem, ita nunc exhibete membra vestra servire justitiæ in sanctificationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60b7509" class="outline-3">
+<h3 id="org60b7509">Romans 6:20</h3>
+<div class="outline-text-3" id="text-org60b7509">
+<p>
+Cum enim servi essetis peccati, liberi fuistis justitiæ.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org587394a" class="outline-3">
+<h3 id="org587394a">Romans 6:21</h3>
+<div class="outline-text-3" id="text-org587394a">
+<p>
+Quem ergo fructum habuistis tunc in illis, in quibus nunc erubescitis ? nam finis illorum mors est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0991848" class="outline-3">
+<h3 id="org0991848">Romans 6:22</h3>
+<div class="outline-text-3" id="text-org0991848">
+<p>
+Nunc vero liberati a peccato, servi autem facti Deo, habetis fructum vestrum in sanctificationem, finem vero vitam æternam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc03cb35" class="outline-3">
+<h3 id="orgc03cb35">Romans 6:23</h3>
+<div class="outline-text-3" id="text-orgc03cb35">
+<p>
+Stipendia enim peccati, mors. Gratia autem Dei, vita æterna, in Christo Jesu Domino nostro.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org99a6eea" class="outline-2">
+<h2 id="org99a6eea">Romans 7</h2>
+<div class="outline-text-2" id="text-org99a6eea">
+</div>
+<div id="outline-container-org803e2bc" class="outline-3">
+<h3 id="org803e2bc">Romans 7:1</h3>
+<div class="outline-text-3" id="text-org803e2bc">
+<p>
+An ignoratis, fratres (scientibus enim legem loquor), quia lex in homine dominatur quanto tempore vivit ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04039f6" class="outline-3">
+<h3 id="org04039f6">Romans 7:2</h3>
+<div class="outline-text-3" id="text-org04039f6">
+<p>
+Nam quæ sub viro est mulier, vivente viro, alligata est legi : si autem mortuus fuerit vir ejus, soluta est a lege viri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39dd470" class="outline-3">
+<h3 id="org39dd470">Romans 7:3</h3>
+<div class="outline-text-3" id="text-org39dd470">
+<p>
+Igitur, vivente viro, vocabitur adultera si fuerit cum alio viro : si autem mortuus fuerit vir ejus, liberata est a lege viri, ut non sit adultera si fuerit cum alio viro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8350bb" class="outline-3">
+<h3 id="orgc8350bb">Romans 7:4</h3>
+<div class="outline-text-3" id="text-orgc8350bb">
+<p>
+Itaque fratres mei, et vos mortificati estis legi per corpus Christi : ut sitis alterius, qui ex mortuis resurrexit, ut fructificemus Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f6ac4b" class="outline-3">
+<h3 id="org9f6ac4b">Romans 7:5</h3>
+<div class="outline-text-3" id="text-org9f6ac4b">
+<p>
+Cum enim essemus in carne, passiones peccatorum, quæ per legem erant, operabantur in membris nostris, ut fructificarent morti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8d845e" class="outline-3">
+<h3 id="orga8d845e">Romans 7:6</h3>
+<div class="outline-text-3" id="text-orga8d845e">
+<p>
+Nunc autem soluti sumus a lege mortis, in qua detinebamur, ita ut serviamus in novitate spiritus, et non in vetustate litteræ.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab9878d" class="outline-3">
+<h3 id="orgab9878d">Romans 7:7</h3>
+<div class="outline-text-3" id="text-orgab9878d">
+<p>
+Quid ergo dicemus ? lex peccatum est ? Absit. Sed peccatum non cognovi, nisi per legem : nam concupiscentiam nesciebam, nisi lex diceret : Non concupisces.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0486cf6" class="outline-3">
+<h3 id="org0486cf6">Romans 7:8</h3>
+<div class="outline-text-3" id="text-org0486cf6">
+<p>
+Occasione autem accepta, peccatum per mandatum operatum est in me omnem concupiscentiam. Sine lege enim peccatum mortuum erat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfdb96a" class="outline-3">
+<h3 id="orgdfdb96a">Romans 7:9</h3>
+<div class="outline-text-3" id="text-orgdfdb96a">
+<p>
+Ego autem vivebam sine lege aliquando : sed cum venisset mandatum, peccatum revixit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb53527f" class="outline-3">
+<h3 id="orgb53527f">Romans 7:10</h3>
+<div class="outline-text-3" id="text-orgb53527f">
+<p>
+Ego autem mortuus sum : et inventum est mihi mandatum, quod erat ad vitam, hoc esse ad mortem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b17754" class="outline-3">
+<h3 id="org3b17754">Romans 7:11</h3>
+<div class="outline-text-3" id="text-org3b17754">
+<p>
+Nam peccatum occasione accepta per mandatum, seduxit me, et per illud occidit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org755bdba" class="outline-3">
+<h3 id="org755bdba">Romans 7:12</h3>
+<div class="outline-text-3" id="text-org755bdba">
+<p>
+Itaque lex quidem sancta, et mandatum sanctum, et justum, et bonum.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0628f19" class="outline-3">
+<h3 id="org0628f19">Romans 7:13</h3>
+<div class="outline-text-3" id="text-org0628f19">
+<p>
+Quod ergo bonum est, mihi factum est mors ? Absit. Sed peccatum, ut appareat peccatum, per bonum operatum est mihi mortem : ut fiat supra modum peccans peccatum per mandatum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda0c124" class="outline-3">
+<h3 id="orgda0c124">Romans 7:14</h3>
+<div class="outline-text-3" id="text-orgda0c124">
+<p>
+Scimus enim quia lex spiritualis est : ego autem carnalis sum, venundatus sub peccato.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf732675" class="outline-3">
+<h3 id="orgf732675">Romans 7:15</h3>
+<div class="outline-text-3" id="text-orgf732675">
+<p>
+Quod enim operor, non intelligo : non enim quod volo bonum, hoc ago : sed quod odi malum, illud facio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfea7c59" class="outline-3">
+<h3 id="orgfea7c59">Romans 7:16</h3>
+<div class="outline-text-3" id="text-orgfea7c59">
+<p>
+Si autem quod nolo, illud facio : consentio legi, quoniam bona est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67668ba" class="outline-3">
+<h3 id="org67668ba">Romans 7:17</h3>
+<div class="outline-text-3" id="text-org67668ba">
+<p>
+Nunc autem jam non ego operor illud, sed quod habitat in me peccatum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org911a3fa" class="outline-3">
+<h3 id="org911a3fa">Romans 7:18</h3>
+<div class="outline-text-3" id="text-org911a3fa">
+<p>
+Scio enim quia non habitat in me, hoc est in carne mea, bonum. Nam velle, adjacet mihi : perficere autem bonum, non invenio.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c9eb5b" class="outline-3">
+<h3 id="org8c9eb5b">Romans 7:19</h3>
+<div class="outline-text-3" id="text-org8c9eb5b">
+<p>
+Non enim quod volo bonum, hoc facio : sed quod nolo malum, hoc ago.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org875114b" class="outline-3">
+<h3 id="org875114b">Romans 7:20</h3>
+<div class="outline-text-3" id="text-org875114b">
+<p>
+Si autem quod nolo, illud facio : jam non ego operor illud, sed quod habitat in me, peccatum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org398ac88" class="outline-3">
+<h3 id="org398ac88">Romans 7:21</h3>
+<div class="outline-text-3" id="text-org398ac88">
+<p>
+Invenio igitur legem, volenti mihi facere bonum, quoniam mihi malum adjacet :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2510eca" class="outline-3">
+<h3 id="org2510eca">Romans 7:22</h3>
+<div class="outline-text-3" id="text-org2510eca">
+<p>
+condelector enim legi Dei secundum interiorem hominem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f542b7" class="outline-3">
+<h3 id="org0f542b7">Romans 7:23</h3>
+<div class="outline-text-3" id="text-org0f542b7">
+<p>
+video autem aliam legem in membris meis, repugnantem legi mentis meæ, et captivantem me in lege peccati, quæ est in membris meis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4d9883" class="outline-3">
+<h3 id="orgd4d9883">Romans 7:24</h3>
+<div class="outline-text-3" id="text-orgd4d9883">
+<p>
+Infelix ego homo, quis me liberabit de corpore mortis hujus ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33f8642" class="outline-3">
+<h3 id="org33f8642">Romans 7:25</h3>
+<div class="outline-text-3" id="text-org33f8642">
+<p>
+gratia Dei per Jesum Christum Dominum nostrum. Igitur ego ipse mente servio legi Dei : carne autem, legi peccati.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdfbb3bf" class="outline-2">
+<h2 id="orgdfbb3bf">Romans 8</h2>
+<div class="outline-text-2" id="text-orgdfbb3bf">
+</div>
+<div id="outline-container-orgdef4aba" class="outline-3">
+<h3 id="orgdef4aba">Romans 8:1</h3>
+<div class="outline-text-3" id="text-orgdef4aba">
+<p>
+Nihil ergo nunc damnationis est iis qui sunt in Christo Jesu : qui non secundum carnem ambulant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d33d90" class="outline-3">
+<h3 id="org9d33d90">Romans 8:2</h3>
+<div class="outline-text-3" id="text-org9d33d90">
+<p>
+Lex enim spiritus vitæ in Christo Jesu liberavit me a lege peccati et mortis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6c9bff" class="outline-3">
+<h3 id="orge6c9bff">Romans 8:3</h3>
+<div class="outline-text-3" id="text-orge6c9bff">
+<p>
+Nam quod impossibile erat legi, in quo infirmabatur per carnem : Deus Filium suum mittens in similitudinem carnis peccati et de peccato, damnavit peccatum in carne,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf19fbf" class="outline-3">
+<h3 id="orgaf19fbf">Romans 8:4</h3>
+<div class="outline-text-3" id="text-orgaf19fbf">
+<p>
+ut justificatio legis impleretur in nobis, qui non secundum carnem ambulamus, sed secundum spiritum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a7cee5" class="outline-3">
+<h3 id="org9a7cee5">Romans 8:5</h3>
+<div class="outline-text-3" id="text-org9a7cee5">
+<p>
+Qui enim secundum carnem sunt, quæ carnis sunt, sapiunt : qui vero secundum spiritum sunt, quæ sunt spiritus, sentiunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3cac56" class="outline-3">
+<h3 id="orgf3cac56">Romans 8:6</h3>
+<div class="outline-text-3" id="text-orgf3cac56">
+<p>
+Nam prudentia carnis, mors est : prudentia autem spiritus, vita et pax :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e65c76" class="outline-3">
+<h3 id="org4e65c76">Romans 8:7</h3>
+<div class="outline-text-3" id="text-org4e65c76">
+<p>
+quoniam sapientia carnis inimica est Deo : legi enim Dei non est subjecta, nec enim potest.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb6ee00" class="outline-3">
+<h3 id="orgfb6ee00">Romans 8:8</h3>
+<div class="outline-text-3" id="text-orgfb6ee00">
+<p>
+Qui autem in carne sunt, Deo placere non possunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19cba44" class="outline-3">
+<h3 id="org19cba44">Romans 8:9</h3>
+<div class="outline-text-3" id="text-org19cba44">
+<p>
+Vos autem in carne non estis, sed in spiritu : si tamen Spiritus Dei habitat in vobis. Si quis autem Spiritum Christi non habet, hic non est ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga88662c" class="outline-3">
+<h3 id="orga88662c">Romans 8:10</h3>
+<div class="outline-text-3" id="text-orga88662c">
+<p>
+Si autem Christus in vobis est, corpus quidem mortuum est propter peccatum, spiritus vero vivit propter justificationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44a44e0" class="outline-3">
+<h3 id="org44a44e0">Romans 8:11</h3>
+<div class="outline-text-3" id="text-org44a44e0">
+<p>
+Quod si Spiritus ejus, qui suscitavit Jesum a mortuis, habitat in vobis : qui suscitavit Jesum Christum a mortuis, vivificabit et mortalia corpora vestra, propter inhabitantem Spiritum ejus in vobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44f03bb" class="outline-3">
+<h3 id="org44f03bb">Romans 8:12</h3>
+<div class="outline-text-3" id="text-org44f03bb">
+<p>
+Ergo fratres, debitores sumus non carni, ut secundum carnem vivamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67e4951" class="outline-3">
+<h3 id="org67e4951">Romans 8:13</h3>
+<div class="outline-text-3" id="text-org67e4951">
+<p>
+Si enim secundum carnem vixeritis, moriemini : si autem spiritu facta carnis mortificaveritis, vivetis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91d36e7" class="outline-3">
+<h3 id="org91d36e7">Romans 8:14</h3>
+<div class="outline-text-3" id="text-org91d36e7">
+<p>
+Quicumque enim Spiritu Dei aguntur, ii sunt filii Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5870cc3" class="outline-3">
+<h3 id="org5870cc3">Romans 8:15</h3>
+<div class="outline-text-3" id="text-org5870cc3">
+<p>
+Non enim accepistis spiritum servitutis iterum in timore, sed accepistis spiritum adoptionis filiorum, in quo clamamus : Abba (Pater).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd389529" class="outline-3">
+<h3 id="orgd389529">Romans 8:16</h3>
+<div class="outline-text-3" id="text-orgd389529">
+<p>
+Ipse enim Spiritus testimonium reddit spiritui nostro quod sumus filii Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17ec364" class="outline-3">
+<h3 id="org17ec364">Romans 8:17</h3>
+<div class="outline-text-3" id="text-org17ec364">
+<p>
+Si autem filii, et hæredes : hæredes, quidem Dei, cohæredes autem Christi : si tamen compatimur ut et conglorificemur.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50b1425" class="outline-3">
+<h3 id="org50b1425">Romans 8:18</h3>
+<div class="outline-text-3" id="text-org50b1425">
+<p>
+Existimo enim quod non sunt condignæ passiones hujus temporis ad futuram gloriam, quæ revelabitur in nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c3af1a" class="outline-3">
+<h3 id="org3c3af1a">Romans 8:19</h3>
+<div class="outline-text-3" id="text-org3c3af1a">
+<p>
+Nam exspectatio creaturæ revelationem filiorum Dei exspectat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31eadf0" class="outline-3">
+<h3 id="org31eadf0">Romans 8:20</h3>
+<div class="outline-text-3" id="text-org31eadf0">
+<p>
+Vanitati enim creatura subjecta est non volens, sed propter eum, qui subjecit eam in spe :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d02ac1" class="outline-3">
+<h3 id="org4d02ac1">Romans 8:21</h3>
+<div class="outline-text-3" id="text-org4d02ac1">
+<p>
+quia et ipsa creatura liberabitur a servitute corruptionis in libertatem gloriæ filiorum Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4bc5df" class="outline-3">
+<h3 id="orgf4bc5df">Romans 8:22</h3>
+<div class="outline-text-3" id="text-orgf4bc5df">
+<p>
+Scimus enim quod omnis creatura ingemiscit, et parturit usque adhuc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org209c2a1" class="outline-3">
+<h3 id="org209c2a1">Romans 8:23</h3>
+<div class="outline-text-3" id="text-org209c2a1">
+<p>
+Non solum autem illa, sed et nos ipsi primitias spiritus habentes : et ipsi intra nos gemimus adoptionem filiorum Dei exspectantes, redemptionem corporis nostri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgddc1ad2" class="outline-3">
+<h3 id="orgddc1ad2">Romans 8:24</h3>
+<div class="outline-text-3" id="text-orgddc1ad2">
+<p>
+Spe enim salvi facti sumus. Spes autem, quæ videtur, non est spes : nam quod videt quis, quid sperat ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7723095" class="outline-3">
+<h3 id="org7723095">Romans 8:25</h3>
+<div class="outline-text-3" id="text-org7723095">
+<p>
+Si autem quod non videmus, speramus : per patientiam exspectamus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda800d3" class="outline-3">
+<h3 id="orgda800d3">Romans 8:26</h3>
+<div class="outline-text-3" id="text-orgda800d3">
+<p>
+Similiter autem et Spiritus adjuvat infirmitatem nostram : nam quid oremus, sicut oportet, nescimus : sed ipse Spiritus postulat pro nobis gemitibus inenarrabilibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40f584e" class="outline-3">
+<h3 id="org40f584e">Romans 8:27</h3>
+<div class="outline-text-3" id="text-org40f584e">
+<p>
+Qui autem scrutatur corda, scit quid desideret Spiritus : quia secundum Deum postulat pro sanctis.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22bd944" class="outline-3">
+<h3 id="org22bd944">Romans 8:28</h3>
+<div class="outline-text-3" id="text-org22bd944">
+<p>
+Scimus autem quoniam diligentibus Deum omnia cooperantur in bonum, iis qui secundum propositum vocati sunt sancti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e5af26" class="outline-3">
+<h3 id="org9e5af26">Romans 8:29</h3>
+<div class="outline-text-3" id="text-org9e5af26">
+<p>
+Nam quos præscivit, et prædestinavit conformes fieri imaginis Filii sui, ut sit ipse primogenitus in multis fratribus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86df324" class="outline-3">
+<h3 id="org86df324">Romans 8:30</h3>
+<div class="outline-text-3" id="text-org86df324">
+<p>
+Quos autem prædestinavit, hos et vocavit : et quos vocavit, hos et justificavit : quos autem justificavit, illos et glorificavit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98d1bdf" class="outline-3">
+<h3 id="org98d1bdf">Romans 8:31</h3>
+<div class="outline-text-3" id="text-org98d1bdf">
+<p>
+Quid ergo dicemus ad hæc ? si Deus pro nobis, quis contra nos ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7105bd7" class="outline-3">
+<h3 id="org7105bd7">Romans 8:32</h3>
+<div class="outline-text-3" id="text-org7105bd7">
+<p>
+Qui etiam proprio Filio suo non pepercit, sed pro nobis omnibus tradidit illum : quomodo non etiam cum illo omnia nobis donavit ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd49027" class="outline-3">
+<h3 id="orgdd49027">Romans 8:33</h3>
+<div class="outline-text-3" id="text-orgdd49027">
+<p>
+Quis accusabit adversus electos Dei ? Deus qui justificat,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93e1128" class="outline-3">
+<h3 id="org93e1128">Romans 8:34</h3>
+<div class="outline-text-3" id="text-org93e1128">
+<p>
+quis est qui condemnet ? Christus Jesus, qui mortuus est, immo qui et resurrexit, qui est ad dexteram Dei, qui etiam interpellat pro nobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd908130" class="outline-3">
+<h3 id="orgd908130">Romans 8:35</h3>
+<div class="outline-text-3" id="text-orgd908130">
+<p>
+Quis ergo nos separabit a caritate Christi ? tribulatio ? an angustia ? an fames ? an nuditas ? an periculum ? an persecutio ? an gladius ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8a3a0f1" class="outline-3">
+<h3 id="org8a3a0f1">Romans 8:36</h3>
+<div class="outline-text-3" id="text-org8a3a0f1">
+<p>
+(Sicut scriptum est :   Quia propter te mortificamur tota die :  æstimati sumus sicut oves occisionis.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03fe6b7" class="outline-3">
+<h3 id="org03fe6b7">Romans 8:37</h3>
+<div class="outline-text-3" id="text-org03fe6b7">
+<p>
+Sed in his omnibus superamus propter eum qui dilexit nos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7526ea3" class="outline-3">
+<h3 id="org7526ea3">Romans 8:38</h3>
+<div class="outline-text-3" id="text-org7526ea3">
+<p>
+Certus sum enim quia neque mors, neque vita, neque angeli, neque principatus, neque virtutes, neque instantia, neque futura, neque fortitudo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8abde2f" class="outline-3">
+<h3 id="org8abde2f">Romans 8:39</h3>
+<div class="outline-text-3" id="text-org8abde2f">
+<p>
+neque altitudo, neque profundum, neque creatura alia poterit nos separare a caritate Dei, quæ est in Christo Jesu Domino nostro.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge40241b" class="outline-2">
+<h2 id="orge40241b">Romans 9</h2>
+<div class="outline-text-2" id="text-orge40241b">
+</div>
+<div id="outline-container-org0563472" class="outline-3">
+<h3 id="org0563472">Romans 9:1</h3>
+<div class="outline-text-3" id="text-org0563472">
+<p>
+Veritatem dico in Christo, non mentior : testimonium mihi perhibente conscientia mea in Spiritu Sancto :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3472ef1" class="outline-3">
+<h3 id="org3472ef1">Romans 9:2</h3>
+<div class="outline-text-3" id="text-org3472ef1">
+<p>
+quoniam tristitia mihi magna est, et continuus dolor cordi meo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd89032" class="outline-3">
+<h3 id="orgcd89032">Romans 9:3</h3>
+<div class="outline-text-3" id="text-orgcd89032">
+<p>
+Optabam enim ego ipse anathema esse a Christo pro fratribus meis, qui sunt cognati mei secundum carnem,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge276cfe" class="outline-3">
+<h3 id="orge276cfe">Romans 9:4</h3>
+<div class="outline-text-3" id="text-orge276cfe">
+<p>
+qui sunt Israëlitæ, quorum adoptio est filiorum, et gloria, et testamentum, et legislatio, et obsequium, et promissa :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org411dab7" class="outline-3">
+<h3 id="org411dab7">Romans 9:5</h3>
+<div class="outline-text-3" id="text-org411dab7">
+<p>
+quorum patres, et ex quibus est Christus secundum carnem, qui est super omnia Deus benedictus in sæcula. Amen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4164a18" class="outline-3">
+<h3 id="org4164a18">Romans 9:6</h3>
+<div class="outline-text-3" id="text-org4164a18">
+<p>
+Non autem quod exciderit verbum Dei. Non enim omnes qui ex Israël sunt, ii sunt Israëlitæ :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc92a61c" class="outline-3">
+<h3 id="orgc92a61c">Romans 9:7</h3>
+<div class="outline-text-3" id="text-orgc92a61c">
+<p>
+neque qui semen sunt Abrahæ, omnes filii : sed in Isaac vocabitur tibi semen :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc76ef7c" class="outline-3">
+<h3 id="orgc76ef7c">Romans 9:8</h3>
+<div class="outline-text-3" id="text-orgc76ef7c">
+<p>
+id est, non qui filii carnis, hi filii Dei : sed qui filii sunt promissionis, æstimantur in semine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf32b2d5" class="outline-3">
+<h3 id="orgf32b2d5">Romans 9:9</h3>
+<div class="outline-text-3" id="text-orgf32b2d5">
+<p>
+Promissionis enim verbum hoc est : Secundum hoc tempus veniam : et erit Saræ filius.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf473741" class="outline-3">
+<h3 id="orgf473741">Romans 9:10</h3>
+<div class="outline-text-3" id="text-orgf473741">
+<p>
+Non solum autem illa : sed et Rebecca ex uno concubitu habens, Isaac patris nostri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc46fca" class="outline-3">
+<h3 id="orgfc46fca">Romans 9:11</h3>
+<div class="outline-text-3" id="text-orgfc46fca">
+<p>
+Cum enim nondum nati fuissent, aut aliquid boni egissent, aut mali (ut secundum electionem propositum Dei maneret),
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e16a74" class="outline-3">
+<h3 id="org8e16a74">Romans 9:12</h3>
+<div class="outline-text-3" id="text-org8e16a74">
+<p>
+non ex operibus, sed ex vocante dictum est ei quia major serviet minori,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff02e13" class="outline-3">
+<h3 id="orgff02e13">Romans 9:13</h3>
+<div class="outline-text-3" id="text-orgff02e13">
+<p>
+sicut scriptum est : Jacob dilexi, Esau autem odio habui.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a8d004" class="outline-3">
+<h3 id="org2a8d004">Romans 9:14</h3>
+<div class="outline-text-3" id="text-org2a8d004">
+<p>
+Quid ergo dicemus ? numquid iniquitas apud Deum ? Absit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org640886f" class="outline-3">
+<h3 id="org640886f">Romans 9:15</h3>
+<div class="outline-text-3" id="text-org640886f">
+<p>
+Moysi enim dicit : Miserebor cujus misereor : et misericordiam præstabo cujus miserebor.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org931b6b5" class="outline-3">
+<h3 id="org931b6b5">Romans 9:16</h3>
+<div class="outline-text-3" id="text-org931b6b5">
+<p>
+Igitur non volentis, neque currentis, sed miserentis est Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64650fd" class="outline-3">
+<h3 id="org64650fd">Romans 9:17</h3>
+<div class="outline-text-3" id="text-org64650fd">
+<p>
+Dicit enim Scriptura Pharaoni : Quia in hoc ipsum excitavi te, ut ostendam in te virtutem meam : et ut annuntietur nomen meum in universa terra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2138c8" class="outline-3">
+<h3 id="orge2138c8">Romans 9:18</h3>
+<div class="outline-text-3" id="text-orge2138c8">
+<p>
+Ergo cujus vult miseretur, et quem vult indurat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd561bd" class="outline-3">
+<h3 id="orgcd561bd">Romans 9:19</h3>
+<div class="outline-text-3" id="text-orgcd561bd">
+<p>
+Dicis itaque mihi : Quid adhuc queritur ? voluntati enim ejus quis resistit ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0128aa1" class="outline-3">
+<h3 id="org0128aa1">Romans 9:20</h3>
+<div class="outline-text-3" id="text-org0128aa1">
+<p>
+O homo, tu quis es, qui respondeas Deo ? numquid dicit figmentum ei qui se finxit : Quid me fecisti sic ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga55609a" class="outline-3">
+<h3 id="orga55609a">Romans 9:21</h3>
+<div class="outline-text-3" id="text-orga55609a">
+<p>
+an non habet potestatem figulus luti ex eadem massa facere aliud quidem vas in honorem, aliud vero in contumeliam ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77daf2d" class="outline-3">
+<h3 id="org77daf2d">Romans 9:22</h3>
+<div class="outline-text-3" id="text-org77daf2d">
+<p>
+Quod si Deus volens ostendere iram, et notum facere potentiam suam, sustinuit in multa patientia vasa iræ, apta in interitum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb153021" class="outline-3">
+<h3 id="orgb153021">Romans 9:23</h3>
+<div class="outline-text-3" id="text-orgb153021">
+<p>
+ut ostenderet divitias gloriæ suæ in vasa misericordiæ, quæ præparavit in gloriam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93a0443" class="outline-3">
+<h3 id="org93a0443">Romans 9:24</h3>
+<div class="outline-text-3" id="text-org93a0443">
+<p>
+Quos et vocavit nos non solum ex Judæis, sed etiam in gentibus,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab57809" class="outline-3">
+<h3 id="orgab57809">Romans 9:25</h3>
+<div class="outline-text-3" id="text-orgab57809">
+<p>
+sicut in Osee dicit : Vocabo non plebem meam, plebem meam : et non dilectam, dilectam : et non misericordiam consecutam, misericordiam consecutam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5fefc8c" class="outline-3">
+<h3 id="org5fefc8c">Romans 9:26</h3>
+<div class="outline-text-3" id="text-org5fefc8c">
+<p>
+Et erit : in loco, ubi dictum est eis : Non plebs mea vos : ibi vocabuntur filii Dei vivi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd668b57" class="outline-3">
+<h3 id="orgd668b57">Romans 9:27</h3>
+<div class="outline-text-3" id="text-orgd668b57">
+<p>
+Isaias autem clamat pro Israël : Si fuerit numerus filiorum Israël tamquam arena maris, reliquiæ salvæ fient.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5030e30" class="outline-3">
+<h3 id="org5030e30">Romans 9:28</h3>
+<div class="outline-text-3" id="text-org5030e30">
+<p>
+Verbum enim consummans, et abbrevians in æquitate : quia verbum breviatum faciet Dominus super terram :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1739df" class="outline-3">
+<h3 id="orge1739df">Romans 9:29</h3>
+<div class="outline-text-3" id="text-orge1739df">
+<p>
+et sicut prædixit Isaias : Nisi Dominus Sabaoth reliquisset nobis semen, sicut Sodoma facti essemus, et sicut Gomorrha similes fuissemus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga27095f" class="outline-3">
+<h3 id="orga27095f">Romans 9:30</h3>
+<div class="outline-text-3" id="text-orga27095f">
+<p>
+Quid ergo dicemus ? Quod gentes, quæ non sectabantur justitiam, apprehenderunt justitiam : justitiam autem, quæ ex fide est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb051f50" class="outline-3">
+<h3 id="orgb051f50">Romans 9:31</h3>
+<div class="outline-text-3" id="text-orgb051f50">
+<p>
+Israël vero sectando legem justitiæ, in legem justitiæ non pervenit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c45f42" class="outline-3">
+<h3 id="org7c45f42">Romans 9:32</h3>
+<div class="outline-text-3" id="text-org7c45f42">
+<p>
+Quare ? Quia non ex fide, sed quasi ex operibus : offenderunt enim in lapidem offensionis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfd08b8" class="outline-3">
+<h3 id="orgdfd08b8">Romans 9:33</h3>
+<div class="outline-text-3" id="text-orgdfd08b8">
+<p>
+sicut scriptum est : Ecce pono in Sion lapidem offensionis, et petram scandali : et omnis qui credit in eum, non confundetur.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org440e5cd" class="outline-2">
+<h2 id="org440e5cd">Romans 10</h2>
+<div class="outline-text-2" id="text-org440e5cd">
+</div>
+<div id="outline-container-org46f8855" class="outline-3">
+<h3 id="org46f8855">Romans 10:1</h3>
+<div class="outline-text-3" id="text-org46f8855">
+<p>
+Fratres, voluntas quidem cordis mei, et obsecratio ad Deum, fit pro illis in salutem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e3b06e" class="outline-3">
+<h3 id="org8e3b06e">Romans 10:2</h3>
+<div class="outline-text-3" id="text-org8e3b06e">
+<p>
+Testimonium enim perhibeo illis quod æmulationem Dei habent, sed non secundum scientiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab92f51" class="outline-3">
+<h3 id="orgab92f51">Romans 10:3</h3>
+<div class="outline-text-3" id="text-orgab92f51">
+<p>
+Ignorantes enim justitiam Dei, et suam quærentes statuere, justitiæ Dei non sunt subjecti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43721fc" class="outline-3">
+<h3 id="org43721fc">Romans 10:4</h3>
+<div class="outline-text-3" id="text-org43721fc">
+<p>
+Finis enim legis, Christus, ad justitiam omni credenti.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9f6973" class="outline-3">
+<h3 id="orga9f6973">Romans 10:5</h3>
+<div class="outline-text-3" id="text-orga9f6973">
+<p>
+Moyses enim scripsit, quoniam justitiam, quæ ex lege est, qui fecerit homo, vivet in ea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd810c62" class="outline-3">
+<h3 id="orgd810c62">Romans 10:6</h3>
+<div class="outline-text-3" id="text-orgd810c62">
+<p>
+Quæ autem ex fide est justitia, sic dicit : Ne dixeris in corde tuo : Quis ascendet in cælum ? id est, Christum deducere :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe41e11" class="outline-3">
+<h3 id="orgfe41e11">Romans 10:7</h3>
+<div class="outline-text-3" id="text-orgfe41e11">
+<p>
+aut, Quis descendet in abyssum ? hoc est, Christum a mortuis revocare.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd8e125" class="outline-3">
+<h3 id="orgfd8e125">Romans 10:8</h3>
+<div class="outline-text-3" id="text-orgfd8e125">
+<p>
+Sed quid dicit Scriptura ? Prope est verbum in ore tuo, et in corde tuo : hoc est verbum fidei, quod prædicamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdd7b21" class="outline-3">
+<h3 id="orgcdd7b21">Romans 10:9</h3>
+<div class="outline-text-3" id="text-orgcdd7b21">
+<p>
+Quia si confitearis in ore tuo Dominum Jesum, et in corde tuo credideris quod Deus illum suscitavit a mortuis, salvus eris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49166ac" class="outline-3">
+<h3 id="org49166ac">Romans 10:10</h3>
+<div class="outline-text-3" id="text-org49166ac">
+<p>
+Corde enim creditur ad justitiam : ore autem confessio fit ad salutem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2163f80" class="outline-3">
+<h3 id="org2163f80">Romans 10:11</h3>
+<div class="outline-text-3" id="text-org2163f80">
+<p>
+Dicit enim Scriptura : Omnis qui credit in illum, non confundetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33670f7" class="outline-3">
+<h3 id="org33670f7">Romans 10:12</h3>
+<div class="outline-text-3" id="text-org33670f7">
+<p>
+Non enim est distinctio Judæi et Græci : nam idem Dominus omnium, dives in omnes qui invocant illum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafa629d" class="outline-3">
+<h3 id="orgafa629d">Romans 10:13</h3>
+<div class="outline-text-3" id="text-orgafa629d">
+<p>
+Omnis enim quicumque invocaverit nomen Domini, salvus erit.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd7cfc7" class="outline-3">
+<h3 id="orgfd7cfc7">Romans 10:14</h3>
+<div class="outline-text-3" id="text-orgfd7cfc7">
+<p>
+Quomodo ergo invocabunt, in quem non crediderunt ? aut quomodo credent ei, quem non audierunt ? quomodo autem audient sine prædicante ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5cc8277" class="outline-3">
+<h3 id="org5cc8277">Romans 10:15</h3>
+<div class="outline-text-3" id="text-org5cc8277">
+<p>
+quomodo vero prædicabunt nisi mittantur ? sicut scriptum est : Quam speciosi pedes evangelizantium pacem, evangelizantium bona !
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d5f1e8" class="outline-3">
+<h3 id="org5d5f1e8">Romans 10:16</h3>
+<div class="outline-text-3" id="text-org5d5f1e8">
+<p>
+Sed non omnes obediunt Evangelio. Isaias enim dicit : Domine, quis credidit auditui nostro ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c497d6" class="outline-3">
+<h3 id="org2c497d6">Romans 10:17</h3>
+<div class="outline-text-3" id="text-org2c497d6">
+<p>
+Ergo fides ex auditu, auditus autem per verbum Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d03217" class="outline-3">
+<h3 id="org0d03217">Romans 10:18</h3>
+<div class="outline-text-3" id="text-org0d03217">
+<p>
+Sed dico : Numquid non audierunt ? Et quidem in omnem terram exivit sonus eorum, et in fines orbis terræ verba eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb73be88" class="outline-3">
+<h3 id="orgb73be88">Romans 10:19</h3>
+<div class="outline-text-3" id="text-orgb73be88">
+<p>
+Sed dico : Numquid Israël non cognovit ? Primus Moyses dicit : Ego ad æmulationem vos adducam in non gentem : in gentem insipientem, in iram vos mittam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0216bd" class="outline-3">
+<h3 id="orgc0216bd">Romans 10:20</h3>
+<div class="outline-text-3" id="text-orgc0216bd">
+<p>
+Isaias autem audet, et dicit : Inventus sum a non quærentibus me : palam apparui iis qui me non interrogabant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1acd87b" class="outline-3">
+<h3 id="org1acd87b">Romans 10:21</h3>
+<div class="outline-text-3" id="text-org1acd87b">
+<p>
+Ad Israël autem dicit : Tota die expandi manus meas ad populum non credentem, et contradicentem.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org076b2f1" class="outline-2">
+<h2 id="org076b2f1">Romans 11</h2>
+<div class="outline-text-2" id="text-org076b2f1">
+</div>
+<div id="outline-container-org1a23f4d" class="outline-3">
+<h3 id="org1a23f4d">Romans 11:1</h3>
+<div class="outline-text-3" id="text-org1a23f4d">
+<p>
+Dico ergo : Numquid Deus repulit populum suum ? Absit. Nam et ego Israëlita sum ex semine Abraham, de tribu Benjamin :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35b55f8" class="outline-3">
+<h3 id="org35b55f8">Romans 11:2</h3>
+<div class="outline-text-3" id="text-org35b55f8">
+<p>
+non repulit Deus plebem suam, quam præscivit. An nescitis in Elia quid dicit Scriptura ? quemadmodum interpellat Deum adversum Israël :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6102547" class="outline-3">
+<h3 id="org6102547">Romans 11:3</h3>
+<div class="outline-text-3" id="text-org6102547">
+<p>
+Domine, prophetas tuos occiderunt, altaria tua suffoderunt : et ego relictus sum solus, et quærunt animam meam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdefec4" class="outline-3">
+<h3 id="orgcdefec4">Romans 11:4</h3>
+<div class="outline-text-3" id="text-orgcdefec4">
+<p>
+Sed quid dicit illi divinum responsum ? Reliqui mihi septem millia virorum, qui non curvaverunt genua ante Baal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org655ff33" class="outline-3">
+<h3 id="org655ff33">Romans 11:5</h3>
+<div class="outline-text-3" id="text-org655ff33">
+<p>
+Sic ergo et in hoc tempore reliquiæ secundum electionem gratiæ salvæ factæ sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd317af1" class="outline-3">
+<h3 id="orgd317af1">Romans 11:6</h3>
+<div class="outline-text-3" id="text-orgd317af1">
+<p>
+Si autem gratia, jam non ex operibus : alioquin gratia jam non est gratia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a5abe5" class="outline-3">
+<h3 id="org9a5abe5">Romans 11:7</h3>
+<div class="outline-text-3" id="text-org9a5abe5">
+<p>
+Quid ergo ? Quod quærebat Israël, hoc non est consecutus : electio autem consecuta est : ceteri vero excæcati sunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5add2a5" class="outline-3">
+<h3 id="org5add2a5">Romans 11:8</h3>
+<div class="outline-text-3" id="text-org5add2a5">
+<p>
+sicut scriptum est : Dedit illis Deus spiritum compunctionis : oculos ut non videant, et aures ut non audiant, usque in hodiernum diem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8cbe01" class="outline-3">
+<h3 id="orge8cbe01">Romans 11:9</h3>
+<div class="outline-text-3" id="text-orge8cbe01">
+<p>
+Et David dicit : Fiat mensa eorum in laqueum, et in captionem, et in scandalum, et in retributionem illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c93c80" class="outline-3">
+<h3 id="org3c93c80">Romans 11:10</h3>
+<div class="outline-text-3" id="text-org3c93c80">
+<p>
+Obscurentur oculi eorum ne videant : et dorsum eorum semper incurva.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3152396" class="outline-3">
+<h3 id="org3152396">Romans 11:11</h3>
+<div class="outline-text-3" id="text-org3152396">
+<p>
+Dico ergo : Numquid sic offenderunt ut caderent ? Absit. Sed illorum delicto, salus est gentibus ut illos æmulentur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedc42cb" class="outline-3">
+<h3 id="orgedc42cb">Romans 11:12</h3>
+<div class="outline-text-3" id="text-orgedc42cb">
+<p>
+Quod si delictum illorum divitiæ sunt mundi, et diminutio eorum divitiæ gentium : quanto magis plenitudo eorum ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org604d9ae" class="outline-3">
+<h3 id="org604d9ae">Romans 11:13</h3>
+<div class="outline-text-3" id="text-org604d9ae">
+<p>
+Vobis enim dico gentibus : Quamdiu quidem ego sum gentium Apostolus, ministerium meum honorificabo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8b3cf8" class="outline-3">
+<h3 id="orgc8b3cf8">Romans 11:14</h3>
+<div class="outline-text-3" id="text-orgc8b3cf8">
+<p>
+si quomodo ad æmulandum provocem carnem meam, et salvos faciam aliquos ex illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13f4882" class="outline-3">
+<h3 id="org13f4882">Romans 11:15</h3>
+<div class="outline-text-3" id="text-org13f4882">
+<p>
+Si enim amissio eorum, reconciliatio est mundi : quæ assumptio, nisi vita ex mortuis ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7925d7" class="outline-3">
+<h3 id="orgc7925d7">Romans 11:16</h3>
+<div class="outline-text-3" id="text-orgc7925d7">
+<p>
+Quod si delibatio sancta est, et massa : et si radix sancta, et rami.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbefffe1" class="outline-3">
+<h3 id="orgbefffe1">Romans 11:17</h3>
+<div class="outline-text-3" id="text-orgbefffe1">
+<p>
+Quod si aliqui ex ramis fracti sunt, tu autem cum oleaster esses, insertus es in illis, et socius radicis, et pinguedinis olivæ factus es,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf67a7f" class="outline-3">
+<h3 id="orgaf67a7f">Romans 11:18</h3>
+<div class="outline-text-3" id="text-orgaf67a7f">
+<p>
+noli gloriari adversus ramos. Quod si gloriaris : non tu radicem portas, sed radix te.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org238ea61" class="outline-3">
+<h3 id="org238ea61">Romans 11:19</h3>
+<div class="outline-text-3" id="text-org238ea61">
+<p>
+Dices ergo : Fracti sunt rami ut ego inserar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org852e06c" class="outline-3">
+<h3 id="org852e06c">Romans 11:20</h3>
+<div class="outline-text-3" id="text-org852e06c">
+<p>
+Bene : propter incredulitatem fracti sunt. Tu autem fide stas : noli altum sapere, sed time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5caf2b3" class="outline-3">
+<h3 id="org5caf2b3">Romans 11:21</h3>
+<div class="outline-text-3" id="text-org5caf2b3">
+<p>
+Si enim Deus naturalibus ramis non pepercit : ne forte nec tibi parcat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50d777f" class="outline-3">
+<h3 id="org50d777f">Romans 11:22</h3>
+<div class="outline-text-3" id="text-org50d777f">
+<p>
+Vide ergo bonitatem, et severitatem Dei : in eos quidem qui ceciderunt, severitatem : in te autem bonitatem Dei, si permanseris in bonitate, alioquin et tu excideris.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8e3b0e" class="outline-3">
+<h3 id="orgc8e3b0e">Romans 11:23</h3>
+<div class="outline-text-3" id="text-orgc8e3b0e">
+<p>
+Sed et illi, si non permanserint in incredulitate, inserentur : potens est enim Deus iterum inserere illos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34421fc" class="outline-3">
+<h3 id="org34421fc">Romans 11:24</h3>
+<div class="outline-text-3" id="text-org34421fc">
+<p>
+Nam si tu ex naturali excisus es oleastro, et contra naturam insertus es in bonam olivam : quanto magis ii qui secundum naturam inserentur suæ olivæ ?  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69fdbdb" class="outline-3">
+<h3 id="org69fdbdb">Romans 11:25</h3>
+<div class="outline-text-3" id="text-org69fdbdb">
+<p>
+Nolo enim vos ignorare, fratres, mysterium hoc (ut non sitis vobis ipsis sapientes), quia cæcitas ex parte contigit in Israël, donec plenitudo gentium intraret,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d287cc" class="outline-3">
+<h3 id="org2d287cc">Romans 11:26</h3>
+<div class="outline-text-3" id="text-org2d287cc">
+<p>
+et sic omnis Israël salvus fieret, sicut scriptum est : Veniet ex Sion, qui eripiat, et avertat impietatem a Jacob.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30618c5" class="outline-3">
+<h3 id="org30618c5">Romans 11:27</h3>
+<div class="outline-text-3" id="text-org30618c5">
+<p>
+Et hoc illis a me testamentum : cum abstulero peccata eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org494ad3a" class="outline-3">
+<h3 id="org494ad3a">Romans 11:28</h3>
+<div class="outline-text-3" id="text-org494ad3a">
+<p>
+Secundum Evangelium quidem, inimici propter vos : secundum electionem autem, carissimi propter patres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee938e7" class="outline-3">
+<h3 id="orgee938e7">Romans 11:29</h3>
+<div class="outline-text-3" id="text-orgee938e7">
+<p>
+Sine pœnitentia enim sunt dona et vocatio Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2632100" class="outline-3">
+<h3 id="org2632100">Romans 11:30</h3>
+<div class="outline-text-3" id="text-org2632100">
+<p>
+Sicut enim aliquando et vos non credidistis Deo, nunc autem misericordiam consecuti estis propter incredulitatem illorum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org03a0812" class="outline-3">
+<h3 id="org03a0812">Romans 11:31</h3>
+<div class="outline-text-3" id="text-org03a0812">
+<p>
+ita et isti nunc non crediderunt in vestram misericordiam : ut et ipsi misericordiam consequantur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dac7ef" class="outline-3">
+<h3 id="org3dac7ef">Romans 11:32</h3>
+<div class="outline-text-3" id="text-org3dac7ef">
+<p>
+Conclusit enim Deus omnia in incredulitate, ut omnium misereatur.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3dab57" class="outline-3">
+<h3 id="orgb3dab57">Romans 11:33</h3>
+<div class="outline-text-3" id="text-orgb3dab57">
+<p>
+O altitudo divitiarum sapientiæ, et scientiæ Dei : quam incomprehensibilia sunt judicia ejus, et investigabiles viæ ejus !
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge808b0f" class="outline-3">
+<h3 id="orge808b0f">Romans 11:34</h3>
+<div class="outline-text-3" id="text-orge808b0f">
+<p>
+Quis enim cognovit sensum Domini ? aut quis consiliarius ejus fuit ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f11ff6" class="outline-3">
+<h3 id="org4f11ff6">Romans 11:35</h3>
+<div class="outline-text-3" id="text-org4f11ff6">
+<p>
+aut quis prior dedit illi, et retribuetur ei ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75e7c47" class="outline-3">
+<h3 id="org75e7c47">Romans 11:36</h3>
+<div class="outline-text-3" id="text-org75e7c47">
+<p>
+Quoniam ex ipso, et per ipsum, et in ipso sunt omnia : ipsi gloria in sæcula. Amen.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5682e67" class="outline-2">
+<h2 id="org5682e67">Romans 12</h2>
+<div class="outline-text-2" id="text-org5682e67">
+</div>
+<div id="outline-container-org6b81159" class="outline-3">
+<h3 id="org6b81159">Romans 12:1</h3>
+<div class="outline-text-3" id="text-org6b81159">
+<p>
+Obsecro itaque vos fratres per misericordiam Dei, ut exhibeatis corpora vestra hostiam viventem, sanctam, Deo placentem, rationabile obsequium vestrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b539fe" class="outline-3">
+<h3 id="org4b539fe">Romans 12:2</h3>
+<div class="outline-text-3" id="text-org4b539fe">
+<p>
+Et nolite conformari huic sæculo, sed reformamini in novitate sensus vestri : ut probetis quæ sit voluntas Dei bona, et beneplacens, et perfecta.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73f925d" class="outline-3">
+<h3 id="org73f925d">Romans 12:3</h3>
+<div class="outline-text-3" id="text-org73f925d">
+<p>
+Dico enim per gratiam quæ data est mihi, omnibus qui sunt inter vos, non plus sapere quam oportet sapere, sed sapere ad sobrietatem : et unicuique sicut Deus divisit mensuram fidei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4396213" class="outline-3">
+<h3 id="org4396213">Romans 12:4</h3>
+<div class="outline-text-3" id="text-org4396213">
+<p>
+Sicut enim in uno corpore multa membra habemus, omnia autem membra non eumdem actum habent :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69fad8f" class="outline-3">
+<h3 id="org69fad8f">Romans 12:5</h3>
+<div class="outline-text-3" id="text-org69fad8f">
+<p>
+ita multi unum corpus sumus in Christo, singuli autem alter alterius membra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc587cf3" class="outline-3">
+<h3 id="orgc587cf3">Romans 12:6</h3>
+<div class="outline-text-3" id="text-orgc587cf3">
+<p>
+Habentes autem donationes secundum gratiam, quæ data est nobis, differentes : sive prophetiam secundum rationem fidei,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40f5a01" class="outline-3">
+<h3 id="org40f5a01">Romans 12:7</h3>
+<div class="outline-text-3" id="text-org40f5a01">
+<p>
+sive ministerium in ministrando, sive qui docet in doctrina,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91b3aa8" class="outline-3">
+<h3 id="org91b3aa8">Romans 12:8</h3>
+<div class="outline-text-3" id="text-org91b3aa8">
+<p>
+qui exhortatur in exhortando, qui tribuit in simplicitate, qui præest in sollicitudine, qui miseretur in hilaritate.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e515bf" class="outline-3">
+<h3 id="org8e515bf">Romans 12:9</h3>
+<div class="outline-text-3" id="text-org8e515bf">
+<p>
+Dilectio sine simulatione : odientes malum, adhærentes bono :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa831d2" class="outline-3">
+<h3 id="orgfa831d2">Romans 12:10</h3>
+<div class="outline-text-3" id="text-orgfa831d2">
+<p>
+caritate fraternitatis invicem diligentes : honore invicem prævenientes :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1365fa2" class="outline-3">
+<h3 id="org1365fa2">Romans 12:11</h3>
+<div class="outline-text-3" id="text-org1365fa2">
+<p>
+sollicitudine non pigri : spiritu ferventes : Domino servientes :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4213560" class="outline-3">
+<h3 id="org4213560">Romans 12:12</h3>
+<div class="outline-text-3" id="text-org4213560">
+<p>
+spe gaudentes : in tribulatione patientes : orationi instantes :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4960b17" class="outline-3">
+<h3 id="org4960b17">Romans 12:13</h3>
+<div class="outline-text-3" id="text-org4960b17">
+<p>
+necessitatibus sanctorum communicantes : hospitalitatem sectantes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2418ed0" class="outline-3">
+<h3 id="org2418ed0">Romans 12:14</h3>
+<div class="outline-text-3" id="text-org2418ed0">
+<p>
+Benedicite persequentibus vos : benedicite, et nolite maledicere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30c878c" class="outline-3">
+<h3 id="org30c878c">Romans 12:15</h3>
+<div class="outline-text-3" id="text-org30c878c">
+<p>
+Gaudere cum gaudentibus, flere cum flentibus :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74a7c99" class="outline-3">
+<h3 id="org74a7c99">Romans 12:16</h3>
+<div class="outline-text-3" id="text-org74a7c99">
+<p>
+idipsum invicem sentientes : non alta sapientes, sed humilibus consentientes. Nolite esse prudentes apud vosmetipsos :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb650edf" class="outline-3">
+<h3 id="orgb650edf">Romans 12:17</h3>
+<div class="outline-text-3" id="text-orgb650edf">
+<p>
+nulli malum pro malo reddentes : providentes bona non tantum coram Deo, sed etiam coram omnibus hominibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd108436" class="outline-3">
+<h3 id="orgd108436">Romans 12:18</h3>
+<div class="outline-text-3" id="text-orgd108436">
+<p>
+Si fieri potest, quod ex vobis est, cum omnibus hominibus pacem habentes :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbfd481" class="outline-3">
+<h3 id="orgdbfd481">Romans 12:19</h3>
+<div class="outline-text-3" id="text-orgdbfd481">
+<p>
+non vosmetipsos defendentes carissimi, sed date locum iræ. Scriptum est enim : Mihi vindicta : ego retribuam, dicit Dominus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org628a978" class="outline-3">
+<h3 id="org628a978">Romans 12:20</h3>
+<div class="outline-text-3" id="text-org628a978">
+<p>
+Sed si esurierit inimicus tuus, ciba illum : si sitit, potum da illi : hoc enim faciens, carbones ignis congeres super caput ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc00c998" class="outline-3">
+<h3 id="orgc00c998">Romans 12:21</h3>
+<div class="outline-text-3" id="text-orgc00c998">
+<p>
+Noli vinci a malo, sed vince in bono malum.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9096420" class="outline-2">
+<h2 id="org9096420">Romans 13</h2>
+<div class="outline-text-2" id="text-org9096420">
+</div>
+<div id="outline-container-org3e16915" class="outline-3">
+<h3 id="org3e16915">Romans 13:1</h3>
+<div class="outline-text-3" id="text-org3e16915">
+<p>
+Omnis anima potestatibus sublimioribus subdita sit : non est enim potestas nisi a Deo : quæ autem sunt, a Deo ordinatæ sunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67db49c" class="outline-3">
+<h3 id="org67db49c">Romans 13:2</h3>
+<div class="outline-text-3" id="text-org67db49c">
+<p>
+Itaque qui resistit potestati, Dei ordinationi resistit. Qui autem resistunt, ipsi sibi damnationem acquirunt :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc03582" class="outline-3">
+<h3 id="orgdc03582">Romans 13:3</h3>
+<div class="outline-text-3" id="text-orgdc03582">
+<p>
+nam principes non sunt timori boni operis, sed mali. Vis autem non timere potestatem ? Bonum fac : et habebis laudem ex illa :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf0d1f6" class="outline-3">
+<h3 id="orgdf0d1f6">Romans 13:4</h3>
+<div class="outline-text-3" id="text-orgdf0d1f6">
+<p>
+Dei enim minister est tibi in bonum. Si autem malum feceris, time : non enim sine causa gladium portat. Dei enim minister est : vindex in iram ei qui malum agit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org590a529" class="outline-3">
+<h3 id="org590a529">Romans 13:5</h3>
+<div class="outline-text-3" id="text-org590a529">
+<p>
+Ideo necessitate subditi estote non solum propter iram, sed etiam propter conscientiam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e542d2" class="outline-3">
+<h3 id="org8e542d2">Romans 13:6</h3>
+<div class="outline-text-3" id="text-org8e542d2">
+<p>
+Ideo enim et tributa præstatis : ministri enim Dei sunt, in hoc ipsum servientes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0654c0d" class="outline-3">
+<h3 id="org0654c0d">Romans 13:7</h3>
+<div class="outline-text-3" id="text-org0654c0d">
+<p>
+Reddite ergo omnibus debita : cui tributum, tributum : cui vectigal, vectigal : cui timorem, timorem : cui honorem, honorem.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bac55f" class="outline-3">
+<h3 id="org0bac55f">Romans 13:8</h3>
+<div class="outline-text-3" id="text-org0bac55f">
+<p>
+Nemini quidquam debeatis, nisi ut invicem diligatis : qui enim diligit proximum, legem implevit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b02b22" class="outline-3">
+<h3 id="org4b02b22">Romans 13:9</h3>
+<div class="outline-text-3" id="text-org4b02b22">
+<p>
+Nam : Non adulterabis : non occides : non furaberis : non falsum testimonium dices : non concupisces : et si quod est aliud mandatum, in hoc verbo instauratur : diliges proximum tuum sicut teipsum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c4ec4b" class="outline-3">
+<h3 id="org0c4ec4b">Romans 13:10</h3>
+<div class="outline-text-3" id="text-org0c4ec4b">
+<p>
+Dilectio proximi malum non operatur. Plenitudo ergo legis est dilectio.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3237d92" class="outline-3">
+<h3 id="org3237d92">Romans 13:11</h3>
+<div class="outline-text-3" id="text-org3237d92">
+<p>
+Et hoc scientes tempus : quia hora est jam nos de somno surgere. Nunc enim propior est nostra salus, quam cum credidimus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1061a6" class="outline-3">
+<h3 id="orgb1061a6">Romans 13:12</h3>
+<div class="outline-text-3" id="text-orgb1061a6">
+<p>
+Nox præcessit, dies autem appropinquavit. Abjiciamus ergo opera tenebrarum, et induamur arma lucis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a44b9c" class="outline-3">
+<h3 id="org1a44b9c">Romans 13:13</h3>
+<div class="outline-text-3" id="text-org1a44b9c">
+<p>
+Sicut in die honeste ambulemus : non in comessationibus, et ebrietatibus, non in cubilibus, et impudicitiis, non in contentione, et æmulatione :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b0823e" class="outline-3">
+<h3 id="org8b0823e">Romans 13:14</h3>
+<div class="outline-text-3" id="text-org8b0823e">
+<p>
+sed induimini Dominum Jesum Christum, et carnis curam ne feceritis in desideriis.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org91c5f3b" class="outline-2">
+<h2 id="org91c5f3b">Romans 14</h2>
+<div class="outline-text-2" id="text-org91c5f3b">
+</div>
+<div id="outline-container-org5b4819f" class="outline-3">
+<h3 id="org5b4819f">Romans 14:1</h3>
+<div class="outline-text-3" id="text-org5b4819f">
+<p>
+Infirmum autem in fide assumite, non in disceptationibus cogitationum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9efd0c6" class="outline-3">
+<h3 id="org9efd0c6">Romans 14:2</h3>
+<div class="outline-text-3" id="text-org9efd0c6">
+<p>
+Alius enim credit se manducare omnia : qui autem infirmus est, olus manducet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e6a6b4" class="outline-3">
+<h3 id="org4e6a6b4">Romans 14:3</h3>
+<div class="outline-text-3" id="text-org4e6a6b4">
+<p>
+Is qui manducat, non manducantem non spernat : et qui non manducat, manducantem non judicet : Deus enim illum assumpsit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2848ad2" class="outline-3">
+<h3 id="org2848ad2">Romans 14:4</h3>
+<div class="outline-text-3" id="text-org2848ad2">
+<p>
+Tu quis es, qui judicas alienum servum ? domino suo stat, aut cadit : stabit autem : potens est enim Deus statuere illum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04dd825" class="outline-3">
+<h3 id="org04dd825">Romans 14:5</h3>
+<div class="outline-text-3" id="text-org04dd825">
+<p>
+Nam alius judicat diem inter diem : alius autem judicat omnem diem : unusquisque in suo sensu abundet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e03a99" class="outline-3">
+<h3 id="org0e03a99">Romans 14:6</h3>
+<div class="outline-text-3" id="text-org0e03a99">
+<p>
+Qui sapit diem, Domino sapit, et qui manducat, Domino manducat : gratias enim agit Deo. Et qui non manducat, Domino non manducat, et gratias agit Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4127497" class="outline-3">
+<h3 id="org4127497">Romans 14:7</h3>
+<div class="outline-text-3" id="text-org4127497">
+<p>
+Nemo enim nostrum sibi vivit, et nemo sibi moritur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc26211" class="outline-3">
+<h3 id="orgfc26211">Romans 14:8</h3>
+<div class="outline-text-3" id="text-orgfc26211">
+<p>
+Sive enim vivemus, Domino vivimus : sive morimur, Domino morimur. Sive ergo vivimus, sive morimur, Domini sumus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org025ea15" class="outline-3">
+<h3 id="org025ea15">Romans 14:9</h3>
+<div class="outline-text-3" id="text-org025ea15">
+<p>
+In hoc enim Christus mortuus est, et resurrexit : ut et mortuorum et vivorum dominetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaee80f9" class="outline-3">
+<h3 id="orgaee80f9">Romans 14:10</h3>
+<div class="outline-text-3" id="text-orgaee80f9">
+<p>
+Tu autem quid judicas fratrem tuum ? aut tu quare spernis fratrem tuum ? omnes enim stabimus ante tribunal Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5029539" class="outline-3">
+<h3 id="org5029539">Romans 14:11</h3>
+<div class="outline-text-3" id="text-org5029539">
+<p>
+Scriptum est enim : Vivo ego, dicit Dominus, quoniam mihi flectetur omne genu : et omnis lingua confitebitur Deo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadc75b6" class="outline-3">
+<h3 id="orgadc75b6">Romans 14:12</h3>
+<div class="outline-text-3" id="text-orgadc75b6">
+<p>
+Itaque unusquisque nostrum pro se rationem reddet Deo.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc85a55a" class="outline-3">
+<h3 id="orgc85a55a">Romans 14:13</h3>
+<div class="outline-text-3" id="text-orgc85a55a">
+<p>
+Non ergo amplius invicem judicemus : sed hoc judicate magis, ne ponatis offendiculum fratri, vel scandalum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org738ab3f" class="outline-3">
+<h3 id="org738ab3f">Romans 14:14</h3>
+<div class="outline-text-3" id="text-org738ab3f">
+<p>
+Scio, et confido in Domino Jesu, quia nihil commune per ipsum, nisi ei qui existimat quid commune esset, illi commune est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08d702a" class="outline-3">
+<h3 id="org08d702a">Romans 14:15</h3>
+<div class="outline-text-3" id="text-org08d702a">
+<p>
+Si enim propter cibum frater tuus contristatur, jam non secundum caritatem ambulas. Noli cibo tuo illum perdere, pro quo Christus mortuus est.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7448f3b" class="outline-3">
+<h3 id="org7448f3b">Romans 14:16</h3>
+<div class="outline-text-3" id="text-org7448f3b">
+<p>
+Non ergo blasphemetur bonum nostrum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63a4a6a" class="outline-3">
+<h3 id="org63a4a6a">Romans 14:17</h3>
+<div class="outline-text-3" id="text-org63a4a6a">
+<p>
+Non est enim regnum Dei esca et potus : sed justitia, et pax, et gaudium in Spiritu Sancto :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd99bff1" class="outline-3">
+<h3 id="orgd99bff1">Romans 14:18</h3>
+<div class="outline-text-3" id="text-orgd99bff1">
+<p>
+qui enim in hoc servit Christo, placet Deo, et probatus est hominibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d01313" class="outline-3">
+<h3 id="org2d01313">Romans 14:19</h3>
+<div class="outline-text-3" id="text-org2d01313">
+<p>
+Itaque quæ pacis sunt, sectemur : et quæ ædificationis sunt, in invicem custodiamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf3a31d8" class="outline-3">
+<h3 id="orgf3a31d8">Romans 14:20</h3>
+<div class="outline-text-3" id="text-orgf3a31d8">
+<p>
+Noli propter escam destruere opus Dei, omnia quidem sunt munda : sed malum est homini, qui per offendiculum manducat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1214f4b" class="outline-3">
+<h3 id="org1214f4b">Romans 14:21</h3>
+<div class="outline-text-3" id="text-org1214f4b">
+<p>
+Bonum est non manducare carnem, et non bibere vinum, neque in quo frater tuus offenditur, aut scandalizatur, aut infirmatur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb368e8b" class="outline-3">
+<h3 id="orgb368e8b">Romans 14:22</h3>
+<div class="outline-text-3" id="text-orgb368e8b">
+<p>
+Tu fidem habes ? penes temetipsum habe coram Deo. Beatus qui non judicat semetipsum in eo quod probat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5f20ce" class="outline-3">
+<h3 id="orga5f20ce">Romans 14:23</h3>
+<div class="outline-text-3" id="text-orga5f20ce">
+<p>
+Qui autem discernit, si manducaverit, damnatus est : quia non ex fide. Omne autem, quod non est ex fide, peccatum est.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcb6a020" class="outline-2">
+<h2 id="orgcb6a020">Romans 15</h2>
+<div class="outline-text-2" id="text-orgcb6a020">
+</div>
+<div id="outline-container-orge46bbc3" class="outline-3">
+<h3 id="orge46bbc3">Romans 15:1</h3>
+<div class="outline-text-3" id="text-orge46bbc3">
+<p>
+Debemus autem nos firmiores imbecillitates infirmorum sustinere, et non nobis placere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64503a2" class="outline-3">
+<h3 id="org64503a2">Romans 15:2</h3>
+<div class="outline-text-3" id="text-org64503a2">
+<p>
+Unusquisque vestrum proximo suo placeat in bonum, ad ædificationem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae59fcc" class="outline-3">
+<h3 id="orgae59fcc">Romans 15:3</h3>
+<div class="outline-text-3" id="text-orgae59fcc">
+<p>
+Etenim Christus non sibi placuit, sed sicut scriptum est : Improperia improperantium tibi ceciderunt super me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfed35b1" class="outline-3">
+<h3 id="orgfed35b1">Romans 15:4</h3>
+<div class="outline-text-3" id="text-orgfed35b1">
+<p>
+Quæcumque enim scripta sunt, ad nostram doctrinam scripta sunt : ut per patientiam, et consolationem Scripturarum, spem habeamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd99a093" class="outline-3">
+<h3 id="orgd99a093">Romans 15:5</h3>
+<div class="outline-text-3" id="text-orgd99a093">
+<p>
+Deus autem patientiæ et solatii det vobis idipsum sapere in alterutrum secundum Jesum Christum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadcc65e" class="outline-3">
+<h3 id="orgadcc65e">Romans 15:6</h3>
+<div class="outline-text-3" id="text-orgadcc65e">
+<p>
+ut unanimes, uno ore honorificetis Deum et patrem Domini nostri Jesu Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org435057a" class="outline-3">
+<h3 id="org435057a">Romans 15:7</h3>
+<div class="outline-text-3" id="text-org435057a">
+<p>
+Propter quod suscipite invicem, sicut et Christus suscepit vos in honorem Dei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9370e10" class="outline-3">
+<h3 id="org9370e10">Romans 15:8</h3>
+<div class="outline-text-3" id="text-org9370e10">
+<p>
+Dico enim Christum Jesum ministrum fuisse circumcisionis propter veritatem Dei, ad confirmandas promissiones patrum :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1aa8ee" class="outline-3">
+<h3 id="orgd1aa8ee">Romans 15:9</h3>
+<div class="outline-text-3" id="text-orgd1aa8ee">
+<p>
+gentes autem super misericordia honorare Deum, sicut scriptum est : Propterea confitebor tibi in gentibus, Domine, et nomini tuo cantabo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd477979" class="outline-3">
+<h3 id="orgd477979">Romans 15:10</h3>
+<div class="outline-text-3" id="text-orgd477979">
+<p>
+Et iterum dicit : Lætamini gentes cum plebe ejus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge37f8e3" class="outline-3">
+<h3 id="orge37f8e3">Romans 15:11</h3>
+<div class="outline-text-3" id="text-orge37f8e3">
+<p>
+Et iterum : Laudate omnes gentes Dominum : et magnificate eum omnes populi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org776726f" class="outline-3">
+<h3 id="org776726f">Romans 15:12</h3>
+<div class="outline-text-3" id="text-org776726f">
+<p>
+Et rursus Isaias ait : Erit radix Jesse, et qui exsurget regere gentes, in eum gentes sperabunt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d2d4d2" class="outline-3">
+<h3 id="org3d2d4d2">Romans 15:13</h3>
+<div class="outline-text-3" id="text-org3d2d4d2">
+<p>
+Deus autem spei repleat vos omni gaudio, et pace in credendo : ut abundetis in spe, et virtute Spiritus Sancti.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46d2ee2" class="outline-3">
+<h3 id="org46d2ee2">Romans 15:14</h3>
+<div class="outline-text-3" id="text-org46d2ee2">
+<p>
+Certus sum autem fratres mei et ego ipse de vobis, quoniam et ipsi pleni estis dilectione, repleti omni scientia, ita ut possitis alterutrum monere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fb8d3a" class="outline-3">
+<h3 id="org9fb8d3a">Romans 15:15</h3>
+<div class="outline-text-3" id="text-org9fb8d3a">
+<p>
+Audacius autem scripsi vobis fratres ex parte, tamquam in memoriam vos reducens : propter gratiam, quæ data est mihi a Deo,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72aaae7" class="outline-3">
+<h3 id="org72aaae7">Romans 15:16</h3>
+<div class="outline-text-3" id="text-org72aaae7">
+<p>
+ut sim minister Christi Jesu in gentibus : sanctificans Evangelium Dei, ut fiat oblatio gentium accepta, et sanctificata in Spiritu Sancto.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc390867" class="outline-3">
+<h3 id="orgc390867">Romans 15:17</h3>
+<div class="outline-text-3" id="text-orgc390867">
+<p>
+Habeo igitur gloriam in Christo Jesu ad Deum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2e7393" class="outline-3">
+<h3 id="orga2e7393">Romans 15:18</h3>
+<div class="outline-text-3" id="text-orga2e7393">
+<p>
+Non enim audeo aliquid loqui eorum, quæ per me non efficit Christus in obedientiam gentium, verbo et factis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e87243" class="outline-3">
+<h3 id="org4e87243">Romans 15:19</h3>
+<div class="outline-text-3" id="text-org4e87243">
+<p>
+in virtute signorum, et prodigiorum, in virtute Spiritus Sancti : ita ut ab Jerusalem per circuitum usque ad Illyricum repleverim Evangelium Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org576d780" class="outline-3">
+<h3 id="org576d780">Romans 15:20</h3>
+<div class="outline-text-3" id="text-org576d780">
+<p>
+Sic autem prædicavi Evangelium hoc, non ubi nominatus est Christus, ne super alienum fundamentum ædificarem :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf04505" class="outline-3">
+<h3 id="orgdf04505">Romans 15:21</h3>
+<div class="outline-text-3" id="text-orgdf04505">
+<p>
+sed sicut scriptum est : Quibus non est annuntiatum de eo, videbunt : et qui non audierunt, intelligent.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5642c4" class="outline-3">
+<h3 id="orga5642c4">Romans 15:22</h3>
+<div class="outline-text-3" id="text-orga5642c4">
+<p>
+Propter quod et impediebar plurimum venire ad vos, et prohibitus sum usque adhuc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1f4830" class="outline-3">
+<h3 id="orgb1f4830">Romans 15:23</h3>
+<div class="outline-text-3" id="text-orgb1f4830">
+<p>
+Nunc vero ulterius locum non habens in his regionibus, cupiditatem autem habens veniendi ad vos ex multis jam præcedentibus annis :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a00f5a" class="outline-3">
+<h3 id="org3a00f5a">Romans 15:24</h3>
+<div class="outline-text-3" id="text-org3a00f5a">
+<p>
+cum in Hispaniam proficisci cœpero, spero quod præteriens videam vos, et a vobis deducar illuc, si vobis primum ex parte fruitus fuero.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16eaf7d" class="outline-3">
+<h3 id="org16eaf7d">Romans 15:25</h3>
+<div class="outline-text-3" id="text-org16eaf7d">
+<p>
+Nunc igitur proficiscar in Jerusalem ministrare sanctis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fa0a9e" class="outline-3">
+<h3 id="org3fa0a9e">Romans 15:26</h3>
+<div class="outline-text-3" id="text-org3fa0a9e">
+<p>
+Probaverunt enim Macedonia et Achaia collationem aliquam facere in pauperes sanctorum, qui sunt in Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org041e50c" class="outline-3">
+<h3 id="org041e50c">Romans 15:27</h3>
+<div class="outline-text-3" id="text-org041e50c">
+<p>
+Placuit enim eis : et debitores sunt eorum. Nam si spiritualium eorum participes facti sunt gentiles, debent et in carnalibus ministrare illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1d51d9" class="outline-3">
+<h3 id="orgc1d51d9">Romans 15:28</h3>
+<div class="outline-text-3" id="text-orgc1d51d9">
+<p>
+Hoc igitur cum consummavero, et assignavero eis fructum hunc, per vos proficiscar in Hispaniam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91c606c" class="outline-3">
+<h3 id="org91c606c">Romans 15:29</h3>
+<div class="outline-text-3" id="text-org91c606c">
+<p>
+Scio autem quoniam veniens ad vos, in abundantia benedictionis Evangelii Christi veniam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdac247e" class="outline-3">
+<h3 id="orgdac247e">Romans 15:30</h3>
+<div class="outline-text-3" id="text-orgdac247e">
+<p>
+Obsecro ergo vos fratres per Dominum nostrum Jesum Christum, et per caritatem Sancti Spiritus, ut adjuvetis me in orationibus vestris pro me ad Deum,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e14ff6" class="outline-3">
+<h3 id="org5e14ff6">Romans 15:31</h3>
+<div class="outline-text-3" id="text-org5e14ff6">
+<p>
+ut liberer ab infidelibus, qui sunt in Judæa, et obsequii mei oblatio accepta fiat in Jerusalem sanctis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3567e9" class="outline-3">
+<h3 id="orge3567e9">Romans 15:32</h3>
+<div class="outline-text-3" id="text-orge3567e9">
+<p>
+ut veniam ad vos in gaudio per voluntatem Dei, et refrigerer vobiscum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ec285c" class="outline-3">
+<h3 id="org2ec285c">Romans 15:33</h3>
+<div class="outline-text-3" id="text-org2ec285c">
+<p>
+Deus autem pacis sit cum omnibus vobis. Amen.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc8ec1c" class="outline-2">
+<h2 id="orgbc8ec1c">Romans 16</h2>
+<div class="outline-text-2" id="text-orgbc8ec1c">
+</div>
+<div id="outline-container-org305b699" class="outline-3">
+<h3 id="org305b699">Romans 16:1</h3>
+<div class="outline-text-3" id="text-org305b699">
+<p>
+Commendo autem vobis Phœben sororem nostram, quæ est in ministerio ecclesiæ, quæ est in Cenchris :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3736c51" class="outline-3">
+<h3 id="org3736c51">Romans 16:2</h3>
+<div class="outline-text-3" id="text-org3736c51">
+<p>
+ut eam suscipiatis in Domino digne sanctis : et assistatis ei in quocumque negotio vestri indiguerit : etenim ipsa quoque astitit multis, et mihi ipsi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4740d16" class="outline-3">
+<h3 id="org4740d16">Romans 16:3</h3>
+<div class="outline-text-3" id="text-org4740d16">
+<p>
+Salutate Priscam et Aquilam, adjutores meos in Christo Jesu
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0975465" class="outline-3">
+<h3 id="org0975465">Romans 16:4</h3>
+<div class="outline-text-3" id="text-org0975465">
+<p>
+(qui pro anima mea suas cervices supposuerunt : quibus non solus ego gratias ago, sed et cunctæ ecclesiæ gentium),
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5845cd9" class="outline-3">
+<h3 id="org5845cd9">Romans 16:5</h3>
+<div class="outline-text-3" id="text-org5845cd9">
+<p>
+et domesticam ecclesiam eorum. Salutate Epænetum dilectum mihi, qui est primitivus Asiæ in Christo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5d1585" class="outline-3">
+<h3 id="orgb5d1585">Romans 16:6</h3>
+<div class="outline-text-3" id="text-orgb5d1585">
+<p>
+Salutate Mariam, quæ multum laboravit in vobis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3067609" class="outline-3">
+<h3 id="org3067609">Romans 16:7</h3>
+<div class="outline-text-3" id="text-org3067609">
+<p>
+Salutate Andronicum et Juniam, cognatos, et concaptivos meos : qui sunt nobiles in Apostolis, qui et ante me fuerunt in Christo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a3b711" class="outline-3">
+<h3 id="org7a3b711">Romans 16:8</h3>
+<div class="outline-text-3" id="text-org7a3b711">
+<p>
+Salutate Ampliatum dilectissimum mihi in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf31f46" class="outline-3">
+<h3 id="orgaf31f46">Romans 16:9</h3>
+<div class="outline-text-3" id="text-orgaf31f46">
+<p>
+Salutate Urbanum adjutorem nostrum in Christo Jesu, et Stachyn dilectum meum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7fcad74" class="outline-3">
+<h3 id="org7fcad74">Romans 16:10</h3>
+<div class="outline-text-3" id="text-org7fcad74">
+<p>
+Salutate Apellen probum in Christo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a8cc27" class="outline-3">
+<h3 id="org5a8cc27">Romans 16:11</h3>
+<div class="outline-text-3" id="text-org5a8cc27">
+<p>
+Salutate eos qui sunt ex Aristoboli domo. Salutate Herodionem cognatum meum. Salutate eos qui sunt ex Narcisi domo, qui sunt in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50c4999" class="outline-3">
+<h3 id="org50c4999">Romans 16:12</h3>
+<div class="outline-text-3" id="text-org50c4999">
+<p>
+Salutate Tryphænam et Tryphosam, quæ laborant in Domino. Salutate Persidem carissimam, quæ multum laboravit in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2d051c" class="outline-3">
+<h3 id="orgb2d051c">Romans 16:13</h3>
+<div class="outline-text-3" id="text-orgb2d051c">
+<p>
+Salutate Rufum electum in Domino, et matrem ejus, et meam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org102d1b4" class="outline-3">
+<h3 id="org102d1b4">Romans 16:14</h3>
+<div class="outline-text-3" id="text-org102d1b4">
+<p>
+Salutate Asyncritum, Phlegontem, Hermam, Patrobam, Hermen, et qui cum eis sunt, fratres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1545e8" class="outline-3">
+<h3 id="orgd1545e8">Romans 16:15</h3>
+<div class="outline-text-3" id="text-orgd1545e8">
+<p>
+Salutate Philologum et Juliam, Nereum, et sororem ejus, et Olympiadem, et omnes qui cum eis sunt, sanctos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf77d4e" class="outline-3">
+<h3 id="orgaf77d4e">Romans 16:16</h3>
+<div class="outline-text-3" id="text-orgaf77d4e">
+<p>
+Salutate invicem in osculo sancto. Salutant vos omnes ecclesiæ Christi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd314734" class="outline-3">
+<h3 id="orgd314734">Romans 16:17</h3>
+<div class="outline-text-3" id="text-orgd314734">
+<p>
+Rogo autem vos fratres, ut observetis eos qui dissensiones et offendicula, præter doctrinam, quam vos didicistis, faciunt, et declinate ab illis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c2e4d9" class="outline-3">
+<h3 id="org3c2e4d9">Romans 16:18</h3>
+<div class="outline-text-3" id="text-org3c2e4d9">
+<p>
+Hujuscemodi enim Christo Domino nostro non serviunt, sed suo ventri : et per dulces sermones et benedictiones seducunt corda innocentium.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb668e6c" class="outline-3">
+<h3 id="orgb668e6c">Romans 16:19</h3>
+<div class="outline-text-3" id="text-orgb668e6c">
+<p>
+Vestra enim obedientia in omnem locum divulgata est. Gaudeo igitur in vobis. Sed volo vos sapientes esse in bono, et simplices in malo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac08543" class="outline-3">
+<h3 id="orgac08543">Romans 16:20</h3>
+<div class="outline-text-3" id="text-orgac08543">
+<p>
+Deus autem pacis conterat Satanam sub pedibus vestris velociter. Gratia Domini nostri Jesu Christi vobiscum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1bcdeee" class="outline-3">
+<h3 id="org1bcdeee">Romans 16:21</h3>
+<div class="outline-text-3" id="text-org1bcdeee">
+<p>
+Salutat vos Timotheus adjutor meus, et Lucius, et Jason, et Sosipater cognati mei.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f09f37" class="outline-3">
+<h3 id="org1f09f37">Romans 16:22</h3>
+<div class="outline-text-3" id="text-org1f09f37">
+<p>
+Saluto vos ego Tertius, qui scripsi epistolam, in Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a1f8fe" class="outline-3">
+<h3 id="org9a1f8fe">Romans 16:23</h3>
+<div class="outline-text-3" id="text-org9a1f8fe">
+<p>
+Salutat vos Cajus hospes meus, et universa ecclesia. Salutat vos Erastus arcarius civitatis, et Quartus, frater.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc1d527" class="outline-3">
+<h3 id="orgfc1d527">Romans 16:24</h3>
+<div class="outline-text-3" id="text-orgfc1d527">
+<p>
+Gratia Domini nostri Jesu Christi cum omnibus vobis. Amen.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8166246" class="outline-3">
+<h3 id="org8166246">Romans 16:25</h3>
+<div class="outline-text-3" id="text-org8166246">
+<p>
+Ei autem, qui potens est vos confirmare juxta Evangelium meum, et prædicationem Jesu Christi, secundum revelationem mysterii temporibus æternis taciti
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfb63d2" class="outline-3">
+<h3 id="orgdfb63d2">Romans 16:26</h3>
+<div class="outline-text-3" id="text-orgdfb63d2">
+<p>
+(quod nunc patefactum est per Scripturas prophetarum secundum præceptum æterni Dei, ad obeditionem fidei), in cunctis gentibus cogniti,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8e56b0" class="outline-3">
+<h3 id="orge8e56b0">Romans 16:27</h3>
+<div class="outline-text-3" id="text-orge8e56b0">
+<p>
+soli sapienti Deo, per Jesum Christum, cui honor et gloria in sæcula sæculorum. Amen.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:40</p>
+</div>
+</body>
+</html>

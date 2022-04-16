@@ -1,0 +1,1766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7e46d8c">Amos 1</a>
+<ul>
+<li><a href="#org22f0404">Amos 1:1</a></li>
+<li><a href="#org05cd209">Amos 1:2</a></li>
+<li><a href="#orgad46cf1">Amos 1:3</a></li>
+<li><a href="#orgbf24ffc">Amos 1:4</a></li>
+<li><a href="#orga042b87">Amos 1:5</a></li>
+<li><a href="#org4d1d84a">Amos 1:6</a></li>
+<li><a href="#org7d6b180">Amos 1:7</a></li>
+<li><a href="#orgc839495">Amos 1:8</a></li>
+<li><a href="#org19a6db8">Amos 1:9</a></li>
+<li><a href="#org4ee9325">Amos 1:10</a></li>
+<li><a href="#org349e346">Amos 1:11</a></li>
+<li><a href="#org7001757">Amos 1:12</a></li>
+<li><a href="#org0cc4fd8">Amos 1:13</a></li>
+<li><a href="#org5539521">Amos 1:14</a></li>
+<li><a href="#org93c5508">Amos 1:15</a></li>
+</ul>
+</li>
+<li><a href="#org581d46b">Amos 2</a>
+<ul>
+<li><a href="#org47723c2">Amos 2:1</a></li>
+<li><a href="#org1a39562">Amos 2:2</a></li>
+<li><a href="#org82f323e">Amos 2:3</a></li>
+<li><a href="#orged99bbf">Amos 2:4</a></li>
+<li><a href="#orgc23ecc6">Amos 2:5</a></li>
+<li><a href="#org5406cee">Amos 2:6</a></li>
+<li><a href="#org12ab207">Amos 2:7</a></li>
+<li><a href="#orgd10cbdc">Amos 2:8</a></li>
+<li><a href="#orgc8ab48f">Amos 2:9</a></li>
+<li><a href="#org584e35b">Amos 2:10</a></li>
+<li><a href="#orgc6f839e">Amos 2:11</a></li>
+<li><a href="#orga3e25d7">Amos 2:12</a></li>
+<li><a href="#org628ab17">Amos 2:13</a></li>
+<li><a href="#org687677b">Amos 2:14</a></li>
+<li><a href="#org660acea">Amos 2:15</a></li>
+<li><a href="#org798c962">Amos 2:16</a></li>
+</ul>
+</li>
+<li><a href="#orgc666a28">Amos 3</a>
+<ul>
+<li><a href="#org5334a3f">Amos 3:1</a></li>
+<li><a href="#org86e898a">Amos 3:2</a></li>
+<li><a href="#org4c176ed">Amos 3:3</a></li>
+<li><a href="#orgad1df8b">Amos 3:4</a></li>
+<li><a href="#org1e28185">Amos 3:5</a></li>
+<li><a href="#org2c0d7f4">Amos 3:6</a></li>
+<li><a href="#orgc1f2e1a">Amos 3:7</a></li>
+<li><a href="#org6e1af00">Amos 3:8</a></li>
+<li><a href="#orga9c3118">Amos 3:9</a></li>
+<li><a href="#org4076bb2">Amos 3:10</a></li>
+<li><a href="#orgef4f8a5">Amos 3:11</a></li>
+<li><a href="#orgb3917cb">Amos 3:12</a></li>
+<li><a href="#org1746489">Amos 3:13</a></li>
+<li><a href="#org43b35db">Amos 3:14</a></li>
+<li><a href="#org79b3e34">Amos 3:15</a></li>
+</ul>
+</li>
+<li><a href="#org96da97a">Amos 4</a>
+<ul>
+<li><a href="#orgb77da8b">Amos 4:1</a></li>
+<li><a href="#org2702f07">Amos 4:2</a></li>
+<li><a href="#org36f32d5">Amos 4:3</a></li>
+<li><a href="#org3b55633">Amos 4:4</a></li>
+<li><a href="#org6fb0217">Amos 4:5</a></li>
+<li><a href="#org45031a9">Amos 4:6</a></li>
+<li><a href="#org17ee0b1">Amos 4:7</a></li>
+<li><a href="#org021656c">Amos 4:8</a></li>
+<li><a href="#orgecc8f34">Amos 4:9</a></li>
+<li><a href="#org9f77dd0">Amos 4:10</a></li>
+<li><a href="#org65a690a">Amos 4:11</a></li>
+<li><a href="#org81598e5">Amos 4:12</a></li>
+<li><a href="#org99f60a2">Amos 4:13</a></li>
+</ul>
+</li>
+<li><a href="#org3d17833">Amos 5</a>
+<ul>
+<li><a href="#org3e24455">Amos 5:1</a></li>
+<li><a href="#orgbaa162d">Amos 5:2</a></li>
+<li><a href="#orgfcd5b41">Amos 5:3</a></li>
+<li><a href="#org1df4285">Amos 5:4</a></li>
+<li><a href="#orgc1a50af">Amos 5:5</a></li>
+<li><a href="#org769973b">Amos 5:6</a></li>
+<li><a href="#org2758db4">Amos 5:7</a></li>
+<li><a href="#orgb232e9b">Amos 5:8</a></li>
+<li><a href="#org83fdb0f">Amos 5:9</a></li>
+<li><a href="#orga5c066f">Amos 5:10</a></li>
+<li><a href="#org9a10591">Amos 5:11</a></li>
+<li><a href="#org6d2b5ff">Amos 5:12</a></li>
+<li><a href="#org5f16d86">Amos 5:13</a></li>
+<li><a href="#orgf616e73">Amos 5:14</a></li>
+<li><a href="#org1ec1e18">Amos 5:15</a></li>
+<li><a href="#orga149519">Amos 5:16</a></li>
+<li><a href="#org8f05669">Amos 5:17</a></li>
+<li><a href="#org10f6549">Amos 5:18</a></li>
+<li><a href="#orgbf09624">Amos 5:19</a></li>
+<li><a href="#org525136d">Amos 5:20</a></li>
+<li><a href="#org126f0a0">Amos 5:21</a></li>
+<li><a href="#org81c1d72">Amos 5:22</a></li>
+<li><a href="#orgfa063ac">Amos 5:23</a></li>
+<li><a href="#org48a2a0f">Amos 5:24</a></li>
+<li><a href="#org6bdde54">Amos 5:25</a></li>
+<li><a href="#orgf0b8d92">Amos 5:26</a></li>
+<li><a href="#org38b16f8">Amos 5:27</a></li>
+</ul>
+</li>
+<li><a href="#org4c7fa81">Amos 6</a>
+<ul>
+<li><a href="#orga97c897">Amos 6:1</a></li>
+<li><a href="#org174e1ca">Amos 6:2</a></li>
+<li><a href="#org12fed5c">Amos 6:3</a></li>
+<li><a href="#org24de092">Amos 6:4</a></li>
+<li><a href="#org44bddeb">Amos 6:5</a></li>
+<li><a href="#orga3e1ba6">Amos 6:6</a></li>
+<li><a href="#orge8b69ed">Amos 6:7</a></li>
+<li><a href="#orgdf58f0c">Amos 6:8</a></li>
+<li><a href="#org11dadc6">Amos 6:9</a></li>
+<li><a href="#org337f448">Amos 6:10</a></li>
+<li><a href="#org07a9743">Amos 6:11</a></li>
+<li><a href="#org422b4aa">Amos 6:12</a></li>
+<li><a href="#org7c1bef2">Amos 6:13</a></li>
+<li><a href="#org60e1cad">Amos 6:14</a></li>
+<li><a href="#org3e4b596">Amos 6:15</a></li>
+</ul>
+</li>
+<li><a href="#orgd3925b1">Amos 7</a>
+<ul>
+<li><a href="#orgfc796b9">Amos 7:1</a></li>
+<li><a href="#org4f53091">Amos 7:2</a></li>
+<li><a href="#org99aa625">Amos 7:3</a></li>
+<li><a href="#org317f50b">Amos 7:4</a></li>
+<li><a href="#org13edc8a">Amos 7:5</a></li>
+<li><a href="#orge9b8bd1">Amos 7:6</a></li>
+<li><a href="#org61089a1">Amos 7:7</a></li>
+<li><a href="#org76d37a2">Amos 7:8</a></li>
+<li><a href="#org55ab87c">Amos 7:9</a></li>
+<li><a href="#org34a3247">Amos 7:10</a></li>
+<li><a href="#org0c22e5b">Amos 7:11</a></li>
+<li><a href="#orgba4240b">Amos 7:12</a></li>
+<li><a href="#orgc02101c">Amos 7:13</a></li>
+<li><a href="#orgffd9405">Amos 7:14</a></li>
+<li><a href="#org17114cc">Amos 7:15</a></li>
+<li><a href="#orgcebe1bf">Amos 7:16</a></li>
+<li><a href="#orgb54ce58">Amos 7:17</a></li>
+</ul>
+</li>
+<li><a href="#org18eddfd">Amos 8</a>
+<ul>
+<li><a href="#org91b63b7">Amos 8:1</a></li>
+<li><a href="#org0805f2b">Amos 8:2</a></li>
+<li><a href="#org30a5f48">Amos 8:3</a></li>
+<li><a href="#org4a2b02c">Amos 8:4</a></li>
+<li><a href="#orgd837146">Amos 8:5</a></li>
+<li><a href="#orgeeedc73">Amos 8:6</a></li>
+<li><a href="#orgd1fdf7f">Amos 8:7</a></li>
+<li><a href="#orgc35cda9">Amos 8:8</a></li>
+<li><a href="#orgcc48cc8">Amos 8:9</a></li>
+<li><a href="#orgec1fdca">Amos 8:10</a></li>
+<li><a href="#orgdaa3e40">Amos 8:11</a></li>
+<li><a href="#orgf9dc96a">Amos 8:12</a></li>
+<li><a href="#org81dd5c3">Amos 8:13</a></li>
+<li><a href="#org07fab81">Amos 8:14</a></li>
+</ul>
+</li>
+<li><a href="#orgc661db3">Amos 9</a>
+<ul>
+<li><a href="#orge0aaf15">Amos 9:1</a></li>
+<li><a href="#orgfdbf268">Amos 9:2</a></li>
+<li><a href="#org0f6d1d9">Amos 9:3</a></li>
+<li><a href="#orgbb2c393">Amos 9:4</a></li>
+<li><a href="#org0e4069a">Amos 9:5</a></li>
+<li><a href="#org5090491">Amos 9:6</a></li>
+<li><a href="#org940ef5e">Amos 9:7</a></li>
+<li><a href="#orga968d7a">Amos 9:8</a></li>
+<li><a href="#orgadcc13d">Amos 9:9</a></li>
+<li><a href="#org657a696">Amos 9:10</a></li>
+<li><a href="#org67a85ba">Amos 9:11</a></li>
+<li><a href="#org916fc76">Amos 9:12</a></li>
+<li><a href="#org0b22242">Amos 9:13</a></li>
+<li><a href="#org94b500f">Amos 9:14</a></li>
+<li><a href="#org2b245aa">Amos 9:15</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e46d8c" class="outline-2">
+<h2 id="org7e46d8c">Amos 1</h2>
+<div class="outline-text-2" id="text-org7e46d8c">
+</div>
+<div id="outline-container-org22f0404" class="outline-3">
+<h3 id="org22f0404">Amos 1:1</h3>
+<div class="outline-text-3" id="text-org22f0404">
+<p>
+The words of Amos, who was among the herdsmen of Thecua: which he saw concerning Israel in the days of Ozias king of Juda, and in the days of Jeroboam the son of Joas king of Israel two years before the earthquake.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05cd209" class="outline-3">
+<h3 id="org05cd209">Amos 1:2</h3>
+<div class="outline-text-3" id="text-org05cd209">
+<p>
+And he said: The Lord will roar from Sion, and utter his voice from Jerusalem: and the beautiful places of the shepherds have mourned, and the top of Carmel is withered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad46cf1" class="outline-3">
+<h3 id="orgad46cf1">Amos 1:3</h3>
+<div class="outline-text-3" id="text-orgad46cf1">
+<p>
+Thus saith the Lord: For three crimes of Damascus, and for four I will not convert it: because they have thrashed Galaad with iron wains.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf24ffc" class="outline-3">
+<h3 id="orgbf24ffc">Amos 1:4</h3>
+<div class="outline-text-3" id="text-orgbf24ffc">
+<p>
+And I will send a fire into the house of Azael, and it shall devour the houses of Benadad.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga042b87" class="outline-3">
+<h3 id="orga042b87">Amos 1:5</h3>
+<div class="outline-text-3" id="text-orga042b87">
+<p>
+And I will break the bar of Damascus: and I will cut off the inhabitants from the plain of the idol, and him that holdeth the sceptre from the house of pleasure: and the people of Syria shall be carried away to Cyrene, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d1d84a" class="outline-3">
+<h3 id="org4d1d84a">Amos 1:6</h3>
+<div class="outline-text-3" id="text-org4d1d84a">
+<p>
+Thus saith the Lord: For three crimes of Gaza, and for four I will not convert it: because they have carried away a perfect captivity to shut them up in Edom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d6b180" class="outline-3">
+<h3 id="org7d6b180">Amos 1:7</h3>
+<div class="outline-text-3" id="text-org7d6b180">
+<p>
+And I will send a fire on the wall of Gaza, and it shall devour the houses thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc839495" class="outline-3">
+<h3 id="orgc839495">Amos 1:8</h3>
+<div class="outline-text-3" id="text-orgc839495">
+<p>
+And I will cut off the inhabitant from Azotus, and him that holdeth the sceptre from Ascalon: and I will turn my hand against Accaron, and the rest of the Philistines shall perish, saith the Lord God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19a6db8" class="outline-3">
+<h3 id="org19a6db8">Amos 1:9</h3>
+<div class="outline-text-3" id="text-org19a6db8">
+<p>
+Thus saith the Lord: For three crimes of Tyre, and for four I will not convert it: because they have shut up an entire captivity in Edom, and have not remembered the covenant of brethren.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ee9325" class="outline-3">
+<h3 id="org4ee9325">Amos 1:10</h3>
+<div class="outline-text-3" id="text-org4ee9325">
+<p>
+And I will send a fire upon the wall of Tyre, and it shall devour the houses thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org349e346" class="outline-3">
+<h3 id="org349e346">Amos 1:11</h3>
+<div class="outline-text-3" id="text-org349e346">
+<p>
+Thus saith the Lord: For three crimes of Edom, and for four I will not convert him: because he hath pursued his brother with the sword, and hath carried on his fury, and hath kept his wrath to the end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7001757" class="outline-3">
+<h3 id="org7001757">Amos 1:12</h3>
+<div class="outline-text-3" id="text-org7001757">
+<p>
+I will send a fire into Theman: and it shall devour the houses of Bosra.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0cc4fd8" class="outline-3">
+<h3 id="org0cc4fd8">Amos 1:13</h3>
+<div class="outline-text-3" id="text-org0cc4fd8">
+<p>
+Thus saith the Lord: For three crimes of the children of Ammon, and for four I will not convert him: because he hath ripped up the women with child of Galaad to enlarge his border.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5539521" class="outline-3">
+<h3 id="org5539521">Amos 1:14</h3>
+<div class="outline-text-3" id="text-org5539521">
+<p>
+And I will kindle a fire in the wall of Rabba: and it shall devour the houses thereof with shouting in the day of battle, and with a whirlwind in the day of trouble.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93c5508" class="outline-3">
+<h3 id="org93c5508">Amos 1:15</h3>
+<div class="outline-text-3" id="text-org93c5508">
+<p>
+And Melchom shall go into captivity, both he, and his princes together, saith the Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org581d46b" class="outline-2">
+<h2 id="org581d46b">Amos 2</h2>
+<div class="outline-text-2" id="text-org581d46b">
+</div>
+<div id="outline-container-org47723c2" class="outline-3">
+<h3 id="org47723c2">Amos 2:1</h3>
+<div class="outline-text-3" id="text-org47723c2">
+<p>
+Thus saith the Lord: For three crimes of Moab, and for four I will not convert him: because he hath burnt the bones of the king of Edom even to ashes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a39562" class="outline-3">
+<h3 id="org1a39562">Amos 2:2</h3>
+<div class="outline-text-3" id="text-org1a39562">
+<p>
+And I will send a fire into Moab, and it shall devour the houses of Carioth: and Moab shall die with a noise, with the sound of the trumpet:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82f323e" class="outline-3">
+<h3 id="org82f323e">Amos 2:3</h3>
+<div class="outline-text-3" id="text-org82f323e">
+<p>
+And I will cut off the judge from the midst thereof, and will slay all his princes with him, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged99bbf" class="outline-3">
+<h3 id="orged99bbf">Amos 2:4</h3>
+<div class="outline-text-3" id="text-orged99bbf">
+<p>
+Thus saith the Lord: For three crimes of Juda, and for four I will not convert him: because he hath cast away the law of the Lord, and hath not kept his commandments: for their idols have caused them to err, after which their fathers have walked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc23ecc6" class="outline-3">
+<h3 id="orgc23ecc6">Amos 2:5</h3>
+<div class="outline-text-3" id="text-orgc23ecc6">
+<p>
+And I will send a fire into Juda, and it shall devour the houses of Jerusalem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5406cee" class="outline-3">
+<h3 id="org5406cee">Amos 2:6</h3>
+<div class="outline-text-3" id="text-org5406cee">
+<p>
+Thus saith the Lord: For three crimes of Israel, and for four I will not convert him: because he hath sold the just man for silver, and the poor man for a pair of shoes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12ab207" class="outline-3">
+<h3 id="org12ab207">Amos 2:7</h3>
+<div class="outline-text-3" id="text-org12ab207">
+<p>
+They bruise the heads of the poor upon the dust of the earth, and turn aside the way of the humble: and the son and his father have gone to the same young woman, to profane my holy name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd10cbdc" class="outline-3">
+<h3 id="orgd10cbdc">Amos 2:8</h3>
+<div class="outline-text-3" id="text-orgd10cbdc">
+<p>
+And they sat down upon garments laid to pledge by every altar: and drank the wine of the condemned in the house of their God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8ab48f" class="outline-3">
+<h3 id="orgc8ab48f">Amos 2:9</h3>
+<div class="outline-text-3" id="text-orgc8ab48f">
+<p>
+Yet I cast out the Amorrhite before their face: whose height was like the height of cedars, and who was strong as an oak: and I destroyed his fruit from above, and his roots beneath.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org584e35b" class="outline-3">
+<h3 id="org584e35b">Amos 2:10</h3>
+<div class="outline-text-3" id="text-org584e35b">
+<p>
+It is I that brought you up out of the land of Egypt, and I led you forty years through the wilderness, that you might possess the land of the Amorrhite.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6f839e" class="outline-3">
+<h3 id="orgc6f839e">Amos 2:11</h3>
+<div class="outline-text-3" id="text-orgc6f839e">
+<p>
+And I raised up of your sons for prophets, and of your young men for Nazarites. Is it not so, O ye children of Israel, saith the Lord?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3e25d7" class="outline-3">
+<h3 id="orga3e25d7">Amos 2:12</h3>
+<div class="outline-text-3" id="text-orga3e25d7">
+<p>
+And you will present wine to the Nazarites: and command the prophets, saying: Prophesy not.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org628ab17" class="outline-3">
+<h3 id="org628ab17">Amos 2:13</h3>
+<div class="outline-text-3" id="text-org628ab17">
+<p>
+Behold, I will screak under you as a wain screaketh that is laden with hay.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org687677b" class="outline-3">
+<h3 id="org687677b">Amos 2:14</h3>
+<div class="outline-text-3" id="text-org687677b">
+<p>
+And flight shall perish from the swift, and the valiant shall not possess his strength, neither shall the strong save his life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org660acea" class="outline-3">
+<h3 id="org660acea">Amos 2:15</h3>
+<div class="outline-text-3" id="text-org660acea">
+<p>
+And he that holdeth the bow shall not stand, and the swift of foot shall not escape, neither shall the rider of the horse save his life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org798c962" class="outline-3">
+<h3 id="org798c962">Amos 2:16</h3>
+<div class="outline-text-3" id="text-org798c962">
+<p>
+And the stout of heart among the valiant shall flee away naked in that day, saith the Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc666a28" class="outline-2">
+<h2 id="orgc666a28">Amos 3</h2>
+<div class="outline-text-2" id="text-orgc666a28">
+</div>
+<div id="outline-container-org5334a3f" class="outline-3">
+<h3 id="org5334a3f">Amos 3:1</h3>
+<div class="outline-text-3" id="text-org5334a3f">
+<p>
+Hear the word that the Lord hath spoken concerning you, O ye children of Israel: concerning the whole family that I brought up out of the land of Egypt, saying:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86e898a" class="outline-3">
+<h3 id="org86e898a">Amos 3:2</h3>
+<div class="outline-text-3" id="text-org86e898a">
+<p>
+You only have I known of all the families of the earth: therefore will I visit upon you all your iniquities.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c176ed" class="outline-3">
+<h3 id="org4c176ed">Amos 3:3</h3>
+<div class="outline-text-3" id="text-org4c176ed">
+<p>
+Shall two walk together except they be agreed?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad1df8b" class="outline-3">
+<h3 id="orgad1df8b">Amos 3:4</h3>
+<div class="outline-text-3" id="text-orgad1df8b">
+<p>
+Will a lion roar in the forest, if he have no prey? will the lion&rsquo;s whelp cry out of his den, if he have taken nothing?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e28185" class="outline-3">
+<h3 id="org1e28185">Amos 3:5</h3>
+<div class="outline-text-3" id="text-org1e28185">
+<p>
+Will the bird fall into the snare upon the earth, if there be no fowler? Shall the snare be taken up from the earth, before it hath taken somewhat?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2c0d7f4" class="outline-3">
+<h3 id="org2c0d7f4">Amos 3:6</h3>
+<div class="outline-text-3" id="text-org2c0d7f4">
+<p>
+Shall the trumpet sound in a city, and the people not be afraid? Shall there be evil in a city, which the Lord hath not done?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1f2e1a" class="outline-3">
+<h3 id="orgc1f2e1a">Amos 3:7</h3>
+<div class="outline-text-3" id="text-orgc1f2e1a">
+<p>
+For the Lord God doth nothing without revealing his secret to his servants the prophets.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e1af00" class="outline-3">
+<h3 id="org6e1af00">Amos 3:8</h3>
+<div class="outline-text-3" id="text-org6e1af00">
+<p>
+The lion shall roar, who will not fear? The Lord God hath spoken, who shall not prophesy?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9c3118" class="outline-3">
+<h3 id="orga9c3118">Amos 3:9</h3>
+<div class="outline-text-3" id="text-orga9c3118">
+<p>
+Publish it in the houses of Azotus, and in the houses of the land of Egypt, and say: Assemble yourselves upon the mountains of Samaria, and behold the many follies in the midst thereof, and them that suffer oppression in the inner rooms thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4076bb2" class="outline-3">
+<h3 id="org4076bb2">Amos 3:10</h3>
+<div class="outline-text-3" id="text-org4076bb2">
+<p>
+And they have not known to do the right thing, saith the Lord, storing up iniquity, and robberies in their houses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef4f8a5" class="outline-3">
+<h3 id="orgef4f8a5">Amos 3:11</h3>
+<div class="outline-text-3" id="text-orgef4f8a5">
+<p>
+Therefore thus saith the Lord God: The land shall be in tribulation, and shall be compassed about: and thy strength shall be taken away from thee, and thy houses shall be spoiled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3917cb" class="outline-3">
+<h3 id="orgb3917cb">Amos 3:12</h3>
+<div class="outline-text-3" id="text-orgb3917cb">
+<p>
+Thus saith the Lord: As if a shepherd should get out of the lion&rsquo;s mouth two legs, or the tip of the ear: so shall the children of Israel be taken out that dwell in Samaria, in a place of a bed, and in the couch of Damascus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1746489" class="outline-3">
+<h3 id="org1746489">Amos 3:13</h3>
+<div class="outline-text-3" id="text-org1746489">
+<p>
+Hear ye, and testify in the house of Jacob, saith the Lord the God of hosts:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43b35db" class="outline-3">
+<h3 id="org43b35db">Amos 3:14</h3>
+<div class="outline-text-3" id="text-org43b35db">
+<p>
+That in the day when I shall begin to visit the transgressions of Israel, I will visit upon him, and upon the altars of Bethel: and the horns of the altars shall be cut off, and shall fall to the ground.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79b3e34" class="outline-3">
+<h3 id="org79b3e34">Amos 3:15</h3>
+<div class="outline-text-3" id="text-org79b3e34">
+<p>
+And I will strike the winter house with the summer house: and the houses of ivory shall perish, and many houses shall be destroyed, saith the Lord. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96da97a" class="outline-2">
+<h2 id="org96da97a">Amos 4</h2>
+<div class="outline-text-2" id="text-org96da97a">
+</div>
+<div id="outline-container-orgb77da8b" class="outline-3">
+<h3 id="orgb77da8b">Amos 4:1</h3>
+<div class="outline-text-3" id="text-orgb77da8b">
+<p>
+Hear this word, ye fat kine that are in the mountains of Samaria: you that oppress the needy, and crush the poor: that say to your masters: Bring, and we will drink.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2702f07" class="outline-3">
+<h3 id="org2702f07">Amos 4:2</h3>
+<div class="outline-text-3" id="text-org2702f07">
+<p>
+The Lord God hath sworn by his holiness, that lo, the days shall come upon you, when they shall lift you up on pikes, and what shall remain of you in boiling pots.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36f32d5" class="outline-3">
+<h3 id="org36f32d5">Amos 4:3</h3>
+<div class="outline-text-3" id="text-org36f32d5">
+<p>
+And you shall go out at the breaches one over against the other, and you shall be cast forth into Armon, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b55633" class="outline-3">
+<h3 id="org3b55633">Amos 4:4</h3>
+<div class="outline-text-3" id="text-org3b55633">
+<p>
+Come ye to Bethel, and do wickedly: to Galgal, and multiply transgressions: and bring in the morning your victims, your tithes in three days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6fb0217" class="outline-3">
+<h3 id="org6fb0217">Amos 4:5</h3>
+<div class="outline-text-3" id="text-org6fb0217">
+<p>
+And offer a sacrifice of praise with leaven: and call free offerings, and proclaim it: for so you would do, O children of Israel, saith the Lord God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45031a9" class="outline-3">
+<h3 id="org45031a9">Amos 4:6</h3>
+<div class="outline-text-3" id="text-org45031a9">
+<p>
+Whereupon I also have given you dulness of teeth in all your cities, and want of bread in all your places: yet you have not returned to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17ee0b1" class="outline-3">
+<h3 id="org17ee0b1">Amos 4:7</h3>
+<div class="outline-text-3" id="text-org17ee0b1">
+<p>
+I also have withholden the rain from you, when there were yet three months to the harvest: and I caused it to rain upon on city, and caused it not to rain upon another city: one piece was rained upon: and the piece whereupon I rained not, withered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org021656c" class="outline-3">
+<h3 id="org021656c">Amos 4:8</h3>
+<div class="outline-text-3" id="text-org021656c">
+<p>
+And two and three cities went to one city to drink water, and were not filled: yet you returned not to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecc8f34" class="outline-3">
+<h3 id="orgecc8f34">Amos 4:9</h3>
+<div class="outline-text-3" id="text-orgecc8f34">
+<p>
+I struck you with a burning wind, and with mildew, the palmerworm hath eaten up your many gardens, and your vineyards: your olive groves, and fig groves: yet you returned not to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f77dd0" class="outline-3">
+<h3 id="org9f77dd0">Amos 4:10</h3>
+<div class="outline-text-3" id="text-org9f77dd0">
+<p>
+I sent death upon you in the way of Egypt, I slew your young men with the sword, even to the captivity of your horses: and I made the stench of your camp to come up into your nostrils: yet you returned not to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65a690a" class="outline-3">
+<h3 id="org65a690a">Amos 4:11</h3>
+<div class="outline-text-3" id="text-org65a690a">
+<p>
+I destroyed some of you, as God destroyed Sodom and Gomorrha, and you were as a firebrand plucked out of the burning: yet you returned not to me, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81598e5" class="outline-3">
+<h3 id="org81598e5">Amos 4:12</h3>
+<div class="outline-text-3" id="text-org81598e5">
+<p>
+Therefore I will do these things to thee, O Israel: and after I shall have done these things to thee, be prepared to meet thy God, O Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99f60a2" class="outline-3">
+<h3 id="org99f60a2">Amos 4:13</h3>
+<div class="outline-text-3" id="text-org99f60a2">
+<p>
+For behold he that formeth the mountains and createth the wind, and declareth his word to man, he that maketh the morning mist, and walketh upon the high places of the earth: the Lord the God of hosts is his name. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d17833" class="outline-2">
+<h2 id="org3d17833">Amos 5</h2>
+<div class="outline-text-2" id="text-org3d17833">
+</div>
+<div id="outline-container-org3e24455" class="outline-3">
+<h3 id="org3e24455">Amos 5:1</h3>
+<div class="outline-text-3" id="text-org3e24455">
+<p>
+Hear ye this word, which I take up concerning you for a lamentation. The house of Israel is fallen, and it shall rise no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbaa162d" class="outline-3">
+<h3 id="orgbaa162d">Amos 5:2</h3>
+<div class="outline-text-3" id="text-orgbaa162d">
+<p>
+The virgin of Israel is cast down upon her land, there is none to raise her up.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcd5b41" class="outline-3">
+<h3 id="orgfcd5b41">Amos 5:3</h3>
+<div class="outline-text-3" id="text-orgfcd5b41">
+<p>
+For thus saith the Lord God: The city, out of which came forth a thousand, there shall be left in it a hundred: and out of which there came a hundred, there shall be left in it ten, in the house of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1df4285" class="outline-3">
+<h3 id="org1df4285">Amos 5:4</h3>
+<div class="outline-text-3" id="text-org1df4285">
+<p>
+For thus saith the Lord to the house of Israel: Seek ye me, and you shall live.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1a50af" class="outline-3">
+<h3 id="orgc1a50af">Amos 5:5</h3>
+<div class="outline-text-3" id="text-orgc1a50af">
+<p>
+But seek not Bethel, and go not into Galgal, neither shall you pass over to Bersabee: for Galgal shall go into captivity, and Bethel shall be unprofitable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org769973b" class="outline-3">
+<h3 id="org769973b">Amos 5:6</h3>
+<div class="outline-text-3" id="text-org769973b">
+<p>
+Seek ye the Lord, and live: lest the house of Joseph be burnt with fire, and it shall devour, and there shall be none to quench Bethel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2758db4" class="outline-3">
+<h3 id="org2758db4">Amos 5:7</h3>
+<div class="outline-text-3" id="text-org2758db4">
+<p>
+You that turn judgment into wormwood, and forsake justice in the land,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb232e9b" class="outline-3">
+<h3 id="orgb232e9b">Amos 5:8</h3>
+<div class="outline-text-3" id="text-orgb232e9b">
+<p>
+Seek him that maketh Arcturus, and Orion, and that turneth darkness into morning, and that changeth day into night: that calleth the waters of the sea, and poureth them out upon the face of the earth: The Lord is his name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org83fdb0f" class="outline-3">
+<h3 id="org83fdb0f">Amos 5:9</h3>
+<div class="outline-text-3" id="text-org83fdb0f">
+<p>
+He that with a smile bringeth destruction upon the strong, and waste upon the mighty.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5c066f" class="outline-3">
+<h3 id="orga5c066f">Amos 5:10</h3>
+<div class="outline-text-3" id="text-orga5c066f">
+<p>
+They have hated him that rebuketh in the gate: and have abhorred him that speaketh perfectly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a10591" class="outline-3">
+<h3 id="org9a10591">Amos 5:11</h3>
+<div class="outline-text-3" id="text-org9a10591">
+<p>
+Therefore because you robbed the poor, and took the choice prey from him: you shall build houses with square stone, and shall not dwell in them: you shall plant most delightful vineyards, and shall not drink the wine of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6d2b5ff" class="outline-3">
+<h3 id="org6d2b5ff">Amos 5:12</h3>
+<div class="outline-text-3" id="text-org6d2b5ff">
+<p>
+Because I know your manifold crimes, and your grievous sins: enemies of the just, taking bribes, and oppressing the poor in the gate.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f16d86" class="outline-3">
+<h3 id="org5f16d86">Amos 5:13</h3>
+<div class="outline-text-3" id="text-org5f16d86">
+<p>
+Therefore the prudent shall keep silence at that time, for it is an evil time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf616e73" class="outline-3">
+<h3 id="orgf616e73">Amos 5:14</h3>
+<div class="outline-text-3" id="text-orgf616e73">
+<p>
+Seek ye good, and not evil, that you may live: and the Lord the God of hosts will be with you, as you have said.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ec1e18" class="outline-3">
+<h3 id="org1ec1e18">Amos 5:15</h3>
+<div class="outline-text-3" id="text-org1ec1e18">
+<p>
+Hate evil, and love good, and establish judgment in the gate: it may be the Lord the God of hosts may have mercy on the remnant of Joseph.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga149519" class="outline-3">
+<h3 id="orga149519">Amos 5:16</h3>
+<div class="outline-text-3" id="text-orga149519">
+<p>
+Therefore thus saith the Lord the God of hosts the sovereign Lord: In every street there shall be wailing: and in all places that are without, they shall say: Alas, alas! and they shall call the husbandman to mourning, and such as are skilful in lamentation to lament.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f05669" class="outline-3">
+<h3 id="org8f05669">Amos 5:17</h3>
+<div class="outline-text-3" id="text-org8f05669">
+<p>
+And in all vineyards there shall be wailing: because I will pass through in the midst of thee, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10f6549" class="outline-3">
+<h3 id="org10f6549">Amos 5:18</h3>
+<div class="outline-text-3" id="text-org10f6549">
+<p>
+Woe to them that desire the day of the Lord: to what end is it for you? the day of the Lord is darkness, and not light.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf09624" class="outline-3">
+<h3 id="orgbf09624">Amos 5:19</h3>
+<div class="outline-text-3" id="text-orgbf09624">
+<p>
+As if a man should flee from the face of a lion, and a bear should meet him: or enter into the house, and lean with his hand upon the wall, and a serpent should bite him.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org525136d" class="outline-3">
+<h3 id="org525136d">Amos 5:20</h3>
+<div class="outline-text-3" id="text-org525136d">
+<p>
+Shall not the day of the Lord be darkness, and not light: and obscurity, and no brightness in it?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org126f0a0" class="outline-3">
+<h3 id="org126f0a0">Amos 5:21</h3>
+<div class="outline-text-3" id="text-org126f0a0">
+<p>
+I hate, and have rejected your festivities: and I will not receive the odour of your assemblies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81c1d72" class="outline-3">
+<h3 id="org81c1d72">Amos 5:22</h3>
+<div class="outline-text-3" id="text-org81c1d72">
+<p>
+And if you offer me holocausts, and your gifts, I will not receive them: neither will I regard the vows of your fat beasts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa063ac" class="outline-3">
+<h3 id="orgfa063ac">Amos 5:23</h3>
+<div class="outline-text-3" id="text-orgfa063ac">
+<p>
+Take away from me the tumult of thy songs: and I will not hear the canticles of thy harp.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48a2a0f" class="outline-3">
+<h3 id="org48a2a0f">Amos 5:24</h3>
+<div class="outline-text-3" id="text-org48a2a0f">
+<p>
+But judgment shall be revealed as water, and justice as a mighty torrent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bdde54" class="outline-3">
+<h3 id="org6bdde54">Amos 5:25</h3>
+<div class="outline-text-3" id="text-org6bdde54">
+<p>
+Did you offer victims and sacrifices to me in the desert for forty years, O house of Israel?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf0b8d92" class="outline-3">
+<h3 id="orgf0b8d92">Amos 5:26</h3>
+<div class="outline-text-3" id="text-orgf0b8d92">
+<p>
+But you carried a tabernacle for your Moloch, and the image of your idols, the star of your god, which you made to yourselves.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38b16f8" class="outline-3">
+<h3 id="org38b16f8">Amos 5:27</h3>
+<div class="outline-text-3" id="text-org38b16f8">
+<p>
+And I will cause you to go into captivity beyond Damascus, saith the Lord, the God of hosts is his name. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4c7fa81" class="outline-2">
+<h2 id="org4c7fa81">Amos 6</h2>
+<div class="outline-text-2" id="text-org4c7fa81">
+</div>
+<div id="outline-container-orga97c897" class="outline-3">
+<h3 id="orga97c897">Amos 6:1</h3>
+<div class="outline-text-3" id="text-orga97c897">
+<p>
+Woe to you that are wealthy in Sion, and to you that have confidence in the mountain of Samaria: ye great men, heads of the people, that go in with state into the house of Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org174e1ca" class="outline-3">
+<h3 id="org174e1ca">Amos 6:2</h3>
+<div class="outline-text-3" id="text-org174e1ca">
+<p>
+Pass ye over to Chalane, and see, and go from thence into Emath the great: and go down into Geth of the Philistines, and to all the best kingdoms of these: if their border be larger than your border.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12fed5c" class="outline-3">
+<h3 id="org12fed5c">Amos 6:3</h3>
+<div class="outline-text-3" id="text-org12fed5c">
+<p>
+You that are separated unto the evil day: and that approach to the throne of iniquity;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24de092" class="outline-3">
+<h3 id="org24de092">Amos 6:4</h3>
+<div class="outline-text-3" id="text-org24de092">
+<p>
+You that sleep upon beds of ivory, and are wanton on your couches: that eat the lambs out of the flock, and the calves out of the midst of the herd;
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44bddeb" class="outline-3">
+<h3 id="org44bddeb">Amos 6:5</h3>
+<div class="outline-text-3" id="text-org44bddeb">
+<p>
+You that sing to the sound of the psaltery: they have thought themselves to have instruments of music like David;
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3e1ba6" class="outline-3">
+<h3 id="orga3e1ba6">Amos 6:6</h3>
+<div class="outline-text-3" id="text-orga3e1ba6">
+<p>
+That drink wine in bowls, and anoint themselves with the best ointments: and they are not concerned for the affliction of Joseph.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8b69ed" class="outline-3">
+<h3 id="orge8b69ed">Amos 6:7</h3>
+<div class="outline-text-3" id="text-orge8b69ed">
+<p>
+Wherefore now they shall go captive at the head of them that go into captivity: and the faction of the luxurious ones shall be taken away.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf58f0c" class="outline-3">
+<h3 id="orgdf58f0c">Amos 6:8</h3>
+<div class="outline-text-3" id="text-orgdf58f0c">
+<p>
+The Lord God hath sworn by his own soul, saith the Lord the God of hosts: I detest the pride of Jacob, and I hate his houses, and I will deliver up the city with the inhabitants thereof.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11dadc6" class="outline-3">
+<h3 id="org11dadc6">Amos 6:9</h3>
+<div class="outline-text-3" id="text-org11dadc6">
+<p>
+And if there remain ten men in one house, they also shall die.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org337f448" class="outline-3">
+<h3 id="org337f448">Amos 6:10</h3>
+<div class="outline-text-3" id="text-org337f448">
+<p>
+And a man&rsquo;s kinsman shall take him up, and shall burn him, that he may carry the bones out of the house; and he shall say to him that is in the inner rooms of the house: Is there yet any with thee?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07a9743" class="outline-3">
+<h3 id="org07a9743">Amos 6:11</h3>
+<div class="outline-text-3" id="text-org07a9743">
+<p>
+And he shall answer: There is an end. And he shall say to him: Hold thy peace, and mention not the name of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org422b4aa" class="outline-3">
+<h3 id="org422b4aa">Amos 6:12</h3>
+<div class="outline-text-3" id="text-org422b4aa">
+<p>
+For behold the Lord hath commanded, and he will strike the greater house with breaches, and the lesser house with clefts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c1bef2" class="outline-3">
+<h3 id="org7c1bef2">Amos 6:13</h3>
+<div class="outline-text-3" id="text-org7c1bef2">
+<p>
+Can horses run upon the rocks, or can any one plough with buffles? for you have turned judgment into bitterness, and the fruit of justice into wormwood.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60e1cad" class="outline-3">
+<h3 id="org60e1cad">Amos 6:14</h3>
+<div class="outline-text-3" id="text-org60e1cad">
+<p>
+You that rejoice in a thing of nought: you that say: Have we not taken unto us horns by our own strength?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e4b596" class="outline-3">
+<h3 id="org3e4b596">Amos 6:15</h3>
+<div class="outline-text-3" id="text-org3e4b596">
+<p>
+But behold, I will raise up a nation against you, O house of Israel, saith the Lord the God of hosts; and they shall destroy you from the entrance of Emath, even to the torrent of the desert. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd3925b1" class="outline-2">
+<h2 id="orgd3925b1">Amos 7</h2>
+<div class="outline-text-2" id="text-orgd3925b1">
+</div>
+<div id="outline-container-orgfc796b9" class="outline-3">
+<h3 id="orgfc796b9">Amos 7:1</h3>
+<div class="outline-text-3" id="text-orgfc796b9">
+<p>
+These things the Lord God shewed to me: and behold the locust was formed in the beginning of the shooting up of the latter rain, and lo, it was the latter rain after the king&rsquo;s mowing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f53091" class="outline-3">
+<h3 id="org4f53091">Amos 7:2</h3>
+<div class="outline-text-3" id="text-org4f53091">
+<p>
+And it came to pass, that when they had made an end of eating the grass of the land, I said: O Lord God, be merciful, I beseech thee: who shall raise up Jacob, for he is very little?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99aa625" class="outline-3">
+<h3 id="org99aa625">Amos 7:3</h3>
+<div class="outline-text-3" id="text-org99aa625">
+<p>
+The Lord had pity upon this: It shall not be, said the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org317f50b" class="outline-3">
+<h3 id="org317f50b">Amos 7:4</h3>
+<div class="outline-text-3" id="text-org317f50b">
+<p>
+These things the Lord God shewed to me: and behold the Lord called for judgment unto fire, and it devoured the great deep, and ate up a part at the same time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13edc8a" class="outline-3">
+<h3 id="org13edc8a">Amos 7:5</h3>
+<div class="outline-text-3" id="text-org13edc8a">
+<p>
+And I said: O Lord God, cease, I beseech thee, who shall raise up Jacob, for he is a little one?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9b8bd1" class="outline-3">
+<h3 id="orge9b8bd1">Amos 7:6</h3>
+<div class="outline-text-3" id="text-orge9b8bd1">
+<p>
+The Lord had pity upon this. Yea this also shall not be, said the Lord God.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61089a1" class="outline-3">
+<h3 id="org61089a1">Amos 7:7</h3>
+<div class="outline-text-3" id="text-org61089a1">
+<p>
+These things the Lord shewed to me: and behold the Lord was standing upon a plastered wall, and in his hand a mason&rsquo;s trowel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76d37a2" class="outline-3">
+<h3 id="org76d37a2">Amos 7:8</h3>
+<div class="outline-text-3" id="text-org76d37a2">
+<p>
+And the Lord said to me: What seest thou, Amos? And I said: A mason&rsquo;s trowel. And the Lord said: Behold, I will lay down the trowel in the midst of my people Israel. I will plaster them over no more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55ab87c" class="outline-3">
+<h3 id="org55ab87c">Amos 7:9</h3>
+<div class="outline-text-3" id="text-org55ab87c">
+<p>
+And the high places of the idol shall be thrown down, and the sanctuaries of Israel shall be laid waste: and I will rise up against the house of Jeroboam with the sword.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34a3247" class="outline-3">
+<h3 id="org34a3247">Amos 7:10</h3>
+<div class="outline-text-3" id="text-org34a3247">
+<p>
+And Amasias the priest of Bethel sent to Jeroboam king of Israel, saying: Amos hath rebelled against thee in the midst of the house of Israel: the land is not able to bear all his words.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c22e5b" class="outline-3">
+<h3 id="org0c22e5b">Amos 7:11</h3>
+<div class="outline-text-3" id="text-org0c22e5b">
+<p>
+For thus saith Amos: Jeroboam shall die by the sword, and Israel shall be carried away captive out of their own land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba4240b" class="outline-3">
+<h3 id="orgba4240b">Amos 7:12</h3>
+<div class="outline-text-3" id="text-orgba4240b">
+<p>
+And Amasias said to Amos: Thou seer, go, flee away into the land of Juda: and eat bread there, and prophesy there.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc02101c" class="outline-3">
+<h3 id="orgc02101c">Amos 7:13</h3>
+<div class="outline-text-3" id="text-orgc02101c">
+<p>
+But prophesy not again any more in Bethel: because it is the king&rsquo;s sanctuary, and it is the house of the kingdom.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgffd9405" class="outline-3">
+<h3 id="orgffd9405">Amos 7:14</h3>
+<div class="outline-text-3" id="text-orgffd9405">
+<p>
+And Amos answered and said to Amasias: I am not a prophet, nor am I the son of a prophet: but I am a herdsman plucking wild figs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org17114cc" class="outline-3">
+<h3 id="org17114cc">Amos 7:15</h3>
+<div class="outline-text-3" id="text-org17114cc">
+<p>
+And the Lord took me when I followed the flock, and the Lord said to me: Go, prophesy to my people Israel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcebe1bf" class="outline-3">
+<h3 id="orgcebe1bf">Amos 7:16</h3>
+<div class="outline-text-3" id="text-orgcebe1bf">
+<p>
+And now hear thou the word of the Lord: Thou sayest, thou shalt not prophesy against Israel, and thou shalt not drop thy word upon the house of the idol.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb54ce58" class="outline-3">
+<h3 id="orgb54ce58">Amos 7:17</h3>
+<div class="outline-text-3" id="text-orgb54ce58">
+<p>
+Therefore thus saith the Lord: Thy wife shall play the harlot in the city, and thy sons and thy daughters shall fall by the sword, and thy land shall be measured by a line: and thou shalt die in a polluted land, and Israel shall go into captivity out of their land. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org18eddfd" class="outline-2">
+<h2 id="org18eddfd">Amos 8</h2>
+<div class="outline-text-2" id="text-org18eddfd">
+</div>
+<div id="outline-container-org91b63b7" class="outline-3">
+<h3 id="org91b63b7">Amos 8:1</h3>
+<div class="outline-text-3" id="text-org91b63b7">
+<p>
+These things the Lord shewed to me: and behold a hook to draw down the fruit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0805f2b" class="outline-3">
+<h3 id="org0805f2b">Amos 8:2</h3>
+<div class="outline-text-3" id="text-org0805f2b">
+<p>
+And he said: What seest thou, Amos? And I said: A hook to draw down fruit. And the Lord said to me: The end is come upon my people Israel: I will not again pass by them any more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30a5f48" class="outline-3">
+<h3 id="org30a5f48">Amos 8:3</h3>
+<div class="outline-text-3" id="text-org30a5f48">
+<p>
+And the hinges of the temple shall screak in that day, saith the Lord God: many shall die: silence shall be cast in every place.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a2b02c" class="outline-3">
+<h3 id="org4a2b02c">Amos 8:4</h3>
+<div class="outline-text-3" id="text-org4a2b02c">
+<p>
+Hear this, you that crush the poor, and make the needy of the land to fail,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd837146" class="outline-3">
+<h3 id="orgd837146">Amos 8:5</h3>
+<div class="outline-text-3" id="text-orgd837146">
+<p>
+Saying: When will the month be over, and we shall sell our wares: and the sabbath, and we shall open the corn: that we may lessen the measure, and increase the sicle, and may convey in deceitful balances,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeeedc73" class="outline-3">
+<h3 id="orgeeedc73">Amos 8:6</h3>
+<div class="outline-text-3" id="text-orgeeedc73">
+<p>
+That we may possess the needy for money, and the poor for a pair of shoes, and may sell the refuse of the corn?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1fdf7f" class="outline-3">
+<h3 id="orgd1fdf7f">Amos 8:7</h3>
+<div class="outline-text-3" id="text-orgd1fdf7f">
+<p>
+The Lord hath sworn against the pride of Jacob: surely I will never forget all their works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc35cda9" class="outline-3">
+<h3 id="orgc35cda9">Amos 8:8</h3>
+<div class="outline-text-3" id="text-orgc35cda9">
+<p>
+Shall not the land tremble for this, and every one mourn that dwelleth therein: and rise up altogether as a river, and be cast out, and run down as the river of Egypt?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc48cc8" class="outline-3">
+<h3 id="orgcc48cc8">Amos 8:9</h3>
+<div class="outline-text-3" id="text-orgcc48cc8">
+<p>
+And it shall come to pass in that day, saith the Lord God, that the sun shall go down at midday, and I will make the earth dark in the day of light:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec1fdca" class="outline-3">
+<h3 id="orgec1fdca">Amos 8:10</h3>
+<div class="outline-text-3" id="text-orgec1fdca">
+<p>
+And I will turn your feasts into mourning, and all your songs into lamentation: and I will bring up sackcloth upon every back of yours, and baldness upon every head: and I will make it as the mourning of an only son, and the latter end thereof as a bitter day.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaa3e40" class="outline-3">
+<h3 id="orgdaa3e40">Amos 8:11</h3>
+<div class="outline-text-3" id="text-orgdaa3e40">
+<p>
+Behold the days come, saith the Lord, and I will send forth a famine into the land: not a famine of bread, nor a thirst of water, but of hearing the word of the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9dc96a" class="outline-3">
+<h3 id="orgf9dc96a">Amos 8:12</h3>
+<div class="outline-text-3" id="text-orgf9dc96a">
+<p>
+And they shall move from sea to sea, and from the north to the east: they shall go about seeking the word of the Lord, and shall not find it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81dd5c3" class="outline-3">
+<h3 id="org81dd5c3">Amos 8:13</h3>
+<div class="outline-text-3" id="text-org81dd5c3">
+<p>
+In that day the fair virgins, and the young men shall faint for thirst.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07fab81" class="outline-3">
+<h3 id="org07fab81">Amos 8:14</h3>
+<div class="outline-text-3" id="text-org07fab81">
+<p>
+They that swear by the sin of Samaria, and say: Thy God, O Dan, liveth: and the way of Bersabee liveth: and they shall fall, and shall rise no more. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc661db3" class="outline-2">
+<h2 id="orgc661db3">Amos 9</h2>
+<div class="outline-text-2" id="text-orgc661db3">
+</div>
+<div id="outline-container-orge0aaf15" class="outline-3">
+<h3 id="orge0aaf15">Amos 9:1</h3>
+<div class="outline-text-3" id="text-orge0aaf15">
+<p>
+I saw the Lord standing upon the altar, and he said: Strike the hinges, and let the lintels be shook: for there is covetousness in the head of them all, and I will slay the last of them with the sword: there shall be no flight for them: they shall flee, and he that shall flee of them shall not be delivered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdbf268" class="outline-3">
+<h3 id="orgfdbf268">Amos 9:2</h3>
+<div class="outline-text-3" id="text-orgfdbf268">
+<p>
+Though they go down even to hell, thence shall my hand bring them out: and though they climb up to heaven, thence will I bring them down.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f6d1d9" class="outline-3">
+<h3 id="org0f6d1d9">Amos 9:3</h3>
+<div class="outline-text-3" id="text-org0f6d1d9">
+<p>
+And though they be hid in the top of Carmel, I will search and take them away from thence: and though they hide themselves from my eyes in the depth of the sea, there will I command the serpent and he shall bite them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb2c393" class="outline-3">
+<h3 id="orgbb2c393">Amos 9:4</h3>
+<div class="outline-text-3" id="text-orgbb2c393">
+<p>
+And if they go into captivity before their enemies, there will I command the sword, and it shall kill them. And I will set my eyes upon them for evil, and not for good.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e4069a" class="outline-3">
+<h3 id="org0e4069a">Amos 9:5</h3>
+<div class="outline-text-3" id="text-org0e4069a">
+<p>
+And the Lord the God of hosts is he who toucheth the earth, and it shall melt: and all that dwell therein shall mourn: and it shall rise up as a river, and shall run down as the river of Egypt.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5090491" class="outline-3">
+<h3 id="org5090491">Amos 9:6</h3>
+<div class="outline-text-3" id="text-org5090491">
+<p>
+He that buildeth his ascension in heaven, and hath founded his bundle upon the earth: who calleth the waters of the sea, and poureth them out upon the face of the earth, the Lord is his name.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org940ef5e" class="outline-3">
+<h3 id="org940ef5e">Amos 9:7</h3>
+<div class="outline-text-3" id="text-org940ef5e">
+<p>
+Are not you as the children of the Ethiopians unto me, O children of Israel, saith the Lord? did not I bring up Israel, out of the land of Egypt: and the Philistines out of Cappadocia, and the Syrians out of Cyrene?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga968d7a" class="outline-3">
+<h3 id="orga968d7a">Amos 9:8</h3>
+<div class="outline-text-3" id="text-orga968d7a">
+<p>
+Behold the eyes of the Lord God are upon the sinful kingdom, and I will destroy it from the face of the earth: but yet I will not utterly destroy the house of Jacob, saith the Lord.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadcc13d" class="outline-3">
+<h3 id="orgadcc13d">Amos 9:9</h3>
+<div class="outline-text-3" id="text-orgadcc13d">
+<p>
+For behold I will command, and I will sift the house of Israel among all nations, as corn is sifted in a sieve: and there shall not a little stone fall to the ground.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org657a696" class="outline-3">
+<h3 id="org657a696">Amos 9:10</h3>
+<div class="outline-text-3" id="text-org657a696">
+<p>
+All the sinners of my people shall fall by the sword: who say: The evils shall not approach, and shall not come upon us.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67a85ba" class="outline-3">
+<h3 id="org67a85ba">Amos 9:11</h3>
+<div class="outline-text-3" id="text-org67a85ba">
+<p>
+In that day I will raise up the tabernacle of David, that is fallen: and I will close up the breaches of the walls thereof, and repair what was fallen: and I will rebuild it as in the days of old.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org916fc76" class="outline-3">
+<h3 id="org916fc76">Amos 9:12</h3>
+<div class="outline-text-3" id="text-org916fc76">
+<p>
+That they may possess the remnant of Edom, and all nations, because my name is invoked upon them: saith the Lord that doth these things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b22242" class="outline-3">
+<h3 id="org0b22242">Amos 9:13</h3>
+<div class="outline-text-3" id="text-org0b22242">
+<p>
+Behold the days come, saith the Lord, when the ploughman shall overtake the reaper, and the treader of grapes him that soweth seed: and the mountains shall drop sweetness, and every hill shall be tilled.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94b500f" class="outline-3">
+<h3 id="org94b500f">Amos 9:14</h3>
+<div class="outline-text-3" id="text-org94b500f">
+<p>
+And I will bring back the captivity of my people Israel: and they shall build the abandoned cities, and inhabit them: and they shall plant vineyards, and drink the wine of them: and shall make gardens, and eat the fruits of them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b245aa" class="outline-3">
+<h3 id="org2b245aa">Amos 9:15</h3>
+<div class="outline-text-3" id="text-org2b245aa">
+<p>
+And I will plant them upon their own land: and I will no more pluck them out of their land which I have given them, saith the Lord thy God.  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

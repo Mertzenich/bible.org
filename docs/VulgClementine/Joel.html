@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org13eb1ad">Joel 1</a>
+<ul>
+<li><a href="#org7f37717">Joel 1:1</a></li>
+<li><a href="#org5430d82">Joel 1:2</a></li>
+<li><a href="#org81a60ae">Joel 1:3</a></li>
+<li><a href="#org06ba01c">Joel 1:4</a></li>
+<li><a href="#orgc246350">Joel 1:5</a></li>
+<li><a href="#orgc227da8">Joel 1:6</a></li>
+<li><a href="#orgbd66335">Joel 1:7</a></li>
+<li><a href="#org51393e4">Joel 1:8</a></li>
+<li><a href="#orgbcec6b0">Joel 1:9</a></li>
+<li><a href="#orgf5d88d4">Joel 1:10</a></li>
+<li><a href="#org3bef9a1">Joel 1:11</a></li>
+<li><a href="#orga7ac1ed">Joel 1:12</a></li>
+<li><a href="#org6976ab4">Joel 1:13</a></li>
+<li><a href="#orgfd589cb">Joel 1:14</a></li>
+<li><a href="#org932a398">Joel 1:15</a></li>
+<li><a href="#orgde39291">Joel 1:16</a></li>
+<li><a href="#orgf178a66">Joel 1:17</a></li>
+<li><a href="#org87e2763">Joel 1:18</a></li>
+<li><a href="#org0ee57c0">Joel 1:19</a></li>
+<li><a href="#org1c5dc43">Joel 1:20</a></li>
+</ul>
+</li>
+<li><a href="#org098f278">Joel 2</a>
+<ul>
+<li><a href="#org244c01e">Joel 2:1</a></li>
+<li><a href="#org623b88d">Joel 2:2</a></li>
+<li><a href="#org665f60d">Joel 2:3</a></li>
+<li><a href="#orga1165bc">Joel 2:4</a></li>
+<li><a href="#orgeb1aa86">Joel 2:5</a></li>
+<li><a href="#orgc23b450">Joel 2:6</a></li>
+<li><a href="#org7156a26">Joel 2:7</a></li>
+<li><a href="#org689ec13">Joel 2:8</a></li>
+<li><a href="#org227bb3c">Joel 2:9</a></li>
+<li><a href="#orgd45e168">Joel 2:10</a></li>
+<li><a href="#orgbbadc51">Joel 2:11</a></li>
+<li><a href="#orgde5306f">Joel 2:12</a></li>
+<li><a href="#org93096c6">Joel 2:13</a></li>
+<li><a href="#orgb553f13">Joel 2:14</a></li>
+<li><a href="#orge844be8">Joel 2:15</a></li>
+<li><a href="#orgcea24a0">Joel 2:16</a></li>
+<li><a href="#org44c3f08">Joel 2:17</a></li>
+<li><a href="#org63e5732">Joel 2:18</a></li>
+<li><a href="#orge632edf">Joel 2:19</a></li>
+<li><a href="#org5f276d2">Joel 2:20</a></li>
+<li><a href="#orge89ddc8">Joel 2:21</a></li>
+<li><a href="#org77aba20">Joel 2:22</a></li>
+<li><a href="#org00d3103">Joel 2:23</a></li>
+<li><a href="#orgf601b4e">Joel 2:24</a></li>
+<li><a href="#orgbb38739">Joel 2:25</a></li>
+<li><a href="#org1a633b8">Joel 2:26</a></li>
+<li><a href="#org995c2bc">Joel 2:27</a></li>
+<li><a href="#orga3358fb">Joel 2:28</a></li>
+<li><a href="#orgcdf8d4a">Joel 2:29</a></li>
+<li><a href="#org898d235">Joel 2:30</a></li>
+<li><a href="#org485e770">Joel 2:31</a></li>
+<li><a href="#org0bb49b8">Joel 2:32</a></li>
+</ul>
+</li>
+<li><a href="#org70562fe">Joel 3</a>
+<ul>
+<li><a href="#org6f84b07">Joel 3:1</a></li>
+<li><a href="#orgad67401">Joel 3:2</a></li>
+<li><a href="#org278d91a">Joel 3:3</a></li>
+<li><a href="#org0c6aef0">Joel 3:4</a></li>
+<li><a href="#org0da8db5">Joel 3:5</a></li>
+<li><a href="#org204af4a">Joel 3:6</a></li>
+<li><a href="#orgef691e3">Joel 3:7</a></li>
+<li><a href="#org755fabb">Joel 3:8</a></li>
+<li><a href="#org629dd39">Joel 3:9</a></li>
+<li><a href="#orgb7aa0ef">Joel 3:10</a></li>
+<li><a href="#orgd6534d3">Joel 3:11</a></li>
+<li><a href="#orgd5f6fc4">Joel 3:12</a></li>
+<li><a href="#org066a5ee">Joel 3:13</a></li>
+<li><a href="#org15dd449">Joel 3:14</a></li>
+<li><a href="#org2649dec">Joel 3:15</a></li>
+<li><a href="#org78e61a3">Joel 3:16</a></li>
+<li><a href="#orga3c1e65">Joel 3:17</a></li>
+<li><a href="#org54b90d4">Joel 3:18</a></li>
+<li><a href="#orgeb1cc3a">Joel 3:19</a></li>
+<li><a href="#org854e6a9">Joel 3:20</a></li>
+<li><a href="#orgcce9edc">Joel 3:21</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13eb1ad" class="outline-2">
+<h2 id="org13eb1ad">Joel 1</h2>
+<div class="outline-text-2" id="text-org13eb1ad">
+</div>
+<div id="outline-container-org7f37717" class="outline-3">
+<h3 id="org7f37717">Joel 1:1</h3>
+<div class="outline-text-3" id="text-org7f37717">
+<p>
+Verbum Domini, quod factum est ad Joël, filium Phatuel.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5430d82" class="outline-3">
+<h3 id="org5430d82">Joel 1:2</h3>
+<div class="outline-text-3" id="text-org5430d82">
+<p>
+Audite hoc, senes,  et auribus percipite, omnes habitatores terræ :  si factum est istud in diebus vestris,  aut in diebus patrum vestrorum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81a60ae" class="outline-3">
+<h3 id="org81a60ae">Joel 1:3</h3>
+<div class="outline-text-3" id="text-org81a60ae">
+<p>
+Super hoc filiis vestris narrate,  et filii vestri filiis suis,  et filii eorum generationi alteræ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06ba01c" class="outline-3">
+<h3 id="org06ba01c">Joel 1:4</h3>
+<div class="outline-text-3" id="text-org06ba01c">
+<p>
+Residuum erucæ comedit locusta,  et residuum locustæ comedit bruchus,  et residuum bruchi comedit rubigo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc246350" class="outline-3">
+<h3 id="orgc246350">Joel 1:5</h3>
+<div class="outline-text-3" id="text-orgc246350">
+<p>
+Expergiscimini, ebrii,  et flete et ululate, omnes qui bibitis vinum in dulcedine,  quoniam periit ab ore vestro. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc227da8" class="outline-3">
+<h3 id="orgc227da8">Joel 1:6</h3>
+<div class="outline-text-3" id="text-orgc227da8">
+<p>
+Gens enim ascendit super terram meam,  fortis et innumerabilis :  dentes ejus ut dentes leonis,  et molares ejus ut catuli leonis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd66335" class="outline-3">
+<h3 id="orgbd66335">Joel 1:7</h3>
+<div class="outline-text-3" id="text-orgbd66335">
+<p>
+Posuit vineam meam in desertum,  et ficum meam decorticavit ;  nudans spoliavit eam, et projecit :  albi facti sunt rami ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51393e4" class="outline-3">
+<h3 id="org51393e4">Joel 1:8</h3>
+<div class="outline-text-3" id="text-org51393e4">
+<p>
+Plange quasi virgo accincta sacco super virum pubertatis suæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcec6b0" class="outline-3">
+<h3 id="orgbcec6b0">Joel 1:9</h3>
+<div class="outline-text-3" id="text-orgbcec6b0">
+<p>
+Periit sacrificium et libatio de domo Domini ;  luxerunt sacerdotes, ministri Domini. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5d88d4" class="outline-3">
+<h3 id="orgf5d88d4">Joel 1:10</h3>
+<div class="outline-text-3" id="text-orgf5d88d4">
+<p>
+Depopulata est regio,  luxit humus,  quoniam devastatum est triticum,  confusum est vinum,  elanguit oleum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3bef9a1" class="outline-3">
+<h3 id="org3bef9a1">Joel 1:11</h3>
+<div class="outline-text-3" id="text-org3bef9a1">
+<p>
+Confusi sunt agricolæ,  ululaverunt vinitores  super frumento et hordeo,  quia periit messis agri. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7ac1ed" class="outline-3">
+<h3 id="orga7ac1ed">Joel 1:12</h3>
+<div class="outline-text-3" id="text-orga7ac1ed">
+<p>
+Vinea confusa est,  et ficus elanguit ;  malogranatum, et palma, et malum,  et omnia ligna agri aruerunt,  quia confusum est gaudium a filiis hominum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6976ab4" class="outline-3">
+<h3 id="org6976ab4">Joel 1:13</h3>
+<div class="outline-text-3" id="text-org6976ab4">
+<p>
+Accingite vos, et plangite, sacerdotes :  ululate, ministri altaris ;  ingredimini, cubate in sacco, ministri Dei mei,  quoniam interiit de domo Dei vestri sacrificium et libatio. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd589cb" class="outline-3">
+<h3 id="orgfd589cb">Joel 1:14</h3>
+<div class="outline-text-3" id="text-orgfd589cb">
+<p>
+Sanctificate jejunium, vocate cœtum,  congregate senes, omnes habitatores terræ  in domum Dei vestri,  et clamate ad Dominum : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org932a398" class="outline-3">
+<h3 id="org932a398">Joel 1:15</h3>
+<div class="outline-text-3" id="text-org932a398">
+<p>
+A, a, a, diei !  quia prope est dies Domini,  et quasi vastitas a potente veniet. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde39291" class="outline-3">
+<h3 id="orgde39291">Joel 1:16</h3>
+<div class="outline-text-3" id="text-orgde39291">
+<p>
+Numquid non coram oculis vestris alimenta perierunt  de domo Dei nostri, lætitia et exsultatio ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf178a66" class="outline-3">
+<h3 id="orgf178a66">Joel 1:17</h3>
+<div class="outline-text-3" id="text-orgf178a66">
+<p>
+Computruerunt jumenta in stercore suo,  demolita sunt horrea,  dissipatæ sunt apothecæ,  quoniam confusum est triticum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87e2763" class="outline-3">
+<h3 id="org87e2763">Joel 1:18</h3>
+<div class="outline-text-3" id="text-org87e2763">
+<p>
+Quid ingemuit animal,  mugierunt greges armenti ?  quia non est pascua eis ;  sed et greges pecorum disperierunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ee57c0" class="outline-3">
+<h3 id="org0ee57c0">Joel 1:19</h3>
+<div class="outline-text-3" id="text-org0ee57c0">
+<p>
+Ad te, Domine, clamabo,  quia ignis comedit speciosa deserti,  et flamma succendit omnia ligna regionis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c5dc43" class="outline-3">
+<h3 id="org1c5dc43">Joel 1:20</h3>
+<div class="outline-text-3" id="text-org1c5dc43">
+<p>
+Sed et bestiæ agri, quasi area sitiens imbrem, suspexerunt ad te,  quoniam exsiccati sunt fontes aquarum,  et ignis devoravit speciosa deserti.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org098f278" class="outline-2">
+<h2 id="org098f278">Joel 2</h2>
+<div class="outline-text-2" id="text-org098f278">
+</div>
+<div id="outline-container-org244c01e" class="outline-3">
+<h3 id="org244c01e">Joel 2:1</h3>
+<div class="outline-text-3" id="text-org244c01e">
+<p>
+Canite tuba in Sion,  ululate in monte sancto meo,  conturbentur omnes habitatores terræ :  quia venit dies Domini, quia prope est. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org623b88d" class="outline-3">
+<h3 id="org623b88d">Joel 2:2</h3>
+<div class="outline-text-3" id="text-org623b88d">
+<p>
+Dies tenebrarum et caliginis,  dies nubis et turbinis ;  quasi mane expansum super montes  populus multus et fortis :  similis ei non fuit a principio,  et post eum non erit  usque in annos generationis et generationis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org665f60d" class="outline-3">
+<h3 id="org665f60d">Joel 2:3</h3>
+<div class="outline-text-3" id="text-org665f60d">
+<p>
+Ante faciem ejus ignis vorans,  et post eum exurens flamma.  Quasi hortus voluptatis terra coram eo,  et post eum solitudo deserti,  neque est qui effugiat eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1165bc" class="outline-3">
+<h3 id="orga1165bc">Joel 2:4</h3>
+<div class="outline-text-3" id="text-orga1165bc">
+<p>
+Quasi aspectus equorum, aspectus eorum ;  et quasi equites, sic current. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb1aa86" class="outline-3">
+<h3 id="orgeb1aa86">Joel 2:5</h3>
+<div class="outline-text-3" id="text-orgeb1aa86">
+<p>
+Sicut sonitus quadrigarum super capita montium exilient,  sicut sonitus flammæ ignis devorantis stipulam,  velut populus fortis præparatus ad prælium. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc23b450" class="outline-3">
+<h3 id="orgc23b450">Joel 2:6</h3>
+<div class="outline-text-3" id="text-orgc23b450">
+<p>
+A facie ejus cruciabuntur populi ;  omnes vultus redigentur in ollam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7156a26" class="outline-3">
+<h3 id="org7156a26">Joel 2:7</h3>
+<div class="outline-text-3" id="text-org7156a26">
+<p>
+Sicut fortes current ;  quasi viri bellatores ascendent murum :  viri in viis suis gradientur,  et non declinabunt a semitis suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org689ec13" class="outline-3">
+<h3 id="org689ec13">Joel 2:8</h3>
+<div class="outline-text-3" id="text-org689ec13">
+<p>
+Unusquisque fratrem suum non coarctabit,  singuli in calle suo ambulabunt ;  sed et per fenestras cadent, et non demolientur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org227bb3c" class="outline-3">
+<h3 id="org227bb3c">Joel 2:9</h3>
+<div class="outline-text-3" id="text-org227bb3c">
+<p>
+Urbem ingredientur, in muro current,  domos conscendent, per fenestras intrabunt quasi fur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd45e168" class="outline-3">
+<h3 id="orgd45e168">Joel 2:10</h3>
+<div class="outline-text-3" id="text-orgd45e168">
+<p>
+A facie ejus contremuit terra,  moti sunt cæli,  sol et luna obtenebrati sunt,  et stellæ retraxerunt splendorem suum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbbadc51" class="outline-3">
+<h3 id="orgbbadc51">Joel 2:11</h3>
+<div class="outline-text-3" id="text-orgbbadc51">
+<p>
+Et Dominus dedit vocem suam ante faciem exercitus sui,  quia multa sunt nimis castra ejus,  quia fortia et facientia verbum ejus :  magnus enim dies Domini, et terribilis valde,  et quis sustinebit eum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde5306f" class="outline-3">
+<h3 id="orgde5306f">Joel 2:12</h3>
+<div class="outline-text-3" id="text-orgde5306f">
+<p>
+Nunc ergo, dicit Dominus,  convertimini ad me in toto corde vestro,  in jejunio, et in fletu, et in planctu. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93096c6" class="outline-3">
+<h3 id="org93096c6">Joel 2:13</h3>
+<div class="outline-text-3" id="text-org93096c6">
+<p>
+Et scindite corda vestra, et non vestimenta vestra ;  et convertimini ad Dominum Deum vestrum,  quia benignus et misericors est,  patiens et multæ misericordiæ,  et præstabilis super malitia. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb553f13" class="outline-3">
+<h3 id="orgb553f13">Joel 2:14</h3>
+<div class="outline-text-3" id="text-orgb553f13">
+<p>
+Quis scit si convertatur, et ignoscat,  et relinquat post se benedictionem, sacrificium et libamen Domino Deo vestro ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge844be8" class="outline-3">
+<h3 id="orge844be8">Joel 2:15</h3>
+<div class="outline-text-3" id="text-orge844be8">
+<p>
+Canite tuba in Sion,  sanctificate jejunium, vocate cœtum : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcea24a0" class="outline-3">
+<h3 id="orgcea24a0">Joel 2:16</h3>
+<div class="outline-text-3" id="text-orgcea24a0">
+<p>
+congregate populum, sanctificate ecclesiam,  coadunate senes, congregate parvulos, et sugentes ubera ;  egrediatur sponsus de cubili suo,  et sponsa de thalamo suo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44c3f08" class="outline-3">
+<h3 id="org44c3f08">Joel 2:17</h3>
+<div class="outline-text-3" id="text-org44c3f08">
+<p>
+Inter vestibulum et altare plorabunt sacerdotes, ministri Domini,  et dicent : Parce, Domine, parce populo tuo ;  et ne des hæreditatem tuam in opprobrium,  ut dominentur eis nationes.  Quare dicunt in populis : Ubi est Deus eorum ? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63e5732" class="outline-3">
+<h3 id="org63e5732">Joel 2:18</h3>
+<div class="outline-text-3" id="text-org63e5732">
+<p>
+Zelatus est Dominus terram suam,  et pepercit populo suo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge632edf" class="outline-3">
+<h3 id="orge632edf">Joel 2:19</h3>
+<div class="outline-text-3" id="text-orge632edf">
+<p>
+Et respondit Dominus, et dixit populo suo :  Ecce ego mittam vobis frumentum, et vinum, et oleum,  et replebimini eis ;  et non dabo vos ultra opprobrium in gentibus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f276d2" class="outline-3">
+<h3 id="org5f276d2">Joel 2:20</h3>
+<div class="outline-text-3" id="text-org5f276d2">
+<p>
+Et eum qui ab aquilone est procul faciam a vobis,  et expellam eum in terram inviam et desertam :  faciem ejus contra mare orientale,  et extremum ejus ad mare novissimum :  et ascendet fœtor ejus,  et ascendet putredo ejus,  quia superbe egit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge89ddc8" class="outline-3">
+<h3 id="orge89ddc8">Joel 2:21</h3>
+<div class="outline-text-3" id="text-orge89ddc8">
+<p>
+Noli timere, terra :  exsulta, et lætare,  quoniam magnificavit Dominus ut faceret. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77aba20" class="outline-3">
+<h3 id="org77aba20">Joel 2:22</h3>
+<div class="outline-text-3" id="text-org77aba20">
+<p>
+Nolite timere, animalia regionis,  quia germinaverunt speciosa deserti ;  quia lignum attulit fructum suum,  ficus et vinea dederunt virtutem suam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00d3103" class="outline-3">
+<h3 id="org00d3103">Joel 2:23</h3>
+<div class="outline-text-3" id="text-org00d3103">
+<p>
+Et, filii Sion, exsultate,  et lætamini in Domino Deo vestro,  quia dedit vobis doctorem justitiæ,  et descendere faciet ad vos imbrem matutinum et serotinum,  sicut in principio. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf601b4e" class="outline-3">
+<h3 id="orgf601b4e">Joel 2:24</h3>
+<div class="outline-text-3" id="text-orgf601b4e">
+<p>
+Et implebuntur areæ frumento,  et redundabunt torcularia vino et oleo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb38739" class="outline-3">
+<h3 id="orgbb38739">Joel 2:25</h3>
+<div class="outline-text-3" id="text-orgbb38739">
+<p>
+Et reddam vobis annos, quos comedit locusta,  bruchus, et rubigo, et eruca :  fortitudo mea magna quam misi in vos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a633b8" class="outline-3">
+<h3 id="org1a633b8">Joel 2:26</h3>
+<div class="outline-text-3" id="text-org1a633b8">
+<p>
+Et comedetis vescentes, et saturabimini ;  et laudabitis nomen Domini Dei vestri,  qui fecit mirabilia vobiscum ;  et non confundetur populus meus in sempiternum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org995c2bc" class="outline-3">
+<h3 id="org995c2bc">Joel 2:27</h3>
+<div class="outline-text-3" id="text-org995c2bc">
+<p>
+Et scietis quia in medio Israël ego sum,  et ego Dominus Deus vester, et non est amplius ;  et non confundetur populus meus in æternum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3358fb" class="outline-3">
+<h3 id="orga3358fb">Joel 2:28</h3>
+<div class="outline-text-3" id="text-orga3358fb">
+<p>
+Et erit post hæc :  effundam spiritum meum super omnem carnem,  et prophetabunt filii vestri et filiæ vestræ :  senes vestri somnia somniabunt,  et juvenes vestri visiones videbunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcdf8d4a" class="outline-3">
+<h3 id="orgcdf8d4a">Joel 2:29</h3>
+<div class="outline-text-3" id="text-orgcdf8d4a">
+<p>
+Sed et super servos meos et ancillas  in diebus illis effundam spiritum meum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org898d235" class="outline-3">
+<h3 id="org898d235">Joel 2:30</h3>
+<div class="outline-text-3" id="text-org898d235">
+<p>
+Et dabo prodigia in cælo et in terra,  sanguinem, et ignem, et vaporem fumi. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org485e770" class="outline-3">
+<h3 id="org485e770">Joel 2:31</h3>
+<div class="outline-text-3" id="text-org485e770">
+<p>
+Sol convertetur in tenebras,  et luna in sanguinem,  antequam veniat dies Domini magnus et horribilis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bb49b8" class="outline-3">
+<h3 id="org0bb49b8">Joel 2:32</h3>
+<div class="outline-text-3" id="text-org0bb49b8">
+<p>
+Et erit : omnis qui invocaverit nomen Domini, salvus erit :  quia in monte Sion et in Jerusalem  erit salvatio, sicut dixit Dominus,  et in residuis quos Dominus vocaverit.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org70562fe" class="outline-2">
+<h2 id="org70562fe">Joel 3</h2>
+<div class="outline-text-2" id="text-org70562fe">
+</div>
+<div id="outline-container-org6f84b07" class="outline-3">
+<h3 id="org6f84b07">Joel 3:1</h3>
+<div class="outline-text-3" id="text-org6f84b07">
+<p>
+Quia ecce in diebus illis, et in tempore illo,  cum convertero captivitatem Juda et Jerusalem, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad67401" class="outline-3">
+<h3 id="orgad67401">Joel 3:2</h3>
+<div class="outline-text-3" id="text-orgad67401">
+<p>
+congregabo omnes gentes,  et deducam eas in vallem Josaphat ;  et disceptabo cum eis ibi super populo meo,  et hæreditate mea Israël,  quos disperserunt in nationibus,  et terram meam diviserunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org278d91a" class="outline-3">
+<h3 id="org278d91a">Joel 3:3</h3>
+<div class="outline-text-3" id="text-org278d91a">
+<p>
+Et super populum meum miserunt sortem ;  et posuerunt puerum in prostibulo,  et puellam vendiderunt pro vino ut biberent. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c6aef0" class="outline-3">
+<h3 id="org0c6aef0">Joel 3:4</h3>
+<div class="outline-text-3" id="text-org0c6aef0">
+<p>
+Verum quid mihi et vobis, Tyrus et Sidon,  et omnis terminus Palæstinorum ?  numquid ultionem vos reddetis mihi ?  et si ulciscimini vos contra me,  cito velociter reddam vicissitudinem vobis super caput vestrum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0da8db5" class="outline-3">
+<h3 id="org0da8db5">Joel 3:5</h3>
+<div class="outline-text-3" id="text-org0da8db5">
+<p>
+Argentum enim meum et aurum tulistis,  et desiderabilia mea et pulcherrima intulistis in delubra vestra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org204af4a" class="outline-3">
+<h3 id="org204af4a">Joel 3:6</h3>
+<div class="outline-text-3" id="text-org204af4a">
+<p>
+Et filios Juda et filios Jerusalem vendidistis filiis Græcorum,  ut longe faceretis eos de finibus suis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef691e3" class="outline-3">
+<h3 id="orgef691e3">Joel 3:7</h3>
+<div class="outline-text-3" id="text-orgef691e3">
+<p>
+Ecce ego suscitabo eos de loco in quo vendidistis eos,  et convertam retributionem vestram in caput vestrum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org755fabb" class="outline-3">
+<h3 id="org755fabb">Joel 3:8</h3>
+<div class="outline-text-3" id="text-org755fabb">
+<p>
+Et vendam filios vestros et filias vestras in manibus filiorum Juda,  et venundabunt eos Sabæis, genti longinquæ,  quia Dominus locutus est. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org629dd39" class="outline-3">
+<h3 id="org629dd39">Joel 3:9</h3>
+<div class="outline-text-3" id="text-org629dd39">
+<p>
+Clamate hoc in gentibus,  sanctificate bellum,  suscitate robustos :  accedant, ascendant omnes viri bellatores. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7aa0ef" class="outline-3">
+<h3 id="orgb7aa0ef">Joel 3:10</h3>
+<div class="outline-text-3" id="text-orgb7aa0ef">
+<p>
+Concidite aratra vestra in gladios,  et ligones vestros in lanceas.  Infirmus dicat : Quia fortis ego sum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6534d3" class="outline-3">
+<h3 id="orgd6534d3">Joel 3:11</h3>
+<div class="outline-text-3" id="text-orgd6534d3">
+<p>
+Erumpite, et venite, omnes gentes de circuitu,  et congregamini ;  ibi occumbere faciet Dominus robustos tuos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5f6fc4" class="outline-3">
+<h3 id="orgd5f6fc4">Joel 3:12</h3>
+<div class="outline-text-3" id="text-orgd5f6fc4">
+<p>
+Consurgant, et ascendant gentes in vallem Josaphat,  quia ibi sedebo ut judicem omnes gentes in circuitu. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org066a5ee" class="outline-3">
+<h3 id="org066a5ee">Joel 3:13</h3>
+<div class="outline-text-3" id="text-org066a5ee">
+<p>
+Mittite falces, quoniam maturavit messis ;  venite, et descendite,  quia plenum est torcular, exuberant torcularia :  quia multiplicata est malitia eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15dd449" class="outline-3">
+<h3 id="org15dd449">Joel 3:14</h3>
+<div class="outline-text-3" id="text-org15dd449">
+<p>
+Populi, populi, in valle concisionis,  quia juxta est dies Domini in valle concisionis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2649dec" class="outline-3">
+<h3 id="org2649dec">Joel 3:15</h3>
+<div class="outline-text-3" id="text-org2649dec">
+<p>
+Sol et luna obtenebrati sunt,  et stellæ retraxerunt splendorem suum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78e61a3" class="outline-3">
+<h3 id="org78e61a3">Joel 3:16</h3>
+<div class="outline-text-3" id="text-org78e61a3">
+<p>
+Et Dominus de Sion rugiet,  et de Jerusalem dabit vocem suam,  et movebuntur cæli et terra ;  et Dominus spes populi sui,  et fortitudo filiorum Israël. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3c1e65" class="outline-3">
+<h3 id="orga3c1e65">Joel 3:17</h3>
+<div class="outline-text-3" id="text-orga3c1e65">
+<p>
+Et scietis quia ego Dominus Deus vester,  habitans in Sion monte sancto meo ;  et erit Jerusalem sancta,  et alieni non transibunt per eam amplius. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54b90d4" class="outline-3">
+<h3 id="org54b90d4">Joel 3:18</h3>
+<div class="outline-text-3" id="text-org54b90d4">
+<p>
+Et erit in die illa : stillabunt montes dulcedinem,  et colles fluent lacte,  et per omnes rivos Juda ibunt aquæ ;  et fons de domo Domini egredietur,  et irrigabit torrentem spinarum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb1cc3a" class="outline-3">
+<h3 id="orgeb1cc3a">Joel 3:19</h3>
+<div class="outline-text-3" id="text-orgeb1cc3a">
+<p>
+Ægyptus in desolationem erit,  et Idumæa in desertum perditionis,  pro eo quod inique egerint in filios Juda,  et effuderint sanguinem innocentem in terra sua. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org854e6a9" class="outline-3">
+<h3 id="org854e6a9">Joel 3:20</h3>
+<div class="outline-text-3" id="text-org854e6a9">
+<p>
+Et Judæa in æternum habitabitur,  et Jerusalem in generationem et generationem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcce9edc" class="outline-3">
+<h3 id="orgcce9edc">Joel 3:21</h3>
+<div class="outline-text-3" id="text-orgcce9edc">
+<p>
+Et mundabo sanguinem eorum, quem non mundaveram ;  et Dominus commorabitur in Sion.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

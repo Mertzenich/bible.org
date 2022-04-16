@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3c51dd6">Zephaniah 1</a>
+<ul>
+<li><a href="#org7bc269a">Zephaniah 1:1</a></li>
+<li><a href="#org4dad50e">Zephaniah 1:2</a></li>
+<li><a href="#org7d5a733">Zephaniah 1:3</a></li>
+<li><a href="#org4937a1f">Zephaniah 1:4</a></li>
+<li><a href="#org56bfd5d">Zephaniah 1:5</a></li>
+<li><a href="#org7a0f5aa">Zephaniah 1:6</a></li>
+<li><a href="#org48c743b">Zephaniah 1:7</a></li>
+<li><a href="#org97f0070">Zephaniah 1:8</a></li>
+<li><a href="#orga1a483f">Zephaniah 1:9</a></li>
+<li><a href="#orgabd4520">Zephaniah 1:10</a></li>
+<li><a href="#org31eacd5">Zephaniah 1:11</a></li>
+<li><a href="#orga15ba5d">Zephaniah 1:12</a></li>
+<li><a href="#org693f58a">Zephaniah 1:13</a></li>
+<li><a href="#org580d7d4">Zephaniah 1:14</a></li>
+<li><a href="#org209b4c1">Zephaniah 1:15</a></li>
+<li><a href="#orgef4ce91">Zephaniah 1:16</a></li>
+<li><a href="#orgd05273c">Zephaniah 1:17</a></li>
+<li><a href="#org11f484a">Zephaniah 1:18</a></li>
+</ul>
+</li>
+<li><a href="#org44f730f">Zephaniah 2</a>
+<ul>
+<li><a href="#org96a9c1d">Zephaniah 2:1</a></li>
+<li><a href="#org582eba7">Zephaniah 2:2</a></li>
+<li><a href="#orge9d88ef">Zephaniah 2:3</a></li>
+<li><a href="#org79c808d">Zephaniah 2:4</a></li>
+<li><a href="#org610fc35">Zephaniah 2:5</a></li>
+<li><a href="#org5f770b1">Zephaniah 2:6</a></li>
+<li><a href="#org51241aa">Zephaniah 2:7</a></li>
+<li><a href="#org420c995">Zephaniah 2:8</a></li>
+<li><a href="#org5357648">Zephaniah 2:9</a></li>
+<li><a href="#org5d289c0">Zephaniah 2:10</a></li>
+<li><a href="#org1babd27">Zephaniah 2:11</a></li>
+<li><a href="#org4ade0c2">Zephaniah 2:12</a></li>
+<li><a href="#org62295e8">Zephaniah 2:13</a></li>
+<li><a href="#org96a350b">Zephaniah 2:14</a></li>
+<li><a href="#orgc6fd669">Zephaniah 2:15</a></li>
+</ul>
+</li>
+<li><a href="#org969696a">Zephaniah 3</a>
+<ul>
+<li><a href="#org38983fc">Zephaniah 3:1</a></li>
+<li><a href="#org2fa909f">Zephaniah 3:2</a></li>
+<li><a href="#org7542404">Zephaniah 3:3</a></li>
+<li><a href="#org76e944c">Zephaniah 3:4</a></li>
+<li><a href="#org7e74fb3">Zephaniah 3:5</a></li>
+<li><a href="#org4766345">Zephaniah 3:6</a></li>
+<li><a href="#orge7ec0b4">Zephaniah 3:7</a></li>
+<li><a href="#org8d610ae">Zephaniah 3:8</a></li>
+<li><a href="#orgf8e8d69">Zephaniah 3:9</a></li>
+<li><a href="#org994a199">Zephaniah 3:10</a></li>
+<li><a href="#orgb4ad569">Zephaniah 3:11</a></li>
+<li><a href="#org0ac7f73">Zephaniah 3:12</a></li>
+<li><a href="#orgda4c411">Zephaniah 3:13</a></li>
+<li><a href="#org60e8dd5">Zephaniah 3:14</a></li>
+<li><a href="#org5ed7230">Zephaniah 3:15</a></li>
+<li><a href="#orgd1c6c9a">Zephaniah 3:16</a></li>
+<li><a href="#org61f07ed">Zephaniah 3:17</a></li>
+<li><a href="#orgfa4b3a4">Zephaniah 3:18</a></li>
+<li><a href="#org326d554">Zephaniah 3:19</a></li>
+<li><a href="#orgeb3a709">Zephaniah 3:20</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3c51dd6" class="outline-2">
+<h2 id="org3c51dd6">Zephaniah 1</h2>
+<div class="outline-text-2" id="text-org3c51dd6">
+</div>
+<div id="outline-container-org7bc269a" class="outline-3">
+<h3 id="org7bc269a">Zephaniah 1:1</h3>
+<div class="outline-text-3" id="text-org7bc269a">
+<p>
+Verbum Domini quod factum est ad Sophoniam, filium Chusi, filii Godoliæ, filii Amariæ, filii Ezeciæ, in diebus Josiæ, filii Amon, regis Judæ.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4dad50e" class="outline-3">
+<h3 id="org4dad50e">Zephaniah 1:2</h3>
+<div class="outline-text-3" id="text-org4dad50e">
+<p>
+Congregans congregabo omnia a facie terræ, dicit Dominus : 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d5a733" class="outline-3">
+<h3 id="org7d5a733">Zephaniah 1:3</h3>
+<div class="outline-text-3" id="text-org7d5a733">
+<p>
+congregans hominem et pecus,  congregans volatilia cæli et pisces maris :  et ruinæ impiorum erunt,  et disperdam homines a facie terræ, dicit Dominus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4937a1f" class="outline-3">
+<h3 id="org4937a1f">Zephaniah 1:4</h3>
+<div class="outline-text-3" id="text-org4937a1f">
+<p>
+Et extendam manum meam super Judam  et super omnes habitantes Jerusalem :  et disperdam de loco hoc reliquias Baal,  et nomina ædituorum cum sacerdotibus ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56bfd5d" class="outline-3">
+<h3 id="org56bfd5d">Zephaniah 1:5</h3>
+<div class="outline-text-3" id="text-org56bfd5d">
+<p>
+et eos qui adorant super tecta militiam cæli,  et adorant et jurant in Domino,  et jurant in Melchom ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a0f5aa" class="outline-3">
+<h3 id="org7a0f5aa">Zephaniah 1:6</h3>
+<div class="outline-text-3" id="text-org7a0f5aa">
+<p>
+et qui avertuntur de post tergum Domini,  et qui non quæsierunt Dominum,  nec investigaverunt eum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48c743b" class="outline-3">
+<h3 id="org48c743b">Zephaniah 1:7</h3>
+<div class="outline-text-3" id="text-org48c743b">
+<p>
+Silete a facie Domini Dei,  quia juxta est dies Domini :  quia præparavit Dominus hostiam ;  sanctificavit vocatos suos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97f0070" class="outline-3">
+<h3 id="org97f0070">Zephaniah 1:8</h3>
+<div class="outline-text-3" id="text-org97f0070">
+<p>
+Et erit : in die hostiæ Domini,  visitabo super principes,  et super filios regis,  et super omnes qui induti sunt veste peregrina ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1a483f" class="outline-3">
+<h3 id="orga1a483f">Zephaniah 1:9</h3>
+<div class="outline-text-3" id="text-orga1a483f">
+<p>
+et visitabo super omnem qui arroganter ingreditur super limen in die illa,  qui complent domum Domini Dei sui iniquitate et dolo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabd4520" class="outline-3">
+<h3 id="orgabd4520">Zephaniah 1:10</h3>
+<div class="outline-text-3" id="text-orgabd4520">
+<p>
+Et erit in die illa, dicit Dominus,  vox clamoris a porta piscium,  et ululatus a Secunda,  et contritio magna a collibus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31eacd5" class="outline-3">
+<h3 id="org31eacd5">Zephaniah 1:11</h3>
+<div class="outline-text-3" id="text-org31eacd5">
+<p>
+Ululate, habitatores Pilæ :  conticuit omnis populus Chanaan,  disperierunt omnes involuti argento. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga15ba5d" class="outline-3">
+<h3 id="orga15ba5d">Zephaniah 1:12</h3>
+<div class="outline-text-3" id="text-orga15ba5d">
+<p>
+Et erit in tempore illo :  scrutabor Jerusalem in lucernis,  et visitabo super viros defixos in fæcibus suis,  qui dicunt in cordibus suis :  Non faciet bene Dominus, et non faciet male. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org693f58a" class="outline-3">
+<h3 id="org693f58a">Zephaniah 1:13</h3>
+<div class="outline-text-3" id="text-org693f58a">
+<p>
+Et erit fortitudo eorum in direptionem,  et domus eorum in desertum :  et ædificabunt domos, et non habitabunt ;  et plantabunt vineas, et non bibent vinum earum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org580d7d4" class="outline-3">
+<h3 id="org580d7d4">Zephaniah 1:14</h3>
+<div class="outline-text-3" id="text-org580d7d4">
+<p>
+Juxta est dies Domini magnus :  juxta est, et velox nimis.  Vox diei Domini amara :  tribulabitur ibi fortis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org209b4c1" class="outline-3">
+<h3 id="org209b4c1">Zephaniah 1:15</h3>
+<div class="outline-text-3" id="text-org209b4c1">
+<p>
+Dies iræ dies illa,  dies tribulationis et angustiæ,  dies calamitatis et miseriæ,  dies tenebrarum et caliginis,  dies nebulæ et turbinis, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef4ce91" class="outline-3">
+<h3 id="orgef4ce91">Zephaniah 1:16</h3>
+<div class="outline-text-3" id="text-orgef4ce91">
+<p>
+dies tubæ et clangoris super civitates munitas,  et super angulos excelsos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd05273c" class="outline-3">
+<h3 id="orgd05273c">Zephaniah 1:17</h3>
+<div class="outline-text-3" id="text-orgd05273c">
+<p>
+Et tribulabo homines, et ambulabunt ut cæci,  quia Domino peccaverunt ;  et effundetur sanguis eorum sicut humus,  et corpora eorum sicut stercora. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11f484a" class="outline-3">
+<h3 id="org11f484a">Zephaniah 1:18</h3>
+<div class="outline-text-3" id="text-org11f484a">
+<p>
+Sed et argentum eorum et aurum eorum non poterit liberare eos  in die iræ Domini :  in igne zeli ejus devorabitur omnis terra,  quia consummationem cum festinatione faciet  cunctis habitantibus terram.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org44f730f" class="outline-2">
+<h2 id="org44f730f">Zephaniah 2</h2>
+<div class="outline-text-2" id="text-org44f730f">
+</div>
+<div id="outline-container-org96a9c1d" class="outline-3">
+<h3 id="org96a9c1d">Zephaniah 2:1</h3>
+<div class="outline-text-3" id="text-org96a9c1d">
+<p>
+Convenite, congregamini, gens non amabilis, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org582eba7" class="outline-3">
+<h3 id="org582eba7">Zephaniah 2:2</h3>
+<div class="outline-text-3" id="text-org582eba7">
+<p>
+priusquam pariat jussio quasi pulverem transeuntem diem,  antequam veniat super vos ira furoris Domini,  antequam veniat super vos dies indignationis Domini. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9d88ef" class="outline-3">
+<h3 id="orge9d88ef">Zephaniah 2:3</h3>
+<div class="outline-text-3" id="text-orge9d88ef">
+<p>
+Quærite Dominum, omnes mansueti terræ,  qui judicium ejus estis operati ;  quærite justum, quærite mansuetum,  si quomodo abscondamini in die furoris Domini. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79c808d" class="outline-3">
+<h3 id="org79c808d">Zephaniah 2:4</h3>
+<div class="outline-text-3" id="text-org79c808d">
+<p>
+Quia Gaza destructa erit,  et Ascalon in desertum :  Azotum in meridie ejicient,  et Accaron eradicabitur. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org610fc35" class="outline-3">
+<h3 id="org610fc35">Zephaniah 2:5</h3>
+<div class="outline-text-3" id="text-org610fc35">
+<p>
+Væ qui habitatis funiculum maris, gens perditorum !  verbum Domini super vos, Chanaan, terra Philisthinorum ;  et disperdam te, ita ut non sit inhabitator. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f770b1" class="outline-3">
+<h3 id="org5f770b1">Zephaniah 2:6</h3>
+<div class="outline-text-3" id="text-org5f770b1">
+<p>
+Et erit funiculus maris requies pastorum, et caulæ pecorum ; 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51241aa" class="outline-3">
+<h3 id="org51241aa">Zephaniah 2:7</h3>
+<div class="outline-text-3" id="text-org51241aa">
+<p>
+et erit funiculus ejus qui remanserit de domo Juda : ibi pascentur,  in domibus Ascalonis ad vesperam requiescent,  quia visitabit eos Dominus Deus eorum,  et avertet captivitatem eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org420c995" class="outline-3">
+<h3 id="org420c995">Zephaniah 2:8</h3>
+<div class="outline-text-3" id="text-org420c995">
+<p>
+Audivi opprobrium Moab,  et blasphemias filiorum Ammon,  quæ exprobraverunt populo meo,  et magnificati sunt super terminos eorum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5357648" class="outline-3">
+<h3 id="org5357648">Zephaniah 2:9</h3>
+<div class="outline-text-3" id="text-org5357648">
+<p>
+Propterea vivo ego, dicit Dominus exercituum, Deus Israël,  quia Moab ut Sodoma erit,  et filii Ammon quasi Gomorrha :  siccitas spinarum, et acervi salis,  et desertum usque in æternum :  reliquiæ populi mei diripient eos,  et residui gentis meæ possidebunt illos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5d289c0" class="outline-3">
+<h3 id="org5d289c0">Zephaniah 2:10</h3>
+<div class="outline-text-3" id="text-org5d289c0">
+<p>
+Hoc eis eveniet pro superbia sua,  quia blasphemaverunt et magnificati sunt  super populum Domini exercituum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1babd27" class="outline-3">
+<h3 id="org1babd27">Zephaniah 2:11</h3>
+<div class="outline-text-3" id="text-org1babd27">
+<p>
+Horribilis Dominus super eos,  et attenuabit omnes deos terræ :  et adorabunt eum viri de loco suo,  omnes insulæ gentium. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ade0c2" class="outline-3">
+<h3 id="org4ade0c2">Zephaniah 2:12</h3>
+<div class="outline-text-3" id="text-org4ade0c2">
+<p>
+Sed et vos, Æthiopes, interfecti gladio meo eritis. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62295e8" class="outline-3">
+<h3 id="org62295e8">Zephaniah 2:13</h3>
+<div class="outline-text-3" id="text-org62295e8">
+<p>
+Et extendet manum suam super aquilonem, et perdet Assur,  et ponet speciosam in solitudinem,  et in invium, et quasi desertum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96a350b" class="outline-3">
+<h3 id="org96a350b">Zephaniah 2:14</h3>
+<div class="outline-text-3" id="text-org96a350b">
+<p>
+Et accubabunt in medio ejus greges, omnes bestiæ gentium ;  et onocrotalus et ericius in liminibus ejus morabuntur :  vox cantantis in fenestra,  corvus in superliminari,  quoniam attenuabo robur ejus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6fd669" class="outline-3">
+<h3 id="orgc6fd669">Zephaniah 2:15</h3>
+<div class="outline-text-3" id="text-orgc6fd669">
+<p>
+Hæc est civitas gloriosa habitans in confidentia,  quæ dicebat in corde suo :  Ego sum, et extra me non est alia amplius :  quomodo facta est in desertum cubile bestiæ ?  omnis qui transit per eam sibilabit,  et movebit manum suam.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org969696a" class="outline-2">
+<h2 id="org969696a">Zephaniah 3</h2>
+<div class="outline-text-2" id="text-org969696a">
+</div>
+<div id="outline-container-org38983fc" class="outline-3">
+<h3 id="org38983fc">Zephaniah 3:1</h3>
+<div class="outline-text-3" id="text-org38983fc">
+<p>
+Væ provocatrix, et redempta civitas, columba ! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fa909f" class="outline-3">
+<h3 id="org2fa909f">Zephaniah 3:2</h3>
+<div class="outline-text-3" id="text-org2fa909f">
+<p>
+non audivit vocem,  et non suscepit disciplinam ;  in Domino non est confisa,  ad Deum suum non appropinquavit. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7542404" class="outline-3">
+<h3 id="org7542404">Zephaniah 3:3</h3>
+<div class="outline-text-3" id="text-org7542404">
+<p>
+Principes ejus in medio ejus quasi leones rugientes ;  judices ejus lupi vespere, non relinquebant in mane. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76e944c" class="outline-3">
+<h3 id="org76e944c">Zephaniah 3:4</h3>
+<div class="outline-text-3" id="text-org76e944c">
+<p>
+Prophetæ ejus vesani, viri infideles ;  sacerdotes ejus polluerunt sanctum,  injuste egerunt contra legem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e74fb3" class="outline-3">
+<h3 id="org7e74fb3">Zephaniah 3:5</h3>
+<div class="outline-text-3" id="text-org7e74fb3">
+<p>
+Dominus justus in medio ejus non faciet iniquitatem ;  mane, mane judicium suum dabit in lucem, et non abscondetur ;  nescivit autem iniquus confusionem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4766345" class="outline-3">
+<h3 id="org4766345">Zephaniah 3:6</h3>
+<div class="outline-text-3" id="text-org4766345">
+<p>
+Disperdidi gentes,  et dissipati sunt anguli earum ;  desertas feci vias eorum,  dum non est qui transeat ;  desolatæ sunt civitates eorum,  non remanente viro, neque ullo habitatore. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7ec0b4" class="outline-3">
+<h3 id="orge7ec0b4">Zephaniah 3:7</h3>
+<div class="outline-text-3" id="text-orge7ec0b4">
+<p>
+Dixi : Attamen timebis me,  suscipies disciplinam ;  et non peribit habitaculum ejus,  propter omnia in quibus visitavi eam :  verumtamen diluculo surgentes corruperunt omnes cogitationes suas. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d610ae" class="outline-3">
+<h3 id="org8d610ae">Zephaniah 3:8</h3>
+<div class="outline-text-3" id="text-org8d610ae">
+<p>
+Quapropter exspecta me, dicit Dominus,  in die resurrectionis meæ in futurum :  quia judicium meum ut congregem gentes,  et colligam regna,  et effundam super eos indignationem meam,  omnem iram furoris mei :  in igne enim zeli mei devorabitur omnis terra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8e8d69" class="outline-3">
+<h3 id="orgf8e8d69">Zephaniah 3:9</h3>
+<div class="outline-text-3" id="text-orgf8e8d69">
+<p>
+Quia tunc reddam populis labium electum,  ut invocent omnes in nomine Domini,  et serviant ei humero uno. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org994a199" class="outline-3">
+<h3 id="org994a199">Zephaniah 3:10</h3>
+<div class="outline-text-3" id="text-org994a199">
+<p>
+Ultra flumina Æthiopiæ, inde supplices mei ;  filii dispersorum meorum deferent munus mihi. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4ad569" class="outline-3">
+<h3 id="orgb4ad569">Zephaniah 3:11</h3>
+<div class="outline-text-3" id="text-orgb4ad569">
+<p>
+In die illa non confunderis super cunctis adinventionibus tuis,  quibus prævaricata es in me,  quia tunc auferam de medio tui magniloquos superbiæ tuæ,  et non adjicies exaltari amplius in monte sancto meo. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ac7f73" class="outline-3">
+<h3 id="org0ac7f73">Zephaniah 3:12</h3>
+<div class="outline-text-3" id="text-org0ac7f73">
+<p>
+Et derelinquam in medio tui populum pauperem et egenum :  et sperabunt in nomine Domini. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda4c411" class="outline-3">
+<h3 id="orgda4c411">Zephaniah 3:13</h3>
+<div class="outline-text-3" id="text-orgda4c411">
+<p>
+Reliquiæ Israël non facient iniquitatem,  nec loquentur mendacium,  et non invenietur in ore eorum lingua dolosa,  quoniam ipsi pascentur, et accubabunt,  et non erit qui exterreat. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60e8dd5" class="outline-3">
+<h3 id="org60e8dd5">Zephaniah 3:14</h3>
+<div class="outline-text-3" id="text-org60e8dd5">
+<p>
+Lauda, filia Sion ; jubila, Israël :  lætare, et exsulta in omni corde, filia Jerusalem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5ed7230" class="outline-3">
+<h3 id="org5ed7230">Zephaniah 3:15</h3>
+<div class="outline-text-3" id="text-org5ed7230">
+<p>
+Abstulit Dominus judicium tuum ;  avertit inimicos tuos.  Rex Israël Dominus in medio tui :  non timebis malum ultra. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd1c6c9a" class="outline-3">
+<h3 id="orgd1c6c9a">Zephaniah 3:16</h3>
+<div class="outline-text-3" id="text-orgd1c6c9a">
+<p>
+In die illa dicetur Jerusalem :  Noli timere ; Sion : Non dissolvantur manus tuæ. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61f07ed" class="outline-3">
+<h3 id="org61f07ed">Zephaniah 3:17</h3>
+<div class="outline-text-3" id="text-org61f07ed">
+<p>
+Dominus Deus tuus in medio tui fortis, ipse salvabit :  gaudebit super te in lætitia,  silebit in dilectione sua,  exsultabit super te in laude. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa4b3a4" class="outline-3">
+<h3 id="orgfa4b3a4">Zephaniah 3:18</h3>
+<div class="outline-text-3" id="text-orgfa4b3a4">
+<p>
+Nugas, qui a lege recesserant,  congregabo, quia ex te erant :  ut non ultra habeas super eis opprobrium. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org326d554" class="outline-3">
+<h3 id="org326d554">Zephaniah 3:19</h3>
+<div class="outline-text-3" id="text-org326d554">
+<p>
+Ecce ego interficiam omnes qui afflixerunt te in tempore illo :  et salvabo claudicantem,  et eam quæ ejecta fuerat congregabo :  et ponam eos in laudem, et in nomen,  in omni terra confusionis eorum, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb3a709" class="outline-3">
+<h3 id="orgeb3a709">Zephaniah 3:20</h3>
+<div class="outline-text-3" id="text-orgeb3a709">
+<p>
+in tempore illo quo adducam vos,  et in tempore quo congregabo vos.  Dabo enim vos in nomen,  et in laudem omnibus populis terræ,  cum convertero captivitatem vestram coram oculis vestris,  dicit Dominus.    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>

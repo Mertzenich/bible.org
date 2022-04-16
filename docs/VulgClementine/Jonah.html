@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-15 Fri 21:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc82ecf4">Jonah 1</a>
+<ul>
+<li><a href="#org5010d20">Jonah 1:1</a></li>
+<li><a href="#orgaca2379">Jonah 1:2</a></li>
+<li><a href="#orgfe9581e">Jonah 1:3</a></li>
+<li><a href="#org672cda8">Jonah 1:4</a></li>
+<li><a href="#org1bbe410">Jonah 1:5</a></li>
+<li><a href="#org1f500a2">Jonah 1:6</a></li>
+<li><a href="#org7f36db3">Jonah 1:7</a></li>
+<li><a href="#org53f1364">Jonah 1:8</a></li>
+<li><a href="#org0aee7a7">Jonah 1:9</a></li>
+<li><a href="#org7b00905">Jonah 1:10</a></li>
+<li><a href="#org6ec7eb4">Jonah 1:11</a></li>
+<li><a href="#org56a3ba5">Jonah 1:12</a></li>
+<li><a href="#orgd779845">Jonah 1:13</a></li>
+<li><a href="#org7c940ea">Jonah 1:14</a></li>
+<li><a href="#orgfa819bb">Jonah 1:15</a></li>
+<li><a href="#org07a088f">Jonah 1:16</a></li>
+</ul>
+</li>
+<li><a href="#orgc3caa2a">Jonah 2</a>
+<ul>
+<li><a href="#org48fa555">Jonah 2:1</a></li>
+<li><a href="#orgf13ee00">Jonah 2:2</a></li>
+<li><a href="#orgdd6547e">Jonah 2:3</a></li>
+<li><a href="#org1e63514">Jonah 2:4</a></li>
+<li><a href="#orge0432b4">Jonah 2:5</a></li>
+<li><a href="#orgb284f41">Jonah 2:6</a></li>
+<li><a href="#orgc767e32">Jonah 2:7</a></li>
+<li><a href="#org46b74b7">Jonah 2:8</a></li>
+<li><a href="#orgb9f3ccb">Jonah 2:9</a></li>
+<li><a href="#orgf890fa3">Jonah 2:10</a></li>
+<li><a href="#orgf28d5a0">Jonah 2:11</a></li>
+</ul>
+</li>
+<li><a href="#orgfb81698">Jonah 3</a>
+<ul>
+<li><a href="#orgf6376f6">Jonah 3:1</a></li>
+<li><a href="#org87a2ffa">Jonah 3:2</a></li>
+<li><a href="#org8cea8d5">Jonah 3:3</a></li>
+<li><a href="#org689a207">Jonah 3:4</a></li>
+<li><a href="#org222af4f">Jonah 3:5</a></li>
+<li><a href="#org1fe9373">Jonah 3:6</a></li>
+<li><a href="#org9298230">Jonah 3:7</a></li>
+<li><a href="#orgc6d029c">Jonah 3:8</a></li>
+<li><a href="#org9d5336a">Jonah 3:9</a></li>
+<li><a href="#orga59d027">Jonah 3:10</a></li>
+</ul>
+</li>
+<li><a href="#org1aaf5de">Jonah 4</a>
+<ul>
+<li><a href="#orgc6b4a0a">Jonah 4:1</a></li>
+<li><a href="#org37a37fe">Jonah 4:2</a></li>
+<li><a href="#orgdec50d9">Jonah 4:3</a></li>
+<li><a href="#orge766c97">Jonah 4:4</a></li>
+<li><a href="#org281d379">Jonah 4:5</a></li>
+<li><a href="#orgae57e54">Jonah 4:6</a></li>
+<li><a href="#org5b311a5">Jonah 4:7</a></li>
+<li><a href="#orgaf26a79">Jonah 4:8</a></li>
+<li><a href="#org26d41fd">Jonah 4:9</a></li>
+<li><a href="#orgcb034e3">Jonah 4:10</a></li>
+<li><a href="#org18147dd">Jonah 4:11</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc82ecf4" class="outline-2">
+<h2 id="orgc82ecf4">Jonah 1</h2>
+<div class="outline-text-2" id="text-orgc82ecf4">
+</div>
+<div id="outline-container-org5010d20" class="outline-3">
+<h3 id="org5010d20">Jonah 1:1</h3>
+<div class="outline-text-3" id="text-org5010d20">
+<p>
+Et factum est verbum Domini ad Jonam, filium Amathi, dicens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaca2379" class="outline-3">
+<h3 id="orgaca2379">Jonah 1:2</h3>
+<div class="outline-text-3" id="text-orgaca2379">
+<p>
+Surge, et vade in Niniven, civitatem grandem, et prædica in ea, quia ascendit malitia ejus coram me.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe9581e" class="outline-3">
+<h3 id="orgfe9581e">Jonah 1:3</h3>
+<div class="outline-text-3" id="text-orgfe9581e">
+<p>
+Et surrexit Jonas, ut fugeret in Tharsis a facie Domini, et descendit in Joppen : et invenit navem euntem in Tharsis, et dedit naulum ejus, et descendit in eam ut iret cum eis in Tharsis a facie Domini.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org672cda8" class="outline-3">
+<h3 id="org672cda8">Jonah 1:4</h3>
+<div class="outline-text-3" id="text-org672cda8">
+<p>
+Dominus autem misit ventum magnum in mare : et facta est tempestas magna in mari, et navis periclitabatur conteri.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1bbe410" class="outline-3">
+<h3 id="org1bbe410">Jonah 1:5</h3>
+<div class="outline-text-3" id="text-org1bbe410">
+<p>
+Et timuerunt nautæ, et clamaverunt viri ad deum suum, et miserunt vasa quæ erant in navi, in mare, ut alleviaretur ab eis ; et Jonas descendit ad interiora navis, et dormiebat sopore gravi.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f500a2" class="outline-3">
+<h3 id="org1f500a2">Jonah 1:6</h3>
+<div class="outline-text-3" id="text-org1f500a2">
+<p>
+Et accessit ad eum gubernator, et dixit ei : Quid tu sopore deprimeris ? surge, invoca Deum tuum, si forte recogitet Deus de nobis, et non pereamus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f36db3" class="outline-3">
+<h3 id="org7f36db3">Jonah 1:7</h3>
+<div class="outline-text-3" id="text-org7f36db3">
+<p>
+Et dixit vir ad collegam suum : Venite et mittamus sortes, et sciamus quare hoc malum sit nobis. Et miserunt sortes, et cecidit sors super Jonam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53f1364" class="outline-3">
+<h3 id="org53f1364">Jonah 1:8</h3>
+<div class="outline-text-3" id="text-org53f1364">
+<p>
+Et dixerunt ad eum : Indica nobis cujus causa malum istud sit nobis : quod est opus tuum ? quæ terra tua, et quo vadis ? vel ex quo populo es tu ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0aee7a7" class="outline-3">
+<h3 id="org0aee7a7">Jonah 1:9</h3>
+<div class="outline-text-3" id="text-org0aee7a7">
+<p>
+Et dixit ad eos : Hebræus ego sum, et Dominum Deum cæli ego timeo, qui fecit mare et aridam.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b00905" class="outline-3">
+<h3 id="org7b00905">Jonah 1:10</h3>
+<div class="outline-text-3" id="text-org7b00905">
+<p>
+Et timuerunt viri timore magno, et dixerunt ad eum : Quid hoc fecisti ? cognoverunt enim viri quod a facie Domini fugeret, quia indicaverat eis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ec7eb4" class="outline-3">
+<h3 id="org6ec7eb4">Jonah 1:11</h3>
+<div class="outline-text-3" id="text-org6ec7eb4">
+<p>
+Et dixerunt ad eum : Quid faciemus tibi, et cessabit mare a nobis ? quia mare ibat, et intumescebat.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56a3ba5" class="outline-3">
+<h3 id="org56a3ba5">Jonah 1:12</h3>
+<div class="outline-text-3" id="text-org56a3ba5">
+<p>
+Et dixit ad eos : Tollite me, et mittite in mare, et cessabit mare a vobis : scio enim ego quoniam propter me tempestas hæc grandis venit super vos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd779845" class="outline-3">
+<h3 id="orgd779845">Jonah 1:13</h3>
+<div class="outline-text-3" id="text-orgd779845">
+<p>
+Et remigabant viri ut reverterentur ad aridam, et non valebant, quia mare ibat, et intumescebat super eos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c940ea" class="outline-3">
+<h3 id="org7c940ea">Jonah 1:14</h3>
+<div class="outline-text-3" id="text-org7c940ea">
+<p>
+Et clamaverunt ad Dominum, et dixerunt : Quæsumus, Domine, ne pereamus in anima viri istius, et ne des super nos sanguinem innocentem : quia tu, Domine, sicut voluisti, fecisti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa819bb" class="outline-3">
+<h3 id="orgfa819bb">Jonah 1:15</h3>
+<div class="outline-text-3" id="text-orgfa819bb">
+<p>
+Et tulerunt Jonam, et miserunt in mare : et stetit mare a fervore suo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07a088f" class="outline-3">
+<h3 id="org07a088f">Jonah 1:16</h3>
+<div class="outline-text-3" id="text-org07a088f">
+<p>
+Et timuerunt viri timore magno Dominum : et immolaverunt hostias Domino, et voverunt vota.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc3caa2a" class="outline-2">
+<h2 id="orgc3caa2a">Jonah 2</h2>
+<div class="outline-text-2" id="text-orgc3caa2a">
+</div>
+<div id="outline-container-org48fa555" class="outline-3">
+<h3 id="org48fa555">Jonah 2:1</h3>
+<div class="outline-text-3" id="text-org48fa555">
+<p>
+Et præparavit Dominus piscem grandem ut deglutiret Jonam : et erat Jonas in ventre piscis tribus diebus et tribus noctibus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf13ee00" class="outline-3">
+<h3 id="orgf13ee00">Jonah 2:2</h3>
+<div class="outline-text-3" id="text-orgf13ee00">
+<p>
+Et oravit Jonas ad Dominum Deum suum de ventre piscis,
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd6547e" class="outline-3">
+<h3 id="orgdd6547e">Jonah 2:3</h3>
+<div class="outline-text-3" id="text-orgdd6547e">
+<p>
+et dixit :   Clamavi de tribulatione mea ad Dominum,  et exaudivit me ;  de ventre inferi clamavi,  et exaudisti vocem meam. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e63514" class="outline-3">
+<h3 id="org1e63514">Jonah 2:4</h3>
+<div class="outline-text-3" id="text-org1e63514">
+<p>
+Et projecisti me in profundum in corde maris,  et flumen circumdedit me :  omnes gurgites tui, et fluctus tui super me transierunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0432b4" class="outline-3">
+<h3 id="orge0432b4">Jonah 2:5</h3>
+<div class="outline-text-3" id="text-orge0432b4">
+<p>
+Et ego dixi :  Abjectus sum a conspectu oculorum tuorum ;  verumtamen rursus videbo templum sanctum tuum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb284f41" class="outline-3">
+<h3 id="orgb284f41">Jonah 2:6</h3>
+<div class="outline-text-3" id="text-orgb284f41">
+<p>
+Circumdederunt me aquæ usque ad animam :  abyssus vallavit me,  pelagus operuit caput meum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc767e32" class="outline-3">
+<h3 id="orgc767e32">Jonah 2:7</h3>
+<div class="outline-text-3" id="text-orgc767e32">
+<p>
+Ad extrema montium descendi ;  terræ vectes concluserunt me in æternum :  et sublevabis de corruptione vitam meam, Domine Deus meus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46b74b7" class="outline-3">
+<h3 id="org46b74b7">Jonah 2:8</h3>
+<div class="outline-text-3" id="text-org46b74b7">
+<p>
+Cum angustiaretur in me anima mea,  Domini recordatus sum :  ut veniat ad te oratio mea,  ad templum sanctum tuum. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9f3ccb" class="outline-3">
+<h3 id="orgb9f3ccb">Jonah 2:9</h3>
+<div class="outline-text-3" id="text-orgb9f3ccb">
+<p>
+Qui custodiunt vanitates frustra,  misericordiam suam derelinquunt. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf890fa3" class="outline-3">
+<h3 id="orgf890fa3">Jonah 2:10</h3>
+<div class="outline-text-3" id="text-orgf890fa3">
+<p>
+Ego autem in voce laudis immolabo tibi :  quæcumque vovi, reddam pro salute Domino.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf28d5a0" class="outline-3">
+<h3 id="orgf28d5a0">Jonah 2:11</h3>
+<div class="outline-text-3" id="text-orgf28d5a0">
+<p>
+Et dixit Dominus pisci, et evomuit Jonam in aridam.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfb81698" class="outline-2">
+<h2 id="orgfb81698">Jonah 3</h2>
+<div class="outline-text-2" id="text-orgfb81698">
+</div>
+<div id="outline-container-orgf6376f6" class="outline-3">
+<h3 id="orgf6376f6">Jonah 3:1</h3>
+<div class="outline-text-3" id="text-orgf6376f6">
+<p>
+Et factum est verbum Domini ad Jonam secundo, dicens :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87a2ffa" class="outline-3">
+<h3 id="org87a2ffa">Jonah 3:2</h3>
+<div class="outline-text-3" id="text-org87a2ffa">
+<p>
+Surge, et vade in Niniven, civitatem magnam, et prædica in ea prædicationem quam ego loquor ad te.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cea8d5" class="outline-3">
+<h3 id="org8cea8d5">Jonah 3:3</h3>
+<div class="outline-text-3" id="text-org8cea8d5">
+<p>
+Et surrexit Jonas, et abiit in Niniven juxta verbum Domini : et Ninive erat civitas magna, itinere trium dierum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org689a207" class="outline-3">
+<h3 id="org689a207">Jonah 3:4</h3>
+<div class="outline-text-3" id="text-org689a207">
+<p>
+Et cœpit Jonas introire in civitatem itinere diei unius : et clamavit, et dixit : Adhuc quadraginta dies, et Ninive subvertetur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org222af4f" class="outline-3">
+<h3 id="org222af4f">Jonah 3:5</h3>
+<div class="outline-text-3" id="text-org222af4f">
+<p>
+Et crediderunt viri Ninivitæ in Deum, et prædicaverunt jejunium, et vestiti sunt saccis, a majore usque ad minorem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fe9373" class="outline-3">
+<h3 id="org1fe9373">Jonah 3:6</h3>
+<div class="outline-text-3" id="text-org1fe9373">
+<p>
+Et pervenit verbum ad regem Ninive : et surrexit de solio suo, et abjecit vestimentum suum a se, et indutus est sacco, et sedit in cinere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9298230" class="outline-3">
+<h3 id="org9298230">Jonah 3:7</h3>
+<div class="outline-text-3" id="text-org9298230">
+<p>
+Et clamavit, et dixit in Ninive ex ore regis et principum ejus, dicens : Homines, et jumenta, et boves, et pecora non gustent quidquam : nec pascantur, et aquam non bibant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc6d029c" class="outline-3">
+<h3 id="orgc6d029c">Jonah 3:8</h3>
+<div class="outline-text-3" id="text-orgc6d029c">
+<p>
+Et operiantur saccis homines et jumenta, et clament ad Dominum in fortitudine : et convertatur vir a via sua mala, et ab iniquitate quæ est in manibus eorum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d5336a" class="outline-3">
+<h3 id="org9d5336a">Jonah 3:9</h3>
+<div class="outline-text-3" id="text-org9d5336a">
+<p>
+Quis scit si convertatur et ignoscat Deus, et revertatur a furore iræ suæ, et non peribimus ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga59d027" class="outline-3">
+<h3 id="orga59d027">Jonah 3:10</h3>
+<div class="outline-text-3" id="text-orga59d027">
+<p>
+Et vidit Deus opera eorum, quia conversi sunt de via sua mala : et misertus est Deus super malitiam quam locutus fuerat ut faceret eis, et non fecit.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1aaf5de" class="outline-2">
+<h2 id="org1aaf5de">Jonah 4</h2>
+<div class="outline-text-2" id="text-org1aaf5de">
+</div>
+<div id="outline-container-orgc6b4a0a" class="outline-3">
+<h3 id="orgc6b4a0a">Jonah 4:1</h3>
+<div class="outline-text-3" id="text-orgc6b4a0a">
+<p>
+Et afflictus est Jonas afflictione magna, et iratus est :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37a37fe" class="outline-3">
+<h3 id="org37a37fe">Jonah 4:2</h3>
+<div class="outline-text-3" id="text-org37a37fe">
+<p>
+et oravit ad Dominum, et dixit : Obsecro, Domine, numquid non hoc est verbum meum cum adhuc essem in terra mea ? propter hoc præoccupavi ut fugerem in Tharsis : scio enim quia tu Deus clemens et misericors es, patiens et multæ miserationis, et ignoscens super malitia.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdec50d9" class="outline-3">
+<h3 id="orgdec50d9">Jonah 4:3</h3>
+<div class="outline-text-3" id="text-orgdec50d9">
+<p>
+Et nunc, Domine, tolle, quæso, animam meam a me, quia melior est mihi mors quam vita.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge766c97" class="outline-3">
+<h3 id="orge766c97">Jonah 4:4</h3>
+<div class="outline-text-3" id="text-orge766c97">
+<p>
+Et dixit Dominus : Putasne bene irasceris tu ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org281d379" class="outline-3">
+<h3 id="org281d379">Jonah 4:5</h3>
+<div class="outline-text-3" id="text-org281d379">
+<p>
+Et egressus est Jonas de civitate, et sedit contra orientem civitatis : et fecit sibimet umbraculum ibi, et sedebat subter illud in umbra, donec videret quid accideret civitati.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae57e54" class="outline-3">
+<h3 id="orgae57e54">Jonah 4:6</h3>
+<div class="outline-text-3" id="text-orgae57e54">
+<p>
+Et præparavit Dominus Deus hederam, et ascendit super caput Jonæ, ut esset umbra super caput ejus, et protegeret eum (laboraverat enim) : et lætatus est Jonas super hedera lætitia magna.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b311a5" class="outline-3">
+<h3 id="org5b311a5">Jonah 4:7</h3>
+<div class="outline-text-3" id="text-org5b311a5">
+<p>
+Et paravit Deus vermen ascensu diluculi in crastinum : et percussit hederam, et exaruit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf26a79" class="outline-3">
+<h3 id="orgaf26a79">Jonah 4:8</h3>
+<div class="outline-text-3" id="text-orgaf26a79">
+<p>
+Et cum ortus fuisset sol, præcepit Dominus vento calido et urenti : et percussit sol super caput Jonæ, et æstuabat : et petivit animæ suæ ut moreretur, et dixit : Melius est mihi mori quam vivere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26d41fd" class="outline-3">
+<h3 id="org26d41fd">Jonah 4:9</h3>
+<div class="outline-text-3" id="text-org26d41fd">
+<p>
+Et dixit Dominus ad Jonam : Putasne bene irasceris tu super hedera ? Et dixit : Bene irascor ego usque ad mortem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb034e3" class="outline-3">
+<h3 id="orgcb034e3">Jonah 4:10</h3>
+<div class="outline-text-3" id="text-orgcb034e3">
+<p>
+Et dixit Dominus : Tu doles super hederam in qua non laborasti, neque fecisti ut cresceret ; quæ sub una nocte nata est, et sub una nocte periit :
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18147dd" class="outline-3">
+<h3 id="org18147dd">Jonah 4:11</h3>
+<div class="outline-text-3" id="text-org18147dd">
+<p>
+et ego non parcam Ninive, civitati magnæ, in qua sunt plus quam centum viginti millia hominum qui nesciunt quid sit inter dexteram et sinistram suam, et jumenta multa ?    
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-04-15 Fri 21:41</p>
+</div>
+</body>
+</html>
