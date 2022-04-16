@@ -1,6 +1,6 @@
 #+TITLE: Adam's Bible Repository
 
-This project contains translations of the Bible, provided by the CrossWire Bible Society's [[https://crosswire.org][SWORD Project]], in Emacs org-mode. This
+This project contains translations of the Bible, provided by the CrossWire Bible Society's [[https://crosswire.org][SWORD Project]], in Emacs org-mode.
 
 * How it's made
 
@@ -10,7 +10,7 @@ This project was made possible by utilizing alphapapa's [[https://github.com/alp
 
 https://github.com/Mertzenich/bible-to-org
 
-** How to make your own
+** Add translations
 
 Here are the rough steps for adding translations to the project.
 
